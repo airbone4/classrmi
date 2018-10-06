@@ -1,7 +1,6 @@
 ---
 title: "main"
 author: "lin"
-date: "2018年10月6日"
 output: html_document
 ---
 
