@@ -1,0 +1,9 @@
+name: "test"
+output_dir: "."
+navbar:
+  title: "Hello"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "tidy basic 01"
+      href: TidyBasic01.html
