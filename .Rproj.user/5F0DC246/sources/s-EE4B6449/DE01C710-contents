@@ -1,0 +1,54 @@
+---
+title: "Test"
+output:
+  html_document:
+    css: mystyle.css
+date: "24 October 2015"
+---
+
+```{r}
+require(tidyr)
+require(dplyr) # data_frame
+```
+
+ From http://stackoverflow.com/questions/1181060
+
+```{r}
+stocks <- data_frame(
+  time = as.Date('2009-01-01') + 0:9,
+  X = rnorm(10, 0, 1),
+  Y = rnorm(10, 0, 2),
+  Z = rnorm(10, 0, 4)
+)
+dset1 <- head(stocks)
+knitr::kable(dset1, format = "html")
+gather(stocks, stock, price, -time)
+stocks %>% gather(stock, price, -time)
+dset1 <- head(stocks)
+knitr::kable(dset1, format = "html")
+
+```
+
+設定css
+```{r}
+writeLines("td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }", con = "mystyle.css")
+```
+
+
+```{r}
+stocks <- data_frame(
+  time = as.Date('2009-01-01') + 0:9,
+  X = rnorm(10, 0, 1),
+  Y = rnorm(10, 0, 2),
+  Z = rnorm(10, 0, 4)
+)
+dset1 <- head(stocks)
+knitr::kable(dset1, format = "html")
+
+demo<-gather(stocks, stock, price, -time)
+
+dset1 <- head(demo)
+knitr::kable(dset1, format = "html")
+
+```
+

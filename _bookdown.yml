@@ -1,0 +1,10 @@
+new_session: yes
+
+rmd_files:
+  [
+    "TidyBasic01.Rmd"
+
+  ]
+
+delete_merged_file: true
+before_chapter_script: "_common.R"
