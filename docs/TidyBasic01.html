@@ -188,6 +188,9 @@ $(document).ready(function () {
 <li>
   <a href="TidyBasic01.html">tidy basic 01</a>
 </li>
+<li>
+  <a href="about.html">About</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -206,18 +209,8 @@ $(document).ready(function () {
 </div>
 
 
-<pre class="r"><code>require(tidyr)</code></pre>
-<pre><code>## Loading required package: tidyr</code></pre>
-<pre class="r"><code>require(dplyr) # data_frame</code></pre>
-<pre><code>## Loading required package: dplyr</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>require(tidyr)
+require(dplyr) # data_frame</code></pre>
 <p>From <a href="http://stackoverflow.com/questions/1181060" class="uri">http://stackoverflow.com/questions/1181060</a></p>
 <pre class="r"><code>stocks &lt;- data_frame(
   time = as.Date(&#39;2009-01-01&#39;) + 0:9,
@@ -250,13 +243,13 @@ Z
 2009-01-01
 </td>
 <td style="text-align:right;">
--2.2909080
+0.2438597
 </td>
 <td style="text-align:right;">
-1.201120
+1.0622657
 </td>
 <td style="text-align:right;">
--5.4493390
+-5.3691502
 </td>
 </tr>
 <tr>
@@ -264,13 +257,13 @@ Z
 2009-01-02
 </td>
 <td style="text-align:right;">
-1.1547291
+1.4748931
 </td>
 <td style="text-align:right;">
-3.032708
+-3.4948810
 </td>
 <td style="text-align:right;">
-0.7453405
+-4.0575957
 </td>
 </tr>
 <tr>
@@ -278,13 +271,13 @@ Z
 2009-01-03
 </td>
 <td style="text-align:right;">
--1.0304652
+0.4409114
 </td>
 <td style="text-align:right;">
--1.053155
+-0.5916815
 </td>
 <td style="text-align:right;">
-5.9213733
+7.9749381
 </td>
 </tr>
 <tr>
@@ -292,13 +285,13 @@ Z
 2009-01-04
 </td>
 <td style="text-align:right;">
--1.0563908
+-0.3834675
 </td>
 <td style="text-align:right;">
-2.817287
+-4.9578873
 </td>
 <td style="text-align:right;">
-3.3166684
+0.6062643
 </td>
 </tr>
 <tr>
@@ -306,13 +299,13 @@ Z
 2009-01-05
 </td>
 <td style="text-align:right;">
--0.0367528
+1.3113346
 </td>
 <td style="text-align:right;">
-2.913688
+1.1160301
 </td>
 <td style="text-align:right;">
--5.9284718
+-9.6706337
 </td>
 </tr>
 <tr>
@@ -320,46 +313,46 @@ Z
 2009-01-06
 </td>
 <td style="text-align:right;">
--1.6282196
+0.1361213
 </td>
 <td style="text-align:right;">
-1.407865
+1.3095556
 </td>
 <td style="text-align:right;">
-4.1785238
+-1.4132198
 </td>
 </tr>
 </tbody>
 </table>
 <pre class="r"><code>gather(stocks, stock, price, -time)</code></pre>
 <pre><code>## # A tibble: 30 x 3
-##    time       stock   price
-##    &lt;date&gt;     &lt;chr&gt;   &lt;dbl&gt;
-##  1 2009-01-01 X     -2.29  
-##  2 2009-01-02 X      1.15  
-##  3 2009-01-03 X     -1.03  
-##  4 2009-01-04 X     -1.06  
-##  5 2009-01-05 X     -0.0368
-##  6 2009-01-06 X     -1.63  
-##  7 2009-01-07 X      1.68  
-##  8 2009-01-08 X      0.471 
-##  9 2009-01-09 X      2.40  
-## 10 2009-01-10 X     -0.852 
+##    time       stock  price
+##    &lt;date&gt;     &lt;chr&gt;  &lt;dbl&gt;
+##  1 2009-01-01 X      0.244
+##  2 2009-01-02 X      1.47 
+##  3 2009-01-03 X      0.441
+##  4 2009-01-04 X     -0.383
+##  5 2009-01-05 X      1.31 
+##  6 2009-01-06 X      0.136
+##  7 2009-01-07 X     -0.109
+##  8 2009-01-08 X     -0.280
+##  9 2009-01-09 X     -1.46 
+## 10 2009-01-10 X      0.507
 ## # ... with 20 more rows</code></pre>
 <pre class="r"><code>stocks %&gt;% gather(stock, price, -time)</code></pre>
 <pre><code>## # A tibble: 30 x 3
-##    time       stock   price
-##    &lt;date&gt;     &lt;chr&gt;   &lt;dbl&gt;
-##  1 2009-01-01 X     -2.29  
-##  2 2009-01-02 X      1.15  
-##  3 2009-01-03 X     -1.03  
-##  4 2009-01-04 X     -1.06  
-##  5 2009-01-05 X     -0.0368
-##  6 2009-01-06 X     -1.63  
-##  7 2009-01-07 X      1.68  
-##  8 2009-01-08 X      0.471 
-##  9 2009-01-09 X      2.40  
-## 10 2009-01-10 X     -0.852 
+##    time       stock  price
+##    &lt;date&gt;     &lt;chr&gt;  &lt;dbl&gt;
+##  1 2009-01-01 X      0.244
+##  2 2009-01-02 X      1.47 
+##  3 2009-01-03 X      0.441
+##  4 2009-01-04 X     -0.383
+##  5 2009-01-05 X      1.31 
+##  6 2009-01-06 X      0.136
+##  7 2009-01-07 X     -0.109
+##  8 2009-01-08 X     -0.280
+##  9 2009-01-09 X     -1.46 
+## 10 2009-01-10 X      0.507
 ## # ... with 20 more rows</code></pre>
 <pre class="r"><code>dset1 &lt;- head(stocks)
 knitr::kable(dset1, format = &quot;html&quot;)</code></pre>
@@ -386,13 +379,13 @@ Z
 2009-01-01
 </td>
 <td style="text-align:right;">
--2.2909080
+0.2438597
 </td>
 <td style="text-align:right;">
-1.201120
+1.0622657
 </td>
 <td style="text-align:right;">
--5.4493390
+-5.3691502
 </td>
 </tr>
 <tr>
@@ -400,13 +393,13 @@ Z
 2009-01-02
 </td>
 <td style="text-align:right;">
-1.1547291
+1.4748931
 </td>
 <td style="text-align:right;">
-3.032708
+-3.4948810
 </td>
 <td style="text-align:right;">
-0.7453405
+-4.0575957
 </td>
 </tr>
 <tr>
@@ -414,13 +407,13 @@ Z
 2009-01-03
 </td>
 <td style="text-align:right;">
--1.0304652
+0.4409114
 </td>
 <td style="text-align:right;">
--1.053155
+-0.5916815
 </td>
 <td style="text-align:right;">
-5.9213733
+7.9749381
 </td>
 </tr>
 <tr>
@@ -428,13 +421,13 @@ Z
 2009-01-04
 </td>
 <td style="text-align:right;">
--1.0563908
+-0.3834675
 </td>
 <td style="text-align:right;">
-2.817287
+-4.9578873
 </td>
 <td style="text-align:right;">
-3.3166684
+0.6062643
 </td>
 </tr>
 <tr>
@@ -442,13 +435,13 @@ Z
 2009-01-05
 </td>
 <td style="text-align:right;">
--0.0367528
+1.3113346
 </td>
 <td style="text-align:right;">
-2.913688
+1.1160301
 </td>
 <td style="text-align:right;">
--5.9284718
+-9.6706337
 </td>
 </tr>
 <tr>
@@ -456,13 +449,13 @@ Z
 2009-01-06
 </td>
 <td style="text-align:right;">
--1.6282196
+0.1361213
 </td>
 <td style="text-align:right;">
-1.407865
+1.3095556
 </td>
 <td style="text-align:right;">
-4.1785238
+-1.4132198
 </td>
 </tr>
 </tbody>
@@ -500,13 +493,13 @@ Z
 2009-01-01
 </td>
 <td style="text-align:right;">
-0.0779517
+1.3284221
 </td>
 <td style="text-align:right;">
--0.7924033
+2.627061
 </td>
 <td style="text-align:right;">
--0.0875439
+1.6997002
 </td>
 </tr>
 <tr>
@@ -514,13 +507,13 @@ Z
 2009-01-02
 </td>
 <td style="text-align:right;">
-0.5830518
+1.5579982
 </td>
 <td style="text-align:right;">
--2.1461435
+0.835285
 </td>
 <td style="text-align:right;">
-5.3106001
+2.8662870
 </td>
 </tr>
 <tr>
@@ -528,13 +521,13 @@ Z
 2009-01-03
 </td>
 <td style="text-align:right;">
-1.6069134
+0.7734024
 </td>
 <td style="text-align:right;">
-0.2359759
+1.056002
 </td>
 <td style="text-align:right;">
--5.7511906
+-2.2804081
 </td>
 </tr>
 <tr>
@@ -542,13 +535,13 @@ Z
 2009-01-04
 </td>
 <td style="text-align:right;">
--0.3805042
+0.4997982
 </td>
 <td style="text-align:right;">
--0.9578563
+-0.508268
 </td>
 <td style="text-align:right;">
-0.5603736
+6.8485716
 </td>
 </tr>
 <tr>
@@ -556,13 +549,13 @@ Z
 2009-01-05
 </td>
 <td style="text-align:right;">
-0.8014482
+0.1560420
 </td>
 <td style="text-align:right;">
--0.9478412
+2.612544
 </td>
 <td style="text-align:right;">
--4.7276450
+-0.7373520
 </td>
 </tr>
 <tr>
@@ -570,13 +563,13 @@ Z
 2009-01-06
 </td>
 <td style="text-align:right;">
--1.4552801
+-1.4511830
 </td>
 <td style="text-align:right;">
--3.1625051
+-1.572528
 </td>
 <td style="text-align:right;">
-4.5500756
+0.7855989
 </td>
 </tr>
 </tbody>
@@ -608,7 +601,7 @@ price
 X
 </td>
 <td style="text-align:right;">
-0.0779517
+1.3284221
 </td>
 </tr>
 <tr>
@@ -619,7 +612,7 @@ X
 X
 </td>
 <td style="text-align:right;">
-0.5830518
+1.5579982
 </td>
 </tr>
 <tr>
@@ -630,7 +623,7 @@ X
 X
 </td>
 <td style="text-align:right;">
-1.6069134
+0.7734024
 </td>
 </tr>
 <tr>
@@ -641,7 +634,7 @@ X
 X
 </td>
 <td style="text-align:right;">
--0.3805042
+0.4997982
 </td>
 </tr>
 <tr>
@@ -652,7 +645,7 @@ X
 X
 </td>
 <td style="text-align:right;">
-0.8014482
+0.1560420
 </td>
 </tr>
 <tr>
@@ -663,7 +656,7 @@ X
 X
 </td>
 <td style="text-align:right;">
--1.4552801
+-1.4511830
 </td>
 </tr>
 </tbody>

@@ -1,5 +1,5 @@
 name: "test"
-output_dir: "."
+output_dir: "docs"
 navbar:
   title: "Hello"
   left:
@@ -7,3 +7,6 @@ navbar:
       href: index.html
     - text: "tidy basic 01"
       href: TidyBasic01.html
+    - text: "About"
+      href: about.html
+      
