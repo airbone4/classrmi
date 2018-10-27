@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test for class</title>
+  <meta name="description" content="web article test">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="test for class" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="web article test" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="test for class" />
+  
+  <meta name="twitter:description" content="web article test" />
+  
+
+<meta name="author" content="lend jwj cen">
+
+
+<meta name="date" content="2018-10-28">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="io.html">
+<link rel="next" href="tidy-basic-01.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="adv-r.css" type="text/css" />
+<link rel="stylesheet" href="tableStyle.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">testing </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a></li>
+<li class="chapter" data-level="2" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>2</b> File System</a><ul>
+<li class="chapter" data-level="2.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>2.1</b> Exploring file system</a></li>
+<li class="chapter" data-level="2.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>2.2</b> Creating of a directory</a></li>
+<li class="chapter" data-level="2.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>2.3</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="2.4" data-path="file-system.html"><a href="file-system.html#constructing-of-file-names-in-r"><i class="fa fa-check"></i><b>2.4</b> Constructing of file names in R</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>2.4.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="2.4.2" data-path="file-system.html"><a href="file-system.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 和工作區相關的指令</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="functions.html"><a href="functions.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#outline"><i class="fa fa-check"></i>Outline</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="functions.html"><a href="functions.html#function-fundamentals"><i class="fa fa-check"></i><b>3.2</b> Function fundamentals</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="functions.html"><a href="functions.html#first-class-functions"><i class="fa fa-check"></i><b>3.2.1</b> First-class functions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="functions.html"><a href="functions.html#function-components"><i class="fa fa-check"></i><b>3.2.2</b> Function components</a></li>
+<li class="chapter" data-level="3.2.3" data-path="functions.html"><a href="functions.html#primitive-functions"><i class="fa fa-check"></i><b>3.2.3</b> Primitive functions</a></li>
+<li class="chapter" data-level="3.2.4" data-path="functions.html"><a href="functions.html#exercises"><i class="fa fa-check"></i><b>3.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="functions.html"><a href="functions.html#lexical-scoping"><i class="fa fa-check"></i><b>3.3</b> Lexical scoping</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="functions.html"><a href="functions.html#name-masking"><i class="fa fa-check"></i><b>3.3.1</b> Name masking</a></li>
+<li class="chapter" data-level="3.3.2" data-path="functions.html"><a href="functions.html#functions-vs.variables"><i class="fa fa-check"></i><b>3.3.2</b> Functions vs. variables</a></li>
+<li class="chapter" data-level="3.3.3" data-path="functions.html"><a href="functions.html#fresh-start"><i class="fa fa-check"></i><b>3.3.3</b> A fresh start</a></li>
+<li class="chapter" data-level="3.3.4" data-path="functions.html"><a href="functions.html#dynamic-lookup"><i class="fa fa-check"></i><b>3.3.4</b> Dynamic lookup</a></li>
+<li class="chapter" data-level="3.3.5" data-path="functions.html"><a href="functions.html#exercises-1"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>3.4</b> Lazy evaluation</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="functions.html"><a href="functions.html#forcing-evaluation"><i class="fa fa-check"></i><b>3.4.1</b> Forcing evaluation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="functions.html"><a href="functions.html#promises"><i class="fa fa-check"></i><b>3.4.2</b> Promises</a></li>
+<li class="chapter" data-level="3.4.3" data-path="functions.html"><a href="functions.html#default-arguments"><i class="fa fa-check"></i><b>3.4.3</b> Default arguments</a></li>
+<li class="chapter" data-level="3.4.4" data-path="functions.html"><a href="functions.html#missing-arguments"><i class="fa fa-check"></i><b>3.4.4</b> Missing arguments</a></li>
+<li class="chapter" data-level="3.4.5" data-path="functions.html"><a href="functions.html#exercises-2"><i class="fa fa-check"></i><b>3.4.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="functions.html"><a href="functions.html#fun-dot-dot-dot"><i class="fa fa-check"></i><b>3.5</b> <code>...</code> (dot-dot-dot)</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="functions.html"><a href="functions.html#exercises-3"><i class="fa fa-check"></i><b>3.5.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="functions.html"><a href="functions.html#exiting-a-function"><i class="fa fa-check"></i><b>3.6</b> Exiting a function</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="functions.html"><a href="functions.html#implicit-vs.explict-returns"><i class="fa fa-check"></i><b>3.6.1</b> Implicit vs. explict returns</a></li>
+<li class="chapter" data-level="3.6.2" data-path="functions.html"><a href="functions.html#invisible-values"><i class="fa fa-check"></i><b>3.6.2</b> Invisible values</a></li>
+<li class="chapter" data-level="3.6.3" data-path="functions.html"><a href="functions.html#errors"><i class="fa fa-check"></i><b>3.6.3</b> Errors</a></li>
+<li class="chapter" data-level="3.6.4" data-path="functions.html"><a href="functions.html#on-exit"><i class="fa fa-check"></i><b>3.6.4</b> Exit handlers</a></li>
+<li class="chapter" data-level="3.6.5" data-path="functions.html"><a href="functions.html#exercises-4"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="functions.html"><a href="functions.html#function-forms"><i class="fa fa-check"></i><b>3.7</b> Function forms</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="functions.html"><a href="functions.html#rewriting-to-prefix-form"><i class="fa fa-check"></i><b>3.7.1</b> Rewriting to prefix form</a></li>
+<li class="chapter" data-level="3.7.2" data-path="functions.html"><a href="functions.html#prefix-form-prefix-form"><i class="fa fa-check"></i><b>3.7.2</b> Prefix form {prefix-form}</a></li>
+<li class="chapter" data-level="3.7.3" data-path="functions.html"><a href="functions.html#infix-functions"><i class="fa fa-check"></i><b>3.7.3</b> Infix functions</a></li>
+<li class="chapter" data-level="3.7.4" data-path="functions.html"><a href="functions.html#replacement-functions"><i class="fa fa-check"></i><b>3.7.4</b> Replacement functions</a></li>
+<li class="chapter" data-level="3.7.5" data-path="functions.html"><a href="functions.html#special-forms"><i class="fa fa-check"></i><b>3.7.5</b> Special forms</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="functions.html"><a href="functions.html#invoking-a-function"><i class="fa fa-check"></i><b>3.8</b> Invoking a function</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="functions.html"><a href="functions.html#exercises-5"><i class="fa fa-check"></i><b>3.8.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>3.9</b> Quiz answers</a></li>
+<li class="chapter" data-level="3.10" data-path="functions.html"><a href="functions.html#quick-view"><i class="fa fa-check"></i><b>3.10</b> quick view</a><ul>
+<li class="chapter" data-level="3.10.1" data-path="functions.html"><a href="functions.html#section-3.10.1"><i class="fa fa-check"></i><b>3.10.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="3.10.2" data-path="functions.html"><a href="functions.html#section-3.10.2"><i class="fa fa-check"></i><b>3.10.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="3.10.3" data-path="functions.html"><a href="functions.html#section-3.10.3"><i class="fa fa-check"></i><b>3.10.3</b> 質性數據的分析</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>4</b> R Packages</a><ul>
+<li class="chapter" data-level="4.1" data-path="r-packages.html"><a href="r-packages.html#section-4.1"><i class="fa fa-check"></i><b>4.1</b> 基本</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="r-packages.html"><a href="r-packages.html#reference"><i class="fa fa-check"></i><b>4.1.1</b> reference</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="r-packages.html"><a href="r-packages.html#section-4.2"><i class="fa fa-check"></i><b>4.2</b> 範例解析</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="r-packages.html"><a href="r-packages.html#test"><i class="fa fa-check"></i><b>4.2.1</b> test</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="r-packages.html"><a href="r-packages.html#debug"><i class="fa fa-check"></i><b>4.3</b> 測試debug</a></li>
+<li class="chapter" data-level="4.4" data-path="r-packages.html"><a href="r-packages.html#-package-"><i class="fa fa-check"></i><b>4.4</b> 自製 package 範例</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>5</b> data type</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-type.html"><a href="data-type.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 基本操作</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="data-type.html"><a href="data-type.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 指派</a></li>
+<li class="chapter" data-level="5.1.2" data-path="data-type.html"><a href="data-type.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 資源</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="data-type.html"><a href="data-type.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> 介紹</a></li>
+<li class="chapter" data-level="5.3" data-path="data-type.html"><a href="data-type.html#section-5.3"><i class="fa fa-check"></i><b>5.3</b> 實數的比較</a></li>
+<li class="chapter" data-level="5.4" data-path="data-type.html"><a href="data-type.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 字串</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="data-type.html"><a href="data-type.html#section-5.4.1"><i class="fa fa-check"></i><b>5.4.1</b> 建立字串</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-type.html"><a href="data-type.html#section-5.4.2"><i class="fa fa-check"></i><b>5.4.2</b> 空字串</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="data-type.html"><a href="data-type.html#is-family"><i class="fa fa-check"></i><b>5.5</b> 型態操作is family</a></li>
+<li class="chapter" data-level="5.6" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>5.6</b> vector</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="data-type.html"><a href="data-type.html#section-5.6.1"><i class="fa fa-check"></i><b>5.6.1</b> 練習範例</a></li>
+<li class="chapter" data-level="5.6.2" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>5.6.2</b> vector 相關的運算</a></li>
+<li class="chapter" data-level="5.6.3" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>5.6.3</b> 如何存取vector中的元素</a></li>
+<li class="chapter" data-level="5.6.4" data-path="data-type.html"><a href="data-type.html#section-5.6.4"><i class="fa fa-check"></i><b>5.6.4</b> 邏輯做為索引</a></li>
+<li class="chapter" data-level="5.6.5" data-path="data-type.html"><a href="data-type.html#-character-vector-"><i class="fa fa-check"></i><b>5.6.5</b> 利用字串( character vector) 作為索引</a></li>
+<li class="chapter" data-level="5.6.6" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>5.6.6</b> How to modify a vector in R?</a></li>
+<li class="chapter" data-level="5.6.7" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>5.6.7</b> How to delete a Vector?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>5.7</b> List</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="data-type.html"><a href="data-type.html#creating-a-list"><i class="fa fa-check"></i><b>5.7.1</b> Creating a List</a></li>
+<li class="chapter" data-level="5.7.2" data-path="data-type.html"><a href="data-type.html#accessing-list-elements"><i class="fa fa-check"></i><b>5.7.2</b> Accessing List Elements</a></li>
+<li class="chapter" data-level="5.7.3" data-path="data-type.html"><a href="data-type.html#manipulating-list-elements"><i class="fa fa-check"></i><b>5.7.3</b> Manipulating List Elements</a></li>
+<li class="chapter" data-level="5.7.4" data-path="data-type.html"><a href="data-type.html#merging-lists"><i class="fa fa-check"></i><b>5.7.4</b> Merging Lists</a></li>
+<li class="chapter" data-level="5.7.5" data-path="data-type.html"><a href="data-type.html#converting-list-to-vector"><i class="fa fa-check"></i><b>5.7.5</b> Converting List to Vector</a></li>
+<li class="chapter" data-level="5.7.6" data-path="data-type.html"><a href="data-type.html#vector-list"><i class="fa fa-check"></i><b>5.7.6</b> 比較vector, list問題</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>5.8</b> vector 函數範例</a><ul>
+<li class="chapter" data-level="5.8.1" data-path="data-type.html"><a href="data-type.html#cbindrbind"><i class="fa fa-check"></i><b>5.8.1</b> cbind,rbind</a></li>
+<li class="chapter" data-level="5.8.2" data-path="data-type.html"><a href="data-type.html#diff"><i class="fa fa-check"></i><b>5.8.2</b> 函數diff</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>5.9</b> matrix</a></li>
+<li class="chapter" data-level="5.10" data-path="data-type.html"><a href="data-type.html#section-5.10"><i class="fa fa-check"></i><b>5.10</b> 字串函數</a></li>
+<li class="chapter" data-level="5.11" data-path="data-type.html"><a href="data-type.html#regular-expression-syntax"><i class="fa fa-check"></i><b>5.11</b> Regular expression syntax</a><ul>
+<li class="chapter" data-level="5.11.1" data-path="data-type.html"><a href="data-type.html#escape-sequences"><i class="fa fa-check"></i><b>5.11.1</b> Escape sequences</a></li>
+<li class="chapter" data-level="5.11.2" data-path="data-type.html"><a href="data-type.html#section-5.11.2"><i class="fa fa-check"></i><b>5.11.2</b> 應用</a></li>
+<li class="chapter" data-level="5.11.3" data-path="data-type.html"><a href="data-type.html#quantifiers"><i class="fa fa-check"></i><b>5.11.3</b> 數量修飾詞Quantifiers</a></li>
+<li class="chapter" data-level="5.11.4" data-path="data-type.html"><a href="data-type.html#position-of-pattern-within-the-string"><i class="fa fa-check"></i><b>5.11.4</b> Position of pattern within the string</a></li>
+<li class="chapter" data-level="5.11.5" data-path="data-type.html"><a href="data-type.html#operators"><i class="fa fa-check"></i><b>5.11.5</b> Operators</a></li>
+<li class="chapter" data-level="5.11.6" data-path="data-type.html"><a href="data-type.html#character-classes"><i class="fa fa-check"></i><b>5.11.6</b> Character classes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>5.12</b> Factors</a><ul>
+<li class="chapter" data-level="5.12.1" data-path="data-type.html"><a href="data-type.html#data-frames"><i class="fa fa-check"></i><b>5.12.1</b> Data Frames</a></li>
+<li class="chapter" data-level="5.12.2" data-path="data-type.html"><a href="data-type.html#logical"><i class="fa fa-check"></i><b>5.12.2</b> Logical</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="data-type.html"><a href="data-type.html#tables"><i class="fa fa-check"></i><b>5.13</b> Tables</a><ul>
+<li class="chapter" data-level="5.13.1" data-path="data-type.html"><a href="data-type.html#one-way-tables"><i class="fa fa-check"></i><b>5.13.1</b> One Way Tables</a></li>
+<li class="chapter" data-level="5.13.2" data-path="data-type.html"><a href="data-type.html#two-way-tables"><i class="fa fa-check"></i><b>5.13.2</b> Two Way Tables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="assignment.html"><a href="assignment.html"><i class="fa fa-check"></i><b>6</b> assignment</a><ul>
+<li class="chapter" data-level="6.1" data-path="assignment.html"><a href="assignment.html#oop"><i class="fa fa-check"></i><b>6.1</b> OOP</a></li>
+<li class="chapter" data-level="6.2" data-path="assignment.html"><a href="assignment.html#operator"><i class="fa fa-check"></i><b>6.2</b> operator %&gt;%</a></li>
+<li class="chapter" data-level="6.3" data-path="assignment.html"><a href="assignment.html#attribute"><i class="fa fa-check"></i><b>6.3</b> attribute</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="io.html"><a href="io.html"><i class="fa fa-check"></i><b>7</b> IO</a><ul>
+<li class="chapter" data-level="7.1" data-path="io.html"><a href="io.html#csv"><i class="fa fa-check"></i><b>7.1</b> csv</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>8</b> Environments</a><ul>
+<li class="chapter" data-level="8.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#quiz"><i class="fa fa-check"></i>Quiz</a></li>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>8.2</b> Environment basics</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>8.2.1</b> Basics</a></li>
+<li class="chapter" data-level="8.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>8.2.2</b> Important environments</a></li>
+<li class="chapter" data-level="8.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>8.2.3</b> Parents</a></li>
+<li class="chapter" data-level="8.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>8.2.4</b> Getting and setting</a></li>
+<li class="chapter" data-level="8.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>8.2.5</b> Finalisers</a></li>
+<li class="chapter" data-level="8.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>8.2.6</b> Advanced bindings</a></li>
+<li class="chapter" data-level="8.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>8.2.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>8.3</b> Recursing over environments</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>8.3.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>8.4</b> Special environments</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>8.4.1</b> Package environments and the search path</a></li>
+<li class="chapter" data-level="8.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>8.4.2</b> The function environment</a></li>
+<li class="chapter" data-level="8.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>8.4.3</b> Namespaces</a></li>
+<li class="chapter" data-level="8.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>8.4.4</b> Execution environments</a></li>
+<li class="chapter" data-level="8.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>8.4.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>8.5</b> The call stack</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>8.5.1</b> Simple call stacks</a></li>
+<li class="chapter" data-level="8.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>8.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="8.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>8.5.3</b> Frames</a></li>
+<li class="chapter" data-level="8.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>8.5.4</b> Dynamic scope</a></li>
+<li class="chapter" data-level="8.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>8.5.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>8.6</b> As data structures</a></li>
+<li class="chapter" data-level="8.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>8.7</b> <code>&lt;&lt;-</code></a><ul>
+<li class="chapter" data-level="8.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>8.7.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>8.8</b> Quiz answers</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>8.8.1</b> term</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>9</b> Tidy Basic 01</a><ul>
+<li class="chapter" data-level="9.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>9.1</b> long and wide data</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>9.1.1</b> gather: wide to long</a></li>
+<li class="chapter" data-level="9.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>9.1.2</b> spread :long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a></li>
+<li class="chapter" data-level="9.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>9.3</b> other</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>9.3.1</b> Basic verbs</a></li>
+<li class="chapter" data-level="9.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>9.3.2</b> Group by</a></li>
+<li class="chapter" data-level="9.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>9.3.3</b> summarize()</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="basic-plot.html"><a href="basic-plot.html"><i class="fa fa-check"></i><b>10</b> Basic Plot</a><ul>
+<li class="chapter" data-level="10.1" data-path="basic-plot.html"><a href="basic-plot.html#reference-1"><i class="fa fa-check"></i><b>10.1</b> reference</a></li>
+<li class="chapter" data-level="10.2" data-path="basic-plot.html"><a href="basic-plot.html#basic"><i class="fa fa-check"></i><b>10.2</b> basic</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="basic-plot.html"><a href="basic-plot.html#creating-a-graph"><i class="fa fa-check"></i><b>10.2.1</b> Creating a Graph</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="basic-plot.html"><a href="basic-plot.html#histograms-and-density-plots"><i class="fa fa-check"></i><b>10.3</b> Histograms and Density Plots</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="basic-plot.html"><a href="basic-plot.html#histograms"><i class="fa fa-check"></i><b>10.3.1</b> Histograms</a></li>
+<li class="chapter" data-level="10.3.2" data-path="basic-plot.html"><a href="basic-plot.html#kernel-density-plot"><i class="fa fa-check"></i><b>10.3.2</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="10.3.3" data-path="basic-plot.html"><a href="basic-plot.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>10.3.3</b> Comparing Groups VIA Kernal Density</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="basic-plot.html"><a href="basic-plot.html#combining-plots"><i class="fa fa-check"></i><b>10.4</b> Combining Plots</a></li>
+<li class="chapter" data-level="10.5" data-path="basic-plot.html"><a href="basic-plot.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>10.5</b> Add texts within the graph</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="basic-plot.html"><a href="basic-plot.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>10.5.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="10.5.2" data-path="basic-plot.html"><a href="basic-plot.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>10.5.2</b> Add mathematical annotation to a plot</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="basic-plot.html"><a href="basic-plot.html#section-10.6"><i class="fa fa-check"></i><b>10.6</b> 函數畫圖</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>11</b> rbook 提要</a><ul>
+<li class="chapter" data-level="11.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>11.1</b> index.Rmd</a></li>
+<li class="chapter" data-level="11.2" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>11.2</b> 其他_output.yml 範例</a></li>
+<li class="chapter" data-level="11.3" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>11.3</b> .travis.yml</a></li>
+<li class="chapter" data-level="11.4" data-path="rbook-.html"><a href="rbook-.html#section-11.4"><i class="fa fa-check"></i><b>11.4</b> 紀錄</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>12</b> gitbook introduction</a><ul>
+<li class="chapter" data-level="12.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>12.1</b> _output.yml:</a></li>
+<li class="chapter" data-level="12.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>12.2</b> _bookdown.yml:</a></li>
+<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>12.3</b> index.rmd</a></li>
+<li class="chapter" data-level="12.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-12.4"><i class="fa fa-check"></i><b>12.4</b> 執行</a></li>
+<li class="chapter" data-level="12.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.5</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="12.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.5.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="12.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.5.2</b> DESCRIPTION</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>13</b> Sample and Distribution 01</a><ul>
+<li class="chapter" data-level="13.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-13.1"><i class="fa fa-check"></i><b>13.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="13.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>13.2</b> distribution</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test for class</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="environments" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Environments</h1>
+<p>參考
+<a href="https://holtzy.github.io/Pimp-my-rmd/" class="uri">https://holtzy.github.io/Pimp-my-rmd/</a></p>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">8.1</span> Introduction</h2>
+<p>The environment is the data structure that powers scoping. 相關概念:lexical scoping, namespaces, and R6 classes。</p>
+<p>這個文件需要</p>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;tidyverse/rlang&quot;</span>)</a></code></pre></div>
+<div id="quiz" class="section level3 unnumbered">
+<h3>Quiz</h3>
+<p>If you can answer the following questions correctly, you already know the most important topics in this chapter. You can find the answers at the end of the chapter in <a href="environments.html#env-answers">answers</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>List at least three ways that an environment is different to a list.</p></li>
+<li><p>What is the parent of the global environment? What is the only
+environment that doesn’t have a parent?</p></li>
+<li><p>What is the enclosing environment of a function? Why is it
+important?</p></li>
+<li><p>How do you determine the environment from which a function was called?</p></li>
+<li><p>How are <code>&lt;-</code> and <code>&lt;&lt;-</code> different?</p></li>
+</ol>
+</div>
+<div id="outline-1" class="section level3 unnumbered">
+<h3>Outline</h3>
+<ul>
+<li><p><a href="environments.html#env-basics">Environment basics</a> introduces you to the basic properties
+of an environment and shows you how to create your own.</p></li>
+<li><p><a href="environments.html#env-recursion">Recursing over environments</a> provides a function template
+for computing with environments, illustrating the idea with a useful
+function.</p></li>
+<li><p><a href="environments.html#explicit-envs">Explicit environments</a> briefly discusses three places where
+environments are useful data structures for solving other problems.</p></li>
+</ul>
+</div>
+<div id="prerequisites" class="section level3 unnumbered">
+<h3>Prerequisites</h3>
+<p>這個章節利用了套件<code>rlang</code>裡的函數，來探索環境物件。</p>
+<p>在<code>rlang</code>套件中,<code>env_</code>函數是設計用來和pipe一起工作的,這裡不深入。</p>
+<div class="sidebar">
+<p><code>global_env()</code>和<code>globalenv()</code>的執行結果一樣。</p>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1">.GlobalEnv</a>
+<a class="sourceLine" id="cb225-2" data-line-number="2"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a>
+<a class="sourceLine" id="cb225-3" data-line-number="3"><span class="kw">globalenv</span>()</a>
+<a class="sourceLine" id="cb225-4" data-line-number="4"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a>
+<a class="sourceLine" id="cb225-5" data-line-number="5"><span class="kw">global_env</span>()</a>
+<a class="sourceLine" id="cb225-6" data-line-number="6"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a>
+<a class="sourceLine" id="cb225-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb225-8" data-line-number="8">.BaseNamespaceEnv</a>
+<a class="sourceLine" id="cb225-9" data-line-number="9"><span class="co">#&gt; &lt;environment: namespace:base&gt;</span></a>
+<a class="sourceLine" id="cb225-10" data-line-number="10"><span class="kw">current_env</span>() <span class="co">#</span></a>
+<a class="sourceLine" id="cb225-11" data-line-number="11"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a></code></pre></div>
+</div>
+</div>
+</div>
+<div id="env-basics" class="section level2">
+<h2><span class="header-section-number">8.2</span> Environment basics</h2>
+<p>基本上一個 environment 類似名稱串列(named list),但是有4個例外:</p>
+<ul>
+<li>名稱唯一(就是變數唯一)<br />
+</li>
+<li>名稱沒有順序關係<br />
+</li>
+<li>會有一個parent<br />
+</li>
+<li>當改變的時候,不會自動複製 (Environments are not copied when modified).</li>
+</ul>
+<p>分別探索上面四點:</p>
+<div id="basics" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Basics</h3>
+<p>要建立environment, 使用 <code>rlang::env()</code>. 類似使用<code>list()</code>,也是一組名稱-值的配對。:</p>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb226-1" data-line-number="1">e1 &lt;-<span class="st"> </span><span class="kw">env</span>(</a>
+<a class="sourceLine" id="cb226-2" data-line-number="2">  <span class="dt">a =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb226-3" data-line-number="3">  <span class="dt">b =</span> <span class="st">&quot;a&quot;</span>,</a>
+<a class="sourceLine" id="cb226-4" data-line-number="4">  <span class="dt">c =</span> <span class="fl">2.3</span>,</a>
+<a class="sourceLine" id="cb226-5" data-line-number="5">  <span class="dt">d =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb226-6" data-line-number="6">)</a></code></pre></div>
+<div class="base">
+<p>建立environment物件,利用函數 <code>new.env()</code> 不用管參數 <code>hash</code> 和 <code>size</code>。注意不能利用<code>$&lt;-</code>同時定義和建立 parameters; 例如,
+e1 &lt;- env( ** a &lt;- FALSE ** ) # error
+.</p>
+</div>
+<p>environment物件可以想成是一個袋子,或是names集合。因為沒有次序關係</p>
+<p><img src="diagrams/environments/bindings.png" style="display: block; margin: auto;" /></p>
+<p>就像在 <a href="#env-modify">names and values</a>, 討論的,這個物件是參考為基礎.(in C concept) 不會有copy on modifying。而且,環境物件可以自己指向自己(recursion)</p>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1">e1<span class="op">$</span>d &lt;-<span class="st"> </span>e1</a></code></pre></div>
+<p><img src="diagrams/environments/loop.png" style="display: block; margin: auto;" /></p>
+<p>沒有指派的環境變數,只會顯示記憶體位址:</p>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb228-1" data-line-number="1">e1</a>
+<a class="sourceLine" id="cb228-2" data-line-number="2"><span class="co">#&gt; &lt;environment: 0x000000001cd98ee0&gt;</span></a></code></pre></div>
+<p>要知道內容可以使用 <code>env_print()</code> :</p>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb229-1" data-line-number="1"><span class="kw">env_print</span>(e1)</a>
+<a class="sourceLine" id="cb229-2" data-line-number="2"><span class="co">#&gt; &lt;environment: 000000001CD98EE0&gt;</span></a>
+<a class="sourceLine" id="cb229-3" data-line-number="3"><span class="co">#&gt;   parent: &lt;environment: global&gt;</span></a>
+<a class="sourceLine" id="cb229-4" data-line-number="4"><span class="co">#&gt;   bindings:</span></a>
+<a class="sourceLine" id="cb229-5" data-line-number="5"><span class="co">#&gt;    * a: &lt;lgl&gt;</span></a>
+<a class="sourceLine" id="cb229-6" data-line-number="6"><span class="co">#&gt;    * b: &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb229-7" data-line-number="7"><span class="co">#&gt;    * c: &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb229-8" data-line-number="8"><span class="co">#&gt;    * d: &lt;env&gt;</span></a></code></pre></div>
+<p>想要知道目前有哪些binding(名稱-值 配對)可以利用 <code>env_names()</code></p>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb230-1" data-line-number="1"><span class="kw">env_names</span>(e1)</a>
+<a class="sourceLine" id="cb230-2" data-line-number="2"><span class="co">#&gt; [1] &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot;</span></a></code></pre></div>
+<div class="base">
+<p>要列出環境下的繫結，在R 3.2.0 以上,可以使用函數<code>names()</code> ,之前的版本則是 <code>ls()</code>, 但是要注意的是ls 的參數 <code>all.names</code> 內設是 <code>FALSE</code> 因此<code>.</code>開頭的看不到。.</p>
+</div>
+</div>
+<div id="important-environments" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Important environments</h3>
+<p>另外參考 <a href="environments.html#function-envs">Special environments</a>。
+<code>current_env()</code> 可以知道目前程式碼的執行環境。例如,當我們互動執行RCODE的時候,環境通常是 <a href="#global%20environment">總體環境</a>,或者由函數<code>global_env()</code>可以得到。這個總體環境有時候就叫“workspace”，同時,這也是函數外面所有互動計算發生的地方。
+環境物件的比較不能用<code>==</code>,只能用函數<code>identical()</code>。</p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb231-1" data-line-number="1"><span class="kw">identical</span>(<span class="kw">global_env</span>(), <span class="kw">current_env</span>())</a>
+<a class="sourceLine" id="cb231-2" data-line-number="2"><span class="co">#&gt; [1] TRUE</span></a>
+<a class="sourceLine" id="cb231-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb231-4" data-line-number="4"><span class="kw">global_env</span>() <span class="op">==</span><span class="st"> </span><span class="kw">current_env</span>()</a>
+<a class="sourceLine" id="cb231-5" data-line-number="5"><span class="co">#&gt; Error in global_env() == current_env():</span></a>
+<a class="sourceLine" id="cb231-6" data-line-number="6"><span class="co">#&gt;   comparison (1) is possible only for atomic and list types</span></a></code></pre></div>
+<div class="base">
+<ul>
+<li><code>globalenv()</code> 和<code>.GlobalEnv</code>: 拿到global environmentand。</li>
+<li><code>environment()</code>:拿到目前的環境</li>
+</ul>
+<p>global environment 的名稱為 <code>R_GlobalEnv</code> 。</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb232-1" data-line-number="1"><span class="kw">global_env</span>()</a>
+<a class="sourceLine" id="cb232-2" data-line-number="2"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a>
+<a class="sourceLine" id="cb232-3" data-line-number="3"><span class="kw">current_env</span>()</a>
+<a class="sourceLine" id="cb232-4" data-line-number="4"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a>
+<a class="sourceLine" id="cb232-5" data-line-number="5">.GlobalEnv</a>
+<a class="sourceLine" id="cb232-6" data-line-number="6"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a></code></pre></div>
+</div>
+</div>
+<div id="parents" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> Parents</h3>
+<p>每一個環境物件都有一個<em>parent</em>。<em>parent</em> 也一個環境物件。在方塊圖中,parent以藍色圈表示,並用箭頭指向另一個環境物件。</p>
+<p>這個parent用來建立 lexical scoping: 如果name沒有在某個環境物件找到,R會重複的在parent中找。
+函數<code>env()</code>可以用來建立一個沒有名字的環境
+You can set the parent environment by supplying an unnamed argument to <code>env()</code>. If you don’t supply it, it defaults to the current environment.</p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb233-1" data-line-number="1">e2a &lt;-<span class="st"> </span><span class="kw">env</span>(<span class="dt">d =</span> <span class="dv">4</span>, <span class="dt">e =</span> <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb233-2" data-line-number="2">e2b &lt;-<span class="st"> </span><span class="kw">env</span>(e2a, <span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">2</span>, <span class="dt">c =</span> <span class="dv">3</span>)</a></code></pre></div>
+<p><img src="diagrams/environments/parents.png" style="display: block; margin: auto;" /></p>
+<p>函數 <code>env_parent()</code>可以用來找出某個環境物件的parent:</p>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb234-1" data-line-number="1"><span class="kw">env_parent</span>(e2b)</a>
+<a class="sourceLine" id="cb234-2" data-line-number="2"><span class="co">#&gt; &lt;environment: 0x000000001ccfe8f0&gt;</span></a>
+<a class="sourceLine" id="cb234-3" data-line-number="3"><span class="kw">env_parent</span>(e2a)</a>
+<a class="sourceLine" id="cb234-4" data-line-number="4"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a></code></pre></div>
+<div class="base">
+<p>parent.env() === env_parent()</p>
+</div>
+<p>所有的環境物件中只有一個名稱為<code>R_EmptyEnv</code>的物件沒有parent(用空心藍色表示):</p>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb235-1" data-line-number="1">e2c &lt;-<span class="st"> </span><span class="kw">env</span>(<span class="kw">empty_env</span>(), <span class="dt">d =</span> <span class="dv">4</span>, <span class="dt">e =</span> <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb235-2" data-line-number="2">e2d &lt;-<span class="st"> </span><span class="kw">env</span>(e2c, <span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">2</span>, <span class="dt">c =</span> <span class="dv">3</span>)</a></code></pre></div>
+<p><img src="diagrams/environments/parents-empty.png" style="display: block; margin: auto;" /></p>
+<div class="base">
+<p>emptyenv() === empty_env()</p>
+</div>
+<p>試圖利用函數<code>env_parent()</code>找空環境物件的parent會發生錯誤:</p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb236-1" data-line-number="1"><span class="kw">env_parent</span>(<span class="kw">empty_env</span>())</a>
+<a class="sourceLine" id="cb236-2" data-line-number="2"><span class="co">#&gt; Error: The empty environment has no parent</span></a></code></pre></div>
+<p>函數 <code>env_parents()</code>可以找出目前環境物件的所有祖先:這個函數會繼續直到遇上global environment 或是空環境物件。上述過程可以利用<code>last</code>環境物件控制。</p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb237-1" data-line-number="1"><span class="kw">env_parents</span>(e2b)</a>
+<a class="sourceLine" id="cb237-2" data-line-number="2"><span class="co">#&gt; [[1]]   &lt;env: 000000001CCFE8F0&gt;</span></a>
+<a class="sourceLine" id="cb237-3" data-line-number="3"><span class="co">#&gt; [[2]] $ &lt;env: global&gt;</span></a>
+<a class="sourceLine" id="cb237-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb237-5" data-line-number="5"><span class="kw">env_parents</span>(e2d)</a>
+<a class="sourceLine" id="cb237-6" data-line-number="6"><span class="co">#&gt; [[1]]   &lt;env: 00000000198DC0D0&gt;</span></a>
+<a class="sourceLine" id="cb237-7" data-line-number="7"><span class="co">#&gt; [[2]] $ &lt;env: empty&gt;</span></a></code></pre></div>
+<div class="base">
+<p>可以利用Use <code>parent.env()</code> 找到環境的parent，但是base中沒有可以找出所有祖先的函數。</p>
+</div>
+</div>
+<div id="getting-and-setting" class="section level3">
+<h3><span class="header-section-number">8.2.4</span> Getting and setting</h3>
+<p>存取環境中元素的方法和list類似:使用 <code>$</code> 和 <code>[[</code>:</p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb238-1" data-line-number="1">e3 &lt;-<span class="st"> </span><span class="kw">env</span>(<span class="dt">x =</span> <span class="dv">1</span>, <span class="dt">y =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb238-2" data-line-number="2">e3<span class="op">$</span>x</a>
+<a class="sourceLine" id="cb238-3" data-line-number="3"><span class="co">#&gt; [1] 1</span></a>
+<a class="sourceLine" id="cb238-4" data-line-number="4">e3<span class="op">$</span>z &lt;-<span class="st"> </span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb238-5" data-line-number="5">e3[[<span class="st">&quot;z&quot;</span>]]</a>
+<a class="sourceLine" id="cb238-6" data-line-number="6"><span class="co">#&gt; [1] 3</span></a></code></pre></div>
+<p>但是不能使用 <code>[[</code> +數字索引,也不能單獨使用 <code>[</code>:</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb239-1" data-line-number="1">e3[[<span class="dv">1</span>]]</a>
+<a class="sourceLine" id="cb239-2" data-line-number="2"><span class="co">#&gt; Error in e3[[1]]:</span></a>
+<a class="sourceLine" id="cb239-3" data-line-number="3"><span class="co">#&gt;   wrong arguments for subsetting an environment</span></a>
+<a class="sourceLine" id="cb239-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb239-5" data-line-number="5">e3[<span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;y&quot;</span>)]</a>
+<a class="sourceLine" id="cb239-6" data-line-number="6"><span class="co">#&gt; Error in e3[c(&quot;x&quot;, &quot;y&quot;)]:</span></a>
+<a class="sourceLine" id="cb239-7" data-line-number="7"><span class="co">#&gt;   object of type &#39;environment&#39; is not subsettable</span></a></code></pre></div>
+<p>當環境中的繫結不存在時(簡單點,就是變數不存在時)<code>$</code> 和 <code>[[</code> 會傳回 <code>NULL</code> 但不會引發錯誤,如果要有錯誤警告,則利用 <code>env_get()</code> :</p>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb240-1" data-line-number="1">e3<span class="op">$</span>xyz</a>
+<a class="sourceLine" id="cb240-2" data-line-number="2"><span class="co">#&gt; NULL</span></a>
+<a class="sourceLine" id="cb240-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb240-4" data-line-number="4"><span class="kw">env_get</span>(e3, <span class="st">&quot;xyz&quot;</span>)</a>
+<a class="sourceLine" id="cb240-5" data-line-number="5"><span class="co">#&gt; Error in env_get(e3, &quot;xyz&quot;):</span></a>
+<a class="sourceLine" id="cb240-6" data-line-number="6"><span class="co">#&gt;   object &#39;xyz&#39; not found</span></a></code></pre></div>
+<p>當繫結不存在,但是想要有預設值傳回時,可以利用參數 <code>default</code> .</p>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" data-line-number="1"><span class="kw">env_get</span>(e3, <span class="st">&quot;xyz&quot;</span>, <span class="dt">default =</span> <span class="ot">NA</span>)</a>
+<a class="sourceLine" id="cb241-2" data-line-number="2"><span class="co">#&gt; [1] NA</span></a></code></pre></div>
+<p>另有兩種方式可以在環境物件加入繫結:</p>
+<ul>
+<li><p><code>env_poke()</code><a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> takes a name (as string) and a value:</p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" data-line-number="1"><span class="kw">env_poke</span>(e3, <span class="st">&quot;a&quot;</span>, <span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb242-2" data-line-number="2">e3<span class="op">$</span>a</a>
+<a class="sourceLine" id="cb242-3" data-line-number="3"><span class="co">#&gt; [1] 100</span></a></code></pre></div></li>
+<li><p><code>env_bind()</code> allows you to bind multiple values:</p>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" data-line-number="1"><span class="kw">env_bind</span>(e3, <span class="dt">a =</span> <span class="dv">10</span>, <span class="dt">b =</span> <span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb243-2" data-line-number="2"><span class="kw">env_names</span>(e3)</a>
+<a class="sourceLine" id="cb243-3" data-line-number="3"><span class="co">#&gt; [1] &quot;x&quot; &quot;y&quot; &quot;z&quot; &quot;a&quot; &quot;b&quot;</span></a></code></pre></div></li>
+</ul>
+<p><code>env_has()</code>: 是否環境中有繫結</p>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb244-1" data-line-number="1"><span class="kw">env_has</span>(e3, <span class="st">&quot;a&quot;</span>)</a>
+<a class="sourceLine" id="cb244-2" data-line-number="2"><span class="co">#&gt;    a </span></a>
+<a class="sourceLine" id="cb244-3" data-line-number="3"><span class="co">#&gt; TRUE</span></a></code></pre></div>
+<p>不能像是list中刪除元素的方式(指派<code>NULL</code>給元素)，而必須使用 <code>env_unbind()</code>:</p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb245-1" data-line-number="1">e3<span class="op">$</span>a &lt;-<span class="st"> </span><span class="ot">NULL</span></a>
+<a class="sourceLine" id="cb245-2" data-line-number="2"><span class="kw">env_has</span>(e3, <span class="st">&quot;a&quot;</span>)</a>
+<a class="sourceLine" id="cb245-3" data-line-number="3"><span class="co">#&gt;    a </span></a>
+<a class="sourceLine" id="cb245-4" data-line-number="4"><span class="co">#&gt; TRUE</span></a>
+<a class="sourceLine" id="cb245-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb245-6" data-line-number="6"><span class="kw">env_unbind</span>(e3, <span class="st">&quot;a&quot;</span>)</a>
+<a class="sourceLine" id="cb245-7" data-line-number="7"><span class="kw">env_has</span>(e3, <span class="st">&quot;a&quot;</span>)</a>
+<a class="sourceLine" id="cb245-8" data-line-number="8"><span class="co">#&gt;     a </span></a>
+<a class="sourceLine" id="cb245-9" data-line-number="9"><span class="co">#&gt; FALSE</span></a></code></pre></div>
+<p>從一個物件Unbinding 解除名稱，並不會刪除物件，是否刪除物件是 garbage collector的工作.。可以參考 <a href="#gc">GC</a>.</p>
+<div class="base">
+<p>See <code>get()</code>, <code>assign()</code>, <code>exists()</code>, and <code>rm()</code>. These are designed interactively for use with the current environment, so working with other environments is a little clunky. Also beware the <code>inherits</code> argument: it defaults to <code>TRUE</code> meaning that the base equivalents will inspect the supplied environment and all its ancestors.</p>
+</div>
+</div>
+<div id="finalisers" class="section level3">
+<h3><span class="header-section-number">8.2.5</span> Finalisers</h3>
+<p><span class="todo">Add something once rlang has an API. Also mention in data structures below</span></p>
+</div>
+<div id="advanced-bindings" class="section level3">
+<h3><span class="header-section-number">8.2.6</span> Advanced bindings</h3>
+<p>There are two more exotic variants of <code>env_bind()</code>:</p>
+<ul>
+<li><p><code>env_bind_exprs()</code> creates <strong>delayed bindings</strong>, which are evaluated the
+first time they are accessed. Behind the scenes, delayed bindings create
+promises, so behave in the same way as function arguments.</p>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" data-line-number="1"><span class="kw">env_bind_exprs</span>(<span class="kw">current_env</span>(), <span class="dt">b =</span> {<span class="kw">Sys.sleep</span>(<span class="dv">1</span>); <span class="dv">1</span>})</a>
+<a class="sourceLine" id="cb246-2" data-line-number="2"><span class="co">#&gt; Warning: `env_bind_exprs()` is soft-deprecated as of rlang 0.3.0.</span></a>
+<a class="sourceLine" id="cb246-3" data-line-number="3"><span class="co">#&gt; Please use `env_bind_lazy()` instead.</span></a>
+<a class="sourceLine" id="cb246-4" data-line-number="4"><span class="co">#&gt; This warning is displayed once per session.</span></a>
+<a class="sourceLine" id="cb246-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb246-6" data-line-number="6"><span class="kw">system.time</span>(<span class="kw">print</span>(b))</a>
+<a class="sourceLine" id="cb246-7" data-line-number="7"><span class="co">#&gt; [1] 1</span></a>
+<a class="sourceLine" id="cb246-8" data-line-number="8"><span class="co">#&gt;    user  system elapsed </span></a>
+<a class="sourceLine" id="cb246-9" data-line-number="9"><span class="co">#&gt;    0.00    0.00    1.02</span></a>
+<a class="sourceLine" id="cb246-10" data-line-number="10"><span class="kw">system.time</span>(<span class="kw">print</span>(b))</a>
+<a class="sourceLine" id="cb246-11" data-line-number="11"><span class="co">#&gt; [1] 1</span></a>
+<a class="sourceLine" id="cb246-12" data-line-number="12"><span class="co">#&gt;    user  system elapsed </span></a>
+<a class="sourceLine" id="cb246-13" data-line-number="13"><span class="co">#&gt;       0       0       0</span></a></code></pre></div>
+<p>Delayed bindings are used to implement <code>autoload()</code>, which makes R behave
+as if the package data is in memory, even though it’s only loaded from
+disk when you ask for it.</p></li>
+<li><p><code>env_bind_fns()</code> creates <strong>active bindings</strong> which are re-computed every
+time they’re accessed:</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb247-1" data-line-number="1"><span class="kw">env_bind_fns</span>(<span class="kw">current_env</span>(), <span class="dt">z1 =</span> <span class="cf">function</span>(val) <span class="kw">runif</span>(<span class="dv">1</span>))</a>
+<a class="sourceLine" id="cb247-2" data-line-number="2"><span class="co">#&gt; Warning: `env_bind_fns()` is soft-deprecated as of rlang 0.3.0.</span></a>
+<a class="sourceLine" id="cb247-3" data-line-number="3"><span class="co">#&gt; Please use `env_bind_active()` instead.</span></a>
+<a class="sourceLine" id="cb247-4" data-line-number="4"><span class="co">#&gt; This warning is displayed once per session.</span></a>
+<a class="sourceLine" id="cb247-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb247-6" data-line-number="6">z1</a>
+<a class="sourceLine" id="cb247-7" data-line-number="7"><span class="co">#&gt; [1] 0.0808</span></a>
+<a class="sourceLine" id="cb247-8" data-line-number="8">z1</a>
+<a class="sourceLine" id="cb247-9" data-line-number="9"><span class="co">#&gt; [1] 0.834</span></a></code></pre></div>
+<p>The argument to the function allows you to also override behaviour when
+the variable is set:</p>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" data-line-number="1"><span class="kw">env_bind_fns</span>(<span class="kw">current_env</span>(), <span class="dt">z2 =</span> <span class="cf">function</span>(val) {</a>
+<a class="sourceLine" id="cb248-2" data-line-number="2">  <span class="cf">if</span> (<span class="kw">missing</span>(val)) {</a>
+<a class="sourceLine" id="cb248-3" data-line-number="3">    <span class="dv">2</span></a>
+<a class="sourceLine" id="cb248-4" data-line-number="4">  } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb248-5" data-line-number="5">     <span class="kw">stop</span>(<span class="st">&quot;Don&#39;t touch z2!&quot;</span>, <span class="dt">call. =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb248-6" data-line-number="6">  }</a>
+<a class="sourceLine" id="cb248-7" data-line-number="7">})</a>
+<a class="sourceLine" id="cb248-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb248-9" data-line-number="9">z2</a>
+<a class="sourceLine" id="cb248-10" data-line-number="10"><span class="co">#&gt; [1] 2</span></a>
+<a class="sourceLine" id="cb248-11" data-line-number="11">z2 &lt;-<span class="st"> </span><span class="dv">3</span></a>
+<a class="sourceLine" id="cb248-12" data-line-number="12"><span class="co">#&gt; Error: Don&#39;t touch z2!</span></a></code></pre></div></li>
+</ul>
+<div class="base">
+<p>See <code>?delayedAssign()</code> and <code>?makeActiveBinding()</code>.</p>
+</div>
+</div>
+<div id="exercises-6" class="section level3">
+<h3><span class="header-section-number">8.2.7</span> Exercises</h3>
+<ol style="list-style-type: decimal">
+<li><p>List three ways in which an environment differs from a list.</p></li>
+<li><p>Create an environment as illustrated by this picture.</p>
+<p><img src="diagrams/environments/recursive-1.png" style="display: block; margin: auto;" /></p></li>
+<li><p>Create a pair of environments as illustrated by this picture.</p>
+<p><img src="diagrams/environments/recursive-2.png" style="display: block; margin: auto;" /></p></li>
+<li><p>Explain why <code>e[[1]]</code> and <code>e[c(&quot;a&quot;, &quot;b&quot;)]</code> don’t make sense when <code>e</code> is
+an environment.</p></li>
+<li><p>Create a version of <code>env_poke()</code> that will only bind new names, never
+re-bind old names. Some programming languages only do this, and are known
+as <a href="http://en.wikipedia.org/wiki/Assignment_(computer_science)#Single_assignment">single assignment languages</a>.</p></li>
+</ol>
+</div>
+</div>
+<div id="env-recursion" class="section level2">
+<h2><span class="header-section-number">8.3</span> Recursing over environments</h2>
+<p>If you want to operate on every ancestor of an environment, it’s often convenient to write a recursive function. This section shows you how, applying your new knowledge of environments to write a function that given a name, finds the environment <code>where()</code> that name is defined, using R’s regular scoping rules.</p>
+<p>The definition of <code>where()</code> is straightforward. It has two arguments: the name to look for (as a string), and the environment in which to start the search. (We’ll learn why <code>caller_env()</code> is a good default in <a href="#calling-environments">calling environments</a>.)</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb249-1" data-line-number="1">where &lt;-<span class="st"> </span><span class="cf">function</span>(name, <span class="dt">env =</span> <span class="kw">caller_env</span>()) {</a>
+<a class="sourceLine" id="cb249-2" data-line-number="2">  <span class="cf">if</span> (<span class="kw">identical</span>(env, <span class="kw">empty_env</span>())) {</a>
+<a class="sourceLine" id="cb249-3" data-line-number="3">    <span class="co"># Base case</span></a>
+<a class="sourceLine" id="cb249-4" data-line-number="4">    <span class="kw">stop</span>(<span class="st">&quot;Can&#39;t find &quot;</span>, name, <span class="dt">call. =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb249-5" data-line-number="5">  } <span class="cf">else</span> <span class="cf">if</span> (<span class="kw">env_has</span>(env, name)) {</a>
+<a class="sourceLine" id="cb249-6" data-line-number="6">    <span class="co"># Success case</span></a>
+<a class="sourceLine" id="cb249-7" data-line-number="7">    env</a>
+<a class="sourceLine" id="cb249-8" data-line-number="8">  } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb249-9" data-line-number="9">    <span class="co"># Recursive case</span></a>
+<a class="sourceLine" id="cb249-10" data-line-number="10">    <span class="kw">where</span>(name, <span class="kw">env_parent</span>(env))</a>
+<a class="sourceLine" id="cb249-11" data-line-number="11">  }</a>
+<a class="sourceLine" id="cb249-12" data-line-number="12">}</a></code></pre></div>
+<p>3個情況:</p>
+<ul>
+<li><p>The base case: 到達empty environment 沒有parent無法繼續,所以丟出error.</p></li>
+<li><p>The successful case: 在env中找到name ，成功,所以傳回env。.</p></li>
+<li><p>The recursive case: 在env中找不到,繼續在parent中找。.</p></li>
+</ul>
+<p>These three cases are illustrated with these three examples:</p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1"><span class="kw">where</span>(<span class="st">&quot;yyy&quot;</span>)</a>
+<a class="sourceLine" id="cb250-2" data-line-number="2"><span class="co">#&gt; Error: Can&#39;t find yyy</span></a>
+<a class="sourceLine" id="cb250-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb250-4" data-line-number="4">x &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb250-5" data-line-number="5"><span class="kw">where</span>(<span class="st">&quot;x&quot;</span>)</a>
+<a class="sourceLine" id="cb250-6" data-line-number="6"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a>
+<a class="sourceLine" id="cb250-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb250-8" data-line-number="8"><span class="kw">where</span>(<span class="st">&quot;mean&quot;</span>)</a>
+<a class="sourceLine" id="cb250-9" data-line-number="9"><span class="co">#&gt; &lt;environment: base&gt;</span></a></code></pre></div>
+<p>想像有兩個環境物件(如圖):</p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" data-line-number="1">e4a &lt;-<span class="st"> </span><span class="kw">env</span>(<span class="kw">empty_env</span>(), <span class="dt">a =</span> <span class="dv">1</span>, <span class="dt">b =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb251-2" data-line-number="2">e4b &lt;-<span class="st"> </span><span class="kw">env</span>(e4a, <span class="dt">x =</span> <span class="dv">10</span>, <span class="dt">a =</span> <span class="dv">11</span>)</a></code></pre></div>
+<p><img src="diagrams/environments/where-ex.png" style="display: block; margin: auto;" /></p>
+<ul>
+<li><p><code>where(a, e4a)</code> will find <code>a</code> in <code>e4a</code>.</p></li>
+<li><p><code>where(&quot;b&quot;, e4a)</code> doesn’t find <code>b</code> in <code>e4a</code>, so it looks in its parent, <code>e4b</code>,
+and finds it there.</p></li>
+<li><p><code>where(&quot;c&quot;, e4a)</code> looks in <code>e4a</code>, then <code>e4b</code>, then hits the empty environment
+and throws an error.</p></li>
+</ul>
+<p>It’s natural to work with environments recursively, so <code>where()</code> provides a useful template. Removing the specifics of <code>where()</code> shows the structure more clearly:</p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" data-line-number="1">f &lt;-<span class="st"> </span><span class="cf">function</span>(..., <span class="dt">env =</span> <span class="kw">caller_env</span>()) {</a>
+<a class="sourceLine" id="cb252-2" data-line-number="2">  <span class="cf">if</span> (<span class="kw">identical</span>(env, <span class="kw">empty_env</span>())) {</a>
+<a class="sourceLine" id="cb252-3" data-line-number="3">    <span class="co"># base case</span></a>
+<a class="sourceLine" id="cb252-4" data-line-number="4">  } <span class="cf">else</span> <span class="cf">if</span> (success) {</a>
+<a class="sourceLine" id="cb252-5" data-line-number="5">    <span class="co"># success case</span></a>
+<a class="sourceLine" id="cb252-6" data-line-number="6">  } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb252-7" data-line-number="7">    <span class="co"># recursive case</span></a>
+<a class="sourceLine" id="cb252-8" data-line-number="8">    <span class="kw">f</span>(..., <span class="dt">env =</span> <span class="kw">env_parent</span>(env))</a>
+<a class="sourceLine" id="cb252-9" data-line-number="9">  }</a>
+<a class="sourceLine" id="cb252-10" data-line-number="10">}</a></code></pre></div>
+<div class="sidebar">
+<h3 id="iteration-vs-recursion" class="unnumbered">Iteration vs recursion</h3>
+<p>也可以用迭代的方式</p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" data-line-number="1">f2 &lt;-<span class="st"> </span><span class="cf">function</span>(..., <span class="dt">env =</span> <span class="kw">caller_env</span>()) {</a>
+<a class="sourceLine" id="cb253-2" data-line-number="2">  <span class="cf">while</span> (<span class="op">!</span><span class="kw">identical</span>(env, <span class="kw">empty_env</span>())) {</a>
+<a class="sourceLine" id="cb253-3" data-line-number="3">    <span class="cf">if</span> (success) {</a>
+<a class="sourceLine" id="cb253-4" data-line-number="4">      <span class="co"># success case</span></a>
+<a class="sourceLine" id="cb253-5" data-line-number="5">      <span class="kw">return</span>()</a>
+<a class="sourceLine" id="cb253-6" data-line-number="6">    }</a>
+<a class="sourceLine" id="cb253-7" data-line-number="7">    <span class="co"># inspect parent</span></a>
+<a class="sourceLine" id="cb253-8" data-line-number="8">    env &lt;-<span class="st"> </span><span class="kw">env_parent</span>(env)</a>
+<a class="sourceLine" id="cb253-9" data-line-number="9">  }</a>
+<a class="sourceLine" id="cb253-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb253-11" data-line-number="11">  <span class="co"># base case</span></a>
+<a class="sourceLine" id="cb253-12" data-line-number="12">}</a></code></pre></div>
+</div>
+<div id="exercises-7" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Exercises</h3>
+<ol style="list-style-type: decimal">
+<li><p>Modify <code>where()</code> to return <em>all</em> environments that contain a binding for
+<code>name</code>. Carefully think through what type of object the function will
+need to return.</p></li>
+<li><p>Write a function called <code>fget()</code> that finds only function objects. It
+should have two arguments, <code>name</code> and <code>env</code>, and should obey the regular
+scoping rules for functions: if there’s an object with a matching name
+that’s not a function, look in the parent. For an added challenge, also
+add an <code>inherits</code> argument which controls whether the function recurses up
+the parents or only looks in one environment.</p></li>
+</ol>
+</div>
+</div>
+<div id="function-envs" class="section level2">
+<h2><span class="header-section-number">8.4</span> Special environments</h2>
+<p>這裡討論 package environments. 然後探討當函數建立時,綁入函數的函數環境。還有當函數被呼叫時的執行環境(ephemeral)。</p>
+<p><a href="package-environments">套裝環境</a>主要是看這些環境如何支援namespaces。同時,namespace讓package每次載入的時候,都有一樣的行為,而不售其他packages載入先後的影響。</p>
+<div id="package-environments-and-the-search-path" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> Package environments and the search path</h3>
+<p>每個套件經由<code>library()</code> 或 <code>require()</code> 接入成為<a href="environments.html#global-environment">總體環境</a>的parent。而最後一個<a href="#attach">接入</a>的套件,則是總體環境的第一個parent:</p>
+<div class="sidebar">
+<p>load 和 attach不一樣，當我們使用library的時候,我們做的是[^attach] 在環境串列中加入我們利用library載入的物件..
+[^attach]: Note the difference between attached and loaded. A package is loaded automatically if you access one of its functions using <code>::</code>; it is only <strong>attached</strong> to the search path by <code>library()</code> or <code>require()</code>.</p>
+</div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb254-1" data-line-number="1"><span class="kw">env_parent</span>(<span class="kw">global_env</span>())</a>
+<a class="sourceLine" id="cb254-2" data-line-number="2"><span class="co">#&gt; &lt;environment: package:rlang&gt;</span></a>
+<a class="sourceLine" id="cb254-3" data-line-number="3"><span class="co">#&gt; attr(,&quot;name&quot;)</span></a>
+<a class="sourceLine" id="cb254-4" data-line-number="4"><span class="co">#&gt; [1] &quot;package:rlang&quot;</span></a>
+<a class="sourceLine" id="cb254-5" data-line-number="5"><span class="co">#&gt; attr(,&quot;path&quot;)</span></a>
+<a class="sourceLine" id="cb254-6" data-line-number="6"><span class="co">#&gt; [1] &quot;C:/Program Files/R/R-3.5.1/library/rlang&quot;</span></a></code></pre></div>
+<p>And the parent of that package is the second to last package you attached:</p>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" data-line-number="1"><span class="kw">env_parent</span>(<span class="kw">env_parent</span>(<span class="kw">global_env</span>()))</a>
+<a class="sourceLine" id="cb255-2" data-line-number="2"><span class="co">#&gt; &lt;environment: 0x000000001c92eda8&gt;</span></a>
+<a class="sourceLine" id="cb255-3" data-line-number="3"><span class="co">#&gt; attr(,&quot;name&quot;)</span></a>
+<a class="sourceLine" id="cb255-4" data-line-number="4"><span class="co">#&gt; [1] &quot;mtcars&quot;</span></a></code></pre></div>
+<p>如果一層一層parent回朔,就可以到每個套件被接入的順序,這也是R執行中會用到的 <strong>search path</strong> 因為這些環境的所有物件都可以經由 top-level interactive workspace找到。</p>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb256-1" data-line-number="1"><span class="kw">search_envs</span>()</a>
+<a class="sourceLine" id="cb256-2" data-line-number="2"><span class="co">#&gt;  [[1]] $ &lt;env: global&gt;</span></a>
+<a class="sourceLine" id="cb256-3" data-line-number="3"><span class="co">#&gt;  [[2]] $ &lt;env: package:rlang&gt;</span></a>
+<a class="sourceLine" id="cb256-4" data-line-number="4"><span class="co">#&gt;  [[3]] $ &lt;env: mtcars&gt;</span></a>
+<a class="sourceLine" id="cb256-5" data-line-number="5"><span class="co">#&gt;  [[4]] $ &lt;env: package:stats&gt;</span></a>
+<a class="sourceLine" id="cb256-6" data-line-number="6"><span class="co">#&gt;  [[5]] $ &lt;env: package:graphics&gt;</span></a>
+<a class="sourceLine" id="cb256-7" data-line-number="7"><span class="co">#&gt;  [[6]] $ &lt;env: package:grDevices&gt;</span></a>
+<a class="sourceLine" id="cb256-8" data-line-number="8"><span class="co">#&gt;  [[7]] $ &lt;env: package:utils&gt;</span></a>
+<a class="sourceLine" id="cb256-9" data-line-number="9"><span class="co">#&gt;  [[8]] $ &lt;env: package:datasets&gt;</span></a>
+<a class="sourceLine" id="cb256-10" data-line-number="10"><span class="co">#&gt;  [[9]] $ &lt;env: package:methods&gt;</span></a>
+<a class="sourceLine" id="cb256-11" data-line-number="11"><span class="co">#&gt; [[10]] $ &lt;env: Autoloads&gt;</span></a>
+<a class="sourceLine" id="cb256-12" data-line-number="12"><span class="co">#&gt; [[11]] $ &lt;env: package:base&gt;</span></a></code></pre></div>
+<div class="base">
+<p>函數 <code>search()</code>可以找出環境物件的名稱。</p>
+</div>
+<p>最後兩個環境物件都一樣:</p>
+<ul>
+<li><p><code>Autoloads</code> 環境物件,利用 delayed bindings來節省記憶體，也就是在需要的時候才載入(loading)package中的物件(例如大型資料集)。</p></li>
+<li><p>base environment, <code>package:base</code> 或簡稱 <code>base</code>, 是base 套裝的環境物件。用來 載入其他套裝(bootstrap)。利用函數 <code>base_env()</code>存取.</p></li>
+</ul>
+<p>利用圖型表示:</p>
+<p><img src="diagrams/environments/search-path.png" style="display: block; margin: auto;" /></p>
+<p>當利用 <code>library()</code> attach其他套件的時候, 總體環境的parent馬上改變:</p>
+<p><img src="diagrams/environments/search-path-2.png" style="display: block; margin: auto;" /></p>
+</div>
+<div id="the-function-environment" class="section level3">
+<h3><span class="header-section-number">8.4.2</span> The function environment</h3>
+<p>當函數被建立的時候,現有的環境會被繫結。稱為<em>function environment</em>, 主要用來支援lexical scoping. 在電腦語言中,當函數紀錄它們的運作環境時,我們說這個函數屬於 <em>closures</em>。,這也是為甚麼這個字眼經常在R語言中出現。.</p>
+<p>利用函數 <code>fn_env()</code>可以得到函數的環境物件:</p>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb257-1" data-line-number="1">y &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb257-2" data-line-number="2">f &lt;-<span class="st"> </span><span class="cf">function</span>(x) x <span class="op">+</span><span class="st"> </span>y</a>
+<a class="sourceLine" id="cb257-3" data-line-number="3"><span class="kw">fn_env</span>(f)</a>
+<a class="sourceLine" id="cb257-4" data-line-number="4"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a></code></pre></div>
+<div class="base">
+<p>一樣利用函數 <code>environment(f)</code> 可以找到函數 <code>f</code>的環境.</p>
+</div>
+<p>在圖形中,函數被畫成類似子彈,而彈頭的部分繫結環境。</p>
+<p><img src="diagrams/environments/binding.png" style="display: block; margin: auto;" /></p>
+<p>在這個案例中,<code>f()</code>繫結的環境物件,就是繫結名稱<code>f</code>的環境。但並不一定總是這樣，例如在下一個例子中,<code>g</code>被繫結在新環境物件<code>e</code>中。但是函數<code>g()</code>繫結的是global environment。這之間的分別是我們如何找到<code>g</code>和<code>g</code>如何找到他的變數。</p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" data-line-number="1">e &lt;-<span class="st"> </span><span class="kw">env</span>()</a>
+<a class="sourceLine" id="cb258-2" data-line-number="2">e<span class="op">$</span>g &lt;-<span class="st"> </span><span class="cf">function</span>() <span class="dv">1</span></a></code></pre></div>
+<p><img src="diagrams/environments/binding-2.png" style="display: block; margin: auto;" /></p>
+</div>
+<div id="namespaces" class="section level3">
+<h3><span class="header-section-number">8.4.3</span> Namespaces</h3>
+<p>在上面的圖形中,我們已經知道套件的parent會隨著之前套件載入的順序不同而不同。這就導致R程式設計者必須保證個別套件上如果使用別的套件的函數，必須是原始目的的那一個。<em>namespaces</em> 就是為此目的而產生: 每個套件必須的使用必須一致,而不管使用者如何載入套件.</p>
+<p>以 <code>sd()</code>為例子:</p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb259-1" data-line-number="1">sd</a>
+<a class="sourceLine" id="cb259-2" data-line-number="2"><span class="co">#&gt; function (x, na.rm = FALSE) </span></a>
+<a class="sourceLine" id="cb259-3" data-line-number="3"><span class="co">#&gt; sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), </span></a>
+<a class="sourceLine" id="cb259-4" data-line-number="4"><span class="co">#&gt;     na.rm = na.rm))</span></a>
+<a class="sourceLine" id="cb259-5" data-line-number="5"><span class="co">#&gt; &lt;bytecode: 0x000000001cad62a8&gt;</span></a>
+<a class="sourceLine" id="cb259-6" data-line-number="6"><span class="co">#&gt; &lt;environment: namespace:stats&gt;</span></a></code></pre></div>
+<p><code>sd()</code> 必須使用函數 <code>var()</code>, 因此這個<code>var()</code>到底來自 global environment,還是其他接入(attached)的套件的這種問題必須避免。 R avoids this problem by taking advantage of the function vs. binding environment described above.</p>
+<p>每個套件中的函數和一對環境物件有關:套件環境(之前學到的)還有<em>namespace</em>環境物件。</p>
+<ul>
+<li><p>package environment: 是套件的外部介面，這是R使用者如何在接入的套件中尋找函數的地方(或者可以利用 <code>::</code>) package enviromnent 的parent 由搜尋路徑決定(可以利用<code>search()</code>知道)決定(也就是載入的順序)</p></li>
+<li><p>namespace environment:是套件的內部介面。package environment 控制我們如何找到函數,而namespace environment控制函數如何找到變數。</p></li>
+</ul>
+<p>在package environment的每個繫結也可以在namespace environment中找到。這樣可以確保每個函數可以使用套件中的其他函數。但是有些繫結只能在namespace 中找到(例如內部或非輸出物件),這種內部物件通常是用來隱藏一些繁瑣的且不需要給使用者看到的細節。;</p>
+<p><img src="diagrams/environments/namespace-bind.png" style="display: block; margin: auto;" /></p>
+<p>每個namespace environment 有一樣的祖集合:</p>
+<ul>
+<li><p>每個namespace有<em>imports</em>的環境物件，其中包含了套件中用到的所有函數繫結。而所謂<a href="environments.html#imports-environment">輸入環境</a>實際由套裝開發人員在檔案<code>NAMESPACE</code>指定</p></li>
+<li><p>明確的輸入每個<code>base</code>函數,很繁瑣,所以R直接設定<code>import enviroment</code>的parent是<code>base *namespae*</code>[^1]。</p>
+<div class="sidebar">
+<p>The base namespace contains the same bindings as the base environment, but it has different parent.</p>
+</div></li>
+<li><p><em>base namespace</em> 的parent是總體環境(#global environment).參考下圖,這種設計導致在import environment中找不到繫結時,會開始再總體環境中尋找,而之前提過總體環境通常是互動環境下名稱搜尋的開始路徑,這也導致搜尋的方式受到套件載入順序的影響。因此,R提供了了<code>R CMD check</code>來警告此種情況的發生。(雖然有麻煩,但是由於S3 方法的dispatch 關係,此種方式仍然留著)</p></li>
+</ul>
+<p><img src="diagrams/environments/namespace-env.png" style="display: block; margin: auto;" /></p>
+<p>綜合上述,可以得到下圖::</p>
+<p><img src="diagrams/environments/namespace.png" style="display: block; margin: auto;" /></p>
+<p>所以當 <code>sd()</code> 搜尋<code>var</code> 的值的時候,搜尋順序是受到開發者的指定(在檔案NAMESPACE利用import)，而不會受到套裝使用者的影響。這樣保證每次套件程式碼執行的時候,都一樣,而不會受到一般使用者載入套件的順序而影響。</p>
+<p>注意在package和namespace兩種環境之間沒有直接的連結.連結是由<em>函數環境</em>定義。</p>
+</div>
+<div id="execution-environments" class="section level3">
+<h3><span class="header-section-number">8.4.4</span> Execution environments</h3>
+<p><strong>execution</strong> environment. 下面的函數第一次執行的時候會傳回甚麼?第2次呢?</p>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" data-line-number="1">g &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb260-2" data-line-number="2">  <span class="cf">if</span> (<span class="op">!</span><span class="kw">env_has</span>(<span class="kw">current_env</span>(), <span class="st">&quot;a&quot;</span>)) {</a>
+<a class="sourceLine" id="cb260-3" data-line-number="3">    <span class="kw">message</span>(<span class="st">&quot;Defining a&quot;</span>)</a>
+<a class="sourceLine" id="cb260-4" data-line-number="4">    a &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb260-5" data-line-number="5">  } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb260-6" data-line-number="6">    a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb260-7" data-line-number="7">  }</a>
+<a class="sourceLine" id="cb260-8" data-line-number="8">  a</a>
+<a class="sourceLine" id="cb260-9" data-line-number="9">}</a></code></pre></div>
+<p>再一次利用下面的調用,確認你的答案:</p>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb261-1" data-line-number="1"><span class="kw">g</span>(<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb261-2" data-line-number="2"><span class="co">#&gt; Defining a</span></a>
+<a class="sourceLine" id="cb261-3" data-line-number="3"><span class="co">#&gt; [1] 1</span></a>
+<a class="sourceLine" id="cb261-4" data-line-number="4"><span class="kw">g</span>(<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb261-5" data-line-number="5"><span class="co">#&gt; Defining a</span></a>
+<a class="sourceLine" id="cb261-6" data-line-number="6"><span class="co">#&gt; [1] 1</span></a>
+<a class="sourceLine" id="cb261-7" data-line-number="7"><span class="kw">g</span>(<span class="dv">11</span>)</a>
+<a class="sourceLine" id="cb261-8" data-line-number="8"><span class="co">#&gt; Defining a</span></a>
+<a class="sourceLine" id="cb261-9" data-line-number="9"><span class="co">#&gt; [1] 1</span></a></code></pre></div>
+<p>這個函數每次執行都傳回一樣的答案,參考 <a href="functions.html#fresh-start">a fresh start</a>. 每次函數被調用的時候,一個新的環境都會被建立來主導執行。這種環境稱為<em>執行環境</em>。而<em>執行環境</em>的parent為 function environment.</p>
+<p>用另一個簡單點的例子說明.
+(圖中,執行環境的parent間接表示:經由函數環境).</p>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" data-line-number="1">h &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb262-2" data-line-number="2">  <span class="co"># 1.</span></a>
+<a class="sourceLine" id="cb262-3" data-line-number="3">  a &lt;-<span class="st"> </span><span class="dv">2</span> <span class="co"># 2.</span></a>
+<a class="sourceLine" id="cb262-4" data-line-number="4">  x <span class="op">+</span><span class="st"> </span>a</a>
+<a class="sourceLine" id="cb262-5" data-line-number="5">}</a>
+<a class="sourceLine" id="cb262-6" data-line-number="6">y &lt;-<span class="st"> </span><span class="kw">h</span>(<span class="dv">1</span>) <span class="co"># 3.</span></a></code></pre></div>
+<p><img src="diagrams/environments/execution.png" style="display: block; margin: auto;" /></p>
+<p>執行環境(execution environment)短暫存在,當函數執行完畢通常會被GC。在幾種情況下,會在記憶體存在比較久,第一種是回傳給另一個變數:</p>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb263-1" data-line-number="1">h2 &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb263-2" data-line-number="2">  a &lt;-<span class="st"> </span>x <span class="op">*</span><span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb263-3" data-line-number="3">  <span class="kw">current_env</span>()</a>
+<a class="sourceLine" id="cb263-4" data-line-number="4">}</a>
+<a class="sourceLine" id="cb263-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb263-6" data-line-number="6">e &lt;-<span class="st"> </span><span class="kw">h2</span>(<span class="dt">x =</span> <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb263-7" data-line-number="7"><span class="kw">env_print</span>(e)</a>
+<a class="sourceLine" id="cb263-8" data-line-number="8"><span class="co">#&gt; &lt;environment: 000000001CEA8650&gt;</span></a>
+<a class="sourceLine" id="cb263-9" data-line-number="9"><span class="co">#&gt;   parent: &lt;environment: global&gt;</span></a>
+<a class="sourceLine" id="cb263-10" data-line-number="10"><span class="co">#&gt;   bindings:</span></a>
+<a class="sourceLine" id="cb263-11" data-line-number="11"><span class="co">#&gt;    * a: &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb263-12" data-line-number="12"><span class="co">#&gt;    * x: &lt;dbl&gt;</span></a>
+<a class="sourceLine" id="cb263-13" data-line-number="13"><span class="kw">fn_env</span>(h2)</a>
+<a class="sourceLine" id="cb263-14" data-line-number="14"><span class="co">#&gt; &lt;environment: R_GlobalEnv&gt;</span></a></code></pre></div>
+<p>Another way to capture it is to return an object with a binding to that environment, like a function. The following example illustrates that idea with a function factory, <code>plus()</code>. We use that factory to create a function called <code>plus_one()</code>.</p>
+<p>There’s a lot going on in the diagram because the enclosing environment of <code>plus_one()</code> is the execution environment of <code>plus()</code>.</p>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb264-1" data-line-number="1">plus &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb264-2" data-line-number="2">  <span class="cf">function</span>(y) x <span class="op">+</span><span class="st"> </span>y</a>
+<a class="sourceLine" id="cb264-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb264-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb264-5" data-line-number="5">plus_one &lt;-<span class="st"> </span><span class="kw">plus</span>(<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb264-6" data-line-number="6">plus_one</a>
+<a class="sourceLine" id="cb264-7" data-line-number="7"><span class="co">#&gt; function(y) x + y</span></a>
+<a class="sourceLine" id="cb264-8" data-line-number="8"><span class="co">#&gt; &lt;environment: 0x000000001c8a7338&gt;</span></a></code></pre></div>
+<p><img src="diagrams/environments/closure.png" style="display: block; margin: auto;" /></p>
+<p>What happens when we call <code>plus_one()</code>? Its execution environment will have the captured execution environment of <code>plus()</code> as its parent:</p>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb265-1" data-line-number="1"><span class="kw">plus_one</span>(<span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb265-2" data-line-number="2"><span class="co">#&gt; [1] 3</span></a></code></pre></div>
+<p><img src="diagrams/environments/closure-call.png" style="display: block; margin: auto;" /></p>
+<p>You’ll learn more about function factories in <a href="#functional-programming">functional programming</a>.</p>
+</div>
+<div id="exercises-8" class="section level3">
+<h3><span class="header-section-number">8.4.5</span> Exercises</h3>
+<ol style="list-style-type: decimal">
+<li><p>How is <code>search_envs()</code> different to <code>env_parents(global_env())</code>?</p></li>
+<li><p>Draw a diagram that shows the enclosing environments of this function:</p>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb266-1" data-line-number="1">f1 &lt;-<span class="st"> </span><span class="cf">function</span>(x1) {</a>
+<a class="sourceLine" id="cb266-2" data-line-number="2">  f2 &lt;-<span class="st"> </span><span class="cf">function</span>(x2) {</a>
+<a class="sourceLine" id="cb266-3" data-line-number="3">    f3 &lt;-<span class="st"> </span><span class="cf">function</span>(x3) {</a>
+<a class="sourceLine" id="cb266-4" data-line-number="4">      x1 <span class="op">+</span><span class="st"> </span>x2 <span class="op">+</span><span class="st"> </span>x3</a>
+<a class="sourceLine" id="cb266-5" data-line-number="5">    }</a>
+<a class="sourceLine" id="cb266-6" data-line-number="6">    <span class="kw">f3</span>(<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb266-7" data-line-number="7">  }</a>
+<a class="sourceLine" id="cb266-8" data-line-number="8">  <span class="kw">f2</span>(<span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb266-9" data-line-number="9">}</a>
+<a class="sourceLine" id="cb266-10" data-line-number="10"><span class="kw">f1</span>(<span class="dv">1</span>)</a></code></pre></div></li>
+<li><p>Write an enhanced version of <code>str()</code> that provides more information
+about functions. Show where the function was found and what environment
+it was defined in.</p></li>
+</ol>
+</div>
+</div>
+<div id="the-call-stack" class="section level2">
+<h2><span class="header-section-number">8.5</span> The call stack</h2>
+<p>還有另一種環境稱為 <strong>caller</strong> environment, 可以經由 <code>rlang::caller_env()</code>存取。. This provides the environment from which the function was called, and hence varies based on how the function is called, not how the function was created. As we saw above this is a useful default whenever you write a function that takes an environment as an argument.</p>
+<div class="base">
+<p><code>parent.frame()</code> is equivalent to <code>caller_env()</code>; just note that it returns an environment, not a frame.</p>
+</div>
+<p>To fully understand the caller environment we need to discuss two related concepts: the <strong>call stack</strong>, which is made up of <strong>frames</strong>. Executing a function creates two types of context. You’ve learned about one already: the execution environment is a child of the function environment, which is determined by where the function was created. There’s another type of context created by where the function was called: this is called the call stack.</p>
+<p>There are also a couple of small wrinkles when it comes to custom evaluation. See <a href="#eval-frame">environments vs. frames</a> for more details.</p>
+<div id="simple-call-stacks" class="section level3">
+<h3><span class="header-section-number">8.5.1</span> Simple call stacks</h3>
+<p>Let’s illustrate this with a simple sequence of calls: <code>f()</code> calls <code>g()</code> calls <code>h()</code>.</p>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb267-1" data-line-number="1">f &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb267-2" data-line-number="2">  <span class="kw">g</span>(<span class="dt">x =</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb267-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb267-4" data-line-number="4">g &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb267-5" data-line-number="5">  <span class="kw">h</span>(<span class="dt">x =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb267-6" data-line-number="6">}</a>
+<a class="sourceLine" id="cb267-7" data-line-number="7">h &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb267-8" data-line-number="8">  <span class="kw">stop</span>()</a>
+<a class="sourceLine" id="cb267-9" data-line-number="9">}</a></code></pre></div>
+<p>The way you most commonly see a call stack in R is by looking at the <code>traceback()</code> after an error has occured:</p>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb268-1" data-line-number="1"><span class="kw">f</span>(<span class="dt">x =</span> <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb268-2" data-line-number="2"><span class="co">#&gt; Error:</span></a>
+<a class="sourceLine" id="cb268-3" data-line-number="3"><span class="kw">traceback</span>()</a>
+<a class="sourceLine" id="cb268-4" data-line-number="4"><span class="co">#&gt; 4: stop()</span></a>
+<a class="sourceLine" id="cb268-5" data-line-number="5"><span class="co">#&gt; 3: h(x = 3) </span></a>
+<a class="sourceLine" id="cb268-6" data-line-number="6"><span class="co">#&gt; 2: g(x = 2)</span></a>
+<a class="sourceLine" id="cb268-7" data-line-number="7"><span class="co">#&gt; 1: f(x = 1)</span></a></code></pre></div>
+<p>Instead of <code>stop()</code> + <code>traceback()</code> to understand the call stack, we’re going to use <code>lobstr::cst()</code> to print out the <strong>c</strong>all <strong>s</strong>tack <strong>t</strong>ree:</p>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb269-1" data-line-number="1">h &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</a>
+<a class="sourceLine" id="cb269-2" data-line-number="2">  lobstr<span class="op">::</span><span class="kw">cst</span>()</a>
+<a class="sourceLine" id="cb269-3" data-line-number="3">}</a>
+<a class="sourceLine" id="cb269-4" data-line-number="4"><span class="kw">f</span>(<span class="dt">x =</span> <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb269-5" data-line-number="5"><span class="co">#&gt; ???</span></a>
+<a class="sourceLine" id="cb269-6" data-line-number="6"><span class="co">#&gt; ???f(x = 1)</span></a>
+<a class="sourceLine" id="cb269-7" data-line-number="7"><span class="co">#&gt;   ???g(x = 2)</span></a>
+<a class="sourceLine" id="cb269-8" data-line-number="8"><span class="co">#&gt;     ???h(x = 3)</span></a>
+<a class="sourceLine" id="cb269-9" data-line-number="9"><span class="co">#&gt;       ???lobstr::cst()</span></a></code></pre></div>
+<p>This shows us that <code>cst()</code> was called from <code>h()</code>, which was called from <code>g()</code>, which was called from <code>f()</code>. Note that the order is the opposite from <code>traceback()</code>. As the call stacks get more compliated, I think it’s easier to understand the sequence of calls if you start from the beginning, rather than the end (i.e. <code>f()</code> calls <code>g()</code>; rather than <code>g()</code> was called by <code>f()</code>).</p>
+</div>
+<div id="lazy-evaluation-1" class="section level3">
+<h3><span class="header-section-number">8.5.2</span> Lazy evaluation</h3>
+<p>The call stack above is simple - while you get a hint that there’s some tree-like structure involved, everything happens on a single branch. This is typical of a call stack when all arguments are eagerly evaluated.</p>
+<p>Let’s create a more complicated example that involves some lazy evaluation. We’ll create a sequence of functions, <code>a()</code>, <code>b()</code>, <code>c()</code>, that pass along an argument <code>x</code>.</p>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb270-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">b</span>(x)</a>
+<a class="sourceLine" id="cb270-2" data-line-number="2">b &lt;-<span class="st"> </span><span class="cf">function</span>(x) <span class="kw">c</span>(x)</a>
+<a class="sourceLine" id="cb270-3" data-line-number="3">c &lt;-<span class="st"> </span><span class="cf">function</span>(x) x</a>
+<a class="sourceLine" id="cb270-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb270-5" data-line-number="5"><span class="kw">a</span>(<span class="kw">f</span>())</a>
+<a class="sourceLine" id="cb270-6" data-line-number="6"><span class="co">#&gt; ???</span></a>
+<a class="sourceLine" id="cb270-7" data-line-number="7"><span class="co">#&gt; ???a(f())</span></a>
+<a class="sourceLine" id="cb270-8" data-line-number="8"><span class="co">#&gt; ??? ???b(x)</span></a>
+<a class="sourceLine" id="cb270-9" data-line-number="9"><span class="co">#&gt; ???   ???c(x)</span></a>
+<a class="sourceLine" id="cb270-10" data-line-number="10"><span class="co">#&gt; ???f()</span></a>
+<a class="sourceLine" id="cb270-11" data-line-number="11"><span class="co">#&gt;   ???g(x = 2)</span></a>
+<a class="sourceLine" id="cb270-12" data-line-number="12"><span class="co">#&gt;     ???h(x = 3)</span></a>
+<a class="sourceLine" id="cb270-13" data-line-number="13"><span class="co">#&gt;       ???lobstr::cst()</span></a></code></pre></div>
+<p><code>x</code> is lazily evaluated so this tree gets two branches. In the first branch <code>a()</code> calls <code>b()</code>, then <code>b()</code> calls <code>c()</code>. The second branch starts when <code>c()</code> evaluates its argument <code>x</code>. This argument is evaluated in a new branch because the environment in which it is evaluated is the global environment, not the environment of <code>c()</code>.</p>
+</div>
+<div id="frames" class="section level3">
+<h3><span class="header-section-number">8.5.3</span> Frames</h3>
+<p>Each element of the call stack is a <strong>frame</strong><a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a>, also known as an evaluation context.
+The frame is an extremely important internal data structure, and R code can only access a small part of the data structure because it’s so critical. A frame has three main components that are accessible from R:</p>
+<ul>
+<li><p>An expression (labelled with <code>expr</code>) giving the function call. This is
+what <code>traceback()</code> prints out.</p></li>
+<li><p>An environment (labelled with <code>env</code>), which is typically the execution
+environment of a function. There are two main exceptions: the environment of
+the global frame is the global environment, and calling <code>eval()</code> also
+generates frames, where the environment can be anything.</p></li>
+<li><p>A parent, the previous call in the call stack (shown by a grey arrow).</p></li>
+</ul>
+<p><img src="diagrams/environments/calling.png" style="display: block; margin: auto;" /></p>
+<p>(To focus on the calling environments, I have omitted the bindings in the global environment from <code>f</code>, <code>g</code>, and <code>h</code> to the respective function objects.)</p>
+<p>The frame also holds exit handlers created with <code>on.exit()</code>, restarts and handlers for the condition system, and which context to <code>return()</code> to when a function completes. These are important for the internal operation of R, but are not directly accessible.</p>
+</div>
+<div id="dynamic-scope" class="section level3">
+<h3><span class="header-section-number">8.5.4</span> Dynamic scope</h3>
+<p>Looking up variables in the calling stack rather than in the enclosing environment is called <strong>dynamic scoping</strong>. Few languages implement dynamic scoping (Emacs Lisp is a <a href="http://www.gnu.org/software/emacs/emacs-paper.html#SEC15">notable exception</a>.) This is because dynamic scoping makes it much harder to reason about how a function operates: not only do you need to know how it was defined, you also need to know the context in which it was called. Dynamic scoping is primarily useful for developing functions that aid interactive data analysis. It is one of the topics discussed in <a href="#nse">non-standard evaluation</a>.</p>
+</div>
+<div id="exercises-9" class="section level3">
+<h3><span class="header-section-number">8.5.5</span> Exercises</h3>
+<ol style="list-style-type: decimal">
+<li>Write a function that lists all the variables defined in the environment
+in which it was called. It should return the same results as <code>ls()</code>.</li>
+</ol>
+</div>
+</div>
+<div id="explicit-envs" class="section level2">
+<h2><span class="header-section-number">8.6</span> As data structures</h2>
+<p>As well as powering scoping, environments are also useful data structures in their own right because they have reference semantics. There are three common problems that they can help solve:</p>
+<ul>
+<li><p><strong>Avoiding copies of large data</strong>. Since environments have reference semantics,
+you’ll never accidentally create a copy. This makes it a useful vessel for
+large objects. Bare environments are not that pleasant to work with;
+I recommend using R6 objects instead. Learn more in [R6].</p></li>
+<li><p><strong>Managing state within a package</strong>. Explicit environments are useful in
+packages because they allow you to maintain state across function calls.
+Normally, objects in a package are locked, so you can’t modify them
+directly. Instead, you can do something like this:</p>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb271-1" data-line-number="1">my_env &lt;-<span class="st"> </span><span class="kw">new.env</span>(<span class="dt">parent =</span> <span class="kw">emptyenv</span>())</a>
+<a class="sourceLine" id="cb271-2" data-line-number="2">my_env<span class="op">$</span>a &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb271-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb271-4" data-line-number="4">get_a &lt;-<span class="st"> </span><span class="cf">function</span>() {</a>
+<a class="sourceLine" id="cb271-5" data-line-number="5">  my_env<span class="op">$</span>a</a>
+<a class="sourceLine" id="cb271-6" data-line-number="6">}</a>
+<a class="sourceLine" id="cb271-7" data-line-number="7">set_a &lt;-<span class="st"> </span><span class="cf">function</span>(value) {</a>
+<a class="sourceLine" id="cb271-8" data-line-number="8">  old &lt;-<span class="st"> </span>my_env<span class="op">$</span>a</a>
+<a class="sourceLine" id="cb271-9" data-line-number="9">  my_env<span class="op">$</span>a &lt;-<span class="st"> </span>value</a>
+<a class="sourceLine" id="cb271-10" data-line-number="10">  <span class="kw">invisible</span>(old)</a>
+<a class="sourceLine" id="cb271-11" data-line-number="11">}</a></code></pre></div>
+<p>Returning the old value from setter functions is a good pattern because
+it makes it easier to reset the previous value in conjunction with
+<code>on.exit()</code> (see more in <a href="functions.html#on-exit">on exit</a>).</p></li>
+<li><p><strong>As a hashmap</strong>. A hashmap is a data structure that takes constant, O(1),
+time to find an object based on its name. Environments provide this
+behaviour by default, so can be used to simulate a hashmap. See the
+CRAN package hash for a complete development of this idea.</p></li>
+</ul>
+</div>
+<div id="section" class="section level2">
+<h2><span class="header-section-number">8.7</span> <code>&lt;&lt;-</code></h2>
+<p>The ancestors of an environment have an important relationship to <code>&lt;&lt;-</code>. The regular assignment arrow, <code>&lt;-</code>, always creates a variable in the current environment. The deep assignment arrow, <code>&lt;&lt;-</code>, never creates a variable in the current environment, but instead modifies an existing variable found by walking up the parent environments.</p>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb272-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">0</span></a>
+<a class="sourceLine" id="cb272-2" data-line-number="2">f &lt;-<span class="st"> </span><span class="cf">function</span>() {</a>
+<a class="sourceLine" id="cb272-3" data-line-number="3">  x &lt;&lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb272-4" data-line-number="4">}</a>
+<a class="sourceLine" id="cb272-5" data-line-number="5"><span class="kw">f</span>()</a>
+<a class="sourceLine" id="cb272-6" data-line-number="6">x</a>
+<a class="sourceLine" id="cb272-7" data-line-number="7"><span class="co">#&gt; [1] 1</span></a></code></pre></div>
+<p>If <code>&lt;&lt;-</code> doesn’t find an existing variable, it will create one in the global environment. This is usually undesirable, because global variables introduce non-obvious dependencies between functions. <code>&lt;&lt;-</code> is most often used in conjunction with a closure, as described in <a href="#closures">Closures</a>.</p>
+<div id="exercises-10" class="section level3">
+<h3><span class="header-section-number">8.7.1</span> Exercises</h3>
+<ol style="list-style-type: decimal">
+<li><p>What does this function do? How does it differ from <code>&lt;&lt;-</code> and why
+might you prefer it?</p>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb273-1" data-line-number="1">rebind &lt;-<span class="st"> </span><span class="cf">function</span>(name, value, <span class="dt">env =</span> <span class="kw">caller_env</span>()) {</a>
+<a class="sourceLine" id="cb273-2" data-line-number="2">  <span class="cf">if</span> (<span class="kw">identical</span>(env, <span class="kw">empty_env</span>())) {</a>
+<a class="sourceLine" id="cb273-3" data-line-number="3">    <span class="kw">stop</span>(<span class="st">&quot;Can&#39;t find `&quot;</span>, name, <span class="st">&quot;`&quot;</span>, <span class="dt">call. =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb273-4" data-line-number="4">  } <span class="cf">else</span> <span class="cf">if</span> (<span class="kw">env_has</span>(env, name)) {</a>
+<a class="sourceLine" id="cb273-5" data-line-number="5">    <span class="kw">env_poke</span>(env, name, value)</a>
+<a class="sourceLine" id="cb273-6" data-line-number="6">  } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb273-7" data-line-number="7">    <span class="kw">rebind</span>(name, value, <span class="kw">env_parent</span>(env))</a>
+<a class="sourceLine" id="cb273-8" data-line-number="8">  }</a>
+<a class="sourceLine" id="cb273-9" data-line-number="9">}</a>
+<a class="sourceLine" id="cb273-10" data-line-number="10"><span class="kw">rebind</span>(<span class="st">&quot;a&quot;</span>, <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb273-11" data-line-number="11"><span class="co">#&gt; Error: Can&#39;t find `a`</span></a>
+<a class="sourceLine" id="cb273-12" data-line-number="12">a &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb273-13" data-line-number="13"><span class="kw">rebind</span>(<span class="st">&quot;a&quot;</span>, <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb273-14" data-line-number="14">a</a>
+<a class="sourceLine" id="cb273-15" data-line-number="15"><span class="co">#&gt; [1] 10</span></a></code></pre></div></li>
+</ol>
+</div>
+</div>
+<div id="env-answers" class="section level2">
+<h2><span class="header-section-number">8.8</span> Quiz answers</h2>
+<ol style="list-style-type: decimal">
+<li><p>There are four ways: every object in an environment must have a name;
+order doesn’t matter; environments have parents; environments have
+reference semantics.</p></li>
+<li><p>The parent of the global environment is the last package that you
+loaded. The only environment that doesn’t have a parent is the empty
+environment.</p></li>
+<li><p>The enclosing environment of a function is the environment where it
+was created. It determines where a function looks for variables.</p></li>
+<li><p>Use <code>caller_env()</code> or <code>parent.frame()</code>.</p></li>
+<li><p><code>&lt;-</code> always creates a binding in the current environment; <code>&lt;&lt;-</code>
+rebinds an existing name in a parent of the current environment.</p></li>
+</ol>
+<div id="term" class="section level3">
+<h3><span class="header-section-number">8.8.1</span> term</h3>
+<div id="global-environment" class="section level5">
+<h5><span class="header-section-number">8.8.1.0.1</span> global environment :總體環境</h5>
+</div>
+<div id="package-environments" class="section level5">
+<h5><span class="header-section-number">8.8.1.0.2</span> package environments</h5>
+</div>
+<div id="imports-environment" class="section level5">
+<h5><span class="header-section-number">8.8.1.0.3</span> imports environment</h5>
+
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb274-1" data-line-number="1">需要安裝babynames,ggplot2</a></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>You might wonder why rlang has <code>env_poke()</code> instead of <code>env_set()</code>.
+This is for consistency: <code>_set()</code> functions return a modified copy;
+<code>_poke()</code> functions modify in place.<a href="environments.html#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>NB: <code>?environment</code> uses frame in a different sense: “Environments consist of a <em>frame</em>, or collection of named objects, and a pointer to an enclosing environment.”. We avoid this sense of frame, which comes from S, because it’s very specific and not widely used in base R. For example, the “frame” in <code>parent.frame()</code> is an execution context, not a collection of named objects.<a href="environments.html#fnref9" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="io.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tidy-basic-01.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Environments.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
