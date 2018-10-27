@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test for class</title>
+  <meta name="description" content="web article test">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="test for class" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="web article test" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="test for class" />
+  
+  <meta name="twitter:description" content="web article test" />
+  
+
+<meta name="author" content="lend jwj cen">
+
+
+<meta name="date" content="2018-10-28">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="gitbook-introduction.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="adv-r.css" type="text/css" />
+<link rel="stylesheet" href="tableStyle.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">testing </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a></li>
+<li class="chapter" data-level="2" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>2</b> File System</a><ul>
+<li class="chapter" data-level="2.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>2.1</b> Exploring file system</a></li>
+<li class="chapter" data-level="2.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>2.2</b> Creating of a directory</a></li>
+<li class="chapter" data-level="2.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>2.3</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="2.4" data-path="file-system.html"><a href="file-system.html#constructing-of-file-names-in-r"><i class="fa fa-check"></i><b>2.4</b> Constructing of file names in R</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>2.4.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="2.4.2" data-path="file-system.html"><a href="file-system.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 和工作區相關的指令</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="functions.html"><a href="functions.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#outline"><i class="fa fa-check"></i>Outline</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="functions.html"><a href="functions.html#function-fundamentals"><i class="fa fa-check"></i><b>3.2</b> Function fundamentals</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="functions.html"><a href="functions.html#first-class-functions"><i class="fa fa-check"></i><b>3.2.1</b> First-class functions</a></li>
+<li class="chapter" data-level="3.2.2" data-path="functions.html"><a href="functions.html#function-components"><i class="fa fa-check"></i><b>3.2.2</b> Function components</a></li>
+<li class="chapter" data-level="3.2.3" data-path="functions.html"><a href="functions.html#primitive-functions"><i class="fa fa-check"></i><b>3.2.3</b> Primitive functions</a></li>
+<li class="chapter" data-level="3.2.4" data-path="functions.html"><a href="functions.html#exercises"><i class="fa fa-check"></i><b>3.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="functions.html"><a href="functions.html#lexical-scoping"><i class="fa fa-check"></i><b>3.3</b> Lexical scoping</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="functions.html"><a href="functions.html#name-masking"><i class="fa fa-check"></i><b>3.3.1</b> Name masking</a></li>
+<li class="chapter" data-level="3.3.2" data-path="functions.html"><a href="functions.html#functions-vs.variables"><i class="fa fa-check"></i><b>3.3.2</b> Functions vs. variables</a></li>
+<li class="chapter" data-level="3.3.3" data-path="functions.html"><a href="functions.html#fresh-start"><i class="fa fa-check"></i><b>3.3.3</b> A fresh start</a></li>
+<li class="chapter" data-level="3.3.4" data-path="functions.html"><a href="functions.html#dynamic-lookup"><i class="fa fa-check"></i><b>3.3.4</b> Dynamic lookup</a></li>
+<li class="chapter" data-level="3.3.5" data-path="functions.html"><a href="functions.html#exercises-1"><i class="fa fa-check"></i><b>3.3.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>3.4</b> Lazy evaluation</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="functions.html"><a href="functions.html#forcing-evaluation"><i class="fa fa-check"></i><b>3.4.1</b> Forcing evaluation</a></li>
+<li class="chapter" data-level="3.4.2" data-path="functions.html"><a href="functions.html#promises"><i class="fa fa-check"></i><b>3.4.2</b> Promises</a></li>
+<li class="chapter" data-level="3.4.3" data-path="functions.html"><a href="functions.html#default-arguments"><i class="fa fa-check"></i><b>3.4.3</b> Default arguments</a></li>
+<li class="chapter" data-level="3.4.4" data-path="functions.html"><a href="functions.html#missing-arguments"><i class="fa fa-check"></i><b>3.4.4</b> Missing arguments</a></li>
+<li class="chapter" data-level="3.4.5" data-path="functions.html"><a href="functions.html#exercises-2"><i class="fa fa-check"></i><b>3.4.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="functions.html"><a href="functions.html#fun-dot-dot-dot"><i class="fa fa-check"></i><b>3.5</b> <code>...</code> (dot-dot-dot)</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="functions.html"><a href="functions.html#exercises-3"><i class="fa fa-check"></i><b>3.5.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="functions.html"><a href="functions.html#exiting-a-function"><i class="fa fa-check"></i><b>3.6</b> Exiting a function</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="functions.html"><a href="functions.html#implicit-vs.explict-returns"><i class="fa fa-check"></i><b>3.6.1</b> Implicit vs. explict returns</a></li>
+<li class="chapter" data-level="3.6.2" data-path="functions.html"><a href="functions.html#invisible-values"><i class="fa fa-check"></i><b>3.6.2</b> Invisible values</a></li>
+<li class="chapter" data-level="3.6.3" data-path="functions.html"><a href="functions.html#errors"><i class="fa fa-check"></i><b>3.6.3</b> Errors</a></li>
+<li class="chapter" data-level="3.6.4" data-path="functions.html"><a href="functions.html#on-exit"><i class="fa fa-check"></i><b>3.6.4</b> Exit handlers</a></li>
+<li class="chapter" data-level="3.6.5" data-path="functions.html"><a href="functions.html#exercises-4"><i class="fa fa-check"></i><b>3.6.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="functions.html"><a href="functions.html#function-forms"><i class="fa fa-check"></i><b>3.7</b> Function forms</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="functions.html"><a href="functions.html#rewriting-to-prefix-form"><i class="fa fa-check"></i><b>3.7.1</b> Rewriting to prefix form</a></li>
+<li class="chapter" data-level="3.7.2" data-path="functions.html"><a href="functions.html#prefix-form-prefix-form"><i class="fa fa-check"></i><b>3.7.2</b> Prefix form {prefix-form}</a></li>
+<li class="chapter" data-level="3.7.3" data-path="functions.html"><a href="functions.html#infix-functions"><i class="fa fa-check"></i><b>3.7.3</b> Infix functions</a></li>
+<li class="chapter" data-level="3.7.4" data-path="functions.html"><a href="functions.html#replacement-functions"><i class="fa fa-check"></i><b>3.7.4</b> Replacement functions</a></li>
+<li class="chapter" data-level="3.7.5" data-path="functions.html"><a href="functions.html#special-forms"><i class="fa fa-check"></i><b>3.7.5</b> Special forms</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="functions.html"><a href="functions.html#invoking-a-function"><i class="fa fa-check"></i><b>3.8</b> Invoking a function</a><ul>
+<li class="chapter" data-level="3.8.1" data-path="functions.html"><a href="functions.html#exercises-5"><i class="fa fa-check"></i><b>3.8.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>3.9</b> Quiz answers</a></li>
+<li class="chapter" data-level="3.10" data-path="functions.html"><a href="functions.html#quick-view"><i class="fa fa-check"></i><b>3.10</b> quick view</a><ul>
+<li class="chapter" data-level="3.10.1" data-path="functions.html"><a href="functions.html#section-3.10.1"><i class="fa fa-check"></i><b>3.10.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="3.10.2" data-path="functions.html"><a href="functions.html#section-3.10.2"><i class="fa fa-check"></i><b>3.10.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="3.10.3" data-path="functions.html"><a href="functions.html#section-3.10.3"><i class="fa fa-check"></i><b>3.10.3</b> 質性數據的分析</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>4</b> R Packages</a><ul>
+<li class="chapter" data-level="4.1" data-path="r-packages.html"><a href="r-packages.html#section-4.1"><i class="fa fa-check"></i><b>4.1</b> 基本</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="r-packages.html"><a href="r-packages.html#reference"><i class="fa fa-check"></i><b>4.1.1</b> reference</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="r-packages.html"><a href="r-packages.html#section-4.2"><i class="fa fa-check"></i><b>4.2</b> 範例解析</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="r-packages.html"><a href="r-packages.html#test"><i class="fa fa-check"></i><b>4.2.1</b> test</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="r-packages.html"><a href="r-packages.html#debug"><i class="fa fa-check"></i><b>4.3</b> 測試debug</a></li>
+<li class="chapter" data-level="4.4" data-path="r-packages.html"><a href="r-packages.html#-package-"><i class="fa fa-check"></i><b>4.4</b> 自製 package 範例</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>5</b> data type</a><ul>
+<li class="chapter" data-level="5.1" data-path="data-type.html"><a href="data-type.html#section-5.1"><i class="fa fa-check"></i><b>5.1</b> 基本操作</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="data-type.html"><a href="data-type.html#section-5.1.1"><i class="fa fa-check"></i><b>5.1.1</b> 指派</a></li>
+<li class="chapter" data-level="5.1.2" data-path="data-type.html"><a href="data-type.html#section-5.1.2"><i class="fa fa-check"></i><b>5.1.2</b> 資源</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="data-type.html"><a href="data-type.html#section-5.2"><i class="fa fa-check"></i><b>5.2</b> 介紹</a></li>
+<li class="chapter" data-level="5.3" data-path="data-type.html"><a href="data-type.html#section-5.3"><i class="fa fa-check"></i><b>5.3</b> 實數的比較</a></li>
+<li class="chapter" data-level="5.4" data-path="data-type.html"><a href="data-type.html#section-5.4"><i class="fa fa-check"></i><b>5.4</b> 字串</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="data-type.html"><a href="data-type.html#section-5.4.1"><i class="fa fa-check"></i><b>5.4.1</b> 建立字串</a></li>
+<li class="chapter" data-level="5.4.2" data-path="data-type.html"><a href="data-type.html#section-5.4.2"><i class="fa fa-check"></i><b>5.4.2</b> 空字串</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="data-type.html"><a href="data-type.html#is-family"><i class="fa fa-check"></i><b>5.5</b> 型態操作is family</a></li>
+<li class="chapter" data-level="5.6" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>5.6</b> vector</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="data-type.html"><a href="data-type.html#section-5.6.1"><i class="fa fa-check"></i><b>5.6.1</b> 練習範例</a></li>
+<li class="chapter" data-level="5.6.2" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>5.6.2</b> vector 相關的運算</a></li>
+<li class="chapter" data-level="5.6.3" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>5.6.3</b> 如何存取vector中的元素</a></li>
+<li class="chapter" data-level="5.6.4" data-path="data-type.html"><a href="data-type.html#section-5.6.4"><i class="fa fa-check"></i><b>5.6.4</b> 邏輯做為索引</a></li>
+<li class="chapter" data-level="5.6.5" data-path="data-type.html"><a href="data-type.html#-character-vector-"><i class="fa fa-check"></i><b>5.6.5</b> 利用字串( character vector) 作為索引</a></li>
+<li class="chapter" data-level="5.6.6" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>5.6.6</b> How to modify a vector in R?</a></li>
+<li class="chapter" data-level="5.6.7" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>5.6.7</b> How to delete a Vector?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>5.7</b> List</a><ul>
+<li class="chapter" data-level="5.7.1" data-path="data-type.html"><a href="data-type.html#creating-a-list"><i class="fa fa-check"></i><b>5.7.1</b> Creating a List</a></li>
+<li class="chapter" data-level="5.7.2" data-path="data-type.html"><a href="data-type.html#accessing-list-elements"><i class="fa fa-check"></i><b>5.7.2</b> Accessing List Elements</a></li>
+<li class="chapter" data-level="5.7.3" data-path="data-type.html"><a href="data-type.html#manipulating-list-elements"><i class="fa fa-check"></i><b>5.7.3</b> Manipulating List Elements</a></li>
+<li class="chapter" data-level="5.7.4" data-path="data-type.html"><a href="data-type.html#merging-lists"><i class="fa fa-check"></i><b>5.7.4</b> Merging Lists</a></li>
+<li class="chapter" data-level="5.7.5" data-path="data-type.html"><a href="data-type.html#converting-list-to-vector"><i class="fa fa-check"></i><b>5.7.5</b> Converting List to Vector</a></li>
+<li class="chapter" data-level="5.7.6" data-path="data-type.html"><a href="data-type.html#vector-list"><i class="fa fa-check"></i><b>5.7.6</b> 比較vector, list問題</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>5.8</b> vector 函數範例</a><ul>
+<li class="chapter" data-level="5.8.1" data-path="data-type.html"><a href="data-type.html#cbindrbind"><i class="fa fa-check"></i><b>5.8.1</b> cbind,rbind</a></li>
+<li class="chapter" data-level="5.8.2" data-path="data-type.html"><a href="data-type.html#diff"><i class="fa fa-check"></i><b>5.8.2</b> 函數diff</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>5.9</b> matrix</a></li>
+<li class="chapter" data-level="5.10" data-path="data-type.html"><a href="data-type.html#section-5.10"><i class="fa fa-check"></i><b>5.10</b> 字串函數</a></li>
+<li class="chapter" data-level="5.11" data-path="data-type.html"><a href="data-type.html#regular-expression-syntax"><i class="fa fa-check"></i><b>5.11</b> Regular expression syntax</a><ul>
+<li class="chapter" data-level="5.11.1" data-path="data-type.html"><a href="data-type.html#escape-sequences"><i class="fa fa-check"></i><b>5.11.1</b> Escape sequences</a></li>
+<li class="chapter" data-level="5.11.2" data-path="data-type.html"><a href="data-type.html#section-5.11.2"><i class="fa fa-check"></i><b>5.11.2</b> 應用</a></li>
+<li class="chapter" data-level="5.11.3" data-path="data-type.html"><a href="data-type.html#quantifiers"><i class="fa fa-check"></i><b>5.11.3</b> 數量修飾詞Quantifiers</a></li>
+<li class="chapter" data-level="5.11.4" data-path="data-type.html"><a href="data-type.html#position-of-pattern-within-the-string"><i class="fa fa-check"></i><b>5.11.4</b> Position of pattern within the string</a></li>
+<li class="chapter" data-level="5.11.5" data-path="data-type.html"><a href="data-type.html#operators"><i class="fa fa-check"></i><b>5.11.5</b> Operators</a></li>
+<li class="chapter" data-level="5.11.6" data-path="data-type.html"><a href="data-type.html#character-classes"><i class="fa fa-check"></i><b>5.11.6</b> Character classes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>5.12</b> Factors</a><ul>
+<li class="chapter" data-level="5.12.1" data-path="data-type.html"><a href="data-type.html#data-frames"><i class="fa fa-check"></i><b>5.12.1</b> Data Frames</a></li>
+<li class="chapter" data-level="5.12.2" data-path="data-type.html"><a href="data-type.html#logical"><i class="fa fa-check"></i><b>5.12.2</b> Logical</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="data-type.html"><a href="data-type.html#tables"><i class="fa fa-check"></i><b>5.13</b> Tables</a><ul>
+<li class="chapter" data-level="5.13.1" data-path="data-type.html"><a href="data-type.html#one-way-tables"><i class="fa fa-check"></i><b>5.13.1</b> One Way Tables</a></li>
+<li class="chapter" data-level="5.13.2" data-path="data-type.html"><a href="data-type.html#two-way-tables"><i class="fa fa-check"></i><b>5.13.2</b> Two Way Tables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="assignment.html"><a href="assignment.html"><i class="fa fa-check"></i><b>6</b> assignment</a><ul>
+<li class="chapter" data-level="6.1" data-path="assignment.html"><a href="assignment.html#oop"><i class="fa fa-check"></i><b>6.1</b> OOP</a></li>
+<li class="chapter" data-level="6.2" data-path="assignment.html"><a href="assignment.html#operator"><i class="fa fa-check"></i><b>6.2</b> operator %&gt;%</a></li>
+<li class="chapter" data-level="6.3" data-path="assignment.html"><a href="assignment.html#attribute"><i class="fa fa-check"></i><b>6.3</b> attribute</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="io.html"><a href="io.html"><i class="fa fa-check"></i><b>7</b> IO</a><ul>
+<li class="chapter" data-level="7.1" data-path="io.html"><a href="io.html#csv"><i class="fa fa-check"></i><b>7.1</b> csv</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>8</b> Environments</a><ul>
+<li class="chapter" data-level="8.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#quiz"><i class="fa fa-check"></i>Quiz</a></li>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>8.2</b> Environment basics</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>8.2.1</b> Basics</a></li>
+<li class="chapter" data-level="8.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>8.2.2</b> Important environments</a></li>
+<li class="chapter" data-level="8.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>8.2.3</b> Parents</a></li>
+<li class="chapter" data-level="8.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>8.2.4</b> Getting and setting</a></li>
+<li class="chapter" data-level="8.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>8.2.5</b> Finalisers</a></li>
+<li class="chapter" data-level="8.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>8.2.6</b> Advanced bindings</a></li>
+<li class="chapter" data-level="8.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>8.2.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>8.3</b> Recursing over environments</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>8.3.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>8.4</b> Special environments</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>8.4.1</b> Package environments and the search path</a></li>
+<li class="chapter" data-level="8.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>8.4.2</b> The function environment</a></li>
+<li class="chapter" data-level="8.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>8.4.3</b> Namespaces</a></li>
+<li class="chapter" data-level="8.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>8.4.4</b> Execution environments</a></li>
+<li class="chapter" data-level="8.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>8.4.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>8.5</b> The call stack</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>8.5.1</b> Simple call stacks</a></li>
+<li class="chapter" data-level="8.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>8.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="8.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>8.5.3</b> Frames</a></li>
+<li class="chapter" data-level="8.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>8.5.4</b> Dynamic scope</a></li>
+<li class="chapter" data-level="8.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>8.5.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>8.6</b> As data structures</a></li>
+<li class="chapter" data-level="8.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>8.7</b> <code>&lt;&lt;-</code></a><ul>
+<li class="chapter" data-level="8.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>8.7.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>8.8</b> Quiz answers</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>8.8.1</b> term</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>9</b> Tidy Basic 01</a><ul>
+<li class="chapter" data-level="9.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>9.1</b> long and wide data</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>9.1.1</b> gather: wide to long</a></li>
+<li class="chapter" data-level="9.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>9.1.2</b> spread :long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>9.2</b> dplyr</a></li>
+<li class="chapter" data-level="9.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>9.3</b> other</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>9.3.1</b> Basic verbs</a></li>
+<li class="chapter" data-level="9.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>9.3.2</b> Group by</a></li>
+<li class="chapter" data-level="9.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>9.3.3</b> summarize()</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="basic-plot.html"><a href="basic-plot.html"><i class="fa fa-check"></i><b>10</b> Basic Plot</a><ul>
+<li class="chapter" data-level="10.1" data-path="basic-plot.html"><a href="basic-plot.html#reference-1"><i class="fa fa-check"></i><b>10.1</b> reference</a></li>
+<li class="chapter" data-level="10.2" data-path="basic-plot.html"><a href="basic-plot.html#basic"><i class="fa fa-check"></i><b>10.2</b> basic</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="basic-plot.html"><a href="basic-plot.html#creating-a-graph"><i class="fa fa-check"></i><b>10.2.1</b> Creating a Graph</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="basic-plot.html"><a href="basic-plot.html#histograms-and-density-plots"><i class="fa fa-check"></i><b>10.3</b> Histograms and Density Plots</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="basic-plot.html"><a href="basic-plot.html#histograms"><i class="fa fa-check"></i><b>10.3.1</b> Histograms</a></li>
+<li class="chapter" data-level="10.3.2" data-path="basic-plot.html"><a href="basic-plot.html#kernel-density-plot"><i class="fa fa-check"></i><b>10.3.2</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="10.3.3" data-path="basic-plot.html"><a href="basic-plot.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>10.3.3</b> Comparing Groups VIA Kernal Density</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="basic-plot.html"><a href="basic-plot.html#combining-plots"><i class="fa fa-check"></i><b>10.4</b> Combining Plots</a></li>
+<li class="chapter" data-level="10.5" data-path="basic-plot.html"><a href="basic-plot.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>10.5</b> Add texts within the graph</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="basic-plot.html"><a href="basic-plot.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>10.5.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="10.5.2" data-path="basic-plot.html"><a href="basic-plot.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>10.5.2</b> Add mathematical annotation to a plot</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="basic-plot.html"><a href="basic-plot.html#section-10.6"><i class="fa fa-check"></i><b>10.6</b> 函數畫圖</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>11</b> rbook 提要</a><ul>
+<li class="chapter" data-level="11.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>11.1</b> index.Rmd</a></li>
+<li class="chapter" data-level="11.2" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>11.2</b> 其他_output.yml 範例</a></li>
+<li class="chapter" data-level="11.3" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>11.3</b> .travis.yml</a></li>
+<li class="chapter" data-level="11.4" data-path="rbook-.html"><a href="rbook-.html#section-11.4"><i class="fa fa-check"></i><b>11.4</b> 紀錄</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>12</b> gitbook introduction</a><ul>
+<li class="chapter" data-level="12.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>12.1</b> _output.yml:</a></li>
+<li class="chapter" data-level="12.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>12.2</b> _bookdown.yml:</a></li>
+<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>12.3</b> index.rmd</a></li>
+<li class="chapter" data-level="12.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-12.4"><i class="fa fa-check"></i><b>12.4</b> 執行</a></li>
+<li class="chapter" data-level="12.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.5</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="12.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.5.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="12.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.5.2</b> DESCRIPTION</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>13</b> Sample and Distribution 01</a><ul>
+<li class="chapter" data-level="13.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-13.1"><i class="fa fa-check"></i><b>13.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="13.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>13.2</b> distribution</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test for class</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sample-and-distribution-01" class="section level1">
+<h1><span class="header-section-number">Chapter 13</span> Sample and Distribution 01</h1>
+<p>##　隨機抽樣
+函數sample(x,n,replace=FALSE ).
+其中x為要抽取的向量, n為樣本容量. replace 預設為false</p>
+<ol style="list-style-type: decimal">
+<li>no replacement, 等機率:</li>
+</ol>
+<p>例如從52張撲克牌中抽取5張:</p>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb330-1" data-line-number="1"><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">52</span>, <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb330-2" data-line-number="2"><span class="co">#&gt; [1]  5 43 31  8  1</span></a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>replacement:
+例如拋一枚均勻的硬幣10次</li>
+</ol>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1"> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;H&quot;</span>, <span class="st">&quot;T&quot;</span>), <span class="dv">10</span>, <span class="dt">replace=</span>T)</a>
+<a class="sourceLine" id="cb331-2" data-line-number="2"><span class="co">#&gt;  [1] &quot;H&quot; &quot;H&quot; &quot;H&quot; &quot;T&quot; &quot;T&quot; &quot;T&quot; &quot;H&quot; &quot;H&quot; &quot;H&quot; &quot;H&quot;</span></a></code></pre></div>
+<p>練習:一棵骰子擲10次可表示為:</p>
+<ol start="3" style="list-style-type: decimal">
+<li>不等可能的隨機抽樣:
+sample(x, n, replace=TRUE, prob=y)
+prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機取出成功的概率為0.6, 那麼10次的試驗為:</li>
+</ol>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1"><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;sucess&quot;</span>, <span class="st">&quot;fail&quot;</span>), <span class="dv">10</span>, <span class="dt">replace=</span>T, <span class="dt">prob=</span><span class="kw">c</span>(<span class="fl">0.6</span>,<span class="fl">0.4</span>))</a>
+<a class="sourceLine" id="cb332-2" data-line-number="2"><span class="co">#&gt;  [1] &quot;fail&quot;   &quot;sucess&quot; &quot;sucess&quot; &quot;fail&quot;   &quot;fail&quot;   &quot;sucess&quot; &quot;sucess&quot;</span></a>
+<a class="sourceLine" id="cb332-3" data-line-number="3"><span class="co">#&gt;  [8] &quot;sucess&quot; &quot;fail&quot;   &quot;sucess&quot;</span></a></code></pre></div>
+<div id="section-13.1" class="section level2">
+<h2><span class="header-section-number">13.1</span> 排列組合與概率的計算</h2>
+<p>例 從一副52張撲克中取4張, 求以下事件的概率:<br />
+1. 抽取的4張依次為紅心A，方塊A，黑桃A和梅花A的概率;<br />
+2. 一次抽取4張為紅心A，方塊A，黑桃A和梅花A的概率.</p>
+<p>his summation expression <span class="math inline">\(\sum_{i=1}^n X_i\)</span> appears inline.</p>
+<p>解<br />
+1) 抽取的4張是有次序的, 因此使用排列來求解. 所求的事件(記為A)概率為 <span class="math inline">\(P(A)=\frac{1}{52 \times 51 \times 50 \times 49}\)</span>
+利用R函數</p>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1"><span class="dv">1</span><span class="op">/</span><span class="kw">prod</span>(<span class="dv">52</span><span class="op">:</span><span class="dv">49</span>)</a>
+<a class="sourceLine" id="cb333-2" data-line-number="2"><span class="co">#&gt; [1] 1.54e-07</span></a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>沒有次序的, 可以使用組合數來求解.</li>
+</ol>
+<p><span class="math display">\[ P(B)=\frac{1}{(52,4)} \]</span></p>
+<p>其中 <span class="math inline">\((n,m)=\frac{n!}{m!(n-m)!}\)</span>,可以利用函數choose(),例如</p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1"><span class="dv">1</span><span class="op">/</span><span class="kw">choose</span>(<span class="dv">52</span>,<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb334-2" data-line-number="2"><span class="co">#&gt; [1] 3.69e-06</span></a></code></pre></div>
+</div>
+<div id="distribution" class="section level2">
+<h2><span class="header-section-number">13.2</span> distribution</h2>
+<p>標準表格上下沒有線條,左右有</p>
+<table>
+<thead>
+<tr class="header">
+<th>名稱</th>
+<th>R函數</th>
+<th>選項</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>beta</td>
+<td>beta</td>
+<td>shape1, shape2</td>
+</tr>
+<tr class="even">
+<td>binomial</td>
+<td>binom</td>
+<td>size, prob</td>
+</tr>
+<tr class="odd">
+<td>Cauchy</td>
+<td>cauchy</td>
+<td>location=0, scale=1</td>
+</tr>
+<tr class="even">
+<td>chi-sqaured (<span class="math inline">\(\chi^2\)</span>)</td>
+<td>chisq</td>
+<td>df, ncp</td>
+</tr>
+<tr class="odd">
+<td>exponential</td>
+<td>exp</td>
+<td>rate</td>
+</tr>
+<tr class="even">
+<td>Fisher (F)</td>
+<td>f</td>
+<td>df1, df2, ncp</td>
+</tr>
+<tr class="odd">
+<td>gamma</td>
+<td>gamma</td>
+<td>shape, scale=1</td>
+</tr>
+<tr class="even">
+<td>geometric</td>
+<td>geom</td>
+<td>prob</td>
+</tr>
+<tr class="odd">
+<td>hypergeometric</td>
+<td>hyper</td>
+<td>m, n, k</td>
+</tr>
+<tr class="even">
+<td>lognormal</td>
+<td>lnorm</td>
+<td>meanlog=0, sdlog=1</td>
+</tr>
+<tr class="odd">
+<td>logistic</td>
+<td>logis</td>
+<td>location=0, scale=1</td>
+</tr>
+<tr class="even">
+<td>multinomial</td>
+<td>multinom</td>
+<td>size, prob</td>
+</tr>
+<tr class="odd">
+<td>normal</td>
+<td>norm</td>
+<td>mean=0, sd=1</td>
+</tr>
+<tr class="even">
+<td>negative binomial</td>
+<td>nbinom</td>
+<td>size, prob</td>
+</tr>
+<tr class="odd">
+<td>Poisson</td>
+<td>pois</td>
+<td>lambda</td>
+</tr>
+<tr class="even">
+<td>Student’s (t)</td>
+<td>t</td>
+<td>df</td>
+</tr>
+<tr class="odd">
+<td>uniform</td>
+<td>unif</td>
+<td>min=0, max=1</td>
+</tr>
+<tr class="even">
+<td>Weibull</td>
+<td>weibull</td>
+<td>shape, scale=1</td>
+</tr>
+<tr class="odd">
+<td>Wilcoxon’s statistics</td>
+<td>wilcox</td>
+<td>m, n</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>signrank</td>
+<td>n</td>
+</tr>
+</tbody>
+</table>
+<p>對於所給的分佈名稱，有四類。</p>
+<p>以func為例， 四類函數的對應為:<br />
+1. 「d」概率密度函數: dfunc(x, p1, p2, …), x為數值向量;<br />
+1. 「p」(累積)分佈函數: pfunc(q, p1, p2, …), q為數值向量;<br />
+1. 「q」分位數函數: qfunc(p, p1, p2, …), p為由概率構成的向量;<br />
+1. 「r」隨機數函數: rfunc(n, p1, p2, …), n為生成數據的個數</p>
+<p>這四類函數的第一個參數是有規律的: 形為dfunc的函數為x，pfunc的函數為q，qfunc的函數為p，rfunc的函數為n</p>
+<p>note:
+(但rhyper和rwilcox是特例，他們的第一個參數為nn).
+非中心參數(non-centrality parameter)僅對CDF和
+少數其它幾個函數有效.</p>
+<p><span class="math display">\[ \frac{{\sum\limits_{i = 1}^n {{x_i} - n\mu } }}{{\sqrt {n{\sigma ^2}} }} \sim  N(0,1) \]</span></p>
+<p><span class="math display">\[ \bar X = \frac{{\sum_{i = 1}^n {{x_i} } }}{n} \sim  N(\mu, \sigma^2/n) \]</span></p>
+<p>uniform a~b
+<span class="math display">\[\mu = (a+b)/2\]</span>
+<span class="math display">\[\sigma^2=\frac{(b-a)^2}{12} \]</span>
+data的每一個ROW有sample size (=i=column)<br />
+共1000次(=N=row)</p>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb335-2" data-line-number="2">N=<span class="dv">1000</span> </a>
+<a class="sourceLine" id="cb335-3" data-line-number="3">i=<span class="dv">3</span> <span class="co">#sample size</span></a>
+<a class="sourceLine" id="cb335-4" data-line-number="4">mu=<span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb335-5" data-line-number="5">sigma=<span class="dv">1</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">12</span>)</a>
+<a class="sourceLine" id="cb335-6" data-line-number="6">data&lt;-<span class="kw">matrix</span>(<span class="kw">runif</span>(i<span class="op">*</span>N),<span class="dt">ncol=</span>i)</a>
+<a class="sourceLine" id="cb335-7" data-line-number="7">rs&lt;-<span class="kw">rowSums</span>(data)</a>
+<a class="sourceLine" id="cb335-8" data-line-number="8">rs&lt;-rs<span class="op">/</span>i</a>
+<a class="sourceLine" id="cb335-9" data-line-number="9">z&lt;-(rs<span class="op">-</span>mu)<span class="op">/</span>(sigma<span class="op">/</span><span class="kw">sqrt</span>(i))</a>
+<a class="sourceLine" id="cb335-10" data-line-number="10"><span class="kw">hist</span>(z)</a>
+<a class="sourceLine" id="cb335-11" data-line-number="11"><span class="kw">lines</span>(<span class="kw">density</span>(z), <span class="dt">col =</span> <span class="st">&#39;red&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb335-12" data-line-number="12">x&lt;-z</a>
+<a class="sourceLine" id="cb335-13" data-line-number="13"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">col =</span> <span class="st">&#39;blue&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="dv">3</span>, <span class="dt">add =</span> T)</a>
+<a class="sourceLine" id="cb335-14" data-line-number="14"><span class="kw">rug</span>(<span class="kw">sample</span>(z,<span class="dv">100</span>))</a>
+<a class="sourceLine" id="cb335-15" data-line-number="15"> </a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-373-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1">limite.central &lt;-</a>
+<a class="sourceLine" id="cb336-2" data-line-number="2"><span class="st">  </span><span class="cf">function</span> (<span class="dt">r =</span> runif, <span class="dt">distpar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="dt">m =</span> <span class="fl">.5</span>, <span class="dt">s =</span> <span class="dv">1</span> <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">12</span>), <span class="dt">n =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>), <span class="dt">N =</span> <span class="dv">1000</span>) {</a>
+<a class="sourceLine" id="cb336-3" data-line-number="3">    <span class="cf">for</span> (i <span class="cf">in</span> n) {</a>
+<a class="sourceLine" id="cb336-4" data-line-number="4">      <span class="cf">if</span> (<span class="kw">length</span>(distpar) <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) {</a>
+<a class="sourceLine" id="cb336-5" data-line-number="5">        x &lt;-<span class="kw">matrix</span>(<span class="kw">r</span>(i <span class="op">*</span><span class="st"> </span>N, distpar[<span class="dv">1</span>], distpar[<span class="dv">2</span>]), <span class="dt">nc =</span> i)</a>
+<a class="sourceLine" id="cb336-6" data-line-number="6">      } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb336-7" data-line-number="7">        x &lt;-<span class="kw">matrix</span>(<span class="kw">r</span>(i <span class="op">*</span><span class="st"> </span>N, distpar), <span class="dt">nc =</span> i)</a>
+<a class="sourceLine" id="cb336-8" data-line-number="8">      }</a>
+<a class="sourceLine" id="cb336-9" data-line-number="9">      x &lt;-(<span class="kw">apply</span>(x, <span class="dv">1</span>, sum) <span class="op">-</span><span class="st"> </span>i <span class="op">*</span><span class="st"> </span>m) <span class="op">/</span><span class="st"> </span>(<span class="kw">sqrt</span>(i) <span class="op">*</span><span class="st"> </span>s)</a>
+<a class="sourceLine" id="cb336-10" data-line-number="10">      <span class="kw">hist</span>(x, <span class="dt">col =</span> <span class="st">&#39;light blue&#39;</span>, <span class="dt">probability =</span> T, <span class="dt">main =</span> <span class="kw">paste</span>(<span class="st">&quot;n=&quot;</span>, i),</a>
+<a class="sourceLine" id="cb336-11" data-line-number="11">        <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="kw">max</span>(.<span class="dv">4</span>, <span class="kw">density</span>(x) <span class="op">$</span>y)))</a>
+<a class="sourceLine" id="cb336-12" data-line-number="12">      <span class="kw">lines</span>(<span class="kw">density</span>(x), <span class="dt">col =</span> <span class="st">&#39;red&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb336-13" data-line-number="13">      <span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">col =</span> <span class="st">&#39;blue&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="dv">3</span>, <span class="dt">add =</span> T)</a>
+<a class="sourceLine" id="cb336-14" data-line-number="14">      <span class="cf">if</span> (N <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span>) {</a>
+<a class="sourceLine" id="cb336-15" data-line-number="15">        <span class="kw">rug</span>(<span class="kw">sample</span>(x, <span class="dv">100</span>))</a>
+<a class="sourceLine" id="cb336-16" data-line-number="16">      } <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb336-17" data-line-number="17">        <span class="kw">rug</span>(x)</a>
+<a class="sourceLine" id="cb336-18" data-line-number="18">      }</a>
+<a class="sourceLine" id="cb336-19" data-line-number="19">    }</a>
+<a class="sourceLine" id="cb336-20" data-line-number="20">  }</a>
+<a class="sourceLine" id="cb336-21" data-line-number="21">op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb336-22" data-line-number="22"><span class="kw">limite.central</span>(rbinom, <span class="dt">distpar=</span><span class="kw">c</span>(<span class="dv">10</span> ,<span class="fl">0.1</span>), <span class="dt">m=</span><span class="dv">1</span>, <span class="dt">s=</span><span class="fl">0.9</span>)</a>
+<a class="sourceLine" id="cb336-23" data-line-number="23"><span class="kw">par</span>(op)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-374-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>apply(x,1,sum) 第2個參數1表示row 方向,如果是2表示column 和matlab 相反。</li>
+</ul>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="gitbook-introduction.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Sampling.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
