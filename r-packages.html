@@ -418,36 +418,36 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="http://r-pkgs.had.co.nz/git.html">R package and Github</a></li>
 </ul>
 <p>可以DOS指令tree .列出目錄樹結構</p>
-<div class="sourceCode" id="cb429"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb429-1" data-line-number="1"><span class="kw">R.home</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb431-1" data-line-number="1"><span class="kw">R.home</span>()</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "C:/PROGRA~1/R/R-3.5.1"
 </code></pre>
-<div class="sourceCode" id="cb430"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb430-1" data-line-number="1"><span class="kw">system.file</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb432-1" data-line-number="1"><span class="kw">system.file</span>()</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "C:/PROGRA~1/R/R-3.5.1/library/base"
 </code></pre>
-<div class="sourceCode" id="cb431"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb431-1" data-line-number="1"><span class="kw">system.file</span>(<span class="st">&#39;rmarkdown&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb433-1" data-line-number="1"><span class="kw">system.file</span>(<span class="st">&#39;rmarkdown&#39;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] ""
 </code></pre>
 <p>system.file()除了可以找出套件的根節點以外,也可以視為檔案路徑的在不同系統表示方法的跨平台表示。例如,在package下按照前面的folder順序找檔案</p>
-<div class="sourceCode" id="cb432"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb432-1" data-line-number="1">  css &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;templates&quot;</span>, <span class="st">&quot;epurate&quot;</span> ,<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;style.css&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;epuRate&quot;</span>)</a>
-<a class="sourceLine" id="cb432-2" data-line-number="2">  header &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;templates&quot;</span>, <span class="st">&quot;epurate&quot;</span> ,<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;header.html&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;epuRate&quot;</span>)</a>
-<a class="sourceLine" id="cb432-3" data-line-number="3">  template &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;templates&quot;</span>, <span class="st">&quot;epurate&quot;</span> ,<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;template_epurate.html&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;epuRate&quot;</span>)</a>
-<a class="sourceLine" id="cb432-4" data-line-number="4">  </a>
-<a class="sourceLine" id="cb432-5" data-line-number="5">D<span class="op">:</span>\RSTUDIO\RMD\RPACK\EPURATE<span class="op">-</span>MASTER\INST</a>
-<a class="sourceLine" id="cb432-6" data-line-number="6">└─rmarkdown</a>
-<a class="sourceLine" id="cb432-7" data-line-number="7">    └─templates</a>
-<a class="sourceLine" id="cb432-8" data-line-number="8">        ├─basic</a>
-<a class="sourceLine" id="cb432-9" data-line-number="9">        │  └─skeleton</a>
-<a class="sourceLine" id="cb432-10" data-line-number="10">        ├─epurate</a>
-<a class="sourceLine" id="cb432-11" data-line-number="11">        │  ├─resources</a>
-<a class="sourceLine" id="cb432-12" data-line-number="12">        │  └─skeleton</a>
-<a class="sourceLine" id="cb432-13" data-line-number="13">        └─PCTG</a>
-<a class="sourceLine" id="cb432-14" data-line-number="14">            ├─resources</a>
-<a class="sourceLine" id="cb432-15" data-line-number="15">            └─skeleton</a>
-<a class="sourceLine" id="cb432-16" data-line-number="16">  </a>
-<a class="sourceLine" id="cb432-17" data-line-number="17">  </a></code></pre></div>
+<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb434-1" data-line-number="1">  css &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;templates&quot;</span>, <span class="st">&quot;epurate&quot;</span> ,<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;style.css&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;epuRate&quot;</span>)</a>
+<a class="sourceLine" id="cb434-2" data-line-number="2">  header &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;templates&quot;</span>, <span class="st">&quot;epurate&quot;</span> ,<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;header.html&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;epuRate&quot;</span>)</a>
+<a class="sourceLine" id="cb434-3" data-line-number="3">  template &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;templates&quot;</span>, <span class="st">&quot;epurate&quot;</span> ,<span class="st">&quot;resources&quot;</span>, <span class="st">&quot;template_epurate.html&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;epuRate&quot;</span>)</a>
+<a class="sourceLine" id="cb434-4" data-line-number="4">  </a>
+<a class="sourceLine" id="cb434-5" data-line-number="5">D<span class="op">:</span>\RSTUDIO\RMD\RPACK\EPURATE<span class="op">-</span>MASTER\INST</a>
+<a class="sourceLine" id="cb434-6" data-line-number="6">└─rmarkdown</a>
+<a class="sourceLine" id="cb434-7" data-line-number="7">    └─templates</a>
+<a class="sourceLine" id="cb434-8" data-line-number="8">        ├─basic</a>
+<a class="sourceLine" id="cb434-9" data-line-number="9">        │  └─skeleton</a>
+<a class="sourceLine" id="cb434-10" data-line-number="10">        ├─epurate</a>
+<a class="sourceLine" id="cb434-11" data-line-number="11">        │  ├─resources</a>
+<a class="sourceLine" id="cb434-12" data-line-number="12">        │  └─skeleton</a>
+<a class="sourceLine" id="cb434-13" data-line-number="13">        └─PCTG</a>
+<a class="sourceLine" id="cb434-14" data-line-number="14">            ├─resources</a>
+<a class="sourceLine" id="cb434-15" data-line-number="15">            └─skeleton</a>
+<a class="sourceLine" id="cb434-16" data-line-number="16">  </a>
+<a class="sourceLine" id="cb434-17" data-line-number="17">  </a></code></pre></div>
 <p>哪個函數屬於哪個套件?
 可以直接打入函數名稱但是不要有括號，看最後一行:</p>
-<div class="sourceCode" id="cb433"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb433-1" data-line-number="1">R.home</a></code></pre></div>
+<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb435-1" data-line-number="1">R.home</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>function (component = "home") 
 {
     rh <- .Internal(R.home())
@@ -460,7 +460,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
         component, p) else file.path(rh, component), file.path(rh, 
         component))
 }
-<bytecode: 0x0000000016e40e30>
+<bytecode: 0x0000000016e40da8>
 <environment: namespace:base>
 </code></pre>
 </div>
@@ -482,19 +482,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="debug" class="section level2">
 <h2><span class="header-section-number">6.3</span> 測試debug</h2>
 <p>y是局部變數。</p>
-<div class="sourceCode" id="cb434"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb434-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb434-2" data-line-number="2">g &lt;-<span class="st"> </span><span class="cf">function</span>() {</a>
-<a class="sourceLine" id="cb434-3" data-line-number="3">    y &lt;-<span class="st"> </span><span class="dv">1</span></a>
-<a class="sourceLine" id="cb434-4" data-line-number="4">    <span class="kw">c</span>(x, y)</a>
-<a class="sourceLine" id="cb434-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb434-6" data-line-number="6"><span class="kw">g</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb436-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb436-2" data-line-number="2">g &lt;-<span class="st"> </span><span class="cf">function</span>() {</a>
+<a class="sourceLine" id="cb436-3" data-line-number="3">    y &lt;-<span class="st"> </span><span class="dv">1</span></a>
+<a class="sourceLine" id="cb436-4" data-line-number="4">    <span class="kw">c</span>(x, y)</a>
+<a class="sourceLine" id="cb436-5" data-line-number="5">}</a>
+<a class="sourceLine" id="cb436-6" data-line-number="6"><span class="kw">g</span>()</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2 1
 </code></pre>
-<div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb435-1" data-line-number="1">y</a></code></pre></div>
+<div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb437-1" data-line-number="1">y</a></code></pre></div>
 <pre style="color: red;"><code>Error in eval(expr, envir, enclos):
   object 'y' not found
 </code></pre>
-<div class="sourceCode" id="cb436"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb436-1" data-line-number="1"><span class="kw">rm</span>(x, g)</a></code></pre></div>
+<div class="sourceCode" id="cb438"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb438-1" data-line-number="1"><span class="kw">rm</span>(x, g)</a></code></pre></div>
 </div>
 <div id="-package-" class="section level2">
 <h2><span class="header-section-number">6.4</span> 自製 package 範例</h2>

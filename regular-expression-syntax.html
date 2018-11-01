@@ -417,34 +417,34 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="escape-sequences" class="section level3">
 <h3><span class="header-section-number">3.0.1</span> Escape sequences</h3>
 <p>正規表達式中<code>.</code>代表任意字元,但是如果我們要在字串中查找“.”(例如,檔案名稱中的點) 的時候要怎樣表示?答案是使用逃逸字元<code>\</code>。但是在R語言中,正規表達式，也是使用字串，可是在字串中,<code>\</code>本身就逃逸字元，因此需要<code>\\.</code>。</p>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb228-1" data-line-number="1">dot &lt;-<span class="st"> &quot;</span><span class="ch">\\</span><span class="st">.&quot;</span></a>
-<a class="sourceLine" id="cb228-2" data-line-number="2"><span class="kw">writeLines</span>(dot)</a></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb230-1" data-line-number="1">dot &lt;-<span class="st"> &quot;</span><span class="ch">\\</span><span class="st">.&quot;</span></a>
+<a class="sourceLine" id="cb230-2" data-line-number="2"><span class="kw">writeLines</span>(dot)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>\.
 </code></pre>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb229-1" data-line-number="1">x &lt;-<span class="st"> &quot;a</span><span class="ch">\\</span><span class="st">b&quot;</span></a>
-<a class="sourceLine" id="cb229-2" data-line-number="2"><span class="kw">writeLines</span>(x)</a></code></pre></div>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb231-1" data-line-number="1">x &lt;-<span class="st"> &quot;a</span><span class="ch">\\</span><span class="st">b&quot;</span></a>
+<a class="sourceLine" id="cb231-2" data-line-number="2"><span class="kw">writeLines</span>(x)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>a\b
 </code></pre>
 <div id="grep-grepl" class="section level4">
 <h4><span class="header-section-number">3.0.1.1</span> grep, grepl</h4>
 <p>grep,grepl的差別是後者不支援參數value，且比對的結果和搜尋內容的個數相同。</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb230-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb232-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 </code></pre>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb231-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>),<span class="dt">value=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb233-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>),<span class="dt">value=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a.c"
 </code></pre>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb232-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb234-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] FALSE  TRUE FALSE
 </code></pre>
 <p>又另一個例子,是在字串中尋找單引號,假定要在國家中找尋是否有名稱包含單引號的名字,可以使用<code>'\''</code>
 問題:為甚麼不是<code>'\\''</code>
 hint:
 這裡的逃逸字元只是字串的標準用法,<code>'</code>不是正規表達式的特殊字元。</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb233-1" data-line-number="1">country&lt;-<span class="kw">read.delim</span>(<span class="st">&#39;resources/country.txt&#39;</span>,<span class="dt">header=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb233-2" data-line-number="2"><span class="kw">names</span>(country)&lt;-<span class="st">&quot;Name&quot;</span> </a>
-<a class="sourceLine" id="cb233-3" data-line-number="3">cname &lt;-<span class="kw">levels</span>(country<span class="op">$</span>Name)</a>
-<a class="sourceLine" id="cb233-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&#39;</span><span class="ch">\&#39;</span><span class="st">&#39;</span>, cname, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb235-1" data-line-number="1">country&lt;-<span class="kw">read.delim</span>(<span class="st">&#39;resources/country.txt&#39;</span>,<span class="dt">header=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb235-2" data-line-number="2"><span class="kw">names</span>(country)&lt;-<span class="st">&quot;Name&quot;</span> </a>
+<a class="sourceLine" id="cb235-3" data-line-number="3">cname &lt;-<span class="kw">levels</span>(country<span class="op">$</span>Name)</a>
+<a class="sourceLine" id="cb235-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&#39;</span><span class="ch">\&#39;</span><span class="st">&#39;</span>, cname, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "Cote d'Ivoire"
 </code></pre>
 <p>note:
@@ -454,10 +454,10 @@ hint:
 grep(&#39;\&#39;&#39;, levels(country$Name), value = TRUE)
 </code></pre>
 <p>Hint: levels 傳回唯一值</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb235-1" data-line-number="1"><span class="kw">levels</span>(<span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>)))</a></code></pre></div>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb237-1" data-line-number="1"><span class="kw">levels</span>(<span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>)))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a" "b"
 </code></pre>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb236-1" data-line-number="1"><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb238-1" data-line-number="1"><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] a b a
 Levels: a b
 </code></pre>
@@ -465,8 +465,8 @@ Levels: a b
 <div id="regexpr-gregexpr" class="section level4">
 <h4><span class="header-section-number">3.0.1.2</span> regexpr, gregexpr</h4>
 <p><code>regexpr</code> 函數的使用方式類似<code>grepl</code>。傳回整數向量(表示符合位置，如果找不到,則傳回-1),個數和比對字串串列相同。這個向量同時有屬性<code>match.length</code>(參考範例) .</p>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb237-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9&quot;</span></a>
-<a class="sourceLine" id="cb237-2" data-line-number="2"><span class="kw">regexpr</span>(<span class="st">&#39;b&#39;</span>,s )</a></code></pre></div>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb239-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9&quot;</span></a>
+<a class="sourceLine" id="cb239-2" data-line-number="2"><span class="kw">regexpr</span>(<span class="st">&#39;b&#39;</span>,s )</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3
 attr(,"match.length")
 [1] 1
@@ -475,7 +475,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb238-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;.&#39;</span>,s ) <span class="co"># 要定位符號「.」,這是錯的,\.也錯</span></a></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb240-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;.&#39;</span>,s ) <span class="co"># 要定位符號「.」,這是錯的,\.也錯</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 attr(,"match.length")
 [1] 1
@@ -484,7 +484,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb239-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">.&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">.&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 attr(,"match.length")
 [1] 1
@@ -493,7 +493,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb240-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;[.]&#39;</span>,s ) <span class="co"># 正確 ,不需要regexpr(&#39;[\\.]&#39;,s )</span></a></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;[.]&#39;</span>,s ) <span class="co"># 正確 ,不需要regexpr(&#39;[\\.]&#39;,s )</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 attr(,"match.length")
 [1] 1
@@ -502,7 +502,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb241-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">d&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">d&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 7
 attr(,"match.length")
 [1] 1
@@ -511,13 +511,13 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb242-1" data-line-number="1">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) <span class="co"># 正確</span></a>
-<a class="sourceLine" id="cb242-2" data-line-number="2"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb244-1" data-line-number="1">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) <span class="co"># 正確</span></a>
+<a class="sourceLine" id="cb244-2" data-line-number="2"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 </code></pre>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb243-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
-<a class="sourceLine" id="cb243-2" data-line-number="2">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a>
-<a class="sourceLine" id="cb243-3" data-line-number="3">x</a></code></pre></div>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb245-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
+<a class="sourceLine" id="cb245-2" data-line-number="2">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a>
+<a class="sourceLine" id="cb245-3" data-line-number="3">x</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 7
 attr(,"match.length")
 [1] 1
@@ -526,12 +526,12 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb244-1" data-line-number="1"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" data-line-number="1"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 </code></pre>
 <p><code>gregexpr()</code> 和 <code>regexpr()</code>一樣,不同的是會在目標字串中搜尋所有符合的位置而不是只找第一個(g:全局)。 因此傳回的結果個數雖然和查找的串列元素個數一樣,但是每個元素都是一個向量。如果都沒找到,只有一個-1。</p>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb245-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
-<a class="sourceLine" id="cb245-2" data-line-number="2"> <span class="kw">gregexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a></code></pre></div>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb247-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
+<a class="sourceLine" id="cb247-2" data-line-number="2"> <span class="kw">gregexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[[1]]
 [1]  7  9 11
 attr(,"match.length")
@@ -546,17 +546,17 @@ attr(,"useBytes")
 <div id="section-3.0.2" class="section level3">
 <h3><span class="header-section-number">3.0.2</span> 應用</h3>
 <p>產生3個檔案,檔案名稱含有cat</p>
-<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb246-1" data-line-number="1"><span class="kw">file.create</span>(<span class="kw">c</span>(<span class="st">&quot;xcat1.rmd&quot;</span>, <span class="st">&quot;ycat2.txt&quot;</span>, <span class="st">&quot;zcat3.rmd&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" data-line-number="1"><span class="kw">file.create</span>(<span class="kw">c</span>(<span class="st">&quot;xcat1.rmd&quot;</span>, <span class="st">&quot;ycat2.txt&quot;</span>, <span class="st">&quot;zcat3.rmd&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] TRUE TRUE TRUE
 </code></pre>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb247-1" data-line-number="1">files&lt;-<span class="kw">list.files</span>(<span class="st">&quot;.&quot;</span>)</a>
-<a class="sourceLine" id="cb247-2" data-line-number="2"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb249-1" data-line-number="1">files&lt;-<span class="kw">list.files</span>(<span class="st">&quot;.&quot;</span>)</a>
+<a class="sourceLine" id="cb249-2" data-line-number="2"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "xcat1.rmd" "ycat2.txt" "zcat3.rmd"
 </code></pre>
-<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb248-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 55 57 58
 </code></pre>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb249-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;cat&quot;</span>, files)</a></code></pre></div>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;cat&quot;</span>, files)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [12] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
@@ -581,25 +581,25 @@ attr(,"useBytes")
 </li>
 <li><code>{n,m}</code>: 次數在 n 到 m 之間(包括n,m).</li>
 </ul>
-<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb250-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;acb&quot;</span>, <span class="st">&quot;accb&quot;</span>, <span class="st">&quot;acccb&quot;</span>, <span class="st">&quot;accccb&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;acb&quot;</span>, <span class="st">&quot;accb&quot;</span>, <span class="st">&quot;acccb&quot;</span>, <span class="st">&quot;accccb&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a"      "ab"     "acb"    "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb251-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac*b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac*b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "ab"     "acb"    "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb252-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac+b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb254-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac+b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "acb"    "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb253-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac?b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac?b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "ab"  "acb"
 </code></pre>
-<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb254-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb256-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "accb"
 </code></pre>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb255-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb257-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb256-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,3}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,3}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "accb"  "acccb"
 </code></pre>
 <div id="exercise" class="section level4">
@@ -620,22 +620,22 @@ attr(,"useBytes")
 </li>
 <li><code>\B</code>: 左右不是空白 <em>word</em>.</li>
 </ul>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb257-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;cdab&quot;</span>, <span class="st">&quot;cabd&quot;</span>, <span class="st">&quot;c abd&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb259-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;cdab&quot;</span>, <span class="st">&quot;cabd&quot;</span>, <span class="st">&quot;c abd&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
 </code></pre>
-<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb258-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
 </code></pre>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb259-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb261-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"
 </code></pre>
-<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb260-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab$&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab$&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "cdab"
 </code></pre>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb261-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb263-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"  "c abd"
 </code></pre>
-<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb262-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings)</a></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb264-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1]  1 -1 -1  3
 attr(,"match.length")
 [1]  2 -1 -1  2
@@ -644,7 +644,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb263-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">Bab&quot;</span>, strings)</a></code></pre></div>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb265-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">Bab&quot;</span>, strings)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] -1  3  2 -1
 attr(,"match.length")
 [1] -1  2  2 -1
@@ -677,28 +677,28 @@ attr(,"useBytes")
 </li>
 <li><code>(...)</code>: 字元組,根據出現的順序,可以用 <code>\\N</code>識別( <strong>backreference</strong>).</li>
 </ul>
-<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb264-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;^ab&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abd&quot;</span>, <span class="st">&quot;abe&quot;</span>, <span class="st">&quot;ab 12&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb266-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;^ab&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abd&quot;</span>, <span class="st">&quot;abe&quot;</span>, <span class="st">&quot;ab 12&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb265-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab.&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb267-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab.&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abc"   "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb266-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[c-e]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb268-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[c-e]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abc" "abd" "abe"
 </code></pre>
-<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb267-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[^c]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb269-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[^c]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb268-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb270-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "ab"    "abc"   "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb269-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb271-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "^ab"
 </code></pre>
-<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb270-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;abc|abd&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb272-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;abc|abd&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abc" "abd"
 </code></pre>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb271-1" data-line-number="1"><span class="kw">gsub</span>(<span class="st">&quot;(ab) 12&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1 34&quot;</span>, strings) </a></code></pre></div>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb273-1" data-line-number="1"><span class="kw">gsub</span>(<span class="st">&quot;(ab) 12&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1 34&quot;</span>, strings) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 34"
 </code></pre>
 <p>note:

@@ -1941,7 +1941,10 @@ grep(‘pattern’,target)</p>
 <div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb220-1" data-line-number="1"><span class="kw">is.table</span>(xx)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] FALSE
 </code></pre>
-<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb221-1" data-line-number="1"><span class="kw">head</span>(xx<span class="op">$</span>results)</a></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb221-1" data-line-number="1"><span class="kw">class</span>(xx)</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] "packageIQR"
+</code></pre>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb222-1" data-line-number="1"><span class="kw">head</span>(xx<span class="op">$</span>results)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>     Package   LibPath                              Item       
 [1,] "forcats" "C:/Program Files/R/R-3.5.1/library" "gss_cat"  
 [2,] "stringr" "C:/Program Files/R/R-3.5.1/library" "fruit"    
@@ -1958,30 +1961,36 @@ grep(‘pattern’,target)</p>
 [6,] "US economic time series"                                         
 </code></pre>
 <p>xx$results 是甚麼?</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb222-1" data-line-number="1"><span class="kw">str</span>(xx<span class="op">$</span>results)</a></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb223-1" data-line-number="1"><span class="kw">str</span>(xx<span class="op">$</span>results)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> chr [1:138, 1:4] "forcats" "stringr" "stringr" "stringr" "ggplot2" ...
  - attr(*, "dimnames")=List of 2
   ..$ : NULL
   ..$ : chr [1:4] "Package" "LibPath" "Item" "Title"
 </code></pre>
 <p>如果覺得混亂,可以利用</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb223-1" data-line-number="1"><span class="kw">View</span>(xx<span class="op">$</span>results)</a></code></pre></div>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1"><span class="kw">View</span>(xx<span class="op">$</span>results)</a></code></pre></div>
 <p>因為是矩陣,所以$packages 有問題?</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb224-1" data-line-number="1">xx<span class="op">$</span>results<span class="op">$</span>Packages</a></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1">xx<span class="op">$</span>results<span class="op">$</span>Packages</a></code></pre></div>
 <pre style="color: red;"><code>Error in xx$results$Packages:
   $ operator is invalid for atomic vectors
 </code></pre>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb225-1" data-line-number="1"><span class="kw">head</span>(xx<span class="op">$</span>results[,<span class="st">&#39;item&#39;</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb226-1" data-line-number="1"><span class="kw">head</span>(xx<span class="op">$</span>results[,<span class="st">&#39;item&#39;</span>])</a></code></pre></div>
 <pre style="color: red;"><code>Error in xx$results[, "item"]:
   subscript out of bounds
 </code></pre>
 <p>為甚麼錯誤?
 因為大小寫</p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb226-1" data-line-number="1"><span class="kw">head</span>(xx<span class="op">$</span>results[,<span class="st">&#39;Item&#39;</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1"><span class="kw">head</span>(xx<span class="op">$</span>results[,<span class="st">&#39;Item&#39;</span>])</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "gss_cat"   "fruit"     "sentences" "words"     "diamonds"  "economics"
 </code></pre>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb227-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&#39;mtcars&#39;</span>,xx<span class="op">$</span>results[,<span class="st">&#39;Item&#39;</span>])</a></code></pre></div>
+<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb228-1" data-line-number="1">idx&lt;-<span class="kw">grep</span>(<span class="st">&#39;mtcars&#39;</span>,xx<span class="op">$</span>results[,<span class="st">&#39;Item&#39;</span>])</a>
+<a class="sourceLine" id="cb228-2" data-line-number="2">idx</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 106
+</code></pre>
+<p>確認</p>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb229-1" data-line-number="1">xx<span class="op">$</span>results[idx,<span class="st">&#39;Item&#39;</span>]</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>    Item 
+"mtcars" 
 </code></pre>
 
 </div>

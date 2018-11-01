@@ -422,14 +422,14 @@ If you have multiple graphics devices open, repeat this command until the output
 In R, graphs are typically created interactively.</p>
 <div id="creating-a-graph" class="section level3">
 <h3><span class="header-section-number">8.2.1</span> Creating a Graph</h3>
-<div class="sourceCode" id="cb515"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb515-1" data-line-number="1"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb517-1" data-line-number="1"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
 <pre><code>The following object is masked from package:ggplot2:
 
     mpg</code></pre>
-<div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb517-1" data-line-number="1"><span class="kw">plot</span>(wt, mpg) </a>
-<a class="sourceLine" id="cb517-2" data-line-number="2"><span class="kw">abline</span>(<span class="kw">lm</span>(mpg<span class="op">~</span>wt))</a>
-<a class="sourceLine" id="cb517-3" data-line-number="3"><span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-357-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb519"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb519-1" data-line-number="1"><span class="kw">plot</span>(wt, mpg) </a>
+<a class="sourceLine" id="cb519-2" data-line-number="2"><span class="kw">abline</span>(<span class="kw">lm</span>(mpg<span class="op">~</span>wt))</a>
+<a class="sourceLine" id="cb519-3" data-line-number="3"><span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-358-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>The plot( ) function opens a graph window and plots weight vs. miles per gallon.
 The next line of code adds a regression line to this graph. The final line adds a title.</p>
 <p>plot example click to view</p>
@@ -506,26 +506,26 @@ Creating a new graph by issuing a high level plotting command (plot, hist, boxpl
 <p>You can create histograms with the function hist(x) where x is a numeric vector of values to be plotted. The option freq=FALSE plots probability densities instead of frequencies. The option breaks= controls the number of bins.</p>
 <div id="simple-histogram" class="section level4">
 <h4><span class="header-section-number">8.3.1.1</span> Simple Histogram</h4>
-<div class="sourceCode" id="cb518"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb518-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-358-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb520"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb520-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-359-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>simple histogram click to view</p>
 </div>
 <div id="colored-histogram-with-different-number-of-bins" class="section level4">
 <h4><span class="header-section-number">8.3.1.2</span> Colored Histogram with Different Number of Bins</h4>
-<div class="sourceCode" id="cb519"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb519-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-359-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb521"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb521-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-360-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>colored histogram click to view</p>
 </div>
 <div id="add-a-normal-curve-thanks-to-peter-dalgaard" class="section level4">
 <h4><span class="header-section-number">8.3.1.3</span> Add a Normal Curve (Thanks to Peter Dalgaard)</h4>
-<div class="sourceCode" id="cb520"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb520-1" data-line-number="1">x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg </a>
-<a class="sourceLine" id="cb520-2" data-line-number="2">h&lt;-<span class="kw">hist</span>(x, <span class="dt">breaks=</span><span class="dv">10</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>, </a>
-<a class="sourceLine" id="cb520-3" data-line-number="3">    <span class="dt">main=</span><span class="st">&quot;Histogram with Normal Curve&quot;</span>) </a>
-<a class="sourceLine" id="cb520-4" data-line-number="4">xfit&lt;-<span class="kw">seq</span>(<span class="kw">min</span>(x),<span class="kw">max</span>(x),<span class="dt">length=</span><span class="dv">40</span>) </a>
-<a class="sourceLine" id="cb520-5" data-line-number="5">yfit&lt;-<span class="kw">dnorm</span>(xfit,<span class="dt">mean=</span><span class="kw">mean</span>(x),<span class="dt">sd=</span><span class="kw">sd</span>(x)) </a>
-<a class="sourceLine" id="cb520-6" data-line-number="6">yfit &lt;-<span class="st"> </span>yfit<span class="op">*</span><span class="kw">diff</span>(h<span class="op">$</span>mids[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])<span class="op">*</span><span class="kw">length</span>(x) </a>
-<a class="sourceLine" id="cb520-7" data-line-number="7"><span class="kw">lines</span>(xfit, yfit, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-360-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb522"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb522-1" data-line-number="1">x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg </a>
+<a class="sourceLine" id="cb522-2" data-line-number="2">h&lt;-<span class="kw">hist</span>(x, <span class="dt">breaks=</span><span class="dv">10</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>, </a>
+<a class="sourceLine" id="cb522-3" data-line-number="3">    <span class="dt">main=</span><span class="st">&quot;Histogram with Normal Curve&quot;</span>) </a>
+<a class="sourceLine" id="cb522-4" data-line-number="4">xfit&lt;-<span class="kw">seq</span>(<span class="kw">min</span>(x),<span class="kw">max</span>(x),<span class="dt">length=</span><span class="dv">40</span>) </a>
+<a class="sourceLine" id="cb522-5" data-line-number="5">yfit&lt;-<span class="kw">dnorm</span>(xfit,<span class="dt">mean=</span><span class="kw">mean</span>(x),<span class="dt">sd=</span><span class="kw">sd</span>(x)) </a>
+<a class="sourceLine" id="cb522-6" data-line-number="6">yfit &lt;-<span class="st"> </span>yfit<span class="op">*</span><span class="kw">diff</span>(h<span class="op">$</span>mids[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])<span class="op">*</span><span class="kw">length</span>(x) </a>
+<a class="sourceLine" id="cb522-7" data-line-number="7"><span class="kw">lines</span>(xfit, yfit, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-361-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>histogram with normal curve click to view</p>
 <p>Histograms can be a poor method for determining the shape of a distribution because it is so strongly affected by the number of bins used.</p>
 <p>To practice making a density plot with the hist() function, try this exercise.</p>
@@ -534,16 +534,16 @@ Creating a new graph by issuing a high level plotting command (plot, hist, boxpl
 <div id="kernel-density-plot" class="section level3">
 <h3><span class="header-section-number">8.3.2</span> Kernel Density Plot</h3>
 <p>Kernal density plots are usually a much more effective way to view the distribution of a variable. Create the plot using plot(density(x)) where x is a numeric vector.</p>
-<div class="sourceCode" id="cb521"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb521-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg) <span class="co"># returns the density data </span></a>
-<a class="sourceLine" id="cb521-2" data-line-number="2"><span class="kw">plot</span>(d) <span class="co"># plots the results</span></a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-361-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb523"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb523-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg) <span class="co"># returns the density data </span></a>
+<a class="sourceLine" id="cb523-2" data-line-number="2"><span class="kw">plot</span>(d) <span class="co"># plots the results</span></a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-362-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>simple density plot click to view</p>
 <div id="filled-density-plot" class="section level4">
 <h4><span class="header-section-number">8.3.2.1</span> Filled Density Plot</h4>
-<div class="sourceCode" id="cb522"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb522-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg)</a>
-<a class="sourceLine" id="cb522-2" data-line-number="2"><span class="kw">plot</span>(d, <span class="dt">main=</span><span class="st">&quot;Kernel Density of Miles Per Gallon&quot;</span>)</a>
-<a class="sourceLine" id="cb522-3" data-line-number="3"><span class="kw">polygon</span>(d, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">border=</span><span class="st">&quot;blue&quot;</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-362-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb524"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb524-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb524-2" data-line-number="2"><span class="kw">plot</span>(d, <span class="dt">main=</span><span class="st">&quot;Kernel Density of Miles Per Gallon&quot;</span>)</a>
+<a class="sourceLine" id="cb524-3" data-line-number="3"><span class="kw">polygon</span>(d, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">border=</span><span class="st">&quot;blue&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-363-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>colored density plot click to view</p>
 </div>
 </div>
@@ -552,20 +552,20 @@ Creating a new graph by issuing a high level plotting command (plot, hist, boxpl
 <p>The sm.density.compare( ) function in the sm package allows you to superimpose the kernal density plots of two or more groups. The format is sm.density.compare(x, factor) where x is a numeric vector and factor is the grouping variable.</p>
 <div id="compare-mpg-distributions-for-cars-with-46-or-8-cylinders" class="section level4">
 <h4><span class="header-section-number">8.3.3.1</span> Compare MPG distributions for cars with 4,6, or 8 cylinders</h4>
-<div class="sourceCode" id="cb523"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb523-1" data-line-number="1"><span class="kw">library</span>(sm)</a>
-<a class="sourceLine" id="cb523-2" data-line-number="2"><span class="kw">attach</span>(mtcars)</a>
-<a class="sourceLine" id="cb523-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb523-4" data-line-number="4"><span class="co">#create value labels </span></a>
-<a class="sourceLine" id="cb523-5" data-line-number="5">cyl.f &lt;-<span class="st"> </span><span class="kw">factor</span>(cyl, <span class="dt">levels=</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),</a>
-<a class="sourceLine" id="cb523-6" data-line-number="6">  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;4 cylinder&quot;</span>, <span class="st">&quot;6 cylinder&quot;</span>, <span class="st">&quot;8 cylinder&quot;</span>)) </a>
-<a class="sourceLine" id="cb523-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb523-8" data-line-number="8"><span class="co">#plot densities </span></a>
-<a class="sourceLine" id="cb523-9" data-line-number="9"><span class="kw">sm.density.compare</span>(mpg, cyl, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</a>
-<a class="sourceLine" id="cb523-10" data-line-number="10"><span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;MPG Distribution by Car Cylinders&quot;</span>)</a>
-<a class="sourceLine" id="cb523-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb523-12" data-line-number="12"><span class="co">#add legend via mouse click</span></a>
-<a class="sourceLine" id="cb523-13" data-line-number="13">colfill&lt;-<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span>(<span class="dv">2</span><span class="op">+</span><span class="kw">length</span>(<span class="kw">levels</span>(cyl.f)))) </a>
-<a class="sourceLine" id="cb523-14" data-line-number="14"><span class="kw">legend</span>(<span class="kw">locator</span>(<span class="dv">1</span>), <span class="kw">levels</span>(cyl.f), <span class="dt">fill=</span>colfill)</a></code></pre></div>
+<div class="sourceCode" id="cb525"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb525-1" data-line-number="1"><span class="kw">library</span>(sm)</a>
+<a class="sourceLine" id="cb525-2" data-line-number="2"><span class="kw">attach</span>(mtcars)</a>
+<a class="sourceLine" id="cb525-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb525-4" data-line-number="4"><span class="co">#create value labels </span></a>
+<a class="sourceLine" id="cb525-5" data-line-number="5">cyl.f &lt;-<span class="st"> </span><span class="kw">factor</span>(cyl, <span class="dt">levels=</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),</a>
+<a class="sourceLine" id="cb525-6" data-line-number="6">  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;4 cylinder&quot;</span>, <span class="st">&quot;6 cylinder&quot;</span>, <span class="st">&quot;8 cylinder&quot;</span>)) </a>
+<a class="sourceLine" id="cb525-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb525-8" data-line-number="8"><span class="co">#plot densities </span></a>
+<a class="sourceLine" id="cb525-9" data-line-number="9"><span class="kw">sm.density.compare</span>(mpg, cyl, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</a>
+<a class="sourceLine" id="cb525-10" data-line-number="10"><span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;MPG Distribution by Car Cylinders&quot;</span>)</a>
+<a class="sourceLine" id="cb525-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb525-12" data-line-number="12"><span class="co">#add legend via mouse click</span></a>
+<a class="sourceLine" id="cb525-13" data-line-number="13">colfill&lt;-<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span>(<span class="dv">2</span><span class="op">+</span><span class="kw">length</span>(<span class="kw">levels</span>(cyl.f)))) </a>
+<a class="sourceLine" id="cb525-14" data-line-number="14"><span class="kw">legend</span>(<span class="kw">locator</span>(<span class="dv">1</span>), <span class="kw">levels</span>(cyl.f), <span class="dt">fill=</span>colfill)</a></code></pre></div>
 </div>
 </div>
 </div>
@@ -574,29 +574,29 @@ Creating a new graph by issuing a high level plotting command (plot, hist, boxpl
 <p>R makes it easy to combine multiple plots into one overall graph, using either the
 par( ) or layout( ) function.</p>
 <p>With the par( ) function, you can include the option mfrow=c(nrows, ncols) to create a matrix of nrows x ncols plots that are filled in by row. mfcol=c(nrows, ncols) fills in the matrix by columns.</p>
-<div class="sourceCode" id="cb524"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb524-1" data-line-number="1"><span class="co">#4 figures arranged in 2 rows and 2 columns</span></a>
-<a class="sourceLine" id="cb524-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb524-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb526"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb526-1" data-line-number="1"><span class="co">#4 figures arranged in 2 rows and 2 columns</span></a>
+<a class="sourceLine" id="cb526-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb526-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
 <pre><code>The following objects are masked from mtcars (pos = 3):
 
     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
 <pre><code>The following object is masked from package:ggplot2:
 
     mpg</code></pre>
-<div class="sourceCode" id="cb527"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb527-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb527-2" data-line-number="2"><span class="kw">plot</span>(wt,mpg, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs. mpg&quot;</span>)</a>
-<a class="sourceLine" id="cb527-3" data-line-number="3"><span class="kw">plot</span>(wt,disp, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs disp&quot;</span>)</a>
-<a class="sourceLine" id="cb527-4" data-line-number="4"><span class="kw">hist</span>(wt, <span class="dt">main=</span><span class="st">&quot;Histogram of wt&quot;</span>)</a>
-<a class="sourceLine" id="cb527-5" data-line-number="5"><span class="kw">boxplot</span>(wt, <span class="dt">main=</span><span class="st">&quot;Boxplot of wt&quot;</span>)</a>
-<a class="sourceLine" id="cb527-6" data-line-number="6"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb529"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb529-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb529-2" data-line-number="2"><span class="kw">plot</span>(wt,mpg, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs. mpg&quot;</span>)</a>
+<a class="sourceLine" id="cb529-3" data-line-number="3"><span class="kw">plot</span>(wt,disp, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs disp&quot;</span>)</a>
+<a class="sourceLine" id="cb529-4" data-line-number="4"><span class="kw">hist</span>(wt, <span class="dt">main=</span><span class="st">&quot;Histogram of wt&quot;</span>)</a>
+<a class="sourceLine" id="cb529-5" data-line-number="5"><span class="kw">boxplot</span>(wt, <span class="dt">main=</span><span class="st">&quot;Boxplot of wt&quot;</span>)</a>
+<a class="sourceLine" id="cb529-6" data-line-number="6"><span class="kw">dev.off</span>()</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>null device 
           1 
 </code></pre>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-364-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-365-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>2 x2 layout click to view</p>
-<div class="sourceCode" id="cb528"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb528-1" data-line-number="1"><span class="co"># 3 figures arranged in 3 rows and 1 column</span></a>
-<a class="sourceLine" id="cb528-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb528-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb530"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb530-1" data-line-number="1"><span class="co"># 3 figures arranged in 3 rows and 1 column</span></a>
+<a class="sourceLine" id="cb530-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb530-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
 <pre><code>The following objects are masked from mtcars (pos = 3):
 
     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
@@ -606,22 +606,22 @@ par( ) or layout( ) function.</p>
 <pre><code>The following object is masked from package:ggplot2:
 
     mpg</code></pre>
-<div class="sourceCode" id="cb532"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb532-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)) </a>
-<a class="sourceLine" id="cb532-2" data-line-number="2"><span class="kw">hist</span>(wt)</a>
-<a class="sourceLine" id="cb532-3" data-line-number="3"><span class="kw">hist</span>(mpg)</a>
-<a class="sourceLine" id="cb532-4" data-line-number="4"><span class="kw">hist</span>(disp)</a>
-<a class="sourceLine" id="cb532-5" data-line-number="5"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb534"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb534-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)) </a>
+<a class="sourceLine" id="cb534-2" data-line-number="2"><span class="kw">hist</span>(wt)</a>
+<a class="sourceLine" id="cb534-3" data-line-number="3"><span class="kw">hist</span>(mpg)</a>
+<a class="sourceLine" id="cb534-4" data-line-number="4"><span class="kw">hist</span>(disp)</a>
+<a class="sourceLine" id="cb534-5" data-line-number="5"><span class="kw">dev.off</span>()</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>null device 
           1 
 </code></pre>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-365-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-366-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>3 x 1 layout</p>
 <p>函數 layout( ) 的使用方法為 layout(mat) 其中
 mat 的元素用來指定圖形號碼。例如分成4個格子,順序為左右上下(byrow=TRUE)
 1在第一ROW,占用[1,1]-[1,2],2,3,分別占用[2,1]和[2,2]</p>
-<div class="sourceCode" id="cb533"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb533-1" data-line-number="1"><span class="co"># One figure in row 1 and two figures in row 2</span></a>
-<a class="sourceLine" id="cb533-2" data-line-number="2"> </a>
-<a class="sourceLine" id="cb533-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb535"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb535-1" data-line-number="1"><span class="co"># One figure in row 1 and two figures in row 2</span></a>
+<a class="sourceLine" id="cb535-2" data-line-number="2"> </a>
+<a class="sourceLine" id="cb535-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
 <pre><code>The following objects are masked from mtcars (pos = 3):
 
     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
@@ -634,15 +634,15 @@ mat 的元素用來指定圖形號碼。例如分成4個格子,順序為左右�
 <pre><code>The following object is masked from package:ggplot2:
 
     mpg</code></pre>
-<div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb538-1" data-line-number="1"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))</a>
-<a class="sourceLine" id="cb538-2" data-line-number="2"><span class="kw">hist</span>(wt)</a>
-<a class="sourceLine" id="cb538-3" data-line-number="3"><span class="kw">hist</span>(mpg)</a>
-<a class="sourceLine" id="cb538-4" data-line-number="4"><span class="kw">hist</span>(disp)</a>
-<a class="sourceLine" id="cb538-5" data-line-number="5"><span class="kw">dev.off</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb540"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb540-1" data-line-number="1"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))</a>
+<a class="sourceLine" id="cb540-2" data-line-number="2"><span class="kw">hist</span>(wt)</a>
+<a class="sourceLine" id="cb540-3" data-line-number="3"><span class="kw">hist</span>(mpg)</a>
+<a class="sourceLine" id="cb540-4" data-line-number="4"><span class="kw">hist</span>(disp)</a>
+<a class="sourceLine" id="cb540-5" data-line-number="5"><span class="kw">dev.off</span>()</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>null device 
           1 
 </code></pre>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-366-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-367-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>Optionally, you can include widths= and heights= options in the layout( ) function to control the size of each figure more precisely. These options have the form
 widths= a vector of values for the widths of columns
 heights= a vector of values for the heights of rows.</p>
@@ -661,11 +661,11 @@ par(mar=c(1,1,1,1)) 更動margin</p>
 plot.new() # 畫圖<br />
 par(op) # 改回原先的margin</p>
 </div>
-<div class="sourceCode" id="cb539"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb539-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) </a>
-<a class="sourceLine" id="cb539-2" data-line-number="2"><span class="co"># One figure in row 1 and two figures in row 2</span></a>
-<a class="sourceLine" id="cb539-3" data-line-number="3"><span class="co"># row 1 is 1/3 the height of row 2</span></a>
-<a class="sourceLine" id="cb539-4" data-line-number="4"><span class="co"># column 2 is 1/4 the width of the column 1 </span></a>
-<a class="sourceLine" id="cb539-5" data-line-number="5"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb541"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb541-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) </a>
+<a class="sourceLine" id="cb541-2" data-line-number="2"><span class="co"># One figure in row 1 and two figures in row 2</span></a>
+<a class="sourceLine" id="cb541-3" data-line-number="3"><span class="co"># row 1 is 1/3 the height of row 2</span></a>
+<a class="sourceLine" id="cb541-4" data-line-number="4"><span class="co"># column 2 is 1/4 the width of the column 1 </span></a>
+<a class="sourceLine" id="cb541-5" data-line-number="5"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
 <pre><code>The following objects are masked from mtcars (pos = 3):
 
     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
@@ -681,30 +681,30 @@ par(op) # 改回原先的margin</p>
 <pre><code>The following object is masked from package:ggplot2:
 
     mpg</code></pre>
-<div class="sourceCode" id="cb545"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb545-1" data-line-number="1"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>), </a>
-<a class="sourceLine" id="cb545-2" data-line-number="2">    <span class="dt">widths=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>), <span class="dt">heights=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb545-3" data-line-number="3"><span class="kw">hist</span>(wt)</a>
-<a class="sourceLine" id="cb545-4" data-line-number="4"><span class="kw">hist</span>(mpg)</a>
-<a class="sourceLine" id="cb545-5" data-line-number="5"><span class="kw">hist</span>(disp)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-367-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb547"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb547-1" data-line-number="1"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>), </a>
+<a class="sourceLine" id="cb547-2" data-line-number="2">    <span class="dt">widths=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>), <span class="dt">heights=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb547-3" data-line-number="3"><span class="kw">hist</span>(wt)</a>
+<a class="sourceLine" id="cb547-4" data-line-number="4"><span class="kw">hist</span>(mpg)</a>
+<a class="sourceLine" id="cb547-5" data-line-number="5"><span class="kw">hist</span>(disp)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-368-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>multiplot layout with fine control click to view</p>
 <p>See help(layout) for more details.</p>
 <p>Creating a figure arrangement with fine control
 In the following example, two box plots are added to scatterplot to create an enhanced graph.</p>
-<div class="sourceCode" id="cb546"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb546-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) </a>
-<a class="sourceLine" id="cb546-2" data-line-number="2"><span class="co"># Add boxplots to a scatterplot</span></a>
-<a class="sourceLine" id="cb546-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="dv">0</span>,<span class="fl">0.8</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb548"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb548-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) </a>
+<a class="sourceLine" id="cb548-2" data-line-number="2"><span class="co"># Add boxplots to a scatterplot</span></a>
+<a class="sourceLine" id="cb548-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="dv">0</span>,<span class="fl">0.8</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="color: red;"><code>Warning in par(fig = c(0, 0.8, 0, 0.8), new = TRUE): calling par(new=TRUE)
 with no plot
 </code></pre>
-<div class="sourceCode" id="cb547"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb547-1" data-line-number="1"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg, <span class="dt">xlab=</span><span class="st">&quot;Car Weight&quot;</span>,</a>
-<a class="sourceLine" id="cb547-2" data-line-number="2">  <span class="dt">ylab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</a>
-<a class="sourceLine" id="cb547-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.55</span>,<span class="dv">1</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb547-4" data-line-number="4"><span class="kw">boxplot</span>(mtcars<span class="op">$</span>wt, <span class="dt">horizontal=</span><span class="ot">TRUE</span>, <span class="dt">axes=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb547-5" data-line-number="5"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="fl">0.65</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="fl">0.8</span>),<span class="dt">new=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb547-6" data-line-number="6"><span class="kw">boxplot</span>(mtcars<span class="op">$</span>mpg, <span class="dt">axes=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb547-7" data-line-number="7"><span class="kw">mtext</span>(<span class="st">&quot;Enhanced Scatterplot&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>, <span class="dt">outer=</span><span class="ot">TRUE</span>, <span class="dt">line=</span><span class="op">-</span><span class="dv">3</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-368-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb549"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb549-1" data-line-number="1"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg, <span class="dt">xlab=</span><span class="st">&quot;Car Weight&quot;</span>,</a>
+<a class="sourceLine" id="cb549-2" data-line-number="2">  <span class="dt">ylab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</a>
+<a class="sourceLine" id="cb549-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.55</span>,<span class="dv">1</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb549-4" data-line-number="4"><span class="kw">boxplot</span>(mtcars<span class="op">$</span>wt, <span class="dt">horizontal=</span><span class="ot">TRUE</span>, <span class="dt">axes=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb549-5" data-line-number="5"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="fl">0.65</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="fl">0.8</span>),<span class="dt">new=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb549-6" data-line-number="6"><span class="kw">boxplot</span>(mtcars<span class="op">$</span>mpg, <span class="dt">axes=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb549-7" data-line-number="7"><span class="kw">mtext</span>(<span class="st">&quot;Enhanced Scatterplot&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>, <span class="dt">outer=</span><span class="ot">TRUE</span>, <span class="dt">line=</span><span class="op">-</span><span class="dv">3</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-369-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>To understand this graph, think of the full graph area as going from (0,0) in the lower left corner to (1,1) in the upper right corner. The format of the fig= parameter is a numerical vector of the form c(x1, x2, y1, y2). The first fig= sets up the scatterplot going from 0 to 0.8 on the x axis and 0 to 0.8 on the y axis. The top boxplot goes from 0 to 0.8 on the x axis and 0.55 to 1 on the y axis. I chose 0.55 rather than 0.8 so that the top figure will be pulled closer to the scatter plot. The right hand boxplot goes from 0.65 to 1 on the x axis and 0 to 0.8 on the y axis. Again, I chose a value to pull the right hand boxplot closer to the scatterplot. You have to experiment to get it just right.</p>
 <p>fig= starts a new plot, so to add to an existing plot use new=TRUE.</p>
 <p>You can use this to combine several plots in any arrangement into one graph.</p>
@@ -717,13 +717,13 @@ with no plot
 x and y: 文字座標;
 labels: 例如 “a label”</p>
 <p>範例 :</p>
-<div class="sourceCode" id="cb548"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb548-1" data-line-number="1">d&lt;-<span class="kw">head</span>(mtcars)</a>
-<a class="sourceLine" id="cb548-2" data-line-number="2"><span class="kw">plot</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>], </a>
-<a class="sourceLine" id="cb548-3" data-line-number="3">     <span class="dt">main=</span><span class="st">&quot;Milage vs. Car Weight</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~~~~~~~~~&quot;</span>,</a>
-<a class="sourceLine" id="cb548-4" data-line-number="4">      <span class="dt">xlab=</span><span class="st">&quot;Weight&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Miles/(US) gallon&quot;</span>,</a>
-<a class="sourceLine" id="cb548-5" data-line-number="5">      <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)</a>
-<a class="sourceLine" id="cb548-6" data-line-number="6"><span class="kw">text</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>],  <span class="kw">row.names</span>(d),     <span class="dt">cex=</span><span class="fl">0.65</span>,<span class="dt">pos=</span><span class="dv">3</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>) </a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-371-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb550"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb550-1" data-line-number="1">d&lt;-<span class="kw">head</span>(mtcars)</a>
+<a class="sourceLine" id="cb550-2" data-line-number="2"><span class="kw">plot</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>], </a>
+<a class="sourceLine" id="cb550-3" data-line-number="3">     <span class="dt">main=</span><span class="st">&quot;Milage vs. Car Weight</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~~~~~~~~~&quot;</span>,</a>
+<a class="sourceLine" id="cb550-4" data-line-number="4">      <span class="dt">xlab=</span><span class="st">&quot;Weight&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Miles/(US) gallon&quot;</span>,</a>
+<a class="sourceLine" id="cb550-5" data-line-number="5">      <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)</a>
+<a class="sourceLine" id="cb550-6" data-line-number="6"><span class="kw">text</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>],  <span class="kw">row.names</span>(d),     <span class="dt">cex=</span><span class="fl">0.65</span>,<span class="dt">pos=</span><span class="dv">3</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>) </a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-372-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <div id="add-text-in-the-margins-of-the-graph" class="section level3">
 <h3><span class="header-section-number">8.5.1</span> Add text in the margins of the graph</h3>
 <p>在圖形周圍給文字:</p>
@@ -736,48 +736,48 @@ side : 哪一側 :<br />
 3: 上
 4: 又</p>
 <p>範例 :</p>
-<div class="sourceCode" id="cb549"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb549-1" data-line-number="1"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
-<a class="sourceLine" id="cb549-2" data-line-number="2">     <span class="dt">main=</span><span class="st">&quot;mtext(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</a>
-<a class="sourceLine" id="cb549-3" data-line-number="3"><span class="kw">mtext</span>(<span class="st">&quot;Magic function&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-372-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb551"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb551-1" data-line-number="1"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb551-2" data-line-number="2">     <span class="dt">main=</span><span class="st">&quot;mtext(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</a>
+<a class="sourceLine" id="cb551-3" data-line-number="3"><span class="kw">mtext</span>(<span class="st">&quot;Magic function&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-373-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="add-mathematical-annotation-to-a-plot" class="section level3">
 <h3><span class="header-section-number">8.5.2</span> Add mathematical annotation to a plot</h3>
-<div class="sourceCode" id="cb550"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb550-1" data-line-number="1"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
-<a class="sourceLine" id="cb550-2" data-line-number="2">     <span class="dt">main=</span><span class="st">&quot;text(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</a>
-<a class="sourceLine" id="cb550-3" data-line-number="3"><span class="kw">text</span>(<span class="dv">4</span>, <span class="dv">9</span>, <span class="kw">expression</span>(<span class="kw">hat</span>(beta) <span class="op">==</span><span class="st"> </span>(X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>X)<span class="op">^</span>{<span class="op">-</span><span class="dv">1</span>} <span class="op">*</span><span class="st"> </span>X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>y))</a>
-<a class="sourceLine" id="cb550-4" data-line-number="4"><span class="kw">text</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="kw">expression</span>(<span class="kw">bar</span>(x) <span class="op">==</span><span class="st"> </span><span class="kw">sum</span>(<span class="kw">frac</span>(x[i], n), i<span class="op">==</span><span class="dv">1</span>, n)))</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-373-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb552"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb552-1" data-line-number="1"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb552-2" data-line-number="2">     <span class="dt">main=</span><span class="st">&quot;text(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</a>
+<a class="sourceLine" id="cb552-3" data-line-number="3"><span class="kw">text</span>(<span class="dv">4</span>, <span class="dv">9</span>, <span class="kw">expression</span>(<span class="kw">hat</span>(beta) <span class="op">==</span><span class="st"> </span>(X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>X)<span class="op">^</span>{<span class="op">-</span><span class="dv">1</span>} <span class="op">*</span><span class="st"> </span>X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>y))</a>
+<a class="sourceLine" id="cb552-4" data-line-number="4"><span class="kw">text</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="kw">expression</span>(<span class="kw">bar</span>(x) <span class="op">==</span><span class="st"> </span><span class="kw">sum</span>(<span class="kw">frac</span>(x[i], n), i<span class="op">==</span><span class="dv">1</span>, n)))</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-374-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="section-8.6" class="section level2">
 <h2><span class="header-section-number">8.6</span> 函數畫圖</h2>
-<div class="sourceCode" id="cb551"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb551-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
-<a class="sourceLine" id="cb551-2" data-line-number="2"><span class="kw">plot</span>(<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-374-1.png" width="70%" style="display: block; margin: auto;" />
-問題是如果x座標的增加不是1單位?</p>
-<div class="sourceCode" id="cb552"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb552-1" data-line-number="1">x&lt;-<span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="fl">0.1</span>)</a>
-<a class="sourceLine" id="cb552-2" data-line-number="2">y&lt;-<span class="kw">exp</span>(x)</a>
-<a class="sourceLine" id="cb552-3" data-line-number="3">x&lt;-y</a>
-<a class="sourceLine" id="cb552-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb552-5" data-line-number="5">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
-<a class="sourceLine" id="cb552-6" data-line-number="6"><span class="kw">plot</span>(x,<span class="kw">eq</span>(x), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-375-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb553"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb553-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
-<a class="sourceLine" id="cb553-2" data-line-number="2"><span class="kw">curve</span>(eq, <span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">50</span>, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-376-1.png" width="70%" style="display: block; margin: auto;" />
+<a class="sourceLine" id="cb553-2" data-line-number="2"><span class="kw">plot</span>(<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-375-1.png" width="70%" style="display: block; margin: auto;" />
+問題是如果x座標的增加不是1單位?</p>
+<div class="sourceCode" id="cb554"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb554-1" data-line-number="1">x&lt;-<span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="fl">0.1</span>)</a>
+<a class="sourceLine" id="cb554-2" data-line-number="2">y&lt;-<span class="kw">exp</span>(x)</a>
+<a class="sourceLine" id="cb554-3" data-line-number="3">x&lt;-y</a>
+<a class="sourceLine" id="cb554-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb554-5" data-line-number="5">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb554-6" data-line-number="6"><span class="kw">plot</span>(x,<span class="kw">eq</span>(x), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-376-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb555"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb555-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb555-2" data-line-number="2"><span class="kw">curve</span>(eq, <span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">50</span>, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-377-1.png" width="70%" style="display: block; margin: auto;" />
 問題:解釋為何錯誤</p>
-<div class="sourceCode" id="cb554"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb554-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
-<a class="sourceLine" id="cb554-2" data-line-number="2">y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</a>
-<a class="sourceLine" id="cb554-3" data-line-number="3"><span class="kw">curve</span>(y, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb556"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb556-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb556-2" data-line-number="2">y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</a>
+<a class="sourceLine" id="cb556-3" data-line-number="3"><span class="kw">curve</span>(y, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
 <pre style="color: red;"><code>Error in y(x):
   could not find function "y"
 </code></pre>
 <p>問題:如何修正下面的錯誤?</p>
-<div class="sourceCode" id="cb555"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb555-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
-<a class="sourceLine" id="cb555-2" data-line-number="2">z&lt;-<span class="dv">1</span><span class="op">:</span><span class="dv">50</span></a>
-<a class="sourceLine" id="cb555-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb555-4" data-line-number="4"><span class="kw">curve</span>(<span class="kw">eq</span>(z), <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb557"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb557-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb557-2" data-line-number="2">z&lt;-<span class="dv">1</span><span class="op">:</span><span class="dv">50</span></a>
+<a class="sourceLine" id="cb557-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb557-4" data-line-number="4"><span class="kw">curve</span>(<span class="kw">eq</span>(z), <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
 <p>solution:</p>
 
 </div>
