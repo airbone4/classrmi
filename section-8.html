@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="data-type.html">
-<link rel="next" href="file-system.html">
+<link rel="prev" href="environments.html">
+<link rel="next" href="sample-and-distribution-01.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -381,371 +381,407 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="regular-expression-syntax" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Regular expression syntax</h1>
-<p>利用一些特殊字元，例如 <code>$ * + . ? [ ] ^ { } | ( ) \</code>構成Regular expressions，用來在文字中表達某些搜尋樣式的語法。 這裡只是簡短的介紹</p>
-<div id="functions-which-work-with-regular-expression-patterns" class="section level4">
-<h4><span class="header-section-number">3.0.0.1</span> Functions which work with regular expression patterns</h4>
-<ul>
-<li>strsplit: split string into substrings at occurances of regexp</li>
-<li>grep: search for a regular expression within a string</li>
-<li>sub: search and then replace an occurance of a regular expression in a strng</li>
-<li>gsub: global search and replace all occurances of a regular expression in a string</li>
-</ul>
+<div id="section-8" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> 基本繪圖</h1>
+<div id="reference-1" class="section level2">
+<h2><span class="header-section-number">8.1</span> reference</h2>
+<p><a href="https://www.statmethods.net/graphs/creating.html">Quric R</a></p>
+<p>一般視窗作業系統的繪圖，會有一個抽象物件<code>device</code>在這個device上，有一個抽象物件<code>canvas</code>，和繪圖工具例如，水彩筆之類的抽象物件可以指定顏色，線條粗細等等。</p>
 </div>
-<div id="escape-sequences" class="section level3">
-<h3><span class="header-section-number">3.0.1</span> Escape sequences</h3>
-<p>正規表達式中<code>.</code>代表任意字元,但是如果我們要在字串中查找“.”(例如,檔案名稱中的點) 的時候要怎樣表示?答案是使用逃逸字元<code>\</code>。但是在R語言中,正規表達式，也是使用字串，可是在字串中,<code>\</code>本身就逃逸字元，因此需要<code>\\.</code>。</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dot &lt;-<span class="st"> &quot;</span><span class="ch">\\</span><span class="st">.&quot;</span>
-<span class="kw">writeLines</span>(dot)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>\.
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> &quot;a</span><span class="ch">\\</span><span class="st">b&quot;</span>
-<span class="kw">writeLines</span>(x)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>a\b
-</code></pre>
-<div id="grep-grepl" class="section level4">
-<h4><span class="header-section-number">3.0.1.1</span> grep, grepl</h4>
-<p>grep,grepl的差別是後者不支援參數value，且比對的結果和搜尋內容的個數相同。</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 2
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>),<span class="dt">value=</span><span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "a.c"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grepl</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] FALSE  TRUE FALSE
-</code></pre>
-<p>又另一個例子,是在字串中尋找單引號,假定要在國家中找尋是否有名稱包含單引號的名字,可以使用<code>'\''</code> 問題:為甚麼不是<code>'\\''</code> hint: 這裡的逃逸字元只是字串的標準用法,<code>'</code>不是正規表達式的特殊字元。</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">country&lt;-<span class="kw">read.delim</span>(<span class="st">&#39;resources/country.txt&#39;</span>,<span class="dt">header=</span><span class="ot">FALSE</span>)
-<span class="kw">names</span>(country)&lt;-<span class="st">&quot;Name&quot;</span> 
-cname &lt;-<span class="kw">levels</span>(country<span class="op">$</span>Name)
-<span class="kw">grep</span>(<span class="st">&#39;</span><span class="ch">\&#39;</span><span class="st">&#39;</span>, cname, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "Cote d'Ivoire"
-</code></pre>
-<p>note: * 不是country.names&lt;-“Name”</p>
-<p>問題:下面兩行有甚麼差別?</p>
-<pre><code>grep(&#39;\&#39;&#39;, country$Name, value = TRUE)
-grep(&#39;\&#39;&#39;, levels(country$Name), value = TRUE)
-</code></pre>
-<p>Hint: levels 傳回唯一值</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(<span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>)))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "a" "b"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] a b a
-Levels: a b
-</code></pre>
+<div id="basic" class="section level2">
+<h2><span class="header-section-number">8.2</span> basic</h2>
+<p>Creating a Graph In R, graphs are typically created interactively.</p>
+<div id="creating-a-graph" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Creating a Graph</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(wt, mpg) 
+<span class="kw">abline</span>(<span class="kw">lm</span>(mpg<span class="op">~</span>wt))
+<span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-360-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><code>plot()</code>函數，新建視窗然後畫出 weight vs. miles per gallon.<br />
+<code>abline()</code> 不會開啟新視窗做圖，abline()的語法如下:</p>
+<p>abline(a = NULL, b = NULL, h = NULL, v = NULL, reg = NULL,coef = NULL, untf = FALSE, …)<br />
+代表的意思是畫出一條直線<code>a+bx</code> ，其中a代表截距常數，b則是斜率常數。例如<br />
+<code>Y=2X+1</code>，則對應的函數為 <code>abline(a=1,b=2)</code> 。</p>
 </div>
-<div id="regexpr-gregexpr" class="section level4">
-<h4><span class="header-section-number">3.0.1.2</span> regexpr, gregexpr</h4>
-<p><code>regexpr</code> 函數的使用方式類似<code>grepl</code>。傳回整數向量(表示符合位置，如果找不到,則傳回-1),個數和比對字串串列相同。這個向量同時有屬性<code>match.length</code>(參考範例) .</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s&lt;-<span class="st">&quot;a.b.c.9&quot;</span>
-<span class="kw">regexpr</span>(<span class="st">&#39;b&#39;</span>,s )</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 3
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
+<div id="saving-graphs" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Saving Graphs</h3>
+<p>可以利用menu存檔，例如File -&gt; Save As. 也可以利用函數：</p>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Output to</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pdf(“mygraph.pdf”)</td>
+<td>pdf file</td>
+</tr>
+<tr class="even">
+<td>win.metafile(“mygraph.wmf”)</td>
+<td>windows metafile</td>
+</tr>
+<tr class="odd">
+<td>png(“mygraph.png”)</td>
+<td>png file</td>
+</tr>
+<tr class="even">
+<td>jpeg(“mygraph.jpg”)</td>
+<td>jpeg file</td>
+</tr>
+<tr class="odd">
+<td>bmp(“mygraph.bmp”)</td>
+<td>bmp file</td>
+</tr>
+<tr class="even">
+<td>postscript(“mygraph.ps”)</td>
+<td>postscript file</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="section-8.3" class="section level2">
+<h2><span class="header-section-number">8.3</span> 多個圖和疊圖</h2>
+<p>傻瓜指令例如 (plot, hist, boxplot, etc.) 基本上會產生新的圖。要避免這個情況，可以分為多圖和疊圖討論。開啟新視窗的方法根據OS而不同 。</p>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>windows()</td>
+<td>Windows</td>
+</tr>
+<tr class="even">
+<td>X11()</td>
+<td>Unix</td>
+</tr>
+<tr class="odd">
+<td>quartz()</td>
+<td>Mac</td>
+</tr>
+</tbody>
+</table>
+<p>要關閉視窗，可以用函數<code>dev.off()</code><br />
+如果要知道目前的視窗是那一個，可以參考 <code>dev.cur()</code>。 Note: 如果目前有多個圖窗，則一直呼叫這個函數<code>dev.off()</code>，會依次關閉視窗，直到函數傳回NULL。</p>
+<p>驗證上面的說法可以利用</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-361-1.png" width="70%" style="display: block; margin: auto;" /> 上面的範例，可以看到圖裝置的編號都是2，而且最後只有一個圖。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dev.off</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>null device 
+          1 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-362-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>討論下面的輸出結果，我只看到一個視窗：</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">X11</span>()
+<span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()
+<span class="kw">X11</span>()
+<span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+</div>
+<div id="histograms-and-density-plots" class="section level2">
+<h2><span class="header-section-number">8.4</span> Histograms and Density Plots</h2>
+<div id="histograms" class="section level3">
+<h3><span class="header-section-number">8.4.1</span> Histograms</h3>
+<p>函數<code>hist(x)</code>：其中<br />
+x是一個數字向量， 選項<code>freq=FALSE</code> 則是畫出 probability densities 而不是次數 frequencies.<br />
+選項：<code>breaks= ##</code> 則是控制分成幾份。</p>
+<p><strong>Simple Histogram</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-364-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><strong>分成12份，顏色紅色。</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-365-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="add-a-normal-curve" class="section level4">
+<h4><span class="header-section-number">8.4.1.1</span> Add a Normal Curve</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg 
+h&lt;-<span class="kw">hist</span>(x, <span class="dt">breaks=</span><span class="dv">10</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>, 
+    <span class="dt">main=</span><span class="st">&quot;Histogram with Normal Curve&quot;</span>) 
+xfit&lt;-<span class="kw">seq</span>(<span class="kw">min</span>(x),<span class="kw">max</span>(x),<span class="dt">length=</span><span class="dv">40</span>) 
+yfit&lt;-<span class="kw">dnorm</span>(xfit,<span class="dt">mean=</span><span class="kw">mean</span>(x),<span class="dt">sd=</span><span class="kw">sd</span>(x)) 
+yfit &lt;-<span class="st"> </span>yfit<span class="op">*</span><span class="kw">diff</span>(h<span class="op">$</span>mids[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])<span class="op">*</span><span class="kw">length</span>(x) 
+<span class="kw">lines</span>(xfit, yfit, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-366-1.png" width="70%" style="display: block; margin: auto;" /> hint: 因為<span class="math inline">\(pdf=\frac{\frac{n}{N}}{bin \quad width}\)</span> 所以<span class="math inline">\(n=pdf\times N \times (bin \quad width)\)</span></p>
+<p>Histograms can be a poor method for determining the shape of a distribution because it is so strongly affected by the number of bins used.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">h</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>$breaks
+ [1] 10 12 14 16 18 20 22 24 26 28 30 32 34
+
+$counts
+ [1] 2 1 7 3 5 5 2 2 1 0 2 2
+
+$density
+ [1] 0.0312 0.0156 0.1094 0.0469 0.0781 0.0781 0.0312 0.0312 0.0156 0.0000
+[11] 0.0312 0.0312
+
+$mids
+ [1] 11 13 15 17 19 21 23 25 27 29 31 33
+
+$xname
+[1] "x"
+
+$equidist
 [1] TRUE
+
+attr(,"class")
+[1] "histogram"
 </code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">regexpr</span>(<span class="st">&#39;.&#39;</span>,s ) <span class="co"># 要定位符號「.」,這是錯的,\.也錯</span></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 1
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">.&#39;</span>,s ) <span class="co"># 正確</span></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 2
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">regexpr</span>(<span class="st">&#39;[.]&#39;</span>,s ) <span class="co"># 正確 ,不需要regexpr(&#39;[\\.]&#39;,s )</span></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 2
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">d&#39;</span>,s ) <span class="co"># 正確</span></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 7
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) <span class="co"># 正確</span>
-<span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 1
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span>
-x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) 
-x</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 7
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 1
-</code></pre>
-<p><code>gregexpr()</code> 和 <code>regexpr()</code>一樣,不同的是會在目標字串中搜尋所有符合的位置而不是只找第一個(g:全局)。 因此傳回的結果個數雖然和查找的串列元素個數一樣,但是每個元素都是一個向量。如果都沒找到,只有一個-1。</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span>
- <span class="kw">gregexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[[1]]
-[1]  7  9 11
-attr(,"match.length")
-[1] 1 1 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
+<p>To practice making a density plot with the hist() function, try this exercise.</p>
 </div>
 </div>
-<div id="section-3.0.2" class="section level3">
-<h3><span class="header-section-number">3.0.2</span> 應用</h3>
-<p>產生3個檔案,檔案名稱含有cat</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">file.create</span>(<span class="kw">c</span>(<span class="st">&quot;xcat1.rmd&quot;</span>, <span class="st">&quot;ycat2.txt&quot;</span>, <span class="st">&quot;zcat3.rmd&quot;</span>))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] TRUE TRUE TRUE
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">files&lt;-<span class="kw">list.files</span>(<span class="st">&quot;.&quot;</span>)
-<span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "xcat1.rmd" "ycat2.txt" "zcat3.rmd"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 58 60 61
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grepl</span>(<span class="st">&quot;cat&quot;</span>, files)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code> [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[12] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[34] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[45] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[56] FALSE FALSE  TRUE FALSE  TRUE  TRUE
-</code></pre>
-</div>
-<div id="quantifiers" class="section level3">
-<h3><span class="header-section-number">3.0.3</span> 數量修飾詞Quantifiers</h3>
-<p>指定重複次數.</p>
-<ul>
-<li><code>*</code>: 至少0個。<br />
-</li>
-<li><code>+</code>: 至少一個.<br />
-</li>
-<li><code>?</code>: 最多一個.<br />
-</li>
-<li><code>{n}</code>: 剛好n個.<br />
-</li>
-<li><code>{n,}</code>: 至少n個.<br />
-</li>
-<li><code>{n,m}</code>: 次數在 n 到 m 之間(包括n,m).</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;acb&quot;</span>, <span class="st">&quot;accb&quot;</span>, <span class="st">&quot;acccb&quot;</span>, <span class="st">&quot;accccb&quot;</span>))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "a"      "ab"     "acb"    "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ac*b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "ab"     "acb"    "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ac+b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "acb"    "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ac?b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "ab"  "acb"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ac{2}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "accb"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ac{2,}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ac{2,3}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "accb"  "acccb"
-</code></pre>
-<div id="exercise" class="section level4">
-<h4><span class="header-section-number">3.0.3.1</span> Exercise</h4>
-<p>Find all countries with <code>ee</code> in Gapminder using quantifiers.</p>
-<pre style="border: 1px grey dotted;"><code>[1] "Greece"
-</code></pre>
+<div id="kernel-density-plot" class="section level3">
+<h3><span class="header-section-number">8.4.2</span> Kernel Density Plot</h3>
+<p>Kernal density plots are usually a much more effective way to view the distribution of a variable. Create the plot using plot(density(x)) where x is a numeric vector.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg) <span class="co"># returns the density data </span>
+<span class="kw">plot</span>(d) <span class="co"># plots the results</span></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-368-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="filled-density-plot" class="section level4">
+<h4><span class="header-section-number">8.4.2.1</span> Filled Density Plot</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">plot</span>(d, <span class="dt">main=</span><span class="st">&quot;Kernel Density of Miles Per Gallon&quot;</span>)
+<span class="kw">polygon</span>(d, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">border=</span><span class="st">&quot;blue&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-369-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="position-of-pattern-within-the-string" class="section level3">
-<h3><span class="header-section-number">3.0.4</span> Position of pattern within the string</h3>
-<ul>
-<li><code>^</code>: 字串開頭.<br />
-</li>
-<li><code>$</code>: 字串結尾.<br />
-</li>
-<li><code>\b</code>: 左右都空白的 <em>word</em>.<br />
-</li>
-<li><code>\B</code>: 左右不是空白 <em>word</em>.</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;cdab&quot;</span>, <span class="st">&quot;cabd&quot;</span>, <span class="st">&quot;c abd&quot;</span>))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ab$&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "cdab"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"  "c abd"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1]  1 -1 -1  3
-attr(,"match.length")
-[1]  2 -1 -1  2
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">Bab&quot;</span>, strings)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] -1  3  2 -1
-attr(,"match.length")
-[1] -1  2  2 -1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div id="exercise-1" class="section level4">
-<h4><span class="header-section-number">3.0.4.1</span> Exercise</h4>
-<p>Find all <code>.txt</code> files in the repository.</p>
-<pre style="border: 1px grey dotted;"><code>[1] "ycat2.txt"
-</code></pre>
-<pre style="border: 1px grey dotted;"><code>[1] "ycat2.txt"
-</code></pre>
-</div>
-</div>
-<div id="operators" class="section level3">
-<h3><span class="header-section-number">3.0.5</span> Operators</h3>
-<ul>
-<li><code>.</code>: 任意字元。<br />
-</li>
-<li><code>[...]</code>: 例如,[ade] 3個字元其中一個。[a-e],a到e.<br />
-</li>
-<li><code>[^...]</code>: 除了<a href="index.html#section-1"></a>指定的字元，非[…]的意思。.<br />
-</li>
-<li><code>\</code>: 抑制下列字元在字串,<code>&quot;&quot;</code>,中的特殊意思 <code>$ * + . ? [ ] ^ { } | ( ) \</code>, 只是在R中,因為<code>\</code>又有特殊意義 ,因此必須雙<code>\</code>例如 <code>\\$</code>。<br />
-</li>
-<li><code>|</code>: 或.<br />
-</li>
-<li><code>(...)</code>: 字元組,根據出現的順序,可以用 <code>\\N</code>識別( <strong>backreference</strong>).</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;^ab&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abd&quot;</span>, <span class="st">&quot;abe&quot;</span>, <span class="st">&quot;ab 12&quot;</span>))</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ab.&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abc"   "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ab[c-e]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abc" "abd" "abe"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;ab[^c]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "ab"    "abc"   "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "^ab"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">grep</span>(<span class="st">&quot;abc|abd&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abc" "abd"
-</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gsub</span>(<span class="st">&quot;(ab) 12&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1 34&quot;</span>, strings) </code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 34"
-</code></pre>
-<p>note: 要讓<code>.</code>失效，可以<code>[.]</code>或 <code>\\.</code> 表示。</p>
-<div id="excercise" class="section level4">
-<h4><span class="header-section-number">3.0.5.1</span> Excercise</h4>
-<p>找出國名中間有字元<code>i</code> <code>t</code> 並且將<code>land</code>結尾的字串改為大寫。例如,Finland-&gt;FinLAND</p>
-<pre style="border: 1px grey dotted;"><code>[1] "FinLAND"     "IceLAND"     "IreLAND"     "SwaziLAND"   "SwitzerLAND"
-[6] "ThaiLAND"   
-</code></pre>
-</div>
-</div>
-<div id="character-classes" class="section level3">
-<h3><span class="header-section-number">3.0.6</span> Character classes</h3>
-<p>預設字元分類例如 numbers, letters, 分類。 開頭<code>[:</code> 結尾 <code>:]</code> ，另一種簡寫方式為利用 <code>\</code> 。</p>
-<ul>
-<li><code>[:digit:]</code> or <code>\d</code>: 數字,等同 <code>[0-9]</code>.<br />
-</li>
-<li><code>\D</code>: 非數字,等同 <code>[^0-9]</code>.<br />
-</li>
-<li><code>[:lower:]</code>: 小寫,等同 <code>[a-z]</code>.<br />
-</li>
-<li><code>[:upper:]</code>: 大寫,等同 <code>[A-Z]</code>.<br />
-</li>
-<li><code>[:alpha:]</code>: 字母,等同 <code>[[:lower:][:upper:]]</code> or <code>[A-z]</code>.<br />
-</li>
-<li><code>[:alnum:]</code>: 等同 <code>[[:alpha:][:digit:]]</code> 或 <code>[A-z0-9]</code>.<br />
-</li>
-<li><code>\w</code>: word characters, equivalent to <code>[[:alnum:]_]</code> or <code>[A-z0-9_]</code>.<br />
-</li>
-<li><code>\W</code>: not word, equivalent to <code>[^A-z0-9_]</code>.<br />
-</li>
-<li><code>[:xdigit:]</code>: hexadecimal digits (base 16), 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f, equivalent to <code>[0-9A-Fa-f]</code>.</li>
-<li><code>[:blank:]</code>: blank characters, i.e. space and tab.<br />
-</li>
-<li><code>[:space:]</code>: space characters: tab, newline, vertical tab, form feed, carriage return, space.</li>
-<li><code>\s</code>: space, ` `.<br />
-</li>
-<li><code>\S</code>: not space.<br />
-</li>
-<li><code>[:punct:]</code>: punctuation characters, ! &quot; # $ % &amp; ’ ( ) * + , - . / : ; &lt; = &gt; ? @ [  ] ^ _ ` { | } ~.</li>
-<li><code>[:graph:]</code>: graphical (human readable) characters: equivalent to <code>[[:alnum:][:punct:]]</code>.</li>
-<li><code>[:print:]</code>: printable characters, equivalent to <code>[[:alnum:][:punct:]\\s]</code>.</li>
-<li><code>[:cntrl:]</code>: control characters, like <code>\n</code> or <code>\r</code>, <code>[\x00-\x1F\x7F]</code>.</li>
-</ul>
-<p>Note:</p>
-<ul>
-<li><code>[:...:]</code> 必須寫在中括號中, 例如 <code>[[:digit:]]</code>.<br />
-</li>
-<li><code>\</code> 注意 <code>\\d</code>. 和 <code>\t</code>的區別。</li>
-</ul>
+<div id="comparing-groups-via-kernal-density" class="section level3">
+<h3><span class="header-section-number">8.4.3</span> Comparing Groups VIA Kernal Density</h3>
+<p>The sm.density.compare( ) function in the sm package allows you to superimpose the kernal density plots of two or more groups. The format is sm.density.compare(x, factor) where x is a numeric vector and factor is the grouping variable.</p>
+<div id="compare-mpg-distributions-for-cars-with-46-or-8-cylinders" class="section level4">
+<h4><span class="header-section-number">8.4.3.1</span> Compare MPG distributions for cars with 4,6, or 8 cylinders</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(sm)
+<span class="kw">attach</span>(mtcars)
+
+<span class="co">#create value labels </span>
+cyl.f &lt;-<span class="st"> </span><span class="kw">factor</span>(cyl, <span class="dt">levels=</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),
+  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;4 cylinder&quot;</span>, <span class="st">&quot;6 cylinder&quot;</span>, <span class="st">&quot;8 cylinder&quot;</span>)) 
+
+<span class="co">#plot densities </span>
+<span class="kw">sm.density.compare</span>(mpg, cyl, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)
+<span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;MPG Distribution by Car Cylinders&quot;</span>)
+
+<span class="co">#add legend via mouse click</span>
+colfill&lt;-<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span>(<span class="dv">2</span><span class="op">+</span><span class="kw">length</span>(<span class="kw">levels</span>(cyl.f)))) 
+<span class="kw">legend</span>(<span class="kw">locator</span>(<span class="dv">1</span>), <span class="kw">levels</span>(cyl.f), <span class="dt">fill=</span>colfill)</code></pre></div>
+<div class="figure">
+<img src="diagrams/class/mpg_plot01.png" />
 
 </div>
-<div id="attribute" class="section level2">
-<h2><span class="header-section-number">3.1</span> attribute</h2>
-<p>oth the names and the dimensions of matrices and arrays are stored in R as attributes of the object. These attributes can be seen as labeled values you can attach to any object.</p>
-<p>They form one of the mechanisms R uses to define specific object types like dates, time series, and so on. They can include any kind of information, and you can use them yourself to add information to any object.</p>
-<p>To see all the attributes of an object, you can use the attributes() function. You can see all the attributes of my.array like this:</p>
-<blockquote>
-<p>attributes(my.array) $dim [1] 3 4 2 This function returns a named list, where each item in the list is an attribute. Each attribute can, on itself, be a list again. For example, the attribute dimnames is actually a list containing the row and column names of a matrix.</p>
-</blockquote>
-<p>You can check that for yourself by checking the output of attributes(baskets.team). You can set all attributes as a named list as well. You find examples of that in the Help file ?attributes.</p>
-<p>To get or set a single attribute, you can use the attr() function. This function takes two important arguments. The first argument is the object you want to examine, and the second argument is the name of the attribute you want to see or change. If the attribute you ask for doesn’t exist, R simply returns NULL.</p>
-<p>Imagine you want to add which season Granny and Geraldine scored the baskets mentioned in baskets.team. You can do this with the following code:</p>
-<blockquote>
-<p>attr(baskets.team,‘season’) &lt;- ‘2010-2011’ To get the value of this attribute returned, you can then use following code:</p>
-</blockquote>
-<blockquote>
-<p>attr(baskets.team,‘season’) [1] “2010-2011” You can delete attributes again by setting their value to NULL, like this:</p>
-</blockquote>
-<blockquote>
-<p>attr(baskets.team,‘season’) &lt;- NULL</p>
-</blockquote>
+</div>
+</div>
+</div>
+<div id="-plots" class="section level2">
+<h2><span class="header-section-number">8.5</span> 合併 Plots</h2>
+<p>同時顯示多個<code>plot</code>的結果，可以利用函數<code>par()</code> or <code>layout( )</code>。</p>
+<p>函數<code>par( )</code>的選項有： mfrow=c(nrows, ncols) 填plot的方向為橫行。<br />
+mfcol=c(nrows, ncols) 填入的方向為直行。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#4 2 x 2 figures </span>
+
+<span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 5):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))
+<span class="kw">plot</span>(wt,mpg, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs. mpg&quot;</span>)
+<span class="kw">plot</span>(wt,disp, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs disp&quot;</span>)
+<span class="kw">hist</span>(wt, <span class="dt">main=</span><span class="st">&quot;Histogram of wt&quot;</span>)
+<span class="kw">boxplot</span>(wt, <span class="dt">main=</span><span class="st">&quot;Boxplot of wt&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-371-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>2 x2 layout click to view</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 3 figures arranged in 3 rows and 1 column</span>
+
+<span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 6):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)) 
+<span class="kw">hist</span>(wt)
+<span class="kw">hist</span>(mpg)
+<span class="kw">hist</span>(disp)
+<span class="co">#dev.off()</span></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-372-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>3 x 1 layout</p>
+<p>函數 layout( ) 的使用方法為 layout(mat) 其中 mat 的元素用來指定圖形號碼。例如分成4個格子,順序為左右上下(byrow=TRUE) 1在第一ROW,占用[1,1]-[1,2],2,3,分別占用[2,1]和[2,2]</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># One figure in row 1 and two figures in row 2</span>
+ 
+<span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 5):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 7):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))
+<span class="kw">hist</span>(wt)
+<span class="kw">hist</span>(mpg)
+<span class="kw">hist</span>(disp)
+<span class="kw">dev.off</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>null device 
+          1 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-373-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Optionally, you can include widths= and heights= options in the layout( ) function to control the size of each figure more precisely. These options have the form widths= a vector of values for the widths of columns heights= a vector of values for the heights of rows.</p>
+<p>Relative widths are specified with numeric values. Absolute widths (in centimetres) are specified with the lcm() function.</p>
+<p>::: sidebar note: par(mar) 列出margin<br />
+par(mar=c(1,1,1,1)) 更動margin</p>
+<p>plot.new()常發生的錯誤 : figure margins too large</p>
+<p>有兩個原因：1 是畫布過小 2，當前畫布的上下左右距離過大 這裡看看如何解第二個發生原因</p>
+<p>默認的畫布上邊款的距離為： 預設為 c(5, 4, 4, 2) + 0.1. 對應 c(bottom, left, top, right)，也就是順時針，由下到右結束一圈。</p>
+<p>我們可以將其設置為0，同時將目前的設定紀錄，後面程式的第一行</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))   <span class="co"># op 會紀錄之前的margin = 5.1 4.1 4.1 2.1  </span>
+<span class="kw">plot.new</span>() <span class="co"># 畫圖   </span>
+<span class="kw">par</span>(op) <span class="co"># 改回原先的margin  </span></code></pre></div>
+<p>:::</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) 
+<span class="co"># One figure in row 1 and two figures in row 2</span>
+<span class="co"># row 1 is 1/3 the height of row 2</span>
+<span class="co"># column 2 is 1/4 the width of the column 1 </span>
+<span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 5):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 6):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 8):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>), 
+    <span class="dt">widths=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>), <span class="dt">heights=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))
+<span class="kw">hist</span>(wt)
+<span class="kw">hist</span>(mpg)
+<span class="kw">hist</span>(disp)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-375-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>multiplot layout with fine control click to view</p>
+<p>See help(layout) for more details.</p>
+<p>Creating a figure arrangement with fine control In the following example, two box plots are added to scatterplot to create an enhanced graph.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) 
+<span class="co"># Add boxplots to a scatterplot</span>
+<span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="dv">0</span>,<span class="fl">0.8</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</code></pre></div>
+<pre style="color: red;"><code>Warning in par(fig = c(0, 0.8, 0, 0.8), new = TRUE): 呼叫 par(new=TRUE) 而
+不繪圖
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg, <span class="dt">xlab=</span><span class="st">&quot;Car Weight&quot;</span>,
+  <span class="dt">ylab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)
+<span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.55</span>,<span class="dv">1</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)
+<span class="kw">boxplot</span>(mtcars<span class="op">$</span>wt, <span class="dt">horizontal=</span><span class="ot">TRUE</span>, <span class="dt">axes=</span><span class="ot">FALSE</span>)
+<span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="fl">0.65</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="fl">0.8</span>),<span class="dt">new=</span><span class="ot">TRUE</span>)
+<span class="kw">boxplot</span>(mtcars<span class="op">$</span>mpg, <span class="dt">axes=</span><span class="ot">FALSE</span>)
+<span class="kw">mtext</span>(<span class="st">&quot;Enhanced Scatterplot&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>, <span class="dt">outer=</span><span class="ot">TRUE</span>, <span class="dt">line=</span><span class="op">-</span><span class="dv">3</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-376-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>To understand this graph, think of the full graph area as going from (0,0) in the lower left corner to (1,1) in the upper right corner. The format of the fig= parameter is a numerical vector of the form c(x1, x2, y1, y2). The first fig= sets up the scatterplot going from 0 to 0.8 on the x axis and 0 to 0.8 on the y axis. The top boxplot goes from 0 to 0.8 on the x axis and 0.55 to 1 on the y axis. I chose 0.55 rather than 0.8 so that the top figure will be pulled closer to the scatter plot. The right hand boxplot goes from 0.65 to 1 on the x axis and 0 to 0.8 on the y axis. Again, I chose a value to pull the right hand boxplot closer to the scatterplot. You have to experiment to get it just right.</p>
+<p>fig= starts a new plot, so to add to an existing plot use new=TRUE.</p>
+<p>You can use this to combine several plots in any arrangement into one graph.</p>
+
+</div>
+<div id="add-texts-within-the-graph" class="section level2">
+<h2><span class="header-section-number">8.6</span> Add texts within the graph</h2>
+<p>The text() function can be used to draw text inside the plotting area. A simplified format of the function is :</p>
+<p>text(x, y, labels) x and y: 文字座標; labels: 例如 “a label”</p>
+<p>範例 :</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d&lt;-<span class="kw">head</span>(mtcars)
+<span class="kw">plot</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>], 
+     <span class="dt">main=</span><span class="st">&quot;Milage vs. Car Weight</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~~~~~~~~~&quot;</span>,
+      <span class="dt">xlab=</span><span class="st">&quot;Weight&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Miles/(US) gallon&quot;</span>,
+      <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)
+<span class="kw">text</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>],  <span class="kw">row.names</span>(d),     <span class="dt">cex=</span><span class="fl">0.65</span>,<span class="dt">pos=</span><span class="dv">3</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>) </code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-379-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="add-text-in-the-margins-of-the-graph" class="section level3">
+<h3><span class="header-section-number">8.6.1</span> Add text in the margins of the graph</h3>
+<p>在圖形周圍給文字:</p>
+<p>mtext(text, side=3) text : 例如“a label” side : 哪一側 :<br />
+順時針 1: 下 2: 左 3: 上 4: 又</p>
+<p>範例 :</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, 
+     <span class="dt">main=</span><span class="st">&quot;mtext(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)
+<span class="kw">mtext</span>(<span class="st">&quot;Magic function&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-380-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="add-mathematical-annotation-to-a-plot" class="section level3">
+<h3><span class="header-section-number">8.6.2</span> Add mathematical annotation to a plot</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, 
+     <span class="dt">main=</span><span class="st">&quot;text(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)
+<span class="kw">text</span>(<span class="dv">4</span>, <span class="dv">9</span>, <span class="kw">expression</span>(<span class="kw">hat</span>(beta) <span class="op">==</span><span class="st"> </span>(X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>X)<span class="op">^</span>{<span class="op">-</span><span class="dv">1</span>} <span class="op">*</span><span class="st"> </span>X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>y))
+<span class="kw">text</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="kw">expression</span>(<span class="kw">bar</span>(x) <span class="op">==</span><span class="st"> </span><span class="kw">sum</span>(<span class="kw">frac</span>(x[i], n), i<span class="op">==</span><span class="dv">1</span>, n)))</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-381-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="section-8.7" class="section level2">
+<h2><span class="header-section-number">8.7</span> 函數畫圖</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}
+<span class="kw">plot</span>(<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-382-1.png" width="70%" style="display: block; margin: auto;" /> 問題是如果x座標的增加不是1單位?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="fl">0.1</span>)
+y&lt;-<span class="kw">exp</span>(x)
+x&lt;-y
+
+eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}
+<span class="kw">plot</span>(x,<span class="kw">eq</span>(x), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-383-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}
+<span class="kw">curve</span>(eq, <span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">50</span>, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-384-1.png" width="70%" style="display: block; margin: auto;" /> 問題:解釋為何錯誤</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}
+y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)
+<span class="kw">curve</span>(y, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</code></pre></div>
+<pre style="color: red;"><code>Error in y(x):
+  沒有這個函數 "y"
+</code></pre>
+<p>問題:如何修正下面的錯誤?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}
+z&lt;-<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>
+
+<span class="kw">curve</span>(<span class="kw">eq</span>(z), <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</code></pre></div>
+<p>solution:</p>
 
 </div>
 </div>
@@ -754,8 +790,8 @@ attr(,"useBytes")
           </div>
         </div>
       </div>
-<a href="data-type.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="file-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="environments.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sample-and-distribution-01.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -775,7 +811,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/regular_expression.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Plot01.Rmd",
 "text": "Edit"
 },
 "download": null,
