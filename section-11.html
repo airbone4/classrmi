@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>test for class</title>
+  <meta name="description" content="web article test">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="test for class" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="web article test" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="test for class" />
+  
+  <meta name="twitter:description" content="web article test" />
+  
+
+<meta name="author" content="lend jwj cen">
+
+
+<meta name="date" content="2018-11-08">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="environments.html">
+<link rel="next" href="sample-and-distribution-01.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="adv-r.css" type="text/css" />
+<link rel="stylesheet" href="tableStyle.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">testing </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 安裝軟體</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="true.html"><a href="true.html"><i class="fa fa-check"></i><b>2</b> 輸出:TRUE</a><ul>
+<li class="chapter" data-level="2.1" data-path="true.html"><a href="true.html#quick-view"><i class="fa fa-check"></i><b>2.1</b> quick view</a></li>
+<li class="chapter" data-level="2.2" data-path="true.html"><a href="true.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 資料型態和內容</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="true.html"><a href="true.html#section-2.2.1"><i class="fa fa-check"></i><b>2.2.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="2.2.2" data-path="true.html"><a href="true.html#section-2.2.2"><i class="fa fa-check"></i><b>2.2.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="2.2.3" data-path="true.html"><a href="true.html#section-2.2.3"><i class="fa fa-check"></i><b>2.2.3</b> 質性數據的分析</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="true.html"><a href="true.html#assignment"><i class="fa fa-check"></i><b>2.3</b> assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>3</b> data type</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-type.html"><a href="data-type.html#section-3.1"><i class="fa fa-check"></i><b>3.1</b> 基本操作</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="data-type.html"><a href="data-type.html#section-3.1.1"><i class="fa fa-check"></i><b>3.1.1</b> 指派</a></li>
+<li class="chapter" data-level="3.1.2" data-path="data-type.html"><a href="data-type.html#section-3.1.2"><i class="fa fa-check"></i><b>3.1.2</b> 資源</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="data-type.html"><a href="data-type.html#section-3.2"><i class="fa fa-check"></i><b>3.2</b> 介紹</a></li>
+<li class="chapter" data-level="3.3" data-path="data-type.html"><a href="data-type.html#section-3.3"><i class="fa fa-check"></i><b>3.3</b> 實數的比較</a></li>
+<li class="chapter" data-level="3.4" data-path="data-type.html"><a href="data-type.html#note"><i class="fa fa-check"></i><b>3.4</b> note:</a></li>
+<li class="chapter" data-level="3.5" data-path="data-type.html"><a href="data-type.html#q-what-is-the-result-of-1-0.4-0.6"><i class="fa fa-check"></i><b>3.5</b> Q: what is the result of : 1-0.4 ==0.6</a></li>
+<li class="chapter" data-level="3.6" data-path="data-type.html"><a href="data-type.html#section-3.6"><i class="fa fa-check"></i><b>3.6</b> 字串</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="data-type.html"><a href="data-type.html#section-3.6.1"><i class="fa fa-check"></i><b>3.6.1</b> 建立字串</a></li>
+<li class="chapter" data-level="3.6.2" data-path="data-type.html"><a href="data-type.html#section-3.6.2"><i class="fa fa-check"></i><b>3.6.2</b> 空字串</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="data-type.html"><a href="data-type.html#is-family"><i class="fa fa-check"></i><b>3.7</b> 型態操作is family</a></li>
+<li class="chapter" data-level="3.8" data-path="data-type.html"><a href="data-type.html#-as-family"><i class="fa fa-check"></i><b>3.8</b> 型態轉換 as family</a></li>
+<li class="chapter" data-level="3.9" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>3.9</b> vector</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="data-type.html"><a href="data-type.html#section-3.9.1"><i class="fa fa-check"></i><b>3.9.1</b> 練習範例</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>3.10</b> 字串和vector</a><ul>
+<li class="chapter" data-level="3.10.1" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>3.10.1</b> vector 相關的運算</a></li>
+<li class="chapter" data-level="3.10.2" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>3.10.2</b> 如何存取vector中的元素</a></li>
+<li class="chapter" data-level="3.10.3" data-path="data-type.html"><a href="data-type.html#section-3.10.3"><i class="fa fa-check"></i><b>3.10.3</b> 邏輯做為索引</a></li>
+<li class="chapter" data-level="3.10.4" data-path="data-type.html"><a href="data-type.html#-character-vector-"><i class="fa fa-check"></i><b>3.10.4</b> 利用字串( character vector) 作為索引</a></li>
+<li class="chapter" data-level="3.10.5" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>3.10.5</b> How to modify a vector in R?</a></li>
+<li class="chapter" data-level="3.10.6" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>3.10.6</b> How to delete a Vector?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="list-matrix-list.html"><a href="list-matrix-list.html"><i class="fa fa-check"></i><b>4</b> 3個元素,分別是list, matrix, list</a><ul>
+<li class="chapter" data-level="4.1" data-path="list-matrix-list.html"><a href="list-matrix-list.html#list"><i class="fa fa-check"></i><b>4.1</b> List</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="list-matrix-list.html"><a href="list-matrix-list.html#-list"><i class="fa fa-check"></i><b>4.1.1</b> 建立 List</a></li>
+<li class="chapter" data-level="4.1.2" data-path="list-matrix-list.html"><a href="list-matrix-list.html#naming-list-elements"><i class="fa fa-check"></i><b>4.1.2</b> Naming List Elements</a></li>
+<li class="chapter" data-level="4.1.3" data-path="list-matrix-list.html"><a href="list-matrix-list.html#-list-"><i class="fa fa-check"></i><b>4.1.3</b> 存取 List 元素</a></li>
+<li class="chapter" data-level="4.1.4" data-path="list-matrix-list.html"><a href="list-matrix-list.html#manipulating-list-elements"><i class="fa fa-check"></i><b>4.1.4</b> Manipulating List Elements</a></li>
+<li class="chapter" data-level="4.1.5" data-path="list-matrix-list.html"><a href="list-matrix-list.html#merging-lists"><i class="fa fa-check"></i><b>4.1.5</b> Merging Lists</a></li>
+<li class="chapter" data-level="4.1.6" data-path="list-matrix-list.html"><a href="list-matrix-list.html#list--vector"><i class="fa fa-check"></i><b>4.1.6</b> List 轉 Vector</a></li>
+<li class="chapter" data-level="4.1.7" data-path="list-matrix-list.html"><a href="list-matrix-list.html#vector-list"><i class="fa fa-check"></i><b>4.1.7</b> 比較vector, list中,字串的問題</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="list-matrix-list.html"><a href="list-matrix-list.html#data-set-build-in"><i class="fa fa-check"></i><b>4.2</b> data set build in</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="list-matrix-list.html"><a href="list-matrix-list.html#list-of-pre-loaded-data"><i class="fa fa-check"></i><b>4.2.1</b> List of pre-loaded data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>4.3</b> vector 函數範例</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="list-matrix-list.html"><a href="list-matrix-list.html#cbindrbind"><i class="fa fa-check"></i><b>4.3.1</b> cbind,rbind</a></li>
+<li class="chapter" data-level="4.3.2" data-path="list-matrix-list.html"><a href="list-matrix-list.html#diff"><i class="fa fa-check"></i><b>4.3.2</b> 函數diff</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="list-matrix-list.html"><a href="list-matrix-list.html#matrix"><i class="fa fa-check"></i><b>4.4</b> matrix</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="list-matrix-list.html"><a href="list-matrix-list.html#transpose"><i class="fa fa-check"></i><b>4.4.1</b> Transpose</a></li>
+<li class="chapter" data-level="4.4.2" data-path="list-matrix-list.html"><a href="list-matrix-list.html#section-4.4.2"><i class="fa fa-check"></i><b>4.4.2</b> 合併矩陣</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="list-matrix-list.html"><a href="list-matrix-list.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 字串函數</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="list-matrix-list.html"><a href="list-matrix-list.html#macro"><i class="fa fa-check"></i><b>4.5.1</b> 應用範例macro</a></li>
+<li class="chapter" data-level="4.5.2" data-path="list-matrix-list.html"><a href="list-matrix-list.html#paste"><i class="fa fa-check"></i><b>4.5.2</b> paste</a></li>
+<li class="chapter" data-level="4.5.3" data-path="list-matrix-list.html"><a href="list-matrix-list.html#misc"><i class="fa fa-check"></i><b>4.5.3</b> misc</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-5.html"><a href="section-5.html"><i class="fa fa-check"></i><b>5</b> 順便看看結構</a><ul>
+<li class="chapter" data-level="5.1" data-path="section-5.html"><a href="section-5.html#factors"><i class="fa fa-check"></i><b>5.1</b> Factors</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="section-5.html"><a href="section-5.html#data-frames"><i class="fa fa-check"></i><b>5.1.1</b> Data Frames</a></li>
+<li class="chapter" data-level="5.1.2" data-path="section-5.html"><a href="section-5.html#logical"><i class="fa fa-check"></i><b>5.1.2</b> Logical</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="section-5.html"><a href="section-5.html#tables"><i class="fa fa-check"></i><b>5.2</b> Tables</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="section-5.html"><a href="section-5.html#one-way-tables"><i class="fa fa-check"></i><b>5.2.1</b> One Way Tables</a></li>
+<li class="chapter" data-level="5.2.2" data-path="section-5.html"><a href="section-5.html#two-way-tables"><i class="fa fa-check"></i><b>5.2.2</b> Two Way Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="section-5.html"><a href="section-5.html#oop"><i class="fa fa-check"></i><b>5.3</b> OOP</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="section-5.html"><a href="section-5.html#base-objects-vs-oo-objects"><i class="fa fa-check"></i><b>5.3.1</b> Base objects vs OO objects</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="section-5.html"><a href="section-5.html#operator"><i class="fa fa-check"></i><b>5.4</b> operator %&gt;%</a></li>
+<li class="chapter" data-level="5.5" data-path="section-5.html"><a href="section-5.html#section-5.5"><i class="fa fa-check"></i><b>5.5</b> 相關操作</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html"><i class="fa fa-check"></i><b>6</b> Regular expression syntax</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#escape-sequences"><i class="fa fa-check"></i><b>6.0.1</b> Escape sequences</a></li>
+<li class="chapter" data-level="6.0.2" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#section-6.0.2"><i class="fa fa-check"></i><b>6.0.2</b> 應用</a></li>
+<li class="chapter" data-level="6.0.3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#quantifiers"><i class="fa fa-check"></i><b>6.0.3</b> 數量修飾詞Quantifiers</a></li>
+<li class="chapter" data-level="6.0.4" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#position-of-pattern-within-the-string"><i class="fa fa-check"></i><b>6.0.4</b> Position of pattern within the string</a></li>
+<li class="chapter" data-level="6.0.5" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#operators"><i class="fa fa-check"></i><b>6.0.5</b> Operators</a></li>
+<li class="chapter" data-level="6.0.6" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#character-classes"><i class="fa fa-check"></i><b>6.0.6</b> Character classes</a></li>
+<li class="chapter" data-level="6.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#attribute"><i class="fa fa-check"></i><b>6.1</b> attribute</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>7</b> File System</a><ul>
+<li class="chapter" data-level="7.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>7.1</b> Exploring file system</a></li>
+<li class="chapter" data-level="7.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>7.2</b> Creating of a directory</a></li>
+<li class="chapter" data-level="7.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>7.3</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="7.4" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>7.4</b> 在R中建立檔案名稱</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>7.4.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="7.4.2" data-path="file-system.html"><a href="file-system.html#section-7.4.2"><i class="fa fa-check"></i><b>7.4.2</b> 和工作區相關的指令</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="file-system.html"><a href="file-system.html#only-files-starting-with-a-l-or-r"><i class="fa fa-check"></i><b>7.5</b> Only files starting with a-l or r</a></li>
+<li class="chapter" data-level="7.6" data-path="file-system.html"><a href="file-system.html#note-that-a-l-is-locale-dependent-but-using-case-insensitive"><i class="fa fa-check"></i><b>7.6</b> Note that a-l is locale-dependent, but using case-insensitive</a></li>
+<li class="chapter" data-level="7.7" data-path="file-system.html"><a href="file-system.html#matching-makes-it-unambiguous-in-english-locales"><i class="fa fa-check"></i><b>7.7</b> matching makes it unambiguous in English locales</a></li>
+<li class="chapter" data-level="7.8" data-path="file-system.html"><a href="file-system.html#section-7.8"><i class="fa fa-check"></i><b>7.8</b> 讀檔</a></li>
+<li class="chapter" data-level="7.9" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>7.9</b> write csv</a><ul>
+<li class="chapter" data-level="7.9.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>7.9.1</b> data.frame to CSV</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>8</b> Functions</a><ul>
+<li class="chapter" data-level="8.1" data-path="functions.html"><a href="functions.html#introduction"><i class="fa fa-check"></i><b>8.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#quiz"><i class="fa fa-check"></i>Quiz</a></li>
+<li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#outline"><i class="fa fa-check"></i>Outline</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="functions.html"><a href="functions.html#function-fundamentals"><i class="fa fa-check"></i><b>8.2</b> Function fundamentals</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="functions.html"><a href="functions.html#first-class-functions"><i class="fa fa-check"></i><b>8.2.1</b> First-class functions</a></li>
+<li class="chapter" data-level="8.2.2" data-path="functions.html"><a href="functions.html#function-components"><i class="fa fa-check"></i><b>8.2.2</b> Function components</a></li>
+<li class="chapter" data-level="8.2.3" data-path="functions.html"><a href="functions.html#primitive-functions"><i class="fa fa-check"></i><b>8.2.3</b> Primitive functions</a></li>
+<li class="chapter" data-level="8.2.4" data-path="functions.html"><a href="functions.html#exercises"><i class="fa fa-check"></i><b>8.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="functions.html"><a href="functions.html#lexical-scoping"><i class="fa fa-check"></i><b>8.3</b> Lexical scoping</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="functions.html"><a href="functions.html#name-masking"><i class="fa fa-check"></i><b>8.3.1</b> Name masking</a></li>
+<li class="chapter" data-level="8.3.2" data-path="functions.html"><a href="functions.html#functions-vs.variables"><i class="fa fa-check"></i><b>8.3.2</b> Functions vs. variables</a></li>
+<li class="chapter" data-level="8.3.3" data-path="functions.html"><a href="functions.html#fresh-start"><i class="fa fa-check"></i><b>8.3.3</b> A fresh start</a></li>
+<li class="chapter" data-level="8.3.4" data-path="functions.html"><a href="functions.html#dynamic-lookup"><i class="fa fa-check"></i><b>8.3.4</b> Dynamic lookup</a></li>
+<li class="chapter" data-level="8.3.5" data-path="functions.html"><a href="functions.html#exercises-1"><i class="fa fa-check"></i><b>8.3.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>8.4</b> Lazy evaluation</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="functions.html"><a href="functions.html#forcing-evaluation"><i class="fa fa-check"></i><b>8.4.1</b> Forcing evaluation</a></li>
+<li class="chapter" data-level="8.4.2" data-path="functions.html"><a href="functions.html#promises"><i class="fa fa-check"></i><b>8.4.2</b> Promises</a></li>
+<li class="chapter" data-level="8.4.3" data-path="functions.html"><a href="functions.html#default-arguments"><i class="fa fa-check"></i><b>8.4.3</b> Default arguments</a></li>
+<li class="chapter" data-level="8.4.4" data-path="functions.html"><a href="functions.html#missing-arguments"><i class="fa fa-check"></i><b>8.4.4</b> Missing arguments</a></li>
+<li class="chapter" data-level="8.4.5" data-path="functions.html"><a href="functions.html#exercises-2"><i class="fa fa-check"></i><b>8.4.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="functions.html"><a href="functions.html#fun-dot-dot-dot"><i class="fa fa-check"></i><b>8.5</b> <code>...</code> (dot-dot-dot)</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="functions.html"><a href="functions.html#exercises-3"><i class="fa fa-check"></i><b>8.5.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="functions.html"><a href="functions.html#exiting-a-function"><i class="fa fa-check"></i><b>8.6</b> Exiting a function</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="functions.html"><a href="functions.html#implicit-vs.explict-returns"><i class="fa fa-check"></i><b>8.6.1</b> Implicit vs. explict returns</a></li>
+<li class="chapter" data-level="8.6.2" data-path="functions.html"><a href="functions.html#invisible-values"><i class="fa fa-check"></i><b>8.6.2</b> Invisible values</a></li>
+<li class="chapter" data-level="8.6.3" data-path="functions.html"><a href="functions.html#errors"><i class="fa fa-check"></i><b>8.6.3</b> Errors</a></li>
+<li class="chapter" data-level="8.6.4" data-path="functions.html"><a href="functions.html#on-exit"><i class="fa fa-check"></i><b>8.6.4</b> Exit handlers</a></li>
+<li class="chapter" data-level="8.6.5" data-path="functions.html"><a href="functions.html#exercises-4"><i class="fa fa-check"></i><b>8.6.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="functions.html"><a href="functions.html#function-forms"><i class="fa fa-check"></i><b>8.7</b> Function forms</a><ul>
+<li class="chapter" data-level="8.7.1" data-path="functions.html"><a href="functions.html#rewriting-to-prefix-form"><i class="fa fa-check"></i><b>8.7.1</b> Rewriting to prefix form</a></li>
+<li class="chapter" data-level="8.7.2" data-path="functions.html"><a href="functions.html#prefix-form-prefix-form"><i class="fa fa-check"></i><b>8.7.2</b> Prefix form {prefix-form}</a></li>
+<li class="chapter" data-level="8.7.3" data-path="functions.html"><a href="functions.html#infix-functions"><i class="fa fa-check"></i><b>8.7.3</b> Infix functions</a></li>
+<li class="chapter" data-level="8.7.4" data-path="functions.html"><a href="functions.html#replacement-functions"><i class="fa fa-check"></i><b>8.7.4</b> Replacement functions</a></li>
+<li class="chapter" data-level="8.7.5" data-path="functions.html"><a href="functions.html#special-forms"><i class="fa fa-check"></i><b>8.7.5</b> Special forms</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="functions.html"><a href="functions.html#invoking-a-function"><i class="fa fa-check"></i><b>8.8</b> Invoking a function</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="functions.html"><a href="functions.html#exercises-5"><i class="fa fa-check"></i><b>8.8.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>8.9</b> Quiz answers</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>9</b> R Packages</a><ul>
+<li class="chapter" data-level="9.1" data-path="r-packages.html"><a href="r-packages.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 基本</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="r-packages.html"><a href="r-packages.html#reference"><i class="fa fa-check"></i><b>9.1.1</b> reference</a></li>
+<li class="chapter" data-level="9.1.2" data-path="r-packages.html"><a href="r-packages.html#section-9.1.2"><i class="fa fa-check"></i><b>9.1.2</b> 套件在哪裡</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="r-packages.html"><a href="r-packages.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 範例解析</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="r-packages.html"><a href="r-packages.html#test"><i class="fa fa-check"></i><b>9.2.1</b> test</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="r-packages.html"><a href="r-packages.html#debug"><i class="fa fa-check"></i><b>9.3</b> 測試debug</a></li>
+<li class="chapter" data-level="9.4" data-path="r-packages.html"><a href="r-packages.html#-package-"><i class="fa fa-check"></i><b>9.4</b> 自製 package 範例</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>10</b> Environments</a><ul>
+<li class="chapter" data-level="10.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>10.1</b> Introduction</a><ul>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#quiz-1"><i class="fa fa-check"></i>Quiz</a></li>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>10.2</b> Environment basics</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>10.2.1</b> Basics</a></li>
+<li class="chapter" data-level="10.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>10.2.2</b> Important environments</a></li>
+<li class="chapter" data-level="10.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>10.2.3</b> Parents</a></li>
+<li class="chapter" data-level="10.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>10.2.4</b> Getting and setting</a></li>
+<li class="chapter" data-level="10.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>10.2.5</b> Finalisers</a></li>
+<li class="chapter" data-level="10.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>10.2.6</b> Advanced bindings</a></li>
+<li class="chapter" data-level="10.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>10.2.7</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>10.3</b> Recursing over environments</a><ul>
+<li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#iteration-vs-recursion"><i class="fa fa-check"></i>Iteration vs recursion</a></li>
+<li class="chapter" data-level="10.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>10.3.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>10.4</b> Special environments</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>10.4.1</b> Package environments and the search path</a></li>
+<li class="chapter" data-level="10.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>10.4.2</b> The function environment</a></li>
+<li class="chapter" data-level="10.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>10.4.3</b> Namespaces</a></li>
+<li class="chapter" data-level="10.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>10.4.4</b> Execution environments</a></li>
+<li class="chapter" data-level="10.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>10.4.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>10.5</b> The call stack</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>10.5.1</b> Simple call stacks</a></li>
+<li class="chapter" data-level="10.5.2" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>10.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="10.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>10.5.3</b> Frames</a></li>
+<li class="chapter" data-level="10.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>10.5.4</b> Dynamic scope</a></li>
+<li class="chapter" data-level="10.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>10.5.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>10.6</b> As data structures</a></li>
+<li class="chapter" data-level="10.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>10.7</b> <code>&lt;&lt;-</code></a><ul>
+<li class="chapter" data-level="10.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>10.7.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="10.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>10.8</b> Quiz answers</a><ul>
+<li class="chapter" data-level="10.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>10.8.1</b> term</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="section-11.html"><a href="section-11.html"><i class="fa fa-check"></i><b>11</b> 基本繪圖</a><ul>
+<li class="chapter" data-level="11.1" data-path="section-11.html"><a href="section-11.html#reference-1"><i class="fa fa-check"></i><b>11.1</b> reference</a></li>
+<li class="chapter" data-level="11.2" data-path="section-11.html"><a href="section-11.html#basic"><i class="fa fa-check"></i><b>11.2</b> basic</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="section-11.html"><a href="section-11.html#creating-a-graph"><i class="fa fa-check"></i><b>11.2.1</b> Creating a Graph</a></li>
+<li class="chapter" data-level="11.2.2" data-path="section-11.html"><a href="section-11.html#saving-graphs"><i class="fa fa-check"></i><b>11.2.2</b> Saving Graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="section-11.html"><a href="section-11.html#section-11.3"><i class="fa fa-check"></i><b>11.3</b> 多個圖和疊圖</a></li>
+<li class="chapter" data-level="11.4" data-path="section-11.html"><a href="section-11.html#histograms-and-density-plots"><i class="fa fa-check"></i><b>11.4</b> Histograms and Density Plots</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="section-11.html"><a href="section-11.html#histograms"><i class="fa fa-check"></i><b>11.4.1</b> Histograms</a></li>
+<li class="chapter" data-level="11.4.2" data-path="section-11.html"><a href="section-11.html#kernel-density-plot"><i class="fa fa-check"></i><b>11.4.2</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="11.4.3" data-path="section-11.html"><a href="section-11.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>11.4.3</b> Comparing Groups VIA Kernal Density</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="section-11.html"><a href="section-11.html#-plots"><i class="fa fa-check"></i><b>11.5</b> 合併 Plots</a></li>
+<li class="chapter" data-level="11.6" data-path="section-11.html"><a href="section-11.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>11.6</b> Add texts within the graph</a><ul>
+<li class="chapter" data-level="11.6.1" data-path="section-11.html"><a href="section-11.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>11.6.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="11.6.2" data-path="section-11.html"><a href="section-11.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>11.6.2</b> Add mathematical annotation to a plot</a></li>
+</ul></li>
+<li class="chapter" data-level="11.7" data-path="section-11.html"><a href="section-11.html#section-11.7"><i class="fa fa-check"></i><b>11.7</b> 函數畫圖</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>12</b> Sample and Distribution 01</a><ul>
+<li class="chapter" data-level="12.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-12.1"><i class="fa fa-check"></i><b>12.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="12.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>12.2</b> distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>13</b> Tidy Basic 01</a><ul>
+<li class="chapter" data-level="13.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>13.1</b> long and wide data</a><ul>
+<li class="chapter" data-level="13.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>13.1.1</b> gather: wide to long</a></li>
+<li class="chapter" data-level="13.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>13.1.2</b> spread :long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>13.2</b> dplyr</a></li>
+<li class="chapter" data-level="13.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>13.3</b> other</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>13.3.1</b> Basic verbs</a></li>
+<li class="chapter" data-level="13.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>13.3.2</b> Group by</a></li>
+<li class="chapter" data-level="13.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>13.3.3</b> summarize()</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>14</b> rbook 提要</a><ul>
+<li class="chapter" data-level="14.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>14.1</b> index.Rmd</a></li>
+<li class="chapter" data-level="14.2" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i><b>14.2</b> </a></li>
+<li class="chapter" data-level="14.3" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>14.3</b> 其他_output.yml 範例</a></li>
+<li class="chapter" data-level="14.4" data-path="rbook-.html"><a href="rbook-.html#output.yml--.travis.yml--knitr-hook--terminal-output-python"><i class="fa fa-check"></i><b>14.4</b> _output.yml 範例 ## .travis.yml ## 紀錄 ### knitr hook #### 顏色 ### terminal output ## python</a></li>
+<li class="chapter" data-level="14.5" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>14.5</b> 產生PDF 文件</a><ul>
+<li class="chapter" data-level="14.5.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>14.5.1</b> Overview</a></li>
+<li class="chapter" data-level="14.5.2" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>14.5.2</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="14.5.3" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>14.5.3</b> LaTeX Packages for Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="rbook-.html"><a href="rbook-.html#section-14.6"><i class="fa fa-check"></i><b>14.6</b> 中文</a></li>
+<li class="chapter" data-level="14.7" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>14.7</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="14.7.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>14.7.1</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="14.7.2" data-path="rbook-.html"><a href="rbook-.html#include"><i class="fa fa-check"></i><b>14.7.2</b> Include</a></li>
+<li class="chapter" data-level="14.7.3" data-path="rbook-.html"><a href="rbook-.html#section-14.7.3"><i class="fa fa-check"></i><b>14.7.3</b> 註記</a></li>
+<li class="chapter" data-level="14.7.4" data-path="rbook-.html"><a href="rbook-.html#pdf"><i class="fa fa-check"></i><b>14.7.4</b> 測試中文轉pdf</a></li>
+<li class="chapter" data-level="14.7.5" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>14.7.5</b> Custom Templates</a></li>
+<li class="chapter" data-level="14.7.6" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>14.7.6</b> Pandoc Arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="rbook-.html"><a href="rbook-.html#section-14.8"><i class="fa fa-check"></i><b>14.8</b> 共用設定</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="systemcat-mydata-csv-.html"><a href="systemcat-mydata-csv-.html"><i class="fa fa-check"></i><b>15</b> system(“cat myData.csv”) # 這個不行</a><ul>
+<li class="chapter" data-level="15.1" data-path="systemcat-mydata-csv-.html"><a href="systemcat-mydata-csv-.html#section-15.1"><i class="fa fa-check"></i><b>15.1</b> 討論</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="systemcat-mydata-csv-.html"><a href="systemcat-mydata-csv-.html#inline-code"><i class="fa fa-check"></i><b>15.1.1</b> inline code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>16</b> gitbook introduction</a><ul>
+<li class="chapter" data-level="16.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml-_bookdown.yml-new_session--index.rmd--travis-.rbuildignore-.travis.yml-description"><i class="fa fa-check"></i><b>16.1</b> _output.yml: ## _bookdown.yml: ## new_session 注意事項 ## index.rmd ## 執行 ## 加入:Travis ### .Rbuildignore ### .travis.yml: ### DESCRIPTION</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test for class</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-11" class="section level1">
+<h1><span class="header-section-number">Chapter 11</span> 基本繪圖</h1>
+<div id="reference-1" class="section level2">
+<h2><span class="header-section-number">11.1</span> reference</h2>
+<p><a href="https://www.statmethods.net/graphs/creating.html">Quric R</a></p>
+<p>一般視窗作業系統的繪圖，會有一個抽象物件<code>device</code>在這個device上，有一個抽象物件<code>canvas</code>，和繪圖工具例如，水彩筆之類的抽象物件可以指定顏色，線條粗細等等。</p>
+</div>
+<div id="basic" class="section level2">
+<h2><span class="header-section-number">11.2</span> basic</h2>
+<p>Creating a Graph In R, graphs are typically created interactively.</p>
+<div id="creating-a-graph" class="section level3">
+<h3><span class="header-section-number">11.2.1</span> Creating a Graph</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attach</span>(mtcars)
+<span class="kw">plot</span>(wt, mpg) 
+<span class="kw">abline</span>(<span class="kw">lm</span>(mpg<span class="op">~</span>wt))
+<span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><code>plot()</code>函數，新建視窗然後畫出 weight vs. miles per gallon.<br />
+<code>abline()</code> 不會開啟新視窗做圖，abline()的語法如下:</p>
+<p>abline(a = NULL, b = NULL, h = NULL, v = NULL, reg = NULL,coef = NULL, untf = FALSE, …)<br />
+代表的意思是畫出一條直線<code>a+bx</code> ，其中a代表截距常數，b則是斜率常數。例如<br />
+<code>Y=2X+1</code>，則對應的函數為 <code>abline(a=1,b=2)</code> 。</p>
+</div>
+<div id="saving-graphs" class="section level3">
+<h3><span class="header-section-number">11.2.2</span> Saving Graphs</h3>
+<p>可以利用menu存檔，例如File -&gt; Save As. 也可以利用函數：</p>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Output to</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pdf(“mygraph.pdf”)</td>
+<td>pdf file</td>
+</tr>
+<tr class="even">
+<td>win.metafile(“mygraph.wmf”)</td>
+<td>windows metafile</td>
+</tr>
+<tr class="odd">
+<td>png(“mygraph.png”)</td>
+<td>png file</td>
+</tr>
+<tr class="even">
+<td>jpeg(“mygraph.jpg”)</td>
+<td>jpeg file</td>
+</tr>
+<tr class="odd">
+<td>bmp(“mygraph.bmp”)</td>
+<td>bmp file</td>
+</tr>
+<tr class="even">
+<td>postscript(“mygraph.ps”)</td>
+<td>postscript file</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="section-11.3" class="section level2">
+<h2><span class="header-section-number">11.3</span> 多個圖和疊圖</h2>
+<p>傻瓜指令例如 (plot, hist, boxplot, etc.) 基本上會產生新的圖。要避免這個情況，可以分為多圖和疊圖討論。開啟新視窗的方法根據OS而不同 。</p>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>windows()</td>
+<td>Windows</td>
+</tr>
+<tr class="even">
+<td>X11()</td>
+<td>Unix</td>
+</tr>
+<tr class="odd">
+<td>quartz()</td>
+<td>Mac</td>
+</tr>
+</tbody>
+</table>
+<p>要關閉視窗，可以用函數<code>dev.off()</code><br />
+如果要知道目前的視窗是那一個，可以參考 <code>dev.cur()</code>。 Note: 如果目前有多個圖窗，則一直呼叫這個函數<code>dev.off()</code>，會依次關閉視窗，直到函數傳回NULL。</p>
+<p>驗證上面的說法可以利用</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" /> 上面的範例，可以看到圖裝置的編號都是2，而且最後只有一個圖。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dev.off</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>null device 
+          1 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>討論下面的輸出結果，我只看到一個視窗：</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">X11</span>()
+<span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()
+<span class="kw">X11</span>()
+<span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">dev.cur</span>()</code></pre></div>
+</div>
+<div id="histograms-and-density-plots" class="section level2">
+<h2><span class="header-section-number">11.4</span> Histograms and Density Plots</h2>
+<div id="histograms" class="section level3">
+<h3><span class="header-section-number">11.4.1</span> Histograms</h3>
+<p>函數<code>hist(x)</code>：其中<br />
+x是一個數字向量， 選項<code>freq=FALSE</code> 則是畫出 probability densities 而不是次數 frequencies.<br />
+選項：<code>breaks= ##</code> 則是控制分成幾份。</p>
+<p><strong>Simple Histogram</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-13-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><strong>分成12份，顏色紅色。</strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-14-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="add-a-normal-curve" class="section level4">
+<h4><span class="header-section-number">11.4.1.1</span> Add a Normal Curve</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg 
+h&lt;-<span class="kw">hist</span>(x, <span class="dt">breaks=</span><span class="dv">10</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>, 
+    <span class="dt">main=</span><span class="st">&quot;Histogram with Normal Curve&quot;</span>) 
+xfit&lt;-<span class="kw">seq</span>(<span class="kw">min</span>(x),<span class="kw">max</span>(x),<span class="dt">length=</span><span class="dv">40</span>) 
+yfit&lt;-<span class="kw">dnorm</span>(xfit,<span class="dt">mean=</span><span class="kw">mean</span>(x),<span class="dt">sd=</span><span class="kw">sd</span>(x)) 
+yfit &lt;-<span class="st"> </span>yfit<span class="op">*</span><span class="kw">diff</span>(h<span class="op">$</span>mids[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])<span class="op">*</span><span class="kw">length</span>(x) 
+<span class="kw">lines</span>(xfit, yfit, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-15-1.png" width="70%" style="display: block; margin: auto;" /> hint: 因為<span class="math inline">\(pdf=\frac{\frac{n}{N}}{bin \quad width}\)</span> 所以<span class="math inline">\(n=pdf\times N \times (bin \quad width)\)</span></p>
+<p>Histograms can be a poor method for determining the shape of a distribution because it is so strongly affected by the number of bins used.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">h</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>$breaks
+ [1] 10 12 14 16 18 20 22 24 26 28 30 32 34
+
+$counts
+ [1] 2 1 7 3 5 5 2 2 1 0 2 2
+
+$density
+ [1] 0.0312 0.0156 0.1094 0.0469 0.0781 0.0781 0.0312 0.0312 0.0156 0.0000
+[11] 0.0312 0.0312
+
+$mids
+ [1] 11 13 15 17 19 21 23 25 27 29 31 33
+
+$xname
+[1] "x"
+
+$equidist
+[1] TRUE
+
+attr(,"class")
+[1] "histogram"
+</code></pre>
+<p>To practice making a density plot with the hist() function, try this exercise.</p>
+</div>
+</div>
+<div id="kernel-density-plot" class="section level3">
+<h3><span class="header-section-number">11.4.2</span> Kernel Density Plot</h3>
+<p>Kernal density plots are usually a much more effective way to view the distribution of a variable. Create the plot using plot(density(x)) where x is a numeric vector.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg) <span class="co"># returns the density data </span>
+<span class="kw">plot</span>(d) <span class="co"># plots the results</span></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-17-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="filled-density-plot" class="section level4">
+<h4><span class="header-section-number">11.4.2.1</span> Filled Density Plot</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">plot</span>(d, <span class="dt">main=</span><span class="st">&quot;Kernel Density of Miles Per Gallon&quot;</span>)
+<span class="kw">polygon</span>(d, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">border=</span><span class="st">&quot;blue&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-18-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="comparing-groups-via-kernal-density" class="section level3">
+<h3><span class="header-section-number">11.4.3</span> Comparing Groups VIA Kernal Density</h3>
+<p>The sm.density.compare( ) function in the sm package allows you to superimpose the kernal density plots of two or more groups. The format is sm.density.compare(x, factor) where x is a numeric vector and factor is the grouping variable.</p>
+<div id="compare-mpg-distributions-for-cars-with-46-or-8-cylinders" class="section level4">
+<h4><span class="header-section-number">11.4.3.1</span> Compare MPG distributions for cars with 4,6, or 8 cylinders</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(sm)
+<span class="kw">attach</span>(mtcars)
+
+<span class="co">#create value labels </span>
+cyl.f &lt;-<span class="st"> </span><span class="kw">factor</span>(cyl, <span class="dt">levels=</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),
+  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;4 cylinder&quot;</span>, <span class="st">&quot;6 cylinder&quot;</span>, <span class="st">&quot;8 cylinder&quot;</span>)) 
+
+<span class="co">#plot densities </span>
+<span class="kw">sm.density.compare</span>(mpg, cyl, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)
+<span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;MPG Distribution by Car Cylinders&quot;</span>)
+
+<span class="co">#add legend via mouse click</span>
+colfill&lt;-<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span>(<span class="dv">2</span><span class="op">+</span><span class="kw">length</span>(<span class="kw">levels</span>(cyl.f)))) 
+<span class="kw">legend</span>(<span class="kw">locator</span>(<span class="dv">1</span>), <span class="kw">levels</span>(cyl.f), <span class="dt">fill=</span>colfill)</code></pre></div>
+<div class="figure">
+<img src="diagrams/class/mpg_plot01.png" />
+
+</div>
+</div>
+</div>
+</div>
+<div id="-plots" class="section level2">
+<h2><span class="header-section-number">11.5</span> 合併 Plots</h2>
+<p>同時顯示多個<code>plot</code>的結果，可以利用函數<code>par()</code> or <code>layout( )</code>。</p>
+<p>函數<code>par( )</code>的選項有： mfrow=c(nrows, ncols) 填plot的方向為橫行。<br />
+mfcol=c(nrows, ncols) 填入的方向為直行。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#4 2 x 2 figures </span>
+
+<span class="kw">attach</span>(mtcars)
+<span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))
+<span class="kw">plot</span>(wt,mpg, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs. mpg&quot;</span>)
+<span class="kw">plot</span>(wt,disp, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs disp&quot;</span>)
+<span class="kw">hist</span>(wt, <span class="dt">main=</span><span class="st">&quot;Histogram of wt&quot;</span>)
+<span class="kw">boxplot</span>(wt, <span class="dt">main=</span><span class="st">&quot;Boxplot of wt&quot;</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-20-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>2 x2 layout click to view</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 3 figures arranged in 3 rows and 1 column</span>
+
+<span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)) 
+<span class="kw">hist</span>(wt)
+<span class="kw">hist</span>(mpg)
+<span class="kw">hist</span>(disp)
+<span class="co">#dev.off()</span></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-21-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>3 x 1 layout</p>
+<p>函數 layout( ) 的使用方法為 layout(mat) 其中 mat 的元素用來指定圖形號碼。例如分成4個格子,順序為左右上下(byrow=TRUE) 1在第一ROW,占用[1,1]-[1,2],2,3,分別占用[2,1]和[2,2]</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># One figure in row 1 and two figures in row 2</span>
+ 
+<span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))
+<span class="kw">hist</span>(wt)
+<span class="kw">hist</span>(mpg)
+<span class="kw">hist</span>(disp)
+<span class="kw">dev.off</span>()</code></pre></div>
+<pre style="border: 1px grey dotted;"><code>null device 
+          1 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-22-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Optionally, you can include widths= and heights= options in the layout( ) function to control the size of each figure more precisely. These options have the form widths= a vector of values for the widths of columns heights= a vector of values for the heights of rows.</p>
+<p>Relative widths are specified with numeric values. Absolute widths (in centimetres) are specified with the lcm() function.</p>
+<p>::: sidebar note: par(mar) 列出margin<br />
+par(mar=c(1,1,1,1)) 更動margin</p>
+<p>plot.new()常發生的錯誤 : figure margins too large</p>
+<p>有兩個原因：1 是畫布過小 2，當前畫布的上下左右距離過大 這裡看看如何解第二個發生原因</p>
+<p>默認的畫布上邊款的距離為： 預設為 c(5, 4, 4, 2) + 0.1. 對應 c(bottom, left, top, right)，也就是順時針，由下到右結束一圈。</p>
+<p>我們可以將其設置為0，同時將目前的設定紀錄，後面程式的第一行</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))   <span class="co"># op 會紀錄之前的margin = 5.1 4.1 4.1 2.1  </span>
+<span class="kw">plot.new</span>() <span class="co"># 畫圖   </span>
+<span class="kw">par</span>(op) <span class="co"># 改回原先的margin  </span></code></pre></div>
+<p>:::</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) 
+<span class="co"># One figure in row 1 and two figures in row 2</span>
+<span class="co"># row 1 is 1/3 the height of row 2</span>
+<span class="co"># column 2 is 1/4 the width of the column 1 </span>
+<span class="kw">attach</span>(mtcars)</code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 5):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>), 
+    <span class="dt">widths=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>), <span class="dt">heights=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))
+<span class="kw">hist</span>(wt)
+<span class="kw">hist</span>(mpg)
+<span class="kw">hist</span>(disp)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-24-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>multiplot layout with fine control click to view</p>
+<p>See help(layout) for more details.</p>
+<p>Creating a figure arrangement with fine control In the following example, two box plots are added to scatterplot to create an enhanced graph.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) 
+<span class="co"># Add boxplots to a scatterplot</span>
+<span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="dv">0</span>,<span class="fl">0.8</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</code></pre></div>
+<pre style="color: red;"><code>Warning in par(fig = c(0, 0.8, 0, 0.8), new = TRUE): 呼叫 par(new=TRUE) 而
+不繪圖
+</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg, <span class="dt">xlab=</span><span class="st">&quot;Car Weight&quot;</span>,
+  <span class="dt">ylab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)
+<span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.55</span>,<span class="dv">1</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)
+<span class="kw">boxplot</span>(mtcars<span class="op">$</span>wt, <span class="dt">horizontal=</span><span class="ot">TRUE</span>, <span class="dt">axes=</span><span class="ot">FALSE</span>)
+<span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="fl">0.65</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="fl">0.8</span>),<span class="dt">new=</span><span class="ot">TRUE</span>)
+<span class="kw">boxplot</span>(mtcars<span class="op">$</span>mpg, <span class="dt">axes=</span><span class="ot">FALSE</span>)
+<span class="kw">mtext</span>(<span class="st">&quot;Enhanced Scatterplot&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>, <span class="dt">outer=</span><span class="ot">TRUE</span>, <span class="dt">line=</span><span class="op">-</span><span class="dv">3</span>)</code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-25-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>To understand this graph, think of the full graph area as going from (0,0) in the lower left corner to (1,1) in the upper right corner. The format of the fig= parameter is a numerical vector of the form c(x1, x2, y1, y2). The first fig= sets up the scatterplot going from 0 to 0.8 on the x axis and 0 to 0.8 on the y axis. The top boxplot goes from 0 to 0.8 on the x axis and 0.55 to 1 on the y axis. I chose 0.55 rather than 0.8 so that the top figure will be pulled closer to the scatter plot. The right hand boxplot goes from 0.65 to 1 on the x axis and 0 to 0.8 on the y axis. Again, I chose a value to pull the right hand boxplot closer to the scatterplot. You have to experiment to get it just right.</p>
+<p>fig= starts a new plot, so to add to an existing plot use new=TRUE.</p>
+<p>You can use this to combine several plots in any arrangement into one graph.</p>
+
+</div>
+<div id="add-texts-within-the-graph" class="section level2">
+<h2><span class="header-section-number">11.6</span> Add texts within the graph</h2>
+<div id="add-text-in-the-margins-of-the-graph" class="section level3">
+<h3><span class="header-section-number">11.6.1</span> Add text in the margins of the graph</h3>
+</div>
+<div id="add-mathematical-annotation-to-a-plot" class="section level3">
+<h3><span class="header-section-number">11.6.2</span> Add mathematical annotation to a plot</h3>
+</div>
+</div>
+<div id="section-11.7" class="section level2">
+<h2><span class="header-section-number">11.7</span> 函數畫圖</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="environments.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sample-and-distribution-01.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Plot01.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

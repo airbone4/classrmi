@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-01">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,66 +50,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  { background-color: #f8f8f8; }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ef2929; } /* Alert */
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
-code span.bn { color: #0000cf; } /* BaseN */
-code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
-code span.co { color: #8f5902; font-style: italic; } /* Comment */
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code span.dt { color: #204a87; } /* DataType */
-code span.dv { color: #0000cf; } /* DecVal */
-code span.er { color: #a40000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code span.ot { color: #8f5902; } /* Other */
-code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
-code span.ss { color: #4e9a06; } /* SpecialString */
-code span.st { color: #4e9a06; } /* String */
-code span.va { color: #000000; } /* Variable */
-code span.vs { color: #4e9a06; } /* VerbatimString */
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="adv-r.css" type="text/css" />
@@ -131,13 +106,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.1</b> quick view</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> 資料型態和內容</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#section-1.2.1"><i class="fa fa-check"></i><b>1.2.1</b> 編輯/瀏覽資料</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#section-1.2.2"><i class="fa fa-check"></i><b>1.2.2</b> 個別欄位</a></li>
-<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#section-1.2.3"><i class="fa fa-check"></i><b>1.2.3</b> 質性數據的分析</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 安裝軟體</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.2</b> quick view</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 資料型態和內容</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#section-1.3.1"><i class="fa fa-check"></i><b>1.3.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#section-1.3.2"><i class="fa fa-check"></i><b>1.3.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#section-1.3.3"><i class="fa fa-check"></i><b>1.3.3</b> 質性數據的分析</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.3</b> assignment</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.4</b> assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a><ul>
 <li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a><ul>
@@ -206,16 +182,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#attribute"><i class="fa fa-check"></i><b>3.1</b> attribute</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>4</b> File System</a><ul>
-<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>4.1</b> Exploring file system</a></li>
-<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.2</b> Creating of a directory</a></li>
-<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> R系統檔案列表</a></li>
-<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.4</b> 在R中建立檔案名稱</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.4.1</b> Note about Windows</a></li>
-<li class="chapter" data-level="4.4.2" data-path="file-system.html"><a href="file-system.html#section-4.4.2"><i class="fa fa-check"></i><b>4.4.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.1</b> Creating of a directory</a></li>
+<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.2</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> 在R中建立檔案名稱</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.3.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="4.3.2" data-path="file-system.html"><a href="file-system.html#section-4.3.2"><i class="fa fa-check"></i><b>4.3.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.3.3" data-path="file-system.html"><a href="file-system.html#section-4.3.3"><i class="fa fa-check"></i><b>4.3.3</b> 應用範例</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a></li>
-<li class="chapter" data-level="4.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.6</b> write csv</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.6.1</b> data.frame to CSV</a></li>
+<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 讀檔</a></li>
+<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.5</b> write csv</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.5.1</b> data.frame to CSV</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>5</b> Functions</a><ul>
@@ -302,7 +278,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>7.5</b> The call stack</a><ul>
 <li class="chapter" data-level="7.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>7.5.1</b> Simple call stacks</a></li>
-<li class="chapter" data-level="7.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
 <li class="chapter" data-level="7.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>7.5.3</b> Frames</a></li>
 <li class="chapter" data-level="7.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>7.5.4</b> Dynamic scope</a></li>
 <li class="chapter" data-level="7.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>7.5.5</b> Exercises</a></li>
@@ -333,8 +309,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.6" data-path="basic-plot.html"><a href="basic-plot.html#section-8.6"><i class="fa fa-check"></i><b>8.6</b> 函數畫圖</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>9</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.2</b> distribution</a></li>
+<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 　隨機抽樣</a></li>
+<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="9.3" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.3</b> distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>10</b> Tidy Basic 01</a><ul>
 <li class="chapter" data-level="10.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>10.1</b> long and wide data</a><ul>
@@ -359,27 +336,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>11.6</b> python</a></li>
 <li class="chapter" data-level="11.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>11.7</b> 產生PDF 文件</a><ul>
-<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.1</b> Overview</a></li>
-<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.2</b> LaTeX Packages for Citations</a></li>
+<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#pdf"><i class="fa fa-check"></i><b>11.7.1</b> 測試中文轉pdf</a></li>
+<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.2</b> Overview</a></li>
+<li class="chapter" data-level="11.7.3" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>11.7.3</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="11.7.4" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.4</b> LaTeX Packages for Citations</a></li>
 </ul></li>
-<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a><ul>
-<li class="chapter" data-level="11.8.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>11.8.1</b> LaTeX Engine</a></li>
-<li class="chapter" data-level="11.8.2" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>11.8.2</b> Custom Templates</a></li>
-<li class="chapter" data-level="11.8.3" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.8.3</b> Pandoc Arguments</a></li>
+<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a></li>
+<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>11.9</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="11.9.1" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.9.1</b> Pandoc Arguments</a></li>
 </ul></li>
-<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#section-11.9"><i class="fa fa-check"></i><b>11.9</b> 共用設定</a></li>
-<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 討論</a><ul>
-<li class="chapter" data-level="11.10.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.10.1</b> inline code</a></li>
+<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 共用設定</a></li>
+<li class="chapter" data-level="11.11" data-path="rbook-.html"><a href="rbook-.html#section-11.11"><i class="fa fa-check"></i><b>11.11</b> 討論</a><ul>
+<li class="chapter" data-level="11.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.11.1</b> inline code</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>12</b> gitbook introduction</a><ul>
 <li class="chapter" data-level="12.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>12.1</b> _output.yml:</a></li>
 <li class="chapter" data-level="12.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>12.2</b> _bookdown.yml:</a></li>
-<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>12.3</b> index.rmd</a></li>
-<li class="chapter" data-level="12.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-12.4"><i class="fa fa-check"></i><b>12.4</b> 執行</a></li>
-<li class="chapter" data-level="12.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.5</b> 加入:Travis</a><ul>
-<li class="chapter" data-level="12.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.5.1</b> .travis.yml:</a></li>
-<li class="chapter" data-level="12.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.5.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.3</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.3.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="12.3.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.3.2</b> DESCRIPTION</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -405,7 +381,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">test for class</h1>
 <h4 class="author"><em>lend jwj cen</em></h4>
-<h4 class="date"><em>2018-11-01</em></h4>
+<h4 class="date"><em>2018-11-07</em></h4>
 </div>
 <div id="section-1" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> 網路資源</h1>
@@ -418,17 +394,35 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="http://kbroman.org/pkg_primer/">R Package Primer</a></li>
 </ul>
 
+<div id="section-1.1" class="section level2">
+<h2><span class="header-section-number">1.1</span> 安裝軟體</h2>
+<p>部份軟體列表 另外於linux 安裝 tidyverse時需要:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev</code></pre></div>
+<p>install.packages()</p>
+<pre><code>install.packages(&#39;bookdown&#39;)
+install.packages(&#39;rlang&#39;)
+install.packages(&#39;tidyr&#39;)
+install.packages(&#39;babyname&#39;)
+install.packages(&#39;babynames&#39;)
+install.packages(&#39;ggplot2&#39;)
+install.packages(&#39;tidyverse&#39;)
+install.packages(&#39;httr&#39;)
+install.packages(&#39;curl&#39;)
+install.packages(&#39;tidyverse&#39;)
+install.packages(&#39;codetools&#39;)</code></pre>
+
+</div>
 <div id="quick-view" class="section level2">
-<h2><span class="header-section-number">1.1</span> quick view</h2>
-<div id="section-1.1.0.1" class="section level4">
-<h4><span class="header-section-number">1.1.0.1</span> <em>目前有哪些資料集可以測試</em></h4>
+<h2><span class="header-section-number">1.2</span> quick view</h2>
+<div id="section-1.2.0.1" class="section level4">
+<h4><span class="header-section-number">1.2.0.1</span> <em>目前有哪些資料集可以測試</em></h4>
 <p><code>data()</code></p>
 </div>
 </div>
-<div id="section-1.2" class="section level2">
-<h2><span class="header-section-number">1.2</span> 資料型態和內容</h2>
+<div id="section-1.3" class="section level2">
+<h2><span class="header-section-number">1.3</span> 資料型態和內容</h2>
 <p>可以先看看資料描述 <code>?mtcars</code></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">mtcars</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mtcars</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>                     mpg cyl  disp  hp drat   wt qsec vs am gear carb
 Mazda RX4           21.0   6 160.0 110 3.90 2.62 16.5  0  1    4    4
 Mazda RX4 Wag       21.0   6 160.0 110 3.90 2.88 17.0  0  1    4    4
@@ -463,7 +457,7 @@ Ferrari Dino        19.7   6 145.0 175 3.62 2.77 15.5  0  1    5    6
 Maserati Bora       15.0   8 301.0 335 3.54 3.57 14.6  0  1    5    8
 Volvo 142E          21.4   4 121.0 109 4.11 2.78 18.6  1  1    4    2
 </code></pre>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">head</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(mtcars)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>                   mpg cyl disp  hp drat   wt qsec vs am gear carb
 Mazda RX4         21.0   6  160 110 3.90 2.62 16.5  0  1    4    4
 Mazda RX4 Wag     21.0   6  160 110 3.90 2.88 17.0  0  1    4    4
@@ -472,7 +466,7 @@ Hornet 4 Drive    21.4   6  258 110 3.08 3.21 19.4  1  0    3    1
 Hornet Sportabout 18.7   8  360 175 3.15 3.44 17.0  0  0    3    2
 Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
 </code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">tail</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(mtcars)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>                mpg cyl  disp  hp drat   wt qsec vs am gear carb
 Porsche 914-2  26.0   4 120.3  91 4.43 2.14 16.7  0  1    5    2
 Lotus Europa   30.4   4  95.1 113 3.77 1.51 16.9  1  1    5    2
@@ -481,109 +475,102 @@ Ferrari Dino   19.7   6 145.0 175 3.62 2.77 15.5  0  1    5    6
 Maserati Bora  15.0   8 301.0 335 3.54 3.57 14.6  0  1    5    8
 Volvo 142E     21.4   4 121.0 109 4.11 2.78 18.6  1  1    4    2
 </code></pre>
-<div id="section-1.2.1" class="section level3">
-<h3><span class="header-section-number">1.2.1</span> 編輯/瀏覽資料</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">edit</span>(mtcars)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">data.entry</span>(mtcars)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw">View</span>(mtcars)</a></code></pre></div>
+<div id="section-1.3.1" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> 編輯/瀏覽資料</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">edit</span>(mtcars)
+<span class="kw">data.entry</span>(mtcars)
+<span class="kw">View</span>(mtcars)</code></pre></div>
 </div>
-<div id="section-1.2.2" class="section level3">
-<h3><span class="header-section-number">1.2.2</span> 個別欄位</h3>
+<div id="section-1.3.2" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> 個別欄位</h3>
 <p>如果要顯示個別欄位,一般可以是<code>mtcars$mpg</code>,但是如果要直接使用<code>mpg</code>欄位,可以利用<code>attach()</code></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">attach</span>(mtcars)</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2">mpg</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">attach</span>(mtcars)
+mpg</code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2
 [15] 10.4 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4
 [29] 15.8 19.7 15.0 21.4
 </code></pre>
 </div>
-<div id="section-1.2.3" class="section level3">
-<h3><span class="header-section-number">1.2.3</span> 質性數據的分析</h3>
+<div id="section-1.3.3" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> 質性數據的分析</h3>
 <p>欄位<code>cyl</code>為質性變數,可以利用table分析</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">table</span>(mtcars<span class="op">$</span>cyl)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(mtcars<span class="op">$</span>cyl)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>
  4  6  8 
 11  7 14 
 </code></pre>
 <p>頻率圖</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">barplot</span>(<span class="kw">table</span>(mtcars<span class="op">$</span>cyl))</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<div class="sidebar">
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">v&lt;-<span class="kw">as.vector</span>(<span class="kw">table</span>(mtcars<span class="op">$</span>cyl))</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw">barplot</span>(v)</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">m&lt;-<span class="kw">as.matrix</span>(<span class="kw">table</span>(mtcars<span class="op">$</span>cyl))</a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="kw">barplot</span>(m)</a>
-<a class="sourceLine" id="cb8-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="kw">barplot</span>(<span class="kw">c</span>(<span class="dv">11</span>,<span class="dv">7</span>,<span class="dv">4</span>))</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" /><img src="rmi_copy_test_files/figure-html/unnamed-chunk-9-2.png" width="70%" style="display: block; margin: auto;" /><img src="rmi_copy_test_files/figure-html/unnamed-chunk-9-3.png" width="70%" style="display: block; margin: auto;" /></p>
-</div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">barplot</span>(mtcars<span class="op">$</span>mpg)</a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="kw">barplot</span>(mtcars<span class="op">$</span>cyl)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" /><img src="rmi_copy_test_files/figure-html/unnamed-chunk-10-2.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(<span class="kw">table</span>(mtcars<span class="op">$</span>cyl))</code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>::: sidebar</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">v&lt;-<span class="kw">as.vector</span>(<span class="kw">table</span>(mtcars<span class="op">$</span>cyl))
+<span class="kw">barplot</span>(v)
+m&lt;-<span class="kw">as.matrix</span>(<span class="kw">table</span>(mtcars<span class="op">$</span>cyl))
+<span class="kw">barplot</span>(m)
+
+<span class="kw">barplot</span>(<span class="kw">c</span>(<span class="dv">11</span>,<span class="dv">7</span>,<span class="dv">4</span>))</code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" /><img src="rmi_copy_test_files/figure-html/unnamed-chunk-11-2.png" width="70%" style="display: block; margin: auto;" /><img src="rmi_copy_test_files/figure-html/unnamed-chunk-11-3.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>:::</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(mtcars<span class="op">$</span>mpg)
+<span class="kw">barplot</span>(mtcars<span class="op">$</span>cyl)</code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-12-1.png" width="70%" style="display: block; margin: auto;" /><img src="rmi_copy_test_files/figure-html/unnamed-chunk-12-2.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="assignment" class="section level2">
-<h2><span class="header-section-number">1.3</span> assignment</h2>
+<h2><span class="header-section-number">1.4</span> assignment</h2>
 <p>&lt;-和 -&gt; 是一對 ，可以向左和向右賦值<br />
 = 是單向的 ，作用和&lt;-基本相同，但對函數中的變數通常使用=<br />
 &lt;&lt;- 這個是全域賦值 ，跟變數的作用域有關，一般不會用到</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="co">##Delete x (if it exists)</span></a>
-<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="kw">rm</span>(x)</a></code></pre></div>
-<pre style="color: red;"><code>Warning in rm(x): object 'x' not found
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">##Delete x (if it exists)
+<span class="kw">rm</span>(x)</code></pre></div>
+<pre style="color: red;"><code>Warning in rm(x): 找不到物件 'x'
 </code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">mean</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>) <span class="co">#[1] 5.5</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>) <span class="co">#[1] 5.5</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 5.5
 </code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">x <span class="co">#Error: object &#39;x&#39; not found</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x <span class="co">#Error: object &#39;x&#39; not found</span></code></pre></div>
 <pre style="color: red;"><code>Error in eval(expr, envir, enclos):
-  object 'x' not found
+  找不到物件 'x'
 </code></pre>
-<p>Here x is declared within the function ’s scope of the function, so it doesn ’t exist in the user workspace.
-Now, let ’s run the same piece of code with using the &lt;- operator:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"><span class="kw">mean</span>(x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>) <span class="co"># [1] 5.5</span></a></code></pre></div>
+<p>Here x is declared within the function ’s scope of the function, so it doesn ’t exist in the user workspace. Now, let ’s run the same piece of code with using the &lt;- operator:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">10</span>) <span class="co"># [1] 5.5</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 5.5
 </code></pre>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">x</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x</code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1]  1  2  3  4  5  6  7  8  9 10
 </code></pre>
 <blockquote>
 <p>x # [1] 1 2 3 4 5 6 7 8 9 10</p>
 </blockquote>
-<p>This time the x variable is declared within the user workspace.
-When does the assignment take place ?
-In the code above, you may be tempted to thing that we “assign 1:10 to x, then calculate the mean.” This would be true for
-#languages such as C, but it isn ’t true in R. Consider the following function:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="dv">1</span></a>
-<a class="sourceLine" id="cb15-2" data-line-number="2">f &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="kw">return</span>(<span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb15-3" data-line-number="3">f &lt;-<span class="st"> </span><span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);</a>
-<a class="sourceLine" id="cb15-4" data-line-number="4"><span class="co"># 輸出:TRUE</span></a>
-<a class="sourceLine" id="cb15-5" data-line-number="5">a <span class="co"># 結果=1 </span></a></code></pre></div>
+<p>This time the x variable is declared within the user workspace. When does the assignment take place ? In the code above, you may be tempted to thing that we “assign 1:10 to x, then calculate the mean.” This would be true for #languages such as C, but it isn ’t true in R. Consider the following function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">1</span>
+f &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="kw">return</span>(<span class="ot">TRUE</span>)
+f &lt;-<span class="st"> </span><span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);
+<span class="co"># 輸出:TRUE</span>
+a <span class="co"># 結果=1 </span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 </code></pre>
-<p>Notice that the value of a hasn ’t changed!
-In R, the value of a will only change if we need to evaluate the argument in the function.
-This can lead to unpredictable behaviour:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">f &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="cf">if</span> (<span class="kw">runif</span>(<span class="dv">1</span>) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span>) <span class="ot">TRUE</span> <span class="cf">else</span> a</a>
-<a class="sourceLine" id="cb16-2" data-line-number="2">    <span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);</a>
-<a class="sourceLine" id="cb16-3" data-line-number="3">a <span class="co"># result 2</span></a></code></pre></div>
+<p>Notice that the value of a hasn ’t changed! In R, the value of a will only change if we need to evaluate the argument in the function. This can lead to unpredictable behaviour:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">f &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="cf">if</span> (<span class="kw">runif</span>(<span class="dv">1</span>) <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.5</span>) <span class="ot">TRUE</span> <span class="cf">else</span> a
+    <span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);
+a <span class="co"># result 2</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 </code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="co"># TRUE</span></a>
-<a class="sourceLine" id="cb18-2" data-line-number="2">a <span class="co"># 2</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># TRUE</span>
+a <span class="co"># 2</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 </code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">f</span>(a &lt;-<span class="st"> </span>a <span class="op">+</span><span class="st"> </span><span class="dv">1</span>);</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1">a <span class="co">#3</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a <span class="co">#3</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 </code></pre>
-<p>=用在參數指派
-例如</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">ncol =</span> <span class="dv">4</span>)</a></code></pre></div>
+<p>=用在參數指派 例如</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, <span class="dt">ncol =</span> <span class="dv">4</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>     [,1] [,2] [,3] [,4]
 [1,]    1    6   11   16
 [2,]    2    7   12   17
@@ -592,30 +579,29 @@ This can lead to unpredictable behaviour:</p>
 [5,]    5   10   15   20
 </code></pre>
 <p>如果</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, ncol &lt;-<span class="st"> </span><span class="dv">4</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">matrix</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>, ncol &lt;-<span class="st"> </span><span class="dv">4</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>     [,1] [,2] [,3] [,4] [,5]
 [1,]    1    5    9   13   17
 [2,]    2    6   10   14   18
 [3,]    3    7   11   15   19
 [4,]    4    8   12   16   20
 </code></pre>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">ncol</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ncol</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 4
 </code></pre>
-<p>會產生一個變數 ncol
-結論:x&lt;-3 &lt;-會在全局產生變數x然後指派3</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">(x &lt;-<span class="st"> </span><span class="dv">3</span>)</a></code></pre></div>
+<p>會產生一個變數 ncol 結論:x&lt;-3 &lt;-會在全局產生變數x然後指派3</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(x &lt;-<span class="st"> </span><span class="dv">3</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3
 </code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="co">#rm(list = ls())</span></a>
-<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="kw">rm</span>(x)</a>
-<a class="sourceLine" id="cb25-3" data-line-number="3"><span class="kw">ls</span>()</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#rm(list = ls())</span>
+<span class="kw">rm</span>(x)
+<span class="kw">ls</span>()</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a"    "f"    "m"    "ncol" "v"   
 </code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">(<span class="dt">x =</span> <span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">(<span class="dt">x =</span> <span class="dv">3</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3
 </code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">ls</span>()</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ls</span>()</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a"    "f"    "m"    "ncol" "v"    "x"   
 </code></pre>
 <p>因為x是參數名稱不是變數,看mean help</p>
@@ -651,7 +637,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
 "text": "Edit"
 },
-"download": ["rmi_copy_test.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }
@@ -664,7 +650,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

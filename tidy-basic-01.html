@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-01">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,66 +50,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  { background-color: #f8f8f8; }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ef2929; } /* Alert */
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
-code span.bn { color: #0000cf; } /* BaseN */
-code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
-code span.co { color: #8f5902; font-style: italic; } /* Comment */
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code span.dt { color: #204a87; } /* DataType */
-code span.dv { color: #0000cf; } /* DecVal */
-code span.er { color: #a40000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code span.ot { color: #8f5902; } /* Other */
-code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
-code span.ss { color: #4e9a06; } /* SpecialString */
-code span.st { color: #4e9a06; } /* String */
-code span.va { color: #000000; } /* Variable */
-code span.vs { color: #4e9a06; } /* VerbatimString */
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="adv-r.css" type="text/css" />
@@ -131,13 +106,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.1</b> quick view</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> 資料型態和內容</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#section-1.2.1"><i class="fa fa-check"></i><b>1.2.1</b> 編輯/瀏覽資料</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#section-1.2.2"><i class="fa fa-check"></i><b>1.2.2</b> 個別欄位</a></li>
-<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#section-1.2.3"><i class="fa fa-check"></i><b>1.2.3</b> 質性數據的分析</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 安裝軟體</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.2</b> quick view</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 資料型態和內容</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#section-1.3.1"><i class="fa fa-check"></i><b>1.3.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#section-1.3.2"><i class="fa fa-check"></i><b>1.3.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#section-1.3.3"><i class="fa fa-check"></i><b>1.3.3</b> 質性數據的分析</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.3</b> assignment</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.4</b> assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a><ul>
 <li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a><ul>
@@ -206,16 +182,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#attribute"><i class="fa fa-check"></i><b>3.1</b> attribute</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>4</b> File System</a><ul>
-<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>4.1</b> Exploring file system</a></li>
-<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.2</b> Creating of a directory</a></li>
-<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> R系統檔案列表</a></li>
-<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.4</b> 在R中建立檔案名稱</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.4.1</b> Note about Windows</a></li>
-<li class="chapter" data-level="4.4.2" data-path="file-system.html"><a href="file-system.html#section-4.4.2"><i class="fa fa-check"></i><b>4.4.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.1</b> Creating of a directory</a></li>
+<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.2</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> 在R中建立檔案名稱</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.3.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="4.3.2" data-path="file-system.html"><a href="file-system.html#section-4.3.2"><i class="fa fa-check"></i><b>4.3.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.3.3" data-path="file-system.html"><a href="file-system.html#section-4.3.3"><i class="fa fa-check"></i><b>4.3.3</b> 應用範例</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a></li>
-<li class="chapter" data-level="4.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.6</b> write csv</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.6.1</b> data.frame to CSV</a></li>
+<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 讀檔</a></li>
+<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.5</b> write csv</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.5.1</b> data.frame to CSV</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>5</b> Functions</a><ul>
@@ -302,7 +278,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>7.5</b> The call stack</a><ul>
 <li class="chapter" data-level="7.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>7.5.1</b> Simple call stacks</a></li>
-<li class="chapter" data-level="7.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
 <li class="chapter" data-level="7.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>7.5.3</b> Frames</a></li>
 <li class="chapter" data-level="7.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>7.5.4</b> Dynamic scope</a></li>
 <li class="chapter" data-level="7.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>7.5.5</b> Exercises</a></li>
@@ -333,8 +309,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.6" data-path="basic-plot.html"><a href="basic-plot.html#section-8.6"><i class="fa fa-check"></i><b>8.6</b> 函數畫圖</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>9</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.2</b> distribution</a></li>
+<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 　隨機抽樣</a></li>
+<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="9.3" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.3</b> distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>10</b> Tidy Basic 01</a><ul>
 <li class="chapter" data-level="10.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>10.1</b> long and wide data</a><ul>
@@ -359,27 +336,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>11.6</b> python</a></li>
 <li class="chapter" data-level="11.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>11.7</b> 產生PDF 文件</a><ul>
-<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.1</b> Overview</a></li>
-<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.2</b> LaTeX Packages for Citations</a></li>
+<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#pdf"><i class="fa fa-check"></i><b>11.7.1</b> 測試中文轉pdf</a></li>
+<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.2</b> Overview</a></li>
+<li class="chapter" data-level="11.7.3" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>11.7.3</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="11.7.4" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.4</b> LaTeX Packages for Citations</a></li>
 </ul></li>
-<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a><ul>
-<li class="chapter" data-level="11.8.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>11.8.1</b> LaTeX Engine</a></li>
-<li class="chapter" data-level="11.8.2" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>11.8.2</b> Custom Templates</a></li>
-<li class="chapter" data-level="11.8.3" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.8.3</b> Pandoc Arguments</a></li>
+<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a></li>
+<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>11.9</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="11.9.1" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.9.1</b> Pandoc Arguments</a></li>
 </ul></li>
-<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#section-11.9"><i class="fa fa-check"></i><b>11.9</b> 共用設定</a></li>
-<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 討論</a><ul>
-<li class="chapter" data-level="11.10.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.10.1</b> inline code</a></li>
+<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 共用設定</a></li>
+<li class="chapter" data-level="11.11" data-path="rbook-.html"><a href="rbook-.html#section-11.11"><i class="fa fa-check"></i><b>11.11</b> 討論</a><ul>
+<li class="chapter" data-level="11.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.11.1</b> inline code</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>12</b> gitbook introduction</a><ul>
 <li class="chapter" data-level="12.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>12.1</b> _output.yml:</a></li>
 <li class="chapter" data-level="12.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>12.2</b> _bookdown.yml:</a></li>
-<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>12.3</b> index.rmd</a></li>
-<li class="chapter" data-level="12.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-12.4"><i class="fa fa-check"></i><b>12.4</b> 執行</a></li>
-<li class="chapter" data-level="12.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.5</b> 加入:Travis</a><ul>
-<li class="chapter" data-level="12.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.5.1</b> .travis.yml:</a></li>
-<li class="chapter" data-level="12.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.5.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.3</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.3.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="12.3.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.3.2</b> DESCRIPTION</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -404,21 +380,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="tidy-basic-01" class="section level1">
 <h1><span class="header-section-number">Chapter 10</span> Tidy Basic 01</h1>
-<div class="sourceCode" id="cb566"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb566-1" data-line-number="1"><span class="kw">require</span>(tidyr)</a>
-<a class="sourceLine" id="cb566-2" data-line-number="2"><span class="kw">require</span>(dplyr) <span class="co"># data_frame</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(tidyr)
+<span class="kw">require</span>(dplyr) <span class="co"># data_frame</span></code></pre></div>
 <p>From <a href="http://stackoverflow.com/questions/1181060" class="uri">http://stackoverflow.com/questions/1181060</a></p>
-<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb567-1" data-line-number="1">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
-<a class="sourceLine" id="cb567-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
-<a class="sourceLine" id="cb567-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb567-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
-<a class="sourceLine" id="cb567-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb567-6" data-line-number="6">)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,
+  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),
+  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),
+  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)
+)</code></pre></div>
 <pre style="color: red;"><code>Warning: `list_len()` is soft-deprecated as of rlang 0.2.0.
 Please use `new_list()` instead
 This warning is displayed once per session.
 </code></pre>
-<div class="sourceCode" id="cb568"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb568-1" data-line-number="1">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
-<a class="sourceLine" id="cb568-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)
+knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -523,7 +499,7 @@ Z
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb569-1" data-line-number="1"><span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 30 x 3
    time       stock    price
    <date>     <chr>    <dbl>
@@ -539,7 +515,7 @@ Z
 10 2009-01-10 X     -0.283  
 # ... with 20 more rows
 </code></pre>
-<div class="sourceCode" id="cb570"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb570-1" data-line-number="1">stocks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(stock, price, <span class="op">-</span>time)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stocks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(stock, price, <span class="op">-</span>time)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 30 x 3
    time       stock    price
    <date>     <chr>    <dbl>
@@ -555,8 +531,8 @@ Z
 10 2009-01-10 X     -0.283  
 # ... with 20 more rows
 </code></pre>
-<div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb571-1" data-line-number="1">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
-<a class="sourceLine" id="cb571-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)
+knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -662,15 +638,15 @@ Z
 </tbody>
 </table>
 <p>設定css</p>
-<div class="sourceCode" id="cb572"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb572-1" data-line-number="1"><span class="kw">writeLines</span>(<span class="st">&quot;td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }&quot;</span>, <span class="dt">con =</span> <span class="st">&quot;tableStyle.css&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb573"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb573-1" data-line-number="1">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
-<a class="sourceLine" id="cb573-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
-<a class="sourceLine" id="cb573-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb573-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
-<a class="sourceLine" id="cb573-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb573-6" data-line-number="6">)</a>
-<a class="sourceLine" id="cb573-7" data-line-number="7">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
-<a class="sourceLine" id="cb573-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeLines</span>(<span class="st">&quot;td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }&quot;</span>, <span class="dt">con =</span> <span class="st">&quot;tableStyle.css&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,
+  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),
+  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),
+  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)
+)
+dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)
+knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -775,10 +751,10 @@ Z
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb574"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb574-1" data-line-number="1">demo&lt;-<span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)</a>
-<a class="sourceLine" id="cb574-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb574-3" data-line-number="3">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(demo)</a>
-<a class="sourceLine" id="cb574-4" data-line-number="4">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">demo&lt;-<span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)
+
+dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(demo)
+knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -866,15 +842,15 @@ X
 <h2><span class="header-section-number">10.1</span> long and wide data</h2>
 <div id="gather-wide-to-long" class="section level3">
 <h3><span class="header-section-number">10.1.1</span> gather: wide to long</h3>
-<div class="sourceCode" id="cb575"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb575-1" data-line-number="1">wide &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
-<a class="sourceLine" id="cb575-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
-<a class="sourceLine" id="cb575-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb575-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
-<a class="sourceLine" id="cb575-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb575-6" data-line-number="6">)</a>
-<a class="sourceLine" id="cb575-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb575-8" data-line-number="8">long &lt;-<span class="st"> </span><span class="kw">gather</span>(wide,stock,price,<span class="op">-</span>time)</a>
-<a class="sourceLine" id="cb575-9" data-line-number="9"><span class="kw">head</span>(long)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wide &lt;-<span class="st"> </span><span class="kw">data_frame</span>(
+  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,
+  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),
+  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),
+  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)
+)
+
+long &lt;-<span class="st"> </span><span class="kw">gather</span>(wide,stock,price,<span class="op">-</span>time)
+<span class="kw">head</span>(long)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 3
   time       stock  price
   <date>     <chr>  <dbl>
@@ -888,8 +864,8 @@ X
 </div>
 <div id="spread-long-to-wide" class="section level3">
 <h3><span class="header-section-number">10.1.2</span> spread :long to wide</h3>
-<div class="sourceCode" id="cb576"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb576-1" data-line-number="1">wide2 &lt;-<span class="kw">spread</span>(long,stock,price)</a>
-<a class="sourceLine" id="cb576-2" data-line-number="2"><span class="kw">head</span>(wide2)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">wide2 &lt;-<span class="kw">spread</span>(long,stock,price)
+<span class="kw">head</span>(wide2)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 4
   time            X      Y     Z
   <date>      <dbl>  <dbl> <dbl>
@@ -900,8 +876,7 @@ X
 5 2009-01-05 -1.18   2.64  -2.19
 6 2009-01-06 -0.976  1.05   4.44
 </code></pre>
-<p>更多參考:
-<a href="http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/">cookbook for R</a></p>
+<p>更多參考: <a href="http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/">cookbook for R</a></p>
 </div>
 </div>
 <div id="dplyr" class="section level2">
@@ -911,21 +886,21 @@ X
 <li><p>row_number 排序,如果數值一樣,則靠前出現的元素排名在前,例如(3,3) 則 1,2</p></li>
 <li><p>min_rank 排序,如果數值一樣,則都是同一等級，但是，佔用下一名次。例如</p></li>
 </ul>
-<div class="sourceCode" id="cb577"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb577-1" data-line-number="1">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  </a>
-<a class="sourceLine" id="cb577-2" data-line-number="2">data</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  
+data</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3 3 4
 </code></pre>
-<div class="sourceCode" id="cb578"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb578-1" data-line-number="1"><span class="kw">min_rank</span>(data)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min_rank</span>(data)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1 1 3
 </code></pre>
 <ul>
 <li>dense_rank 排序,如果數值一樣,則都是同一等級，但是，<code>不</code>佔用下一名次</li>
 </ul>
-<div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb579-1" data-line-number="1">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  </a>
-<a class="sourceLine" id="cb579-2" data-line-number="2">data</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  
+data</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3 3 4
 </code></pre>
-<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb580-1" data-line-number="1"><span class="kw">dense_rank</span>(data)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dense_rank</span>(data)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1 1 2
 </code></pre>
 <ul>
@@ -935,12 +910,12 @@ percent_rank = (min_rank(x) - 1)/(sum(!is.na(x)) - 1)<br />
 <li><p>cume_dist 累計分佈</p></li>
 <li><p>ntile : floor(n * (row_number(x) - 1)/len + 1)</p></li>
 </ul>
-<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb581-1" data-line-number="1">data&lt;-<span class="kw">round</span>(<span class="kw">runif</span>(<span class="dv">10</span>)<span class="op">*</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb581-2" data-line-number="2">pr&lt;-<span class="kw">percent_rank</span>(data)</a>
-<a class="sourceLine" id="cb581-3" data-line-number="3">cd&lt;-<span class="kw">cume_dist</span>(data)</a>
-<a class="sourceLine" id="cb581-4" data-line-number="4">mr&lt;-<span class="kw">min_rank</span>(data)</a>
-<a class="sourceLine" id="cb581-5" data-line-number="5">df&lt;-<span class="kw">data.frame</span>(data,pr,mr,cd)</a>
-<a class="sourceLine" id="cb581-6" data-line-number="6"><span class="kw">arrange</span>(df,data)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">round</span>(<span class="kw">runif</span>(<span class="dv">10</span>)<span class="op">*</span><span class="dv">10</span>)
+pr&lt;-<span class="kw">percent_rank</span>(data)
+cd&lt;-<span class="kw">cume_dist</span>(data)
+mr&lt;-<span class="kw">min_rank</span>(data)
+df&lt;-<span class="kw">data.frame</span>(data,pr,mr,cd)
+<span class="kw">arrange</span>(df,data)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>   data    pr mr  cd
 1     1 0.000  1 0.3
 2     1 0.000  1 0.3
@@ -956,6 +931,7 @@ percent_rank = (min_rank(x) - 1)/(sum(!is.na(x)) - 1)<br />
 <p>note:</p>
 <p>(2,3,3,3,3,4,5,6,6,9)</p>
 <table>
+<caption>:: sidebar</caption>
 <thead>
 <tr class="header">
 <th>1</th>
@@ -983,34 +959,29 @@ percent_rank = (min_rank(x) - 1)/(sum(!is.na(x)) - 1)<br />
 </tr>
 </tbody>
 </table>
-<div class="sidebar">
 <p>arrange(dataframe, col1, col2, col3)<br />
-<br />
-vs. dataframe[order(dataframe<span class="math inline">\(col1, dataframe\)</span>col2, dataframe$col3), ]<br />
-vs. with(dataframe, dataframe[order(col1, col2, col3), ])</p>
-</div>
-<div class="sidebar">
-<p>想要由大到小,例如分數等級</p>
-<div class="sourceCode" id="cb582"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb582-1" data-line-number="1">data</a></code></pre></div>
+vs.<br />
+dataframe[order(dataframe<span class="math inline">\(col1, dataframe\)</span>col2, dataframe$col3), ] vs.<br />
+with(dataframe, dataframe[order(col1, col2, col3), ])<br />
+:::</p>
+<p>::: sidebar 想要由大到小,例如分數等級</p>
+<p><code>r  data</code></p>
 <pre style="border: 1px grey dotted;"><code> [1] 7 1 9 1 9 1 5 2 7 2
  </code></pre>
-<div class="sourceCode" id="cb583"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb583-1" data-line-number="1"><span class="kw">row_number</span>(<span class="kw">desc</span>(data))</a></code></pre></div>
+<p><code>r  row_number(desc(data))</code></p>
 <pre style="border: 1px grey dotted;"><code> [1]  3  8  1  9  2 10  5  6  4  7
  </code></pre>
-</div>
-<div class="sidebar">
-<p>Percentile
-The nth percentile of an observation variable is the value that cuts off the first n percent of the data values when it is sorted in ascending order.</p>
-<p>Problem
-Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
-<div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb584-1" data-line-number="1">data&lt;-<span class="kw">runif</span>(<span class="dv">200</span>) </a>
-<a class="sourceLine" id="cb584-2" data-line-number="2"><span class="kw">quantile</span>(data, <span class="kw">c</span>(.<span class="dv">32</span>, <span class="fl">.57</span>, <span class="fl">.98</span>)) </a></code></pre></div>
-</div>
+<p>:::</p>
+<p>::: sidebar Percentile The nth percentile of an observation variable is the value that cuts off the first n percent of the data values when it is sorted in ascending order.</p>
+<p>Problem Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data&lt;-<span class="kw">runif</span>(<span class="dv">200</span>) 
+<span class="kw">quantile</span>(data, <span class="kw">c</span>(.<span class="dv">32</span>, .<span class="dv">57</span>, .<span class="dv">98</span>)) </code></pre></div>
+<p>:::</p>
 </div>
 <div id="other" class="section level2">
 <h2><span class="header-section-number">10.3</span> other</h2>
-<div class="sourceCode" id="cb585"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb585-1" data-line-number="1"><span class="kw">library</span>(babynames)</a>
-<a class="sourceLine" id="cb585-2" data-line-number="2">babynames</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(babynames)
+babynames</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 5
     year sex   name          n   prop
    <dbl> <chr> <chr>     <int>  <dbl>
@@ -1028,7 +999,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 </code></pre>
 <div id="basic-verbs" class="section level3">
 <h3><span class="header-section-number">10.3.1</span> Basic verbs</h3>
-<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb586-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>prop)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>prop)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 4
     year sex   name          n
    <dbl> <chr> <chr>     <int>
@@ -1044,7 +1015,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1880 F     Sarah      1288
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb587"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb587-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(year<span class="op">:</span>n)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(year<span class="op">:</span>n)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 4
     year sex   name          n
    <dbl> <chr> <chr>     <int>
@@ -1060,9 +1031,9 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1880 F     Sarah      1288
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb588-1" data-line-number="1"><span class="co"># starts_with(), ends_with(), contains()</span></a>
-<a class="sourceLine" id="cb588-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb588-3" data-line-number="3">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># starts_with(), ends_with(), contains()</span>
+
+babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 159 x 5
     year sex   name       n      prop
    <dbl> <chr> <chr>  <int>     <dbl>
@@ -1078,7 +1049,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1916 M     Hadley    14 0.0000152
 # ... with 149 more rows
 </code></pre>
-<div class="sourceCode" id="cb589"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb589-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">1900</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">1900</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 2,225 x 5
     year sex   name          n   prop
    <dbl> <chr> <chr>     <int>  <dbl>
@@ -1094,7 +1065,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1900 F     Lillian    3414 0.0107
 # ... with 2,215 more rows
 </code></pre>
-<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb590-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2013</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2013</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 19,203 x 5
     year sex   name          n    prop
    <dbl> <chr> <chr>     <int>   <dbl>
@@ -1110,11 +1081,11 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  2013 F     Elizabeth  9431 0.00491
 # ... with 19,193 more rows
 </code></pre>
-<div class="sourceCode" id="cb591"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb591-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb591-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(</a>
-<a class="sourceLine" id="cb591-3" data-line-number="3">    <span class="dt">first =</span> <span class="kw">tolower</span>(<span class="kw">substr</span>(name, <span class="dv">1</span>, <span class="dv">1</span>)),</a>
-<a class="sourceLine" id="cb591-4" data-line-number="4">    <span class="dt">last =</span> <span class="kw">substr</span>(name, <span class="kw">nchar</span>(name), <span class="kw">nchar</span>(name))</a>
-<a class="sourceLine" id="cb591-5" data-line-number="5">  )</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(
+    <span class="dt">first =</span> <span class="kw">tolower</span>(<span class="kw">substr</span>(name, <span class="dv">1</span>, <span class="dv">1</span>)),
+    <span class="dt">last =</span> <span class="kw">substr</span>(name, <span class="kw">nchar</span>(name), <span class="kw">nchar</span>(name))
+  )</code></pre></div>
 <pre style="color: red;"><code>Warning: The `printer` argument is soft-deprecated as of rlang 0.3.0.
 This warning is displayed once per session.
 </code></pre>
@@ -1133,8 +1104,8 @@ This warning is displayed once per session.
 10  1880 F     Sarah      1288 0.0132 s     h    
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb592-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb592-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(prop))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(prop))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 5
     year sex   name        n   prop
    <dbl> <chr> <chr>   <int>  <dbl>
@@ -1150,8 +1121,8 @@ This warning is displayed once per session.
 10  1885 M     John     8756 0.0755
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb593-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb593-2" data-line-number="2"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1 x 1
           n
       <int>
@@ -1161,7 +1132,7 @@ This warning is displayed once per session.
 <div id="group-by" class="section level3">
 <h3><span class="header-section-number">10.3.2</span> Group by</h3>
 <p>分組指令不會影響到原來的資料</p>
-<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb594-1" data-line-number="1"><span class="kw">head</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(mtcars)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>                   mpg cyl disp  hp drat   wt qsec vs am gear carb
 Mazda RX4         21.0   6  160 110 3.90 2.62 16.5  0  1    4    4
 Mazda RX4 Wag     21.0   6  160 110 3.90 2.88 17.0  0  1    4    4
@@ -1170,7 +1141,7 @@ Hornet 4 Drive    21.4   6  258 110 3.08 3.21 19.4  1  0    3    1
 Hornet Sportabout 18.7   8  360 175 3.15 3.44 17.0  0  0    3    2
 Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
 </code></pre>
-<div class="sourceCode" id="cb595"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb595-1" data-line-number="1"><span class="kw">str</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(mtcars)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>'data.frame':   32 obs. of  11 variables:
  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
@@ -1184,8 +1155,8 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
 </code></pre>
-<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb596-1" data-line-number="1">by_cyl &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(cyl)</a>
-<a class="sourceLine" id="cb596-2" data-line-number="2"><span class="kw">head</span>(by_cyl)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_cyl &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(cyl)
+<span class="kw">head</span>(by_cyl)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 11
 # Groups:   cyl [3]
     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
@@ -1197,7 +1168,7 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
 </code></pre>
-<div class="sourceCode" id="cb597"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb597-1" data-line-number="1"><span class="kw">str</span>(by_cyl)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(by_cyl)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>Classes 'grouped_df', 'tbl_df', 'tbl' and 'data.frame': 32 obs. of  11 variables:
  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
@@ -1224,10 +1195,10 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
   ..- attr(*, "drop")= logi TRUE
 </code></pre>
 <p>但是分組結果會影響其他dplyr指令的計算結果:</p>
-<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb598-1" data-line-number="1">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(</a>
-<a class="sourceLine" id="cb598-2" data-line-number="2">  <span class="dt">disp =</span> <span class="kw">mean</span>(disp),</a>
-<a class="sourceLine" id="cb598-3" data-line-number="3">  <span class="dt">hp =</span> <span class="kw">mean</span>(hp)</a>
-<a class="sourceLine" id="cb598-4" data-line-number="4">)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(
+  <span class="dt">disp =</span> <span class="kw">mean</span>(disp),
+  <span class="dt">hp =</span> <span class="kw">mean</span>(hp)
+)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 3 x 3
     cyl  disp    hp
   <dbl> <dbl> <dbl>
@@ -1235,7 +1206,7 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
 2     6  183. 122. 
 3     8  353. 209. 
 </code></pre>
-<div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb599-1" data-line-number="1">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(disp <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(disp))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(disp <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(disp))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 3 x 11
 # Groups:   cyl [3]
     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
@@ -1257,12 +1228,12 @@ n(): a count of the number of rows/observations in each group. This particular s
 <div id="-pipeline-vs-no-pipeline" class="section level4">
 <h4><span class="header-section-number">10.3.3.1</span> 實驗 pipeline vs no pipeline</h4>
 <p>產生資料</p>
-<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb600-1" data-line-number="1">year=<span class="kw">c</span>(<span class="dv">1990</span>,    <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>) </a>
-<a class="sourceLine" id="cb600-2" data-line-number="2">sex=<span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,  <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>)</a>
-<a class="sourceLine" id="cb600-3" data-line-number="3"><span class="co">#value=c(1, 2,  3,  4,  5,  1,  2,  3,  4,  5)</span></a>
-<a class="sourceLine" id="cb600-4" data-line-number="4">value=<span class="kw">c</span>(<span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>,  <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>,  <span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb600-5" data-line-number="5">df&lt;-<span class="kw">data.frame</span>(sex,year,value)</a>
-<a class="sourceLine" id="cb600-6" data-line-number="6"><span class="kw">head</span>(df)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">year=<span class="kw">c</span>(<span class="dv">1990</span>,    <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>) 
+sex=<span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,  <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>)
+<span class="co">#value=c(1, 2,  3,  4,  5,  1,  2,  3,  4,  5)</span>
+value=<span class="kw">c</span>(<span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>,  <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>,  <span class="dv">10</span>)
+df&lt;-<span class="kw">data.frame</span>(sex,year,value)
+<span class="kw">head</span>(df)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  sex year value
 1   f 1990     1
 2   f 1991     2
@@ -1274,9 +1245,9 @@ n(): a count of the number of rows/observations in each group. This particular s
 </div>
 <div id="-pipeline" class="section level4">
 <h4><span class="header-section-number">10.3.3.2</span> 不用 pipeline</h4>
-<div class="sourceCode" id="cb601"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb601-1" data-line-number="1">df&lt;-<span class="kw">group_by</span>(df,sex)</a>
-<a class="sourceLine" id="cb601-2" data-line-number="2">ndf&lt;-<span class="kw">mutate</span>(df,<span class="dt">rank=</span><span class="kw">min_rank</span>(value))</a>
-<a class="sourceLine" id="cb601-3" data-line-number="3"><span class="kw">arrange</span>(ndf,sex)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df&lt;-<span class="kw">group_by</span>(df,sex)
+ndf&lt;-<span class="kw">mutate</span>(df,<span class="dt">rank=</span><span class="kw">min_rank</span>(value))
+<span class="kw">arrange</span>(ndf,sex)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 10 x 4
 # Groups:   sex [2]
    sex    year value  rank
@@ -1295,11 +1266,11 @@ n(): a count of the number of rows/observations in each group. This particular s
 </div>
 <div id="-pipeline" class="section level4">
 <h4><span class="header-section-number">10.3.3.3</span> 使用 pipeline</h4>
-<div class="sourceCode" id="cb602"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb602-1" data-line-number="1">ndf&lt;-df <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb602-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb602-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(value)) </a>
-<a class="sourceLine" id="cb602-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb602-5" data-line-number="5"><span class="kw">arrange</span>(ndf,sex)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ndf&lt;-df <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(value)) 
+
+<span class="kw">arrange</span>(ndf,sex)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 10 x 4
 # Groups:   sex [2]
    sex    year value  rank
@@ -1315,17 +1286,13 @@ n(): a count of the number of rows/observations in each group. This particular s
  9 m      1990     9     4
 10 m      1991    10     5
 </code></pre>
-<p>問題:
-1. 如何知道min-rank(value)中的value 是全局或是欄位?
-hint: rm(value)
-2. 會出現甚麼結果</p>
-<p>df %&gt;%
-group_by(sex) %&gt;%str()</p>
-<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb603-1" data-line-number="1">nb &lt;-babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb603-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(name)</a></code></pre></div>
-<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb604-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb604-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(name) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb604-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<p>問題: 1. 如何知道min-rank(value)中的value 是全局或是欄位? hint: rm(value) 2. 會出現甚麼結果</p>
+<p>df %&gt;% group_by(sex) %&gt;%str()</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nb &lt;-babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(name)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(name) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 95,025 x 2
    name          n
    <chr>     <int>
@@ -1341,10 +1308,10 @@ group_by(sex) %&gt;%str()</p>
 10 Aadesh       15
 # ... with 95,015 more rows
 </code></pre>
-<div class="sourceCode" id="cb605"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb605-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb605-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Mary&quot;</span>, <span class="st">&quot;William&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb605-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(name, sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb605-4" data-line-number="4"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(name <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Mary&quot;</span>, <span class="st">&quot;William&quot;</span>)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(name, sex) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 3
 # Groups:   name [?]
   name    sex         n
@@ -1356,10 +1323,10 @@ group_by(sex) %&gt;%str()</p>
 5 William F       15911
 6 William M     4071645
 </code></pre>
-<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb606-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb606-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(year, sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb606-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(<span class="kw">desc</span>(n))) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb606-4" data-line-number="4"><span class="st">  </span><span class="kw">tail</span>()</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(year, sex) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(<span class="kw">desc</span>(n))) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">tail</span>()</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 6
 # Groups:   year, sex [1]
    year sex   name       n       prop  rank
@@ -1376,10 +1343,10 @@ group_by(sex) %&gt;%str()</p>
 <h4><span class="header-section-number">10.3.3.4</span> Combining to answer more complex questions ———————————–</h4>
 <div id="how-many-hadleys" class="section level5">
 <h5><span class="header-section-number">10.3.3.4.1</span> How many Hadley’s?</h5>
-<div class="sourceCode" id="cb607"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb607-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb607-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb607-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb607-4" data-line-number="4"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 2 x 2
   sex       n
   <chr> <int>
@@ -1389,12 +1356,12 @@ group_by(sex) %&gt;%str()</p>
 </div>
 <div id="the-travesty" class="section level5">
 <h5><span class="header-section-number">10.3.3.4.2</span> The travesty</h5>
-<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb608-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb608-2" data-line-number="2">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb608-3" data-line-number="3"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb608-4" data-line-number="4"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, n)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb608-5" data-line-number="5"><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> sex))</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-415-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+babynames <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, n)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> sex))</code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-417-1.png" width="70%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
@@ -1430,7 +1397,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown-demo/edit/master/TidyBasic01.Rmd",
 "text": "Edit"
 },
-"download": ["rmi_copy_test.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }
@@ -1443,7 +1410,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

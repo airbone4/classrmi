@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-01">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,66 +50,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  { background-color: #f8f8f8; }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ef2929; } /* Alert */
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
-code span.bn { color: #0000cf; } /* BaseN */
-code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
-code span.co { color: #8f5902; font-style: italic; } /* Comment */
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code span.dt { color: #204a87; } /* DataType */
-code span.dv { color: #0000cf; } /* DecVal */
-code span.er { color: #a40000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code span.ot { color: #8f5902; } /* Other */
-code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
-code span.ss { color: #4e9a06; } /* SpecialString */
-code span.st { color: #4e9a06; } /* String */
-code span.va { color: #000000; } /* Variable */
-code span.vs { color: #4e9a06; } /* VerbatimString */
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="adv-r.css" type="text/css" />
@@ -131,13 +106,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.1</b> quick view</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> 資料型態和內容</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#section-1.2.1"><i class="fa fa-check"></i><b>1.2.1</b> 編輯/瀏覽資料</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#section-1.2.2"><i class="fa fa-check"></i><b>1.2.2</b> 個別欄位</a></li>
-<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#section-1.2.3"><i class="fa fa-check"></i><b>1.2.3</b> 質性數據的分析</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 安裝軟體</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.2</b> quick view</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 資料型態和內容</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#section-1.3.1"><i class="fa fa-check"></i><b>1.3.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#section-1.3.2"><i class="fa fa-check"></i><b>1.3.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#section-1.3.3"><i class="fa fa-check"></i><b>1.3.3</b> 質性數據的分析</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.3</b> assignment</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.4</b> assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a><ul>
 <li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a><ul>
@@ -206,16 +182,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#attribute"><i class="fa fa-check"></i><b>3.1</b> attribute</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>4</b> File System</a><ul>
-<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>4.1</b> Exploring file system</a></li>
-<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.2</b> Creating of a directory</a></li>
-<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> R系統檔案列表</a></li>
-<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.4</b> 在R中建立檔案名稱</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.4.1</b> Note about Windows</a></li>
-<li class="chapter" data-level="4.4.2" data-path="file-system.html"><a href="file-system.html#section-4.4.2"><i class="fa fa-check"></i><b>4.4.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.1</b> Creating of a directory</a></li>
+<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.2</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> 在R中建立檔案名稱</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.3.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="4.3.2" data-path="file-system.html"><a href="file-system.html#section-4.3.2"><i class="fa fa-check"></i><b>4.3.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.3.3" data-path="file-system.html"><a href="file-system.html#section-4.3.3"><i class="fa fa-check"></i><b>4.3.3</b> 應用範例</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a></li>
-<li class="chapter" data-level="4.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.6</b> write csv</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.6.1</b> data.frame to CSV</a></li>
+<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 讀檔</a></li>
+<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.5</b> write csv</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.5.1</b> data.frame to CSV</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>5</b> Functions</a><ul>
@@ -302,7 +278,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>7.5</b> The call stack</a><ul>
 <li class="chapter" data-level="7.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>7.5.1</b> Simple call stacks</a></li>
-<li class="chapter" data-level="7.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
 <li class="chapter" data-level="7.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>7.5.3</b> Frames</a></li>
 <li class="chapter" data-level="7.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>7.5.4</b> Dynamic scope</a></li>
 <li class="chapter" data-level="7.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>7.5.5</b> Exercises</a></li>
@@ -333,8 +309,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.6" data-path="basic-plot.html"><a href="basic-plot.html#section-8.6"><i class="fa fa-check"></i><b>8.6</b> 函數畫圖</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>9</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.2</b> distribution</a></li>
+<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 　隨機抽樣</a></li>
+<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="9.3" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.3</b> distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>10</b> Tidy Basic 01</a><ul>
 <li class="chapter" data-level="10.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>10.1</b> long and wide data</a><ul>
@@ -359,27 +336,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>11.6</b> python</a></li>
 <li class="chapter" data-level="11.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>11.7</b> 產生PDF 文件</a><ul>
-<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.1</b> Overview</a></li>
-<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.2</b> LaTeX Packages for Citations</a></li>
+<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#pdf"><i class="fa fa-check"></i><b>11.7.1</b> 測試中文轉pdf</a></li>
+<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.2</b> Overview</a></li>
+<li class="chapter" data-level="11.7.3" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>11.7.3</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="11.7.4" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.4</b> LaTeX Packages for Citations</a></li>
 </ul></li>
-<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a><ul>
-<li class="chapter" data-level="11.8.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>11.8.1</b> LaTeX Engine</a></li>
-<li class="chapter" data-level="11.8.2" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>11.8.2</b> Custom Templates</a></li>
-<li class="chapter" data-level="11.8.3" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.8.3</b> Pandoc Arguments</a></li>
+<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a></li>
+<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>11.9</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="11.9.1" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.9.1</b> Pandoc Arguments</a></li>
 </ul></li>
-<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#section-11.9"><i class="fa fa-check"></i><b>11.9</b> 共用設定</a></li>
-<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 討論</a><ul>
-<li class="chapter" data-level="11.10.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.10.1</b> inline code</a></li>
+<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 共用設定</a></li>
+<li class="chapter" data-level="11.11" data-path="rbook-.html"><a href="rbook-.html#section-11.11"><i class="fa fa-check"></i><b>11.11</b> 討論</a><ul>
+<li class="chapter" data-level="11.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.11.1</b> inline code</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>12</b> gitbook introduction</a><ul>
 <li class="chapter" data-level="12.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>12.1</b> _output.yml:</a></li>
 <li class="chapter" data-level="12.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>12.2</b> _bookdown.yml:</a></li>
-<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>12.3</b> index.rmd</a></li>
-<li class="chapter" data-level="12.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-12.4"><i class="fa fa-check"></i><b>12.4</b> 執行</a></li>
-<li class="chapter" data-level="12.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.5</b> 加入:Travis</a><ul>
-<li class="chapter" data-level="12.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.5.1</b> .travis.yml:</a></li>
-<li class="chapter" data-level="12.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.5.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.3</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.3.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="12.3.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.3.2</b> DESCRIPTION</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -404,43 +380,40 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="sample-and-distribution-01" class="section level1">
 <h1><span class="header-section-number">Chapter 9</span> Sample and Distribution 01</h1>
-<p>##　隨機抽樣
-函數sample(x,n,replace=FALSE ).
-其中x為要抽取的向量, n為樣本容量. replace 預設為false</p>
+<div id="section-9.1" class="section level2">
+<h2><span class="header-section-number">9.1</span> 　隨機抽樣</h2>
+<p>函數sample(x,n,replace=FALSE ). 其中x為要抽取的向量, n為樣本容量. replace 預設為false</p>
 <ol style="list-style-type: decimal">
 <li>no replacement, 等機率:</li>
 </ol>
 <p>例如從52張撲克牌中抽取5張:</p>
-<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb558-1" data-line-number="1"><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">52</span>, <span class="dv">5</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">52</span>, <span class="dv">5</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1]  5 43 31  8  1
 </code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>replacement:
-例如拋一枚均勻的硬幣10次</li>
+<li>replacement: 例如拋一枚均勻的硬幣10次</li>
 </ol>
-<div class="sourceCode" id="cb559"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb559-1" data-line-number="1"> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;H&quot;</span>, <span class="st">&quot;T&quot;</span>), <span class="dv">10</span>, <span class="dt">replace=</span>T)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"> <span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;H&quot;</span>, <span class="st">&quot;T&quot;</span>), <span class="dv">10</span>, <span class="dt">replace=</span>T)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1] "H" "H" "H" "T" "T" "T" "H" "H" "H" "H"
 </code></pre>
 <p>練習:一棵骰子擲10次可表示為:</p>
 <ol start="3" style="list-style-type: decimal">
-<li>不等可能的隨機抽樣:
-sample(x, n, replace=TRUE, prob=y)
-prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機取出成功的概率為0.6, 那麼10次的試驗為:</li>
+<li>不等可能的隨機抽樣: sample(x, n, replace=TRUE, prob=y) prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機取出成功的概率為0.6, 那麼10次的試驗為:</li>
 </ol>
-<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb560-1" data-line-number="1"><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;sucess&quot;</span>, <span class="st">&quot;fail&quot;</span>), <span class="dv">10</span>, <span class="dt">replace=</span>T, <span class="dt">prob=</span><span class="kw">c</span>(<span class="fl">0.6</span>,<span class="fl">0.4</span>))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;sucess&quot;</span>, <span class="st">&quot;fail&quot;</span>), <span class="dv">10</span>, <span class="dt">replace=</span>T, <span class="dt">prob=</span><span class="kw">c</span>(<span class="fl">0.6</span>,<span class="fl">0.4</span>))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1] "fail"   "sucess" "sucess" "fail"   "fail"   "sucess" "sucess"
  [8] "sucess" "fail"   "sucess"
 </code></pre>
-<div id="section-9.1" class="section level2">
-<h2><span class="header-section-number">9.1</span> 排列組合與概率的計算</h2>
+</div>
+<div id="section-9.2" class="section level2">
+<h2><span class="header-section-number">9.2</span> 排列組合與概率的計算</h2>
 <p>例 從一副52張撲克中取4張, 求以下事件的概率:<br />
 1. 抽取的4張依次為紅心A，方塊A，黑桃A和梅花A的概率;<br />
 2. 一次抽取4張為紅心A，方塊A，黑桃A和梅花A的概率.</p>
 <p>his summation expression <span class="math inline">\(\sum_{i=1}^n X_i\)</span> appears inline.</p>
 <p>解<br />
-1) 抽取的4張是有次序的, 因此使用排列來求解. 所求的事件(記為A)概率為 <span class="math inline">\(P(A)=\frac{1}{52 \times 51 \times 50 \times 49}\)</span>
-利用R函數</p>
-<div class="sourceCode" id="cb561"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb561-1" data-line-number="1"><span class="dv">1</span><span class="op">/</span><span class="kw">prod</span>(<span class="dv">52</span><span class="op">:</span><span class="dv">49</span>)</a></code></pre></div>
+1) 抽取的4張是有次序的, 因此使用排列來求解. 所求的事件(記為A)概率為 <span class="math inline">\(P(A)=\frac{1}{52 \times 51 \times 50 \times 49}\)</span> 利用R函數</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">/</span><span class="kw">prod</span>(<span class="dv">52</span><span class="op">:</span><span class="dv">49</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1.54e-07
 </code></pre>
 <ol start="2" style="list-style-type: decimal">
@@ -448,12 +421,12 @@ prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機�
 </ol>
 <p><span class="math display">\[ P(B)=\frac{1}{(52,4)} \]</span></p>
 <p>其中 <span class="math inline">\((n,m)=\frac{n!}{m!(n-m)!}\)</span>,可以利用函數choose(),例如</p>
-<div class="sourceCode" id="cb562"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb562-1" data-line-number="1"><span class="dv">1</span><span class="op">/</span><span class="kw">choose</span>(<span class="dv">52</span>,<span class="dv">4</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">/</span><span class="kw">choose</span>(<span class="dv">52</span>,<span class="dv">4</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3.69e-06
 </code></pre>
 </div>
 <div id="distribution" class="section level2">
-<h2><span class="header-section-number">9.2</span> distribution</h2>
+<h2><span class="header-section-number">9.3</span> distribution</h2>
 <p>標準表格上下沒有線條,左右有</p>
 <table>
 <thead>
@@ -573,60 +546,54 @@ prob=y指定x中元素出現的概率, 向量y與x等長度. 例如一娃娃機�
 1. 「q」分位數函數: qfunc(p, p1, p2, …), p為由概率構成的向量;<br />
 1. 「r」隨機數函數: rfunc(n, p1, p2, …), n為生成數據的個數</p>
 <p>這四類函數的第一個參數是有規律的: 形為dfunc的函數為x，pfunc的函數為q，qfunc的函數為p，rfunc的函數為n</p>
-<p>note:
-(但rhyper和rwilcox是特例，他們的第一個參數為nn).
-非中心參數(non-centrality parameter)僅對CDF和
-少數其它幾個函數有效.</p>
+<p>note: (但rhyper和rwilcox是特例，他們的第一個參數為nn). 非中心參數(non-centrality parameter)僅對CDF和 少數其它幾個函數有效.</p>
 <p><span class="math display">\[ \frac{{\sum\limits_{i = 1}^n {{x_i} - n\mu } }}{{\sqrt {n{\sigma ^2}} }} \sim  N(0,1) \]</span></p>
 <p><span class="math display">\[ \bar X = \frac{{\sum_{i = 1}^n {{x_i} } }}{n} \sim  N(\mu, \sigma^2/n) \]</span></p>
-<p>uniform a~b
-<span class="math display">\[\mu = (a+b)/2\]</span>
-<span class="math display">\[\sigma^2=\frac{(b-a)^2}{12} \]</span>
-data的每一個ROW有sample size (=i=column)<br />
+<p>uniform a~b <span class="math display">\[\mu = (a+b)/2\]</span> <span class="math display">\[\sigma^2=\frac{(b-a)^2}{12} \]</span> data的每一個ROW有sample size (=i=column)<br />
 共1000次(=N=row)</p>
-<div class="sourceCode" id="cb563"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb563-1" data-line-number="1">N=<span class="dv">1000</span> </a>
-<a class="sourceLine" id="cb563-2" data-line-number="2">i=<span class="dv">3</span> <span class="co">#sample size</span></a>
-<a class="sourceLine" id="cb563-3" data-line-number="3">mu=<span class="fl">0.5</span></a>
-<a class="sourceLine" id="cb563-4" data-line-number="4">sigma=<span class="dv">1</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">12</span>)</a>
-<a class="sourceLine" id="cb563-5" data-line-number="5">data&lt;-<span class="kw">matrix</span>(<span class="kw">runif</span>(i<span class="op">*</span>N),<span class="dt">ncol=</span>i)</a>
-<a class="sourceLine" id="cb563-6" data-line-number="6">rs&lt;-<span class="kw">rowSums</span>(data)</a>
-<a class="sourceLine" id="cb563-7" data-line-number="7">rs&lt;-rs<span class="op">/</span>i</a>
-<a class="sourceLine" id="cb563-8" data-line-number="8">z&lt;-(rs<span class="op">-</span>mu)<span class="op">/</span>(sigma<span class="op">/</span><span class="kw">sqrt</span>(i))</a>
-<a class="sourceLine" id="cb563-9" data-line-number="9"><span class="kw">hist</span>(z)</a>
-<a class="sourceLine" id="cb563-10" data-line-number="10"><span class="kw">lines</span>(<span class="kw">density</span>(z), <span class="dt">col =</span> <span class="st">&#39;red&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb563-11" data-line-number="11">x&lt;-z</a>
-<a class="sourceLine" id="cb563-12" data-line-number="12"><span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">col =</span> <span class="st">&#39;blue&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="dv">3</span>, <span class="dt">add =</span> T)</a>
-<a class="sourceLine" id="cb563-13" data-line-number="13"><span class="kw">rug</span>(<span class="kw">sample</span>(z,<span class="dv">100</span>))</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-389-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb564-1" data-line-number="1">limite.central &lt;-</a>
-<a class="sourceLine" id="cb564-2" data-line-number="2"><span class="st">  </span><span class="cf">function</span> (<span class="dt">r =</span> runif, <span class="dt">distpar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="dt">m =</span> <span class="fl">.5</span>, <span class="dt">s =</span> <span class="dv">1</span> <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">12</span>), <span class="dt">n =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>), <span class="dt">N =</span> <span class="dv">1000</span>) {</a>
-<a class="sourceLine" id="cb564-3" data-line-number="3">    <span class="cf">for</span> (i <span class="cf">in</span> n) {</a>
-<a class="sourceLine" id="cb564-4" data-line-number="4">      <span class="cf">if</span> (<span class="kw">length</span>(distpar) <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) {</a>
-<a class="sourceLine" id="cb564-5" data-line-number="5">        x &lt;-<span class="kw">matrix</span>(<span class="kw">r</span>(i <span class="op">*</span><span class="st"> </span>N, distpar[<span class="dv">1</span>], distpar[<span class="dv">2</span>]), <span class="dt">nc =</span> i)</a>
-<a class="sourceLine" id="cb564-6" data-line-number="6">      } <span class="cf">else</span> {</a>
-<a class="sourceLine" id="cb564-7" data-line-number="7">        x &lt;-<span class="kw">matrix</span>(<span class="kw">r</span>(i <span class="op">*</span><span class="st"> </span>N, distpar), <span class="dt">nc =</span> i)</a>
-<a class="sourceLine" id="cb564-8" data-line-number="8">      }</a>
-<a class="sourceLine" id="cb564-9" data-line-number="9">      x &lt;-(<span class="kw">apply</span>(x, <span class="dv">1</span>, sum) <span class="op">-</span><span class="st"> </span>i <span class="op">*</span><span class="st"> </span>m) <span class="op">/</span><span class="st"> </span>(<span class="kw">sqrt</span>(i) <span class="op">*</span><span class="st"> </span>s)</a>
-<a class="sourceLine" id="cb564-10" data-line-number="10">      <span class="kw">hist</span>(x, <span class="dt">col =</span> <span class="st">&#39;light blue&#39;</span>, <span class="dt">probability =</span> T, <span class="dt">main =</span> <span class="kw">paste</span>(<span class="st">&quot;n=&quot;</span>, i),</a>
-<a class="sourceLine" id="cb564-11" data-line-number="11">        <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="kw">max</span>(.<span class="dv">4</span>, <span class="kw">density</span>(x) <span class="op">$</span>y)))</a>
-<a class="sourceLine" id="cb564-12" data-line-number="12">      <span class="kw">lines</span>(<span class="kw">density</span>(x), <span class="dt">col =</span> <span class="st">&#39;red&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb564-13" data-line-number="13">      <span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">col =</span> <span class="st">&#39;blue&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="dv">3</span>, <span class="dt">add =</span> T)</a>
-<a class="sourceLine" id="cb564-14" data-line-number="14">      <span class="cf">if</span> (N <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span>) {</a>
-<a class="sourceLine" id="cb564-15" data-line-number="15">        <span class="kw">rug</span>(<span class="kw">sample</span>(x, <span class="dv">100</span>))</a>
-<a class="sourceLine" id="cb564-16" data-line-number="16">      } <span class="cf">else</span> {</a>
-<a class="sourceLine" id="cb564-17" data-line-number="17">        <span class="kw">rug</span>(x)</a>
-<a class="sourceLine" id="cb564-18" data-line-number="18">      }</a>
-<a class="sourceLine" id="cb564-19" data-line-number="19">    }</a>
-<a class="sourceLine" id="cb564-20" data-line-number="20">  }</a>
-<a class="sourceLine" id="cb564-21" data-line-number="21">op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
-<a class="sourceLine" id="cb564-22" data-line-number="22"><span class="kw">limite.central</span>(rbinom, <span class="dt">distpar=</span><span class="kw">c</span>(<span class="dv">10</span> ,<span class="fl">0.1</span>), <span class="dt">m=</span><span class="dv">1</span>, <span class="dt">s=</span><span class="fl">0.9</span>)</a>
-<a class="sourceLine" id="cb564-23" data-line-number="23"><span class="kw">par</span>(op)</a></code></pre></div>
-<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-390-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">N=<span class="dv">1000</span> 
+i=<span class="dv">3</span> <span class="co">#sample size</span>
+mu=<span class="fl">0.5</span>
+sigma=<span class="dv">1</span><span class="op">/</span><span class="kw">sqrt</span>(<span class="dv">12</span>)
+data&lt;-<span class="kw">matrix</span>(<span class="kw">runif</span>(i<span class="op">*</span>N),<span class="dt">ncol=</span>i)
+rs&lt;-<span class="kw">rowSums</span>(data)
+rs&lt;-rs<span class="op">/</span>i
+z&lt;-(rs<span class="op">-</span>mu)<span class="op">/</span>(sigma<span class="op">/</span><span class="kw">sqrt</span>(i))
+<span class="kw">hist</span>(z)
+<span class="kw">lines</span>(<span class="kw">density</span>(z), <span class="dt">col =</span> <span class="st">&#39;red&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)
+x&lt;-z
+<span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">col =</span> <span class="st">&#39;blue&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="dv">3</span>, <span class="dt">add =</span> T)
+<span class="kw">rug</span>(<span class="kw">sample</span>(z,<span class="dv">100</span>))</code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-391-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">limite.central &lt;-
+<span class="st">  </span><span class="cf">function</span> (<span class="dt">r =</span> runif, <span class="dt">distpar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="dt">m =</span> .<span class="dv">5</span>, <span class="dt">s =</span> <span class="dv">1</span> <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">12</span>), <span class="dt">n =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>), <span class="dt">N =</span> <span class="dv">1000</span>) {
+    <span class="cf">for</span> (i <span class="cf">in</span> n) {
+      <span class="cf">if</span> (<span class="kw">length</span>(distpar) <span class="op">==</span><span class="st"> </span><span class="dv">2</span>) {
+        x &lt;-<span class="kw">matrix</span>(<span class="kw">r</span>(i <span class="op">*</span><span class="st"> </span>N, distpar[<span class="dv">1</span>], distpar[<span class="dv">2</span>]), <span class="dt">nc =</span> i)
+      } <span class="cf">else</span> {
+        x &lt;-<span class="kw">matrix</span>(<span class="kw">r</span>(i <span class="op">*</span><span class="st"> </span>N, distpar), <span class="dt">nc =</span> i)
+      }
+      x &lt;-(<span class="kw">apply</span>(x, <span class="dv">1</span>, sum) <span class="op">-</span><span class="st"> </span>i <span class="op">*</span><span class="st"> </span>m) <span class="op">/</span><span class="st"> </span>(<span class="kw">sqrt</span>(i) <span class="op">*</span><span class="st"> </span>s)
+      <span class="kw">hist</span>(x, <span class="dt">col =</span> <span class="st">&#39;light blue&#39;</span>, <span class="dt">probability =</span> T, <span class="dt">main =</span> <span class="kw">paste</span>(<span class="st">&quot;n=&quot;</span>, i),
+        <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="kw">max</span>(.<span class="dv">4</span>, <span class="kw">density</span>(x) <span class="op">$</span>y)))
+      <span class="kw">lines</span>(<span class="kw">density</span>(x), <span class="dt">col =</span> <span class="st">&#39;red&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>)
+      <span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">col =</span> <span class="st">&#39;blue&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="dv">3</span>, <span class="dt">add =</span> T)
+      <span class="cf">if</span> (N <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span>) {
+        <span class="kw">rug</span>(<span class="kw">sample</span>(x, <span class="dv">100</span>))
+      } <span class="cf">else</span> {
+        <span class="kw">rug</span>(x)
+      }
+    }
+  }
+op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))
+<span class="kw">limite.central</span>(rbinom, <span class="dt">distpar=</span><span class="kw">c</span>(<span class="dv">10</span> ,<span class="fl">0.1</span>), <span class="dt">m=</span><span class="dv">1</span>, <span class="dt">s=</span><span class="fl">0.9</span>)
+<span class="kw">par</span>(op)</code></pre></div>
+<p><img src="rmi_copy_test_files/figure-html/unnamed-chunk-392-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>apply(x,1,sum) 第2個參數1表示row 方向,如果是2表示column 和matlab 相反。</li>
 </ul>
 
-<div class="sourceCode" id="cb565"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb565-1" data-line-number="1">需要安裝babynames,ggplot2</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">需要安裝babynames,ggplot2</code></pre></div>
 </div>
 </div>
             </section>
@@ -658,7 +625,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown-demo/edit/master/Sampling.Rmd",
 "text": "Edit"
 },
-"download": ["rmi_copy_test.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }
@@ -671,7 +638,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');

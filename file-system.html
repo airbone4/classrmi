@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-01">
+<meta name="date" content="2018-11-07">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,66 +50,41 @@
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  { background-color: #f8f8f8; }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ef2929; } /* Alert */
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
-code span.bn { color: #0000cf; } /* BaseN */
-code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
-code span.co { color: #8f5902; font-style: italic; } /* Comment */
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code span.dt { color: #204a87; } /* DataType */
-code span.dv { color: #0000cf; } /* DecVal */
-code span.er { color: #a40000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code span.ot { color: #8f5902; } /* Other */
-code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
-code span.ss { color: #4e9a06; } /* SpecialString */
-code span.st { color: #4e9a06; } /* String */
-code span.va { color: #000000; } /* Variable */
-code span.vs { color: #4e9a06; } /* VerbatimString */
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="adv-r.css" type="text/css" />
@@ -131,13 +106,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.1</b> quick view</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> 資料型態和內容</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#section-1.2.1"><i class="fa fa-check"></i><b>1.2.1</b> 編輯/瀏覽資料</a></li>
-<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#section-1.2.2"><i class="fa fa-check"></i><b>1.2.2</b> 個別欄位</a></li>
-<li class="chapter" data-level="1.2.3" data-path="index.html"><a href="index.html#section-1.2.3"><i class="fa fa-check"></i><b>1.2.3</b> 質性數據的分析</a></li>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 安裝軟體</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.2</b> quick view</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 資料型態和內容</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#section-1.3.1"><i class="fa fa-check"></i><b>1.3.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#section-1.3.2"><i class="fa fa-check"></i><b>1.3.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#section-1.3.3"><i class="fa fa-check"></i><b>1.3.3</b> 質性數據的分析</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.3</b> assignment</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.4</b> assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a><ul>
 <li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a><ul>
@@ -206,16 +182,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#attribute"><i class="fa fa-check"></i><b>3.1</b> attribute</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>4</b> File System</a><ul>
-<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>4.1</b> Exploring file system</a></li>
-<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.2</b> Creating of a directory</a></li>
-<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> R系統檔案列表</a></li>
-<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.4</b> 在R中建立檔案名稱</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.4.1</b> Note about Windows</a></li>
-<li class="chapter" data-level="4.4.2" data-path="file-system.html"><a href="file-system.html#section-4.4.2"><i class="fa fa-check"></i><b>4.4.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.1</b> Creating of a directory</a></li>
+<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.2</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> 在R中建立檔案名稱</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.3.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="4.3.2" data-path="file-system.html"><a href="file-system.html#section-4.3.2"><i class="fa fa-check"></i><b>4.3.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4.3.3" data-path="file-system.html"><a href="file-system.html#section-4.3.3"><i class="fa fa-check"></i><b>4.3.3</b> 應用範例</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a></li>
-<li class="chapter" data-level="4.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.6</b> write csv</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.6.1</b> data.frame to CSV</a></li>
+<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 讀檔</a></li>
+<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.5</b> write csv</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.5.1</b> data.frame to CSV</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>5</b> Functions</a><ul>
@@ -302,7 +278,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>7.5</b> The call stack</a><ul>
 <li class="chapter" data-level="7.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>7.5.1</b> Simple call stacks</a></li>
-<li class="chapter" data-level="7.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
 <li class="chapter" data-level="7.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>7.5.3</b> Frames</a></li>
 <li class="chapter" data-level="7.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>7.5.4</b> Dynamic scope</a></li>
 <li class="chapter" data-level="7.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>7.5.5</b> Exercises</a></li>
@@ -333,8 +309,9 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.6" data-path="basic-plot.html"><a href="basic-plot.html#section-8.6"><i class="fa fa-check"></i><b>8.6</b> 函數畫圖</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>9</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.2</b> distribution</a></li>
+<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 　隨機抽樣</a></li>
+<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="9.3" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.3</b> distribution</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>10</b> Tidy Basic 01</a><ul>
 <li class="chapter" data-level="10.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>10.1</b> long and wide data</a><ul>
@@ -359,27 +336,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>11.6</b> python</a></li>
 <li class="chapter" data-level="11.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>11.7</b> 產生PDF 文件</a><ul>
-<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.1</b> Overview</a></li>
-<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.2</b> LaTeX Packages for Citations</a></li>
+<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#pdf"><i class="fa fa-check"></i><b>11.7.1</b> 測試中文轉pdf</a></li>
+<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.2</b> Overview</a></li>
+<li class="chapter" data-level="11.7.3" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>11.7.3</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="11.7.4" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.4</b> LaTeX Packages for Citations</a></li>
 </ul></li>
-<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a><ul>
-<li class="chapter" data-level="11.8.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>11.8.1</b> LaTeX Engine</a></li>
-<li class="chapter" data-level="11.8.2" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>11.8.2</b> Custom Templates</a></li>
-<li class="chapter" data-level="11.8.3" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.8.3</b> Pandoc Arguments</a></li>
+<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a></li>
+<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>11.9</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="11.9.1" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.9.1</b> Pandoc Arguments</a></li>
 </ul></li>
-<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#section-11.9"><i class="fa fa-check"></i><b>11.9</b> 共用設定</a></li>
-<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 討論</a><ul>
-<li class="chapter" data-level="11.10.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.10.1</b> inline code</a></li>
+<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 共用設定</a></li>
+<li class="chapter" data-level="11.11" data-path="rbook-.html"><a href="rbook-.html#section-11.11"><i class="fa fa-check"></i><b>11.11</b> 討論</a><ul>
+<li class="chapter" data-level="11.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.11.1</b> inline code</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>12</b> gitbook introduction</a><ul>
 <li class="chapter" data-level="12.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>12.1</b> _output.yml:</a></li>
 <li class="chapter" data-level="12.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>12.2</b> _bookdown.yml:</a></li>
-<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>12.3</b> index.rmd</a></li>
-<li class="chapter" data-level="12.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-12.4"><i class="fa fa-check"></i><b>12.4</b> 執行</a></li>
-<li class="chapter" data-level="12.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.5</b> 加入:Travis</a><ul>
-<li class="chapter" data-level="12.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.5.1</b> .travis.yml:</a></li>
-<li class="chapter" data-level="12.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.5.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.3</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.3.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="12.3.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.3.2</b> DESCRIPTION</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -406,32 +382,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 4</span> File System</h1>
 <p>暫時子目錄</p>
 <p>函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。</p>
-<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb274-1" data-line-number="1">mydirname &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">pattern =</span> <span class="st">&quot;mydir&quot;</span>)</a></code></pre></div>
-<p>mydirname
-[1] &quot;C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD<br />
-</p>
-<div id="exploring-file-system" class="section level2">
-<h2><span class="header-section-number">4.1</span> Exploring file system</h2>
-<p>function file.exists() 可以用來知道檔案是否存在,
-function dir() 用來知道目前檔案位置的內容.</p>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb275-1" data-line-number="1"><span class="kw">file.exists</span>(mydirname)</a></code></pre></div>
-<p>dir(tempdir())
-character(0) # Empty character vector
-::: sidebar
-a &lt;- character(0)
-identical(a, character(0)) # returns TRUE</p>
-<p>identical(a, &quot;&quot;) # returns FALSE
-identical(a, numeric(0)) # returns also FALSE
-hint: 利用length
-:::</p>
-</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mydirname &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">pattern =</span> <span class="st">&quot;mydir&quot;</span>)</code></pre></div>
+<p>mydirname [1] “C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD<br />
+## Exploring file system function file.exists() 可以用來知道檔案是否存在, function dir() 用來知道目前檔案位置的內容.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">file.exists</span>(mydirname)</code></pre></div>
+<p>dir(tempdir()) character(0) # Empty character vector ::: sidebar a &lt;- character(0) identical(a, character(0)) # returns TRUE</p>
+<p>identical(a, “”) # returns FALSE identical(a, numeric(0)) # returns also FALSE hint: 利用length :::</p>
 <div id="creating-of-a-directory" class="section level2">
-<h2><span class="header-section-number">4.2</span> Creating of a directory</h2>
+<h2><span class="header-section-number">4.1</span> Creating of a directory</h2>
 <p>dir.create 建立子目錄</p>
-<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb276-1" data-line-number="1"><span class="kw">dir.create</span>(mydirname)  </a>
-<a class="sourceLine" id="cb276-2" data-line-number="2"><span class="kw">file.exists</span>(mydirname) <span class="co"># 上面指令建立的子目錄是否存在</span></a>
-<a class="sourceLine" id="cb276-3" data-line-number="3"><span class="kw">dir</span>(<span class="kw">tempdir</span>(), <span class="dt">full.names =</span> <span class="ot">TRUE</span>) <span class="co">#列出目前子目錄內容(全名)</span></a>
-<a class="sourceLine" id="cb276-4" data-line-number="4"><span class="kw">file.mtime</span>(mydirname) <span class="co">#子目錄建立時間,make time</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir.create</span>(mydirname)  
+<span class="kw">file.exists</span>(mydirname) <span class="co"># 上面指令建立的子目錄是否存在</span>
+<span class="kw">dir</span>(<span class="kw">tempdir</span>(), <span class="dt">full.names =</span> <span class="ot">TRUE</span>) <span class="co">#列出目前子目錄內容(全名)</span>
+<span class="kw">file.mtime</span>(mydirname) <span class="co">#子目錄建立時間,make time</span></code></pre></div>
 <p>[1] TRUE<br />
 [1] “C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/file87e8755a1876”<br />
 [2] “C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/mydir87e86b51384d”<br />
@@ -439,85 +402,77 @@ hint: 利用length
 [1] “2018-10-25 23:42:51 CST”</p>
 </div>
 <div id="r" class="section level2">
-<h2><span class="header-section-number">4.3</span> R系統檔案列表</h2>
-<p>如果要觀察安裝套件的檔案內無,可以使用指令
-<code>system.file()</code>,這個指令可以列出套建的全路徑。例如,</p>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb277-1" data-line-number="1"><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>)</a></code></pre></div>
+<h2><span class="header-section-number">4.2</span> R系統檔案列表</h2>
+<p>如果要觀察安裝套件的檔案內無,可以使用指令 <code>system.file()</code>,這個指令可以列出套建的全路徑。例如,</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>)</code></pre></div>
 <p>[1] “C:/PROGRA~1/R/R-3.5.1/library/stats”</p>
 <p>列出套件stats中,所有的檔案</p>
-<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb278-1" data-line-number="1"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>))</code></pre></div>
 <p>[1] “COPYRIGHTS.modreg” “demo” “DESCRIPTION”<br />
 [4] “help” “html” “INDEX”<br />
 [7] “libs” “Meta” “NAMESPACE”<br />
 [10] “R” “SOURCES.ts”</p>
 <p>上面可以看到套件中包含子目錄<code>demo</code>，如果還要查看<code>demo</code>中的檔案內容:</p>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb279-1" data-line-number="1"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="st">&quot;demo&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>))</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="st">&quot;demo&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>))</code></pre></div>
 <p>[1] “glm.vr.R” “lm.glm.R” “nlm.R” “smooth.R”</p>
 <p>如果要看全路徑，可以:</p>
-<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb280-1" data-line-number="1"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="st">&quot;demo&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>), <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<p>[1] “/usr/lib64/R/library/stats/demo/glm.vr.R”
-[2] “/usr/lib64/R/library/stats/demo/lm.glm.R”
-[3] “/usr/lib64/R/library/stats/demo/nlm.R”<br />
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="st">&quot;demo&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>), <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p>[1] “/usr/lib64/R/library/stats/demo/glm.vr.R” [2] “/usr/lib64/R/library/stats/demo/lm.glm.R” [3] “/usr/lib64/R/library/stats/demo/nlm.R”<br />
 [4] “/usr/lib64/R/library/stats/demo/smooth.R”</p>
 </div>
 <div id="r" class="section level2">
-<h2><span class="header-section-number">4.4</span> 在R中建立檔案名稱</h2>
+<h2><span class="header-section-number">4.3</span> 在R中建立檔案名稱</h2>
 <p>甚麼是檔案名稱?不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
-<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb281-1" data-line-number="1">workingdir &lt;-<span class="st"> &quot;projects&quot;</span></a>
-<a class="sourceLine" id="cb281-2" data-line-number="2">projectdir &lt;-<span class="st"> &quot;warandpeace&quot;</span></a>
-<a class="sourceLine" id="cb281-3" data-line-number="3">datadir    &lt;-<span class="st"> &quot;data&quot;</span></a>
-<a class="sourceLine" id="cb281-4" data-line-number="4"><span class="kw">file.path</span>(workingdir, projectdir, datadir)</a></code></pre></div>
-<p>[1] “projects/warandpeace/data”
-上面是windows 10系統上的結果,比較 Linux-based OS,則為:<br />
-[1] “projects/warandpeace/data”
-注意斜線都一樣。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">workingdir &lt;-<span class="st"> &quot;projects&quot;</span>
+projectdir &lt;-<span class="st"> &quot;warandpeace&quot;</span>
+datadir    &lt;-<span class="st"> &quot;data&quot;</span>
+<span class="kw">file.path</span>(workingdir, projectdir, datadir)</code></pre></div>
+<p>[1] “projects/warandpeace/data” 上面是windows 10系統上的結果,比較 Linux-based OS,則為:<br />
+[1] “projects/warandpeace/data” 注意斜線都一樣。</p>
 <div id="note-about-windows" class="section level3">
-<h3><span class="header-section-number">4.4.1</span> Note about Windows</h3>
+<h3><span class="header-section-number">4.3.1</span> Note about Windows</h3>
 <p>利用函數 <code>file.path()</code>列出的檔案路徑分隔是斜線,而不是反斜線 (例如for example <code>C:\Program Files\R\R-3.5.1</code>)?</p>
 <p>求助文件說:</p>
-<p>The components are by default separated by ‘/’ (not ‘’) on Windows.
-Note: DOS 和 Windows 也支援斜線.</p>
+<p>The components are by default separated by ‘/’ (not ‘’) on Windows. Note: DOS 和 Windows 也支援斜線.</p>
 </div>
-<div id="section-4.4.2" class="section level3">
-<h3><span class="header-section-number">4.4.2</span> 和工作區相關的指令</h3>
+<div id="section-4.3.2" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> 和工作區相關的指令</h3>
 <p>dir(), list.files, list.dirs</p>
-<p>getwd()
-setwd()</p>
-<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb282-1" data-line-number="1"><span class="kw">list.files</span>(<span class="kw">R.home</span>())</a>
-<a class="sourceLine" id="cb282-2" data-line-number="2"><span class="co">## Only files starting with a-l or r</span></a>
-<a class="sourceLine" id="cb282-3" data-line-number="3"><span class="co">## Note that a-l is locale-dependent, but using case-insensitive</span></a>
-<a class="sourceLine" id="cb282-4" data-line-number="4"><span class="co">## matching makes it unambiguous in English locales</span></a>
-<a class="sourceLine" id="cb282-5" data-line-number="5"><span class="kw">dir</span>(<span class="st">&quot;../..&quot;</span>, <span class="dt">pattern =</span> <span class="st">&quot;^[a-lr]&quot;</span>, <span class="dt">full.names =</span> <span class="ot">TRUE</span>, <span class="dt">ignore.case =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb282-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb282-7" data-line-number="7"><span class="kw">list.dirs</span>(<span class="kw">R.home</span>(<span class="st">&quot;doc&quot;</span>))</a>
-<a class="sourceLine" id="cb282-8" data-line-number="8"><span class="kw">list.dirs</span>(<span class="kw">R.home</span>(<span class="st">&quot;doc&quot;</span>), <span class="dt">full.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
-<p>###應用範例</p>
-<div id="section-4.4.2.1" class="section level4">
-<h4><span class="header-section-number">4.4.2.1</span> 列出目前工作目錄上的檔案</h4>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb283-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">dir</span>()</a>
-<a class="sourceLine" id="cb283-2" data-line-number="2"><span class="cf">for</span> (item <span class="cf">in</span> x) {</a>
-<a class="sourceLine" id="cb283-3" data-line-number="3">    <span class="kw">show</span>(item) <span class="co">#print(item)</span></a>
-<a class="sourceLine" id="cb283-4" data-line-number="4">}</a></code></pre></div>
+<p>getwd() setwd()</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list.files</span>(<span class="kw">R.home</span>())
+## Only files starting with a-l or r
+## Note that a-l is locale-dependent, but using case-insensitive
+## matching makes it unambiguous in English locales
+<span class="kw">dir</span>(<span class="st">&quot;../..&quot;</span>, <span class="dt">pattern =</span> <span class="st">&quot;^[a-lr]&quot;</span>, <span class="dt">full.names =</span> <span class="ot">TRUE</span>, <span class="dt">ignore.case =</span> <span class="ot">TRUE</span>)
+
+<span class="kw">list.dirs</span>(<span class="kw">R.home</span>(<span class="st">&quot;doc&quot;</span>))
+<span class="kw">list.dirs</span>(<span class="kw">R.home</span>(<span class="st">&quot;doc&quot;</span>), <span class="dt">full.names =</span> <span class="ot">FALSE</span>)</code></pre></div>
+</div>
+<div id="section-4.3.3" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> 應用範例</h3>
+<div id="section-4.3.3.1" class="section level4">
+<h4><span class="header-section-number">4.3.3.1</span> 列出目前工作目錄上的檔案</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">dir</span>()
+<span class="cf">for</span> (item <span class="cf">in</span> x) {
+    <span class="kw">show</span>(item) <span class="co">#print(item)</span>
+}</code></pre></div>
 <p>或者,僅列出前幾個檔案</p>
-<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb284-1" data-line-number="1">x&lt;-<span class="kw">dir</span>()</a>
-<a class="sourceLine" id="cb284-2" data-line-number="2"><span class="kw">head</span>(x)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x&lt;-<span class="kw">dir</span>()
+<span class="kw">head</span>(x)</code></pre></div>
 </div>
 </div>
 </div>
-<div id="section-4.5" class="section level2">
-<h2><span class="header-section-number">4.5</span> 讀檔</h2>
-<div id="section-4.5.0.1" class="section level4">
-<h4><span class="header-section-number">4.5.0.1</span> 僅僅查看檔案內容</h4>
+<div id="section-4.4" class="section level2">
+<h2><span class="header-section-number">4.4</span> 讀檔</h2>
+<div id="section-4.4.0.1" class="section level4">
+<h4><span class="header-section-number">4.4.0.1</span> 僅僅查看檔案內容</h4>
 <p><a href="resources/wh_chinese.csv">測試中文的檔案</a><br />
 <a href="resources/wh.csv">測試檔案</a></p>
 <p>注意檔案內容第一行不是資料。</p>
 <p><code>file.show(&quot;resources/wh.csv&quot;)</code>會打開excel<br />
 也可以利用殼層指令:<br />
 <code>system(&quot;cat resources/wh.csv&quot;)</code>，但是如果內容是中文,顯示結果會變成亂碼。</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb285-1" data-line-number="1"><span class="kw">cat</span>(<span class="kw">readChar</span>(<span class="st">&quot;resources/wh.csv&quot;</span>, <span class="fl">1e5</span>))</a></code></pre></div>
-<pre style="color: red;"><code>Warning in readChar("resources/wh.csv", 1e+05): can only read in bytes in a
-non-UTF-8 MBCS locale
-</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="kw">readChar</span>(<span class="st">&quot;resources/wh.csv&quot;</span>, <span class="fl">1e5</span>))</code></pre></div>
 <pre style="border: 1px grey dotted;"><code># this is a test file
 height,weight,sex
 156,56, m
@@ -526,7 +481,7 @@ height,weight,sex
 180,, f
 </code></pre>
 <p>利用useBytes 不會出現警告</p>
-<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb286-1" data-line-number="1"><span class="kw">cat</span>(<span class="kw">readChar</span>(<span class="st">&quot;resources/wh.csv&quot;</span>, <span class="dt">useBytes=</span><span class="ot">TRUE</span>,<span class="fl">1e5</span>))  </a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cat</span>(<span class="kw">readChar</span>(<span class="st">&quot;resources/wh.csv&quot;</span>, <span class="dt">useBytes=</span><span class="ot">TRUE</span>,<span class="fl">1e5</span>))  </code></pre></div>
 <pre style="border: 1px grey dotted;"><code># this is a test file
 height,weight,sex
 156,56, m
@@ -535,29 +490,29 @@ height,weight,sex
 180,, f
 </code></pre>
 <p>參數有useBytes,但是不管TRUE/FALSE，都是中文亂碼</p>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb287-1" data-line-number="1">res &lt;-<span class="st"> </span><span class="kw">readLines</span>(<span class="kw">system.file</span>(<span class="st">&quot;DESCRIPTION&quot;</span>, <span class="dt">package=</span><span class="st">&quot;MASS&quot;</span>))</a>
-<a class="sourceLine" id="cb287-2" data-line-number="2"><span class="kw">length</span>(res)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res &lt;-<span class="st"> </span><span class="kw">readLines</span>(<span class="kw">system.file</span>(<span class="st">&quot;DESCRIPTION&quot;</span>, <span class="dt">package=</span><span class="st">&quot;MASS&quot;</span>))
+<span class="kw">length</span>(res)</code></pre></div>
 <p>一般的開黨關檔過程</p>
-<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1">  con =<span class="st"> </span><span class="kw">file</span>(filepath, <span class="st">&quot;r&quot;</span>)</a>
-<a class="sourceLine" id="cb288-2" data-line-number="2">  開始讀寫操作</a>
-<a class="sourceLine" id="cb288-3" data-line-number="3">  <span class="kw">close</span>(con)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  con =<span class="st"> </span><span class="kw">file</span>(filepath, <span class="st">&quot;r&quot;</span>)
+  開始讀寫操作
+  <span class="kw">close</span>(con)</code></pre></div>
 </div>
 <div id="csv" class="section level4">
-<h4><span class="header-section-number">4.5.0.2</span> csv</h4>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb289-1" data-line-number="1"><span class="kw">read.csv</span>(<span class="st">&quot;filename.csv&quot;</span>, <span class="co">#name of file</span></a>
-<a class="sourceLine" id="cb289-2" data-line-number="2">         <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="co">#are there column names in 1st row?</span></a>
-<a class="sourceLine" id="cb289-3" data-line-number="3">         <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="co">#what separates rows?</span></a>
-<a class="sourceLine" id="cb289-4" data-line-number="4">         <span class="dt">as.is =</span> <span class="op">!</span>stringsAsFactors, <span class="co">#關掉字元轉factor</span></a>
-<a class="sourceLine" id="cb289-5" data-line-number="5">         <span class="dt">colClasses =</span> <span class="ot">NA</span> <span class="co"># to convert everything to character data set to &quot;character&quot;</span></a>
-<a class="sourceLine" id="cb289-6" data-line-number="6">         <span class="dt">na.string =</span> <span class="st">&quot;NA&quot;</span> <span class="co"># could be &quot;.&quot; for SAS files</span></a>
-<a class="sourceLine" id="cb289-7" data-line-number="7">         <span class="dt">skip =</span> <span class="dv">0</span>, <span class="co">#要跳過的前幾行數目&gt;0</span></a>
-<a class="sourceLine" id="cb289-8" data-line-number="8">         <span class="dt">strip.white =</span> <span class="ot">TRUE</span>, <span class="co">#擠掉空白,例如 &quot; 0.1&quot; = &quot;0.1&quot;</span></a>
-<a class="sourceLine" id="cb289-9" data-line-number="9">         <span class="dt">fill =</span> <span class="ot">TRUE</span>, <span class="co">#fill in rows that have unequal numbers of columns</span></a>
-<a class="sourceLine" id="cb289-10" data-line-number="10">         <span class="dt">comment.char =</span> <span class="st">&quot;#&quot;</span>, <span class="co">#註解不讀入</span></a>
-<a class="sourceLine" id="cb289-11" data-line-number="11">         <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span> <span class="co">#比as.is 常用,關掉字元轉factor</span></a>
-<a class="sourceLine" id="cb289-12" data-line-number="12">         )</a></code></pre></div>
+<h4><span class="header-section-number">4.4.0.2</span> csv</h4>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read.csv</span>(<span class="st">&quot;filename.csv&quot;</span>, <span class="co">#name of file</span>
+         <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="co">#are there column names in 1st row?</span>
+         <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="co">#what separates rows?</span>
+         <span class="dt">as.is =</span> <span class="op">!</span>stringsAsFactors, <span class="co">#關掉字元轉factor</span>
+         <span class="dt">colClasses =</span> <span class="ot">NA</span> <span class="co"># to convert everything to character data set to &quot;character&quot;</span>
+         <span class="dt">na.string =</span> <span class="st">&quot;NA&quot;</span> <span class="co"># could be &quot;.&quot; for SAS files</span>
+         <span class="dt">skip =</span> <span class="dv">0</span>, <span class="co">#要跳過的前幾行數目&gt;0</span>
+         <span class="dt">strip.white =</span> <span class="ot">TRUE</span>, <span class="co">#擠掉空白,例如 &quot; 0.1&quot; = &quot;0.1&quot;</span>
+         <span class="dt">fill =</span> <span class="ot">TRUE</span>, <span class="co">#fill in rows that have unequal numbers of columns</span>
+         <span class="dt">comment.char =</span> <span class="st">&quot;#&quot;</span>, <span class="co">#註解不讀入</span>
+         <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span> <span class="co">#比as.is 常用,關掉字元轉factor</span>
+         )</code></pre></div>
 <p><code>read.csv()</code>最簡單的用法是直接給檔案名稱,例如</p>
-<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>)</code></pre></div>
 <pre style="color: red;"><code>Error in read.table(file = file, header = header, sep = sep, quote = quote, :
   more columns than column names
 </code></pre>
@@ -565,12 +520,12 @@ height,weight,sex
   more columns than column names
 </code></pre>
 <p>但是wh.csv 前面有幾行是註解</p>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb291-1" data-line-number="1"><span class="kw">readLines</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">n=</span><span class="dv">3</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">readLines</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">n=</span><span class="dv">3</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "# this is a test file" "height,weight,sex"     "156,56, m"            
 </code></pre>
 <p>因此加上skip 參數</p>
-<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb292-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">skip=</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb292-2" data-line-number="2"><span class="kw">head</span>(rst)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">skip=</span><span class="dv">1</span>)
+<span class="kw">head</span>(rst)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  height weight sex
 1    156     56   m
 2    167      .   f
@@ -578,8 +533,8 @@ height,weight,sex
 4    180          f
 </code></pre>
 <p>也可以利用參數<code>comment.char</code></p>
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb293-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>)</a>
-<a class="sourceLine" id="cb293-2" data-line-number="2"><span class="kw">head</span>(rst)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>)
+<span class="kw">head</span>(rst)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  height weight sex
 1    156     56   m
 2    167      .   f
@@ -587,8 +542,8 @@ height,weight,sex
 4    180          f
 </code></pre>
 <p>但是注意到<code>weight</code>這個欄位被轉為字串,因為有一個 “.” 。有些套裝軟體的CSV輸出將NA轉為“.”,因此</p>
-<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb294-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb294-2" data-line-number="2"><span class="kw">head</span>(rst)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)
+<span class="kw">head</span>(rst)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  height weight sex
 1    156     56   m
 2    167     NA   f
@@ -598,29 +553,28 @@ height,weight,sex
 </div>
 </div>
 <div id="write-csv" class="section level2">
-<h2><span class="header-section-number">4.6</span> write csv</h2>
+<h2><span class="header-section-number">4.5</span> write csv</h2>
 <div id="data.frame-to-csv" class="section level3">
-<h3><span class="header-section-number">4.6.1</span> data.frame to CSV</h3>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb295-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb295-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>)</a>
-<a class="sourceLine" id="cb295-3" data-line-number="3"><span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) <span class="co"># note: readLines()不是readline() </span></a></code></pre></div>
+<h3><span class="header-section-number">4.5.1</span> data.frame to CSV</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)
+<span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>)
+<span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) <span class="co"># note: readLines()不是readline() </span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "\"\",\"height\",\"weight\",\"sex\""
 [2] "\"1\",156,56,\" m\""               
 [3] "\"2\",167,NA,\" f\""               
 </code></pre>
 <p>如果row names不要寫進csv,可以利用參數 <code>row.names=FALSE</code>。</p>
-<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb296-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb296-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb296-3" data-line-number="3"><span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) </a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)
+<span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>)
+<span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) </code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "\"height\",\"weight\",\"sex\"" "156,56,\" m\""                
 [3] "167,NA,\" f\""                
 </code></pre>
-<div class="sidebar">
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb297-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb297-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb297-3" data-line-number="3"><span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) </a></code></pre></div>
-<p>輸出是:
-[1] “&quot;height&quot;,&quot;weight&quot;,&quot;sex&quot;”<br />
+<p>::: sidebar</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)
+<span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>)
+<span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) </code></pre></div>
+<p>輸出是: [1] “&quot;height&quot;,&quot;weight&quot;,&quot;sex&quot;”<br />
 [2] “156,56,&quot; m&quot;”<br />
 [3] “167,NA,&quot; f&quot;”</p>
 <p>可以看出來每一行都有雙引號表示字串。<br />
@@ -630,41 +584,33 @@ height,weight,sex
 167,NA,&quot; f&quot;<br />
 189,70,&quot; m&quot;<br />
 180,NA,&quot; f&quot;</p>
-</div>
-<div class="quiz">
-<ol style="list-style-type: decimal">
-<li>上面sidebar中,顯示的的sex欄位,可以看見&quot; m&quot; 也就是有空白,問利用<code>read.csv</code> 讀入時,會是甚麼情況?</li>
-</ol>
-</div>
+<p>:::</p>
+<p>::: quiz 1. 上面sidebar中,顯示的的sex欄位,可以看見&quot; m&quot; 也就是有空白,問利用<code>read.csv</code> 讀入時,會是甚麼情況? :::</p>
 <p>如果要指定NA的值,可以利用欄位=””,否則預定是<code>NA</code></p>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb298-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb298-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>)</a>
-<a class="sourceLine" id="cb298-3" data-line-number="3"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)
+<span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>)
+<span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>"height","weight","sex"
 156,56," m"
 167,," f"
 189,70," m"
 180,," f"
 </code></pre>
-<p>Note: 參考rmarkdown 提要
-::: todo
-<a href="doc:rmarkdown01#terminal-out">cat</a>
-:::</p>
+<p>Note: 參考rmarkdown 提要 ::: todo <a href="doc:rmarkdown01#terminal-out">cat</a> :::</p>
 <p>如果輸出時,字串不要雙引號,則可以用<code>quote=FALSE</code></p>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb299-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb299-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">quote=</span>F)</a>
-<a class="sourceLine" id="cb299-3" data-line-number="3"><span class="co"># system(&quot;cat myData.csv&quot;) # 這個不行</span></a>
-<a class="sourceLine" id="cb299-4" data-line-number="4"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;myData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)
+<span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">quote=</span>F)
+<span class="co"># system(&quot;cat myData.csv&quot;) # 這個不行</span>
+<span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;MyData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>height,weight,sex
 156,56, m
 167,NA, f
 189,70, m
 180,NA, f
 </code></pre>
-<p>如果要更多的輸出控制可以參考可以<a href="http://stat.ethz.ch/R-manual/R-devel/library/utils/html/write.table.html"><code>write.table()</code></a>.
-<code>write.csv()</code>函數,實際上會再呼叫<code>write.table()</code>函數。例如,欄位名稱也不要輸出的話,可以利用<code>write.table()</code>，要設定的參數如下: <code>sep=”,”</code> 和 <code>col.names=FALSE</code>,前者是CSV的主要分隔字元,後者則是不要欄位名稱。</p>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb300-1" data-line-number="1"><span class="kw">write.table</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>,<span class="dt">col.names=</span><span class="ot">FALSE</span>, <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)</a>
-<a class="sourceLine" id="cb300-2" data-line-number="2"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;myData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
+<p>如果要更多的輸出控制可以參考可以<a href="http://stat.ethz.ch/R-manual/R-devel/library/utils/html/write.table.html"><code>write.table()</code></a>. <code>write.csv()</code>函數,實際上會再呼叫<code>write.table()</code>函數。例如,欄位名稱也不要輸出的話,可以利用<code>write.table()</code>，要設定的參數如下: <code>sep=”,”</code> 和 <code>col.names=FALSE</code>,前者是CSV的主要分隔字元,後者則是不要欄位名稱。</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">write.table</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>,<span class="dt">col.names=</span><span class="ot">FALSE</span>, <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)
+<span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;MyData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</code></pre></div>
 <pre style="border: 1px grey dotted;"><code>156,56," m"
 167,," f"
 189,70," m"
@@ -703,7 +649,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown-demo/edit/master/FileSystem.Rmd",
 "text": "Edit"
 },
-"download": ["rmi_copy_test.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }
@@ -716,7 +662,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
