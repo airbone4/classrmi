@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="regular-expression-syntax.html">
-<link rel="next" href="functions.html">
+<link rel="prev" href="environments.html">
+<link rel="next" href="sample-and-distribution-01.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -450,273 +450,427 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="file-system" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> File System</h1>
-<p>暫時子目錄</p>
-<p>函數 tempfile() 不是建立新檔案,而是在目前的r session中隨機產生唯一檔案名稱，檔案位置預設是在暫時子目錄中。</p>
-<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb328-1" data-line-number="1">mydirname &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">pattern =</span> <span class="st">&quot;mydir&quot;</span>)</a></code></pre></div>
-<p>mydirname
-[1] &quot;C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD<br />
-</p>
-<div id="exploring-file-system" class="section level2">
-<h2><span class="header-section-number">4.1</span> Exploring file system</h2>
-<p>function file.exists() 可以用來知道檔案是否存在,
-function dir() 用來知道目前檔案位置的內容.</p>
-<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb329-1" data-line-number="1"><span class="kw">file.exists</span>(mydirname)</a></code></pre></div>
-<p>dir(tempdir())
-character(0) # Empty character vector
-::: sidebar
-a &lt;- character(0)
-identical(a, character(0)) # returns TRUE</p>
-<p>identical(a, &quot;&quot;) # returns FALSE
-identical(a, numeric(0)) # returns also FALSE
-hint: 利用length
-:::</p>
+<div id="section-9" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> 基本繪圖</h1>
+<div id="reference-1" class="section level2">
+<h2><span class="header-section-number">9.1</span> reference</h2>
+<p><a href="https://www.statmethods.net/graphs/creating.html">Quric R</a></p>
+<p>一般視窗作業系統的繪圖，會有一個抽象物件<code>device</code>在這個device上，有一個抽象物件<code>canvas</code>，和繪圖工具例如，水彩筆之類的抽象物件可以指定顏色，線條粗細等等。</p>
 </div>
-<div id="creating-of-a-directory" class="section level2">
-<h2><span class="header-section-number">4.2</span> Creating of a directory</h2>
-<p>dir.create 建立子目錄</p>
-<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb330-1" data-line-number="1"><span class="kw">dir.create</span>(mydirname)  </a>
-<a class="sourceLine" id="cb330-2" data-line-number="2"><span class="kw">file.exists</span>(mydirname) <span class="co"># 上面指令建立的子目錄是否存在</span></a>
-<a class="sourceLine" id="cb330-3" data-line-number="3"><span class="kw">dir</span>(<span class="kw">tempdir</span>(), <span class="dt">full.names =</span> <span class="ot">TRUE</span>) <span class="co">#列出目前子目錄內容(全名)</span></a>
-<a class="sourceLine" id="cb330-4" data-line-number="4"><span class="kw">file.mtime</span>(mydirname) <span class="co">#子目錄建立時間,make time</span></a></code></pre></div>
-<p>[1] TRUE<br />
-[1] “C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/file87e8755a1876”<br />
-[2] “C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/mydir87e86b51384d”<br />
-[3] “C:\Users\linchao\AppData\Local\Temp\RtmpIp3ZiD/rs-graphics-0f3f81af-32b7-49c4-a272-ad1a859f222f”<br />
-[1] “2018-10-25 23:42:51 CST”</p>
+<div id="basic" class="section level2">
+<h2><span class="header-section-number">9.2</span> basic</h2>
+<p>Creating a Graph
+In R, graphs are typically created interactively.</p>
+<div id="section-9.2.1" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> 建立圖畫</h3>
+<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb586-1" data-line-number="1"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<pre><code>The following object is masked from package:ggplot2:
+
+    mpg</code></pre>
+<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb588-1" data-line-number="1"><span class="kw">plot</span>(wt, mpg) </a>
+<a class="sourceLine" id="cb588-2" data-line-number="2"><span class="kw">abline</span>(<span class="kw">lm</span>(mpg<span class="op">~</span>wt))</a>
+<a class="sourceLine" id="cb588-3" data-line-number="3"><span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-416-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><code>plot()</code>函數，新建視窗然後畫出 weight vs. miles per gallon.<br />
+<code>abline()</code> 不會開啟新視窗做圖，abline()的語法如下:</p>
+<p>abline(a = NULL, b = NULL, h = NULL, v = NULL, reg = NULL,coef = NULL, untf = FALSE, …)<br />
+代表的意思是畫出一條直線<code>a+bx</code> ，其中a代表截距常數，b則是斜率常數。例如<br />
+<code>Y=2X+1</code>，則對應的函數為 <code>abline(a=1,b=2)</code> 。</p>
 </div>
-<div id="r" class="section level2">
-<h2><span class="header-section-number">4.3</span> R系統檔案列表</h2>
-<p>如果要觀察安裝套件的檔案內無,可以使用指令
-<code>system.file()</code>,這個指令可以列出套建的全路徑。例如,</p>
-<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1"><span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>)</a></code></pre></div>
-<p>[1] “C:/PROGRA~1/R/R-3.5.1/library/stats”</p>
-<p>列出套件stats中,所有的檔案</p>
-<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>))</a></code></pre></div>
-<p>[1] “COPYRIGHTS.modreg” “demo” “DESCRIPTION”<br />
-[4] “help” “html” “INDEX”<br />
-[7] “libs” “Meta” “NAMESPACE”<br />
-[10] “R” “SOURCES.ts”</p>
-<p>上面可以看到套件中包含子目錄<code>demo</code>，如果還要查看<code>demo</code>中的檔案內容:</p>
-<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="st">&quot;demo&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>))</a></code></pre></div>
-<p>[1] “glm.vr.R” “lm.glm.R” “nlm.R” “smooth.R”</p>
-<p>如果要看全路徑，可以:</p>
-<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1"><span class="kw">dir</span>(<span class="kw">system.file</span>(<span class="st">&quot;demo&quot;</span>, <span class="dt">package =</span> <span class="st">&quot;stats&quot;</span>), <span class="dt">full.names =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<p>[1] “/usr/lib64/R/library/stats/demo/glm.vr.R”
-[2] “/usr/lib64/R/library/stats/demo/lm.glm.R”
-[3] “/usr/lib64/R/library/stats/demo/nlm.R”<br />
-[4] “/usr/lib64/R/library/stats/demo/smooth.R”</p>
-</div>
-<div id="r" class="section level2">
-<h2><span class="header-section-number">4.4</span> 在R中建立檔案名稱</h2>
-<p>甚麼是檔案名稱?不是 <strong>character string</strong> 而是 <strong>system-specific character string</strong>。例如,R函數<code>file.path()</code>的執行結果就是<code>system-specific file names</code>.</p>
-<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1">workingdir &lt;-<span class="st"> &quot;projects&quot;</span></a>
-<a class="sourceLine" id="cb335-2" data-line-number="2">projectdir &lt;-<span class="st"> &quot;warandpeace&quot;</span></a>
-<a class="sourceLine" id="cb335-3" data-line-number="3">datadir    &lt;-<span class="st"> &quot;data&quot;</span></a>
-<a class="sourceLine" id="cb335-4" data-line-number="4"><span class="kw">file.path</span>(workingdir, projectdir, datadir)</a></code></pre></div>
-<p>[1] “projects/warandpeace/data”
-上面是windows 10系統上的結果,比較 Linux-based OS,則為:<br />
-[1] “projects/warandpeace/data”
-注意斜線都一樣。</p>
-<div id="note-about-windows" class="section level3">
-<h3><span class="header-section-number">4.4.1</span> Note about Windows</h3>
-<p>利用函數 <code>file.path()</code>列出的檔案路徑分隔是斜線,而不是反斜線 (例如for example <code>C:\Program Files\R\R-3.5.1</code>)?</p>
-<p>求助文件說:</p>
-<p>The components are by default separated by ‘/’ (not ‘’) on Windows.
-Note: DOS 和 Windows 也支援斜線.</p>
-</div>
-<div id="section-4.4.2" class="section level3">
-<h3><span class="header-section-number">4.4.2</span> 和工作區相關的指令</h3>
-<p>dir(), list.files, list.dirs</p>
-<p>getwd()
-setwd()</p>
-<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1"><span class="kw">list.files</span>(<span class="kw">R.home</span>())</a>
-<a class="sourceLine" id="cb336-2" data-line-number="2"><span class="co">## Only files starting with a-l or r</span></a>
-<a class="sourceLine" id="cb336-3" data-line-number="3"><span class="co">## Note that a-l is locale-dependent, but using case-insensitive</span></a>
-<a class="sourceLine" id="cb336-4" data-line-number="4"><span class="co">## matching makes it unambiguous in English locales</span></a>
-<a class="sourceLine" id="cb336-5" data-line-number="5"><span class="kw">dir</span>(<span class="st">&quot;../..&quot;</span>, <span class="dt">pattern =</span> <span class="st">&quot;^[a-lr]&quot;</span>, <span class="dt">full.names =</span> <span class="ot">TRUE</span>, <span class="dt">ignore.case =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb336-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb336-7" data-line-number="7"><span class="kw">list.dirs</span>(<span class="kw">R.home</span>(<span class="st">&quot;doc&quot;</span>))</a>
-<a class="sourceLine" id="cb336-8" data-line-number="8"><span class="kw">list.dirs</span>(<span class="kw">R.home</span>(<span class="st">&quot;doc&quot;</span>), <span class="dt">full.names =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
-<p>###應用範例</p>
-<div id="section-4.4.2.1" class="section level4">
-<h4><span class="header-section-number">4.4.2.1</span> 列出目前工作目錄上的檔案</h4>
-<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb337-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">dir</span>()</a>
-<a class="sourceLine" id="cb337-2" data-line-number="2"><span class="cf">for</span> (item <span class="cf">in</span> x) {</a>
-<a class="sourceLine" id="cb337-3" data-line-number="3">    <span class="kw">show</span>(item) <span class="co">#print(item)</span></a>
-<a class="sourceLine" id="cb337-4" data-line-number="4">}</a></code></pre></div>
-<p>或者,僅列出前幾個檔案</p>
-<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb338-1" data-line-number="1">x&lt;-<span class="kw">dir</span>()</a>
-<a class="sourceLine" id="cb338-2" data-line-number="2"><span class="kw">head</span>(x)</a></code></pre></div>
+<div id="saving-graphs" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Saving Graphs</h3>
+<p>可以利用menu存檔，例如File -&gt; Save As.
+也可以利用函數：</p>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Output to</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pdf(“mygraph.pdf”)</td>
+<td>pdf file</td>
+</tr>
+<tr class="even">
+<td>win.metafile(“mygraph.wmf”)</td>
+<td>windows metafile</td>
+</tr>
+<tr class="odd">
+<td>png(“mygraph.png”)</td>
+<td>png file</td>
+</tr>
+<tr class="even">
+<td>jpeg(“mygraph.jpg”)</td>
+<td>jpeg file</td>
+</tr>
+<tr class="odd">
+<td>bmp(“mygraph.bmp”)</td>
+<td>bmp file</td>
+</tr>
+<tr class="even">
+<td>postscript(“mygraph.ps”)</td>
+<td>postscript file</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-</div>
-<div id="section-4.5" class="section level2">
-<h2><span class="header-section-number">4.5</span> 讀檔</h2>
-<div id="section-4.5.0.1" class="section level4">
-<h4><span class="header-section-number">4.5.0.1</span> 僅僅查看檔案內容</h4>
-<p><a href="resources/wh_chinese.csv">測試中文的檔案</a><br />
-<a href="resources/wh.csv">測試檔案</a></p>
-<p>注意檔案內容第一行不是資料。</p>
-<p><code>file.show(&quot;resources/wh.csv&quot;)</code>會打開excel<br />
-也可以利用殼層指令:<br />
-<code>system(&quot;cat resources/wh.csv&quot;)</code>，但是如果內容是中文,顯示結果會變成亂碼。</p>
-<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb339-1" data-line-number="1"><span class="kw">cat</span>(<span class="kw">readChar</span>(<span class="st">&quot;resources/wh.csv&quot;</span>, <span class="fl">1e5</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code># this is a test file
-height,weight,sex
-156,56, m
-167,., f
-189,70, m
-180,, f
+<div id="section-9.3" class="section level2">
+<h2><span class="header-section-number">9.3</span> 多個圖和疊圖</h2>
+<p>傻瓜指令例如 (plot, hist, boxplot, etc.)基本上會產生新的圖。要避免這個情況，可以分為多圖(multiple windows)、覆圖(combining figure) 和疊圖(overlay)討論。</p>
+<p>開多視窗的方法根據OS而不同，如下：</p>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Platform</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>windows()</td>
+<td>Windows</td>
+</tr>
+<tr class="even">
+<td>X11()</td>
+<td>Unix</td>
+</tr>
+<tr class="odd">
+<td>quartz()</td>
+<td>Mac</td>
+</tr>
+</tbody>
+</table>
+<p>要關閉視窗，可以用函數<code>dev.off()</code><br />
+如果要知道目前的視窗是那一個，可以參考 <code>dev.cur()</code>。
+Note:
+如果目前有多個圖窗，則一直呼叫這個函數<code>dev.off()</code>，會依次關閉視窗，直到函數傳回NULL。</p>
+<p>驗證上面的說法可以利用</p>
+<div class="sourceCode" id="cb589"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb589-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb589-2" data-line-number="2"><span class="kw">dev.cur</span>()</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
 </code></pre>
-<p>利用useBytes 不會出現警告</p>
-<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb340-1" data-line-number="1"><span class="kw">cat</span>(<span class="kw">readChar</span>(<span class="st">&quot;resources/wh.csv&quot;</span>, <span class="dt">useBytes=</span><span class="ot">TRUE</span>,<span class="fl">1e5</span>))  </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code># this is a test file
-height,weight,sex
-156,56, m
-167,., f
-189,70, m
-180,, f
+<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb590-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb590-2" data-line-number="2"><span class="kw">dev.cur</span>()</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
 </code></pre>
-<p>參數有useBytes,但是不管TRUE/FALSE，都是中文亂碼</p>
-<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb341-1" data-line-number="1">res &lt;-<span class="st"> </span><span class="kw">readLines</span>(<span class="kw">system.file</span>(<span class="st">&quot;DESCRIPTION&quot;</span>, <span class="dt">package=</span><span class="st">&quot;MASS&quot;</span>))</a>
-<a class="sourceLine" id="cb341-2" data-line-number="2"><span class="kw">length</span>(res)</a></code></pre></div>
-<p>一般的開黨關檔過程</p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb342-1" data-line-number="1">  con =<span class="st"> </span><span class="kw">file</span>(filepath, <span class="st">&quot;r&quot;</span>)</a>
-<a class="sourceLine" id="cb342-2" data-line-number="2">  開始讀寫操作</a>
-<a class="sourceLine" id="cb342-3" data-line-number="3">  <span class="kw">close</span>(con)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-417-1.png" width="70%" style="display: block; margin: auto;" />
+上面的範例，可以看到圖裝置的編號都是2，而且最後只有一個圖。</p>
+<div class="sourceCode" id="cb591"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb591-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb591-2" data-line-number="2"><span class="kw">dev.cur</span>()</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb592-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb592-2" data-line-number="2"><span class="kw">dev.cur</span>()</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb593-1" data-line-number="1"><span class="kw">dev.off</span>()</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>null device 
+          1 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-418-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>討論下面的輸出結果，我只看到一個視窗：</p>
+<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb594-1" data-line-number="1"><span class="kw">X11</span>()</a>
+<a class="sourceLine" id="cb594-2" data-line-number="2"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb594-3" data-line-number="3"><span class="kw">dev.cur</span>()</a>
+<a class="sourceLine" id="cb594-4" data-line-number="4"><span class="kw">X11</span>()</a>
+<a class="sourceLine" id="cb594-5" data-line-number="5"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb594-6" data-line-number="6"><span class="kw">dev.cur</span>()</a></code></pre></div>
 </div>
-<div id="csv" class="section level4">
-<h4><span class="header-section-number">4.5.0.2</span> csv</h4>
-<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb343-1" data-line-number="1"><span class="kw">read.csv</span>(<span class="st">&quot;filename.csv&quot;</span>, <span class="co">#name of file</span></a>
-<a class="sourceLine" id="cb343-2" data-line-number="2">         <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="co">#are there column names in 1st row?</span></a>
-<a class="sourceLine" id="cb343-3" data-line-number="3">         <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="co">#what separates rows?</span></a>
-<a class="sourceLine" id="cb343-4" data-line-number="4">         <span class="dt">as.is =</span> <span class="op">!</span>stringsAsFactors, <span class="co">#關掉字元轉factor</span></a>
-<a class="sourceLine" id="cb343-5" data-line-number="5">         <span class="dt">colClasses =</span> <span class="ot">NA</span> <span class="co"># to convert everything to character data set to &quot;character&quot;</span></a>
-<a class="sourceLine" id="cb343-6" data-line-number="6">         <span class="dt">na.string =</span> <span class="st">&quot;NA&quot;</span> <span class="co"># could be &quot;.&quot; for SAS files</span></a>
-<a class="sourceLine" id="cb343-7" data-line-number="7">         <span class="dt">skip =</span> <span class="dv">0</span>, <span class="co">#要跳過的前幾行數目&gt;0</span></a>
-<a class="sourceLine" id="cb343-8" data-line-number="8">         <span class="dt">strip.white =</span> <span class="ot">TRUE</span>, <span class="co">#擠掉空白,例如 &quot; 0.1&quot; = &quot;0.1&quot;</span></a>
-<a class="sourceLine" id="cb343-9" data-line-number="9">         <span class="dt">fill =</span> <span class="ot">TRUE</span>, <span class="co">#fill in rows that have unequal numbers of columns</span></a>
-<a class="sourceLine" id="cb343-10" data-line-number="10">         <span class="dt">comment.char =</span> <span class="st">&quot;#&quot;</span>, <span class="co">#註解不讀入</span></a>
-<a class="sourceLine" id="cb343-11" data-line-number="11">         <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span> <span class="co">#比as.is 常用,關掉字元轉factor</span></a>
-<a class="sourceLine" id="cb343-12" data-line-number="12">         )</a></code></pre></div>
-<p><code>read.csv()</code>最簡單的用法是直接給檔案名稱,例如</p>
-<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb344-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>)</a></code></pre></div>
-<pre style="color: red;"><code>Error in read.table(file = file, header = header, sep = sep, quote = quote, :
-  more columns than column names
-</code></pre>
-<pre style="color: red;"><code>Error in     dec = dec, fill = fill, comment.char = comment.char, ...):
-  more columns than column names
-</code></pre>
-<p>但是wh.csv 前面有幾行是註解</p>
-<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb345-1" data-line-number="1"><span class="kw">readLines</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">n=</span><span class="dv">3</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "# this is a test file" "height,weight,sex"     "156,56, m"            
-</code></pre>
-<p>因此加上skip 參數</p>
-<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb346-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">skip=</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb346-2" data-line-number="2"><span class="kw">head</span>(rst)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>  height weight sex
-1    156     56   m
-2    167      .   f
-3    189     70   m
-4    180          f
-</code></pre>
-<p>也可以利用參數<code>comment.char</code></p>
-<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb347-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>)</a>
-<a class="sourceLine" id="cb347-2" data-line-number="2"><span class="kw">head</span>(rst)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>  height weight sex
-1    156     56   m
-2    167      .   f
-3    189     70   m
-4    180          f
-</code></pre>
-<p>但是注意到<code>weight</code>這個欄位被轉為字串,因為有一個 “.” 。有些套裝軟體的CSV輸出將NA轉為“.”,因此</p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb348-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb348-2" data-line-number="2"><span class="kw">head</span>(rst)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>  height weight sex
-1    156     56   m
-2    167     NA   f
-3    189     70   m
-4    180     NA   f
+<div id="histograms-and-density-plots" class="section level2">
+<h2><span class="header-section-number">9.4</span> Histograms and Density Plots</h2>
+<div id="histograms" class="section level3">
+<h3><span class="header-section-number">9.4.1</span> Histograms</h3>
+<p>函數<code>hist(x)</code>：其中<br />
+x是一個數字向量，
+選項<code>freq=FALSE</code> 則是畫出 probability densities 而不是次數 frequencies.<br />
+選項：<code>breaks= ##</code> 則是控制分成幾份。</p>
+<p><strong>Simple Histogram</strong></p>
+<div class="sourceCode" id="cb595"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb595-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-420-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><strong>分成12份，顏色紅色。</strong></p>
+<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb596-1" data-line-number="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-421-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="add-a-normal-curve" class="section level4">
+<h4><span class="header-section-number">9.4.1.1</span> Add a Normal Curve</h4>
+<div class="sourceCode" id="cb597"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb597-1" data-line-number="1">x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg </a>
+<a class="sourceLine" id="cb597-2" data-line-number="2">h&lt;-<span class="kw">hist</span>(x, <span class="dt">breaks=</span><span class="dv">10</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>, </a>
+<a class="sourceLine" id="cb597-3" data-line-number="3">    <span class="dt">main=</span><span class="st">&quot;Histogram with Normal Curve&quot;</span>) </a>
+<a class="sourceLine" id="cb597-4" data-line-number="4">xfit&lt;-<span class="kw">seq</span>(<span class="kw">min</span>(x),<span class="kw">max</span>(x),<span class="dt">length=</span><span class="dv">40</span>) </a>
+<a class="sourceLine" id="cb597-5" data-line-number="5">yfit&lt;-<span class="kw">dnorm</span>(xfit,<span class="dt">mean=</span><span class="kw">mean</span>(x),<span class="dt">sd=</span><span class="kw">sd</span>(x)) </a>
+<a class="sourceLine" id="cb597-6" data-line-number="6">yfit &lt;-<span class="st"> </span>yfit<span class="op">*</span><span class="kw">diff</span>(h<span class="op">$</span>mids[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])<span class="op">*</span><span class="kw">length</span>(x) </a>
+<a class="sourceLine" id="cb597-7" data-line-number="7"><span class="kw">lines</span>(xfit, yfit, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-422-1.png" width="70%" style="display: block; margin: auto;" />
+hint:
+因為<span class="math inline">\(pdf=\frac{\frac{n}{N}}{bin \quad width}\)</span> 所以<span class="math inline">\(n=pdf\times N \times (bin \quad width)\)</span></p>
+<p>Histograms can be a poor method for determining the shape of a distribution because it is so strongly affected by the number of bins used.</p>
+<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb598-1" data-line-number="1">h</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>$breaks
+ [1] 10 12 14 16 18 20 22 24 26 28 30 32 34
+
+$counts
+ [1] 2 1 7 3 5 5 2 2 1 0 2 2
+
+$density
+ [1] 0.0312 0.0156 0.1094 0.0469 0.0781 0.0781 0.0312 0.0312 0.0156 0.0000
+[11] 0.0312 0.0312
+
+$mids
+ [1] 11 13 15 17 19 21 23 25 27 29 31 33
+
+$xname
+[1] "x"
+
+$equidist
+[1] TRUE
+
+attr(,"class")
+[1] "histogram"
 </code></pre>
 </div>
 </div>
-<div id="write-csv" class="section level2">
-<h2><span class="header-section-number">4.6</span> write csv</h2>
-<div id="data.frame-to-csv" class="section level3">
-<h3><span class="header-section-number">4.6.1</span> data.frame to CSV</h3>
-<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb349-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb349-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>)</a>
-<a class="sourceLine" id="cb349-3" data-line-number="3"><span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) <span class="co"># note: readLines()不是readline() </span></a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "\"\",\"height\",\"weight\",\"sex\""
-[2] "\"1\",156,56,\" m\""               
-[3] "\"2\",167,NA,\" f\""               
+<div id="kernel-density-plot" class="section level3">
+<h3><span class="header-section-number">9.4.2</span> Kernel Density Plot</h3>
+<p>核密度畫圖(Kernal density plots) 用來觀察一個變量，比較有有效率，指令如：<code>plot(density(x))</code> 其中<code>x</code> 是一個數字向量。</p>
+<div class="sourceCode" id="cb599"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb599-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg) <span class="co"># returns the density data </span></a>
+<a class="sourceLine" id="cb599-2" data-line-number="2"><span class="kw">plot</span>(d) <span class="co"># plots the results</span></a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-424-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="filled-density-plot" class="section level4">
+<h4><span class="header-section-number">9.4.2.1</span> Filled Density Plot</h4>
+<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb600-1" data-line-number="1">d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg)</a>
+<a class="sourceLine" id="cb600-2" data-line-number="2"><span class="kw">plot</span>(d, <span class="dt">main=</span><span class="st">&quot;Kernel Density of Miles Per Gallon&quot;</span>)</a>
+<a class="sourceLine" id="cb600-3" data-line-number="3"><span class="kw">polygon</span>(d, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">border=</span><span class="st">&quot;blue&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-425-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="comparing-groups-via-kernal-density" class="section level3">
+<h3><span class="header-section-number">9.4.3</span> Comparing Groups VIA Kernal Density</h3>
+<p>The sm.density.compare( ) function in the sm package allows you to superimpose the kernal density plots of two or more groups. The format is sm.density.compare(x, factor) where x is a numeric vector and factor is the grouping variable.</p>
+<div id="compare-mpg-distributions-for-cars-with-46-or-8-cylinders" class="section level4">
+<h4><span class="header-section-number">9.4.3.1</span> Compare MPG distributions for cars with 4,6, or 8 cylinders</h4>
+<div class="sourceCode" id="cb601"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb601-1" data-line-number="1"><span class="kw">library</span>(sm)</a>
+<a class="sourceLine" id="cb601-2" data-line-number="2"><span class="kw">attach</span>(mtcars)</a>
+<a class="sourceLine" id="cb601-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb601-4" data-line-number="4"><span class="co">#create value labels </span></a>
+<a class="sourceLine" id="cb601-5" data-line-number="5">cyl.f &lt;-<span class="st"> </span><span class="kw">factor</span>(cyl, <span class="dt">levels=</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),</a>
+<a class="sourceLine" id="cb601-6" data-line-number="6">  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;4 cylinder&quot;</span>, <span class="st">&quot;6 cylinder&quot;</span>, <span class="st">&quot;8 cylinder&quot;</span>)) </a>
+<a class="sourceLine" id="cb601-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb601-8" data-line-number="8"><span class="co">#plot densities </span></a>
+<a class="sourceLine" id="cb601-9" data-line-number="9"><span class="kw">sm.density.compare</span>(mpg, cyl, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</a>
+<a class="sourceLine" id="cb601-10" data-line-number="10"><span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;MPG Distribution by Car Cylinders&quot;</span>)</a>
+<a class="sourceLine" id="cb601-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb601-12" data-line-number="12"><span class="co">#add legend via mouse click</span></a>
+<a class="sourceLine" id="cb601-13" data-line-number="13">colfill&lt;-<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span>(<span class="dv">2</span><span class="op">+</span><span class="kw">length</span>(<span class="kw">levels</span>(cyl.f)))) </a>
+<a class="sourceLine" id="cb601-14" data-line-number="14"><span class="kw">legend</span>(<span class="kw">locator</span>(<span class="dv">1</span>), <span class="kw">levels</span>(cyl.f), <span class="dt">fill=</span>colfill)</a></code></pre></div>
+<p><img src="diagrams/class/mpg_plot01.png" /></p>
+</div>
+</div>
+</div>
+<div id="-plots" class="section level2">
+<h2><span class="header-section-number">9.5</span> 合併 Plots</h2>
+<p>同時顯示多個<code>plot</code>的結果，可以利用函數<code>par()</code> or <code>layout( )</code>。</p>
+<p>函數<code>par( )</code>的選項有：
+mfrow=c(nrows, ncols) 填plot的方向為橫行。<br />
+mfcol=c(nrows, ncols) 填入的方向為直行。</p>
+<div class="sourceCode" id="cb602"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb602-1" data-line-number="1"><span class="co">#4 2 x 2 figures </span></a>
+<a class="sourceLine" id="cb602-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb602-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a>
+<a class="sourceLine" id="cb602-4" data-line-number="4"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb602-5" data-line-number="5"><span class="kw">plot</span>(wt,mpg, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs. mpg&quot;</span>)</a>
+<a class="sourceLine" id="cb602-6" data-line-number="6"><span class="kw">plot</span>(wt,disp, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs disp&quot;</span>)</a>
+<a class="sourceLine" id="cb602-7" data-line-number="7"><span class="kw">hist</span>(wt, <span class="dt">main=</span><span class="st">&quot;Histogram of wt&quot;</span>)</a>
+<a class="sourceLine" id="cb602-8" data-line-number="8"><span class="kw">boxplot</span>(wt, <span class="dt">main=</span><span class="st">&quot;Boxplot of wt&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-427-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>2 x2 layout click to view</p>
+<div class="sourceCode" id="cb603"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb603-1" data-line-number="1"><span class="co"># 3 figures arranged in 3 rows and 1 column</span></a>
+<a class="sourceLine" id="cb603-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb603-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following object is masked from package:ggplot2:
+
+    mpg</code></pre>
+<div class="sourceCode" id="cb607"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb607-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>)) </a>
+<a class="sourceLine" id="cb607-2" data-line-number="2"><span class="kw">hist</span>(wt)</a>
+<a class="sourceLine" id="cb607-3" data-line-number="3"><span class="kw">hist</span>(mpg)</a>
+<a class="sourceLine" id="cb607-4" data-line-number="4"><span class="kw">hist</span>(disp)</a>
+<a class="sourceLine" id="cb607-5" data-line-number="5"><span class="co">#dev.off()</span></a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-428-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>3 x 1 layout</p>
+<p>函數 layout( ) 的使用方法為 layout(mat) 其中
+mat 的元素用來指定圖形號碼。例如分成4個格子,順序為左右上下(byrow=TRUE)
+1在第一ROW,占用[1,1]-[1,2],2,3,分別占用[2,1]和[2,2]</p>
+<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb608-1" data-line-number="1"><span class="co"># One figure in row 1 and two figures in row 2</span></a>
+<a class="sourceLine" id="cb608-2" data-line-number="2"> </a>
+<a class="sourceLine" id="cb608-3" data-line-number="3"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 5):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following object is masked from package:ggplot2:
+
+    mpg</code></pre>
+<div class="sourceCode" id="cb613"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb613-1" data-line-number="1"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))</a>
+<a class="sourceLine" id="cb613-2" data-line-number="2"><span class="kw">hist</span>(wt)</a>
+<a class="sourceLine" id="cb613-3" data-line-number="3"><span class="kw">hist</span>(mpg)</a>
+<a class="sourceLine" id="cb613-4" data-line-number="4"><span class="kw">hist</span>(disp)</a>
+<a class="sourceLine" id="cb613-5" data-line-number="5"><span class="kw">dev.off</span>()</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>null device 
+          1 
 </code></pre>
-<p>如果row names不要寫進csv,可以利用參數 <code>row.names=FALSE</code>。</p>
-<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb350-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb350-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb350-3" data-line-number="3"><span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "\"height\",\"weight\",\"sex\"" "156,56,\" m\""                
-[3] "167,NA,\" f\""                
-</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-429-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Optionally, you can include widths= and heights= options in the layout( ) function to control the size of each figure more precisely. These options have the form
+widths= a vector of values for the widths of columns
+heights= a vector of values for the heights of rows.</p>
+<p>Relative widths are specified with numeric values. Absolute widths (in centimetres) are specified with the lcm() function.</p>
 <div class="sidebar">
-<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb351-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb351-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb351-3" data-line-number="3"><span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">n=</span><span class="dv">3</span>) </a></code></pre></div>
-<p>輸出是:
-[1] “&quot;height&quot;,&quot;weight&quot;,&quot;sex&quot;”<br />
-[2] “156,56,&quot; m&quot;”<br />
-[3] “167,NA,&quot; f&quot;”</p>
-<p>可以看出來每一行都有雙引號表示字串。<br />
-對照文字檔(mData.csv)</p>
-<p>“height”,“weight”,“sex”<br />
-156,56,&quot; m&quot;<br />
-167,NA,&quot; f&quot;<br />
-189,70,&quot; m&quot;<br />
-180,NA,&quot; f&quot;</p>
+<p>note:
+par(mar) 列出margin<br />
+par(mar=c(1,1,1,1)) 更動margin</p>
+<p>plot.new()常發生的錯誤 : figure margins too large</p>
+<p>有兩個原因：1 是畫布過小 2，當前畫布的上下左右距離過大
+這裡看看如何解第二個發生原因</p>
+<p>默認的畫布上邊款的距離為：
+預設為 c(5, 4, 4, 2) + 0.1. 對應 c(bottom, left, top, right)，也就是順時針，由下到右結束一圈。</p>
+<p>我們可以將其設置為0，同時將目前的設定紀錄，後面程式的第一行</p>
+<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb614-1" data-line-number="1">op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))   <span class="co"># op 會紀錄之前的margin = 5.1 4.1 4.1 2.1  </span></a>
+<a class="sourceLine" id="cb614-2" data-line-number="2"><span class="kw">plot.new</span>() <span class="co"># 畫圖   </span></a>
+<a class="sourceLine" id="cb614-3" data-line-number="3"><span class="kw">par</span>(op) <span class="co"># 改回原先的margin  </span></a></code></pre></div>
 </div>
-<div class="quiz">
-<ol style="list-style-type: decimal">
-<li>上面sidebar中,顯示的的sex欄位,可以看見&quot; m&quot; 也就是有空白,問利用<code>read.csv</code> 讀入時,會是甚麼情況?</li>
-</ol>
-</div>
-<p>如果要指定NA的值,可以利用欄位=””,否則預定是<code>NA</code></p>
-<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb352-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb352-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>)</a>
-<a class="sourceLine" id="cb352-3" data-line-number="3"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&quot;MyData.csv&quot;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>"height","weight","sex"
-156,56," m"
-167,," f"
-189,70," m"
-180,," f"
+<div class="sourceCode" id="cb615"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb615-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) </a>
+<a class="sourceLine" id="cb615-2" data-line-number="2"><span class="co"># One figure in row 1 and two figures in row 2</span></a>
+<a class="sourceLine" id="cb615-3" data-line-number="3"><span class="co"># row 1 is 1/3 the height of row 2</span></a>
+<a class="sourceLine" id="cb615-4" data-line-number="4"><span class="co"># column 2 is 1/4 the width of the column 1 </span></a>
+<a class="sourceLine" id="cb615-5" data-line-number="5"><span class="kw">attach</span>(mtcars)</a></code></pre></div>
+<pre><code>The following objects are masked from mtcars (pos = 3):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 4):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 5):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following objects are masked from mtcars (pos = 6):
+
+    am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt</code></pre>
+<pre><code>The following object is masked from package:ggplot2:
+
+    mpg</code></pre>
+<div class="sourceCode" id="cb621"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb621-1" data-line-number="1"><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>), </a>
+<a class="sourceLine" id="cb621-2" data-line-number="2">    <span class="dt">widths=</span><span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>), <span class="dt">heights=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</a>
+<a class="sourceLine" id="cb621-3" data-line-number="3"><span class="kw">hist</span>(wt)</a>
+<a class="sourceLine" id="cb621-4" data-line-number="4"><span class="kw">hist</span>(mpg)</a>
+<a class="sourceLine" id="cb621-5" data-line-number="5"><span class="kw">hist</span>(disp)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-431-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>multiplot layout with fine control click to view</p>
+<p>See help(layout) for more details.</p>
+<p>Creating a figure arrangement with fine control
+In the following example, two box plots are added to scatterplot to create an enhanced graph.</p>
+<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb622-1" data-line-number="1"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">2</span>, <span class="dv">4</span>)) </a>
+<a class="sourceLine" id="cb622-2" data-line-number="2"><span class="co"># Add boxplots to a scatterplot</span></a>
+<a class="sourceLine" id="cb622-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="dv">0</span>,<span class="fl">0.8</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<pre style="color: red;"><code>Warning in par(fig = c(0, 0.8, 0, 0.8), new = TRUE): 呼叫 par(new=TRUE) 而
+不繪圖
 </code></pre>
-<p>Note: 參考rmarkdown 提要
-::: todo
-<a href="doc:rmarkdown01#terminal-out">cat</a>
-:::</p>
-<p>如果輸出時,字串不要雙引號,則可以用<code>quote=FALSE</code></p>
-<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb353-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb353-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">quote=</span>F)</a>
-<a class="sourceLine" id="cb353-3" data-line-number="3"><span class="co"># system(&quot;cat myData.csv&quot;) # 這個不行</span></a>
-<a class="sourceLine" id="cb353-4" data-line-number="4"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;MyData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>height,weight,sex
-156,56, m
-167,NA, f
-189,70, m
-180,NA, f
-</code></pre>
-<p>如果要更多的輸出控制可以參考可以<a href="http://stat.ethz.ch/R-manual/R-devel/library/utils/html/write.table.html"><code>write.table()</code></a>.
-<code>write.csv()</code>函數,實際上會再呼叫<code>write.table()</code>函數。例如,欄位名稱也不要輸出的話,可以利用<code>write.table()</code>，要設定的參數如下: <code>sep=”,”</code> 和 <code>col.names=FALSE</code>,前者是CSV的主要分隔字元,後者則是不要欄位名稱。</p>
-<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb354-1" data-line-number="1"><span class="kw">write.table</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>,<span class="dt">col.names=</span><span class="ot">FALSE</span>, <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)</a>
-<a class="sourceLine" id="cb354-2" data-line-number="2"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;MyData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>156,56," m"
-167,," f"
-189,70," m"
-180,," f"
-</code></pre>
+<div class="sourceCode" id="cb623"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb623-1" data-line-number="1"><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg, <span class="dt">xlab=</span><span class="st">&quot;Car Weight&quot;</span>,</a>
+<a class="sourceLine" id="cb623-2" data-line-number="2">  <span class="dt">ylab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</a>
+<a class="sourceLine" id="cb623-3" data-line-number="3"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.55</span>,<span class="dv">1</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb623-4" data-line-number="4"><span class="kw">boxplot</span>(mtcars<span class="op">$</span>wt, <span class="dt">horizontal=</span><span class="ot">TRUE</span>, <span class="dt">axes=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb623-5" data-line-number="5"><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="fl">0.65</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="fl">0.8</span>),<span class="dt">new=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb623-6" data-line-number="6"><span class="kw">boxplot</span>(mtcars<span class="op">$</span>mpg, <span class="dt">axes=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb623-7" data-line-number="7"><span class="kw">mtext</span>(<span class="st">&quot;Enhanced Scatterplot&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>, <span class="dt">outer=</span><span class="ot">TRUE</span>, <span class="dt">line=</span><span class="op">-</span><span class="dv">3</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-432-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>To understand this graph, think of the full graph area as going from (0,0) in the lower left corner to (1,1) in the upper right corner. The format of the fig= parameter is a numerical vector of the form c(x1, x2, y1, y2). The first fig= sets up the scatterplot going from 0 to 0.8 on the x axis and 0 to 0.8 on the y axis. The top boxplot goes from 0 to 0.8 on the x axis and 0.55 to 1 on the y axis. I chose 0.55 rather than 0.8 so that the top figure will be pulled closer to the scatter plot. The right hand boxplot goes from 0.65 to 1 on the x axis and 0 to 0.8 on the y axis. Again, I chose a value to pull the right hand boxplot closer to the scatterplot. You have to experiment to get it just right.</p>
+<p>fig= starts a new plot, so to add to an existing plot use new=TRUE.</p>
+<p>You can use this to combine several plots in any arrangement into one graph.</p>
 
 </div>
+<div id="add-texts-within-the-graph" class="section level2">
+<h2><span class="header-section-number">9.6</span> Add texts within the graph</h2>
+<p>The text() function can be used to draw text inside the plotting area. A simplified format of the function is :</p>
+<p>text(x, y, labels)
+x and y: 文字座標;
+labels: 例如 “a label”</p>
+<p>範例 :</p>
+<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb624-1" data-line-number="1">d&lt;-<span class="kw">head</span>(mtcars)</a>
+<a class="sourceLine" id="cb624-2" data-line-number="2"><span class="kw">plot</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>], </a>
+<a class="sourceLine" id="cb624-3" data-line-number="3">     <span class="dt">main=</span><span class="st">&quot;Milage vs. Car Weight</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~~~~~~~~~&quot;</span>,</a>
+<a class="sourceLine" id="cb624-4" data-line-number="4">      <span class="dt">xlab=</span><span class="st">&quot;Weight&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Miles/(US) gallon&quot;</span>,</a>
+<a class="sourceLine" id="cb624-5" data-line-number="5">      <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)</a>
+<a class="sourceLine" id="cb624-6" data-line-number="6"><span class="kw">text</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>],  <span class="kw">row.names</span>(d),     <span class="dt">cex=</span><span class="fl">0.65</span>,<span class="dt">pos=</span><span class="dv">3</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>) </a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-435-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="add-text-in-the-margins-of-the-graph" class="section level3">
+<h3><span class="header-section-number">9.6.1</span> Add text in the margins of the graph</h3>
+<p>在圖形周圍給文字:</p>
+<p>mtext(text, side=3)
+text : 例如“a label”
+side : 哪一側 :<br />
+順時針
+1: 下
+2: 左
+3: 上
+4: 又</p>
+<p>範例 :</p>
+<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb625-1" data-line-number="1"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb625-2" data-line-number="2">     <span class="dt">main=</span><span class="st">&quot;mtext(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</a>
+<a class="sourceLine" id="cb625-3" data-line-number="3"><span class="kw">mtext</span>(<span class="st">&quot;Magic function&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-436-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="add-mathematical-annotation-to-a-plot" class="section level3">
+<h3><span class="header-section-number">9.6.2</span> Add mathematical annotation to a plot</h3>
+<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb626-1" data-line-number="1"><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb626-2" data-line-number="2">     <span class="dt">main=</span><span class="st">&quot;text(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</a>
+<a class="sourceLine" id="cb626-3" data-line-number="3"><span class="kw">text</span>(<span class="dv">4</span>, <span class="dv">9</span>, <span class="kw">expression</span>(<span class="kw">hat</span>(beta) <span class="op">==</span><span class="st"> </span>(X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>X)<span class="op">^</span>{<span class="op">-</span><span class="dv">1</span>} <span class="op">*</span><span class="st"> </span>X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>y))</a>
+<a class="sourceLine" id="cb626-4" data-line-number="4"><span class="kw">text</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="kw">expression</span>(<span class="kw">bar</span>(x) <span class="op">==</span><span class="st"> </span><span class="kw">sum</span>(<span class="kw">frac</span>(x[i], n), i<span class="op">==</span><span class="dv">1</span>, n)))</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-437-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="section-9.7" class="section level2">
+<h2><span class="header-section-number">9.7</span> 函數畫圖</h2>
+<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb627-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb627-2" data-line-number="2"><span class="kw">plot</span>(<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-438-1.png" width="70%" style="display: block; margin: auto;" />
+問題是如果x座標的增加不是1單位?</p>
+<div class="sourceCode" id="cb628"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb628-1" data-line-number="1">x&lt;-<span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="fl">0.1</span>)</a>
+<a class="sourceLine" id="cb628-2" data-line-number="2">y&lt;-<span class="kw">exp</span>(x)</a>
+<a class="sourceLine" id="cb628-3" data-line-number="3">x&lt;-y</a>
+<a class="sourceLine" id="cb628-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb628-5" data-line-number="5">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb628-6" data-line-number="6"><span class="kw">plot</span>(x,<span class="kw">eq</span>(x), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-439-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb629"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb629-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb629-2" data-line-number="2"><span class="kw">curve</span>(eq, <span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">50</span>, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-440-1.png" width="70%" style="display: block; margin: auto;" />
+問題:解釋為何錯誤</p>
+<div class="sourceCode" id="cb630"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb630-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb630-2" data-line-number="2">y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</a>
+<a class="sourceLine" id="cb630-3" data-line-number="3"><span class="kw">curve</span>(y, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
+<pre style="color: red;"><code>Error in y(x):
+  沒有這個函數 "y"
+</code></pre>
+<p>問題:如何修正下面的錯誤?</p>
+<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb631-1" data-line-number="1">eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</a>
+<a class="sourceLine" id="cb631-2" data-line-number="2">z&lt;-<span class="dv">1</span><span class="op">:</span><span class="dv">50</span></a>
+<a class="sourceLine" id="cb631-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb631-4" data-line-number="4"><span class="kw">curve</span>(<span class="kw">eq</span>(z), <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</a></code></pre></div>
+<p>solution:</p>
+
 </div>
 </div>
             </section>
@@ -724,8 +878,8 @@ height,weight,sex
           </div>
         </div>
       </div>
-<a href="regular-expression-syntax.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="environments.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sample-and-distribution-01.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -745,7 +899,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/FileSystem.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/Plot01.Rmd",
 "text": "Edit"
 },
 "download": null,

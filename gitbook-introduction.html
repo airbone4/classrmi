@@ -25,14 +25,14 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-08">
+<meta name="date" content="2018-11-10">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="rbook-.html">
+<link rel="prev" href="git-note.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -50,41 +50,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-pre, code { background-color: #f8f8f8; }
-code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code > span.dt { color: #204a87; } /* DataType */
-code > span.dv { color: #0000cf; } /* DecVal */
-code > span.bn { color: #0000cf; } /* BaseN */
-code > span.fl { color: #0000cf; } /* Float */
-code > span.ch { color: #4e9a06; } /* Char */
-code > span.st { color: #4e9a06; } /* String */
-code > span.co { color: #8f5902; font-style: italic; } /* Comment */
-code > span.ot { color: #8f5902; } /* Other */
-code > span.al { color: #ef2929; } /* Alert */
-code > span.fu { color: #000000; } /* Function */
-code > span.er { color: #a40000; font-weight: bold; } /* Error */
-code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #000000; } /* Constant */
-code > span.sc { color: #000000; } /* SpecialChar */
-code > span.vs { color: #4e9a06; } /* VerbatimString */
-code > span.ss { color: #4e9a06; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #000000; } /* Variable */
-code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code > span.ex { } /* Extension */
-code > span.at { color: #c4a000; } /* Attribute */
-code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="adv-r.css" type="text/css" />
@@ -105,72 +131,97 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./">testing </a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 網路資源</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 安裝軟體</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.2</b> quick view</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> 資料型態和內容</a><ul>
-<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#section-1.3.1"><i class="fa fa-check"></i><b>1.3.1</b> 編輯/瀏覽資料</a></li>
-<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#section-1.3.2"><i class="fa fa-check"></i><b>1.3.2</b> 個別欄位</a></li>
-<li class="chapter" data-level="1.3.3" data-path="index.html"><a href="index.html#section-1.3.3"><i class="fa fa-check"></i><b>1.3.3</b> 質性數據的分析</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 簡介</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#section-1.1"><i class="fa fa-check"></i><b>1.1</b> 網路資源</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> 安裝軟體</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#update-package"><i class="fa fa-check"></i><b>1.2.1</b> 自動update package</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.4</b> assignment</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.3</b> quick view</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#section-1.4"><i class="fa fa-check"></i><b>1.4</b> 資料型態和內容</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#section-1.4.1"><i class="fa fa-check"></i><b>1.4.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#section-1.4.2"><i class="fa fa-check"></i><b>1.4.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#section-1.4.3"><i class="fa fa-check"></i><b>1.4.3</b> 質性數據的分析</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.5</b> assignment</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a><ul>
 <li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#section-2.1"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a><ul>
 <li class="chapter" data-level="2.1.1" data-path="data-type.html"><a href="data-type.html#section-2.1.1"><i class="fa fa-check"></i><b>2.1.1</b> 指派</a></li>
-<li class="chapter" data-level="2.1.2" data-path="data-type.html"><a href="data-type.html#section-2.1.2"><i class="fa fa-check"></i><b>2.1.2</b> 資源</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="data-type.html"><a href="data-type.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 介紹</a></li>
-<li class="chapter" data-level="2.3" data-path="data-type.html"><a href="data-type.html#section-2.3"><i class="fa fa-check"></i><b>2.3</b> 實數的比較</a></li>
-<li class="chapter" data-level="2.4" data-path="data-type.html"><a href="data-type.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 字串</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="data-type.html"><a href="data-type.html#section-2.4.1"><i class="fa fa-check"></i><b>2.4.1</b> 建立字串</a></li>
-<li class="chapter" data-level="2.4.2" data-path="data-type.html"><a href="data-type.html#section-2.4.2"><i class="fa fa-check"></i><b>2.4.2</b> 空字串</a></li>
+<li class="chapter" data-level="2.2" data-path="data-type.html"><a href="data-type.html#section-2.2"><i class="fa fa-check"></i><b>2.2</b> 運算</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-type.html"><a href="data-type.html#section-2.2.1"><i class="fa fa-check"></i><b>2.2.1</b> 四則運算</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-type.html"><a href="data-type.html#logical"><i class="fa fa-check"></i><b>2.2.2</b> Logical</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-type.html"><a href="data-type.html#section-2.2.3"><i class="fa fa-check"></i><b>2.2.3</b> 資源</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="data-type.html"><a href="data-type.html#is-family"><i class="fa fa-check"></i><b>2.5</b> 型態操作is family</a></li>
-<li class="chapter" data-level="2.6" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.6</b> vector</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="data-type.html"><a href="data-type.html#section-2.6.1"><i class="fa fa-check"></i><b>2.6.1</b> 練習範例</a></li>
-<li class="chapter" data-level="2.6.2" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>2.6.2</b> vector 相關的運算</a></li>
-<li class="chapter" data-level="2.6.3" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.6.3</b> 如何存取vector中的元素</a></li>
-<li class="chapter" data-level="2.6.4" data-path="data-type.html"><a href="data-type.html#section-2.6.4"><i class="fa fa-check"></i><b>2.6.4</b> 邏輯做為索引</a></li>
-<li class="chapter" data-level="2.6.5" data-path="data-type.html"><a href="data-type.html#-character-vector-"><i class="fa fa-check"></i><b>2.6.5</b> 利用字串( character vector) 作為索引</a></li>
-<li class="chapter" data-level="2.6.6" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>2.6.6</b> How to modify a vector in R?</a></li>
-<li class="chapter" data-level="2.6.7" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>2.6.7</b> How to delete a Vector?</a></li>
+<li class="chapter" data-level="2.3" data-path="data-type.html"><a href="data-type.html#section-2.3"><i class="fa fa-check"></i><b>2.3</b> 介紹</a></li>
+<li class="chapter" data-level="2.4" data-path="data-type.html"><a href="data-type.html#section-2.4"><i class="fa fa-check"></i><b>2.4</b> 實數的比較</a></li>
+<li class="chapter" data-level="2.5" data-path="data-type.html"><a href="data-type.html#section-2.5"><i class="fa fa-check"></i><b>2.5</b> 字串</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="data-type.html"><a href="data-type.html#section-2.5.1"><i class="fa fa-check"></i><b>2.5.1</b> 建立字串</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-type.html"><a href="data-type.html#section-2.5.2"><i class="fa fa-check"></i><b>2.5.2</b> 空字串</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>2.7</b> List</a><ul>
-<li class="chapter" data-level="2.7.1" data-path="data-type.html"><a href="data-type.html#-list"><i class="fa fa-check"></i><b>2.7.1</b> 建立 List</a></li>
-<li class="chapter" data-level="2.7.2" data-path="data-type.html"><a href="data-type.html#-list-"><i class="fa fa-check"></i><b>2.7.2</b> 存取 List 元素</a></li>
-<li class="chapter" data-level="2.7.3" data-path="data-type.html"><a href="data-type.html#manipulating-list-elements"><i class="fa fa-check"></i><b>2.7.3</b> Manipulating List Elements</a></li>
-<li class="chapter" data-level="2.7.4" data-path="data-type.html"><a href="data-type.html#merging-lists"><i class="fa fa-check"></i><b>2.7.4</b> Merging Lists</a></li>
-<li class="chapter" data-level="2.7.5" data-path="data-type.html"><a href="data-type.html#list--vector"><i class="fa fa-check"></i><b>2.7.5</b> List 轉 Vector</a></li>
-<li class="chapter" data-level="2.7.6" data-path="data-type.html"><a href="data-type.html#vector-list"><i class="fa fa-check"></i><b>2.7.6</b> 比較vector, list中,字串的問題</a></li>
+<li class="chapter" data-level="2.6" data-path="data-type.html"><a href="data-type.html#is-family"><i class="fa fa-check"></i><b>2.6</b> 型態操作is family</a></li>
+<li class="chapter" data-level="2.7" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.7</b> vector</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="data-type.html"><a href="data-type.html#section-2.7.1"><i class="fa fa-check"></i><b>2.7.1</b> 練習範例</a></li>
+<li class="chapter" data-level="2.7.2" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>2.7.2</b> vector 相關的運算</a></li>
+<li class="chapter" data-level="2.7.3" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.7.3</b> 如何存取vector中的元素</a></li>
+<li class="chapter" data-level="2.7.4" data-path="data-type.html"><a href="data-type.html#section-2.7.4"><i class="fa fa-check"></i><b>2.7.4</b> 邏輯做為索引</a></li>
+<li class="chapter" data-level="2.7.5" data-path="data-type.html"><a href="data-type.html#-character-vector-"><i class="fa fa-check"></i><b>2.7.5</b> 利用字串( character vector) 作為索引</a></li>
+<li class="chapter" data-level="2.7.6" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>2.7.6</b> How to modify a vector in R?</a></li>
+<li class="chapter" data-level="2.7.7" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>2.7.7</b> How to delete a Vector?</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="data-type.html"><a href="data-type.html#data-set-build-in"><i class="fa fa-check"></i><b>2.8</b> data set build in</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="data-type.html"><a href="data-type.html#list-of-pre-loaded-data"><i class="fa fa-check"></i><b>2.8.1</b> List of pre-loaded data</a></li>
+<li class="chapter" data-level="2.8" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>2.8</b> List</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="data-type.html"><a href="data-type.html#-list"><i class="fa fa-check"></i><b>2.8.1</b> 建立 List</a></li>
+<li class="chapter" data-level="2.8.2" data-path="data-type.html"><a href="data-type.html#-list-"><i class="fa fa-check"></i><b>2.8.2</b> 存取 List 元素</a></li>
+<li class="chapter" data-level="2.8.3" data-path="data-type.html"><a href="data-type.html#manipulating-list-elements"><i class="fa fa-check"></i><b>2.8.3</b> Manipulating List Elements</a></li>
+<li class="chapter" data-level="2.8.4" data-path="data-type.html"><a href="data-type.html#merging-lists"><i class="fa fa-check"></i><b>2.8.4</b> Merging Lists</a></li>
+<li class="chapter" data-level="2.8.5" data-path="data-type.html"><a href="data-type.html#list--vector"><i class="fa fa-check"></i><b>2.8.5</b> List 轉 Vector</a></li>
+<li class="chapter" data-level="2.8.6" data-path="data-type.html"><a href="data-type.html#vector-list"><i class="fa fa-check"></i><b>2.8.6</b> 比較vector, list中,字串的問題</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>2.9</b> vector 函數範例</a><ul>
-<li class="chapter" data-level="2.9.1" data-path="data-type.html"><a href="data-type.html#cbindrbind"><i class="fa fa-check"></i><b>2.9.1</b> cbind,rbind</a></li>
-<li class="chapter" data-level="2.9.2" data-path="data-type.html"><a href="data-type.html#diff"><i class="fa fa-check"></i><b>2.9.2</b> 函數diff</a></li>
+<li class="chapter" data-level="2.9" data-path="data-type.html"><a href="data-type.html#data-set-build-in"><i class="fa fa-check"></i><b>2.9</b> data set build in</a><ul>
+<li class="chapter" data-level="2.9.1" data-path="data-type.html"><a href="data-type.html#list-of-pre-loaded-data"><i class="fa fa-check"></i><b>2.9.1</b> List of pre-loaded data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.10" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>2.10</b> matrix</a><ul>
-<li class="chapter" data-level="2.10.1" data-path="data-type.html"><a href="data-type.html#transpose"><i class="fa fa-check"></i><b>2.10.1</b> Transpose</a></li>
-<li class="chapter" data-level="2.10.2" data-path="data-type.html"><a href="data-type.html#section-2.10.2"><i class="fa fa-check"></i><b>2.10.2</b> 合併矩陣</a></li>
+<li class="chapter" data-level="2.10" data-path="data-type.html"><a href="data-type.html#vector-"><i class="fa fa-check"></i><b>2.10</b> vector 函數範例</a><ul>
+<li class="chapter" data-level="2.10.1" data-path="data-type.html"><a href="data-type.html#cbindrbind"><i class="fa fa-check"></i><b>2.10.1</b> cbind,rbind</a></li>
+<li class="chapter" data-level="2.10.2" data-path="data-type.html"><a href="data-type.html#diff"><i class="fa fa-check"></i><b>2.10.2</b> 函數diff</a></li>
 </ul></li>
-<li class="chapter" data-level="2.11" data-path="data-type.html"><a href="data-type.html#section-2.11"><i class="fa fa-check"></i><b>2.11</b> 字串函數</a><ul>
-<li class="chapter" data-level="2.11.1" data-path="data-type.html"><a href="data-type.html#macro"><i class="fa fa-check"></i><b>2.11.1</b> 應用範例macro</a></li>
-<li class="chapter" data-level="2.11.2" data-path="data-type.html"><a href="data-type.html#paste"><i class="fa fa-check"></i><b>2.11.2</b> paste</a></li>
-<li class="chapter" data-level="2.11.3" data-path="data-type.html"><a href="data-type.html#misc"><i class="fa fa-check"></i><b>2.11.3</b> misc</a></li>
+<li class="chapter" data-level="2.11" data-path="data-type.html"><a href="data-type.html#-"><i class="fa fa-check"></i><b>2.11</b> 練習: 刪除向量中的一個元素</a><ul>
+<li class="chapter" data-level="2.11.1" data-path="data-type.html"><a href="data-type.html#adding-attributes-to-vectors"><i class="fa fa-check"></i><b>2.11.1</b> <span>Adding Attributes to Vectors</span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.12" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>2.12</b> Factors</a><ul>
-<li class="chapter" data-level="2.12.1" data-path="data-type.html"><a href="data-type.html#data-frames"><i class="fa fa-check"></i><b>2.12.1</b> Data Frames</a></li>
-<li class="chapter" data-level="2.12.2" data-path="data-type.html"><a href="data-type.html#logical"><i class="fa fa-check"></i><b>2.12.2</b> Logical</a></li>
+<li class="chapter" data-level="2.12" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>2.12</b> matrix</a><ul>
+<li class="chapter" data-level="2.12.1" data-path="data-type.html"><a href="data-type.html#transpose"><i class="fa fa-check"></i><b>2.12.1</b> Transpose</a></li>
+<li class="chapter" data-level="2.12.2" data-path="data-type.html"><a href="data-type.html#section-2.12.2"><i class="fa fa-check"></i><b>2.12.2</b> 合併矩陣</a></li>
 </ul></li>
-<li class="chapter" data-level="2.13" data-path="data-type.html"><a href="data-type.html#tables"><i class="fa fa-check"></i><b>2.13</b> Tables</a><ul>
-<li class="chapter" data-level="2.13.1" data-path="data-type.html"><a href="data-type.html#one-way-tables"><i class="fa fa-check"></i><b>2.13.1</b> One Way Tables</a></li>
-<li class="chapter" data-level="2.13.2" data-path="data-type.html"><a href="data-type.html#two-way-tables"><i class="fa fa-check"></i><b>2.13.2</b> Two Way Tables</a></li>
+<li class="chapter" data-level="2.13" data-path="data-type.html"><a href="data-type.html#section-2.13"><i class="fa fa-check"></i><b>2.13</b> 字串函數</a><ul>
+<li class="chapter" data-level="2.13.1" data-path="data-type.html"><a href="data-type.html#macro"><i class="fa fa-check"></i><b>2.13.1</b> 應用範例macro</a></li>
+<li class="chapter" data-level="2.13.2" data-path="data-type.html"><a href="data-type.html#paste"><i class="fa fa-check"></i><b>2.13.2</b> paste</a></li>
+<li class="chapter" data-level="2.13.3" data-path="data-type.html"><a href="data-type.html#misc"><i class="fa fa-check"></i><b>2.13.3</b> misc</a></li>
 </ul></li>
-<li class="chapter" data-level="2.14" data-path="data-type.html"><a href="data-type.html#oop"><i class="fa fa-check"></i><b>2.14</b> OOP</a></li>
-<li class="chapter" data-level="2.15" data-path="data-type.html"><a href="data-type.html#operator"><i class="fa fa-check"></i><b>2.15</b> operator %&gt;%</a></li>
-<li class="chapter" data-level="2.16" data-path="data-type.html"><a href="data-type.html#section-2.16"><i class="fa fa-check"></i><b>2.16</b> 相關操作</a></li>
+<li class="chapter" data-level="2.14" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>2.14</b> Factors</a><ul>
+<li class="chapter" data-level="2.14.1" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>2.14.1</b> 探索一下factors</a></li>
+<li class="chapter" data-level="2.14.2" data-path="data-type.html"><a href="data-type.html#factor"><i class="fa fa-check"></i><b>2.14.2</b> 探索一下factor</a></li>
+<li class="chapter" data-level="2.14.3" data-path="data-type.html"><a href="data-type.html#factor-read.csv"><i class="fa fa-check"></i><b>2.14.3</b> factor 和函數read.csv()</a></li>
+<li class="chapter" data-level="2.14.4" data-path="data-type.html"><a href="data-type.html#factor-summary"><i class="fa fa-check"></i><b>2.14.4</b> factor 和函數summary()</a></li>
+</ul></li>
+<li class="chapter" data-level="2.15" data-path="data-type.html"><a href="data-type.html#data-frames"><i class="fa fa-check"></i><b>2.15</b> Data Frames</a><ul>
+<li class="chapter" data-level="2.15.1" data-path="data-type.html"><a href="data-type.html#data.frame"><i class="fa fa-check"></i><b>2.15.1</b> 簡單介紹一下手動建立data.frame</a></li>
+<li class="chapter" data-level="2.15.2" data-path="data-type.html"><a href="data-type.html#data-frame-"><i class="fa fa-check"></i><b>2.15.2</b> data frame 的常用函數：</a></li>
+</ul></li>
+<li class="chapter" data-level="2.16" data-path="data-type.html"><a href="data-type.html#tables"><i class="fa fa-check"></i><b>2.16</b> Tables</a><ul>
+<li class="chapter" data-level="2.16.1" data-path="data-type.html"><a href="data-type.html#one-way-tables"><i class="fa fa-check"></i><b>2.16.1</b> One Way Tables</a></li>
+<li class="chapter" data-level="2.16.2" data-path="data-type.html"><a href="data-type.html#two-way-tables"><i class="fa fa-check"></i><b>2.16.2</b> Two Way Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="data-type.html"><a href="data-type.html#oop"><i class="fa fa-check"></i><b>2.17</b> OOP</a><ul>
+<li class="chapter" data-level="2.17.1" data-path="data-type.html"><a href="data-type.html#section-2.17.1"><i class="fa fa-check"></i><b>2.17.1</b> 變數屬性查詢函數</a></li>
+</ul></li>
+<li class="chapter" data-level="2.18" data-path="data-type.html"><a href="data-type.html#operator"><i class="fa fa-check"></i><b>2.18</b> operator %&gt;%</a></li>
+<li class="chapter" data-level="2.19" data-path="data-type.html"><a href="data-type.html#section-2.19"><i class="fa fa-check"></i><b>2.19</b> 相關操作</a><ul>
+<li class="chapter" data-level="2.19.1" data-path="data-type.html"><a href="data-type.html#section-2.19.1"><i class="fa fa-check"></i><b>2.19.1</b> 問題:想要知道有甚麼資料庫可以用?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.20" data-path="data-type.html"><a href="data-type.html#section-2.20"><i class="fa fa-check"></i><b>2.20</b> 常見錯誤</a><ul>
+<li class="chapter" data-level="2.20.1" data-path="data-type.html"><a href="data-type.html#error"><i class="fa fa-check"></i><b>2.20.1</b> error</a></li>
+<li class="chapter" data-level="2.20.2" data-path="data-type.html"><a href="data-type.html#error-1"><i class="fa fa-check"></i><b>2.20.2</b> error</a></li>
+<li class="chapter" data-level="2.20.3" data-path="data-type.html"><a href="data-type.html#error-2"><i class="fa fa-check"></i><b>2.20.3</b> error</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html"><i class="fa fa-check"></i><b>3</b> Regular expression syntax</a><ul>
 <li class="chapter" data-level="3.0.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#escape-sequences"><i class="fa fa-check"></i><b>3.0.1</b> Escape sequences</a></li>
@@ -182,16 +233,16 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#attribute"><i class="fa fa-check"></i><b>3.1</b> attribute</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>4</b> File System</a><ul>
-<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.1</b> Creating of a directory</a></li>
-<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.2</b> R系統檔案列表</a></li>
-<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> 在R中建立檔案名稱</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.3.1</b> Note about Windows</a></li>
-<li class="chapter" data-level="4.3.2" data-path="file-system.html"><a href="file-system.html#section-4.3.2"><i class="fa fa-check"></i><b>4.3.2</b> 和工作區相關的指令</a></li>
-<li class="chapter" data-level="4.3.3" data-path="file-system.html"><a href="file-system.html#section-4.3.3"><i class="fa fa-check"></i><b>4.3.3</b> 應用範例</a></li>
+<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>4.1</b> Exploring file system</a></li>
+<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.2</b> Creating of a directory</a></li>
+<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.3</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.4</b> 在R中建立檔案名稱</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.4.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="4.4.2" data-path="file-system.html"><a href="file-system.html#section-4.4.2"><i class="fa fa-check"></i><b>4.4.2</b> 和工作區相關的指令</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#section-4.4"><i class="fa fa-check"></i><b>4.4</b> 讀檔</a></li>
-<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.5</b> write csv</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.5.1</b> data.frame to CSV</a></li>
+<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a></li>
+<li class="chapter" data-level="4.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.6</b> write csv</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.6.1</b> data.frame to CSV</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>5</b> Functions</a><ul>
@@ -240,128 +291,143 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>5.9</b> Quiz answers</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>6</b> R Packages</a><ul>
-<li class="chapter" data-level="6.1" data-path="r-packages.html"><a href="r-packages.html#section-6.1"><i class="fa fa-check"></i><b>6.1</b> 基本</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="r-packages.html"><a href="r-packages.html#section-6.1.1"><i class="fa fa-check"></i><b>6.1.1</b> 套件在哪裡</a></li>
-<li class="chapter" data-level="6.1.2" data-path="r-packages.html"><a href="r-packages.html#section-6.1.2"><i class="fa fa-check"></i><b>6.1.2</b> 哪個函數屬於哪個套件?</a></li>
+<li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data</a></li>
+<li class="chapter" data-level="7" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>7</b> R Packages</a><ul>
+<li class="chapter" data-level="7.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 基本</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1.1"><i class="fa fa-check"></i><b>7.1.1</b> 套件在哪裡</a></li>
+<li class="chapter" data-level="7.1.2" data-path="r-packages.html"><a href="r-packages.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 哪個函數屬於哪個套件?</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>6.2</b> <code>library()</code> vs <code>require()</code></a><ul>
-<li class="chapter" data-level="6.2.1" data-path="r-packages.html"><a href="r-packages.html#reference"><i class="fa fa-check"></i><b>6.2.1</b> reference</a></li>
+<li class="chapter" data-level="7.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>7.2</b> <code>library()</code> vs <code>require()</code></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="r-packages.html"><a href="r-packages.html#reference"><i class="fa fa-check"></i><b>7.2.1</b> reference</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="r-packages.html"><a href="r-packages.html#debug"><i class="fa fa-check"></i><b>6.3</b> 測試debug</a></li>
-<li class="chapter" data-level="6.4" data-path="r-packages.html"><a href="r-packages.html#-package"><i class="fa fa-check"></i><b>6.4</b> 自製 package</a><ul>
-<li class="chapter" data-level="6.4.1" data-path="r-packages.html"><a href="r-packages.html#-package-"><i class="fa fa-check"></i><b>6.4.1</b> 自製 package 範例</a></li>
+<li class="chapter" data-level="7.3" data-path="r-packages.html"><a href="r-packages.html#debug"><i class="fa fa-check"></i><b>7.3</b> 測試debug</a></li>
+<li class="chapter" data-level="7.4" data-path="r-packages.html"><a href="r-packages.html#-package"><i class="fa fa-check"></i><b>7.4</b> 自製 package</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="r-packages.html"><a href="r-packages.html#-package-"><i class="fa fa-check"></i><b>7.4.1</b> 自製 package 範例</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>7</b> Environments</a><ul>
-<li class="chapter" data-level="7.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>7.1</b> Introduction</a><ul>
+<li class="chapter" data-level="8" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>8</b> Environments</a><ul>
+<li class="chapter" data-level="8.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#quiz"><i class="fa fa-check"></i>Quiz</a></li>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>7.2</b> Environment basics</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>7.2.1</b> Basics</a></li>
-<li class="chapter" data-level="7.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>7.2.2</b> Important environments</a></li>
-<li class="chapter" data-level="7.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>7.2.3</b> Parents</a></li>
-<li class="chapter" data-level="7.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>7.2.4</b> Getting and setting</a></li>
-<li class="chapter" data-level="7.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>7.2.5</b> Finalisers</a></li>
-<li class="chapter" data-level="7.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>7.2.6</b> Advanced bindings</a></li>
-<li class="chapter" data-level="7.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>7.2.7</b> Exercises</a></li>
+<li class="chapter" data-level="8.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>8.2</b> Environment basics</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>8.2.1</b> Basics</a></li>
+<li class="chapter" data-level="8.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>8.2.2</b> Important environments</a></li>
+<li class="chapter" data-level="8.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>8.2.3</b> Parents</a></li>
+<li class="chapter" data-level="8.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>8.2.4</b> Getting and setting</a></li>
+<li class="chapter" data-level="8.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>8.2.5</b> Finalisers</a></li>
+<li class="chapter" data-level="8.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>8.2.6</b> Advanced bindings</a></li>
+<li class="chapter" data-level="8.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>8.2.7</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>7.3</b> Recursing over environments</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>7.3.1</b> Exercises</a></li>
+<li class="chapter" data-level="8.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>8.3</b> Recursing over environments</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>8.3.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>7.4</b> Special environments</a><ul>
-<li class="chapter" data-level="7.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>7.4.1</b> Package environments and the search path</a></li>
-<li class="chapter" data-level="7.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>7.4.2</b> The function environment</a></li>
-<li class="chapter" data-level="7.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>7.4.3</b> Namespaces</a></li>
-<li class="chapter" data-level="7.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>7.4.4</b> Execution environments</a></li>
-<li class="chapter" data-level="7.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>7.4.5</b> Exercises</a></li>
+<li class="chapter" data-level="8.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>8.4</b> Special environments</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>8.4.1</b> Package environments and the search path</a></li>
+<li class="chapter" data-level="8.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>8.4.2</b> The function environment</a></li>
+<li class="chapter" data-level="8.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>8.4.3</b> Namespaces</a></li>
+<li class="chapter" data-level="8.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>8.4.4</b> Execution environments</a></li>
+<li class="chapter" data-level="8.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>8.4.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>7.5</b> The call stack</a><ul>
-<li class="chapter" data-level="7.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>7.5.1</b> Simple call stacks</a></li>
-<li class="chapter" data-level="7.5.2" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>7.5.2</b> Lazy evaluation</a></li>
-<li class="chapter" data-level="7.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>7.5.3</b> Frames</a></li>
-<li class="chapter" data-level="7.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>7.5.4</b> Dynamic scope</a></li>
-<li class="chapter" data-level="7.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>7.5.5</b> Exercises</a></li>
+<li class="chapter" data-level="8.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>8.5</b> The call stack</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>8.5.1</b> Simple call stacks</a></li>
+<li class="chapter" data-level="8.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>8.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="8.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>8.5.3</b> Frames</a></li>
+<li class="chapter" data-level="8.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>8.5.4</b> Dynamic scope</a></li>
+<li class="chapter" data-level="8.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>8.5.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>7.6</b> As data structures</a></li>
-<li class="chapter" data-level="7.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>7.7</b> <code>&lt;&lt;-</code></a><ul>
-<li class="chapter" data-level="7.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>7.7.1</b> Exercises</a></li>
+<li class="chapter" data-level="8.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>8.6</b> As data structures</a></li>
+<li class="chapter" data-level="8.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>8.7</b> <code>&lt;&lt;-</code></a><ul>
+<li class="chapter" data-level="8.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>8.7.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="7.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>7.8</b> Quiz answers</a><ul>
-<li class="chapter" data-level="7.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>7.8.1</b> term</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="section-8.html"><a href="section-8.html"><i class="fa fa-check"></i><b>8</b> 基本繪圖</a><ul>
-<li class="chapter" data-level="8.1" data-path="section-8.html"><a href="section-8.html#reference-1"><i class="fa fa-check"></i><b>8.1</b> reference</a></li>
-<li class="chapter" data-level="8.2" data-path="section-8.html"><a href="section-8.html#basic"><i class="fa fa-check"></i><b>8.2</b> basic</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="section-8.html"><a href="section-8.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 建立圖畫</a></li>
-<li class="chapter" data-level="8.2.2" data-path="section-8.html"><a href="section-8.html#saving-graphs"><i class="fa fa-check"></i><b>8.2.2</b> Saving Graphs</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="section-8.html"><a href="section-8.html#section-8.3"><i class="fa fa-check"></i><b>8.3</b> 多個圖和疊圖</a></li>
-<li class="chapter" data-level="8.4" data-path="section-8.html"><a href="section-8.html#histograms-and-density-plots"><i class="fa fa-check"></i><b>8.4</b> Histograms and Density Plots</a><ul>
-<li class="chapter" data-level="8.4.1" data-path="section-8.html"><a href="section-8.html#histograms"><i class="fa fa-check"></i><b>8.4.1</b> Histograms</a></li>
-<li class="chapter" data-level="8.4.2" data-path="section-8.html"><a href="section-8.html#kernel-density-plot"><i class="fa fa-check"></i><b>8.4.2</b> Kernel Density Plot</a></li>
-<li class="chapter" data-level="8.4.3" data-path="section-8.html"><a href="section-8.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>8.4.3</b> Comparing Groups VIA Kernal Density</a></li>
-</ul></li>
-<li class="chapter" data-level="8.5" data-path="section-8.html"><a href="section-8.html#-plots"><i class="fa fa-check"></i><b>8.5</b> 合併 Plots</a></li>
-<li class="chapter" data-level="8.6" data-path="section-8.html"><a href="section-8.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>8.6</b> Add texts within the graph</a><ul>
-<li class="chapter" data-level="8.6.1" data-path="section-8.html"><a href="section-8.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>8.6.1</b> Add text in the margins of the graph</a></li>
-<li class="chapter" data-level="8.6.2" data-path="section-8.html"><a href="section-8.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>8.6.2</b> Add mathematical annotation to a plot</a></li>
-</ul></li>
-<li class="chapter" data-level="8.7" data-path="section-8.html"><a href="section-8.html#section-8.7"><i class="fa fa-check"></i><b>8.7</b> 函數畫圖</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>9</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.1"><i class="fa fa-check"></i><b>9.1</b> 　隨機抽樣</a></li>
-<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-9.2"><i class="fa fa-check"></i><b>9.2</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="9.3" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.3</b> distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>10</b> Tidy Basic 01</a><ul>
-<li class="chapter" data-level="10.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>10.1</b> long and wide data</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>10.1.1</b> gather: wide to long</a></li>
-<li class="chapter" data-level="10.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>10.1.2</b> spread :long to wide</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>10.2</b> dplyr</a></li>
-<li class="chapter" data-level="10.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>10.3</b> other</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>10.3.1</b> Basic verbs</a></li>
-<li class="chapter" data-level="10.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>10.3.2</b> Group by</a></li>
-<li class="chapter" data-level="10.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>10.3.3</b> summarize()</a></li>
+<li class="chapter" data-level="8.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>8.8</b> Quiz answers</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>8.8.1</b> term</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>11</b> rbook 提要</a><ul>
-<li class="chapter" data-level="11.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>11.1</b> index.Rmd</a></li>
-<li class="chapter" data-level="11.2" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i><b>11.2</b> </a></li>
-<li class="chapter" data-level="11.3" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>11.3</b> 其他_output.yml 範例</a></li>
-<li class="chapter" data-level="11.4" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>11.4</b> .travis.yml</a></li>
-<li class="chapter" data-level="11.5" data-path="rbook-.html"><a href="rbook-.html#section-11.5"><i class="fa fa-check"></i><b>11.5</b> 紀錄</a><ul>
-<li class="chapter" data-level="11.5.1" data-path="rbook-.html"><a href="rbook-.html#knitr-hook"><i class="fa fa-check"></i><b>11.5.1</b> knitr hook</a></li>
-<li class="chapter" data-level="11.5.2" data-path="rbook-.html"><a href="rbook-.html#terminal-output"><i class="fa fa-check"></i><b>11.5.2</b> terminal output</a></li>
+<li class="chapter" data-level="9" data-path="section-9.html"><a href="section-9.html"><i class="fa fa-check"></i><b>9</b> 基本繪圖</a><ul>
+<li class="chapter" data-level="9.1" data-path="section-9.html"><a href="section-9.html#reference-1"><i class="fa fa-check"></i><b>9.1</b> reference</a></li>
+<li class="chapter" data-level="9.2" data-path="section-9.html"><a href="section-9.html#basic"><i class="fa fa-check"></i><b>9.2</b> basic</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="section-9.html"><a href="section-9.html#section-9.2.1"><i class="fa fa-check"></i><b>9.2.1</b> 建立圖畫</a></li>
+<li class="chapter" data-level="9.2.2" data-path="section-9.html"><a href="section-9.html#saving-graphs"><i class="fa fa-check"></i><b>9.2.2</b> Saving Graphs</a></li>
 </ul></li>
-<li class="chapter" data-level="11.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>11.6</b> python</a></li>
-<li class="chapter" data-level="11.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>11.7</b> 產生PDF 文件</a><ul>
-<li class="chapter" data-level="11.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>11.7.1</b> Overview</a></li>
-<li class="chapter" data-level="11.7.2" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>11.7.2</b> meta data 上的pdf 設定,常見版本</a></li>
-<li class="chapter" data-level="11.7.3" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>11.7.3</b> LaTeX Packages for Citations</a></li>
+<li class="chapter" data-level="9.3" data-path="section-9.html"><a href="section-9.html#section-9.3"><i class="fa fa-check"></i><b>9.3</b> 多個圖和疊圖</a></li>
+<li class="chapter" data-level="9.4" data-path="section-9.html"><a href="section-9.html#histograms-and-density-plots"><i class="fa fa-check"></i><b>9.4</b> Histograms and Density Plots</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="section-9.html"><a href="section-9.html#histograms"><i class="fa fa-check"></i><b>9.4.1</b> Histograms</a></li>
+<li class="chapter" data-level="9.4.2" data-path="section-9.html"><a href="section-9.html#kernel-density-plot"><i class="fa fa-check"></i><b>9.4.2</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="9.4.3" data-path="section-9.html"><a href="section-9.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>9.4.3</b> Comparing Groups VIA Kernal Density</a></li>
 </ul></li>
-<li class="chapter" data-level="11.8" data-path="rbook-.html"><a href="rbook-.html#section-11.8"><i class="fa fa-check"></i><b>11.8</b> 中文</a></li>
-<li class="chapter" data-level="11.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>11.9</b> Rstudio chinese</a><ul>
-<li class="chapter" data-level="11.9.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>11.9.1</b> LaTeX Engine</a></li>
-<li class="chapter" data-level="11.9.2" data-path="rbook-.html"><a href="rbook-.html#section-11.9.2"><i class="fa fa-check"></i><b>11.9.2</b> 註記</a></li>
-<li class="chapter" data-level="11.9.3" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>11.9.3</b> Custom Templates</a></li>
-<li class="chapter" data-level="11.9.4" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>11.9.4</b> Pandoc Arguments</a></li>
+<li class="chapter" data-level="9.5" data-path="section-9.html"><a href="section-9.html#-plots"><i class="fa fa-check"></i><b>9.5</b> 合併 Plots</a></li>
+<li class="chapter" data-level="9.6" data-path="section-9.html"><a href="section-9.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>9.6</b> Add texts within the graph</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="section-9.html"><a href="section-9.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>9.6.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="9.6.2" data-path="section-9.html"><a href="section-9.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>9.6.2</b> Add mathematical annotation to a plot</a></li>
 </ul></li>
-<li class="chapter" data-level="11.10" data-path="rbook-.html"><a href="rbook-.html#section-11.10"><i class="fa fa-check"></i><b>11.10</b> 共用設定</a></li>
-<li class="chapter" data-level="11.11" data-path="rbook-.html"><a href="rbook-.html#section-11.11"><i class="fa fa-check"></i><b>11.11</b> 討論</a><ul>
-<li class="chapter" data-level="11.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>11.11.1</b> inline code</a></li>
+<li class="chapter" data-level="9.7" data-path="section-9.html"><a href="section-9.html#section-9.7"><i class="fa fa-check"></i><b>9.7</b> 函數畫圖</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>10</b> Sample and Distribution 01</a><ul>
+<li class="chapter" data-level="10.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-10.1"><i class="fa fa-check"></i><b>10.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="10.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>10.2</b> distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>11</b> Tidy Basic 01</a><ul>
+<li class="chapter" data-level="11.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>11.1</b> long and wide data</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>11.1.1</b> gather: wide to long</a></li>
+<li class="chapter" data-level="11.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>11.1.2</b> spread :long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>11.2</b> dplyr</a></li>
+<li class="chapter" data-level="11.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>11.3</b> other</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>11.3.1</b> Basic verbs</a></li>
+<li class="chapter" data-level="11.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>11.3.2</b> Group by</a></li>
+<li class="chapter" data-level="11.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>11.3.3</b> summarize()</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>12</b> gitbook introduction</a><ul>
-<li class="chapter" data-level="12.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>12.1</b> _output.yml:</a></li>
-<li class="chapter" data-level="12.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>12.2</b> _bookdown.yml:</a></li>
-<li class="chapter" data-level="12.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>12.3</b> 加入:Travis</a><ul>
-<li class="chapter" data-level="12.3.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>12.3.1</b> .travis.yml:</a></li>
-<li class="chapter" data-level="12.3.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>12.3.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="12" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>12</b> programming in R</a><ul>
+<li class="chapter" data-level="12.1" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.1"><i class="fa fa-check"></i><b>12.1</b> 條件指令</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>12.1.1</b> if</a></li>
+<li class="chapter" data-level="12.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse"><i class="fa fa-check"></i><b>12.1.2</b> ifelse的寫法</a></li>
+<li class="chapter" data-level="12.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch"><i class="fa fa-check"></i><b>12.1.3</b> switch的寫法</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.2"><i class="fa fa-check"></i><b>12.2</b> 迴圈指令</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>12.2.1</b> for-loop</a></li>
+<li class="chapter" data-level="12.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>12.2.2</b> while-loop</a></li>
+<li class="chapter" data-level="12.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>12.2.3</b> repeat-loop</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>13</b> rbook 提要</a><ul>
+<li class="chapter" data-level="13.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>13.1</b> index.Rmd</a></li>
+<li class="chapter" data-level="13.2" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i><b>13.2</b> </a></li>
+<li class="chapter" data-level="13.3" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>13.3</b> 其他_output.yml 範例</a></li>
+<li class="chapter" data-level="13.4" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>13.4</b> .travis.yml</a></li>
+<li class="chapter" data-level="13.5" data-path="rbook-.html"><a href="rbook-.html#section-13.5"><i class="fa fa-check"></i><b>13.5</b> 紀錄</a><ul>
+<li class="chapter" data-level="13.5.1" data-path="rbook-.html"><a href="rbook-.html#knitr-hook"><i class="fa fa-check"></i><b>13.5.1</b> knitr hook</a></li>
+<li class="chapter" data-level="13.5.2" data-path="rbook-.html"><a href="rbook-.html#terminal-output"><i class="fa fa-check"></i><b>13.5.2</b> terminal output</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>13.6</b> python</a></li>
+<li class="chapter" data-level="13.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>13.7</b> 產生PDF 文件</a><ul>
+<li class="chapter" data-level="13.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>13.7.1</b> Overview</a></li>
+<li class="chapter" data-level="13.7.2" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>13.7.2</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="13.7.3" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>13.7.3</b> LaTeX Packages for Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="rbook-.html"><a href="rbook-.html#section-13.8"><i class="fa fa-check"></i><b>13.8</b> 中文</a></li>
+<li class="chapter" data-level="13.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>13.9</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="13.9.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>13.9.1</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="13.9.2" data-path="rbook-.html"><a href="rbook-.html#section-13.9.2"><i class="fa fa-check"></i><b>13.9.2</b> 註記</a></li>
+<li class="chapter" data-level="13.9.3" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>13.9.3</b> Custom Templates</a></li>
+<li class="chapter" data-level="13.9.4" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>13.9.4</b> Pandoc Arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="13.10" data-path="rbook-.html"><a href="rbook-.html#section-13.10"><i class="fa fa-check"></i><b>13.10</b> 共用設定</a></li>
+<li class="chapter" data-level="13.11" data-path="rbook-.html"><a href="rbook-.html#section-13.11"><i class="fa fa-check"></i><b>13.11</b> 討論</a><ul>
+<li class="chapter" data-level="13.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>13.11.1</b> inline code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="git-note.html"><a href="git-note.html"><i class="fa fa-check"></i><b>14</b> git note</a></li>
+<li class="chapter" data-level="15" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>15</b> gitbook introduction</a><ul>
+<li class="chapter" data-level="15.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>15.1</b> _output.yml:</a></li>
+<li class="chapter" data-level="15.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>15.2</b> _bookdown.yml:</a></li>
+<li class="chapter" data-level="15.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>15.3</b> index.rmd</a></li>
+<li class="chapter" data-level="15.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-15.4"><i class="fa fa-check"></i><b>15.4</b> 執行</a></li>
+<li class="chapter" data-level="15.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>15.5</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="15.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>15.5.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="15.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>15.5.2</b> DESCRIPTION</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -385,40 +451,43 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="gitbook-introduction" class="section level1">
-<h1><span class="header-section-number">Chapter 12</span> gitbook introduction</h1>
-<p>3個地方需要注意: _output.yml _bookdown.yml index.rmd</p>
+<h1><span class="header-section-number">Chapter 15</span> gitbook introduction</h1>
+<p>3個地方需要注意:
+_output.yml
+_bookdown.yml
+index.rmd</p>
 <div id="output.yml" class="section level2">
-<h2><span class="header-section-number">12.1</span> _output.yml:</h2>
-<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="fu">bookdown:</span><span class="at">:gitbook:</span>
-  <span class="fu">css:</span><span class="at"> style.css</span>
-  <span class="fu">split_by:</span><span class="at"> chapter</span>
-  <span class="fu">config:</span>
-    <span class="fu">toc:</span>
-      <span class="fu">collapse:</span><span class="at"> subsection</span>
-      <span class="fu">before:</span><span class="at"> |</span>
-        &lt;li&gt;&lt;a href=<span class="st">&quot;./&quot;</span>&gt;A Minimal Bookdown Book&lt;/a&gt;&lt;/li&gt;
-      <span class="fu">after:</span><span class="at"> |</span>
-        <span class="fu">&lt;li&gt;&lt;a href=&quot;https:</span><span class="at">//github.com/rstudio/bookdown&quot; target=&quot;blank&quot;&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;</span>
-<span class="fu">bookdown:</span><span class="at">:pdf_book:</span>
-  <span class="fu">includes:</span>
-    <span class="fu">in_header:</span><span class="at"> preamble.tex</span>
-  <span class="fu">latex_engine:</span><span class="at"> xelatex</span>
-  <span class="fu">citation_package:</span><span class="at"> natbib</span>
-<span class="fu">bookdown:</span><span class="at">:epub_book:</span>
-  <span class="fu">stylesheet:</span><span class="at"> style.css</span>
-  </code></pre></div>
+<h2><span class="header-section-number">15.1</span> _output.yml:</h2>
+<div class="sourceCode" id="cb724"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb724-1" data-line-number="1"><span class="fu">bookdown:</span><span class="at">:gitbook:</span></a>
+<a class="sourceLine" id="cb724-2" data-line-number="2">  <span class="fu">css:</span><span class="at"> style.css</span></a>
+<a class="sourceLine" id="cb724-3" data-line-number="3">  <span class="fu">split_by:</span><span class="at"> chapter</span></a>
+<a class="sourceLine" id="cb724-4" data-line-number="4">  <span class="fu">config:</span></a>
+<a class="sourceLine" id="cb724-5" data-line-number="5">    <span class="fu">toc:</span></a>
+<a class="sourceLine" id="cb724-6" data-line-number="6">      <span class="fu">collapse:</span><span class="at"> subsection</span></a>
+<a class="sourceLine" id="cb724-7" data-line-number="7">      <span class="fu">before:</span><span class="at"> |</span></a>
+<a class="sourceLine" id="cb724-8" data-line-number="8">        &lt;li&gt;&lt;a href=<span class="st">&quot;./&quot;</span>&gt;A Minimal Bookdown Book&lt;/a&gt;&lt;/li&gt;</a>
+<a class="sourceLine" id="cb724-9" data-line-number="9">      <span class="fu">after:</span><span class="at"> |</span></a>
+<a class="sourceLine" id="cb724-10" data-line-number="10">        <span class="fu">&lt;li&gt;&lt;a href=&quot;https:</span><span class="at">//github.com/rstudio/bookdown&quot; target=&quot;blank&quot;&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb724-11" data-line-number="11"><span class="fu">bookdown:</span><span class="at">:pdf_book:</span></a>
+<a class="sourceLine" id="cb724-12" data-line-number="12">  <span class="fu">includes:</span></a>
+<a class="sourceLine" id="cb724-13" data-line-number="13">    <span class="fu">in_header:</span><span class="at"> preamble.tex</span></a>
+<a class="sourceLine" id="cb724-14" data-line-number="14">  <span class="fu">latex_engine:</span><span class="at"> xelatex</span></a>
+<a class="sourceLine" id="cb724-15" data-line-number="15">  <span class="fu">citation_package:</span><span class="at"> natbib</span></a>
+<a class="sourceLine" id="cb724-16" data-line-number="16"><span class="fu">bookdown:</span><span class="at">:epub_book:</span></a>
+<a class="sourceLine" id="cb724-17" data-line-number="17">  <span class="fu">stylesheet:</span><span class="at"> style.css</span></a>
+<a class="sourceLine" id="cb724-18" data-line-number="18">  </a></code></pre></div>
 <p>上面要修改的部分只有書名(title of book)</p>
 </div>
 <div id="bookdown.yml" class="section level2">
-<h2><span class="header-section-number">12.2</span> _bookdown.yml:</h2>
-<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml">
-<span class="fu">book_filename:</span><span class="at"> </span><span class="st">&quot;bookdown-xx&quot;</span>
-<span class="fu">chapter_name:</span><span class="at"> </span><span class="st">&quot;Chapter &quot;</span>
-<span class="fu">repo:</span><span class="at"> https://github.com/seankross/bookdown-start</span>
-<span class="fu">output_dir:</span><span class="at"> docs</span>
-<span class="fu">rmd_files:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;index.Rmd&quot;</span><span class="kw">,</span> <span class="st">&quot;01-Introduction.Rmd&quot;</span><span class="kw">,</span> <span class="st">&quot;02-Diving-In.Rmd&quot;</span><span class="kw">]</span>
-<span class="fu">clean:</span><span class="at"> </span><span class="kw">[</span>packages.bib<span class="kw">,</span> bookdown.bbl<span class="kw">]</span>
-<span class="fu">new_session:</span><span class="at"> yes</span></code></pre></div>
+<h2><span class="header-section-number">15.2</span> _bookdown.yml:</h2>
+<div class="sourceCode" id="cb725"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb725-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb725-2" data-line-number="2"><span class="fu">book_filename:</span><span class="at"> </span><span class="st">&quot;bookdown-xx&quot;</span></a>
+<a class="sourceLine" id="cb725-3" data-line-number="3"><span class="fu">chapter_name:</span><span class="at"> </span><span class="st">&quot;Chapter &quot;</span></a>
+<a class="sourceLine" id="cb725-4" data-line-number="4"><span class="fu">repo:</span><span class="at"> https://github.com/seankross/bookdown-start</span></a>
+<a class="sourceLine" id="cb725-5" data-line-number="5"><span class="fu">output_dir:</span><span class="at"> docs</span></a>
+<a class="sourceLine" id="cb725-6" data-line-number="6"><span class="fu">rmd_files:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;index.Rmd&quot;</span><span class="kw">,</span> <span class="st">&quot;01-Introduction.Rmd&quot;</span><span class="kw">,</span> <span class="st">&quot;02-Diving-In.Rmd&quot;</span><span class="kw">]</span></a>
+<a class="sourceLine" id="cb725-7" data-line-number="7"><span class="fu">clean:</span><span class="at"> </span><span class="kw">[</span>packages.bib<span class="kw">,</span> bookdown.bbl<span class="kw">]</span></a>
+<a class="sourceLine" id="cb725-8" data-line-number="8"><span class="fu">new_session:</span><span class="at"> yes</span></a></code></pre></div>
 <ul>
 <li>欄位 book_filename :書名(PDF 或EPUB)例如本例的書名為bookdown_xx.pdf。<br />
 </li>
@@ -432,53 +501,72 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
 </li>
 <li>欄位 new_session: 這也是選擇性的。如果是 new_session: yes 那麼每個RMD都在新的R連結(session)描繪(rendered)，否則在同一個session.</li>
 </ul>
-<p>::: sidebar ## new_session 注意事項 但是我注意到,new_session 設定為yes的時候,md檔案會被留下,而設定為no的時候,則不會。</p>
+<div class="sidebar">
+<h2 id="new_session-"><span class="header-section-number">15.2</span> new_session 注意事項</h2>
+<p>但是我注意到,new_session 設定為yes的時候,md檔案會被留下,而設定為no的時候,則不會。</p>
 <p>同時,在new_session=no的時候,可以指定子目錄中的RMD檔案。</p>
 <p>例如</p>
-<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="fu">language:</span>
-  <span class="fu">ui:</span>
-    <span class="fu">chapter_name:</span><span class="at"> </span><span class="st">&quot;Chapter &quot;</span>
-<span class="fu">new_session:</span><span class="at"> no</span>
-<span class="fu">after_chapter_script:</span><span class="at"> clear_vars_and_pkgs.R</span>
-<span class="fu">rmd_files:</span>
-  <span class="kw">-</span> <span class="st">&quot;index.Rmd&quot;</span>
-  <span class="kw">-</span> <span class="st">&quot;my_sub_dir/chapter1.Rmd&quot;</span>
-  <span class="kw">-</span> <span class="st">&quot;my_sub_dir/chapter2.Rmd&quot;</span></code></pre></div>
-<p>注意: new_session=yes 的時候,會產生md檔案,如果上傳到Github會被jekyll解讀 要避免這個情況發生,推測兩個解法 1. (OK) 在docs中放入.nojkeyll 這個檔案(在bash中執行指令 touch .nojkeyll)<br />
-1. (不確定)在_bookdown.yml 的欄位after_chapter_script:中指定執行指令殺掉所有md檔案<br />
-::: ## index.rmd 另外一個相關設定的地方是index.rmd 。這個檔案用來設定書的cover, 和前幾頁。因此Preface 和簡介可以放在這個檔案。這個檔案的前幾行通常是有關yaml的一些設定,例如</p>
-<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="ot">---</span>
-<span class="fu">title:</span><span class="at"> </span><span class="st">&quot;XXX title&quot;</span>
-<span class="fu">author:</span><span class="at"> </span><span class="st">&quot;len jwj cen&quot;</span>
-<span class="fu">date:</span><span class="at"> </span><span class="st">&quot;2018-1-1&quot;</span>
-<span class="fu">site:</span><span class="at"> bookdown::bookdown_site</span>
-<span class="fu">documentclass:</span><span class="at"> book</span>
-<span class="co">#bibliography: [book.bib]</span>
-<span class="co">#biblio-style: apalike</span>
-<span class="fu">link-citations:</span><span class="at"> yes</span>
-<span class="fu">github-repo:</span><span class="at"> seankross/bookdown-start</span>
-<span class="fu">url:</span><span class="at"> </span><span class="st">&#39;http\://seankross.com/bookdown-start/&#39;</span>
-<span class="fu">description:</span><span class="at"> </span><span class="st">&quot;gitbook&#39;s simple setup&quot;</span>
-<span class="ot">---</span></code></pre></div>
-<p>應該更改的有 title, author, date, github-repo, url, and description 欄位。 其他設定有 cover-image:圖檔位置。</p>
-<p>::: sidebar site: bookdown::bookdown_site 有這行就不用設定_site.yml。</p>
-<p>::: ## 執行</p>
+<div class="sourceCode" id="cb726"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb726-1" data-line-number="1"><span class="fu">language:</span></a>
+<a class="sourceLine" id="cb726-2" data-line-number="2">  <span class="fu">ui:</span></a>
+<a class="sourceLine" id="cb726-3" data-line-number="3">    <span class="fu">chapter_name:</span><span class="at"> </span><span class="st">&quot;Chapter &quot;</span></a>
+<a class="sourceLine" id="cb726-4" data-line-number="4"><span class="fu">new_session:</span><span class="at"> no</span></a>
+<a class="sourceLine" id="cb726-5" data-line-number="5"><span class="fu">after_chapter_script:</span><span class="at"> clear_vars_and_pkgs.R</span></a>
+<a class="sourceLine" id="cb726-6" data-line-number="6"><span class="fu">rmd_files:</span></a>
+<a class="sourceLine" id="cb726-7" data-line-number="7">  <span class="kw">-</span> <span class="st">&quot;index.Rmd&quot;</span></a>
+<a class="sourceLine" id="cb726-8" data-line-number="8">  <span class="kw">-</span> <span class="st">&quot;my_sub_dir/chapter1.Rmd&quot;</span></a>
+<a class="sourceLine" id="cb726-9" data-line-number="9">  <span class="kw">-</span> <span class="st">&quot;my_sub_dir/chapter2.Rmd&quot;</span></a></code></pre></div>
+<p>注意:
+new_session=yes 的時候,會產生md檔案,如果上傳到Github會被jekyll解讀
+要避免這個情況發生,推測兩個解法
+1. (OK) 在docs中放入.nojkeyll 這個檔案(在bash中執行指令 touch .nojkeyll)<br />
+1. (不確定)在_bookdown.yml 的欄位after_chapter_script:中指定執行指令殺掉所有md檔案</p>
+</div>
+</div>
+<div id="index.rmd-1" class="section level2">
+<h2><span class="header-section-number">15.3</span> index.rmd</h2>
+<p>另外一個相關設定的地方是index.rmd 。這個檔案用來設定書的cover, 和前幾頁。因此Preface 和簡介可以放在這個檔案。這個檔案的前幾行通常是有關yaml的一些設定,例如</p>
+<div class="sourceCode" id="cb727"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb727-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb727-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;XXX title&quot;</span></a>
+<a class="sourceLine" id="cb727-3" data-line-number="3"><span class="fu">author:</span><span class="at"> </span><span class="st">&quot;len jwj cen&quot;</span></a>
+<a class="sourceLine" id="cb727-4" data-line-number="4"><span class="fu">date:</span><span class="at"> </span><span class="st">&quot;2018-1-1&quot;</span></a>
+<a class="sourceLine" id="cb727-5" data-line-number="5"><span class="fu">site:</span><span class="at"> bookdown::bookdown_site</span></a>
+<a class="sourceLine" id="cb727-6" data-line-number="6"><span class="fu">documentclass:</span><span class="at"> book</span></a>
+<a class="sourceLine" id="cb727-7" data-line-number="7"><span class="co">#bibliography: [book.bib]</span></a>
+<a class="sourceLine" id="cb727-8" data-line-number="8"><span class="co">#biblio-style: apalike</span></a>
+<a class="sourceLine" id="cb727-9" data-line-number="9"><span class="fu">link-citations:</span><span class="at"> yes</span></a>
+<a class="sourceLine" id="cb727-10" data-line-number="10"><span class="fu">github-repo:</span><span class="at"> seankross/bookdown-start</span></a>
+<a class="sourceLine" id="cb727-11" data-line-number="11"><span class="fu">url:</span><span class="at"> </span><span class="st">&#39;http\://seankross.com/bookdown-start/&#39;</span></a>
+<a class="sourceLine" id="cb727-12" data-line-number="12"><span class="fu">description:</span><span class="at"> </span><span class="st">&quot;gitbook&#39;s simple setup&quot;</span></a>
+<a class="sourceLine" id="cb727-13" data-line-number="13"><span class="ot">---</span></a></code></pre></div>
+<p>應該更改的有 title, author, date, github-repo, url, and description 欄位。
+其他設定有 cover-image:圖檔位置。</p>
+<div class="sidebar">
+<p>site: bookdown::bookdown_site
+有這行就不用設定_site.yml。</p>
+</div>
+</div>
+<div id="section-15.4" class="section level2">
+<h2><span class="header-section-number">15.4</span> 執行</h2>
 <p>bookdown::render_book(“index.Rmd”)</p>
 </div>
 <div id="travis" class="section level2">
-<h2><span class="header-section-number">12.3</span> 加入:Travis</h2>
-<p>使用 Travis 產生書一需要3個檔案,這三個黨要放在github repo的根目錄: 3個檔案的前2個,可以直接從這裡複製: ### .Rbuildignore</p>
-<p>^.*.Rproj$ <sup>.Rproj.user$ </sup>.travis.yml$</p>
+<h2><span class="header-section-number">15.5</span> 加入:Travis</h2>
+<p>使用 Travis 產生書一需要3個檔案,這三個黨要放在github repo的根目錄:
+3個檔案的前2個,可以直接從這裡複製:
+### .Rbuildignore</p>
+<p>^.*.Rproj$
+<sup>.Rproj.user$
+</sup>.travis.yml$</p>
 <div id="travis.yml-1" class="section level3">
-<h3><span class="header-section-number">12.3.1</span> .travis.yml:</h3>
-<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="fu">language:</span><span class="at"> r</span>
-<span class="fu">cache:</span><span class="at"> packages</span>
-
-<span class="fu">script:</span>
-  <span class="kw">-</span> <span class="fu">Rscript -e &#39;bookdown:</span><span class="at">:render_book(&quot;index.rmd&quot;)&#39;</span></code></pre></div>
+<h3><span class="header-section-number">15.5.1</span> .travis.yml:</h3>
+<div class="sourceCode" id="cb728"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb728-1" data-line-number="1"><span class="fu">language:</span><span class="at"> r</span></a>
+<a class="sourceLine" id="cb728-2" data-line-number="2"><span class="fu">cache:</span><span class="at"> packages</span></a>
+<a class="sourceLine" id="cb728-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb728-4" data-line-number="4"><span class="fu">script:</span></a>
+<a class="sourceLine" id="cb728-5" data-line-number="5">  <span class="kw">-</span> <span class="fu">Rscript -e &#39;bookdown:</span><span class="at">:render_book(&quot;index.rmd&quot;)&#39;</span></a></code></pre></div>
 </div>
 <div id="description" class="section level3">
-<h3><span class="header-section-number">12.3.2</span> DESCRIPTION</h3>
+<h3><span class="header-section-number">15.5.2</span> DESCRIPTION</h3>
 <p>要讓travis誤認為package 所以,只是放著,內容不管</p>
 <pre><code>Package: placeholder
 Title: Does not matter.
@@ -503,12 +591,14 @@ Remotes: rstudio/bookdown</code></pre>
 
 
 
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="rbook-.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git-note.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -545,7 +635,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
+    var src = "true";
     if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
