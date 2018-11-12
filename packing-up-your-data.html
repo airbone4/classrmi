@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="data-type.html">
-<link rel="next" href="file-system.html">
+<link rel="prev" href="r-packages.html">
+<link rel="next" href="environments.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -481,383 +481,111 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="regular-expression-syntax" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Regular expression syntax</h1>
-<p>利用一些特殊字元，例如 <code>$ * + . ? [ ] ^ { } | ( ) \</code>構成Regular expressions，用來在文字中表達某些搜尋樣式的語法。 這裡只是簡短的介紹</p>
-<div id="functions-which-work-with-regular-expression-patterns" class="section level4">
-<h4><span class="header-section-number">3.0.0.1</span> Functions which work with regular expression patterns</h4>
-<ul>
-<li>strsplit: split string into substrings at occurances of regexp</li>
-<li>grep: search for a regular expression within a string</li>
-<li>sub: search and then replace an occurance of a regular expression in a strng</li>
-<li>gsub: global search and replace all occurances of a regular expression in a string</li>
-</ul>
+<div id="packing-up-your-data" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Packing up your data</h1>
+<div id="preliminaries" class="section level2">
+<h2><span class="header-section-number">8.1</span> Preliminaries</h2>
+<p>Rstudio, package <code>devtools</code> , RMD 常識。</p>
 </div>
-<div id="escape-sequences" class="section level3">
-<h3><span class="header-section-number">3.0.1</span> Escape sequences</h3>
-<p>正規表達式中<code>.</code>代表任意字元,但是如果我們要在字串中查找“.”(例如,檔案名稱中的點) 的時候要怎樣表示?答案是使用逃逸字元<code>\</code>。但是在R語言中,正規表達式，也是使用字串，可是在字串中,<code>\</code>本身就逃逸字元，因此需要<code>\\.</code>。</p>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb283-1" data-line-number="1">dot &lt;-<span class="st"> &quot;</span><span class="ch">\\</span><span class="st">.&quot;</span></a>
-<a class="sourceLine" id="cb283-2" data-line-number="2"><span class="kw">writeLines</span>(dot)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>\.
-</code></pre>
-<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb284-1" data-line-number="1">x &lt;-<span class="st"> &quot;a</span><span class="ch">\\</span><span class="st">b&quot;</span></a>
-<a class="sourceLine" id="cb284-2" data-line-number="2"><span class="kw">writeLines</span>(x)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>a\b
-</code></pre>
-<div id="grep-grepl" class="section level4">
-<h4><span class="header-section-number">3.0.1.1</span> grep, grepl</h4>
-<p>grep,grepl的差別是後者不支援參數value，且比對的結果和搜尋內容的個數相同。</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb285-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 2
-</code></pre>
-<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb286-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>),<span class="dt">value=</span><span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "a.c"
-</code></pre>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb287-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] FALSE  TRUE FALSE
-</code></pre>
-<p>又另一個例子,是在字串中尋找單引號,假定要在國家中找尋是否有名稱包含單引號的名字,可以使用<code>'\''</code>
-問題:為甚麼不是<code>'\\''</code>
-hint:
-這裡的逃逸字元只是字串的標準用法,<code>'</code>不是正規表達式的特殊字元。</p>
-<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1">country&lt;-<span class="kw">read.delim</span>(<span class="st">&#39;resources/country.txt&#39;</span>,<span class="dt">header=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb288-2" data-line-number="2"><span class="kw">names</span>(country)&lt;-<span class="st">&quot;Name&quot;</span> </a>
-<a class="sourceLine" id="cb288-3" data-line-number="3">cname &lt;-<span class="kw">levels</span>(country<span class="op">$</span>Name)</a>
-<a class="sourceLine" id="cb288-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&#39;</span><span class="ch">\&#39;</span><span class="st">&#39;</span>, cname, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "Cote d'Ivoire"
-</code></pre>
-<p>note:
-* 不是country.names&lt;-“Name”</p>
-<p>問題:下面兩行有甚麼差別?</p>
-<pre><code>grep(&#39;\&#39;&#39;, country$Name, value = TRUE)
-grep(&#39;\&#39;&#39;, levels(country$Name), value = TRUE)
-</code></pre>
-<p>Hint: levels 傳回唯一值</p>
-<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1"><span class="kw">levels</span>(<span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>)))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "a" "b"
-</code></pre>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb291-1" data-line-number="1"><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] a b a
-Levels: a b
-</code></pre>
-</div>
-<div id="regexpr-gregexpr" class="section level4">
-<h4><span class="header-section-number">3.0.1.2</span> regexpr, gregexpr</h4>
-<p><code>regexpr</code> 函數的使用方式類似<code>grepl</code>。傳回整數向量(表示符合位置，如果找不到,則傳回-1),個數和比對字串串列相同。這個向量同時有屬性<code>match.length</code>(參考範例) .</p>
-<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb292-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9&quot;</span></a>
-<a class="sourceLine" id="cb292-2" data-line-number="2"><span class="kw">regexpr</span>(<span class="st">&#39;b&#39;</span>,s )</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 3
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb293-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;.&#39;</span>,s ) <span class="co"># 要定位符號「.」,這是錯的,\.也錯</span></a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 1
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb294-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">.&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 2
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb295-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;[.]&#39;</span>,s ) <span class="co"># 正確 ,不需要regexpr(&#39;[\\.]&#39;,s )</span></a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 2
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb296-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">d&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 7
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb297-1" data-line-number="1">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) <span class="co"># 正確</span></a>
-<a class="sourceLine" id="cb297-2" data-line-number="2"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 1
-</code></pre>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb298-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
-<a class="sourceLine" id="cb298-2" data-line-number="2">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a>
-<a class="sourceLine" id="cb298-3" data-line-number="3">x</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 7
-attr(,"match.length")
-[1] 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb299-1" data-line-number="1"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 1
-</code></pre>
-<p><code>gregexpr()</code> 和 <code>regexpr()</code>一樣,不同的是會在目標字串中搜尋所有符合的位置而不是只找第一個(g:全局)。 因此傳回的結果個數雖然和查找的串列元素個數一樣,但是每個元素都是一個向量。如果都沒找到,只有一個-1。</p>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb300-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
-<a class="sourceLine" id="cb300-2" data-line-number="2"> <span class="kw">gregexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[[1]]
-[1]  7  9 11
-attr(,"match.length")
-[1] 1 1 1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
+<div id="what-is-a-package" class="section level2">
+<h2><span class="header-section-number">8.2</span> What is a package?</h2>
+<p>最小的套件一般包括一個根目錄，下有一個子目錄<code>R\</code>，一個檔案 <code>DESCRIPTION</code>(package叫什麼名子，依賴於哪些其他套件).</p>
+<p>???
+When you load a package with <code>library</code> or <code>require</code>, R looks in the package directory and runs the stuff<code>.R</code> files in <code>R/</code>.</p>
+<div id="section-8.2.1" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> 也可以包含資料</h3>
+<p>資料一般位於子目錄 <code>data/</code> 中。副檔名一般是<code>.RData</code>, <code>.csv</code>, <code>.R</code>。但是不受限制。<br />
+有三個方法可以從套件存取資料。例如，</p>
+<ol style="list-style-type: decimal">
+<li>::</li>
+</ol>
+<div class="sourceCode" id="cb534"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb534-1" data-line-number="1">ggplot2<span class="op">::</span>diamonds <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li><code>library()</code></li>
+</ol>
+<div class="sourceCode" id="cb535"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb535-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb535-2" data-line-number="2">diamonds <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</a></code></pre></div>
+<ol start="3" style="list-style-type: decimal">
+<li><code>data()</code></li>
+</ol>
+<div class="sourceCode" id="cb536"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb536-1" data-line-number="1"><span class="kw">data</span>(<span class="st">&quot;diamonds&quot;</span>, <span class="dt">package=</span><span class="st">&quot;ggplot2&quot;</span>)</a>
+<a class="sourceLine" id="cb536-2" data-line-number="2"><span class="kw">ls</span>()</a></code></pre></div>
+<p>note: 2,3 的不同是，後者直接導入<code>global</code>空間。</p>
 </div>
 </div>
-<div id="section-3.0.2" class="section level3">
-<h3><span class="header-section-number">3.0.2</span> 應用</h3>
-<p>產生3個檔案,檔案名稱含有cat</p>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb301-1" data-line-number="1"><span class="kw">file.create</span>(<span class="kw">c</span>(<span class="st">&quot;xcat1.rmd&quot;</span>, <span class="st">&quot;ycat2.txt&quot;</span>, <span class="st">&quot;zcat3.rmd&quot;</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] TRUE TRUE TRUE
-</code></pre>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb302-1" data-line-number="1">files&lt;-<span class="kw">list.files</span>(<span class="st">&quot;.&quot;</span>)</a>
-<a class="sourceLine" id="cb302-2" data-line-number="2"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "xcat1.rmd" "ycat2.txt" "zcat3.rmd"
-</code></pre>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb303-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 60 62 63
-</code></pre>
-<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb304-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;cat&quot;</span>, files)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code> [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[12] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[34] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[45] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[56] FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE
-</code></pre>
-</div>
-<div id="quantifiers" class="section level3">
-<h3><span class="header-section-number">3.0.3</span> 數量修飾詞Quantifiers</h3>
-<p>指定重複次數.</p>
-<ul>
-<li><code>*</code>: 至少0個。<br />
-</li>
-<li><code>+</code>: 至少一個.<br />
-</li>
-<li><code>?</code>: 最多一個.<br />
-</li>
-<li><code>{n}</code>: 剛好n個.<br />
-</li>
-<li><code>{n,}</code>: 至少n個.<br />
-</li>
-<li><code>{n,m}</code>: 次數在 n 到 m 之間(包括n,m).</li>
-</ul>
-<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb305-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;acb&quot;</span>, <span class="st">&quot;accb&quot;</span>, <span class="st">&quot;acccb&quot;</span>, <span class="st">&quot;accccb&quot;</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "a"      "ab"     "acb"    "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb306-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac*b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "ab"     "acb"    "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb307-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac+b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "acb"    "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb308-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac?b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "ab"  "acb"
-</code></pre>
-<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb309-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "accb"
-</code></pre>
-<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb310-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "accb"   "acccb"  "accccb"
-</code></pre>
-<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb311-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,3}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "accb"  "acccb"
-</code></pre>
-<div id="exercise" class="section level4">
-<h4><span class="header-section-number">3.0.3.1</span> Exercise</h4>
-<p>Find all countries with <code>ee</code> in Gapminder using quantifiers.</p>
-<pre style="border: 1px grey dotted;"><code>[1] "Greece"
-</code></pre>
+<div id="section-8.3" class="section level2">
+<h2><span class="header-section-number">8.3</span> 怎樣自訂套件</h2>
+<div id="devtools-package-skeleton" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> 利用<code>devtools</code> 建立骨架(package skeleton)</h3>
+<div id="with-the-slightly-less-easy-way" class="section level4">
+<h4><span class="header-section-number">8.3.1.1</span> With (the slightly less easy way)</h4>
+<ol style="list-style-type: decimal">
+<li>建立套件骨架 <code>devtools::create('~/mypackage')</code>.</li>
+<li>編輯 <code>DESCRIPTION</code>.</li>
+<li>程式碼放入子目錄 <code>R/</code>.</li>
+</ol>
 </div>
 </div>
-<div id="position-of-pattern-within-the-string" class="section level3">
-<h3><span class="header-section-number">3.0.4</span> Position of pattern within the string</h3>
-<ul>
-<li><code>^</code>: 字串開頭.<br />
-</li>
-<li><code>$</code>: 字串結尾.<br />
-</li>
-<li><code>\b</code>: 左右都空白的 <em>word</em>.<br />
-</li>
-<li><code>\B</code>: 左右不是空白 <em>word</em>.</li>
-</ul>
-<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb312-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;cdab&quot;</span>, <span class="st">&quot;cabd&quot;</span>, <span class="st">&quot;c abd&quot;</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
-</code></pre>
-<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb313-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
-</code></pre>
-<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb314-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"
-</code></pre>
-<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb315-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab$&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "cdab"
-</code></pre>
-<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb316-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abcd"  "c abd"
-</code></pre>
-<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1]  1 -1 -1  3
-attr(,"match.length")
-[1]  2 -1 -1  2
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb318-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">Bab&quot;</span>, strings)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] -1  3  2 -1
-attr(,"match.length")
-[1] -1  2  2 -1
-attr(,"index.type")
-[1] "chars"
-attr(,"useBytes")
-[1] TRUE
-</code></pre>
-<div id="exercise-1" class="section level4">
-<h4><span class="header-section-number">3.0.4.1</span> Exercise</h4>
-<p>Find all <code>.txt</code> files in the repository.</p>
-<pre style="border: 1px grey dotted;"><code>[1] "ycat2.txt"
-</code></pre>
-<pre style="border: 1px grey dotted;"><code>[1] "ycat2.txt"
-</code></pre>
+<div id="section-8.3.2" class="section level3">
+<h3><span class="header-section-number">8.3.2</span> 工作流程</h3>
+<div id="section-8.3.2.1" class="section level4">
+<h4><span class="header-section-number">8.3.2.1</span> 測試</h4>
+<p>如果目前的工作目錄就是套件根目錄，那麼加入資料和寫完程式碼以後，就可以使用指令<code>devtools::load_all()</code>，或是利用Rstudio 的按鍵。可以參考<a href="http://r-pkgs.had.co.nz/r.html#r-workflow">這裡</a>。</p>
+</div>
+<div id="installed-package-workflow" class="section level4">
+<h4><span class="header-section-number">8.3.2.2</span> Installed package workflow</h4>
+<p>如果套件已經安裝，並且被其他的專案中使用，那麼程式碼變動的話，就必須3個步驟</p>
+<ol style="list-style-type: decimal">
+<li>Edit code (or add data).</li>
+<li>Re-generate documentation and namespace: <code>devtools::document('/path/to/pkg')</code></li>
+<li>Install: <code>devtools::install('/path/to/pkg')</code>.</li>
+<li>Reload: <code>devtools::reload(inst('pkg'))</code>.</li>
+</ol>
 </div>
 </div>
-<div id="operators" class="section level3">
-<h3><span class="header-section-number">3.0.5</span> Operators</h3>
-<ul>
-<li><code>.</code>: 任意字元。<br />
-</li>
-<li><code>[...]</code>: 例如,[ade] 3個字元其中一個。[a-e],a到e.<br />
-</li>
-<li><code>[^...]</code>: 除了<a href="rbook-.html#section-3"></a>指定的字元，非[…]的意思。.<br />
-</li>
-<li><code>\</code>: 抑制下列字元在字串,<code>&quot;&quot;</code>,中的特殊意思 <code>$ * + . ? [ ] ^ { } | ( ) \</code>, 只是在R中,因為<code>\</code>又有特殊意義 ,因此必須雙<code>\</code>例如 <code>\\$</code>。<br />
-</li>
-<li><code>|</code>: 或.<br />
-</li>
-<li><code>(...)</code>: 字元組,根據出現的順序,可以用 <code>\\N</code>識別( <strong>backreference</strong>).</li>
-</ul>
-<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;^ab&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abd&quot;</span>, <span class="st">&quot;abe&quot;</span>, <span class="st">&quot;ab 12&quot;</span>))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb320-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab.&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abc"   "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb321-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[c-e]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abc" "abd" "abe"
-</code></pre>
-<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb322-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[^c]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb323-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "ab"    "abc"   "abd"   "abe"   "ab 12"
-</code></pre>
-<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb324-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "^ab"
-</code></pre>
-<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb325-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;abc|abd&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "abc" "abd"
-</code></pre>
-<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb326-1" data-line-number="1"><span class="kw">gsub</span>(<span class="st">&quot;(ab) 12&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1 34&quot;</span>, strings) </a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 34"
-</code></pre>
-<p>note:
-要讓<code>.</code>失效，可以<code>[.]</code>或 <code>\\.</code> 表示。</p>
-<div id="excercise" class="section level4">
-<h4><span class="header-section-number">3.0.5.1</span> Excercise</h4>
-<p>找出國名中間有字元<code>i</code> <code>t</code> 並且將<code>land</code>結尾的字串改為大寫。例如,Finland-&gt;FinLAND</p>
-<pre style="border: 1px grey dotted;"><code>[1] "FinLAND"     "IceLAND"     "IreLAND"     "SwaziLAND"   "SwitzerLAND"
-[6] "ThaiLAND"   
-</code></pre>
+<div id="documentation-and-exports" class="section level3">
+<h3><span class="header-section-number">8.3.3</span> Documentation and exports</h3>
+<p>當套建立用指令<code>library()</code>載入時，預設上，所有的變數和函數都是 <strong>private</strong> 並不會被加入到 global環境。 而檔案<code>NAMESPACE</code> 則是用來指定要__public__的函數。
+如果不想要手動編輯檔案<code>NAMESPACE</code>，則可以使用特殊指令，產生如下的格式：</p>
+<div class="sourceCode" id="cb537"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb537-1" data-line-number="1"><span class="co">#&#39; Short description of what this does</span></a>
+<a class="sourceLine" id="cb537-2" data-line-number="2"><span class="co">#&#39;</span></a>
+<a class="sourceLine" id="cb537-3" data-line-number="3"><span class="co">#&#39; Longer description of what this does. Approximately a paragraph.</span></a>
+<a class="sourceLine" id="cb537-4" data-line-number="4"><span class="co">#&#39;</span></a>
+<a class="sourceLine" id="cb537-5" data-line-number="5"><span class="co">#&#39; @param x The first thing</span></a>
+<a class="sourceLine" id="cb537-6" data-line-number="6"><span class="co">#&#39; @param y The second thing.</span></a>
+<a class="sourceLine" id="cb537-7" data-line-number="7"><span class="co">#&#39; @return The thing that comes out of this function</span></a>
+<a class="sourceLine" id="cb537-8" data-line-number="8"><span class="co">#&#39;</span></a>
+<a class="sourceLine" id="cb537-9" data-line-number="9"><span class="co">#&#39; @export (do export this in NAMESPACE)</span></a>
+<a class="sourceLine" id="cb537-10" data-line-number="10">a_function &lt;-<span class="st"> </span><span class="cf">function</span>(x,y) {</a>
+<a class="sourceLine" id="cb537-11" data-line-number="11">  return x<span class="op">+</span>y</a>
+<a class="sourceLine" id="cb537-12" data-line-number="12">}</a></code></pre></div>
+<p>然後利用指令， <code>devtools::document()</code>, 會自動更新 <code>NAMESPACE</code> 並建立函數相關的說明檔。例如， <code>man/a_function.Rd</code>. 這樣這個函數，就像其他一般的函數一樣，可以求助，也可以在指令<code>library()</code>之後呼叫調用。</p>
+<p>如果只是自行測試，指令 <code>devtools::load_all()</code>就可以了。
+但是通常要散發，也就是利用 <code>devtools::install()</code> 安裝套件。</p>
 </div>
 </div>
-<div id="character-classes" class="section level3">
-<h3><span class="header-section-number">3.0.6</span> Character classes</h3>
-<p>預設字元分類例如 numbers, letters, 分類。
-開頭<code>[:</code> 結尾 <code>:]</code> ，另一種簡寫方式為利用 <code>\</code> 。</p>
-<ul>
-<li><code>[:digit:]</code> or <code>\d</code>: 數字,等同 <code>[0-9]</code>.<br />
-</li>
-<li><code>\D</code>: 非數字,等同 <code>[^0-9]</code>.<br />
-</li>
-<li><code>[:lower:]</code>: 小寫,等同 <code>[a-z]</code>.<br />
-</li>
-<li><code>[:upper:]</code>: 大寫,等同 <code>[A-Z]</code>.<br />
-</li>
-<li><code>[:alpha:]</code>: 字母,等同 <code>[[:lower:][:upper:]]</code> or <code>[A-z]</code>.<br />
-</li>
-<li><code>[:alnum:]</code>: 等同 <code>[[:alpha:][:digit:]]</code> 或 <code>[A-z0-9]</code>.<br />
-</li>
-<li><code>\w</code>: word characters, equivalent to <code>[[:alnum:]_]</code> or <code>[A-z0-9_]</code>.<br />
-</li>
-<li><code>\W</code>: not word, equivalent to <code>[^A-z0-9_]</code>.<br />
-</li>
-<li><code>[:xdigit:]</code>: hexadecimal digits (base 16), 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f, equivalent to <code>[0-9A-Fa-f]</code>.</li>
-<li><code>[:blank:]</code>: blank characters, i.e. space and tab.<br />
-</li>
-<li><code>[:space:]</code>: space characters: tab, newline, vertical tab, form feed, carriage return, space.</li>
-<li><code>\s</code>: space, <code></code>.<br />
-</li>
-<li><code>\S</code>: not space.<br />
-</li>
-<li><code>[:punct:]</code>: punctuation characters, ! &quot; # $ % &amp; ’ ( ) * + , - . / : ; &lt; = &gt; ? @ [  ] ^ _ ` { | } ~.</li>
-<li><code>[:graph:]</code>: graphical (human readable) characters: equivalent to <code>[[:alnum:][:punct:]]</code>.</li>
-<li><code>[:print:]</code>: printable characters, equivalent to <code>[[:alnum:][:punct:]\\s]</code>.</li>
-<li><code>[:cntrl:]</code>: control characters, like <code>\n</code> or <code>\r</code>, <code>[\x00-\x1F\x7F]</code>.</li>
-</ul>
-<p>Note:</p>
-<ul>
-<li><code>[:...:]</code> 必須寫在中括號中, 例如 <code>[[:digit:]]</code>.<br />
-</li>
-<li><code>\</code> 注意 <code>\\d</code>. 和 <code>\t</code>的區別。</li>
-</ul>
-
-</div>
-<div id="attribute" class="section level2">
-<h2><span class="header-section-number">3.1</span> attribute</h2>
-<p>oth the names and the dimensions of matrices and arrays are stored in R as attributes of the object. These attributes can be seen as labeled values you can attach to any object.</p>
-<p>They form one of the mechanisms R uses to define specific object types like dates, time series, and so on. They can include any kind of information, and you can use them yourself to add information to any object.</p>
-<p>To see all the attributes of an object, you can use the attributes() function. You can see all the attributes of my.array like this:</p>
-<blockquote>
-<p>attributes(my.array)
-$dim
-<a href="programming-in-r.html#section-2">1</a> 3 4 2
-This function returns a named list, where each item in the list is an attribute. Each attribute can, on itself, be a list again. For example, the attribute dimnames is actually a list containing the row and column names of a matrix.</p>
-</blockquote>
-<p>You can check that for yourself by checking the output of attributes(baskets.team). You can set all attributes as a named list as well. You find examples of that in the Help file ?attributes.</p>
-<p>To get or set a single attribute, you can use the attr() function. This function takes two important arguments. The first argument is the object you want to examine, and the second argument is the name of the attribute you want to see or change. If the attribute you ask for doesn’t exist, R simply returns NULL.</p>
-<p>Imagine you want to add which season Granny and Geraldine scored the baskets mentioned in baskets.team. You can do this with the following code:</p>
-<blockquote>
-<p>attr(baskets.team,‘season’) &lt;- ‘2010-2011’
-To get the value of this attribute returned, you can then use following code:</p>
-</blockquote>
-<blockquote>
-<p>attr(baskets.team,‘season’)
-<a href="programming-in-r.html#section-2">1</a> “2010-2011”
-You can delete attributes again by setting their value to NULL, like this:</p>
-</blockquote>
-<blockquote>
-<p>attr(baskets.team,‘season’) &lt;- NULL</p>
-</blockquote>
+<div id="section-8.4" class="section level2">
+<h2><span class="header-section-number">8.4</span> 資料放入套件</h2>
+<p>最簡單的方法，直接將資料檔 (<code>.RData</code>, <code>.csv</code>, etc.)置於
+<code>data/</code>子目錄。</p>
+<p>比較不會出錯的方式是利用<code>usethis</code>套件（取代舊版 <code>devtools</code> )。
+基本上用到兩個函數
+userthis::use_data_raw()
+userthis::use_data()</p>
+<ol style="list-style-type: decimal">
+<li><code>usethis::use_data_raw()</code>，會建立子目錄<code>data-raw/</code>:</li>
+<li>在<code>data-raw/</code>子目錄中，放進非R格式的資料，例如，csv檔案。</li>
+<li><p>處理資料的程式碼，任意Rscript 名稱，然後手動執行，（不會被自動執行）置於 <code>data-raw/</code> ，如下：</p>
+<div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb538-1" data-line-number="1">experiment1 &lt;-</a>
+<a class="sourceLine" id="cb538-2" data-line-number="2"><span class="st">  </span><span class="kw">read.csv</span>(<span class="st">&#39;expt1.csv&#39;</span>) </a>
+<a class="sourceLine" id="cb538-3" data-line-number="3">usethis<span class="op">::</span><span class="kw">use_data</span>(experiment1)</a></code></pre></div>
+<p>This saves <code>data/experiment1.RData</code> in your package directory (make sure you’ve <code>setwd()</code> to the package directory…)</p></li>
+<li><p>測試:</p>
+<div class="sourceCode" id="cb539"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb539-1" data-line-number="1">devtools<span class="op">::</span><span class="kw">load_all</span>()</a>
+<a class="sourceLine" id="cb539-2" data-line-number="2">experiment1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</a>
+<a class="sourceLine" id="cb539-3" data-line-number="3"><span class="co">## or use data() to put it in the global environment</span></a>
+<a class="sourceLine" id="cb539-4" data-line-number="4"><span class="kw">data</span>(<span class="st">&quot;experiment1&quot;</span>)</a></code></pre></div></li>
+</ol>
 
 </div>
 </div>
@@ -866,8 +594,8 @@ You can delete attributes again by setting their value to NULL, like this:</p>
           </div>
         </div>
       </div>
-<a href="data-type.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="file-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="r-packages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="environments.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -887,7 +615,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/regular_expression.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/RPackages.Rmd",
 "text": "Edit"
 },
 "download": null,

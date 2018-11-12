@@ -25,14 +25,14 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-10">
+<meta name="date" content="2018-11-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="programming-in-r.html">
+<link rel="prev" href="econometrics.html">
 <link rel="next" href="git-note.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -240,10 +240,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.4.1</b> Note about Windows</a></li>
 <li class="chapter" data-level="4.4.2" data-path="file-system.html"><a href="file-system.html#section-4.4.2"><i class="fa fa-check"></i><b>4.4.2</b> 和工作區相關的指令</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a></li>
+<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#section-4.5"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="file-system.html"><a href="file-system.html#section-4.5.1"><i class="fa fa-check"></i><b>4.5.1</b> 一般的開檔/關檔過程</a></li>
+</ul></li>
 <li class="chapter" data-level="4.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.6</b> write csv</a><ul>
 <li class="chapter" data-level="4.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.6.1</b> data.frame to CSV</a></li>
 </ul></li>
+<li class="chapter" data-level="4.7" data-path="file-system.html"><a href="file-system.html#r"><i class="fa fa-check"></i><b>4.7</b> R語言的檔案格式</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>5</b> Functions</a><ul>
 <li class="chapter" data-level="5.1" data-path="functions.html"><a href="functions.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
@@ -291,143 +294,171 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>5.9</b> Quiz answers</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>6</b> Data</a></li>
+<li class="chapter" data-level="6" data-path="section-6.html"><a href="section-6.html"><i class="fa fa-check"></i><b>6</b> 資料探索</a><ul>
+<li class="chapter" data-level="6.1" data-path="section-6.html"><a href="section-6.html#wooldriidge-"><i class="fa fa-check"></i><b>6.1</b> 來自wooldriidge 的資料集</a></li>
+<li class="chapter" data-level="6.2" data-path="section-6.html"><a href="section-6.html#section"><i class="fa fa-check"></i><b>6.2</b> </a><ul>
+<li class="chapter" data-level="6.2.1" data-path="section-6.html"><a href="section-6.html#manually-enter-raw-data-from-wooldridge-table-c.3"><i class="fa fa-check"></i><b>6.2.1</b> Manually enter raw data from Wooldridge, Table C.3:</a></li>
+<li class="chapter" data-level="6.2.2" data-path="section-6.html"><a href="section-6.html#calculate-change-the-parentheses-just-display-the-results"><i class="fa fa-check"></i><b>6.2.2</b> Calculate Change (the parentheses just display the results):</a></li>
+<li class="chapter" data-level="6.2.3" data-path="section-6.html"><a href="section-6.html#ingredients-to-ci-formula"><i class="fa fa-check"></i><b>6.2.3</b> Ingredients to CI formula</a></li>
+<li class="chapter" data-level="6.2.4" data-path="section-6.html"><a href="section-6.html#confidence-intervall"><i class="fa fa-check"></i><b>6.2.4</b> Confidence intervall:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="section-6.html"><a href="section-6.html#misc-1"><i class="fa fa-check"></i><b>6.3</b> misc</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>7</b> R Packages</a><ul>
 <li class="chapter" data-level="7.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 基本</a><ul>
 <li class="chapter" data-level="7.1.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1.1"><i class="fa fa-check"></i><b>7.1.1</b> 套件在哪裡</a></li>
-<li class="chapter" data-level="7.1.2" data-path="r-packages.html"><a href="r-packages.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 哪個函數屬於哪個套件?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="r-packages.html"><a href="r-packages.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 搜尋套建中的檔案</a></li>
+<li class="chapter" data-level="7.1.3" data-path="r-packages.html"><a href="r-packages.html#section-7.1.3"><i class="fa fa-check"></i><b>7.1.3</b> 哪個函數屬於哪個套件?</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>7.2</b> <code>library()</code> vs <code>require()</code></a><ul>
-<li class="chapter" data-level="7.2.1" data-path="r-packages.html"><a href="r-packages.html#reference"><i class="fa fa-check"></i><b>7.2.1</b> reference</a></li>
-</ul></li>
+<li class="chapter" data-level="7.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>7.2</b> <code>library()</code> vs <code>require()</code></a></li>
 <li class="chapter" data-level="7.3" data-path="r-packages.html"><a href="r-packages.html#debug"><i class="fa fa-check"></i><b>7.3</b> 測試debug</a></li>
 <li class="chapter" data-level="7.4" data-path="r-packages.html"><a href="r-packages.html#-package"><i class="fa fa-check"></i><b>7.4</b> 自製 package</a><ul>
 <li class="chapter" data-level="7.4.1" data-path="r-packages.html"><a href="r-packages.html#-package-"><i class="fa fa-check"></i><b>7.4.1</b> 自製 package 範例</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>8</b> Environments</a><ul>
-<li class="chapter" data-level="8.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a><ul>
+<li class="chapter" data-level="8" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html"><i class="fa fa-check"></i><b>8</b> Packing up your data</a><ul>
+<li class="chapter" data-level="8.1" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#preliminaries"><i class="fa fa-check"></i><b>8.1</b> Preliminaries</a></li>
+<li class="chapter" data-level="8.2" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#what-is-a-package"><i class="fa fa-check"></i><b>8.2</b> What is a package?</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 也可以包含資料</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.3"><i class="fa fa-check"></i><b>8.3</b> 怎樣自訂套件</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#devtools-package-skeleton"><i class="fa fa-check"></i><b>8.3.1</b> 利用<code>devtools</code> 建立骨架(package skeleton)</a></li>
+<li class="chapter" data-level="8.3.2" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.3.2"><i class="fa fa-check"></i><b>8.3.2</b> 工作流程</a></li>
+<li class="chapter" data-level="8.3.3" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#documentation-and-exports"><i class="fa fa-check"></i><b>8.3.3</b> Documentation and exports</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.4"><i class="fa fa-check"></i><b>8.4</b> 資料放入套件</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>9</b> Environments</a><ul>
+<li class="chapter" data-level="9.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>9.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#quiz"><i class="fa fa-check"></i>Quiz</a></li>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>8.2</b> Environment basics</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>8.2.1</b> Basics</a></li>
-<li class="chapter" data-level="8.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>8.2.2</b> Important environments</a></li>
-<li class="chapter" data-level="8.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>8.2.3</b> Parents</a></li>
-<li class="chapter" data-level="8.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>8.2.4</b> Getting and setting</a></li>
-<li class="chapter" data-level="8.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>8.2.5</b> Finalisers</a></li>
-<li class="chapter" data-level="8.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>8.2.6</b> Advanced bindings</a></li>
-<li class="chapter" data-level="8.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>8.2.7</b> Exercises</a></li>
+<li class="chapter" data-level="9.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>9.2</b> Environment basics</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>9.2.1</b> Basics</a></li>
+<li class="chapter" data-level="9.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>9.2.2</b> Important environments</a></li>
+<li class="chapter" data-level="9.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>9.2.3</b> Parents</a></li>
+<li class="chapter" data-level="9.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>9.2.4</b> Getting and setting</a></li>
+<li class="chapter" data-level="9.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>9.2.5</b> Finalisers</a></li>
+<li class="chapter" data-level="9.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>9.2.6</b> Advanced bindings</a></li>
+<li class="chapter" data-level="9.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>9.2.7</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>8.3</b> Recursing over environments</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>8.3.1</b> Exercises</a></li>
+<li class="chapter" data-level="9.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>9.3</b> Recursing over environments</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>9.3.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>8.4</b> Special environments</a><ul>
-<li class="chapter" data-level="8.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>8.4.1</b> Package environments and the search path</a></li>
-<li class="chapter" data-level="8.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>8.4.2</b> The function environment</a></li>
-<li class="chapter" data-level="8.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>8.4.3</b> Namespaces</a></li>
-<li class="chapter" data-level="8.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>8.4.4</b> Execution environments</a></li>
-<li class="chapter" data-level="8.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>8.4.5</b> Exercises</a></li>
+<li class="chapter" data-level="9.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>9.4</b> Special environments</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>9.4.1</b> Package environments and the search path</a></li>
+<li class="chapter" data-level="9.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>9.4.2</b> The function environment</a></li>
+<li class="chapter" data-level="9.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>9.4.3</b> Namespaces</a></li>
+<li class="chapter" data-level="9.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>9.4.4</b> Execution environments</a></li>
+<li class="chapter" data-level="9.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>9.4.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>8.5</b> The call stack</a><ul>
-<li class="chapter" data-level="8.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>8.5.1</b> Simple call stacks</a></li>
-<li class="chapter" data-level="8.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>8.5.2</b> Lazy evaluation</a></li>
-<li class="chapter" data-level="8.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>8.5.3</b> Frames</a></li>
-<li class="chapter" data-level="8.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>8.5.4</b> Dynamic scope</a></li>
-<li class="chapter" data-level="8.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>8.5.5</b> Exercises</a></li>
+<li class="chapter" data-level="9.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>9.5</b> The call stack</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>9.5.1</b> Simple call stacks</a></li>
+<li class="chapter" data-level="9.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>9.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="9.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>9.5.3</b> Frames</a></li>
+<li class="chapter" data-level="9.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>9.5.4</b> Dynamic scope</a></li>
+<li class="chapter" data-level="9.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>9.5.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="8.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>8.6</b> As data structures</a></li>
-<li class="chapter" data-level="8.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>8.7</b> <code>&lt;&lt;-</code></a><ul>
-<li class="chapter" data-level="8.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>8.7.1</b> Exercises</a></li>
+<li class="chapter" data-level="9.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>9.6</b> As data structures</a></li>
+<li class="chapter" data-level="9.7" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i><b>9.7</b> <code>&lt;&lt;-</code></a><ul>
+<li class="chapter" data-level="9.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>9.7.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="8.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>8.8</b> Quiz answers</a><ul>
-<li class="chapter" data-level="8.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>8.8.1</b> term</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="section-9.html"><a href="section-9.html"><i class="fa fa-check"></i><b>9</b> 基本繪圖</a><ul>
-<li class="chapter" data-level="9.1" data-path="section-9.html"><a href="section-9.html#reference-1"><i class="fa fa-check"></i><b>9.1</b> reference</a></li>
-<li class="chapter" data-level="9.2" data-path="section-9.html"><a href="section-9.html#basic"><i class="fa fa-check"></i><b>9.2</b> basic</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="section-9.html"><a href="section-9.html#section-9.2.1"><i class="fa fa-check"></i><b>9.2.1</b> 建立圖畫</a></li>
-<li class="chapter" data-level="9.2.2" data-path="section-9.html"><a href="section-9.html#saving-graphs"><i class="fa fa-check"></i><b>9.2.2</b> Saving Graphs</a></li>
-</ul></li>
-<li class="chapter" data-level="9.3" data-path="section-9.html"><a href="section-9.html#section-9.3"><i class="fa fa-check"></i><b>9.3</b> 多個圖和疊圖</a></li>
-<li class="chapter" data-level="9.4" data-path="section-9.html"><a href="section-9.html#histograms-and-density-plots"><i class="fa fa-check"></i><b>9.4</b> Histograms and Density Plots</a><ul>
-<li class="chapter" data-level="9.4.1" data-path="section-9.html"><a href="section-9.html#histograms"><i class="fa fa-check"></i><b>9.4.1</b> Histograms</a></li>
-<li class="chapter" data-level="9.4.2" data-path="section-9.html"><a href="section-9.html#kernel-density-plot"><i class="fa fa-check"></i><b>9.4.2</b> Kernel Density Plot</a></li>
-<li class="chapter" data-level="9.4.3" data-path="section-9.html"><a href="section-9.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>9.4.3</b> Comparing Groups VIA Kernal Density</a></li>
-</ul></li>
-<li class="chapter" data-level="9.5" data-path="section-9.html"><a href="section-9.html#-plots"><i class="fa fa-check"></i><b>9.5</b> 合併 Plots</a></li>
-<li class="chapter" data-level="9.6" data-path="section-9.html"><a href="section-9.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>9.6</b> Add texts within the graph</a><ul>
-<li class="chapter" data-level="9.6.1" data-path="section-9.html"><a href="section-9.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>9.6.1</b> Add text in the margins of the graph</a></li>
-<li class="chapter" data-level="9.6.2" data-path="section-9.html"><a href="section-9.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>9.6.2</b> Add mathematical annotation to a plot</a></li>
-</ul></li>
-<li class="chapter" data-level="9.7" data-path="section-9.html"><a href="section-9.html#section-9.7"><i class="fa fa-check"></i><b>9.7</b> 函數畫圖</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>10</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="10.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-10.1"><i class="fa fa-check"></i><b>10.1</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="10.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>10.2</b> distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>11</b> Tidy Basic 01</a><ul>
-<li class="chapter" data-level="11.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>11.1</b> long and wide data</a><ul>
-<li class="chapter" data-level="11.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>11.1.1</b> gather: wide to long</a></li>
-<li class="chapter" data-level="11.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>11.1.2</b> spread :long to wide</a></li>
-</ul></li>
-<li class="chapter" data-level="11.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>11.2</b> dplyr</a></li>
-<li class="chapter" data-level="11.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>11.3</b> other</a><ul>
-<li class="chapter" data-level="11.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>11.3.1</b> Basic verbs</a></li>
-<li class="chapter" data-level="11.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>11.3.2</b> Group by</a></li>
-<li class="chapter" data-level="11.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>11.3.3</b> summarize()</a></li>
+<li class="chapter" data-level="9.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>9.8</b> Quiz answers</a><ul>
+<li class="chapter" data-level="9.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>9.8.1</b> term</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>12</b> programming in R</a><ul>
-<li class="chapter" data-level="12.1" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.1"><i class="fa fa-check"></i><b>12.1</b> 條件指令</a><ul>
-<li class="chapter" data-level="12.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>12.1.1</b> if</a></li>
-<li class="chapter" data-level="12.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse"><i class="fa fa-check"></i><b>12.1.2</b> ifelse的寫法</a></li>
-<li class="chapter" data-level="12.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch"><i class="fa fa-check"></i><b>12.1.3</b> switch的寫法</a></li>
+<li class="chapter" data-level="10" data-path="section-10.html"><a href="section-10.html"><i class="fa fa-check"></i><b>10</b> 基本繪圖</a><ul>
+<li class="chapter" data-level="10.1" data-path="section-10.html"><a href="section-10.html#reference"><i class="fa fa-check"></i><b>10.1</b> reference</a></li>
+<li class="chapter" data-level="10.2" data-path="section-10.html"><a href="section-10.html#basic"><i class="fa fa-check"></i><b>10.2</b> basic</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="section-10.html"><a href="section-10.html#histograms"><i class="fa fa-check"></i><b>10.2.1</b> Histograms</a></li>
+<li class="chapter" data-level="10.2.2" data-path="section-10.html"><a href="section-10.html#kernel-density-plot"><i class="fa fa-check"></i><b>10.2.2</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="10.2.3" data-path="section-10.html"><a href="section-10.html#saving-graphs"><i class="fa fa-check"></i><b>10.2.3</b> Saving Graphs</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.2"><i class="fa fa-check"></i><b>12.2</b> 迴圈指令</a><ul>
-<li class="chapter" data-level="12.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>12.2.1</b> for-loop</a></li>
-<li class="chapter" data-level="12.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>12.2.2</b> while-loop</a></li>
-<li class="chapter" data-level="12.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>12.2.3</b> repeat-loop</a></li>
+<li class="chapter" data-level="10.3" data-path="section-10.html"><a href="section-10.html#section-10.3"><i class="fa fa-check"></i><b>10.3</b> 多個圖和疊圖</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="section-10.html"><a href="section-10.html#section-10.3.1"><i class="fa fa-check"></i><b>10.3.1</b> 多視窗</a></li>
+<li class="chapter" data-level="10.3.2" data-path="section-10.html"><a href="section-10.html#-plots"><i class="fa fa-check"></i><b>10.3.2</b> 合併 Plots</a></li>
+<li class="chapter" data-level="10.3.3" data-path="section-10.html"><a href="section-10.html#section-10.3.3"><i class="fa fa-check"></i><b>10.3.3</b> 疊圖</a></li>
 </ul></li>
+<li class="chapter" data-level="10.4" data-path="section-10.html"><a href="section-10.html#section-10.4"><i class="fa fa-check"></i><b>10.4</b> 分組畫圖</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="section-10.html"><a href="section-10.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>10.4.1</b> Comparing Groups VIA Kernal Density</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>13</b> rbook 提要</a><ul>
-<li class="chapter" data-level="13.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>13.1</b> index.Rmd</a></li>
-<li class="chapter" data-level="13.2" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i><b>13.2</b> </a></li>
-<li class="chapter" data-level="13.3" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>13.3</b> 其他_output.yml 範例</a></li>
-<li class="chapter" data-level="13.4" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>13.4</b> .travis.yml</a></li>
-<li class="chapter" data-level="13.5" data-path="rbook-.html"><a href="rbook-.html#section-13.5"><i class="fa fa-check"></i><b>13.5</b> 紀錄</a><ul>
-<li class="chapter" data-level="13.5.1" data-path="rbook-.html"><a href="rbook-.html#knitr-hook"><i class="fa fa-check"></i><b>13.5.1</b> knitr hook</a></li>
-<li class="chapter" data-level="13.5.2" data-path="rbook-.html"><a href="rbook-.html#terminal-output"><i class="fa fa-check"></i><b>13.5.2</b> terminal output</a></li>
+<li class="chapter" data-level="10.5" data-path="section-10.html"><a href="section-10.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>10.5</b> Add texts within the graph</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="section-10.html"><a href="section-10.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>10.5.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="10.5.2" data-path="section-10.html"><a href="section-10.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>10.5.2</b> Add mathematical annotation to a plot</a></li>
 </ul></li>
-<li class="chapter" data-level="13.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>13.6</b> python</a></li>
-<li class="chapter" data-level="13.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>13.7</b> 產生PDF 文件</a><ul>
-<li class="chapter" data-level="13.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>13.7.1</b> Overview</a></li>
-<li class="chapter" data-level="13.7.2" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>13.7.2</b> meta data 上的pdf 設定,常見版本</a></li>
-<li class="chapter" data-level="13.7.3" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>13.7.3</b> LaTeX Packages for Citations</a></li>
+<li class="chapter" data-level="10.6" data-path="section-10.html"><a href="section-10.html#section-10.6"><i class="fa fa-check"></i><b>10.6</b> 函數畫圖</a></li>
 </ul></li>
-<li class="chapter" data-level="13.8" data-path="rbook-.html"><a href="rbook-.html#section-13.8"><i class="fa fa-check"></i><b>13.8</b> 中文</a></li>
-<li class="chapter" data-level="13.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>13.9</b> Rstudio chinese</a><ul>
-<li class="chapter" data-level="13.9.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>13.9.1</b> LaTeX Engine</a></li>
-<li class="chapter" data-level="13.9.2" data-path="rbook-.html"><a href="rbook-.html#section-13.9.2"><i class="fa fa-check"></i><b>13.9.2</b> 註記</a></li>
-<li class="chapter" data-level="13.9.3" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>13.9.3</b> Custom Templates</a></li>
-<li class="chapter" data-level="13.9.4" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>13.9.4</b> Pandoc Arguments</a></li>
+<li class="chapter" data-level="11" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>11</b> Sample and Distribution 01</a><ul>
+<li class="chapter" data-level="11.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-11.1"><i class="fa fa-check"></i><b>11.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="11.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>11.2</b> distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="13.10" data-path="rbook-.html"><a href="rbook-.html#section-13.10"><i class="fa fa-check"></i><b>13.10</b> 共用設定</a></li>
-<li class="chapter" data-level="13.11" data-path="rbook-.html"><a href="rbook-.html#section-13.11"><i class="fa fa-check"></i><b>13.11</b> 討論</a><ul>
-<li class="chapter" data-level="13.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>13.11.1</b> inline code</a></li>
+<li class="chapter" data-level="12" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>12</b> Tidy Basic 01</a><ul>
+<li class="chapter" data-level="12.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>12.1</b> long and wide data</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>12.1.1</b> gather: wide to long</a></li>
+<li class="chapter" data-level="12.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>12.1.2</b> spread :long to wide</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>12.2</b> dplyr</a></li>
+<li class="chapter" data-level="12.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>12.3</b> other</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>12.3.1</b> Basic verbs</a></li>
+<li class="chapter" data-level="12.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>12.3.2</b> Group by</a></li>
+<li class="chapter" data-level="12.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>12.3.3</b> summarize()</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="git-note.html"><a href="git-note.html"><i class="fa fa-check"></i><b>14</b> git note</a></li>
-<li class="chapter" data-level="15" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>15</b> gitbook introduction</a><ul>
-<li class="chapter" data-level="15.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>15.1</b> _output.yml:</a></li>
-<li class="chapter" data-level="15.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>15.2</b> _bookdown.yml:</a></li>
-<li class="chapter" data-level="15.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>15.3</b> index.rmd</a></li>
-<li class="chapter" data-level="15.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-15.4"><i class="fa fa-check"></i><b>15.4</b> 執行</a></li>
-<li class="chapter" data-level="15.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>15.5</b> 加入:Travis</a><ul>
-<li class="chapter" data-level="15.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>15.5.1</b> .travis.yml:</a></li>
-<li class="chapter" data-level="15.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>15.5.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="13" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>13</b> programming in R</a><ul>
+<li class="chapter" data-level="13.1" data-path="programming-in-r.html"><a href="programming-in-r.html#section-13.1"><i class="fa fa-check"></i><b>13.1</b> 條件指令</a><ul>
+<li class="chapter" data-level="13.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>13.1.1</b> if</a></li>
+<li class="chapter" data-level="13.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse"><i class="fa fa-check"></i><b>13.1.2</b> ifelse的寫法</a></li>
+<li class="chapter" data-level="13.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch"><i class="fa fa-check"></i><b>13.1.3</b> switch的寫法</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="programming-in-r.html"><a href="programming-in-r.html#section-13.2"><i class="fa fa-check"></i><b>13.2</b> 迴圈指令</a><ul>
+<li class="chapter" data-level="13.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>13.2.1</b> for-loop</a></li>
+<li class="chapter" data-level="13.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>13.2.2</b> while-loop</a></li>
+<li class="chapter" data-level="13.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>13.2.3</b> repeat-loop</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="programming-in-r.html"><a href="programming-in-r.html#section-13.3"><i class="fa fa-check"></i><b>13.3</b> 範例</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="programming-in-r.html"><a href="programming-in-r.html#section-2"><i class="fa fa-check"></i><b>13.3.1</b> 1</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>14</b> Econometrics</a><ul>
+<li class="chapter" data-level="14.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>14.1</b> package recommended</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>15</b> rbook 提要</a><ul>
+<li class="chapter" data-level="15.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>15.1</b> index.Rmd</a></li>
+<li class="chapter" data-level="15.2" data-path="rbook-.html"><a href="rbook-.html#section-3"><i class="fa fa-check"></i><b>15.2</b> </a></li>
+<li class="chapter" data-level="15.3" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>15.3</b> 其他_output.yml 範例</a></li>
+<li class="chapter" data-level="15.4" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>15.4</b> .travis.yml</a></li>
+<li class="chapter" data-level="15.5" data-path="rbook-.html"><a href="rbook-.html#section-15.5"><i class="fa fa-check"></i><b>15.5</b> 紀錄</a><ul>
+<li class="chapter" data-level="15.5.1" data-path="rbook-.html"><a href="rbook-.html#knitr-hook"><i class="fa fa-check"></i><b>15.5.1</b> knitr hook</a></li>
+<li class="chapter" data-level="15.5.2" data-path="rbook-.html"><a href="rbook-.html#terminal-output"><i class="fa fa-check"></i><b>15.5.2</b> terminal output</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>15.6</b> python</a></li>
+<li class="chapter" data-level="15.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>15.7</b> 產生PDF 文件</a><ul>
+<li class="chapter" data-level="15.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>15.7.1</b> Overview</a></li>
+<li class="chapter" data-level="15.7.2" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>15.7.2</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="15.7.3" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>15.7.3</b> LaTeX Packages for Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="15.8" data-path="rbook-.html"><a href="rbook-.html#section-15.8"><i class="fa fa-check"></i><b>15.8</b> 中文</a></li>
+<li class="chapter" data-level="15.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>15.9</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="15.9.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>15.9.1</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="15.9.2" data-path="rbook-.html"><a href="rbook-.html#section-15.9.2"><i class="fa fa-check"></i><b>15.9.2</b> 註記</a></li>
+<li class="chapter" data-level="15.9.3" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>15.9.3</b> Custom Templates</a></li>
+<li class="chapter" data-level="15.9.4" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>15.9.4</b> Pandoc Arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="15.10" data-path="rbook-.html"><a href="rbook-.html#section-15.10"><i class="fa fa-check"></i><b>15.10</b> 共用設定</a></li>
+<li class="chapter" data-level="15.11" data-path="rbook-.html"><a href="rbook-.html#section-15.11"><i class="fa fa-check"></i><b>15.11</b> 討論</a><ul>
+<li class="chapter" data-level="15.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>15.11.1</b> inline code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="git-note.html"><a href="git-note.html"><i class="fa fa-check"></i><b>16</b> git note</a></li>
+<li class="chapter" data-level="17" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>17</b> gitbook introduction</a><ul>
+<li class="chapter" data-level="17.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>17.1</b> _output.yml:</a></li>
+<li class="chapter" data-level="17.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>17.2</b> _bookdown.yml:</a></li>
+<li class="chapter" data-level="17.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>17.3</b> index.rmd</a></li>
+<li class="chapter" data-level="17.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-17.4"><i class="fa fa-check"></i><b>17.4</b> 執行</a></li>
+<li class="chapter" data-level="17.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>17.5</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="17.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>17.5.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="17.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>17.5.2</b> DESCRIPTION</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -451,106 +482,106 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="rbook-" class="section level1">
-<h1><span class="header-section-number">Chapter 13</span> rbook 提要</h1>
+<h1><span class="header-section-number">Chapter 15</span> rbook 提要</h1>
 <div id="index.rmd" class="section level2">
-<h2><span class="header-section-number">13.1</span> index.Rmd</h2>
+<h2><span class="header-section-number">15.1</span> index.Rmd</h2>
 <p>通常是一系列文章裡面的第一個文件。其他rmd文件的yml 頭部都可以統一放在這裡。</p>
 <p>下面是一些選項,可以自行添加到上面:</p>
-<div class="sourceCode" id="cb690"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb690-1" data-line-number="1"><span class="fu">bibliography:</span><span class="at"> </span><span class="kw">[</span>book.bib<span class="kw">,</span> packages.bib<span class="kw">]</span></a>
-<a class="sourceLine" id="cb690-2" data-line-number="2"><span class="fu">biblio-style:</span><span class="at"> apalike</span></a>
-<a class="sourceLine" id="cb690-3" data-line-number="3"><span class="fu">link-citations:</span><span class="at"> yes</span></a>
-<a class="sourceLine" id="cb690-4" data-line-number="4"><span class="fu">github-repo:</span><span class="at"> rstudio/bookdown-demo</span></a></code></pre></div>
+<div class="sourceCode" id="cb709"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb709-1" data-line-number="1"><span class="fu">bibliography:</span><span class="at"> </span><span class="kw">[</span>book.bib<span class="kw">,</span> packages.bib<span class="kw">]</span></a>
+<a class="sourceLine" id="cb709-2" data-line-number="2"><span class="fu">biblio-style:</span><span class="at"> apalike</span></a>
+<a class="sourceLine" id="cb709-3" data-line-number="3"><span class="fu">link-citations:</span><span class="at"> yes</span></a>
+<a class="sourceLine" id="cb709-4" data-line-number="4"><span class="fu">github-repo:</span><span class="at"> rstudio/bookdown-demo</span></a></code></pre></div>
 <p>bibliography 暫時沒有參考文件檔,所以我沒有放.</p>
 </div>
-<div id="section-1" class="section level2">
-<h2><span class="header-section-number">13.2</span> </h2>
+<div id="section-3" class="section level2">
+<h2><span class="header-section-number">15.2</span> </h2>
 <ul>
 <li><a href="https://rmarkdown.rstudio.com/r_notebook_format.html">HTML Format</a> 來自<a href="https://github.com/rstudio/rmarkdown">rmarkdown from rstudio</a></li>
 <li><a href="http://conjugateprior.org/2012/12/r-markdown-to-other-document-formats/">pandox</a></li>
 </ul>
 </div>
 <div id="_output.yml-" class="section level2">
-<h2><span class="header-section-number">13.3</span> 其他_output.yml 範例</h2>
+<h2><span class="header-section-number">15.3</span> 其他_output.yml 範例</h2>
 <p>簡單講,_output.yml放的是輸出到哪裡?gitbook? pdf? 或者是簡單html格式。</p>
 <div class="sidebar">
-<h2 id="output.yml-"><span class="header-section-number">13.3</span> _output.yml 範例</h2>
-<div class="sourceCode" id="cb691"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb691-1" data-line-number="1"><span class="fu">bookdown:</span><span class="at">:gitbook:</span></a>
-<a class="sourceLine" id="cb691-2" data-line-number="2">  <span class="fu">css:</span><span class="at"> style.css</span></a>
-<a class="sourceLine" id="cb691-3" data-line-number="3">  <span class="fu">config:</span></a>
-<a class="sourceLine" id="cb691-4" data-line-number="4">    <span class="fu">toc:</span></a>
-<a class="sourceLine" id="cb691-5" data-line-number="5">      <span class="fu">before:</span><span class="at"> |</span></a>
-<a class="sourceLine" id="cb691-6" data-line-number="6">        &lt;li&gt;&lt;a href=<span class="st">&quot;./&quot;</span>&gt;A Minimal Book Example&lt;/a&gt;&lt;/li&gt;</a>
-<a class="sourceLine" id="cb691-7" data-line-number="7">      <span class="fu">after:</span><span class="at"> |</span></a>
-<a class="sourceLine" id="cb691-8" data-line-number="8">        <span class="fu">&lt;li&gt;&lt;a href=&quot;https:</span><span class="at">//github.com/rstudio/bookdown&quot; target=&quot;blank&quot;&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;</span></a>
-<a class="sourceLine" id="cb691-9" data-line-number="9">    <span class="fu">edit:</span><span class="at"> https://github.com/rstudio/bookdown-demo/edit/master/%s</span></a>
-<a class="sourceLine" id="cb691-10" data-line-number="10">    <span class="fu">download:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;pdf&quot;</span><span class="kw">,</span> <span class="st">&quot;epub&quot;</span><span class="kw">]</span></a>
-<a class="sourceLine" id="cb691-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb691-12" data-line-number="12"><span class="co"># bookdown::pdf_book:</span></a>
-<a class="sourceLine" id="cb691-13" data-line-number="13"><span class="co">#   latex_engine: &quot;xelatex&quot;</span></a>
-<a class="sourceLine" id="cb691-14" data-line-number="14"><span class="co">#   keep_tex: true</span></a>
-<a class="sourceLine" id="cb691-15" data-line-number="15"><span class="co">#   includes:</span></a>
-<a class="sourceLine" id="cb691-16" data-line-number="16"><span class="co">#     in_header: header.tex</span></a>
-<a class="sourceLine" id="cb691-17" data-line-number="17"></a>
-<a class="sourceLine" id="cb691-18" data-line-number="18"> <span class="fu">bookdown:</span><span class="at">:pdf_book:</span></a>
-<a class="sourceLine" id="cb691-19" data-line-number="19">   <span class="fu">includes:</span></a>
-<a class="sourceLine" id="cb691-20" data-line-number="20">     <span class="fu">in_header:</span><span class="at"> latex/preamble.tex</span></a>
-<a class="sourceLine" id="cb691-21" data-line-number="21">     <span class="fu">before_body:</span><span class="at"> latex/before_body.tex</span></a>
-<a class="sourceLine" id="cb691-22" data-line-number="22">     <span class="fu">after_body:</span><span class="at"> latex/after_body.tex</span></a>
-<a class="sourceLine" id="cb691-23" data-line-number="23">   <span class="fu">keep_tex:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb691-24" data-line-number="24">   <span class="fu">dev:</span><span class="at"> </span><span class="st">&quot;cairo_pdf&quot;</span></a>
-<a class="sourceLine" id="cb691-25" data-line-number="25">   <span class="fu">latex_engine:</span><span class="at"> xelatex</span></a>
-<a class="sourceLine" id="cb691-26" data-line-number="26">   <span class="fu">citation_package:</span><span class="at"> natbib</span></a>
-<a class="sourceLine" id="cb691-27" data-line-number="27">   <span class="fu">pandoc_args:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;--top-level-division=chapter&quot;</span><span class="kw">,</span> <span class="st">&quot;--lua-filter=latex/sidebar.lua&quot;</span><span class="kw">]</span></a>
-<a class="sourceLine" id="cb691-28" data-line-number="28">   <span class="fu">template:</span><span class="at"> </span><span class="dt">null</span></a>
-<a class="sourceLine" id="cb691-29" data-line-number="29">   <span class="fu">quote_footer:</span><span class="at"> </span><span class="dt">null</span></a>
-<a class="sourceLine" id="cb691-30" data-line-number="30">   <span class="fu">toc_unnumbered:</span><span class="at"> false</span></a>
-<a class="sourceLine" id="cb691-31" data-line-number="31">   <span class="fu">number_sections:</span><span class="at"> true    </span></a></code></pre></div>
+<h2 id="output.yml-"><span class="header-section-number">15.3</span> _output.yml 範例</h2>
+<div class="sourceCode" id="cb710"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb710-1" data-line-number="1"><span class="fu">bookdown:</span><span class="at">:gitbook:</span></a>
+<a class="sourceLine" id="cb710-2" data-line-number="2">  <span class="fu">css:</span><span class="at"> style.css</span></a>
+<a class="sourceLine" id="cb710-3" data-line-number="3">  <span class="fu">config:</span></a>
+<a class="sourceLine" id="cb710-4" data-line-number="4">    <span class="fu">toc:</span></a>
+<a class="sourceLine" id="cb710-5" data-line-number="5">      <span class="fu">before:</span><span class="at"> |</span></a>
+<a class="sourceLine" id="cb710-6" data-line-number="6">        &lt;li&gt;&lt;a href=<span class="st">&quot;./&quot;</span>&gt;A Minimal Book Example&lt;/a&gt;&lt;/li&gt;</a>
+<a class="sourceLine" id="cb710-7" data-line-number="7">      <span class="fu">after:</span><span class="at"> |</span></a>
+<a class="sourceLine" id="cb710-8" data-line-number="8">        <span class="fu">&lt;li&gt;&lt;a href=&quot;https:</span><span class="at">//github.com/rstudio/bookdown&quot; target=&quot;blank&quot;&gt;Published with bookdown&lt;/a&gt;&lt;/li&gt;</span></a>
+<a class="sourceLine" id="cb710-9" data-line-number="9">    <span class="fu">edit:</span><span class="at"> https://github.com/rstudio/bookdown-demo/edit/master/%s</span></a>
+<a class="sourceLine" id="cb710-10" data-line-number="10">    <span class="fu">download:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;pdf&quot;</span><span class="kw">,</span> <span class="st">&quot;epub&quot;</span><span class="kw">]</span></a>
+<a class="sourceLine" id="cb710-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb710-12" data-line-number="12"><span class="co"># bookdown::pdf_book:</span></a>
+<a class="sourceLine" id="cb710-13" data-line-number="13"><span class="co">#   latex_engine: &quot;xelatex&quot;</span></a>
+<a class="sourceLine" id="cb710-14" data-line-number="14"><span class="co">#   keep_tex: true</span></a>
+<a class="sourceLine" id="cb710-15" data-line-number="15"><span class="co">#   includes:</span></a>
+<a class="sourceLine" id="cb710-16" data-line-number="16"><span class="co">#     in_header: header.tex</span></a>
+<a class="sourceLine" id="cb710-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb710-18" data-line-number="18"> <span class="fu">bookdown:</span><span class="at">:pdf_book:</span></a>
+<a class="sourceLine" id="cb710-19" data-line-number="19">   <span class="fu">includes:</span></a>
+<a class="sourceLine" id="cb710-20" data-line-number="20">     <span class="fu">in_header:</span><span class="at"> latex/preamble.tex</span></a>
+<a class="sourceLine" id="cb710-21" data-line-number="21">     <span class="fu">before_body:</span><span class="at"> latex/before_body.tex</span></a>
+<a class="sourceLine" id="cb710-22" data-line-number="22">     <span class="fu">after_body:</span><span class="at"> latex/after_body.tex</span></a>
+<a class="sourceLine" id="cb710-23" data-line-number="23">   <span class="fu">keep_tex:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb710-24" data-line-number="24">   <span class="fu">dev:</span><span class="at"> </span><span class="st">&quot;cairo_pdf&quot;</span></a>
+<a class="sourceLine" id="cb710-25" data-line-number="25">   <span class="fu">latex_engine:</span><span class="at"> xelatex</span></a>
+<a class="sourceLine" id="cb710-26" data-line-number="26">   <span class="fu">citation_package:</span><span class="at"> natbib</span></a>
+<a class="sourceLine" id="cb710-27" data-line-number="27">   <span class="fu">pandoc_args:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;--top-level-division=chapter&quot;</span><span class="kw">,</span> <span class="st">&quot;--lua-filter=latex/sidebar.lua&quot;</span><span class="kw">]</span></a>
+<a class="sourceLine" id="cb710-28" data-line-number="28">   <span class="fu">template:</span><span class="at"> </span><span class="dt">null</span></a>
+<a class="sourceLine" id="cb710-29" data-line-number="29">   <span class="fu">quote_footer:</span><span class="at"> </span><span class="dt">null</span></a>
+<a class="sourceLine" id="cb710-30" data-line-number="30">   <span class="fu">toc_unnumbered:</span><span class="at"> false</span></a>
+<a class="sourceLine" id="cb710-31" data-line-number="31">   <span class="fu">number_sections:</span><span class="at"> true    </span></a></code></pre></div>
 </div>
-<div class="sourceCode" id="cb692"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb692-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb692-2" data-line-number="2"><span class="fu">output:</span><span class="at"> </span></a>
-<a class="sourceLine" id="cb692-3" data-line-number="3">  <span class="fu">html_document:</span><span class="at"> </span></a>
-<a class="sourceLine" id="cb692-4" data-line-number="4">    <span class="fu">highlight:</span><span class="at"> tango</span></a>
-<a class="sourceLine" id="cb692-5" data-line-number="5">    <span class="fu">number_sections:</span><span class="at"> yes</span></a>
-<a class="sourceLine" id="cb692-6" data-line-number="6">    <span class="fu">toc:</span><span class="at"> yes</span></a>
-<a class="sourceLine" id="cb692-7" data-line-number="7"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb711"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb711-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb711-2" data-line-number="2"><span class="fu">output:</span><span class="at"> </span></a>
+<a class="sourceLine" id="cb711-3" data-line-number="3">  <span class="fu">html_document:</span><span class="at"> </span></a>
+<a class="sourceLine" id="cb711-4" data-line-number="4">    <span class="fu">highlight:</span><span class="at"> tango</span></a>
+<a class="sourceLine" id="cb711-5" data-line-number="5">    <span class="fu">number_sections:</span><span class="at"> yes</span></a>
+<a class="sourceLine" id="cb711-6" data-line-number="6">    <span class="fu">toc:</span><span class="at"> yes</span></a>
+<a class="sourceLine" id="cb711-7" data-line-number="7"><span class="ot">---</span></a></code></pre></div>
 <p>上面這段YML會被解譯到下面的R程式碼。
 猜測:html_document對應rmarkdown::html_document<br />
 例如,
 number_sections: yes 會被當成<code>html_document()</code>的參數轉譯:</p>
 <p>highlight: tango 對應到參數(沒有在下面)</p>
-<div class="sourceCode" id="cb693"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb693-1" data-line-number="1">rmarkdown<span class="op">::</span><span class="kw">html_document</span>( <span class="dt">theme=</span> <span class="st">&quot;lumen&quot;</span>,</a>
-<a class="sourceLine" id="cb693-2" data-line-number="2">                               <span class="dt">template=</span> template,</a>
-<a class="sourceLine" id="cb693-3" data-line-number="3">                               <span class="dt">css=</span> css,</a>
-<a class="sourceLine" id="cb693-4" data-line-number="4">                               <span class="dt">toc=</span> toc,</a>
-<a class="sourceLine" id="cb693-5" data-line-number="5">                               <span class="dt">toc_float=</span> <span class="ot">TRUE</span>,</a>
-<a class="sourceLine" id="cb693-6" data-line-number="6">                               <span class="dt">toc_depth=</span> <span class="dv">2</span>,</a>
-<a class="sourceLine" id="cb693-7" data-line-number="7">                               <span class="dt">number_sections=</span> number_sections,</a>
-<a class="sourceLine" id="cb693-8" data-line-number="8">                               <span class="dt">df_print =</span> <span class="st">&quot;paged&quot;</span>,</a>
-<a class="sourceLine" id="cb693-9" data-line-number="9">                               <span class="dt">code_folding =</span> code_folding,</a>
-<a class="sourceLine" id="cb693-10" data-line-number="10">                               <span class="dt">includes =</span> <span class="kw">includes</span>(<span class="dt">before_body =</span> header)</a>
-<a class="sourceLine" id="cb693-11" data-line-number="11">                            )</a>
-<a class="sourceLine" id="cb693-12" data-line-number="12"><span class="er">}</span></a></code></pre></div>
+<div class="sourceCode" id="cb712"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb712-1" data-line-number="1">rmarkdown<span class="op">::</span><span class="kw">html_document</span>( <span class="dt">theme=</span> <span class="st">&quot;lumen&quot;</span>,</a>
+<a class="sourceLine" id="cb712-2" data-line-number="2">                               <span class="dt">template=</span> template,</a>
+<a class="sourceLine" id="cb712-3" data-line-number="3">                               <span class="dt">css=</span> css,</a>
+<a class="sourceLine" id="cb712-4" data-line-number="4">                               <span class="dt">toc=</span> toc,</a>
+<a class="sourceLine" id="cb712-5" data-line-number="5">                               <span class="dt">toc_float=</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb712-6" data-line-number="6">                               <span class="dt">toc_depth=</span> <span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb712-7" data-line-number="7">                               <span class="dt">number_sections=</span> number_sections,</a>
+<a class="sourceLine" id="cb712-8" data-line-number="8">                               <span class="dt">df_print =</span> <span class="st">&quot;paged&quot;</span>,</a>
+<a class="sourceLine" id="cb712-9" data-line-number="9">                               <span class="dt">code_folding =</span> code_folding,</a>
+<a class="sourceLine" id="cb712-10" data-line-number="10">                               <span class="dt">includes =</span> <span class="kw">includes</span>(<span class="dt">before_body =</span> header)</a>
+<a class="sourceLine" id="cb712-11" data-line-number="11">                            )</a>
+<a class="sourceLine" id="cb712-12" data-line-number="12"><span class="er">}</span></a></code></pre></div>
 </div>
 <div id="travis.yml" class="section level2">
-<h2><span class="header-section-number">13.4</span> .travis.yml</h2>
+<h2><span class="header-section-number">15.4</span> .travis.yml</h2>
 <blockquote>
 <p><a href="http://www.goring.org/resources/Adding_CI_To_RMarkdown.html">rmarkdown and travis</a></p>
 </blockquote>
 <p>應該是用來指導怎麼建立專案的一個yml。
 已知的部分有:
 directories : 可以指定子目錄,用來放暫存檔案(一些翻譯過程產生的中間黨),否則每個RMD都會產生一個組目錄。</p>
-<div class="sourceCode" id="cb694"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb694-1" data-line-number="1"><span class="fu">language:</span><span class="at"> R</span></a>
-<a class="sourceLine" id="cb694-2" data-line-number="2"><span class="fu">sudo:</span><span class="at"> false</span></a>
-<a class="sourceLine" id="cb694-3" data-line-number="3"><span class="fu">cache:</span></a>
-<a class="sourceLine" id="cb694-4" data-line-number="4">  <span class="fu">packages:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb694-5" data-line-number="5">  <span class="fu">directories:</span></a>
-<a class="sourceLine" id="cb694-6" data-line-number="6">  <span class="kw">-</span> _bookdown_files</a>
-<a class="sourceLine" id="cb694-7" data-line-number="7">  <span class="kw">-</span> $HOME/.npm</a>
-<a class="sourceLine" id="cb694-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb694-9" data-line-number="9"><span class="fu">pandoc_version:</span><span class="at"> 2.1.1</span></a></code></pre></div>
+<div class="sourceCode" id="cb713"><pre class="sourceCode yml"><code class="sourceCode yaml"><a class="sourceLine" id="cb713-1" data-line-number="1"><span class="fu">language:</span><span class="at"> R</span></a>
+<a class="sourceLine" id="cb713-2" data-line-number="2"><span class="fu">sudo:</span><span class="at"> false</span></a>
+<a class="sourceLine" id="cb713-3" data-line-number="3"><span class="fu">cache:</span></a>
+<a class="sourceLine" id="cb713-4" data-line-number="4">  <span class="fu">packages:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb713-5" data-line-number="5">  <span class="fu">directories:</span></a>
+<a class="sourceLine" id="cb713-6" data-line-number="6">  <span class="kw">-</span> _bookdown_files</a>
+<a class="sourceLine" id="cb713-7" data-line-number="7">  <span class="kw">-</span> $HOME/.npm</a>
+<a class="sourceLine" id="cb713-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb713-9" data-line-number="9"><span class="fu">pandoc_version:</span><span class="at"> 2.1.1</span></a></code></pre></div>
 </div>
-<div id="section-13.5" class="section level2">
-<h2><span class="header-section-number">13.5</span> 紀錄</h2>
+<div id="section-15.5" class="section level2">
+<h2><span class="header-section-number">15.5</span> 紀錄</h2>
 <p>before_chapter_script: “common.R”
 前面要有兩個空白</p>
 <p>if(FALSE) {
@@ -563,38 +594,38 @@ source(“common.R”)</p>
 <p>’
 }</p>
 <div id="knitr-hook" class="section level3">
-<h3><span class="header-section-number">13.5.1</span> knitr hook</h3>
-<div id="section-13.5.1.1" class="section level4">
-<h4><span class="header-section-number">13.5.1.1</span> 顏色</h4>
+<h3><span class="header-section-number">15.5.1</span> knitr hook</h3>
+<div id="section-15.5.1.1" class="section level4">
+<h4><span class="header-section-number">15.5.1.1</span> 顏色</h4>
 <p>設定警告訊息為紅色</p>
-<div class="sourceCode" id="cb695"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb695-1" data-line-number="1">knitr<span class="op">::</span>knit_hooks<span class="op">$</span><span class="kw">set</span>(<span class="dt">error =</span> <span class="cf">function</span>(x, options) {</a>
-<a class="sourceLine" id="cb695-2" data-line-number="2">  <span class="kw">paste0</span>(<span class="st">&quot;&lt;pre style=</span><span class="ch">\&quot;</span><span class="st">color: red;</span><span class="ch">\&quot;</span><span class="st">&gt;&lt;code&gt;&quot;</span>, x, <span class="st">&quot;&lt;/code&gt;&lt;/pre&gt;&quot;</span>)</a>
-<a class="sourceLine" id="cb695-3" data-line-number="3">})</a></code></pre></div>
+<div class="sourceCode" id="cb714"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb714-1" data-line-number="1">knitr<span class="op">::</span>knit_hooks<span class="op">$</span><span class="kw">set</span>(<span class="dt">error =</span> <span class="cf">function</span>(x, options) {</a>
+<a class="sourceLine" id="cb714-2" data-line-number="2">  <span class="kw">paste0</span>(<span class="st">&quot;&lt;pre style=</span><span class="ch">\&quot;</span><span class="st">color: red;</span><span class="ch">\&quot;</span><span class="st">&gt;&lt;code&gt;&quot;</span>, x, <span class="st">&quot;&lt;/code&gt;&lt;/pre&gt;&quot;</span>)</a>
+<a class="sourceLine" id="cb714-3" data-line-number="3">})</a></code></pre></div>
 <p>其他範例</p>
-<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb696-1" data-line-number="1"><span class="co">#Color Format</span></a>
-<a class="sourceLine" id="cb696-2" data-line-number="2">colFmt =<span class="st"> </span><span class="cf">function</span>(x,color){</a>
-<a class="sourceLine" id="cb696-3" data-line-number="3">  outputFormat =<span class="st"> </span>opts_knit<span class="op">$</span><span class="kw">get</span>(<span class="st">&quot;rmarkdown.pandoc.to&quot;</span>)</a>
-<a class="sourceLine" id="cb696-4" data-line-number="4">  <span class="cf">if</span>(outputFormat <span class="op">==</span><span class="st"> &#39;latex&#39;</span>)</a>
-<a class="sourceLine" id="cb696-5" data-line-number="5">    <span class="kw">paste</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">textcolor{&quot;</span>,color,<span class="st">&quot;}{&quot;</span>,x,<span class="st">&quot;}&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</a>
-<a class="sourceLine" id="cb696-6" data-line-number="6">  <span class="cf">else</span> <span class="cf">if</span>(outputFormat <span class="op">==</span><span class="st"> &#39;html&#39;</span>)</a>
-<a class="sourceLine" id="cb696-7" data-line-number="7">    <span class="kw">paste</span>(<span class="st">&quot;&lt;font color=&#39;&quot;</span>,color,<span class="st">&quot;&#39;&gt;&quot;</span>,x,<span class="st">&quot;&lt;/font&gt;&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</a>
-<a class="sourceLine" id="cb696-8" data-line-number="8">  <span class="cf">else</span></a>
-<a class="sourceLine" id="cb696-9" data-line-number="9">    x</a>
-<a class="sourceLine" id="cb696-10" data-line-number="10">}</a></code></pre></div>
+<div class="sourceCode" id="cb715"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb715-1" data-line-number="1"><span class="co">#Color Format</span></a>
+<a class="sourceLine" id="cb715-2" data-line-number="2">colFmt =<span class="st"> </span><span class="cf">function</span>(x,color){</a>
+<a class="sourceLine" id="cb715-3" data-line-number="3">  outputFormat =<span class="st"> </span>opts_knit<span class="op">$</span><span class="kw">get</span>(<span class="st">&quot;rmarkdown.pandoc.to&quot;</span>)</a>
+<a class="sourceLine" id="cb715-4" data-line-number="4">  <span class="cf">if</span>(outputFormat <span class="op">==</span><span class="st"> &#39;latex&#39;</span>)</a>
+<a class="sourceLine" id="cb715-5" data-line-number="5">    <span class="kw">paste</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">textcolor{&quot;</span>,color,<span class="st">&quot;}{&quot;</span>,x,<span class="st">&quot;}&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb715-6" data-line-number="6">  <span class="cf">else</span> <span class="cf">if</span>(outputFormat <span class="op">==</span><span class="st"> &#39;html&#39;</span>)</a>
+<a class="sourceLine" id="cb715-7" data-line-number="7">    <span class="kw">paste</span>(<span class="st">&quot;&lt;font color=&#39;&quot;</span>,color,<span class="st">&quot;&#39;&gt;&quot;</span>,x,<span class="st">&quot;&lt;/font&gt;&quot;</span>,<span class="dt">sep=</span><span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb715-8" data-line-number="8">  <span class="cf">else</span></a>
+<a class="sourceLine" id="cb715-9" data-line-number="9">    x</a>
+<a class="sourceLine" id="cb715-10" data-line-number="10">}</a></code></pre></div>
 <p>有關hook 的設定,參考 <a href="https://yihui.name/knitr/hooks/#output-hooks">knitr hook</a></p>
 </div>
 </div>
 <div id="terminal-output" class="section level3">
-<h3><span class="header-section-number">13.5.2</span> terminal output</h3>
-<p>問題:如果以要看檔案內容,而不想被無關的輸出符號干擾,例如[1],那麼如果再R SCRIPT中可以使用 <code>system(&quot;cat 檔案名稱&quot;)</code> ,但是在R Markdown中(如下)不會顯示出結果:</p>
-<div class="sourceCode" id="cb697"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb697-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb697-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>)</a>
-<a class="sourceLine" id="cb697-3" data-line-number="3"><span class="kw">system</span>(<span class="st">&quot;cat MyData.csv&quot;</span>)</a></code></pre></div>
+<h3><span class="header-section-number">15.5.2</span> terminal output</h3>
+<p>問題:如果以要看檔案內容,而不想被無關的輸出符號干擾,例如<a href="programming-in-r.html#section-2">1</a>,那麼如果再R SCRIPT中可以使用 <code>system(&quot;cat 檔案名稱&quot;)</code> ,但是在R Markdown中(如下)不會顯示出結果:</p>
+<div class="sourceCode" id="cb716"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb716-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
+<a class="sourceLine" id="cb716-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">na=</span><span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb716-3" data-line-number="3"><span class="kw">system</span>(<span class="st">&quot;cat MyData.csv&quot;</span>)</a></code></pre></div>
 <p>You can use either</p>
 <p>{r, engine=‘bash’, comment=’‘}
 cat ’resources/hw.csv’</p>
 <p>or</p>
-<div class="sourceCode" id="cb698"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb698-1" data-line-number="1"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;resources/wh.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb717"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb717-1" data-line-number="1"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;resources/wh.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># this is a test file
 height,weight,sex
 156,56, m
@@ -605,7 +636,7 @@ height,weight,sex
 </div>
 </div>
 <div id="python" class="section level2">
-<h2><span class="header-section-number">13.6</span> python</h2>
+<h2><span class="header-section-number">15.6</span> python</h2>
 <p>First you need to set the knitr options.</p>
 <p>{r}
 knitr::opts_chunk$set(engine.path = list(python = ‘/anaconda/bin/python’))
@@ -618,96 +649,96 @@ import this
 
 </div>
 <div id="pdf-" class="section level2">
-<h2><span class="header-section-number">13.7</span> 產生PDF 文件</h2>
+<h2><span class="header-section-number">15.7</span> 產生PDF 文件</h2>
 <div id="overview" class="section level3">
-<h3><span class="header-section-number">13.7.1</span> Overview</h3>
+<h3><span class="header-section-number">15.7.1</span> Overview</h3>
 <p><a href="https://rmarkdown.rstudio.com/pdf_document_format">參考</a></p>
 <p>整個轉換過程如下：
 Rmarkdown -&gt; markdown -&gt;pandoc-&gt;pdf,html</p>
 </div>
 <div id="meta-data-pdf-" class="section level3">
-<h3><span class="header-section-number">13.7.2</span> meta data 上的pdf 設定,常見版本</h3>
-<div class="sourceCode" id="cb699"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb699-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb699-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb699-3" data-line-number="3"><span class="fu">author:</span><span class="at"> lendjwjcen </span></a>
-<a class="sourceLine" id="cb699-4" data-line-number="4"><span class="fu">date:</span><span class="at"> 3/1/2017</span></a>
-<a class="sourceLine" id="cb699-5" data-line-number="5"><span class="fu">output:</span><span class="at"> pdf_document</span></a>
-<a class="sourceLine" id="cb699-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
-<div id="section-13.7.2.1" class="section level4">
-<h4><span class="header-section-number">13.7.2.1</span> 加入目錄</h4>
-<div class="sourceCode" id="cb700"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb700-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb700-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb700-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb700-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb700-5" data-line-number="5">    <span class="fu">toc:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb700-6" data-line-number="6">    <span class="fu">toc_depth:</span><span class="at"> 2</span></a>
-<a class="sourceLine" id="cb700-7" data-line-number="7"><span class="ot">---</span></a></code></pre></div>
+<h3><span class="header-section-number">15.7.2</span> meta data 上的pdf 設定,常見版本</h3>
+<div class="sourceCode" id="cb718"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb718-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb718-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb718-3" data-line-number="3"><span class="fu">author:</span><span class="at"> lendjwjcen </span></a>
+<a class="sourceLine" id="cb718-4" data-line-number="4"><span class="fu">date:</span><span class="at"> 3/1/2017</span></a>
+<a class="sourceLine" id="cb718-5" data-line-number="5"><span class="fu">output:</span><span class="at"> pdf_document</span></a>
+<a class="sourceLine" id="cb718-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
+<div id="section-15.7.2.1" class="section level4">
+<h4><span class="header-section-number">15.7.2.1</span> 加入目錄</h4>
+<div class="sourceCode" id="cb719"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb719-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb719-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb719-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb719-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb719-5" data-line-number="5">    <span class="fu">toc:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb719-6" data-line-number="6">    <span class="fu">toc_depth:</span><span class="at"> 2</span></a>
+<a class="sourceLine" id="cb719-7" data-line-number="7"><span class="ot">---</span></a></code></pre></div>
 <p>TOC深度預設是3。
 yaml的註解符號是<code>#</code> 。</p>
 <p>如果要章節號碼,則利用<code>number_sections option</code>:</p>
-<div class="sourceCode" id="cb701"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb701-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb701-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb701-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb701-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb701-5" data-line-number="5">    <span class="fu">toc:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb701-6" data-line-number="6">    <span class="fu">number_sections:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb701-7" data-line-number="7"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb720"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb720-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb720-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb720-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb720-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb720-5" data-line-number="5">    <span class="fu">toc:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb720-6" data-line-number="6">    <span class="fu">number_sections:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb720-7" data-line-number="7"><span class="ot">---</span></a></code></pre></div>
 </div>
-<div id="section-13.7.2.2" class="section level4">
-<h4><span class="header-section-number">13.7.2.2</span> 圖形選項</h4>
+<div id="section-15.7.2.2" class="section level4">
+<h4><span class="header-section-number">15.7.2.2</span> 圖形選項</h4>
 <p>fig_width 和 fig_height 控制圖形的寬度和高度 (6 x 4.5 is used by default)</p>
 <p>fig_crop 控制 pdfcrop utility (如果有)是否自動使用來修剪圖型(default). 如果我們的圖形設備是 postscript, 建議關掉這個選項。.</p>
 <p>fig_caption 控制是否有圖型標題(預設是否)</p>
 <p>dev 控制用來描繪圖型的設備 (defaults to pdf)</p>
 <p>例如:</p>
-<div class="sourceCode" id="cb702"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb702-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb702-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb702-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb702-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb702-5" data-line-number="5">    <span class="fu">fig_width:</span><span class="at"> 7</span></a>
-<a class="sourceLine" id="cb702-6" data-line-number="6">    <span class="fu">fig_height:</span><span class="at"> 6</span></a>
-<a class="sourceLine" id="cb702-7" data-line-number="7">    <span class="fu">fig_caption:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb702-8" data-line-number="8"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb721"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb721-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb721-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb721-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb721-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb721-5" data-line-number="5">    <span class="fu">fig_width:</span><span class="at"> 7</span></a>
+<a class="sourceLine" id="cb721-6" data-line-number="6">    <span class="fu">fig_height:</span><span class="at"> 6</span></a>
+<a class="sourceLine" id="cb721-7" data-line-number="7">    <span class="fu">fig_caption:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb721-8" data-line-number="8"><span class="ot">---</span></a></code></pre></div>
 </div>
 <div id="data-frame-printing" class="section level4">
-<h4><span class="header-section-number">13.7.2.3</span> Data Frame Printing</h4>
+<h4><span class="header-section-number">15.7.2.3</span> Data Frame Printing</h4>
 <p><code>df-print</code> 參數可以用來改進data frame的輸出,選項包括:</p>
 <p>選項描述
 default: 利用 print.data.frame 函數<br />
 kable 其實利用的是 knitr::kable 函數<br />
 tibble 則利用 tibble::print.tbl_df 函數。.<br />
 例如:</p>
-<div class="sourceCode" id="cb703"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb703-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb703-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb703-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb703-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb703-5" data-line-number="5">    <span class="fu">df_print:</span><span class="at"> kable</span></a>
-<a class="sourceLine" id="cb703-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb722"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb722-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb722-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb722-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb722-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb722-5" data-line-number="5">    <span class="fu">df_print:</span><span class="at"> kable</span></a>
+<a class="sourceLine" id="cb722-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
 </div>
 <div id="syntax-highlighting" class="section level4">
-<h4><span class="header-section-number">13.7.2.4</span> Syntax Highlighting</h4>
+<h4><span class="header-section-number">15.7.2.4</span> Syntax Highlighting</h4>
 <p>打光型態有 “default”, “tango”, “pygments”, “kate”, “monochrome”, “espresso”, “zenburn”, and “haddock” 如果不要打光,則設定null:</p>
 <p>例如:</p>
-<div class="sourceCode" id="cb704"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb704-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb704-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb704-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb704-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb704-5" data-line-number="5">    <span class="fu">highlight:</span><span class="at"> tango</span></a>
-<a class="sourceLine" id="cb704-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb723"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb723-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb723-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb723-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb723-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb723-5" data-line-number="5">    <span class="fu">highlight:</span><span class="at"> tango</span></a>
+<a class="sourceLine" id="cb723-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
 </div>
 <div id="latex-options" class="section level4">
-<h4><span class="header-section-number">13.7.2.5</span> LaTeX Options</h4>
+<h4><span class="header-section-number">15.7.2.5</span> LaTeX Options</h4>
 <p>有關LaTeX選項的設定位置並不是在<code>output: pdf_document</code>的後續段落,而是在最頂層。
 例如:</p>
-<div class="sourceCode" id="cb705"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb705-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb705-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Crop Analysis Q3 2013&quot;</span></a>
-<a class="sourceLine" id="cb705-3" data-line-number="3"><span class="fu">output:</span><span class="at"> pdf_document</span></a>
-<a class="sourceLine" id="cb705-4" data-line-number="4"><span class="fu">fontsize:</span><span class="at"> 11pt</span></a>
-<a class="sourceLine" id="cb705-5" data-line-number="5"><span class="fu">geometry:</span><span class="at"> margin=1in</span></a>
-<a class="sourceLine" id="cb705-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb724"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb724-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb724-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Crop Analysis Q3 2013&quot;</span></a>
+<a class="sourceLine" id="cb724-3" data-line-number="3"><span class="fu">output:</span><span class="at"> pdf_document</span></a>
+<a class="sourceLine" id="cb724-4" data-line-number="4"><span class="fu">fontsize:</span><span class="at"> 11pt</span></a>
+<a class="sourceLine" id="cb724-5" data-line-number="5"><span class="fu">geometry:</span><span class="at"> margin=1in</span></a>
+<a class="sourceLine" id="cb724-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
 </div>
-<div id="section-13.7.2.6" class="section level4">
-<h4><span class="header-section-number">13.7.2.6</span> 其他</h4>
+<div id="section-15.7.2.6" class="section level4">
+<h4><span class="header-section-number">15.7.2.6</span> 其他</h4>
 <p>Available metadata variables include:</p>
 <table>
 <colgroup>
@@ -759,60 +790,60 @@ tibble 則利用 tibble::print.tbl_df 函數。.<br />
 </div>
 </div>
 <div id="latex-packages-for-citations" class="section level3">
-<h3><span class="header-section-number">13.7.3</span> LaTeX Packages for Citations</h3>
+<h3><span class="header-section-number">15.7.3</span> LaTeX Packages for Citations</h3>
 <p>citation的處理,預設是經由 <code>pandoc-citeproc</code>(不僅PDF文件,還有HTML), 但是對於PDF來講,最好還是使用 LaTeX 來處理例如 <code>natbib</code> or <code>biblatex</code>。設定方法僅僅是設定 <code>citation_package</code> 為 <code>natbib</code> 或 <code>biblatex</code>, 例如:</p>
-<div class="sourceCode" id="cb706"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb706-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb706-2" data-line-number="2"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb706-3" data-line-number="3">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb706-4" data-line-number="4">    <span class="fu">citation_package:</span><span class="at"> natbib</span></a>
-<a class="sourceLine" id="cb706-5" data-line-number="5"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb725"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb725-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb725-2" data-line-number="2"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb725-3" data-line-number="3">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb725-4" data-line-number="4">    <span class="fu">citation_package:</span><span class="at"> natbib</span></a>
+<a class="sourceLine" id="cb725-5" data-line-number="5"><span class="ot">---</span></a></code></pre></div>
 </div>
 </div>
-<div id="section-13.8" class="section level2">
-<h2><span class="header-section-number">13.8</span> 中文</h2>
+<div id="section-15.8" class="section level2">
+<h2><span class="header-section-number">15.8</span> 中文</h2>
 <p>建立中文PDF 需要安裝 TeX版本可以使用<code>tinytex</code>。</p>
-<div class="sourceCode" id="cb707"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb707-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</a>
-<a class="sourceLine" id="cb707-2" data-line-number="2">tinytex<span class="op">::</span><span class="kw">install_tinytex</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb726"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb726-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</a>
+<a class="sourceLine" id="cb726-2" data-line-number="2">tinytex<span class="op">::</span><span class="kw">install_tinytex</span>()</a></code></pre></div>
 </div>
 <div id="rstudio-chinese" class="section level2">
-<h2><span class="header-section-number">13.9</span> Rstudio chinese</h2>
-<div class="sourceCode" id="cb708"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb708-1" data-line-number="1"><span class="bu">cd</span> /usr/lib/rstudio/bin</a>
-<a class="sourceLine" id="cb708-2" data-line-number="2"><span class="fu">sudo</span> mkdir Qt</a>
-<a class="sourceLine" id="cb708-3" data-line-number="3"><span class="fu">sudo</span> mv libQt5* Qt</a>
-<a class="sourceLine" id="cb708-4" data-line-number="4"><span class="fu">sudo</span> mv qt.conf Qt</a></code></pre></div>
+<h2><span class="header-section-number">15.9</span> Rstudio chinese</h2>
+<div class="sourceCode" id="cb727"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb727-1" data-line-number="1"><span class="bu">cd</span> /usr/lib/rstudio/bin</a>
+<a class="sourceLine" id="cb727-2" data-line-number="2"><span class="fu">sudo</span> mkdir Qt</a>
+<a class="sourceLine" id="cb727-3" data-line-number="3"><span class="fu">sudo</span> mv libQt5* Qt</a>
+<a class="sourceLine" id="cb727-4" data-line-number="4"><span class="fu">sudo</span> mv qt.conf Qt</a></code></pre></div>
 <div id="latex-engine" class="section level3">
-<h3><span class="header-section-number">13.9.1</span> LaTeX Engine</h3>
+<h3><span class="header-section-number">15.9.1</span> LaTeX Engine</h3>
 <p>RStudio 預設使用 <code>pdflatex</code>. 我們可以使用 <code>latex_engine</code> 選項設定其他引擎例如, “pdflatex”, “xelatex”, and “lualatex”. 而中文的引擎範例:</p>
-<div class="sourceCode" id="cb709"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb709-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb709-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb709-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb709-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb709-5" data-line-number="5">  <span class="fu">latex_engine:</span><span class="at"> xelatex</span></a>
-<a class="sourceLine" id="cb709-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb728"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb728-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb728-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb728-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb728-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb728-5" data-line-number="5">  <span class="fu">latex_engine:</span><span class="at"> xelatex</span></a>
+<a class="sourceLine" id="cb728-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
 <p>但是只有這樣還不夠，因為我們需要中文字型,這時可以利用<code>indclude</code>選項:<br />
 ### Include
 要在文件本身(body)前面後面加上一些內容,可以利用<code>includes</code> 選項:</p>
-<div class="sourceCode" id="cb710"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb710-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb710-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb710-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb710-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb710-5" data-line-number="5">    <span class="fu">includes:</span></a>
-<a class="sourceLine" id="cb710-6" data-line-number="6">      <span class="fu">in_header:</span><span class="at"> header.tex</span></a>
-<a class="sourceLine" id="cb710-7" data-line-number="7">      <span class="fu">before_body:</span><span class="at"> doc_prefix.tex</span></a>
-<a class="sourceLine" id="cb710-8" data-line-number="8">      <span class="fu">after_body:</span><span class="at"> doc_suffix.tex</span></a>
-<a class="sourceLine" id="cb710-9" data-line-number="9"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb729"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb729-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb729-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb729-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb729-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb729-5" data-line-number="5">    <span class="fu">includes:</span></a>
+<a class="sourceLine" id="cb729-6" data-line-number="6">      <span class="fu">in_header:</span><span class="at"> header.tex</span></a>
+<a class="sourceLine" id="cb729-7" data-line-number="7">      <span class="fu">before_body:</span><span class="at"> doc_prefix.tex</span></a>
+<a class="sourceLine" id="cb729-8" data-line-number="8">      <span class="fu">after_body:</span><span class="at"> doc_suffix.tex</span></a>
+<a class="sourceLine" id="cb729-9" data-line-number="9"><span class="ot">---</span></a></code></pre></div>
 <div class="sidebar">
 <p>最後的中文設定可以是這樣</p>
-<div class="sourceCode" id="cb711"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb711-1" data-line-number="1"></a>
-<a class="sourceLine" id="cb711-2" data-line-number="2"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb711-3" data-line-number="3"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></a>
-<a class="sourceLine" id="cb711-4" data-line-number="4"><span class="fu">author:</span><span class="at"> </span><span class="st">&quot;lin&quot;</span></a>
-<a class="sourceLine" id="cb711-5" data-line-number="5"><span class="fu">date:</span><span class="at"> </span><span class="st">&quot;&quot;</span></a>
-<a class="sourceLine" id="cb711-6" data-line-number="6"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb711-7" data-line-number="7">  <span class="fu">pdf_document:</span><span class="at"> </span></a>
-<a class="sourceLine" id="cb711-8" data-line-number="8">    <span class="fu">latex_engine:</span><span class="at"> xelatex    </span></a>
-<a class="sourceLine" id="cb711-9" data-line-number="9">    <span class="fu">includes:</span></a>
-<a class="sourceLine" id="cb711-10" data-line-number="10">      <span class="fu">in_header:</span><span class="at"> header.tex    </span></a></code></pre></div>
+<div class="sourceCode" id="cb730"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb730-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb730-2" data-line-number="2"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb730-3" data-line-number="3"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Untitled&quot;</span></a>
+<a class="sourceLine" id="cb730-4" data-line-number="4"><span class="fu">author:</span><span class="at"> </span><span class="st">&quot;lin&quot;</span></a>
+<a class="sourceLine" id="cb730-5" data-line-number="5"><span class="fu">date:</span><span class="at"> </span><span class="st">&quot;&quot;</span></a>
+<a class="sourceLine" id="cb730-6" data-line-number="6"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb730-7" data-line-number="7">  <span class="fu">pdf_document:</span><span class="at"> </span></a>
+<a class="sourceLine" id="cb730-8" data-line-number="8">    <span class="fu">latex_engine:</span><span class="at"> xelatex    </span></a>
+<a class="sourceLine" id="cb730-9" data-line-number="9">    <span class="fu">includes:</span></a>
+<a class="sourceLine" id="cb730-10" data-line-number="10">      <span class="fu">in_header:</span><span class="at"> header.tex    </span></a></code></pre></div>
 <p><code>header.tex</code>的內容(%是註解):</p>
 <pre><code>\usepackage{xeCJK}
 % microsoft windows
@@ -829,78 +860,78 @@ tibble 則利用 tibble::print.tbl_df 函數。.<br />
 %\setmonofont{Courier New}</code></pre>
 </div>
 </div>
-<div id="section-13.9.2" class="section level3">
-<h3><span class="header-section-number">13.9.2</span> 註記</h3>
+<div id="section-15.9.2" class="section level3">
+<h3><span class="header-section-number">15.9.2</span> 註記</h3>
 <p>有關一些中文常常發生的錯誤：</p>
 <ul>
 <li>無法解決字型錯誤:Package fontspec Error: The font “Inconsolata” cannot be found
 改用其他字形，例如使用指令</li>
 </ul>
-<div class="sourceCode" id="cb713"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb713-1" data-line-number="1"> <span class="ex">fc-list</span> :lang=zh-tw fullname</a></code></pre></div>
+<div class="sourceCode" id="cb732"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb732-1" data-line-number="1"> <span class="ex">fc-list</span> :lang=zh-tw fullname</a></code></pre></div>
 <div class="sidebar">
 <p>新系統例如linux安裝完以後，如果要測試中文是否可用於產生pdf，最好利用一些短文。
 ### 測試中文轉pdf
 下列的檔案名稱為<code>x1.tx</code>,測試的時候，可以利用<code>tinytex::xelatex(x1.tex)</code> 用來驗證是否中文可以轉pdf。</p>
 <p>這裡先利用tex小檔案測試xelatex是否功能正常。</p>
-<div class="sourceCode" id="cb714"><pre class="sourceCode tex"><code class="sourceCode latex"><a class="sourceLine" id="cb714-1" data-line-number="1"><span class="bu">\documentclass</span>{<span class="ex">book</span>}</a>
-<a class="sourceLine" id="cb714-2" data-line-number="2"><span class="bu">\usepackage</span>{<span class="ex">xeCJK</span>}</a>
-<a class="sourceLine" id="cb714-3" data-line-number="3"><span class="fu">\setCJKmainfont</span>{AR PL UMing TW}</a>
-<a class="sourceLine" id="cb714-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb714-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb714-6" data-line-number="6"><span class="kw">\begin</span>{<span class="ex">document</span>}</a>
-<a class="sourceLine" id="cb714-7" data-line-number="7">早安，台灣</a>
-<a class="sourceLine" id="cb714-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb714-9" data-line-number="9"><span class="ss">$$b^2-4</span><span class="sc">\times</span><span class="ss"> a </span><span class="sc">\times</span><span class="ss"> c$$</span></a>
-<a class="sourceLine" id="cb714-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb714-11" data-line-number="11">night TeXing.</a>
-<a class="sourceLine" id="cb714-12" data-line-number="12"><span class="kw">\end</span>{<span class="ex">document</span>}</a></code></pre></div>
+<div class="sourceCode" id="cb733"><pre class="sourceCode tex"><code class="sourceCode latex"><a class="sourceLine" id="cb733-1" data-line-number="1"><span class="bu">\documentclass</span>{<span class="ex">book</span>}</a>
+<a class="sourceLine" id="cb733-2" data-line-number="2"><span class="bu">\usepackage</span>{<span class="ex">xeCJK</span>}</a>
+<a class="sourceLine" id="cb733-3" data-line-number="3"><span class="fu">\setCJKmainfont</span>{AR PL UMing TW}</a>
+<a class="sourceLine" id="cb733-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb733-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb733-6" data-line-number="6"><span class="kw">\begin</span>{<span class="ex">document</span>}</a>
+<a class="sourceLine" id="cb733-7" data-line-number="7">早安，台灣</a>
+<a class="sourceLine" id="cb733-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb733-9" data-line-number="9"><span class="ss">$$b^2-4</span><span class="sc">\times</span><span class="ss"> a </span><span class="sc">\times</span><span class="ss"> c$$</span></a>
+<a class="sourceLine" id="cb733-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb733-11" data-line-number="11">night TeXing.</a>
+<a class="sourceLine" id="cb733-12" data-line-number="12"><span class="kw">\end</span>{<span class="ex">document</span>}</a></code></pre></div>
 </div>
 </div>
 <div id="custom-templates" class="section level3">
-<h3><span class="header-section-number">13.9.3</span> Custom Templates</h3>
+<h3><span class="header-section-number">15.9.3</span> Custom Templates</h3>
 <p>也可以利用選項<code>template</code> 取代pandoc 模板 :</p>
-<div class="sourceCode" id="cb715"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb715-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb715-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb715-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb715-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb715-5" data-line-number="5">    <span class="fu">template:</span><span class="at"> quarterly_report.tex</span></a>
-<a class="sourceLine" id="cb715-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb734"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb734-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb734-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb734-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb734-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb734-5" data-line-number="5">    <span class="fu">template:</span><span class="at"> quarterly_report.tex</span></a>
+<a class="sourceLine" id="cb734-6" data-line-number="6"><span class="ot">---</span></a></code></pre></div>
 <p>參考 <a href="http://pandoc.org/README.html#templates">pandoc templates</a> 上的說明。或者參考 <a href="https://github.com/jgm/pandoc-templates/blob/master/default.latex">default LaTeX template</a> 中的範例。</p>
 </div>
 <div id="pandoc-arguments" class="section level3">
-<h3><span class="header-section-number">13.9.4</span> Pandoc Arguments</h3>
+<h3><span class="header-section-number">15.9.4</span> Pandoc Arguments</h3>
 <p>如果在YAML中找不到相關於pandoc的選項,則可以直接利用 <code>pandoc_args</code>. 例如:</p>
-<div class="sourceCode" id="cb716"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb716-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb716-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb716-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb716-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb716-5" data-line-number="5">    <span class="fu">pandoc_args:</span><span class="at"> </span><span class="kw">[</span></a>
-<a class="sourceLine" id="cb716-6" data-line-number="6">      <span class="st">&quot;--no-tex-ligatures&quot;</span></a>
-<a class="sourceLine" id="cb716-7" data-line-number="7">    <span class="kw">]</span></a>
-<a class="sourceLine" id="cb716-8" data-line-number="8"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb735"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb735-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb735-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb735-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb735-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb735-5" data-line-number="5">    <span class="fu">pandoc_args:</span><span class="at"> </span><span class="kw">[</span></a>
+<a class="sourceLine" id="cb735-6" data-line-number="6">      <span class="st">&quot;--no-tex-ligatures&quot;</span></a>
+<a class="sourceLine" id="cb735-7" data-line-number="7">    <span class="kw">]</span></a>
+<a class="sourceLine" id="cb735-8" data-line-number="8"><span class="ot">---</span></a></code></pre></div>
 </div>
 </div>
-<div id="section-13.10" class="section level2">
-<h2><span class="header-section-number">13.10</span> 共用設定</h2>
+<div id="section-15.10" class="section level2">
+<h2><span class="header-section-number">15.10</span> 共用設定</h2>
 <p>多個文件如果都有一樣的輸出格式,則可以利用檔案 <code>_output.yaml</code> 例如:</p>
 <p>**_output.yaml**</p>
-<div class="sourceCode" id="cb717"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb717-1" data-line-number="1"><span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb717-2" data-line-number="2">  <span class="fu">toc:</span><span class="at"> true</span></a>
-<a class="sourceLine" id="cb717-3" data-line-number="3">  <span class="fu">highlight:</span><span class="at"> zenburn</span></a></code></pre></div>
+<div class="sourceCode" id="cb736"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb736-1" data-line-number="1"><span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb736-2" data-line-number="2">  <span class="fu">toc:</span><span class="at"> true</span></a>
+<a class="sourceLine" id="cb736-3" data-line-number="3">  <span class="fu">highlight:</span><span class="at"> zenburn</span></a></code></pre></div>
 <p>做為文件中的YAML的比對,可以發現,只是把output: 的後面整個層級搬到_output.yaml。</p>
-<div class="sourceCode" id="cb718"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb718-1" data-line-number="1"><span class="ot">---</span></a>
-<a class="sourceLine" id="cb718-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
-<a class="sourceLine" id="cb718-3" data-line-number="3"><span class="fu">output:</span></a>
-<a class="sourceLine" id="cb718-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
-<a class="sourceLine" id="cb718-5" data-line-number="5">    <span class="fu">includes:</span></a>
-<a class="sourceLine" id="cb718-6" data-line-number="6">      <span class="fu">in_header:</span><span class="at"> header.tex</span></a>
-<a class="sourceLine" id="cb718-7" data-line-number="7">      <span class="fu">before_body:</span><span class="at"> doc_prefix.tex</span></a>
-<a class="sourceLine" id="cb718-8" data-line-number="8">      <span class="fu">after_body:</span><span class="at"> doc_suffix.tex</span></a>
-<a class="sourceLine" id="cb718-9" data-line-number="9"><span class="ot">---</span></a></code></pre></div>
+<div class="sourceCode" id="cb737"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb737-1" data-line-number="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb737-2" data-line-number="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Habits&quot;</span></a>
+<a class="sourceLine" id="cb737-3" data-line-number="3"><span class="fu">output:</span></a>
+<a class="sourceLine" id="cb737-4" data-line-number="4">  <span class="fu">pdf_document:</span></a>
+<a class="sourceLine" id="cb737-5" data-line-number="5">    <span class="fu">includes:</span></a>
+<a class="sourceLine" id="cb737-6" data-line-number="6">      <span class="fu">in_header:</span><span class="at"> header.tex</span></a>
+<a class="sourceLine" id="cb737-7" data-line-number="7">      <span class="fu">before_body:</span><span class="at"> doc_prefix.tex</span></a>
+<a class="sourceLine" id="cb737-8" data-line-number="8">      <span class="fu">after_body:</span><span class="at"> doc_suffix.tex</span></a>
+<a class="sourceLine" id="cb737-9" data-line-number="9"><span class="ot">---</span></a></code></pre></div>
 
 </div>
-<div id="section-13.11" class="section level2">
-<h2><span class="header-section-number">13.11</span> 討論</h2>
+<div id="section-15.11" class="section level2">
+<h2><span class="header-section-number">15.11</span> 討論</h2>
 <ul>
 <li><a href="https://github.com/lmmx/devnotes/wiki/Rmarkdown-custom-knit-hook-to-compile-a-multi-part-document">hook</a><br />
 <a href="https://rmarkdown.rstudio.com/articles_verbatim2.html">Verbatim Chunks in R Markdow</a><br />
@@ -914,11 +945,11 @@ tibble 則利用 tibble::print.tbl_df 函數。.<br />
 <a href="https://github.com/yihui/knitr-book">dynamic book</a></li>
 </ul>
 <div id="inline-code" class="section level3">
-<h3><span class="header-section-number">13.11.1</span> inline code</h3>
+<h3><span class="header-section-number">15.11.1</span> inline code</h3>
 <p>inline 讓內籤R程式碼不作用:方法是兩邊打上``。例如:</p>
-<div class="sourceCode" id="cb719"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb719-1" data-line-number="1"><span class="kw">inline</span>(<span class="st">&quot;dd&quot;</span>)</a>
-<a class="sourceLine" id="cb719-2" data-line-number="2"><span class="op">==</span><span class="er">=&gt;</span><span class="st">  ``</span> <span class="st">`</span><span class="dt">r dd</span><span class="st">`</span> <span class="st">``</span></a></code></pre></div>
-<div class="sourceCode" id="cb720"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb720-1" data-line-number="1"><span class="kw">cat</span>(readr<span class="op">::</span><span class="kw">read_file</span>(<span class="st">&quot;rmd_topic_1.Rmd&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb738"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb738-1" data-line-number="1"><span class="kw">inline</span>(<span class="st">&quot;dd&quot;</span>)</a>
+<a class="sourceLine" id="cb738-2" data-line-number="2"><span class="op">==</span><span class="er">=&gt;</span><span class="st">  ``</span> <span class="st">`</span><span class="dt">r dd</span><span class="st">`</span> <span class="st">``</span></a></code></pre></div>
+<div class="sourceCode" id="cb739"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb739-1" data-line-number="1"><span class="kw">cat</span>(readr<span class="op">::</span><span class="kw">read_file</span>(<span class="st">&quot;rmd_topic_1.Rmd&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>
 ## 討論
 * [hook](https://github.com/lmmx/devnotes/wiki/Rmarkdown-custom-knit-hook-to-compile-a-multi-part-document)  
@@ -962,17 +993,17 @@ cat(readr::read_file("MyData.csv"))
 
 mtcas 中的資料筆數有 `r nrow(mtcars)`
 </code></pre>
-<div class="sourceCode" id="cb721"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb721-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
-<a class="sourceLine" id="cb721-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">quote=</span>F)</a>
-<a class="sourceLine" id="cb721-3" data-line-number="3"><span class="co"># system(&quot;cat myData.csv&quot;) # 這個不行</span></a>
-<a class="sourceLine" id="cb721-4" data-line-number="4"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;MyData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb740"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb740-1" data-line-number="1">rst =<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&#39;resources/wh.csv&#39;</span>,<span class="dt">comment.char=</span><span class="st">&quot;#&quot;</span>,<span class="dt">na.string=</span><span class="st">&#39;.&#39;</span>)</a>
+<a class="sourceLine" id="cb740-2" data-line-number="2"><span class="kw">write.csv</span>(rst, <span class="dt">file =</span> <span class="st">&quot;MyData.csv&quot;</span>,<span class="dt">row.names=</span><span class="ot">FALSE</span>, <span class="dt">quote=</span>F)</a>
+<a class="sourceLine" id="cb740-3" data-line-number="3"><span class="co"># system(&quot;cat myData.csv&quot;) # 這個不行</span></a>
+<a class="sourceLine" id="cb740-4" data-line-number="4"><span class="kw">cat</span>(<span class="kw">readLines</span>(<span class="st">&#39;MyData.csv&#39;</span>), <span class="dt">sep =</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>height,weight,sex
 156,56, m
 167,NA, f
 189,70, m
 180,NA, f
 </code></pre>
-<div class="sourceCode" id="cb722"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb722-1" data-line-number="1"><span class="kw">cat</span>(readr<span class="op">::</span><span class="kw">read_file</span>(<span class="st">&quot;MyData.csv&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb741"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb741-1" data-line-number="1"><span class="kw">cat</span>(readr<span class="op">::</span><span class="kw">read_file</span>(<span class="st">&quot;MyData.csv&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>height,weight,sex
 156,56, m
 167,NA, f
@@ -989,7 +1020,7 @@ mtcas 中的資料筆數有 `r nrow(mtcars)`
           </div>
         </div>
       </div>
-<a href="programming-in-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="econometrics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="git-note.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
