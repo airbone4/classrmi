@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-15">
+<meta name="date" content="2018-11-19">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -214,13 +214,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.17.1" data-path="data-type.html"><a href="data-type.html#section-2.17.1"><i class="fa fa-check"></i><b>2.17.1</b> 變數屬性查詢函數</a></li>
 </ul></li>
 <li class="chapter" data-level="2.18" data-path="data-type.html"><a href="data-type.html#operator"><i class="fa fa-check"></i><b>2.18</b> operator %&gt;%</a></li>
-<li class="chapter" data-level="2.19" data-path="data-type.html"><a href="data-type.html#section-2.19"><i class="fa fa-check"></i><b>2.19</b> 相關操作</a><ul>
-<li class="chapter" data-level="2.19.1" data-path="data-type.html"><a href="data-type.html#section-2.19.1"><i class="fa fa-check"></i><b>2.19.1</b> 問題:想要知道有甚麼資料庫可以用?</a></li>
+<li class="chapter" data-level="2.19" data-path="data-type.html"><a href="data-type.html#apply-family"><i class="fa fa-check"></i><b>2.19</b> apply family</a><ul>
+<li class="chapter" data-level="2.19.1" data-path="data-type.html"><a href="data-type.html#apply"><i class="fa fa-check"></i><b>2.19.1</b> apply</a></li>
+<li class="chapter" data-level="2.19.2" data-path="data-type.html"><a href="data-type.html#lapply"><i class="fa fa-check"></i><b>2.19.2</b> lapply函數</a></li>
+<li class="chapter" data-level="2.19.3" data-path="data-type.html"><a href="data-type.html#sapply"><i class="fa fa-check"></i><b>2.19.3</b> sapply函數</a></li>
+<li class="chapter" data-level="2.19.4" data-path="data-type.html"><a href="data-type.html#section-2.19.4"><i class="fa fa-check"></i><b>2.19.4</b> 比較</a></li>
+<li class="chapter" data-level="2.19.5" data-path="data-type.html"><a href="data-type.html#vapply"><i class="fa fa-check"></i><b>2.19.5</b> vapply函數</a></li>
+<li class="chapter" data-level="2.19.6" data-path="data-type.html"><a href="data-type.html#mapply"><i class="fa fa-check"></i><b>2.19.6</b> mapply函數</a></li>
+<li class="chapter" data-level="2.19.7" data-path="data-type.html"><a href="data-type.html#tapply"><i class="fa fa-check"></i><b>2.19.7</b> tapply函數</a></li>
+<li class="chapter" data-level="2.19.8" data-path="data-type.html"><a href="data-type.html#rapply"><i class="fa fa-check"></i><b>2.19.8</b> rapply函數</a></li>
+<li class="chapter" data-level="2.19.9" data-path="data-type.html"><a href="data-type.html#eapply"><i class="fa fa-check"></i><b>2.19.9</b> eapply函數</a></li>
 </ul></li>
-<li class="chapter" data-level="2.20" data-path="data-type.html"><a href="data-type.html#section-2.20"><i class="fa fa-check"></i><b>2.20</b> 常見錯誤</a><ul>
-<li class="chapter" data-level="2.20.1" data-path="data-type.html"><a href="data-type.html#error"><i class="fa fa-check"></i><b>2.20.1</b> error</a></li>
-<li class="chapter" data-level="2.20.2" data-path="data-type.html"><a href="data-type.html#error-1"><i class="fa fa-check"></i><b>2.20.2</b> error</a></li>
-<li class="chapter" data-level="2.20.3" data-path="data-type.html"><a href="data-type.html#error-2"><i class="fa fa-check"></i><b>2.20.3</b> error</a></li>
+<li class="chapter" data-level="2.20" data-path="data-type.html"><a href="data-type.html#section-2.20"><i class="fa fa-check"></i><b>2.20</b> 相關操作</a><ul>
+<li class="chapter" data-level="2.20.1" data-path="data-type.html"><a href="data-type.html#section-2.20.1"><i class="fa fa-check"></i><b>2.20.1</b> 問題:想要知道有甚麼資料庫可以用?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.21" data-path="data-type.html"><a href="data-type.html#section-2.21"><i class="fa fa-check"></i><b>2.21</b> 常見錯誤</a><ul>
+<li class="chapter" data-level="2.21.1" data-path="data-type.html"><a href="data-type.html#error"><i class="fa fa-check"></i><b>2.21.1</b> error</a></li>
+<li class="chapter" data-level="2.21.2" data-path="data-type.html"><a href="data-type.html#error-1"><i class="fa fa-check"></i><b>2.21.2</b> error</a></li>
+<li class="chapter" data-level="2.21.3" data-path="data-type.html"><a href="data-type.html#error-2"><i class="fa fa-check"></i><b>2.21.3</b> error</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html"><i class="fa fa-check"></i><b>3</b> Regular expression syntax</a><ul>
@@ -295,21 +306,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>5.9</b> Quiz answers</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="section-6.html"><a href="section-6.html"><i class="fa fa-check"></i><b>6</b> 資料探索</a><ul>
-<li class="chapter" data-level="6.1" data-path="section-6.html"><a href="section-6.html#wooldriidge-"><i class="fa fa-check"></i><b>6.1</b> 來自wooldriidge 的資料集</a></li>
-<li class="chapter" data-level="6.2" data-path="section-6.html"><a href="section-6.html#t-test"><i class="fa fa-check"></i><b>6.2</b> t-test</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="section-6.html"><a href="section-6.html#manually-enter-raw-data-from-wooldridge-table-c.3"><i class="fa fa-check"></i><b>6.2.1</b> Manually enter raw data from Wooldridge, Table C.3:</a></li>
-<li class="chapter" data-level="6.2.2" data-path="section-6.html"><a href="section-6.html#calculate-change-the-parentheses-just-display-the-results"><i class="fa fa-check"></i><b>6.2.2</b> Calculate Change (the parentheses just display the results):</a></li>
-<li class="chapter" data-level="6.2.3" data-path="section-6.html"><a href="section-6.html#ingredients-to-ci-formula"><i class="fa fa-check"></i><b>6.2.3</b> Ingredients to CI formula</a></li>
-<li class="chapter" data-level="6.2.4" data-path="section-6.html"><a href="section-6.html#confidence-intervall"><i class="fa fa-check"></i><b>6.2.4</b> Confidence intervall:</a></li>
-<li class="chapter" data-level="6.2.5" data-path="section-6.html"><a href="section-6.html#by-hand"><i class="fa fa-check"></i><b>6.2.5</b> by hand</a></li>
+<li class="chapter" data-level="6.1" data-path="section-6.html"><a href="section-6.html#section-6.1"><i class="fa fa-check"></i><b>6.1</b> 常用函數</a></li>
+<li class="chapter" data-level="6.2" data-path="section-6.html"><a href="section-6.html#wooldriidge-"><i class="fa fa-check"></i><b>6.2</b> 來自wooldriidge 的資料集</a></li>
+<li class="chapter" data-level="6.3" data-path="section-6.html"><a href="section-6.html#t-test"><i class="fa fa-check"></i><b>6.3</b> t-test</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="section-6.html"><a href="section-6.html#manually-enter-raw-data-from-wooldridge-table-c.3"><i class="fa fa-check"></i><b>6.3.1</b> Manually enter raw data from Wooldridge, Table C.3:</a></li>
+<li class="chapter" data-level="6.3.2" data-path="section-6.html"><a href="section-6.html#calculate-change-the-parentheses-just-display-the-results"><i class="fa fa-check"></i><b>6.3.2</b> Calculate Change (the parentheses just display the results):</a></li>
+<li class="chapter" data-level="6.3.3" data-path="section-6.html"><a href="section-6.html#ingredients-to-ci-formula"><i class="fa fa-check"></i><b>6.3.3</b> Ingredients to CI formula</a></li>
+<li class="chapter" data-level="6.3.4" data-path="section-6.html"><a href="section-6.html#confidence-intervall"><i class="fa fa-check"></i><b>6.3.4</b> Confidence intervall:</a></li>
+<li class="chapter" data-level="6.3.5" data-path="section-6.html"><a href="section-6.html#by-hand"><i class="fa fa-check"></i><b>6.3.5</b> by hand</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="section-6.html"><a href="section-6.html#by-t.test"><i class="fa fa-check"></i><b>6.3</b> by 函數<code>t.test()</code></a></li>
-<li class="chapter" data-level="6.4" data-path="section-6.html"><a href="section-6.html#misc-1"><i class="fa fa-check"></i><b>6.4</b> misc</a></li>
+<li class="chapter" data-level="6.4" data-path="section-6.html"><a href="section-6.html#by-t.test"><i class="fa fa-check"></i><b>6.4</b> by 函數<code>t.test()</code></a></li>
+<li class="chapter" data-level="6.5" data-path="section-6.html"><a href="section-6.html#misc-1"><i class="fa fa-check"></i><b>6.5</b> misc</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>7</b> R Packages</a><ul>
 <li class="chapter" data-level="7.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 基本</a><ul>
 <li class="chapter" data-level="7.1.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1.1"><i class="fa fa-check"></i><b>7.1.1</b> 套件在哪裡</a></li>
-<li class="chapter" data-level="7.1.2" data-path="r-packages.html"><a href="r-packages.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 搜尋套建中的檔案</a></li>
+<li class="chapter" data-level="7.1.2" data-path="r-packages.html"><a href="r-packages.html#section-7.1.2"><i class="fa fa-check"></i><b>7.1.2</b> 搜尋套件中的檔案</a></li>
 <li class="chapter" data-level="7.1.3" data-path="r-packages.html"><a href="r-packages.html#section-7.1.3"><i class="fa fa-check"></i><b>7.1.3</b> 哪個函數屬於哪個套件?</a></li>
 </ul></li>
 <li class="chapter" data-level="7.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>7.2</b> <code>library()</code> vs <code>require()</code></a></li>
@@ -317,150 +329,158 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="r-packages.html"><a href="r-packages.html#-package"><i class="fa fa-check"></i><b>7.4</b> 自製 package</a><ul>
 <li class="chapter" data-level="7.4.1" data-path="r-packages.html"><a href="r-packages.html#-package-"><i class="fa fa-check"></i><b>7.4.1</b> 自製 package 範例</a></li>
 </ul></li>
+<li class="chapter" data-level="7.5" data-path="r-packages.html"><a href="r-packages.html#packing-up-your-data"><i class="fa fa-check"></i><b>7.5</b> Packing up your data</a></li>
+<li class="chapter" data-level="7.6" data-path="r-packages.html"><a href="r-packages.html#what-is-a-package"><i class="fa fa-check"></i><b>7.6</b> What is a package?</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="r-packages.html"><a href="r-packages.html#section-7.6.1"><i class="fa fa-check"></i><b>7.6.1</b> 也可以包含資料</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html"><i class="fa fa-check"></i><b>8</b> Packing up your data</a><ul>
-<li class="chapter" data-level="8.1" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#preliminaries"><i class="fa fa-check"></i><b>8.1</b> Preliminaries</a></li>
-<li class="chapter" data-level="8.2" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#what-is-a-package"><i class="fa fa-check"></i><b>8.2</b> What is a package?</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.2.1"><i class="fa fa-check"></i><b>8.2.1</b> 也可以包含資料</a></li>
+<li class="chapter" data-level="7.7" data-path="r-packages.html"><a href="r-packages.html#section-7.7"><i class="fa fa-check"></i><b>7.7</b> 怎樣自訂套件</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="r-packages.html"><a href="r-packages.html#devtools-package-skeleton"><i class="fa fa-check"></i><b>7.7.1</b> 利用<code>devtools</code> 建立骨架(package skeleton)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="r-packages.html"><a href="r-packages.html#section-7.7.2"><i class="fa fa-check"></i><b>7.7.2</b> 工作流程</a></li>
+<li class="chapter" data-level="7.7.3" data-path="r-packages.html"><a href="r-packages.html#documentation-and-exports"><i class="fa fa-check"></i><b>7.7.3</b> Documentation and exports</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.3"><i class="fa fa-check"></i><b>8.3</b> 怎樣自訂套件</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#devtools-package-skeleton"><i class="fa fa-check"></i><b>8.3.1</b> 利用<code>devtools</code> 建立骨架(package skeleton)</a></li>
-<li class="chapter" data-level="8.3.2" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.3.2"><i class="fa fa-check"></i><b>8.3.2</b> 工作流程</a></li>
-<li class="chapter" data-level="8.3.3" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#documentation-and-exports"><i class="fa fa-check"></i><b>8.3.3</b> Documentation and exports</a></li>
+<li class="chapter" data-level="7.8" data-path="r-packages.html"><a href="r-packages.html#section-7.8"><i class="fa fa-check"></i><b>7.8</b> 資料放入套件</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="packing-up-your-data.html"><a href="packing-up-your-data.html#section-8.4"><i class="fa fa-check"></i><b>8.4</b> 資料放入套件</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>9</b> Environments</a><ul>
-<li class="chapter" data-level="9.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>9.1</b> Introduction</a><ul>
+<li class="chapter" data-level="8" data-path="environments.html"><a href="environments.html"><i class="fa fa-check"></i><b>8</b> Environments</a><ul>
+<li class="chapter" data-level="8.1" data-path="environments.html"><a href="environments.html#introduction-1"><i class="fa fa-check"></i><b>8.1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#quiz"><i class="fa fa-check"></i>Quiz</a></li>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#outline-1"><i class="fa fa-check"></i>Outline</a></li>
 <li class="chapter" data-level="" data-path="environments.html"><a href="environments.html#prerequisites"><i class="fa fa-check"></i>Prerequisites</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>9.2</b> Environment basics</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>9.2.1</b> Basics</a></li>
-<li class="chapter" data-level="9.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>9.2.2</b> Important environments</a></li>
-<li class="chapter" data-level="9.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>9.2.3</b> Parents</a></li>
-<li class="chapter" data-level="9.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>9.2.4</b> Getting and setting</a></li>
-<li class="chapter" data-level="9.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>9.2.5</b> Finalisers</a></li>
-<li class="chapter" data-level="9.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>9.2.6</b> Advanced bindings</a></li>
-<li class="chapter" data-level="9.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>9.2.7</b> Exercises</a></li>
+<li class="chapter" data-level="8.2" data-path="environments.html"><a href="environments.html#env-basics"><i class="fa fa-check"></i><b>8.2</b> Environment basics</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="environments.html"><a href="environments.html#basics"><i class="fa fa-check"></i><b>8.2.1</b> Basics</a></li>
+<li class="chapter" data-level="8.2.2" data-path="environments.html"><a href="environments.html#important-environments"><i class="fa fa-check"></i><b>8.2.2</b> Important environments</a></li>
+<li class="chapter" data-level="8.2.3" data-path="environments.html"><a href="environments.html#parents"><i class="fa fa-check"></i><b>8.2.3</b> Parents</a></li>
+<li class="chapter" data-level="8.2.4" data-path="environments.html"><a href="environments.html#getting-and-setting"><i class="fa fa-check"></i><b>8.2.4</b> Getting and setting</a></li>
+<li class="chapter" data-level="8.2.5" data-path="environments.html"><a href="environments.html#finalisers"><i class="fa fa-check"></i><b>8.2.5</b> Finalisers</a></li>
+<li class="chapter" data-level="8.2.6" data-path="environments.html"><a href="environments.html#advanced-bindings"><i class="fa fa-check"></i><b>8.2.6</b> Advanced bindings</a></li>
+<li class="chapter" data-level="8.2.7" data-path="environments.html"><a href="environments.html#exercises-6"><i class="fa fa-check"></i><b>8.2.7</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>9.3</b> Recursing over environments</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>9.3.1</b> Exercises</a></li>
+<li class="chapter" data-level="8.3" data-path="environments.html"><a href="environments.html#env-recursion"><i class="fa fa-check"></i><b>8.3</b> Recursing over environments</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="environments.html"><a href="environments.html#exercises-7"><i class="fa fa-check"></i><b>8.3.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>9.4</b> Special environments</a><ul>
-<li class="chapter" data-level="9.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>9.4.1</b> Package environments and the search path</a></li>
-<li class="chapter" data-level="9.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>9.4.2</b> The function environment</a></li>
-<li class="chapter" data-level="9.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>9.4.3</b> Namespaces</a></li>
-<li class="chapter" data-level="9.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>9.4.4</b> Execution environments</a></li>
-<li class="chapter" data-level="9.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>9.4.5</b> Exercises</a></li>
+<li class="chapter" data-level="8.4" data-path="environments.html"><a href="environments.html#function-envs"><i class="fa fa-check"></i><b>8.4</b> Special environments</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="environments.html"><a href="environments.html#package-environments-and-the-search-path"><i class="fa fa-check"></i><b>8.4.1</b> Package environments and the search path</a></li>
+<li class="chapter" data-level="8.4.2" data-path="environments.html"><a href="environments.html#the-function-environment"><i class="fa fa-check"></i><b>8.4.2</b> The function environment</a></li>
+<li class="chapter" data-level="8.4.3" data-path="environments.html"><a href="environments.html#namespaces"><i class="fa fa-check"></i><b>8.4.3</b> Namespaces</a></li>
+<li class="chapter" data-level="8.4.4" data-path="environments.html"><a href="environments.html#execution-environments"><i class="fa fa-check"></i><b>8.4.4</b> Execution environments</a></li>
+<li class="chapter" data-level="8.4.5" data-path="environments.html"><a href="environments.html#exercises-8"><i class="fa fa-check"></i><b>8.4.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="9.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>9.5</b> The call stack</a><ul>
-<li class="chapter" data-level="9.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>9.5.1</b> Simple call stacks</a></li>
-<li class="chapter" data-level="9.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>9.5.2</b> Lazy evaluation</a></li>
-<li class="chapter" data-level="9.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>9.5.3</b> Frames</a></li>
-<li class="chapter" data-level="9.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>9.5.4</b> Dynamic scope</a></li>
-<li class="chapter" data-level="9.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>9.5.5</b> Exercises</a></li>
+<li class="chapter" data-level="8.5" data-path="environments.html"><a href="environments.html#the-call-stack"><i class="fa fa-check"></i><b>8.5</b> The call stack</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="environments.html"><a href="environments.html#simple-call-stacks"><i class="fa fa-check"></i><b>8.5.1</b> Simple call stacks</a></li>
+<li class="chapter" data-level="8.5.2" data-path="environments.html"><a href="environments.html#lazy-evaluation-1"><i class="fa fa-check"></i><b>8.5.2</b> Lazy evaluation</a></li>
+<li class="chapter" data-level="8.5.3" data-path="environments.html"><a href="environments.html#frames"><i class="fa fa-check"></i><b>8.5.3</b> Frames</a></li>
+<li class="chapter" data-level="8.5.4" data-path="environments.html"><a href="environments.html#dynamic-scope"><i class="fa fa-check"></i><b>8.5.4</b> Dynamic scope</a></li>
+<li class="chapter" data-level="8.5.5" data-path="environments.html"><a href="environments.html#exercises-9"><i class="fa fa-check"></i><b>8.5.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="9.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>9.6</b> As data structures</a></li>
-<li class="chapter" data-level="9.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>9.7</b> <code>&lt;&lt;-</code></a><ul>
-<li class="chapter" data-level="9.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>9.7.1</b> Exercises</a></li>
+<li class="chapter" data-level="8.6" data-path="environments.html"><a href="environments.html#explicit-envs"><i class="fa fa-check"></i><b>8.6</b> As data structures</a></li>
+<li class="chapter" data-level="8.7" data-path="environments.html"><a href="environments.html#section"><i class="fa fa-check"></i><b>8.7</b> <code>&lt;&lt;-</code></a><ul>
+<li class="chapter" data-level="8.7.1" data-path="environments.html"><a href="environments.html#exercises-10"><i class="fa fa-check"></i><b>8.7.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="9.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>9.8</b> Quiz answers</a><ul>
-<li class="chapter" data-level="9.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>9.8.1</b> term</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="section-10.html"><a href="section-10.html"><i class="fa fa-check"></i><b>10</b> 基本繪圖</a><ul>
-<li class="chapter" data-level="10.1" data-path="section-10.html"><a href="section-10.html#reference"><i class="fa fa-check"></i><b>10.1</b> reference</a></li>
-<li class="chapter" data-level="10.2" data-path="section-10.html"><a href="section-10.html#basic"><i class="fa fa-check"></i><b>10.2</b> basic</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="section-10.html"><a href="section-10.html#histograms"><i class="fa fa-check"></i><b>10.2.1</b> Histograms</a></li>
-<li class="chapter" data-level="10.2.2" data-path="section-10.html"><a href="section-10.html#kernel-density-plot"><i class="fa fa-check"></i><b>10.2.2</b> Kernel Density Plot</a></li>
-<li class="chapter" data-level="10.2.3" data-path="section-10.html"><a href="section-10.html#saving-graphs"><i class="fa fa-check"></i><b>10.2.3</b> Saving Graphs</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="section-10.html"><a href="section-10.html#section-10.3"><i class="fa fa-check"></i><b>10.3</b> 多個圖和疊圖</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="section-10.html"><a href="section-10.html#section-10.3.1"><i class="fa fa-check"></i><b>10.3.1</b> 多視窗</a></li>
-<li class="chapter" data-level="10.3.2" data-path="section-10.html"><a href="section-10.html#-plots"><i class="fa fa-check"></i><b>10.3.2</b> 合併 Plots</a></li>
-<li class="chapter" data-level="10.3.3" data-path="section-10.html"><a href="section-10.html#section-10.3.3"><i class="fa fa-check"></i><b>10.3.3</b> 疊圖</a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="section-10.html"><a href="section-10.html#section-10.4"><i class="fa fa-check"></i><b>10.4</b> 分組畫圖</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="section-10.html"><a href="section-10.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>10.4.1</b> Comparing Groups VIA Kernal Density</a></li>
-</ul></li>
-<li class="chapter" data-level="10.5" data-path="section-10.html"><a href="section-10.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>10.5</b> Add texts within the graph</a><ul>
-<li class="chapter" data-level="10.5.1" data-path="section-10.html"><a href="section-10.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>10.5.1</b> Add text in the margins of the graph</a></li>
-<li class="chapter" data-level="10.5.2" data-path="section-10.html"><a href="section-10.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>10.5.2</b> Add mathematical annotation to a plot</a></li>
-</ul></li>
-<li class="chapter" data-level="10.6" data-path="section-10.html"><a href="section-10.html#section-10.6"><i class="fa fa-check"></i><b>10.6</b> 函數畫圖</a></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>11</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="11.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-11.1"><i class="fa fa-check"></i><b>11.1</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="11.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>11.2</b> distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>12</b> Tidy Basic 01</a><ul>
-<li class="chapter" data-level="12.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>12.1</b> long and wide data</a><ul>
-<li class="chapter" data-level="12.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>12.1.1</b> gather: wide to long</a></li>
-<li class="chapter" data-level="12.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>12.1.2</b> spread :long to wide</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>12.2</b> dplyr</a></li>
-<li class="chapter" data-level="12.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>12.3</b> other</a><ul>
-<li class="chapter" data-level="12.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>12.3.1</b> Basic verbs</a></li>
-<li class="chapter" data-level="12.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>12.3.2</b> Group by</a></li>
-<li class="chapter" data-level="12.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>12.3.3</b> summarize()</a></li>
+<li class="chapter" data-level="8.8" data-path="environments.html"><a href="environments.html#env-answers"><i class="fa fa-check"></i><b>8.8</b> Quiz answers</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="environments.html"><a href="environments.html#term"><i class="fa fa-check"></i><b>8.8.1</b> term</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>13</b> programming in R</a><ul>
-<li class="chapter" data-level="13.1" data-path="programming-in-r.html"><a href="programming-in-r.html#section-13.1"><i class="fa fa-check"></i><b>13.1</b> 條件指令</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>13.1.1</b> if</a></li>
-<li class="chapter" data-level="13.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse"><i class="fa fa-check"></i><b>13.1.2</b> ifelse的寫法</a></li>
-<li class="chapter" data-level="13.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch"><i class="fa fa-check"></i><b>13.1.3</b> switch的寫法</a></li>
+<li class="chapter" data-level="9" data-path="section-9.html"><a href="section-9.html"><i class="fa fa-check"></i><b>9</b> 基本繪圖</a><ul>
+<li class="chapter" data-level="9.1" data-path="section-9.html"><a href="section-9.html#reference"><i class="fa fa-check"></i><b>9.1</b> reference</a></li>
+<li class="chapter" data-level="9.2" data-path="section-9.html"><a href="section-9.html#basic"><i class="fa fa-check"></i><b>9.2</b> basic</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="section-9.html"><a href="section-9.html#histograms"><i class="fa fa-check"></i><b>9.2.1</b> Histograms</a></li>
+<li class="chapter" data-level="9.2.2" data-path="section-9.html"><a href="section-9.html#kernel-density-plot"><i class="fa fa-check"></i><b>9.2.2</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="9.2.3" data-path="section-9.html"><a href="section-9.html#saving-graphs"><i class="fa fa-check"></i><b>9.2.3</b> Saving Graphs</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="programming-in-r.html"><a href="programming-in-r.html#section-13.2"><i class="fa fa-check"></i><b>13.2</b> 迴圈指令</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>13.2.1</b> for-loop</a></li>
-<li class="chapter" data-level="13.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>13.2.2</b> while-loop</a></li>
-<li class="chapter" data-level="13.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>13.2.3</b> repeat-loop</a></li>
+<li class="chapter" data-level="9.3" data-path="section-9.html"><a href="section-9.html#section-9.3"><i class="fa fa-check"></i><b>9.3</b> 多個圖和疊圖</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="section-9.html"><a href="section-9.html#section-9.3.1"><i class="fa fa-check"></i><b>9.3.1</b> 多視窗</a></li>
+<li class="chapter" data-level="9.3.2" data-path="section-9.html"><a href="section-9.html#-plots"><i class="fa fa-check"></i><b>9.3.2</b> 合併 Plots</a></li>
+<li class="chapter" data-level="9.3.3" data-path="section-9.html"><a href="section-9.html#section-9.3.3"><i class="fa fa-check"></i><b>9.3.3</b> 疊圖</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="programming-in-r.html"><a href="programming-in-r.html#section-13.3"><i class="fa fa-check"></i><b>13.3</b> 範例</a><ul>
-<li class="chapter" data-level="13.3.1" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i><b>13.3.1</b> 1</a></li>
+<li class="chapter" data-level="9.4" data-path="section-9.html"><a href="section-9.html#section-9.4"><i class="fa fa-check"></i><b>9.4</b> 分組畫圖</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="section-9.html"><a href="section-9.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>9.4.1</b> Comparing Groups VIA Kernal Density</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="section-9.html"><a href="section-9.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>9.5</b> Add texts within the graph</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="section-9.html"><a href="section-9.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>9.5.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="9.5.2" data-path="section-9.html"><a href="section-9.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>9.5.2</b> Add mathematical annotation to a plot</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>14</b> Econometrics</a><ul>
-<li class="chapter" data-level="14.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>14.1</b> package recommended</a></li>
+<li class="chapter" data-level="9.6" data-path="section-9.html"><a href="section-9.html#section-9.6"><i class="fa fa-check"></i><b>9.6</b> 函數畫圖</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>15</b> rbook 提要</a><ul>
-<li class="chapter" data-level="15.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>15.1</b> index.Rmd</a></li>
-<li class="chapter" data-level="15.2" data-path="rbook-.html"><a href="rbook-.html#section-2"><i class="fa fa-check"></i><b>15.2</b> </a></li>
-<li class="chapter" data-level="15.3" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>15.3</b> 其他_output.yml 範例</a></li>
-<li class="chapter" data-level="15.4" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>15.4</b> .travis.yml</a></li>
-<li class="chapter" data-level="15.5" data-path="rbook-.html"><a href="rbook-.html#section-15.5"><i class="fa fa-check"></i><b>15.5</b> 紀錄</a><ul>
-<li class="chapter" data-level="15.5.1" data-path="rbook-.html"><a href="rbook-.html#knitr-hook"><i class="fa fa-check"></i><b>15.5.1</b> knitr hook</a></li>
-<li class="chapter" data-level="15.5.2" data-path="rbook-.html"><a href="rbook-.html#terminal-output"><i class="fa fa-check"></i><b>15.5.2</b> terminal output</a></li>
+<li class="chapter" data-level="10" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>10</b> Sample and Distribution 01</a><ul>
+<li class="chapter" data-level="10.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#section-10.1"><i class="fa fa-check"></i><b>10.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="10.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>10.2</b> distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="15.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>15.6</b> python</a></li>
-<li class="chapter" data-level="15.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>15.7</b> 產生PDF 文件</a><ul>
-<li class="chapter" data-level="15.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>15.7.1</b> Overview</a></li>
-<li class="chapter" data-level="15.7.2" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>15.7.2</b> meta data 上的pdf 設定,常見版本</a></li>
-<li class="chapter" data-level="15.7.3" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>15.7.3</b> LaTeX Packages for Citations</a></li>
+<li class="chapter" data-level="11" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html"><i class="fa fa-check"></i><b>11</b> Tidy Basic 01</a><ul>
+<li class="chapter" data-level="11.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#long-and-wide-data"><i class="fa fa-check"></i><b>11.1</b> long and wide data</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#gather-wide-to-long"><i class="fa fa-check"></i><b>11.1.1</b> gather: wide to long</a></li>
+<li class="chapter" data-level="11.1.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#spread-long-to-wide"><i class="fa fa-check"></i><b>11.1.2</b> spread :long to wide</a></li>
 </ul></li>
-<li class="chapter" data-level="15.8" data-path="rbook-.html"><a href="rbook-.html#section-15.8"><i class="fa fa-check"></i><b>15.8</b> 中文</a></li>
-<li class="chapter" data-level="15.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>15.9</b> Rstudio chinese</a><ul>
-<li class="chapter" data-level="15.9.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>15.9.1</b> LaTeX Engine</a></li>
-<li class="chapter" data-level="15.9.2" data-path="rbook-.html"><a href="rbook-.html#section-15.9.2"><i class="fa fa-check"></i><b>15.9.2</b> 註記</a></li>
-<li class="chapter" data-level="15.9.3" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>15.9.3</b> Custom Templates</a></li>
-<li class="chapter" data-level="15.9.4" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>15.9.4</b> Pandoc Arguments</a></li>
-</ul></li>
-<li class="chapter" data-level="15.10" data-path="rbook-.html"><a href="rbook-.html#section-15.10"><i class="fa fa-check"></i><b>15.10</b> 共用設定</a></li>
-<li class="chapter" data-level="15.11" data-path="rbook-.html"><a href="rbook-.html#section-15.11"><i class="fa fa-check"></i><b>15.11</b> 討論</a><ul>
-<li class="chapter" data-level="15.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>15.11.1</b> inline code</a></li>
+<li class="chapter" data-level="11.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#dplyr"><i class="fa fa-check"></i><b>11.2</b> dplyr</a></li>
+<li class="chapter" data-level="11.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#other"><i class="fa fa-check"></i><b>11.3</b> other</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#basic-verbs"><i class="fa fa-check"></i><b>11.3.1</b> Basic verbs</a></li>
+<li class="chapter" data-level="11.3.2" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#group-by"><i class="fa fa-check"></i><b>11.3.2</b> Group by</a></li>
+<li class="chapter" data-level="11.3.3" data-path="tidy-basic-01.html"><a href="tidy-basic-01.html#summarize"><i class="fa fa-check"></i><b>11.3.3</b> summarize()</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="git-note.html"><a href="git-note.html"><i class="fa fa-check"></i><b>16</b> git note</a></li>
-<li class="chapter" data-level="17" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>17</b> gitbook introduction</a><ul>
-<li class="chapter" data-level="17.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>17.1</b> _output.yml:</a></li>
-<li class="chapter" data-level="17.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>17.2</b> _bookdown.yml:</a></li>
-<li class="chapter" data-level="17.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>17.3</b> index.rmd</a></li>
-<li class="chapter" data-level="17.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-17.4"><i class="fa fa-check"></i><b>17.4</b> 執行</a></li>
-<li class="chapter" data-level="17.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>17.5</b> 加入:Travis</a><ul>
-<li class="chapter" data-level="17.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>17.5.1</b> .travis.yml:</a></li>
-<li class="chapter" data-level="17.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>17.5.2</b> DESCRIPTION</a></li>
+<li class="chapter" data-level="12" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>12</b> programming in R</a><ul>
+<li class="chapter" data-level="12.1" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.1"><i class="fa fa-check"></i><b>12.1</b> 條件指令</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>12.1.1</b> if</a></li>
+<li class="chapter" data-level="12.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse"><i class="fa fa-check"></i><b>12.1.2</b> ifelse的寫法</a></li>
+<li class="chapter" data-level="12.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch"><i class="fa fa-check"></i><b>12.1.3</b> switch的寫法</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.2"><i class="fa fa-check"></i><b>12.2</b> 迴圈指令</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>12.2.1</b> for-loop</a></li>
+<li class="chapter" data-level="12.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>12.2.2</b> while-loop</a></li>
+<li class="chapter" data-level="12.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>12.2.3</b> repeat-loop</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.3"><i class="fa fa-check"></i><b>12.3</b> 範例</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="programming-in-r.html"><a href="programming-in-r.html#-detach_package"><i class="fa fa-check"></i><b>12.3.1</b> 範例 detach_package()</a></li>
+<li class="chapter" data-level="12.3.2" data-path="programming-in-r.html"><a href="programming-in-r.html#2.libpaths"><i class="fa fa-check"></i><b>12.3.2</b> 範例2：.libPaths()</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="programming-in-r.html"><a href="programming-in-r.html#r-meta-"><i class="fa fa-check"></i><b>12.4</b> R語言的 meta 計算。</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="programming-in-r.html"><a href="programming-in-r.html#deparse"><i class="fa fa-check"></i><b>12.4.1</b> <strong>deparse</strong></a></li>
+<li class="chapter" data-level="12.4.2" data-path="programming-in-r.html"><a href="programming-in-r.html#quote"><i class="fa fa-check"></i><b>12.4.2</b> <strong>quote</strong></a></li>
+<li class="chapter" data-level="12.4.3" data-path="programming-in-r.html"><a href="programming-in-r.html#eval"><i class="fa fa-check"></i><b>12.4.3</b> <strong>eval</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.5"><i class="fa fa-check"></i><b>12.5</b> 討論</a><ul>
+<li class="chapter" data-level="12.5.1" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.5.1"><i class="fa fa-check"></i><b>12.5.1</b> 測試紀錄</a></li>
+</ul></li>
+<li class="chapter" data-level="12.6" data-path="programming-in-r.html"><a href="programming-in-r.html#section-12.6"><i class="fa fa-check"></i><b>12.6</b> 練習</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>13</b> Econometrics</a><ul>
+<li class="chapter" data-level="13.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>13.1</b> package recommended</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>14</b> rbook 提要</a><ul>
+<li class="chapter" data-level="14.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>14.1</b> index.Rmd</a></li>
+<li class="chapter" data-level="14.2" data-path="index.html"><a href="index.html#section-1"><i class="fa fa-check"></i><b>14.2</b> </a></li>
+<li class="chapter" data-level="14.3" data-path="rbook-.html"><a href="rbook-.html#_output.yml-"><i class="fa fa-check"></i><b>14.3</b> 其他_output.yml 範例</a></li>
+<li class="chapter" data-level="14.4" data-path="rbook-.html"><a href="rbook-.html#travis.yml"><i class="fa fa-check"></i><b>14.4</b> .travis.yml</a></li>
+<li class="chapter" data-level="14.5" data-path="rbook-.html"><a href="rbook-.html#section-14.5"><i class="fa fa-check"></i><b>14.5</b> 紀錄</a><ul>
+<li class="chapter" data-level="14.5.1" data-path="rbook-.html"><a href="rbook-.html#knitr-hook"><i class="fa fa-check"></i><b>14.5.1</b> knitr hook</a></li>
+<li class="chapter" data-level="14.5.2" data-path="rbook-.html"><a href="rbook-.html#terminal-output"><i class="fa fa-check"></i><b>14.5.2</b> terminal output</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="rbook-.html"><a href="rbook-.html#python"><i class="fa fa-check"></i><b>14.6</b> python</a></li>
+<li class="chapter" data-level="14.7" data-path="rbook-.html"><a href="rbook-.html#pdf-"><i class="fa fa-check"></i><b>14.7</b> 產生PDF 文件</a><ul>
+<li class="chapter" data-level="14.7.1" data-path="rbook-.html"><a href="rbook-.html#overview"><i class="fa fa-check"></i><b>14.7.1</b> Overview</a></li>
+<li class="chapter" data-level="14.7.2" data-path="rbook-.html"><a href="rbook-.html#meta-data-pdf-"><i class="fa fa-check"></i><b>14.7.2</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="14.7.3" data-path="rbook-.html"><a href="rbook-.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>14.7.3</b> LaTeX Packages for Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="rbook-.html"><a href="rbook-.html#section-14.8"><i class="fa fa-check"></i><b>14.8</b> 中文</a></li>
+<li class="chapter" data-level="14.9" data-path="rbook-.html"><a href="rbook-.html#rstudio-chinese"><i class="fa fa-check"></i><b>14.9</b> Rstudio chinese</a><ul>
+<li class="chapter" data-level="14.9.1" data-path="rbook-.html"><a href="rbook-.html#latex-engine"><i class="fa fa-check"></i><b>14.9.1</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="14.9.2" data-path="rbook-.html"><a href="rbook-.html#section-14.9.2"><i class="fa fa-check"></i><b>14.9.2</b> 註記</a></li>
+<li class="chapter" data-level="14.9.3" data-path="rbook-.html"><a href="rbook-.html#custom-templates"><i class="fa fa-check"></i><b>14.9.3</b> Custom Templates</a></li>
+<li class="chapter" data-level="14.9.4" data-path="rbook-.html"><a href="rbook-.html#pandoc-arguments"><i class="fa fa-check"></i><b>14.9.4</b> Pandoc Arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="14.10" data-path="rbook-.html"><a href="rbook-.html#section-14.10"><i class="fa fa-check"></i><b>14.10</b> 共用設定</a></li>
+<li class="chapter" data-level="14.11" data-path="rbook-.html"><a href="rbook-.html#-1"><i class="fa fa-check"></i><b>14.11</b> 討論</a><ul>
+<li class="chapter" data-level="14.11.1" data-path="rbook-.html"><a href="rbook-.html#inline-code"><i class="fa fa-check"></i><b>14.11.1</b> inline code</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="git-note.html"><a href="git-note.html"><i class="fa fa-check"></i><b>15</b> git note</a></li>
+<li class="chapter" data-level="16" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html"><i class="fa fa-check"></i><b>16</b> gitbook introduction</a><ul>
+<li class="chapter" data-level="16.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#output.yml"><i class="fa fa-check"></i><b>16.1</b> _output.yml:</a></li>
+<li class="chapter" data-level="16.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#bookdown.yml"><i class="fa fa-check"></i><b>16.2</b> _bookdown.yml:</a></li>
+<li class="chapter" data-level="16.3" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#index.rmd-1"><i class="fa fa-check"></i><b>16.3</b> index.rmd</a></li>
+<li class="chapter" data-level="16.4" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#section-16.4"><i class="fa fa-check"></i><b>16.4</b> 執行</a></li>
+<li class="chapter" data-level="16.5" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis"><i class="fa fa-check"></i><b>16.5</b> 加入:Travis</a><ul>
+<li class="chapter" data-level="16.5.1" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#travis.yml-1"><i class="fa fa-check"></i><b>16.5.1</b> .travis.yml:</a></li>
+<li class="chapter" data-level="16.5.2" data-path="gitbook-introduction.html"><a href="gitbook-introduction.html#description"><i class="fa fa-check"></i><b>16.5.2</b> DESCRIPTION</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -498,34 +518,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="escape-sequences" class="section level3">
 <h3><span class="header-section-number">3.0.1</span> Escape sequences</h3>
 <p>正規表達式中<code>.</code>代表任意字元,但是如果我們要在字串中查找“.”(例如,檔案名稱中的點) 的時候要怎樣表示?答案是使用逃逸字元<code>\</code>。但是在R語言中,正規表達式，也是使用字串，可是在字串中,<code>\</code>本身就逃逸字元，因此需要<code>\\.</code>。</p>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb283-1" data-line-number="1">dot &lt;-<span class="st"> &quot;</span><span class="ch">\\</span><span class="st">.&quot;</span></a>
-<a class="sourceLine" id="cb283-2" data-line-number="2"><span class="kw">writeLines</span>(dot)</a></code></pre></div>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1">dot &lt;-<span class="st"> &quot;</span><span class="ch">\\</span><span class="st">.&quot;</span></a>
+<a class="sourceLine" id="cb319-2" data-line-number="2"><span class="kw">writeLines</span>(dot)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>\.
 </code></pre>
-<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb284-1" data-line-number="1">x &lt;-<span class="st"> &quot;a</span><span class="ch">\\</span><span class="st">b&quot;</span></a>
-<a class="sourceLine" id="cb284-2" data-line-number="2"><span class="kw">writeLines</span>(x)</a></code></pre></div>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb320-1" data-line-number="1">x &lt;-<span class="st"> &quot;a</span><span class="ch">\\</span><span class="st">b&quot;</span></a>
+<a class="sourceLine" id="cb320-2" data-line-number="2"><span class="kw">writeLines</span>(x)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>a\b
 </code></pre>
 <div id="grep-grepl" class="section level4">
 <h4><span class="header-section-number">3.0.1.1</span> grep, grepl</h4>
 <p>grep,grepl的差別是後者不支援參數value，且比對的結果和搜尋內容的個數相同。</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb285-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb321-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 </code></pre>
-<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb286-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>),<span class="dt">value=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb322-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>),<span class="dt">value=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a.c"
 </code></pre>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb287-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb323-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;a</span><span class="ch">\\</span><span class="st">.c&quot;</span>, <span class="kw">c</span>(<span class="st">&quot;abc&quot;</span>, <span class="st">&quot;a.c&quot;</span>, <span class="st">&quot;bef&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] FALSE  TRUE FALSE
 </code></pre>
 <p>又另一個例子,是在字串中尋找單引號,假定要在國家中找尋是否有名稱包含單引號的名字,可以使用<code>'\''</code>
 問題:為甚麼不是<code>'\\''</code>
 hint:
 這裡的逃逸字元只是字串的標準用法,<code>'</code>不是正規表達式的特殊字元。</p>
-<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb288-1" data-line-number="1">country&lt;-<span class="kw">read.delim</span>(<span class="st">&#39;resources/country.txt&#39;</span>,<span class="dt">header=</span><span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb288-2" data-line-number="2"><span class="kw">names</span>(country)&lt;-<span class="st">&quot;Name&quot;</span> </a>
-<a class="sourceLine" id="cb288-3" data-line-number="3">cname &lt;-<span class="kw">levels</span>(country<span class="op">$</span>Name)</a>
-<a class="sourceLine" id="cb288-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&#39;</span><span class="ch">\&#39;</span><span class="st">&#39;</span>, cname, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb324-1" data-line-number="1">country&lt;-<span class="kw">read.delim</span>(<span class="st">&#39;resources/country.txt&#39;</span>,<span class="dt">header=</span><span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb324-2" data-line-number="2"><span class="kw">names</span>(country)&lt;-<span class="st">&quot;Name&quot;</span> </a>
+<a class="sourceLine" id="cb324-3" data-line-number="3">cname &lt;-<span class="kw">levels</span>(country<span class="op">$</span>Name)</a>
+<a class="sourceLine" id="cb324-4" data-line-number="4"><span class="kw">grep</span>(<span class="st">&#39;</span><span class="ch">\&#39;</span><span class="st">&#39;</span>, cname, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "Cote d'Ivoire"
 </code></pre>
 <p>note:
@@ -535,10 +555,10 @@ hint:
 grep(&#39;\&#39;&#39;, levels(country$Name), value = TRUE)
 </code></pre>
 <p>Hint: levels 傳回唯一值</p>
-<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb290-1" data-line-number="1"><span class="kw">levels</span>(<span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>)))</a></code></pre></div>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb326-1" data-line-number="1"><span class="kw">levels</span>(<span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>)))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a" "b"
 </code></pre>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb291-1" data-line-number="1"><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb327-1" data-line-number="1"><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;a&quot;</span>,<span class="st">&quot;b&quot;</span>,<span class="st">&quot;a&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] a b a
 Levels: a b
 </code></pre>
@@ -546,8 +566,8 @@ Levels: a b
 <div id="regexpr-gregexpr" class="section level4">
 <h4><span class="header-section-number">3.0.1.2</span> regexpr, gregexpr</h4>
 <p><code>regexpr</code> 函數的使用方式類似<code>grepl</code>。傳回整數向量(表示符合位置，如果找不到,則傳回-1),個數和比對字串串列相同。這個向量同時有屬性<code>match.length</code>(參考範例) .</p>
-<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb292-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9&quot;</span></a>
-<a class="sourceLine" id="cb292-2" data-line-number="2"><span class="kw">regexpr</span>(<span class="st">&#39;b&#39;</span>,s )</a></code></pre></div>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb328-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9&quot;</span></a>
+<a class="sourceLine" id="cb328-2" data-line-number="2"><span class="kw">regexpr</span>(<span class="st">&#39;b&#39;</span>,s )</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3
 attr(,"match.length")
 [1] 1
@@ -556,7 +576,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb293-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;.&#39;</span>,s ) <span class="co"># 要定位符號「.」,這是錯的,\.也錯</span></a></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb329-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;.&#39;</span>,s ) <span class="co"># 要定位符號「.」,這是錯的,\.也錯</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 attr(,"match.length")
 [1] 1
@@ -565,7 +585,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb294-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">.&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
+<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb330-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">.&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 attr(,"match.length")
 [1] 1
@@ -574,7 +594,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb295-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;[.]&#39;</span>,s ) <span class="co"># 正確 ,不需要regexpr(&#39;[\\.]&#39;,s )</span></a></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb331-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;[.]&#39;</span>,s ) <span class="co"># 正確 ,不需要regexpr(&#39;[\\.]&#39;,s )</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 2
 attr(,"match.length")
 [1] 1
@@ -583,7 +603,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb296-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">d&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb332-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&#39;</span><span class="ch">\\</span><span class="st">d&#39;</span>,s ) <span class="co"># 正確</span></a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 7
 attr(,"match.length")
 [1] 1
@@ -592,13 +612,13 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb297-1" data-line-number="1">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) <span class="co"># 正確</span></a>
-<a class="sourceLine" id="cb297-2" data-line-number="2"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb333-1" data-line-number="1">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) <span class="co"># 正確</span></a>
+<a class="sourceLine" id="cb333-2" data-line-number="2"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 </code></pre>
-<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb298-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
-<a class="sourceLine" id="cb298-2" data-line-number="2">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a>
-<a class="sourceLine" id="cb298-3" data-line-number="3">x</a></code></pre></div>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb334-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
+<a class="sourceLine" id="cb334-2" data-line-number="2">x&lt;-<span class="kw">regexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a>
+<a class="sourceLine" id="cb334-3" data-line-number="3">x</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 7
 attr(,"match.length")
 [1] 1
@@ -607,12 +627,12 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb299-1" data-line-number="1"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb335-1" data-line-number="1"><span class="kw">attr</span>(x,<span class="st">&quot;match.length&quot;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 </code></pre>
 <p><code>gregexpr()</code> 和 <code>regexpr()</code>一樣,不同的是會在目標字串中搜尋所有符合的位置而不是只找第一個(g:全局)。 因此傳回的結果個數雖然和查找的串列元素個數一樣,但是每個元素都是一個向量。如果都沒找到,只有一個-1。</p>
-<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb300-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
-<a class="sourceLine" id="cb300-2" data-line-number="2"> <span class="kw">gregexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a></code></pre></div>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb336-1" data-line-number="1">s&lt;-<span class="st">&quot;a.b.c.9 6 8&quot;</span></a>
+<a class="sourceLine" id="cb336-2" data-line-number="2"> <span class="kw">gregexpr</span>(<span class="st">&#39;[0-9]&#39;</span>,s ) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[[1]]
 [1]  7  9 11
 attr(,"match.length")
@@ -627,23 +647,24 @@ attr(,"useBytes")
 <div id="section-3.0.2" class="section level3">
 <h3><span class="header-section-number">3.0.2</span> 應用</h3>
 <p>產生3個檔案,檔案名稱含有cat</p>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb301-1" data-line-number="1"><span class="kw">file.create</span>(<span class="kw">c</span>(<span class="st">&quot;xcat1.rmd&quot;</span>, <span class="st">&quot;ycat2.txt&quot;</span>, <span class="st">&quot;zcat3.rmd&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb337-1" data-line-number="1"><span class="kw">file.create</span>(<span class="kw">c</span>(<span class="st">&quot;xcat1.rmd&quot;</span>, <span class="st">&quot;ycat2.txt&quot;</span>, <span class="st">&quot;zcat3.rmd&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] TRUE TRUE TRUE
 </code></pre>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb302-1" data-line-number="1">files&lt;-<span class="kw">list.files</span>(<span class="st">&quot;.&quot;</span>)</a>
-<a class="sourceLine" id="cb302-2" data-line-number="2"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb338-1" data-line-number="1">files&lt;-<span class="kw">list.files</span>(<span class="st">&quot;.&quot;</span>)</a>
+<a class="sourceLine" id="cb338-2" data-line-number="2"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "xcat1.rmd" "ycat2.txt" "zcat3.rmd"
 </code></pre>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb303-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>[1] 60 62 63
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb339-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;cat&quot;</span>, files, <span class="dt">value =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] 64 66 67
 </code></pre>
-<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb304-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;cat&quot;</span>, files)</a></code></pre></div>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb340-1" data-line-number="1"><span class="kw">grepl</span>(<span class="st">&quot;cat&quot;</span>, files)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [12] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [23] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [34] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 [45] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-[56] FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE
+[56] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE
+[67]  TRUE
 </code></pre>
 </div>
 <div id="quantifiers" class="section level3">
@@ -662,25 +683,25 @@ attr(,"useBytes")
 </li>
 <li><code>{n,m}</code>: 次數在 n 到 m 之間(包括n,m).</li>
 </ul>
-<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb305-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;acb&quot;</span>, <span class="st">&quot;accb&quot;</span>, <span class="st">&quot;acccb&quot;</span>, <span class="st">&quot;accccb&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb341-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;acb&quot;</span>, <span class="st">&quot;accb&quot;</span>, <span class="st">&quot;acccb&quot;</span>, <span class="st">&quot;accccb&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "a"      "ab"     "acb"    "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb306-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac*b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb342-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac*b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "ab"     "acb"    "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb307-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac+b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb343-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac+b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "acb"    "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb308-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac?b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb344-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac?b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "ab"  "acb"
 </code></pre>
-<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb309-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb345-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "accb"
 </code></pre>
-<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb310-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb346-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "accb"   "acccb"  "accccb"
 </code></pre>
-<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb311-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,3}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb347-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ac{2,3}b&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "accb"  "acccb"
 </code></pre>
 <div id="exercise" class="section level4">
@@ -701,22 +722,22 @@ attr(,"useBytes")
 </li>
 <li><code>\B</code>: 左右不是空白 <em>word</em>.</li>
 </ul>
-<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb312-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;cdab&quot;</span>, <span class="st">&quot;cabd&quot;</span>, <span class="st">&quot;c abd&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb348-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;abcd&quot;</span>, <span class="st">&quot;cdab&quot;</span>, <span class="st">&quot;cabd&quot;</span>, <span class="st">&quot;c abd&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
 </code></pre>
-<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb313-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb349-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"  "cdab"  "cabd"  "c abd"
 </code></pre>
-<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb314-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb350-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"
 </code></pre>
-<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb315-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab$&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb351-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab$&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "cdab"
 </code></pre>
-<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb316-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb352-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abcd"  "c abd"
 </code></pre>
-<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb317-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings)</a></code></pre></div>
+<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb353-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">bab&quot;</span>, strings)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1]  1 -1 -1  3
 attr(,"match.length")
 [1]  2 -1 -1  2
@@ -725,7 +746,7 @@ attr(,"index.type")
 attr(,"useBytes")
 [1] TRUE
 </code></pre>
-<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb318-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">Bab&quot;</span>, strings)</a></code></pre></div>
+<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb354-1" data-line-number="1"><span class="kw">regexpr</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">Bab&quot;</span>, strings)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] -1  3  2 -1
 attr(,"match.length")
 [1] -1  2  2 -1
@@ -750,7 +771,7 @@ attr(,"useBytes")
 </li>
 <li><code>[...]</code>: 例如,[ade] 3個字元其中一個。[a-e],a到e.<br />
 </li>
-<li><code>[^...]</code>: 除了<a href="rbook-.html#section-2"></a>指定的字元，非[…]的意思。.<br />
+<li><code>[^...]</code>: 除了<a href="index.html#section-1"></a>指定的字元，非[…]的意思。.<br />
 </li>
 <li><code>\</code>: 抑制下列字元在字串,<code>&quot;&quot;</code>,中的特殊意思 <code>$ * + . ? [ ] ^ { } | ( ) \</code>, 只是在R中,因為<code>\</code>又有特殊意義 ,因此必須雙<code>\</code>例如 <code>\\$</code>。<br />
 </li>
@@ -758,28 +779,28 @@ attr(,"useBytes")
 </li>
 <li><code>(...)</code>: 字元組,根據出現的順序,可以用 <code>\\N</code>識別( <strong>backreference</strong>).</li>
 </ul>
-<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb319-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;^ab&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abd&quot;</span>, <span class="st">&quot;abe&quot;</span>, <span class="st">&quot;ab 12&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb355-1" data-line-number="1">(strings &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;^ab&quot;</span>, <span class="st">&quot;ab&quot;</span>, <span class="st">&quot;abc&quot;</span>, <span class="st">&quot;abd&quot;</span>, <span class="st">&quot;abe&quot;</span>, <span class="st">&quot;ab 12&quot;</span>))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb320-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab.&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb356-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab.&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abc"   "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb321-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[c-e]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb357-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[c-e]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abc" "abd" "abe"
 </code></pre>
-<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb322-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[^c]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb358-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;ab[^c]&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb323-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb359-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "ab"    "abc"   "abd"   "abe"   "ab 12"
 </code></pre>
-<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb324-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb360-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">^ab&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "^ab"
 </code></pre>
-<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb325-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;abc|abd&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb361-1" data-line-number="1"><span class="kw">grep</span>(<span class="st">&quot;abc|abd&quot;</span>, strings, <span class="dt">value =</span> <span class="ot">TRUE</span>) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "abc" "abd"
 </code></pre>
-<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb326-1" data-line-number="1"><span class="kw">gsub</span>(<span class="st">&quot;(ab) 12&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1 34&quot;</span>, strings) </a></code></pre></div>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb362-1" data-line-number="1"><span class="kw">gsub</span>(<span class="st">&quot;(ab) 12&quot;</span>, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">1 34&quot;</span>, strings) </a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "^ab"   "ab"    "abc"   "abd"   "abe"   "ab 34"
 </code></pre>
 <p>note:
@@ -842,7 +863,7 @@ attr(,"useBytes")
 <blockquote>
 <p>attributes(my.array)
 $dim
-<a href="index.html#section-1">1</a> 3 4 2
+[1] 3 4 2
 This function returns a named list, where each item in the list is an attribute. Each attribute can, on itself, be a list again. For example, the attribute dimnames is actually a list containing the row and column names of a matrix.</p>
 </blockquote>
 <p>You can check that for yourself by checking the output of attributes(baskets.team). You can set all attributes as a named list as well. You find examples of that in the Help file ?attributes.</p>
@@ -854,7 +875,7 @@ To get the value of this attribute returned, you can then use following code:</p
 </blockquote>
 <blockquote>
 <p>attr(baskets.team,‘season’)
-<a href="index.html#section-1">1</a> “2010-2011”
+[1] “2010-2011”
 You can delete attributes again by setting their value to NULL, like this:</p>
 </blockquote>
 <blockquote>
@@ -892,7 +913,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown-demo/edit/master/regular_expression.Rmd",
 "text": "Edit"
 },
-"download": null,
+"download": ["rmi_class_r.pdf"],
 "toc": {
 "collapse": "subsection"
 }
