@@ -316,7 +316,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3.5" data-path="section-6.html"><a href="section-6.html#by-hand"><i class="fa fa-check"></i><b>6.3.5</b> by hand</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="section-6.html"><a href="section-6.html#by-t.test"><i class="fa fa-check"></i><b>6.4</b> by 函數<code>t.test()</code></a></li>
-<li class="chapter" data-level="6.5" data-path="section-6.html"><a href="section-6.html#misc-1"><i class="fa fa-check"></i><b>6.5</b> misc</a></li>
+<li class="chapter" data-level="6.5" data-path="section-6.html"><a href="section-6.html#section-6.5"><i class="fa fa-check"></i><b>6.5</b> 分組</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="section-6.html"><a href="section-6.html#1--for"><i class="fa fa-check"></i><b>6.5.1</b> 方法1: 利用 for迴圈</a></li>
+<li class="chapter" data-level="6.5.2" data-path="section-6.html"><a href="section-6.html#2-tapply"><i class="fa fa-check"></i><b>6.5.2</b> 方法2: <code>tapply</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="section-6.html"><a href="section-6.html#plot"><i class="fa fa-check"></i><b>6.6</b> plot</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>7</b> R Packages</a><ul>
 <li class="chapter" data-level="7.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 基本</a><ul>
@@ -801,8 +805,11 @@ sample estimates:
 -0.1327801
 </code></pre>
 </div>
-<div id="misc-1" class="section level2">
-<h2><span class="header-section-number">6.5</span> misc</h2>
+<div id="section-6.5" class="section level2">
+<h2><span class="header-section-number">6.5</span> 分組</h2>
+<div id="1--for" class="section level3">
+<h3><span class="header-section-number">6.5.1</span> 方法1: 利用 for迴圈</h3>
+<p>大綱是：先探索一下我們可能用到的R語言技巧，然後是整個程式：</p>
 <div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb560-1" data-line-number="1">age    =<span class="st"> </span><span class="kw">c</span>(<span class="fl">23.0883</span>, <span class="fl">25.8344</span>, <span class="fl">29.4648</span>, <span class="fl">32.7858</span>, <span class="fl">33.6372</span>,</a>
 <a class="sourceLine" id="cb560-2" data-line-number="2">           <span class="fl">34.935</span>,  <span class="fl">35.2115</span>, <span class="fl">35.2115</span>,  <span class="fl">5.2115</span>, <span class="fl">36.7803</span>)</a>
 <a class="sourceLine" id="cb560-3" data-line-number="3">group  =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>)</a>
@@ -850,7 +857,7 @@ sample estimates:
 <div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb564-1" data-line-number="1">rst[<span class="dv">4</span>,<span class="dv">2</span>]</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "Mean   :1  "
 </code></pre>
-<p>最後</p>
+<p>最後的程式碼：</p>
 <div class="sourceCode" id="cb565"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb565-1" data-line-number="1">ft&lt;-<span class="kw">factor</span>(dframe<span class="op">$</span>group)</a>
 <a class="sourceLine" id="cb565-2" data-line-number="2">rst &lt;-<span class="st"> </span><span class="kw">as.list</span>(<span class="kw">numeric</span>(<span class="kw">nlevels</span>(ft)))</a>
 <a class="sourceLine" id="cb565-3" data-line-number="3"><span class="kw">names</span>(rst)&lt;-<span class="kw">levels</span>(ft)</a>
@@ -869,24 +876,92 @@ sample estimates:
 $`2`
 [1] "Mean   :27.1  "
 </code></pre>
-<p>如果只要數字平均，考慮
+<p>函數<code>summary()</code>的結果是一個table，而且裡面的元素是字串，如果我們只要「數字」平均，考慮使用字串函數<code>sub()</code>
 as.numeric(sub(’.*:‘,’’, summary(dframe)[4,1]))</p>
-<div class="sourceCode" id="cb566"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb566-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
-<a class="sourceLine" id="cb566-2" data-line-number="2">dt &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span><span class="kw">rchisq</span>(<span class="dv">20</span>,<span class="dv">10</span>), <span class="dt">group=</span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">20</span>, <span class="dt">rep=</span>T))</a>
-<a class="sourceLine" id="cb566-3" data-line-number="3">grp &lt;-<span class="st"> </span><span class="kw">group_by</span>(dt, group)</a></code></pre></div>
-<pre style="color: red;"><code>Warning: The `printer` argument is soft-deprecated as of rlang 0.3.0.
-This warning is displayed once per session.
+</div>
+<div id="2-tapply" class="section level3">
+<h3><span class="header-section-number">6.5.2</span> 方法2: <code>tapply</code></h3>
+<div class="sourceCode" id="cb566"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb566-1" data-line-number="1">f1&lt;-<span class="cf">function</span>(im)</a>
+<a class="sourceLine" id="cb566-2" data-line-number="2">{</a>
+<a class="sourceLine" id="cb566-3" data-line-number="3">  <span class="kw">c</span>(<span class="kw">min</span>(im),<span class="kw">median</span>(im),<span class="kw">mean</span>(im),<span class="kw">max</span>(im))</a>
+<a class="sourceLine" id="cb566-4" data-line-number="4">}</a>
+<a class="sourceLine" id="cb566-5" data-line-number="5">rst&lt;-<span class="kw">tapply</span>(dframe<span class="op">$</span>age,dframe<span class="op">$</span>group,<span class="dt">FUN =</span> f1)</a>
+<a class="sourceLine" id="cb566-6" data-line-number="6">rstm&lt;-<span class="kw">unlist</span>(rst) <span class="co"># unlist 會把rst 變成1維向量</span></a>
+<a class="sourceLine" id="cb566-7" data-line-number="7">rstm&lt;-<span class="kw">matrix</span>(rstm,<span class="dt">ncol=</span><span class="dv">2</span>) <span class="co"># hard code2 , try `length(levels(factor(dframe$group)))`</span></a>
+<a class="sourceLine" id="cb566-8" data-line-number="8"><span class="kw">rownames</span>(rstm)&lt;-<span class="kw">c</span>(<span class="st">&quot;min&quot;</span>,<span class="st">&quot;median&quot;</span>,<span class="st">&quot;mean&quot;</span>,<span class="st">&quot;max&quot;</span>)</a>
+<a class="sourceLine" id="cb566-9" data-line-number="9"><span class="kw">colnames</span>(rstm)&lt;-<span class="kw">paste</span>(<span class="st">&quot;組別:&quot;</span>,<span class="kw">levels</span>(<span class="kw">factor</span>(dframe<span class="op">$</span>group)))</a>
+<a class="sourceLine" id="cb566-10" data-line-number="10">rstm</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>       組別: 1 組別: 2
+min       23.1    5.21
+median    31.6   34.00
+mean      30.6   27.11
+max       36.8   35.21
 </code></pre>
-<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb567-1" data-line-number="1"><span class="kw">summarise</span>(grp, <span class="dt">mean=</span><span class="kw">mean</span>(age), <span class="dt">sd=</span><span class="kw">sd</span>(age))</a></code></pre></div>
-<pre style="border: 1px grey dotted;"><code># A tibble: 2 x 3
-  group  mean    sd
-  <int> <dbl> <dbl>
-1     1  8.31  5.11
-2     2  7.92  4.29
+<div id="3-" class="section level4">
+<h4><span class="header-section-number">6.5.2.1</span> 方法3 利用其他套件</h4>
+<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb567-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb567-2" data-line-number="2">dt &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span><span class="kw">rchisq</span>(<span class="dv">20</span>,<span class="dv">10</span>), <span class="dt">group=</span><span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,<span class="dv">20</span>, <span class="dt">rep=</span>T))</a>
+<a class="sourceLine" id="cb567-3" data-line-number="3">grp &lt;-<span class="st"> </span><span class="kw">group_by</span>(dt, group)</a>
+<a class="sourceLine" id="cb567-4" data-line-number="4"><span class="kw">summarise</span>(grp, <span class="dt">mean=</span><span class="kw">mean</span>(age), <span class="dt">sd=</span><span class="kw">sd</span>(age))</a>
+<a class="sourceLine" id="cb567-5" data-line-number="5"><span class="kw">detach</span>(<span class="st">&quot;package:dplyr&quot;</span>, <span class="dt">unload=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+</div>
+</div>
+</div>
+<div id="plot" class="section level2">
+<h2><span class="header-section-number">6.6</span> plot</h2>
+<p>這裡的分組不能用之前的hard code 中提到的方法，因為各組可能數量不同。</p>
+<div class="sourceCode" id="cb568"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb568-1" data-line-number="1">v1&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb568-2" data-line-number="2">v2&lt;-<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb568-3" data-line-number="3"><span class="kw">cbind</span>(v1,v2)</a></code></pre></div>
+<pre style="color: red;"><code>Warning in cbind(v1, v2): number of rows of result is not a multiple of
+vector length (arg 2)
 </code></pre>
-<div class="sourceCode" id="cb568"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb568-1" data-line-number="1"><span class="kw">detach</span>(<span class="st">&quot;package:dplyr&quot;</span>, <span class="dt">unload=</span><span class="ot">TRUE</span>)</a></code></pre></div>
-<pre style="color: red;"><code>Warning: 'dplyr' namespace cannot be unloaded:
-  namespace 'dplyr' is imported by 'broom' so cannot be unloaded
+<pre style="border: 1px grey dotted;"><code>     v1 v2
+[1,]  1  4
+[2,]  2  4
+[3,]  3  4
+</code></pre>
+<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb569-1" data-line-number="1">v1&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb569-2" data-line-number="2">v2&lt;-<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb569-3" data-line-number="3">n&lt;-<span class="kw">max</span>(<span class="kw">sapply</span>(<span class="kw">list</span>(v1,v2),length))</a>
+<a class="sourceLine" id="cb569-4" data-line-number="4"><span class="kw">length</span>(v1)&lt;-n</a>
+<a class="sourceLine" id="cb569-5" data-line-number="5"><span class="kw">length</span>(v2)&lt;-n</a>
+<a class="sourceLine" id="cb569-6" data-line-number="6"><span class="kw">cbind</span>(v1,v2)</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>     v1 v2
+[1,]  1  4
+[2,]  2  4
+[3,]  3 NA
+</code></pre>
+<div class="sourceCode" id="cb570"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb570-1" data-line-number="1">age    =<span class="st"> </span><span class="kw">c</span>(<span class="fl">23.0883</span>, <span class="fl">25.8344</span>, <span class="fl">29.4648</span>, <span class="fl">32.7858</span>, <span class="fl">33.6372</span>,</a>
+<a class="sourceLine" id="cb570-2" data-line-number="2">           <span class="fl">34.935</span>,  <span class="fl">35.2115</span>, <span class="fl">35.2115</span>,  <span class="fl">5.2115</span>, <span class="fl">36.7803</span>)</a>
+<a class="sourceLine" id="cb570-3" data-line-number="3">group  =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb570-4" data-line-number="4">dframe =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span>age, <span class="dt">group=</span>group)</a>
+<a class="sourceLine" id="cb570-5" data-line-number="5">rst&lt;-<span class="kw">tapply</span>(age,group,<span class="dt">FUN =</span> matrix,<span class="dt">ncol=</span><span class="dv">1</span>) <span class="co">#每個組成為一個list 元素</span></a>
+<a class="sourceLine" id="cb570-6" data-line-number="6">nrst&lt;-<span class="kw">sapply</span>(rst,length) <span class="co">#&lt;2&gt;每一個組的長度</span></a>
+<a class="sourceLine" id="cb570-7" data-line-number="7">n&lt;-<span class="kw">max</span>(nrst)  <span class="co"># 最大長度</span></a>
+<a class="sourceLine" id="cb570-8" data-line-number="8">mrst&lt;-<span class="kw">sapply</span>(rst,<span class="st">`</span><span class="dt">length&lt;-</span><span class="st">`</span>,n) <span class="co"># 重設每組長度&lt;1&gt;</span></a>
+<a class="sourceLine" id="cb570-9" data-line-number="9"><span class="kw">boxplot</span>(mrst)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-374-1.png" width="70%" style="display: block; margin: auto;" />
+&lt;1&gt; FUN.Name 會跑到mathch.fun() 這個函數，而這個函數是用字串搜尋</p>
+<p>m2:
+現在想要把rst轉成data.frame。<br />
+先看一下示範，如何把list 轉成 data.frame</p>
+<div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb571-1" data-line-number="1"><span class="co"># 不是這種</span></a>
+<a class="sourceLine" id="cb571-2" data-line-number="2">test1 &lt;-<span class="st"> </span><span class="kw">list</span>( <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;a&#39;</span>,<span class="dt">b=</span><span class="st">&#39;b&#39;</span>,<span class="dt">c=</span><span class="st">&#39;c&#39;</span>), </a>
+<a class="sourceLine" id="cb571-3" data-line-number="3">               <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;d&#39;</span>,<span class="dt">b=</span><span class="st">&#39;e&#39;</span>,<span class="dt">c=</span><span class="st">&#39;f&#39;</span>))</a>
+<a class="sourceLine" id="cb571-4" data-line-number="4"><span class="kw">as.data.frame</span>(test1)</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>  c.a....a...b....b...c....c.. c.a....d...b....e...c....f..
+a                            a                            d
+b                            b                            e
+c                            c                            f
+</code></pre>
+<div class="sourceCode" id="cb572"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb572-1" data-line-number="1"><span class="co"># ok</span></a>
+<a class="sourceLine" id="cb572-2" data-line-number="2">test2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">b =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))</a>
+<a class="sourceLine" id="cb572-3" data-line-number="3"><span class="kw">as.data.frame</span>(test2)</a></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>  a b
+1 1 4
+2 2 5
+3 3 6
 </code></pre>
 
 </div>

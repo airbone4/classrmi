@@ -7571,7 +7571,7 @@ logical(0)
 \begin{verbatim}
 function (x) 
 x
-<bytecode: 0x5573f2f25ce8>
+<bytecode: 0x55a96ac06ce8>
 <environment: namespace:base>
 \end{verbatim}
 
@@ -7634,7 +7634,7 @@ x
 \end{Shaded}
 
 \begin{verbatim}
-[1] "2018-11-19 03:35:18 CST"
+[1] "2018-11-19 21:50:48 CST"
 \end{verbatim}
 \item
   How many arguments are required when calling \texttt{library()}?
@@ -9454,8 +9454,12 @@ sample estimates:
 -0.1327801
 \end{verbatim}
 
-\hypertarget{misc-1}{%
-\section{misc}\label{misc-1}}
+\section{分組}
+
+\hypertarget{1--for}{%
+\subsection{方法1: 利用 for迴圈}\label{1--for}}
+
+大綱是：先探索一下我們可能用到的R語言技巧，然後是整個程式：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -9543,7 +9547,7 @@ data.frame 的record篩選和matrix 的row 篩選不一樣，後者是row based,
 [1] "Mean   :1  "
 \end{verbatim}
 
-最後
+最後的程式碼：
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -9570,8 +9574,38 @@ $`2`
 [1] "Mean   :27.1  "
 \end{verbatim}
 
-如果只要數字平均，考慮 as.numeric(sub('.*:`,'',
-summary(dframe){[}4,1{]}))
+函數\texttt{summary()}的結果是一個table，而且裡面的元素是字串，如果我們只要「數字」平均，考慮使用字串函數\texttt{sub()}
+as.numeric(sub('.*:`,'', summary(dframe){[}4,1{]}))
+
+\hypertarget{2-tapply}{%
+\subsection{\texorpdfstring{方法2:
+\texttt{tapply}}{方法2: tapply}}\label{2-tapply}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f1<-}\ControlFlowTok{function}\NormalTok{(im)}
+\NormalTok{\{}
+  \KeywordTok{c}\NormalTok{(}\KeywordTok{min}\NormalTok{(im),}\KeywordTok{median}\NormalTok{(im),}\KeywordTok{mean}\NormalTok{(im),}\KeywordTok{max}\NormalTok{(im))}
+\NormalTok{\}}
+\NormalTok{rst<-}\KeywordTok{tapply}\NormalTok{(dframe}\OperatorTok{$}\NormalTok{age,dframe}\OperatorTok{$}\NormalTok{group,}\DataTypeTok{FUN =}\NormalTok{ f1)}
+\NormalTok{rstm<-}\KeywordTok{unlist}\NormalTok{(rst) }\CommentTok{# unlist 會把rst 變成1維向量}
+\NormalTok{rstm<-}\KeywordTok{matrix}\NormalTok{(rstm,}\DataTypeTok{ncol=}\DecValTok{2}\NormalTok{) }\CommentTok{# hard code2 , try `length(levels(factor(dframe$group)))`}
+\KeywordTok{rownames}\NormalTok{(rstm)<-}\KeywordTok{c}\NormalTok{(}\StringTok{"min"}\NormalTok{,}\StringTok{"median"}\NormalTok{,}\StringTok{"mean"}\NormalTok{,}\StringTok{"max"}\NormalTok{)}
+\KeywordTok{colnames}\NormalTok{(rstm)<-}\KeywordTok{paste}\NormalTok{(}\StringTok{"組別:"}\NormalTok{,}\KeywordTok{levels}\NormalTok{(}\KeywordTok{factor}\NormalTok{(dframe}\OperatorTok{$}\NormalTok{group)))}
+\NormalTok{rstm}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+       組別: 1 組別: 2
+min       23.1    5.21
+median    31.6   34.00
+mean      30.6   27.11
+max       36.8   35.21
+\end{verbatim}
+
+\hypertarget{3-}{%
+\subsubsection{方法3 利用其他套件}\label{3-}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -9579,26 +9613,104 @@ summary(dframe){[}4,1{]}))
 \NormalTok{dt <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{age=}\KeywordTok{rchisq}\NormalTok{(}\DecValTok{20}\NormalTok{,}\DecValTok{10}\NormalTok{), }\DataTypeTok{group=}\KeywordTok{sample}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\DecValTok{2}\NormalTok{,}\DecValTok{20}\NormalTok{, }\DataTypeTok{rep=}\NormalTok{T))}
 \NormalTok{grp <-}\StringTok{ }\KeywordTok{group_by}\NormalTok{(dt, group)}
 \KeywordTok{summarise}\NormalTok{(grp, }\DataTypeTok{mean=}\KeywordTok{mean}\NormalTok{(age), }\DataTypeTok{sd=}\KeywordTok{sd}\NormalTok{(age))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-# A tibble: 2 x 3
-  group  mean    sd
-  <int> <dbl> <dbl>
-1     1  8.31  5.11
-2     2  7.92  4.29
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
 \KeywordTok{detach}\NormalTok{(}\StringTok{"package:dplyr"}\NormalTok{, }\DataTypeTok{unload=}\OtherTok{TRUE}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
+\hypertarget{plot}{%
+\section{plot}\label{plot}}
+
+這裡的分組不能用之前的hard code 中提到的方法，因為各組可能數量不同。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{v1<-}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{)}
+\NormalTok{v2<-}\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{)}
+\KeywordTok{cbind}\NormalTok{(v1,v2)}
+\end{Highlighting}
+\end{Shaded}
+
 \begin{verbatim}
-Warning: 'dplyr' namespace cannot be unloaded:
-  namespace 'dplyr' is imported by 'broom' so cannot be unloaded
+Warning in cbind(v1, v2): number of rows of result is not a multiple
+of vector length (arg 2)
+\end{verbatim}
+
+\begin{verbatim}
+     v1 v2
+[1,]  1  4
+[2,]  2  4
+[3,]  3  4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{v1<-}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{)}
+\NormalTok{v2<-}\KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{)}
+\NormalTok{n<-}\KeywordTok{max}\NormalTok{(}\KeywordTok{sapply}\NormalTok{(}\KeywordTok{list}\NormalTok{(v1,v2),length))}
+\KeywordTok{length}\NormalTok{(v1)<-n}
+\KeywordTok{length}\NormalTok{(v2)<-n}
+\KeywordTok{cbind}\NormalTok{(v1,v2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+     v1 v2
+[1,]  1  4
+[2,]  2  4
+[3,]  3 NA
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{age    =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\FloatTok{23.0883}\NormalTok{, }\FloatTok{25.8344}\NormalTok{, }\FloatTok{29.4648}\NormalTok{, }\FloatTok{32.7858}\NormalTok{, }\FloatTok{33.6372}\NormalTok{,}
+           \FloatTok{34.935}\NormalTok{,  }\FloatTok{35.2115}\NormalTok{, }\FloatTok{35.2115}\NormalTok{,  }\FloatTok{5.2115}\NormalTok{, }\FloatTok{36.7803}\NormalTok{)}
+\NormalTok{group  =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{1}\NormalTok{)}
+\NormalTok{dframe =}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{age=}\NormalTok{age, }\DataTypeTok{group=}\NormalTok{group)}
+\NormalTok{rst<-}\KeywordTok{tapply}\NormalTok{(age,group,}\DataTypeTok{FUN =}\NormalTok{ matrix,}\DataTypeTok{ncol=}\DecValTok{1}\NormalTok{) }\CommentTok{#每個組成為一個list 元素}
+\NormalTok{nrst<-}\KeywordTok{sapply}\NormalTok{(rst,length) }\CommentTok{#<2>每一個組的長度}
+\NormalTok{n<-}\KeywordTok{max}\NormalTok{(nrst)  }\CommentTok{# 最大長度}
+\NormalTok{mrst<-}\KeywordTok{sapply}\NormalTok{(rst,}\StringTok{`}\DataTypeTok{length<-}\StringTok{`}\NormalTok{,n) }\CommentTok{# 重設每組長度<1>}
+\KeywordTok{boxplot}\NormalTok{(mrst)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-374-1} \end{center}
+
+\textless{}1\textgreater{} FUN.Name 會跑到mathch.fun()
+這個函數，而這個函數是用字串搜尋
+
+m2: 現在想要把rst轉成data.frame。\\
+先看一下示範，如何把list 轉成 data.frame
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# 不是這種}
+\NormalTok{test1 <-}\StringTok{ }\KeywordTok{list}\NormalTok{( }\KeywordTok{c}\NormalTok{(}\DataTypeTok{a=}\StringTok{'a'}\NormalTok{,}\DataTypeTok{b=}\StringTok{'b'}\NormalTok{,}\DataTypeTok{c=}\StringTok{'c'}\NormalTok{), }
+               \KeywordTok{c}\NormalTok{(}\DataTypeTok{a=}\StringTok{'d'}\NormalTok{,}\DataTypeTok{b=}\StringTok{'e'}\NormalTok{,}\DataTypeTok{c=}\StringTok{'f'}\NormalTok{))}
+\KeywordTok{as.data.frame}\NormalTok{(test1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  c.a....a...b....b...c....c.. c.a....d...b....e...c....f..
+a                            a                            d
+b                            b                            e
+c                            c                            f
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# ok}
+\NormalTok{test2 <-}\StringTok{ }\KeywordTok{list}\NormalTok{(}\DataTypeTok{a =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{), }\DataTypeTok{b =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{6}\NormalTok{))}
+\KeywordTok{as.data.frame}\NormalTok{(test2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  a b
+1 1 4
+2 2 5
+3 3 6
 \end{verbatim}
 
 \hypertarget{r-packages}{%
@@ -10253,7 +10365,7 @@ modifying。而且,環境物件可以自己指向自己(recursion)
 \end{Shaded}
 
 \begin{verbatim}
-<environment: 0x5573fe1fd918>
+<environment: 0x55a96e85e780>
 \end{verbatim}
 
 要知道內容可以使用 \texttt{env\_print()} :
@@ -10265,7 +10377,7 @@ modifying。而且,環境物件可以自己指向自己(recursion)
 \end{Shaded}
 
 \begin{verbatim}
-<environment: 0x5573fe1fd918>
+<environment: 0x55a96e85e780>
 parent: <environment: global>
 bindings:
  * a: <lgl>
@@ -10391,7 +10503,7 @@ don't supply it, it defaults to the current environment.
 \end{Shaded}
 
 \begin{verbatim}
-<environment: 0x5573fa7b8f68>
+<environment: 0x55a975b59410>
 \end{verbatim}
 
 \begin{Shaded}
@@ -10442,7 +10554,7 @@ environment 或是空環境物件。上述過程可以利用\texttt{last}環境�
 \end{Shaded}
 
 \begin{verbatim}
-[[1]]   <env: 0x5573fa7b8f68>
+[[1]]   <env: 0x55a975b59410>
 [[2]] $ <env: global>
 \end{verbatim}
 
@@ -10453,7 +10565,7 @@ environment 或是空環境物件。上述過程可以利用\texttt{last}環境�
 \end{Shaded}
 
 \begin{verbatim}
-[[1]]   <env: 0x5573fd6b0648>
+[[1]]   <env: 0x55a978edcdd8>
 [[2]] $ <env: empty>
 \end{verbatim}
 
@@ -10680,7 +10792,7 @@ There are two more exotic variants of \texttt{env\_bind()}:
 
 \begin{verbatim}
    user  system elapsed 
-      0       0       0 
+  0.000   0.000   0.001 
 \end{verbatim}
 
   Delayed bindings are used to implement \texttt{autoload()}, which
@@ -11099,7 +11211,7 @@ environment。這之間的分別是我們如何找到\texttt{g}和\texttt{g}如�
 function (x, na.rm = FALSE) 
 sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
     na.rm = na.rm))
-<bytecode: 0x5573f9a9e8e0>
+<bytecode: 0x55a971f03df8>
 <environment: namespace:stats>
 \end{verbatim}
 
@@ -11256,7 +11368,7 @@ environment)短暫存在,當函數執行完畢通常會被GC。在幾種情況�
 \end{Shaded}
 
 \begin{verbatim}
-<environment: 0x5573fb739158>
+<environment: 0x55a9752403a8>
 parent: <environment: global>
 bindings:
  * a: <dbl>
@@ -11294,7 +11406,7 @@ of \texttt{plus\_one()} is the execution environment of \texttt{plus()}.
 
 \begin{verbatim}
 function(y) x + y
-<environment: 0x5573f95599a0>
+<environment: 0x55a9735c70c8>
 \end{verbatim}
 
 \begin{center}\includegraphics{diagrams/environments/closure} \end{center}
@@ -11719,7 +11831,7 @@ Error: Can't find `a`
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-458-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-463-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -11729,7 +11841,7 @@ Error: Can't find `a`
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-459-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-464-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -11765,7 +11877,7 @@ x是一個數字向量， 選項\texttt{freq=FALSE} 則是畫出 probability den
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-461-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-466-1} \end{center}
 
 \textbf{分成12份，顏色紅色。}
 
@@ -11775,7 +11887,7 @@ x是一個數字向量， 選項\texttt{freq=FALSE} 則是畫出 probability den
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-462-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-467-1} \end{center}
 
 自行給定分割點
 
@@ -11785,7 +11897,7 @@ x是一個數字向量， 選項\texttt{freq=FALSE} 則是畫出 probability den
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-463-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-468-1} \end{center}
 
 \hypertarget{add-a-normal-curve}{%
 \subsubsection{Add a Normal Curve}\label{add-a-normal-curve}}
@@ -11802,7 +11914,7 @@ x是一個數字向量， 選項\texttt{freq=FALSE} 則是畫出 probability den
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-464-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-469-1} \end{center}
 
 hint: 因為\(pdf=\frac{\frac{n}{N}}{bin \quad width}\)
 所以\(n=pdf\times N \times (bin \quad width)\)
@@ -11855,7 +11967,7 @@ attr(,"class")
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-466-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-471-1} \end{center}
 
 \hypertarget{filled-density-plot}{%
 \subsubsection{Filled Density Plot}\label{filled-density-plot}}
@@ -11868,7 +11980,7 @@ attr(,"class")
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-467-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-472-1} \end{center}
 
 \hypertarget{saving-graphs}{%
 \subsection{Saving Graphs}\label{saving-graphs}}
@@ -11940,7 +12052,7 @@ pdf
   2 
 \end{verbatim}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-468-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-473-1} \end{center}
 
 上面的範例，可以看到圖裝置的編號都是2，而且最後只有一個圖。
 
@@ -11979,7 +12091,7 @@ null device
           1 
 \end{verbatim}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-469-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-474-1} \end{center}
 
 討論下面的輸出結果，我只看到一個視窗： hint: 無法在rmarkdown
 執行？確認，在rscript中執行正常。
@@ -12025,7 +12137,7 @@ mfcol=c(nrows, ncols) 填入的方向為直行。
 
 範例
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-472-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-477-1} \end{center}
 
 範例
 
@@ -12041,7 +12153,7 @@ mfcol=c(nrows, ncols) 填入的方向為直行。
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-475-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-480-1} \end{center}
 
 1x3 layout
 
@@ -12056,7 +12168,7 @@ mfcol=c(nrows, ncols) 填入的方向為直行。
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-477-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-482-1} \end{center}
 
 note: par(mar) 列出margin\\
 par(mar=c(1,1,1,1)) 更動margin
@@ -12118,7 +12230,7 @@ restore original settings
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-480-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-485-1} \end{center}
 
 \hypertarget{layout}{%
 \subsubsection{\texorpdfstring{\texttt{layout()}}{layout()}}\label{layout}}
@@ -12140,7 +12252,7 @@ restore original settings
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-482-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-487-1} \end{center}
 
 在\texttt{layout()}函數中，也可以更改圖形大小，其參數 為： widths=
 數字向量，用來代表column 寬度 heights= 數字向量，用來代表row 高度
@@ -12160,7 +12272,7 @@ note:Relative widths are specified with numeric values. Absolute widths
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-483-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-488-1} \end{center}
 
 \section{分組畫圖}
 
@@ -12218,7 +12330,7 @@ text(x, y, labels) x and y: 文字座標; labels: 例如 ``a label'' pos:
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-487-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-492-1} \end{center}
 
 \hypertarget{add-text-in-the-margins-of-the-graph}{%
 \subsection{Add text in the margins of the
@@ -12239,7 +12351,7 @@ mtext(text, side=3) text : 例如``a label'' side : 哪一側 :\\
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-488-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-493-1} \end{center}
 
 \hypertarget{add-mathematical-annotation-to-a-plot}{%
 \subsection{Add mathematical annotation to a
@@ -12254,7 +12366,7 @@ plot}\label{add-mathematical-annotation-to-a-plot}}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-489-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-494-1} \end{center}
 
 \section{函數畫圖}
 
@@ -12265,7 +12377,7 @@ plot}\label{add-mathematical-annotation-to-a-plot}}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-490-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-495-1} \end{center}
 
 問題是如果x座標的增加不是1單位?
 
@@ -12280,7 +12392,7 @@ plot}\label{add-mathematical-annotation-to-a-plot}}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-491-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-496-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -12289,7 +12401,7 @@ plot}\label{add-mathematical-annotation-to-a-plot}}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-492-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-497-1} \end{center}
 
 問題:解釋為何錯誤
 
@@ -12503,7 +12615,7 @@ uniform a\textasciitilde{}b \[\mu = (a+b)/2\]
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-504-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-509-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -12533,7 +12645,7 @@ uniform a\textasciitilde{}b \[\mu = (a+b)/2\]
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-505-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-510-1} \end{center}
 
 \begin{itemize}
 \tightlist
@@ -13637,7 +13749,7 @@ df \%\textgreater{}\% group\_by(sex) \%\textgreater{}\%str()
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-530-1} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{rmi_class_r_files/figure-latex/unnamed-chunk-535-1} \end{center}
 
 \hypertarget{programming-in-r}{%
 \chapter{programming in R}\label{programming-in-r}}
@@ -13823,8 +13935,8 @@ function (new)
     }
     else .lib.loc
 }
-<bytecode: 0x5573f3138f38>
-<environment: 0x5573f313a898>
+<bytecode: 0x55a96ae19f38>
+<environment: 0x55a96ae1b898>
 \end{verbatim}
 
 \hypertarget{r-meta-}{%

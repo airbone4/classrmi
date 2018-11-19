@@ -316,7 +316,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3.5" data-path="section-6.html"><a href="section-6.html#by-hand"><i class="fa fa-check"></i><b>6.3.5</b> by hand</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="section-6.html"><a href="section-6.html#by-t.test"><i class="fa fa-check"></i><b>6.4</b> by 函數<code>t.test()</code></a></li>
-<li class="chapter" data-level="6.5" data-path="section-6.html"><a href="section-6.html#misc-1"><i class="fa fa-check"></i><b>6.5</b> misc</a></li>
+<li class="chapter" data-level="6.5" data-path="section-6.html"><a href="section-6.html#section-6.5"><i class="fa fa-check"></i><b>6.5</b> 分組</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="section-6.html"><a href="section-6.html#1--for"><i class="fa fa-check"></i><b>6.5.1</b> 方法1: 利用 for迴圈</a></li>
+<li class="chapter" data-level="6.5.2" data-path="section-6.html"><a href="section-6.html#2-tapply"><i class="fa fa-check"></i><b>6.5.2</b> 方法2: <code>tapply</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="section-6.html"><a href="section-6.html#plot"><i class="fa fa-check"></i><b>6.6</b> plot</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>7</b> R Packages</a><ul>
 <li class="chapter" data-level="7.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 基本</a><ul>
@@ -505,21 +509,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="tidy-basic-01" class="section level1">
 <h1><span class="header-section-number">Chapter 11</span> Tidy Basic 01</h1>
-<div class="sourceCode" id="cb708"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb708-1" data-line-number="1"><span class="kw">require</span>(tidyr)</a>
-<a class="sourceLine" id="cb708-2" data-line-number="2"><span class="kw">require</span>(dplyr) <span class="co"># data_frame</span></a></code></pre></div>
+<div class="sourceCode" id="cb712"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb712-1" data-line-number="1"><span class="kw">require</span>(tidyr)</a>
+<a class="sourceLine" id="cb712-2" data-line-number="2"><span class="kw">require</span>(dplyr) <span class="co"># data_frame</span></a></code></pre></div>
 <p>From <a href="http://stackoverflow.com/questions/1181060" class="uri">http://stackoverflow.com/questions/1181060</a></p>
-<div class="sourceCode" id="cb709"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb709-1" data-line-number="1">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
-<a class="sourceLine" id="cb709-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
-<a class="sourceLine" id="cb709-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb709-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
-<a class="sourceLine" id="cb709-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb709-6" data-line-number="6">)</a></code></pre></div>
+<div class="sourceCode" id="cb713"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb713-1" data-line-number="1">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
+<a class="sourceLine" id="cb713-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
+<a class="sourceLine" id="cb713-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb713-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
+<a class="sourceLine" id="cb713-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb713-6" data-line-number="6">)</a></code></pre></div>
 <pre style="color: red;"><code>Warning: `list_len()` is soft-deprecated as of rlang 0.2.0.
 Please use `new_list()` instead
 This warning is displayed once per session.
 </code></pre>
-<div class="sourceCode" id="cb710"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb710-1" data-line-number="1">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
-<a class="sourceLine" id="cb710-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb714"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb714-1" data-line-number="1">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
+<a class="sourceLine" id="cb714-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -624,7 +628,7 @@ Z
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb711"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb711-1" data-line-number="1"><span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)</a></code></pre></div>
+<div class="sourceCode" id="cb715"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb715-1" data-line-number="1"><span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 30 x 3
    time       stock    price
    <date>     <chr>    <dbl>
@@ -640,7 +644,7 @@ Z
 10 2009-01-10 X     -0.283  
 # ... with 20 more rows
 </code></pre>
-<div class="sourceCode" id="cb712"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb712-1" data-line-number="1">stocks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(stock, price, <span class="op">-</span>time)</a></code></pre></div>
+<div class="sourceCode" id="cb716"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb716-1" data-line-number="1">stocks <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(stock, price, <span class="op">-</span>time)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 30 x 3
    time       stock    price
    <date>     <chr>    <dbl>
@@ -656,8 +660,8 @@ Z
 10 2009-01-10 X     -0.283  
 # ... with 20 more rows
 </code></pre>
-<div class="sourceCode" id="cb713"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb713-1" data-line-number="1">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
-<a class="sourceLine" id="cb713-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb717"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb717-1" data-line-number="1">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
+<a class="sourceLine" id="cb717-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -763,15 +767,15 @@ Z
 </tbody>
 </table>
 <p>設定css</p>
-<div class="sourceCode" id="cb714"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb714-1" data-line-number="1"><span class="kw">writeLines</span>(<span class="st">&quot;td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }&quot;</span>, <span class="dt">con =</span> <span class="st">&quot;tableStyle.css&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb715"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb715-1" data-line-number="1">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
-<a class="sourceLine" id="cb715-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
-<a class="sourceLine" id="cb715-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb715-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
-<a class="sourceLine" id="cb715-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb715-6" data-line-number="6">)</a>
-<a class="sourceLine" id="cb715-7" data-line-number="7">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
-<a class="sourceLine" id="cb715-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb718"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb718-1" data-line-number="1"><span class="kw">writeLines</span>(<span class="st">&quot;td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }&quot;</span>, <span class="dt">con =</span> <span class="st">&quot;tableStyle.css&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb719"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb719-1" data-line-number="1">stocks &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
+<a class="sourceLine" id="cb719-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
+<a class="sourceLine" id="cb719-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb719-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
+<a class="sourceLine" id="cb719-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb719-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb719-7" data-line-number="7">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(stocks)</a>
+<a class="sourceLine" id="cb719-8" data-line-number="8">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -876,10 +880,10 @@ Z
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb716"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb716-1" data-line-number="1">demo&lt;-<span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)</a>
-<a class="sourceLine" id="cb716-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb716-3" data-line-number="3">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(demo)</a>
-<a class="sourceLine" id="cb716-4" data-line-number="4">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb720"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb720-1" data-line-number="1">demo&lt;-<span class="kw">gather</span>(stocks, stock, price, <span class="op">-</span>time)</a>
+<a class="sourceLine" id="cb720-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb720-3" data-line-number="3">dset1 &lt;-<span class="st"> </span><span class="kw">head</span>(demo)</a>
+<a class="sourceLine" id="cb720-4" data-line-number="4">knitr<span class="op">::</span><span class="kw">kable</span>(dset1, <span class="dt">format =</span> <span class="st">&quot;html&quot;</span>)</a></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -967,15 +971,15 @@ X
 <h2><span class="header-section-number">11.1</span> long and wide data</h2>
 <div id="gather-wide-to-long" class="section level3">
 <h3><span class="header-section-number">11.1.1</span> gather: wide to long</h3>
-<div class="sourceCode" id="cb717"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb717-1" data-line-number="1">wide &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
-<a class="sourceLine" id="cb717-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
-<a class="sourceLine" id="cb717-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
-<a class="sourceLine" id="cb717-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
-<a class="sourceLine" id="cb717-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb717-6" data-line-number="6">)</a>
-<a class="sourceLine" id="cb717-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb717-8" data-line-number="8">long &lt;-<span class="st"> </span><span class="kw">gather</span>(wide,stock,price,<span class="op">-</span>time)</a>
-<a class="sourceLine" id="cb717-9" data-line-number="9"><span class="kw">head</span>(long)</a></code></pre></div>
+<div class="sourceCode" id="cb721"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb721-1" data-line-number="1">wide &lt;-<span class="st"> </span><span class="kw">data_frame</span>(</a>
+<a class="sourceLine" id="cb721-2" data-line-number="2">  <span class="dt">time =</span> <span class="kw">as.Date</span>(<span class="st">&#39;2009-01-01&#39;</span>) <span class="op">+</span><span class="st"> </span><span class="dv">0</span><span class="op">:</span><span class="dv">9</span>,</a>
+<a class="sourceLine" id="cb721-3" data-line-number="3">  <span class="dt">X =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">1</span>),</a>
+<a class="sourceLine" id="cb721-4" data-line-number="4">  <span class="dt">Y =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">2</span>),</a>
+<a class="sourceLine" id="cb721-5" data-line-number="5">  <span class="dt">Z =</span> <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb721-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb721-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb721-8" data-line-number="8">long &lt;-<span class="st"> </span><span class="kw">gather</span>(wide,stock,price,<span class="op">-</span>time)</a>
+<a class="sourceLine" id="cb721-9" data-line-number="9"><span class="kw">head</span>(long)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 3
   time       stock  price
   <date>     <chr>  <dbl>
@@ -989,8 +993,8 @@ X
 </div>
 <div id="spread-long-to-wide" class="section level3">
 <h3><span class="header-section-number">11.1.2</span> spread :long to wide</h3>
-<div class="sourceCode" id="cb718"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb718-1" data-line-number="1">wide2 &lt;-<span class="kw">spread</span>(long,stock,price)</a>
-<a class="sourceLine" id="cb718-2" data-line-number="2"><span class="kw">head</span>(wide2)</a></code></pre></div>
+<div class="sourceCode" id="cb722"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb722-1" data-line-number="1">wide2 &lt;-<span class="kw">spread</span>(long,stock,price)</a>
+<a class="sourceLine" id="cb722-2" data-line-number="2"><span class="kw">head</span>(wide2)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 4
   time            X      Y     Z
   <date>      <dbl>  <dbl> <dbl>
@@ -1012,21 +1016,21 @@ X
 <li><p>row_number 排序,如果數值一樣,則靠前出現的元素排名在前,例如(3,3) 則 1,2</p></li>
 <li><p>min_rank 排序,如果數值一樣,則都是同一等級，但是，佔用下一名次。例如</p></li>
 </ul>
-<div class="sourceCode" id="cb719"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb719-1" data-line-number="1">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  </a>
-<a class="sourceLine" id="cb719-2" data-line-number="2">data</a></code></pre></div>
+<div class="sourceCode" id="cb723"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb723-1" data-line-number="1">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  </a>
+<a class="sourceLine" id="cb723-2" data-line-number="2">data</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3 3 4
 </code></pre>
-<div class="sourceCode" id="cb720"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb720-1" data-line-number="1"><span class="kw">min_rank</span>(data)</a></code></pre></div>
+<div class="sourceCode" id="cb724"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb724-1" data-line-number="1"><span class="kw">min_rank</span>(data)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1 1 3
 </code></pre>
 <ul>
 <li>dense_rank 排序,如果數值一樣,則都是同一等級，但是，<code>不</code>佔用下一名次</li>
 </ul>
-<div class="sourceCode" id="cb721"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb721-1" data-line-number="1">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  </a>
-<a class="sourceLine" id="cb721-2" data-line-number="2">data</a></code></pre></div>
+<div class="sourceCode" id="cb725"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb725-1" data-line-number="1">data&lt;-<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">4</span>)  </a>
+<a class="sourceLine" id="cb725-2" data-line-number="2">data</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3 3 4
 </code></pre>
-<div class="sourceCode" id="cb722"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb722-1" data-line-number="1"><span class="kw">dense_rank</span>(data)</a></code></pre></div>
+<div class="sourceCode" id="cb726"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb726-1" data-line-number="1"><span class="kw">dense_rank</span>(data)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1 1 2
 </code></pre>
 <ul>
@@ -1036,12 +1040,12 @@ percent_rank = (min_rank(x) - 1)/(sum(!is.na(x)) - 1)<br />
 <li><p>cume_dist 累計分佈</p></li>
 <li><p>ntile : floor(n * (row_number(x) - 1)/len + 1)</p></li>
 </ul>
-<div class="sourceCode" id="cb723"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb723-1" data-line-number="1">data&lt;-<span class="kw">round</span>(<span class="kw">runif</span>(<span class="dv">10</span>)<span class="op">*</span><span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb723-2" data-line-number="2">pr&lt;-<span class="kw">percent_rank</span>(data)</a>
-<a class="sourceLine" id="cb723-3" data-line-number="3">cd&lt;-<span class="kw">cume_dist</span>(data)</a>
-<a class="sourceLine" id="cb723-4" data-line-number="4">mr&lt;-<span class="kw">min_rank</span>(data)</a>
-<a class="sourceLine" id="cb723-5" data-line-number="5">df&lt;-<span class="kw">data.frame</span>(data,pr,mr,cd)</a>
-<a class="sourceLine" id="cb723-6" data-line-number="6"><span class="kw">arrange</span>(df,data)</a></code></pre></div>
+<div class="sourceCode" id="cb727"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb727-1" data-line-number="1">data&lt;-<span class="kw">round</span>(<span class="kw">runif</span>(<span class="dv">10</span>)<span class="op">*</span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb727-2" data-line-number="2">pr&lt;-<span class="kw">percent_rank</span>(data)</a>
+<a class="sourceLine" id="cb727-3" data-line-number="3">cd&lt;-<span class="kw">cume_dist</span>(data)</a>
+<a class="sourceLine" id="cb727-4" data-line-number="4">mr&lt;-<span class="kw">min_rank</span>(data)</a>
+<a class="sourceLine" id="cb727-5" data-line-number="5">df&lt;-<span class="kw">data.frame</span>(data,pr,mr,cd)</a>
+<a class="sourceLine" id="cb727-6" data-line-number="6"><span class="kw">arrange</span>(df,data)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>   data    pr mr  cd
 1     1 0.000  1 0.3
 2     1 0.000  1 0.3
@@ -1092,10 +1096,10 @@ vs. with(dataframe, dataframe[order(col1, col2, col3), ])</p>
 </div>
 <div class="sidebar">
 <p>想要由大到小,例如分數等級</p>
-<div class="sourceCode" id="cb724"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb724-1" data-line-number="1">data</a></code></pre></div>
+<div class="sourceCode" id="cb728"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb728-1" data-line-number="1">data</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1] 7 1 9 1 9 1 5 2 7 2
  </code></pre>
-<div class="sourceCode" id="cb725"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb725-1" data-line-number="1"><span class="kw">row_number</span>(<span class="kw">desc</span>(data))</a></code></pre></div>
+<div class="sourceCode" id="cb729"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb729-1" data-line-number="1"><span class="kw">row_number</span>(<span class="kw">desc</span>(data))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1]  3  8  1  9  2 10  5  6  4  7
  </code></pre>
 </div>
@@ -1104,14 +1108,14 @@ vs. with(dataframe, dataframe[order(col1, col2, col3), ])</p>
 The nth percentile of an observation variable is the value that cuts off the first n percent of the data values when it is sorted in ascending order.</p>
 <p>Problem
 Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
-<div class="sourceCode" id="cb726"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb726-1" data-line-number="1">data&lt;-<span class="kw">runif</span>(<span class="dv">200</span>) </a>
-<a class="sourceLine" id="cb726-2" data-line-number="2"><span class="kw">quantile</span>(data, <span class="kw">c</span>(.<span class="dv">32</span>, <span class="fl">.57</span>, <span class="fl">.98</span>)) </a></code></pre></div>
+<div class="sourceCode" id="cb730"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb730-1" data-line-number="1">data&lt;-<span class="kw">runif</span>(<span class="dv">200</span>) </a>
+<a class="sourceLine" id="cb730-2" data-line-number="2"><span class="kw">quantile</span>(data, <span class="kw">c</span>(.<span class="dv">32</span>, <span class="fl">.57</span>, <span class="fl">.98</span>)) </a></code></pre></div>
 </div>
 </div>
 <div id="other" class="section level2">
 <h2><span class="header-section-number">11.3</span> other</h2>
-<div class="sourceCode" id="cb727"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb727-1" data-line-number="1"><span class="kw">library</span>(babynames)</a>
-<a class="sourceLine" id="cb727-2" data-line-number="2">babynames</a></code></pre></div>
+<div class="sourceCode" id="cb731"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb731-1" data-line-number="1"><span class="kw">library</span>(babynames)</a>
+<a class="sourceLine" id="cb731-2" data-line-number="2">babynames</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 5
     year sex   name          n   prop
    <dbl> <chr> <chr>     <int>  <dbl>
@@ -1129,7 +1133,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 </code></pre>
 <div id="basic-verbs" class="section level3">
 <h3><span class="header-section-number">11.3.1</span> Basic verbs</h3>
-<div class="sourceCode" id="cb728"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb728-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>prop)</a></code></pre></div>
+<div class="sourceCode" id="cb732"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb732-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>prop)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 4
     year sex   name          n
    <dbl> <chr> <chr>     <int>
@@ -1145,7 +1149,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1880 F     Sarah      1288
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb729"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb729-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(year<span class="op">:</span>n)</a></code></pre></div>
+<div class="sourceCode" id="cb733"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb733-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(year<span class="op">:</span>n)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 4
     year sex   name          n
    <dbl> <chr> <chr>     <int>
@@ -1161,9 +1165,9 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1880 F     Sarah      1288
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb730"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb730-1" data-line-number="1"><span class="co"># starts_with(), ends_with(), contains()</span></a>
-<a class="sourceLine" id="cb730-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb730-3" data-line-number="3">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb734"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb734-1" data-line-number="1"><span class="co"># starts_with(), ends_with(), contains()</span></a>
+<a class="sourceLine" id="cb734-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb734-3" data-line-number="3">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 159 x 5
     year sex   name       n      prop
    <dbl> <chr> <chr>  <int>     <dbl>
@@ -1179,7 +1183,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1916 M     Hadley    14 0.0000152
 # ... with 149 more rows
 </code></pre>
-<div class="sourceCode" id="cb731"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb731-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">1900</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb735"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb735-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">1900</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 2,225 x 5
     year sex   name          n   prop
    <dbl> <chr> <chr>     <int>  <dbl>
@@ -1195,7 +1199,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1900 F     Lillian    3414 0.0107
 # ... with 2,215 more rows
 </code></pre>
-<div class="sourceCode" id="cb732"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb732-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2013</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb736"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb736-1" data-line-number="1">babynames <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2013</span>, sex <span class="op">==</span><span class="st"> &quot;F&quot;</span>)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 19,203 x 5
     year sex   name          n    prop
    <dbl> <chr> <chr>     <int>   <dbl>
@@ -1211,11 +1215,11 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  2013 F     Elizabeth  9431 0.00491
 # ... with 19,193 more rows
 </code></pre>
-<div class="sourceCode" id="cb733"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb733-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb733-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(</a>
-<a class="sourceLine" id="cb733-3" data-line-number="3">    <span class="dt">first =</span> <span class="kw">tolower</span>(<span class="kw">substr</span>(name, <span class="dv">1</span>, <span class="dv">1</span>)),</a>
-<a class="sourceLine" id="cb733-4" data-line-number="4">    <span class="dt">last =</span> <span class="kw">substr</span>(name, <span class="kw">nchar</span>(name), <span class="kw">nchar</span>(name))</a>
-<a class="sourceLine" id="cb733-5" data-line-number="5">  )</a></code></pre></div>
+<div class="sourceCode" id="cb737"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb737-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb737-2" data-line-number="2"><span class="st">  </span><span class="kw">mutate</span>(</a>
+<a class="sourceLine" id="cb737-3" data-line-number="3">    <span class="dt">first =</span> <span class="kw">tolower</span>(<span class="kw">substr</span>(name, <span class="dv">1</span>, <span class="dv">1</span>)),</a>
+<a class="sourceLine" id="cb737-4" data-line-number="4">    <span class="dt">last =</span> <span class="kw">substr</span>(name, <span class="kw">nchar</span>(name), <span class="kw">nchar</span>(name))</a>
+<a class="sourceLine" id="cb737-5" data-line-number="5">  )</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 7
     year sex   name          n   prop first last 
    <dbl> <chr> <chr>     <int>  <dbl> <chr> <chr>
@@ -1231,8 +1235,8 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1880 F     Sarah      1288 0.0132 s     h    
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb734"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb734-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb734-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(prop))</a></code></pre></div>
+<div class="sourceCode" id="cb738"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb738-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb738-2" data-line-number="2"><span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(prop))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1,858,689 x 5
     year sex   name        n   prop
    <dbl> <chr> <chr>   <int>  <dbl>
@@ -1248,8 +1252,8 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 10  1885 M     John     8756 0.0755
 # ... with 1,858,679 more rows
 </code></pre>
-<div class="sourceCode" id="cb735"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb735-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb735-2" data-line-number="2"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<div class="sourceCode" id="cb739"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb739-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb739-2" data-line-number="2"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 1 x 1
           n
       <int>
@@ -1259,7 +1263,7 @@ Find the 32nd, 57th and 98th percentiles of runiform(200).</p>
 <div id="group-by" class="section level3">
 <h3><span class="header-section-number">11.3.2</span> Group by</h3>
 <p>分組指令不會影響到原來的資料</p>
-<div class="sourceCode" id="cb736"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb736-1" data-line-number="1"><span class="kw">head</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb740"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb740-1" data-line-number="1"><span class="kw">head</span>(mtcars)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>                   mpg cyl disp  hp drat   wt qsec vs am gear carb
 Mazda RX4         21.0   6  160 110 3.90 2.62 16.5  0  1    4    4
 Mazda RX4 Wag     21.0   6  160 110 3.90 2.88 17.0  0  1    4    4
@@ -1268,7 +1272,7 @@ Hornet 4 Drive    21.4   6  258 110 3.08 3.21 19.4  1  0    3    1
 Hornet Sportabout 18.7   8  360 175 3.15 3.44 17.0  0  0    3    2
 Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
 </code></pre>
-<div class="sourceCode" id="cb737"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb737-1" data-line-number="1"><span class="kw">str</span>(mtcars)</a></code></pre></div>
+<div class="sourceCode" id="cb741"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb741-1" data-line-number="1"><span class="kw">str</span>(mtcars)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>'data.frame':   32 obs. of  11 variables:
  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
@@ -1282,8 +1286,8 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
 </code></pre>
-<div class="sourceCode" id="cb738"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb738-1" data-line-number="1">by_cyl &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(cyl)</a>
-<a class="sourceLine" id="cb738-2" data-line-number="2"><span class="kw">head</span>(by_cyl)</a></code></pre></div>
+<div class="sourceCode" id="cb742"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb742-1" data-line-number="1">by_cyl &lt;-<span class="st"> </span>mtcars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(cyl)</a>
+<a class="sourceLine" id="cb742-2" data-line-number="2"><span class="kw">head</span>(by_cyl)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 11
 # Groups:   cyl [3]
     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
@@ -1295,7 +1299,7 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
 5  18.7     8   360   175  3.15  3.44  17.0     0     0     3     2
 6  18.1     6   225   105  2.76  3.46  20.2     1     0     3     1
 </code></pre>
-<div class="sourceCode" id="cb739"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb739-1" data-line-number="1"><span class="kw">str</span>(by_cyl)</a></code></pre></div>
+<div class="sourceCode" id="cb743"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb743-1" data-line-number="1"><span class="kw">str</span>(by_cyl)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>Classes 'grouped_df', 'tbl_df', 'tbl' and 'data.frame': 32 obs. of  11 variables:
  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
@@ -1322,10 +1326,10 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
   ..- attr(*, "drop")= logi TRUE
 </code></pre>
 <p>但是分組結果會影響其他dplyr指令的計算結果:</p>
-<div class="sourceCode" id="cb740"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb740-1" data-line-number="1">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(</a>
-<a class="sourceLine" id="cb740-2" data-line-number="2">  <span class="dt">disp =</span> <span class="kw">mean</span>(disp),</a>
-<a class="sourceLine" id="cb740-3" data-line-number="3">  <span class="dt">hp =</span> <span class="kw">mean</span>(hp)</a>
-<a class="sourceLine" id="cb740-4" data-line-number="4">)</a></code></pre></div>
+<div class="sourceCode" id="cb744"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb744-1" data-line-number="1">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(</a>
+<a class="sourceLine" id="cb744-2" data-line-number="2">  <span class="dt">disp =</span> <span class="kw">mean</span>(disp),</a>
+<a class="sourceLine" id="cb744-3" data-line-number="3">  <span class="dt">hp =</span> <span class="kw">mean</span>(hp)</a>
+<a class="sourceLine" id="cb744-4" data-line-number="4">)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 3 x 3
     cyl  disp    hp
   <dbl> <dbl> <dbl>
@@ -1333,7 +1337,7 @@ Valiant           18.1   6  225 105 2.76 3.46 20.2  1  0    3    1
 2     6  183. 122. 
 3     8  353. 209. 
 </code></pre>
-<div class="sourceCode" id="cb741"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb741-1" data-line-number="1">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(disp <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(disp))</a></code></pre></div>
+<div class="sourceCode" id="cb745"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb745-1" data-line-number="1">by_cyl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(disp <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(disp))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 3 x 11
 # Groups:   cyl [3]
     mpg   cyl  disp    hp  drat    wt  qsec    vs    am  gear  carb
@@ -1355,12 +1359,12 @@ n(): a count of the number of rows/observations in each group. This particular s
 <div id="-pipeline-vs-no-pipeline" class="section level4">
 <h4><span class="header-section-number">11.3.3.1</span> 實驗 pipeline vs no pipeline</h4>
 <p>產生資料</p>
-<div class="sourceCode" id="cb742"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb742-1" data-line-number="1">year=<span class="kw">c</span>(<span class="dv">1990</span>,    <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>) </a>
-<a class="sourceLine" id="cb742-2" data-line-number="2">sex=<span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,  <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>)</a>
-<a class="sourceLine" id="cb742-3" data-line-number="3"><span class="co">#value=c(1, 2,  3,  4,  5,  1,  2,  3,  4,  5)</span></a>
-<a class="sourceLine" id="cb742-4" data-line-number="4">value=<span class="kw">c</span>(<span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>,  <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>,  <span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb742-5" data-line-number="5">df&lt;-<span class="kw">data.frame</span>(sex,year,value)</a>
-<a class="sourceLine" id="cb742-6" data-line-number="6"><span class="kw">head</span>(df)</a></code></pre></div>
+<div class="sourceCode" id="cb746"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb746-1" data-line-number="1">year=<span class="kw">c</span>(<span class="dv">1990</span>,    <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>,   <span class="dv">1990</span>,   <span class="dv">1991</span>) </a>
+<a class="sourceLine" id="cb746-2" data-line-number="2">sex=<span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,  <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;f&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>,    <span class="st">&quot;m&quot;</span>)</a>
+<a class="sourceLine" id="cb746-3" data-line-number="3"><span class="co">#value=c(1, 2,  3,  4,  5,  1,  2,  3,  4,  5)</span></a>
+<a class="sourceLine" id="cb746-4" data-line-number="4">value=<span class="kw">c</span>(<span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>,  <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>,  <span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb746-5" data-line-number="5">df&lt;-<span class="kw">data.frame</span>(sex,year,value)</a>
+<a class="sourceLine" id="cb746-6" data-line-number="6"><span class="kw">head</span>(df)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  sex year value
 1   f 1990     1
 2   f 1991     2
@@ -1372,9 +1376,9 @@ n(): a count of the number of rows/observations in each group. This particular s
 </div>
 <div id="-pipeline" class="section level4">
 <h4><span class="header-section-number">11.3.3.2</span> 不用 pipeline</h4>
-<div class="sourceCode" id="cb743"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb743-1" data-line-number="1">df&lt;-<span class="kw">group_by</span>(df,sex)</a>
-<a class="sourceLine" id="cb743-2" data-line-number="2">ndf&lt;-<span class="kw">mutate</span>(df,<span class="dt">rank=</span><span class="kw">min_rank</span>(value))</a>
-<a class="sourceLine" id="cb743-3" data-line-number="3"><span class="kw">arrange</span>(ndf,sex)</a></code></pre></div>
+<div class="sourceCode" id="cb747"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb747-1" data-line-number="1">df&lt;-<span class="kw">group_by</span>(df,sex)</a>
+<a class="sourceLine" id="cb747-2" data-line-number="2">ndf&lt;-<span class="kw">mutate</span>(df,<span class="dt">rank=</span><span class="kw">min_rank</span>(value))</a>
+<a class="sourceLine" id="cb747-3" data-line-number="3"><span class="kw">arrange</span>(ndf,sex)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 10 x 4
 # Groups:   sex [2]
    sex    year value  rank
@@ -1393,11 +1397,11 @@ n(): a count of the number of rows/observations in each group. This particular s
 </div>
 <div id="-pipeline" class="section level4">
 <h4><span class="header-section-number">11.3.3.3</span> 使用 pipeline</h4>
-<div class="sourceCode" id="cb744"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb744-1" data-line-number="1">ndf&lt;-df <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb744-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb744-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(value)) </a>
-<a class="sourceLine" id="cb744-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb744-5" data-line-number="5"><span class="kw">arrange</span>(ndf,sex)</a></code></pre></div>
+<div class="sourceCode" id="cb748"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb748-1" data-line-number="1">ndf&lt;-df <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb748-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb748-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(value)) </a>
+<a class="sourceLine" id="cb748-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb748-5" data-line-number="5"><span class="kw">arrange</span>(ndf,sex)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 10 x 4
 # Groups:   sex [2]
    sex    year value  rank
@@ -1419,11 +1423,11 @@ hint: rm(value)
 2. 會出現甚麼結果</p>
 <p>df %&gt;%
 group_by(sex) %&gt;%str()</p>
-<div class="sourceCode" id="cb745"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb745-1" data-line-number="1">nb &lt;-babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb745-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(name)</a></code></pre></div>
-<div class="sourceCode" id="cb746"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb746-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb746-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(name) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb746-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<div class="sourceCode" id="cb749"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb749-1" data-line-number="1">nb &lt;-babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb749-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(name)</a></code></pre></div>
+<div class="sourceCode" id="cb750"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb750-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb750-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(name) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb750-3" data-line-number="3"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 95,025 x 2
    name          n
    <chr>     <int>
@@ -1439,10 +1443,10 @@ group_by(sex) %&gt;%str()</p>
 10 Aadesh       15
 # ... with 95,015 more rows
 </code></pre>
-<div class="sourceCode" id="cb747"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb747-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb747-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Mary&quot;</span>, <span class="st">&quot;William&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb747-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(name, sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb747-4" data-line-number="4"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<div class="sourceCode" id="cb751"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb751-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb751-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;John&quot;</span>, <span class="st">&quot;Mary&quot;</span>, <span class="st">&quot;William&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb751-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(name, sex) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb751-4" data-line-number="4"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 3
 # Groups:   name [?]
   name    sex         n
@@ -1454,10 +1458,10 @@ group_by(sex) %&gt;%str()</p>
 5 William F       15911
 6 William M     4071645
 </code></pre>
-<div class="sourceCode" id="cb748"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb748-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb748-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(year, sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb748-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(<span class="kw">desc</span>(n))) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb748-4" data-line-number="4"><span class="st">  </span><span class="kw">tail</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb752"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb752-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb752-2" data-line-number="2"><span class="st">  </span><span class="kw">group_by</span>(year, sex) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb752-3" data-line-number="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rank =</span> <span class="kw">min_rank</span>(<span class="kw">desc</span>(n))) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb752-4" data-line-number="4"><span class="st">  </span><span class="kw">tail</span>()</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 6 x 6
 # Groups:   year, sex [1]
    year sex   name       n       prop  rank
@@ -1474,10 +1478,10 @@ group_by(sex) %&gt;%str()</p>
 <h4><span class="header-section-number">11.3.3.4</span> Combining to answer more complex questions ———————————–</h4>
 <div id="how-many-hadleys" class="section level5">
 <h5><span class="header-section-number">11.3.3.4.1</span> How many Hadley’s?</h5>
-<div class="sourceCode" id="cb749"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb749-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb749-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb749-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb749-4" data-line-number="4"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
+<div class="sourceCode" id="cb753"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb753-1" data-line-number="1">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb753-2" data-line-number="2"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb753-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb753-4" data-line-number="4"><span class="st">  </span><span class="kw">summarise</span>(<span class="dt">n =</span> <span class="kw">sum</span>(n))</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code># A tibble: 2 x 2
   sex       n
   <chr> <int>
@@ -1487,12 +1491,12 @@ group_by(sex) %&gt;%str()</p>
 </div>
 <div id="the-travesty" class="section level5">
 <h5><span class="header-section-number">11.3.3.4.2</span> The travesty</h5>
-<div class="sourceCode" id="cb750"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb750-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb750-2" data-line-number="2">babynames <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb750-3" data-line-number="3"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb750-4" data-line-number="4"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, n)) <span class="op">+</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb750-5" data-line-number="5"><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> sex))</a></code></pre></div>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-530-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb754"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb754-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb754-2" data-line-number="2">babynames <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb754-3" data-line-number="3"><span class="st">  </span><span class="kw">filter</span>(name <span class="op">==</span><span class="st"> &quot;Hadley&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb754-4" data-line-number="4"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, n)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb754-5" data-line-number="5"><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour =</span> sex))</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-535-1.png" width="70%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>

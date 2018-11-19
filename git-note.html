@@ -316,7 +316,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3.5" data-path="section-6.html"><a href="section-6.html#by-hand"><i class="fa fa-check"></i><b>6.3.5</b> by hand</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="section-6.html"><a href="section-6.html#by-t.test"><i class="fa fa-check"></i><b>6.4</b> by 函數<code>t.test()</code></a></li>
-<li class="chapter" data-level="6.5" data-path="section-6.html"><a href="section-6.html#misc-1"><i class="fa fa-check"></i><b>6.5</b> misc</a></li>
+<li class="chapter" data-level="6.5" data-path="section-6.html"><a href="section-6.html#section-6.5"><i class="fa fa-check"></i><b>6.5</b> 分組</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="section-6.html"><a href="section-6.html#1--for"><i class="fa fa-check"></i><b>6.5.1</b> 方法1: 利用 for迴圈</a></li>
+<li class="chapter" data-level="6.5.2" data-path="section-6.html"><a href="section-6.html#2-tapply"><i class="fa fa-check"></i><b>6.5.2</b> 方法2: <code>tapply</code></a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="section-6.html"><a href="section-6.html#plot"><i class="fa fa-check"></i><b>6.6</b> plot</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>7</b> R Packages</a><ul>
 <li class="chapter" data-level="7.1" data-path="r-packages.html"><a href="r-packages.html#section-7.1"><i class="fa fa-check"></i><b>7.1</b> 基本</a><ul>
@@ -507,7 +511,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 15</span> git note</h1>
 <p>在ubuntu 中，<code>git push</code> 要避免一直輸入帳號密碼的方式為：
 1.</p>
-<div class="sourceCode" id="cb810"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb810-1" data-line-number="1"><span class="fu">git</span> config --global credential.helper <span class="st">&#39;store --file ~/.my-credentials&#39;</span></a></code></pre></div>
+<div class="sourceCode" id="cb814"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb814-1" data-line-number="1"><span class="fu">git</span> config --global credential.helper <span class="st">&#39;store --file ~/.my-credentials&#39;</span></a></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>然後在git push 的時候，輸入帳號和密碼（只要一次，就會被紀錄在上面指定的檔案，這裡的例子是,`.my-credentials’。</li>
 </ol>
