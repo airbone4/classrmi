@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-19">
+<meta name="date" content="2018-11-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -518,13 +518,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * Systat
 * Mini tab . mtp</p>
 <p>利用foreign讀入stata 的資料檔：</p>
-<div class="sourceCode" id="cb779"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb779-1" data-line-number="1"><span class="kw">require</span>(foreign)</a>
-<a class="sourceLine" id="cb779-2" data-line-number="2">affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</a>
-<a class="sourceLine" id="cb779-3" data-line-number="3"><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb780"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb780-1" data-line-number="1"><span class="kw">require</span>(foreign)</a>
+<a class="sourceLine" id="cb780-2" data-line-number="2">affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</a>
+<a class="sourceLine" id="cb780-3" data-line-number="3"><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</a></code></pre></div>
 <p>測試</p>
-<div class="sourceCode" id="cb780"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb780-1" data-line-number="1"><span class="kw">rm</span>(affairs)</a>
-<a class="sourceLine" id="cb780-2" data-line-number="2"><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</a>
-<a class="sourceLine" id="cb780-3" data-line-number="3"><span class="kw">head</span>(affairs)</a></code></pre></div>
+<div class="sourceCode" id="cb781"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb781-1" data-line-number="1"><span class="kw">rm</span>(affairs)</a>
+<a class="sourceLine" id="cb781-2" data-line-number="2"><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</a>
+<a class="sourceLine" id="cb781-3" data-line-number="3"><span class="kw">head</span>(affairs)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  id male age yrsmarr kids relig educ occup ratemarr naffairs affair
 1  4    1  37    10.0    0     3   18     7        4        0      0
 2  5    0  27     4.0    0     4   14     6        4        0      0
@@ -572,7 +572,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown-demo/edit/master/eco_01_intro.Rmd",
 "text": "Edit"
 },
-"download": ["rmi_class_r.pdf"],
+"download": ["rmi_class_r.pdf", "rmi_class_r.epub"],
 "toc": {
 "collapse": "subsection"
 }

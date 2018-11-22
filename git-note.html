@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-11-19">
+<meta name="date" content="2018-11-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -511,7 +511,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 15</span> git note</h1>
 <p>在ubuntu 中，<code>git push</code> 要避免一直輸入帳號密碼的方式為：
 1.</p>
-<div class="sourceCode" id="cb814"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb814-1" data-line-number="1"><span class="fu">git</span> config --global credential.helper <span class="st">&#39;store --file ~/.my-credentials&#39;</span></a></code></pre></div>
+<div class="sourceCode" id="cb815"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb815-1" data-line-number="1"><span class="fu">git</span> config --global credential.helper <span class="st">&#39;store --file ~/.my-credentials&#39;</span></a></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>然後在git push 的時候，輸入帳號和密碼（只要一次，就會被紀錄在上面指定的檔案，這裡的例子是,`.my-credentials’。</li>
 </ol>
@@ -546,7 +546,7 @@ gitbook.start({
 "link": "https://github.com/rstudio/bookdown-demo/edit/master/git-note.Rmd",
 "text": "Edit"
 },
-"download": ["rmi_class_r.pdf"],
+"download": ["rmi_class_r.pdf", "rmi_class_r.epub"],
 "toc": {
 "collapse": "subsection"
 }
