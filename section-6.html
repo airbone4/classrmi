@@ -958,43 +958,40 @@ vector length (arg 2)
 [2,]  2  4
 [3,]  3  4
 </code></pre>
-<div class="sourceCode" id="cb578"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb578-1" data-line-number="1">v1&lt;-<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb578-2" data-line-number="2">v2&lt;-<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">4</span>)</a>
-<a class="sourceLine" id="cb578-3" data-line-number="3">n&lt;-<span class="kw">max</span>(<span class="kw">sapply</span>(<span class="kw">list</span>(v1,v2),length))</a>
-<a class="sourceLine" id="cb578-4" data-line-number="4"><span class="kw">length</span>(v1)&lt;-n</a>
-<a class="sourceLine" id="cb578-5" data-line-number="5"><span class="kw">length</span>(v2)&lt;-n</a>
-<a class="sourceLine" id="cb578-6" data-line-number="6"><span class="kw">cbind</span>(v1,v2)</a></code></pre></div>
+<p>rbind(v1,v2) 發生錯誤，是否只能用於data.frame</p>
+<p><em>問題</em>：
+如果想要合併兩個向量，同時如果長度不一樣，就短的向量就補NA要怎麼做？練習寫成函數。</p>
 <pre style="border: 1px grey dotted;"><code>     v1 v2
 [1,]  1  4
 [2,]  2  4
 [3,]  3 NA
 </code></pre>
-<div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb579-1" data-line-number="1">age    =<span class="st"> </span><span class="kw">c</span>(<span class="fl">23.0883</span>, <span class="fl">25.8344</span>, <span class="fl">29.4648</span>, <span class="fl">32.7858</span>, <span class="fl">33.6372</span>,</a>
-<a class="sourceLine" id="cb579-2" data-line-number="2">           <span class="fl">34.935</span>,  <span class="fl">35.2115</span>, <span class="fl">35.2115</span>,  <span class="fl">5.2115</span>, <span class="fl">36.7803</span>)</a>
-<a class="sourceLine" id="cb579-3" data-line-number="3">group  =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb579-4" data-line-number="4">dframe =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span>age, <span class="dt">group=</span>group)</a>
-<a class="sourceLine" id="cb579-5" data-line-number="5">rst&lt;-<span class="kw">tapply</span>(age,group,<span class="dt">FUN =</span> matrix,<span class="dt">ncol=</span><span class="dv">1</span>) <span class="co">#每個組成為一個list 元素</span></a>
-<a class="sourceLine" id="cb579-6" data-line-number="6">nrst&lt;-<span class="kw">sapply</span>(rst,length) <span class="co">#&lt;2&gt;每一個組的長度</span></a>
-<a class="sourceLine" id="cb579-7" data-line-number="7">n&lt;-<span class="kw">max</span>(nrst)  <span class="co"># 最大長度</span></a>
-<a class="sourceLine" id="cb579-8" data-line-number="8">mrst&lt;-<span class="kw">sapply</span>(rst,<span class="st">`</span><span class="dt">length&lt;-</span><span class="st">`</span>,n) <span class="co"># 重設每組長度&lt;1&gt;</span></a>
-<a class="sourceLine" id="cb579-9" data-line-number="9"><span class="kw">boxplot</span>(mrst)</a></code></pre></div>
+<div class="sourceCode" id="cb578"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb578-1" data-line-number="1">age    =<span class="st"> </span><span class="kw">c</span>(<span class="fl">23.0883</span>, <span class="fl">25.8344</span>, <span class="fl">29.4648</span>, <span class="fl">32.7858</span>, <span class="fl">33.6372</span>,</a>
+<a class="sourceLine" id="cb578-2" data-line-number="2">           <span class="fl">34.935</span>,  <span class="fl">35.2115</span>, <span class="fl">35.2115</span>,  <span class="fl">5.2115</span>, <span class="fl">36.7803</span>)</a>
+<a class="sourceLine" id="cb578-3" data-line-number="3">group  =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb578-4" data-line-number="4">dframe =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span>age, <span class="dt">group=</span>group)</a>
+<a class="sourceLine" id="cb578-5" data-line-number="5">rst&lt;-<span class="kw">tapply</span>(age,group,<span class="dt">FUN =</span> matrix,<span class="dt">ncol=</span><span class="dv">1</span>) <span class="co">#每個組成為一個list 元素</span></a>
+<a class="sourceLine" id="cb578-6" data-line-number="6">nrst&lt;-<span class="kw">sapply</span>(rst,length) <span class="co">#&lt;2&gt;每一個組的長度</span></a>
+<a class="sourceLine" id="cb578-7" data-line-number="7">n&lt;-<span class="kw">max</span>(nrst)  <span class="co"># 最大長度</span></a>
+<a class="sourceLine" id="cb578-8" data-line-number="8">mrst&lt;-<span class="kw">sapply</span>(rst,<span class="st">`</span><span class="dt">length&lt;-</span><span class="st">`</span>,n) <span class="co"># 重設每組長度&lt;1&gt;</span></a>
+<a class="sourceLine" id="cb578-9" data-line-number="9"><span class="kw">boxplot</span>(mrst)</a></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-380-1.png" width="70%" style="display: block; margin: auto;" />
 &lt;1&gt; FUN.Name 會跑到mathch.fun() 這個函數，而這個函數是用字串搜尋</p>
 <p>m2:
 現在想要把rst轉成data.frame。<br />
 先看一下示範，如何把list 轉成 data.frame</p>
-<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb580-1" data-line-number="1"><span class="co"># 不是這種</span></a>
-<a class="sourceLine" id="cb580-2" data-line-number="2">test1 &lt;-<span class="st"> </span><span class="kw">list</span>( <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;a&#39;</span>,<span class="dt">b=</span><span class="st">&#39;b&#39;</span>,<span class="dt">c=</span><span class="st">&#39;c&#39;</span>), </a>
-<a class="sourceLine" id="cb580-3" data-line-number="3">               <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;d&#39;</span>,<span class="dt">b=</span><span class="st">&#39;e&#39;</span>,<span class="dt">c=</span><span class="st">&#39;f&#39;</span>))</a>
-<a class="sourceLine" id="cb580-4" data-line-number="4"><span class="kw">as.data.frame</span>(test1)</a></code></pre></div>
+<div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb579-1" data-line-number="1"><span class="co"># 不是這種</span></a>
+<a class="sourceLine" id="cb579-2" data-line-number="2">test1 &lt;-<span class="st"> </span><span class="kw">list</span>( <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;a&#39;</span>,<span class="dt">b=</span><span class="st">&#39;b&#39;</span>,<span class="dt">c=</span><span class="st">&#39;c&#39;</span>), </a>
+<a class="sourceLine" id="cb579-3" data-line-number="3">               <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;d&#39;</span>,<span class="dt">b=</span><span class="st">&#39;e&#39;</span>,<span class="dt">c=</span><span class="st">&#39;f&#39;</span>))</a>
+<a class="sourceLine" id="cb579-4" data-line-number="4"><span class="kw">as.data.frame</span>(test1)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  c.a....a...b....b...c....c.. c.a....d...b....e...c....f..
 a                            a                            d
 b                            b                            e
 c                            c                            f
 </code></pre>
-<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb581-1" data-line-number="1"><span class="co"># ok</span></a>
-<a class="sourceLine" id="cb581-2" data-line-number="2">test2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">b =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))</a>
-<a class="sourceLine" id="cb581-3" data-line-number="3"><span class="kw">as.data.frame</span>(test2)</a></code></pre></div>
+<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb580-1" data-line-number="1"><span class="co"># ok</span></a>
+<a class="sourceLine" id="cb580-2" data-line-number="2">test2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">b =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))</a>
+<a class="sourceLine" id="cb580-3" data-line-number="3"><span class="kw">as.data.frame</span>(test2)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  a b
 1 1 4
 2 2 5
