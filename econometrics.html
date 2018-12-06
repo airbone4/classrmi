@@ -524,13 +524,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * Systat
 * Mini tab . mtp</p>
 <p>利用foreign讀入stata 的資料檔：</p>
-<div class="sourceCode" id="cb787"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb787-1" data-line-number="1"><span class="kw">require</span>(foreign)</a>
-<a class="sourceLine" id="cb787-2" data-line-number="2">affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</a>
-<a class="sourceLine" id="cb787-3" data-line-number="3"><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb788"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb788-1" data-line-number="1"><span class="kw">require</span>(foreign)</a>
+<a class="sourceLine" id="cb788-2" data-line-number="2">affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</a>
+<a class="sourceLine" id="cb788-3" data-line-number="3"><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</a></code></pre></div>
 <p>測試</p>
-<div class="sourceCode" id="cb788"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb788-1" data-line-number="1"><span class="kw">rm</span>(affairs)</a>
-<a class="sourceLine" id="cb788-2" data-line-number="2"><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</a>
-<a class="sourceLine" id="cb788-3" data-line-number="3"><span class="kw">head</span>(affairs)</a></code></pre></div>
+<div class="sourceCode" id="cb789"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb789-1" data-line-number="1"><span class="kw">rm</span>(affairs)</a>
+<a class="sourceLine" id="cb789-2" data-line-number="2"><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</a>
+<a class="sourceLine" id="cb789-3" data-line-number="3"><span class="kw">head</span>(affairs)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  id male age yrsmarr kids relig educ occup ratemarr naffairs affair
 1  4    1  37    10.0    0     3   18     7        4        0      0
 2  5    0  27     4.0    0     4   14     6        4        0      0

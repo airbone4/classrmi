@@ -966,32 +966,35 @@ vector length (arg 2)
 [2,]  2  4
 [3,]  3 NA
 </code></pre>
-<div class="sourceCode" id="cb578"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb578-1" data-line-number="1">age    =<span class="st"> </span><span class="kw">c</span>(<span class="fl">23.0883</span>, <span class="fl">25.8344</span>, <span class="fl">29.4648</span>, <span class="fl">32.7858</span>, <span class="fl">33.6372</span>,</a>
-<a class="sourceLine" id="cb578-2" data-line-number="2">           <span class="fl">34.935</span>,  <span class="fl">35.2115</span>, <span class="fl">35.2115</span>,  <span class="fl">5.2115</span>, <span class="fl">36.7803</span>)</a>
-<a class="sourceLine" id="cb578-3" data-line-number="3">group  =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb578-4" data-line-number="4">dframe =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span>age, <span class="dt">group=</span>group)</a>
-<a class="sourceLine" id="cb578-5" data-line-number="5">rst&lt;-<span class="kw">tapply</span>(age,group,<span class="dt">FUN =</span> matrix,<span class="dt">ncol=</span><span class="dv">1</span>) <span class="co">#每個組成為一個list 元素</span></a>
-<a class="sourceLine" id="cb578-6" data-line-number="6">nrst&lt;-<span class="kw">sapply</span>(rst,length) <span class="co">#&lt;2&gt;每一個組的長度</span></a>
-<a class="sourceLine" id="cb578-7" data-line-number="7">n&lt;-<span class="kw">max</span>(nrst)  <span class="co"># 最大長度</span></a>
-<a class="sourceLine" id="cb578-8" data-line-number="8">mrst&lt;-<span class="kw">sapply</span>(rst,<span class="st">`</span><span class="dt">length&lt;-</span><span class="st">`</span>,n) <span class="co"># 重設每組長度&lt;1&gt;</span></a>
-<a class="sourceLine" id="cb578-9" data-line-number="9"><span class="kw">boxplot</span>(mrst)</a></code></pre></div>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-380-1.png" width="70%" style="display: block; margin: auto;" />
+<p>練習:<br />
+已經知道boxplot()的參數如果傳進矩陣或資料集，將對每一個欄位作圖</p>
+<div class="sourceCode" id="cb578"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb578-1" data-line-number="1"><span class="kw">boxplot</span>(<span class="kw">matrix</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>),<span class="dt">ncol=</span><span class="dv">2</span>))</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-380-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>現在要分組對年齡boxplot,請寫出程式碼，資料如下：</p>
+<pre class="example"><code>age    = c(23.0883, 25.8344, 29.4648, 32.7858, 33.6372,
+           34.935,  35.2115, 35.2115,  5.2115, 36.7803)
+group  = c(1, 1, 1, 2, 1, 1, 2, 2, 2, 1)
+dframe = data.frame(age=age, group=group)</code></pre>
+<p>hint: 每組長度可能不一樣，需要補NA<br />
+<img src="rmi_class_r_files/figure-html/unnamed-chunk-381-1.png" width="70%" style="display: block; margin: auto;" />
 &lt;1&gt; FUN.Name 會跑到mathch.fun() 這個函數，而這個函數是用字串搜尋</p>
 <p>m2:
 現在想要把rst轉成data.frame。<br />
 先看一下示範，如何把list 轉成 data.frame</p>
-<div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb579-1" data-line-number="1"><span class="co"># 不是這種</span></a>
-<a class="sourceLine" id="cb579-2" data-line-number="2">test1 &lt;-<span class="st"> </span><span class="kw">list</span>( <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;a&#39;</span>,<span class="dt">b=</span><span class="st">&#39;b&#39;</span>,<span class="dt">c=</span><span class="st">&#39;c&#39;</span>), </a>
-<a class="sourceLine" id="cb579-3" data-line-number="3">               <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;d&#39;</span>,<span class="dt">b=</span><span class="st">&#39;e&#39;</span>,<span class="dt">c=</span><span class="st">&#39;f&#39;</span>))</a>
-<a class="sourceLine" id="cb579-4" data-line-number="4"><span class="kw">as.data.frame</span>(test1)</a></code></pre></div>
+<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb580-1" data-line-number="1"><span class="co"># 解釋結果,問stringsAsFactors=F 有什麼效果？</span></a>
+<a class="sourceLine" id="cb580-2" data-line-number="2">test1 &lt;-<span class="st"> </span><span class="kw">list</span>( <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;a&#39;</span>,<span class="dt">b=</span><span class="st">&#39;b&#39;</span>,<span class="dt">c=</span><span class="st">&#39;c&#39;</span>), </a>
+<a class="sourceLine" id="cb580-3" data-line-number="3">               <span class="kw">c</span>(<span class="dt">a=</span><span class="st">&#39;d&#39;</span>,<span class="dt">b=</span><span class="st">&#39;e&#39;</span>,<span class="dt">c=</span><span class="st">&#39;f&#39;</span>))</a>
+<a class="sourceLine" id="cb580-4" data-line-number="4">d1&lt;-<span class="kw">as.data.frame</span>(test1)</a>
+<a class="sourceLine" id="cb580-5" data-line-number="5">d1</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  c.a....a...b....b...c....c.. c.a....d...b....e...c....f..
 a                            a                            d
 b                            b                            e
 c                            c                            f
 </code></pre>
-<div class="sourceCode" id="cb580"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb580-1" data-line-number="1"><span class="co"># ok</span></a>
-<a class="sourceLine" id="cb580-2" data-line-number="2">test2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">b =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))</a>
-<a class="sourceLine" id="cb580-3" data-line-number="3"><span class="kw">as.data.frame</span>(test2)</a></code></pre></div>
+<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb581-1" data-line-number="1"><span class="co"># ok</span></a>
+<a class="sourceLine" id="cb581-2" data-line-number="2">test2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">a =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="dt">b =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))</a>
+<a class="sourceLine" id="cb581-3" data-line-number="3">d2&lt;-<span class="kw">as.data.frame</span>(test2)</a>
+<a class="sourceLine" id="cb581-4" data-line-number="4">d2</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  a b
 1 1 4
 2 2 5
