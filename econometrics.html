@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-12-06">
+<meta name="date" content="2018-12-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -453,7 +453,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>13.1</b> package recommended</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="simulate-1.html"><a href="simulate-1.html"><i class="fa fa-check"></i><b>14</b> simulate 1</a><ul>
-<li class="chapter" data-level="14.0.1" data-path="simulate-1.html"><a href="simulate-1.html#sm-"><i class="fa fa-check"></i><b>14.0.1</b> sm 範例</a></li>
+<li class="chapter" data-level="14.0.1" data-path="simulate-1.html"><a href="simulate-1.html#sm"><i class="fa fa-check"></i><b>14.0.1</b> 利用套件<code>sm</code></a></li>
+<li class="chapter" data-level="14.0.2" data-path="simulate-1.html"><a href="simulate-1.html#sm-"><i class="fa fa-check"></i><b>14.0.2</b> sm 範例</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>15</b> rbook 提要</a><ul>
 <li class="chapter" data-level="15.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>15.1</b> index.Rmd</a></li>
@@ -524,13 +525,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * Systat
 * Mini tab . mtp</p>
 <p>利用foreign讀入stata 的資料檔：</p>
-<div class="sourceCode" id="cb788"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb788-1" data-line-number="1"><span class="kw">require</span>(foreign)</a>
-<a class="sourceLine" id="cb788-2" data-line-number="2">affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</a>
-<a class="sourceLine" id="cb788-3" data-line-number="3"><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb789"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb789-1" data-line-number="1"><span class="kw">require</span>(foreign)</a>
+<a class="sourceLine" id="cb789-2" data-line-number="2">affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</a>
+<a class="sourceLine" id="cb789-3" data-line-number="3"><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</a></code></pre></div>
 <p>測試</p>
-<div class="sourceCode" id="cb789"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb789-1" data-line-number="1"><span class="kw">rm</span>(affairs)</a>
-<a class="sourceLine" id="cb789-2" data-line-number="2"><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</a>
-<a class="sourceLine" id="cb789-3" data-line-number="3"><span class="kw">head</span>(affairs)</a></code></pre></div>
+<div class="sourceCode" id="cb790"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb790-1" data-line-number="1"><span class="kw">rm</span>(affairs)</a>
+<a class="sourceLine" id="cb790-2" data-line-number="2"><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</a>
+<a class="sourceLine" id="cb790-3" data-line-number="3"><span class="kw">head</span>(affairs)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  id male age yrsmarr kids relig educ occup ratemarr naffairs affair
 1  4    1  37    10.0    0     3   18     7        4        0      0
 2  5    0  27     4.0    0     4   14     6        4        0      0

@@ -25,7 +25,7 @@
 <meta name="author" content="lend jwj cen">
 
 
-<meta name="date" content="2018-12-06">
+<meta name="date" content="2018-12-13">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -453,7 +453,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>13.1</b> package recommended</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="simulate-1.html"><a href="simulate-1.html"><i class="fa fa-check"></i><b>14</b> simulate 1</a><ul>
-<li class="chapter" data-level="14.0.1" data-path="simulate-1.html"><a href="simulate-1.html#sm-"><i class="fa fa-check"></i><b>14.0.1</b> sm 範例</a></li>
+<li class="chapter" data-level="14.0.1" data-path="simulate-1.html"><a href="simulate-1.html#sm"><i class="fa fa-check"></i><b>14.0.1</b> 利用套件<code>sm</code></a></li>
+<li class="chapter" data-level="14.0.2" data-path="simulate-1.html"><a href="simulate-1.html#sm-"><i class="fa fa-check"></i><b>14.0.2</b> sm 範例</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="rbook-.html"><a href="rbook-.html"><i class="fa fa-check"></i><b>15</b> rbook 提要</a><ul>
 <li class="chapter" data-level="15.1" data-path="rbook-.html"><a href="rbook-.html#index.rmd"><i class="fa fa-check"></i><b>15.1</b> index.Rmd</a></li>
@@ -541,30 +542,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb790"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb790-1" data-line-number="1">fn_num&lt;-<span class="dv">100</span></a>
-<a class="sourceLine" id="cb790-2" data-line-number="2">fh&lt;-<span class="kw">rnorm</span>(fn_num,<span class="dv">180</span>,<span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb790-3" data-line-number="3">fm&lt;-<span class="kw">rnorm</span>(<span class="dv">200</span><span class="op">-</span>fn_num,<span class="dv">170</span>,<span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb790-4" data-line-number="4">height&lt;-<span class="kw">c</span>(fh,fm)</a>
-<a class="sourceLine" id="cb790-5" data-line-number="5">sex&lt;-<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,fn_num),<span class="kw">rep</span>(<span class="dv">0</span>,<span class="dv">200</span><span class="op">-</span>fn_num))</a>
-<a class="sourceLine" id="cb790-6" data-line-number="6">r1&lt;-<span class="kw">tapply</span>(height, sex,mean)</a>
-<a class="sourceLine" id="cb790-7" data-line-number="7">r1</a></code></pre></div>
+<div class="sourceCode" id="cb791"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb791-1" data-line-number="1">fn_num&lt;-<span class="dv">100</span></a>
+<a class="sourceLine" id="cb791-2" data-line-number="2">fh&lt;-<span class="kw">rnorm</span>(fn_num,<span class="dv">180</span>,<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb791-3" data-line-number="3">fm&lt;-<span class="kw">rnorm</span>(<span class="dv">200</span><span class="op">-</span>fn_num,<span class="dv">170</span>,<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb791-4" data-line-number="4">height&lt;-<span class="kw">c</span>(fh,fm)</a>
+<a class="sourceLine" id="cb791-5" data-line-number="5">sex&lt;-<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,fn_num),<span class="kw">rep</span>(<span class="dv">0</span>,<span class="dv">200</span><span class="op">-</span>fn_num))</a>
+<a class="sourceLine" id="cb791-6" data-line-number="6">r1&lt;-<span class="kw">tapply</span>(height, sex,mean)</a>
+<a class="sourceLine" id="cb791-7" data-line-number="7">r1</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  0   1 
 171 181 
 </code></pre>
-<div class="sourceCode" id="cb791"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb791-1" data-line-number="1">fn_num_set&lt;-<span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">199</span>,<span class="dv">1000</span>,<span class="dt">replace=</span>T)</a>
-<a class="sourceLine" id="cb791-2" data-line-number="2">rst&lt;-<span class="kw">matrix</span>(<span class="kw">rep</span>(<span class="dv">0</span>,<span class="dv">2000</span>),<span class="dt">ncol=</span><span class="dv">2</span>)</a>
-<a class="sourceLine" id="cb791-3" data-line-number="3"><span class="cf">for</span>(idx <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>)</a>
-<a class="sourceLine" id="cb791-4" data-line-number="4">{</a>
-<a class="sourceLine" id="cb791-5" data-line-number="5">  fn_num &lt;-fn_num_set[idx]</a>
-<a class="sourceLine" id="cb791-6" data-line-number="6">fh&lt;-<span class="kw">rnorm</span>(fn_num,<span class="dv">180</span>,<span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb791-7" data-line-number="7">fm&lt;-<span class="kw">rnorm</span>(<span class="dv">200</span><span class="op">-</span>fn_num,<span class="dv">170</span>,<span class="dv">10</span>)</a>
-<a class="sourceLine" id="cb791-8" data-line-number="8">height&lt;-<span class="kw">c</span>(fh,fm)</a>
-<a class="sourceLine" id="cb791-9" data-line-number="9">sex&lt;-<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,fn_num),<span class="kw">rep</span>(<span class="dv">0</span>,<span class="dv">200</span><span class="op">-</span>fn_num))</a>
-<a class="sourceLine" id="cb791-10" data-line-number="10">r1&lt;-<span class="kw">tapply</span>(height, sex,mean)</a>
-<a class="sourceLine" id="cb791-11" data-line-number="11">rst[idx,<span class="dv">1</span>]=r1[<span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb791-12" data-line-number="12">rst[idx,<span class="dv">2</span>]=r1[<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb791-13" data-line-number="13">}</a>
-<a class="sourceLine" id="cb791-14" data-line-number="14"><span class="kw">summary</span>(rst)</a></code></pre></div>
+<div class="sourceCode" id="cb792"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb792-1" data-line-number="1">fn_num_set&lt;-<span class="kw">sample</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">199</span>,<span class="dv">1000</span>,<span class="dt">replace=</span>T) <span class="co">#先抽出female的個數</span></a>
+<a class="sourceLine" id="cb792-2" data-line-number="2">rst&lt;-<span class="kw">matrix</span>(<span class="kw">rep</span>(<span class="dv">0</span>,<span class="dv">2000</span>),<span class="dt">ncol=</span><span class="dv">2</span>) <span class="co">#每一次抽樣男生/女生的平均值</span></a>
+<a class="sourceLine" id="cb792-3" data-line-number="3"><span class="cf">for</span>(idx <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb792-4" data-line-number="4">{</a>
+<a class="sourceLine" id="cb792-5" data-line-number="5">  fn_num &lt;-fn_num_set[idx]</a>
+<a class="sourceLine" id="cb792-6" data-line-number="6">fh&lt;-<span class="kw">rnorm</span>(fn_num,<span class="dv">180</span>,<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb792-7" data-line-number="7">fm&lt;-<span class="kw">rnorm</span>(<span class="dv">200</span><span class="op">-</span>fn_num,<span class="dv">170</span>,<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb792-8" data-line-number="8">height&lt;-<span class="kw">c</span>(fh,fm)</a>
+<a class="sourceLine" id="cb792-9" data-line-number="9">sex&lt;-<span class="kw">c</span>(<span class="kw">rep</span>(<span class="dv">1</span>,fn_num),<span class="kw">rep</span>(<span class="dv">0</span>,<span class="dv">200</span><span class="op">-</span>fn_num))</a>
+<a class="sourceLine" id="cb792-10" data-line-number="10">r1&lt;-<span class="kw">tapply</span>(height, sex,mean)</a>
+<a class="sourceLine" id="cb792-11" data-line-number="11">rst[idx,<span class="dv">1</span>]=r1[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb792-12" data-line-number="12">rst[idx,<span class="dv">2</span>]=r1[<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb792-13" data-line-number="13">}</a>
+<a class="sourceLine" id="cb792-14" data-line-number="14"><span class="kw">summary</span>(rst)</a></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>       V1            V2     
  Min.   :156   Min.   :164  
  1st Qu.:169   1st Qu.:179  
@@ -575,71 +576,105 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </code></pre>
 <p>下面這個,好像在rmarkdown 畫不出來
 unknown reason !!</p>
-<div class="sourceCode" id="cb792"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb792-1" data-line-number="1">alist&lt;-<span class="kw">list</span>(rst[,<span class="dv">1</span>],rst[,<span class="dv">2</span>])</a>
-<a class="sourceLine" id="cb792-2" data-line-number="2">  dinfo&lt;-<span class="kw">lapply</span>(alist,density)</a>
-<a class="sourceLine" id="cb792-3" data-line-number="3">  t1&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>x)})</a>
-<a class="sourceLine" id="cb792-4" data-line-number="4">  rx&lt;-<span class="kw">range</span>(t1)</a>
-<a class="sourceLine" id="cb792-5" data-line-number="5">  t2&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>y)})</a>
-<a class="sourceLine" id="cb792-6" data-line-number="6">  ry&lt;-<span class="kw">range</span>(t2)</a>
-<a class="sourceLine" id="cb792-7" data-line-number="7">  <span class="kw">plot</span>(dinfo[[<span class="dv">1</span>]], <span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">main =</span> <span class="st">&quot;&quot;</span>)</a>
-<a class="sourceLine" id="cb792-8" data-line-number="8">    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(dinfo)) {</a>
-<a class="sourceLine" id="cb792-9" data-line-number="9">        <span class="kw">lines</span>(dinfo[[i]], <span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">col =</span> i)</a>
-<a class="sourceLine" id="cb792-10" data-line-number="10">    }  </a></code></pre></div>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-566-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<p>轉函數</p>
-<div class="sourceCode" id="cb793"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb793-1" data-line-number="1">plot.multi.density&lt;-<span class="cf">function</span> (alist)</a>
-<a class="sourceLine" id="cb793-2" data-line-number="2">{</a>
-<a class="sourceLine" id="cb793-3" data-line-number="3">  dinfo&lt;-<span class="kw">lapply</span>(alist,density)<span class="co">#每組資料，求density</span></a>
-<a class="sourceLine" id="cb793-4" data-line-number="4">  <span class="co"># 每組資料的x範圍</span></a>
-<a class="sourceLine" id="cb793-5" data-line-number="5">  t1&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>x)})</a>
-<a class="sourceLine" id="cb793-6" data-line-number="6">  rx&lt;-<span class="kw">range</span>(t1)</a>
-<a class="sourceLine" id="cb793-7" data-line-number="7">  <span class="co"># 每組資料的y範圍</span></a>
-<a class="sourceLine" id="cb793-8" data-line-number="8">  t2&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>y)})</a>
-<a class="sourceLine" id="cb793-9" data-line-number="9">  ry&lt;-<span class="kw">range</span>(t2)</a>
-<a class="sourceLine" id="cb793-10" data-line-number="10">  <span class="kw">plot</span>(dinfo[[<span class="dv">1</span>]], <span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">main =</span> <span class="st">&quot;&quot;</span>)</a>
-<a class="sourceLine" id="cb793-11" data-line-number="11">    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(dinfo)) {</a>
-<a class="sourceLine" id="cb793-12" data-line-number="12">        <span class="kw">lines</span>(dinfo[[i]], <span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">col =</span> i)</a>
-<a class="sourceLine" id="cb793-13" data-line-number="13">    }  </a>
-<a class="sourceLine" id="cb793-14" data-line-number="14">} </a></code></pre></div>
+<div class="sourceCode" id="cb793"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb793-1" data-line-number="1">alist&lt;-<span class="kw">list</span>(rst[,<span class="dv">1</span>],rst[,<span class="dv">2</span>])</a>
+<a class="sourceLine" id="cb793-2" data-line-number="2">  dinfo&lt;-<span class="kw">lapply</span>(alist,density)</a>
+<a class="sourceLine" id="cb793-3" data-line-number="3">  t1&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>x)})</a>
+<a class="sourceLine" id="cb793-4" data-line-number="4">  rx&lt;-<span class="kw">range</span>(t1)</a>
+<a class="sourceLine" id="cb793-5" data-line-number="5">  t2&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>y)})</a>
+<a class="sourceLine" id="cb793-6" data-line-number="6">  ry&lt;-<span class="kw">range</span>(t2)</a>
+<a class="sourceLine" id="cb793-7" data-line-number="7">  <span class="kw">plot</span>(dinfo[[<span class="dv">1</span>]], <span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">main =</span> <span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb793-8" data-line-number="8">    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(dinfo)) {</a>
+<a class="sourceLine" id="cb793-9" data-line-number="9">        <span class="kw">lines</span>(dinfo[[i]], <span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">col =</span> i)</a>
+<a class="sourceLine" id="cb793-10" data-line-number="10">    }  </a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-567-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><em>轉函數</em></p>
+<p>總體而言，轉成函數的考慮就是如何避免hard coding。</p>
+<div class="sourceCode" id="cb794"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb794-1" data-line-number="1">plot.multi.density&lt;-<span class="cf">function</span> (alist)</a>
+<a class="sourceLine" id="cb794-2" data-line-number="2">{</a>
+<a class="sourceLine" id="cb794-3" data-line-number="3">  dinfo&lt;-<span class="kw">lapply</span>(alist,density)<span class="co">#每組資料，求density</span></a>
+<a class="sourceLine" id="cb794-4" data-line-number="4">  <span class="co"># 每組資料的x範圍</span></a>
+<a class="sourceLine" id="cb794-5" data-line-number="5">  t1&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>x)})</a>
+<a class="sourceLine" id="cb794-6" data-line-number="6">  rx&lt;-<span class="kw">range</span>(t1)</a>
+<a class="sourceLine" id="cb794-7" data-line-number="7">  <span class="co"># 每組資料的y範圍</span></a>
+<a class="sourceLine" id="cb794-8" data-line-number="8">  t2&lt;-<span class="kw">sapply</span>(dinfo,<span class="cf">function</span>(item){<span class="kw">range</span>(item<span class="op">$</span>y)})</a>
+<a class="sourceLine" id="cb794-9" data-line-number="9">  ry&lt;-<span class="kw">range</span>(t2)</a>
+<a class="sourceLine" id="cb794-10" data-line-number="10">  <span class="kw">plot</span>(dinfo[[<span class="dv">1</span>]],<span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">main =</span> <span class="st">&quot;&quot;</span>)</a>
+<a class="sourceLine" id="cb794-11" data-line-number="11">    <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(dinfo)) {</a>
+<a class="sourceLine" id="cb794-12" data-line-number="12">        <span class="kw">lines</span>(dinfo[[i]],<span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">col =</span> i)</a>
+<a class="sourceLine" id="cb794-13" data-line-number="13">        </a>
+<a class="sourceLine" id="cb794-14" data-line-number="14">    }  </a>
+<a class="sourceLine" id="cb794-15" data-line-number="15">} </a></code></pre></div>
+<p>討論：上面函數的限制？
+第一個限制，先看看有沒有預設組別</p>
+<p>問題：如果要加上區域顏色？
+簡單一點的話，可以用選項type=“h”, (plot, line兩個函數都吃)</p>
 <p>應用自己的函數</p>
-<div class="sourceCode" id="cb794"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb794-1" data-line-number="1">alist&lt;-<span class="kw">list</span>(rst[,<span class="dv">1</span>],rst[,<span class="dv">2</span>])</a>
-<a class="sourceLine" id="cb794-2" data-line-number="2"><span class="kw">plot.multi.density</span>(alist)</a></code></pre></div>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-568-1.png" width="70%" style="display: block; margin: auto;" />
-### 利用套件<code>sm</code>
-The sm package also includes a way of doing multiple density plots. The data must be in a data frame.</p>
-<div class="sourceCode" id="cb795"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb795-1" data-line-number="1"><span class="kw">library</span>(sm)</a>
-<a class="sourceLine" id="cb795-2" data-line-number="2">rstdf&lt;-<span class="kw">data.frame</span>(rst)</a>
-<a class="sourceLine" id="cb795-3" data-line-number="3"><span class="kw">colnames</span>(rstdf)&lt;-<span class="kw">c</span>(<span class="st">&quot;male&quot;</span>,<span class="st">&quot;female&quot;</span>)</a>
-<a class="sourceLine" id="cb795-4" data-line-number="4"><span class="kw">sm.density.compare</span>(rstdf<span class="op">$</span>male, rstdf<span class="op">$</span>female)</a>
-<a class="sourceLine" id="cb795-5" data-line-number="5"><span class="co"># Add a legend (the color numbers start from 2 and go up)</span></a>
-<a class="sourceLine" id="cb795-6" data-line-number="6"><span class="co">#legend(&quot;topright&quot;, levels(data$cond), fill=2+(0:nlevels(data$cond)))</span></a></code></pre></div>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-569-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb795"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb795-1" data-line-number="1">alist&lt;-<span class="kw">list</span>(rst[,<span class="dv">1</span>],rst[,<span class="dv">2</span>])</a>
+<a class="sourceLine" id="cb795-2" data-line-number="2"><span class="kw">plot.multi.density</span>(alist)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-570-1.png" width="70%" style="display: block; margin: auto;" />
+上面的函數，預設參數是傳入使用者指定的list，裡面有使用者指定的組別
+但是如果因為需要，發現傳入矩陣比較方便（例如每一個欄位代表每一組的模擬結果，那樣怎樣避免hard coding?</p>
+<div class="sourceCode" id="cb796"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb796-1" data-line-number="1">elist&lt;-<span class="kw">vector</span>(<span class="st">&quot;list&quot;</span>,<span class="kw">ncol</span>(rst))<span class="co">#指定大小的list,如果空集合elist&lt;-list()</span></a>
+<a class="sourceLine" id="cb796-2" data-line-number="2"><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(rst)){</a>
+<a class="sourceLine" id="cb796-3" data-line-number="3">  elist[[i]]&lt;-rst[,i] <span class="co">#注意雙括號</span></a>
+<a class="sourceLine" id="cb796-4" data-line-number="4">}</a></code></pre></div>
+<div class="sidebar">
+<p>之前有提過，大部分的文件都是說單/雙括號的差別是前者拿到的仍然是list,後者拿到的是內容。
+但是以程式語言的眼光來看，我們先說凡是陣列，其元素的型態都只能放一樣（也就是大小固定），但是現在list的元素型態可以不單一，因此，編譯器無法知道如何指派大小，解決辦法就是每一個元素其實都是一個指標。
+（todo: 需要一個圖）</p>
+</div>
+<div id="sm" class="section level3">
+<h3><span class="header-section-number">14.0.1</span> 利用套件<code>sm</code></h3>
+<p>The sm package also includes a way of doing multiple density plots. The data must be in a data frame.</p>
+<div class="sourceCode" id="cb797"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb797-1" data-line-number="1"><span class="kw">library</span>(sm)</a>
+<a class="sourceLine" id="cb797-2" data-line-number="2">rstdf&lt;-<span class="kw">data.frame</span>(rst)</a>
+<a class="sourceLine" id="cb797-3" data-line-number="3"><span class="kw">colnames</span>(rstdf)&lt;-<span class="kw">c</span>(<span class="st">&quot;male&quot;</span>,<span class="st">&quot;female&quot;</span>)</a>
+<a class="sourceLine" id="cb797-4" data-line-number="4"><span class="kw">sm.density.compare</span>(rstdf<span class="op">$</span>male, rstdf<span class="op">$</span>female)</a>
+<a class="sourceLine" id="cb797-5" data-line-number="5"><span class="co"># Add a legend (the color numbers start from 2 and go up)</span></a>
+<a class="sourceLine" id="cb797-6" data-line-number="6"><span class="co">#legend(&quot;topright&quot;, levels(data$cond), fill=2+(0:nlevels(data$cond)))</span></a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-572-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
 <div id="sm-" class="section level3">
-<h3><span class="header-section-number">14.0.1</span> sm 範例</h3>
-<div class="sourceCode" id="cb796"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb796-1" data-line-number="1"><span class="kw">sm.density.compare</span>(iris<span class="op">$</span>Sepal.Length, iris<span class="op">$</span>Species, <span class="dt">xlab=</span><span class="st">&quot;Species&quot;</span>)</a>
-<a class="sourceLine" id="cb796-2" data-line-number="2"><span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;Distributions of Species&quot;</span>)</a></code></pre></div>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-570-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb797"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb797-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">110</span>, <span class="dt">to =</span> <span class="dv">174</span>, <span class="dt">by =</span> <span class="fl">0.5</span>)</a>
-<a class="sourceLine" id="cb797-2" data-line-number="2">y1 &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">145</span>, <span class="dt">sd =</span> <span class="dv">9</span>)</a>
-<a class="sourceLine" id="cb797-3" data-line-number="3">y2 &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">138</span>, <span class="dt">sd =</span> <span class="dv">8</span>)</a>
-<a class="sourceLine" id="cb797-4" data-line-number="4"><span class="kw">plot</span>(x, y1, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>,</a>
-<a class="sourceLine" id="cb797-5" data-line-number="5">     <span class="dt">main=</span><span class="st">&quot;Systolic Blood Pressure Before and After Treatment&quot;</span>,</a>
-<a class="sourceLine" id="cb797-6" data-line-number="6">     <span class="dt">xlab =</span> <span class="st">&quot;Systolic Blood Pressure (mmHg)&quot;</span>,</a>
-<a class="sourceLine" id="cb797-7" data-line-number="7">     <span class="dt">ylab =</span> <span class="st">&quot;Frequency&quot;</span>, <span class="dt">yaxt=</span><span class="st">&quot;n&quot;</span>,</a>
-<a class="sourceLine" id="cb797-8" data-line-number="8">     <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">110</span>, <span class="dv">175</span>), <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.05</span>))</a>
-<a class="sourceLine" id="cb797-9" data-line-number="9"><span class="kw">lines</span>(x, y2)</a>
-<a class="sourceLine" id="cb797-10" data-line-number="10"><span class="kw">polygon</span>(<span class="kw">c</span>(<span class="dv">110</span>,x,<span class="dv">175</span>),<span class="kw">c</span>(<span class="dv">0</span>,y2,<span class="dv">0</span>), <span class="dt">col=</span><span class="st">&quot;firebrick3&quot;</span>,</a>
-<a class="sourceLine" id="cb797-11" data-line-number="11">     <span class="dt">border =</span> <span class="st">&quot;black&quot;</span>)</a>
-<a class="sourceLine" id="cb797-12" data-line-number="12"><span class="kw">polygon</span>(<span class="kw">c</span>(<span class="dv">117</span>,x,<span class="dv">175</span>),<span class="kw">c</span>(<span class="dv">0</span>,y1,<span class="dv">0</span>), <span class="dt">col=</span><span class="st">&quot;dodgerblue4&quot;</span>,</a>
-<a class="sourceLine" id="cb797-13" data-line-number="13">     <span class="dt">border =</span> <span class="st">&quot;black&quot;</span>)</a>
-<a class="sourceLine" id="cb797-14" data-line-number="14">ylab=<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">0</span>, <span class="dt">to=</span><span class="dv">175</span>, <span class="dt">by=</span><span class="dv">25</span>))</a>
-<a class="sourceLine" id="cb797-15" data-line-number="15">y=<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">0</span>, <span class="dt">to=</span><span class="fl">0.05</span>, <span class="dt">length.out =</span> <span class="dv">8</span>))</a>
-<a class="sourceLine" id="cb797-16" data-line-number="16"><span class="kw">axis</span>(<span class="dv">2</span>,<span class="dt">at=</span>y,<span class="dt">labels=</span>ylab, <span class="dt">las=</span><span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb797-17" data-line-number="17"><span class="kw">text</span>(<span class="dt">x =</span> <span class="dv">120</span>, <span class="dt">y =</span> <span class="fl">0.045</span>, <span class="st">&quot;- Pre-Treatment BP&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;dodgerblue4&quot;</span>, <span class="dt">cex =</span> <span class="fl">0.9</span>)</a>
-<a class="sourceLine" id="cb797-18" data-line-number="18"><span class="kw">text</span>(<span class="dt">x =</span> <span class="dv">120</span>, <span class="dt">y =</span> <span class="fl">0.04</span>, <span class="st">&quot; - Post-Treatment BP&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;firebrick3&quot;</span>, <span class="dt">cex =</span> <span class="fl">0.9</span>)</a>
-<a class="sourceLine" id="cb797-19" data-line-number="19"><span class="kw">points</span>(<span class="dv">109</span>, <span class="fl">0.0445</span>, <span class="dt">pch =</span> <span class="dv">15</span>, <span class="dt">col =</span> <span class="st">&quot;dodgerblue4&quot;</span>)</a>
-<a class="sourceLine" id="cb797-20" data-line-number="20"><span class="kw">points</span>(<span class="dv">109</span>, <span class="fl">0.0395</span>, <span class="dt">pch =</span> <span class="dv">15</span>, <span class="dt">col =</span> <span class="st">&quot;firebrick3&quot;</span>)</a></code></pre></div>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-571-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<h3><span class="header-section-number">14.0.2</span> sm 範例</h3>
+<div class="sourceCode" id="cb798"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb798-1" data-line-number="1"><span class="kw">sm.density.compare</span>(iris<span class="op">$</span>Sepal.Length, iris<span class="op">$</span>Species, <span class="dt">xlab=</span><span class="st">&quot;Species&quot;</span>)</a>
+<a class="sourceLine" id="cb798-2" data-line-number="2"><span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;Distributions of Species&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-573-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb799"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb799-1" data-line-number="1">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">110</span>, <span class="dt">to =</span> <span class="dv">174</span>, <span class="dt">by =</span> <span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb799-2" data-line-number="2">y1 &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">145</span>, <span class="dt">sd =</span> <span class="dv">9</span>)</a>
+<a class="sourceLine" id="cb799-3" data-line-number="3">y2 &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">138</span>, <span class="dt">sd =</span> <span class="dv">8</span>)</a>
+<a class="sourceLine" id="cb799-4" data-line-number="4"><span class="kw">plot</span>(x, y1, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>,</a>
+<a class="sourceLine" id="cb799-5" data-line-number="5">     <span class="dt">main=</span><span class="st">&quot;Systolic Blood Pressure Before and After Treatment&quot;</span>,</a>
+<a class="sourceLine" id="cb799-6" data-line-number="6">     <span class="dt">xlab =</span> <span class="st">&quot;Systolic Blood Pressure (mmHg)&quot;</span>,</a>
+<a class="sourceLine" id="cb799-7" data-line-number="7">     <span class="dt">ylab =</span> <span class="st">&quot;Frequency&quot;</span>, <span class="dt">yaxt=</span><span class="st">&quot;n&quot;</span>,</a>
+<a class="sourceLine" id="cb799-8" data-line-number="8">     <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">110</span>, <span class="dv">175</span>), <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.05</span>))</a>
+<a class="sourceLine" id="cb799-9" data-line-number="9"><span class="kw">lines</span>(x, y2)</a>
+<a class="sourceLine" id="cb799-10" data-line-number="10"><span class="kw">polygon</span>(<span class="kw">c</span>(<span class="dv">110</span>,x,<span class="dv">175</span>),<span class="kw">c</span>(<span class="dv">0</span>,y2,<span class="dv">0</span>), <span class="dt">col=</span><span class="st">&quot;firebrick3&quot;</span>,</a>
+<a class="sourceLine" id="cb799-11" data-line-number="11">     <span class="dt">border =</span> <span class="st">&quot;black&quot;</span>)</a>
+<a class="sourceLine" id="cb799-12" data-line-number="12"><span class="kw">polygon</span>(<span class="kw">c</span>(<span class="dv">117</span>,x,<span class="dv">175</span>),<span class="kw">c</span>(<span class="dv">0</span>,y1,<span class="dv">0</span>), <span class="dt">col=</span><span class="st">&quot;dodgerblue4&quot;</span>,</a>
+<a class="sourceLine" id="cb799-13" data-line-number="13">     <span class="dt">border =</span> <span class="st">&quot;black&quot;</span>)</a>
+<a class="sourceLine" id="cb799-14" data-line-number="14">ylab=<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">0</span>, <span class="dt">to=</span><span class="dv">175</span>, <span class="dt">by=</span><span class="dv">25</span>))</a>
+<a class="sourceLine" id="cb799-15" data-line-number="15">y=<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</span><span class="dv">0</span>, <span class="dt">to=</span><span class="fl">0.05</span>, <span class="dt">length.out =</span> <span class="dv">8</span>))</a>
+<a class="sourceLine" id="cb799-16" data-line-number="16"><span class="kw">axis</span>(<span class="dv">2</span>,<span class="dt">at=</span>y,<span class="dt">labels=</span>ylab, <span class="dt">las=</span><span class="dv">1</span>)<span class="co">#下左（2），在y向量上標ylab,las 文字和座標的角度</span></a>
+<a class="sourceLine" id="cb799-17" data-line-number="17"><span class="kw">text</span>(<span class="dt">x =</span> <span class="dv">120</span>, <span class="dt">y =</span> <span class="fl">0.045</span>, <span class="st">&quot;- Pre-Treatment BP&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;dodgerblue4&quot;</span>, <span class="dt">cex =</span> <span class="fl">0.9</span>)</a>
+<a class="sourceLine" id="cb799-18" data-line-number="18"><span class="kw">text</span>(<span class="dt">x =</span> <span class="dv">120</span>, <span class="dt">y =</span> <span class="fl">0.04</span>, <span class="st">&quot; - Post-Treatment BP&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;firebrick3&quot;</span>, <span class="dt">cex =</span> <span class="fl">0.9</span>)</a>
+<a class="sourceLine" id="cb799-19" data-line-number="19"><span class="kw">points</span>(<span class="dv">109</span>, <span class="fl">0.0445</span>, <span class="dt">pch =</span> <span class="dv">15</span>, <span class="dt">col =</span> <span class="st">&quot;dodgerblue4&quot;</span>)</a>
+<a class="sourceLine" id="cb799-20" data-line-number="20"><span class="kw">points</span>(<span class="dv">109</span>, <span class="fl">0.0395</span>, <span class="dt">pch =</span> <span class="dv">15</span>, <span class="dt">col =</span> <span class="st">&quot;firebrick3&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-574-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>其他測試</p>
+<div class="sourceCode" id="cb800"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb800-1" data-line-number="1">x  &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="fl">0.05</span>)</a>
+<a class="sourceLine" id="cb800-2" data-line-number="2">y1 &lt;-<span class="st"> </span><span class="kw">pnorm</span>(x)</a>
+<a class="sourceLine" id="cb800-3" data-line-number="3">y2 &lt;-<span class="st"> </span><span class="kw">pnorm</span>(x,<span class="dv">1</span>,<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb800-4" data-line-number="4"><span class="kw">plot</span>(x,y1,<span class="dt">type=</span><span class="st">&quot;l&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</a>
+<a class="sourceLine" id="cb800-5" data-line-number="5"><span class="kw">lines</span>(x,y2,<span class="dt">col=</span><span class="st">&quot;green&quot;</span>)</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-575-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb801"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb801-1" data-line-number="1"><span class="kw">plot</span>( x, y1, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span> )</a>
+<a class="sourceLine" id="cb801-2" data-line-number="2"><span class="kw">par</span>(<span class="dt">new=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb801-3" data-line-number="3"><span class="kw">plot</span>( x, y2, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">col=</span><span class="st">&quot;green&quot;</span> )</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-576-1.png" width="70%" style="display: block; margin: auto;" />
+note: add=TRUE 有時候不作用，例如plot</p>
+<div class="sourceCode" id="cb802"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb802-1" data-line-number="1"><span class="kw">hist</span>( y1 ,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>  )</a>
+<a class="sourceLine" id="cb802-2" data-line-number="2"><span class="kw">hist</span>( y2, <span class="dt">add=</span><span class="ot">TRUE</span>,<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>  )</a></code></pre></div>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-577-1.png" width="70%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
