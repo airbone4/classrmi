@@ -351,9 +351,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="section-8.html"><a href="section-8.html"><i class="fa fa-check"></i><b>8</b> 基本繪圖</a><ul>
 <li class="chapter" data-level="8.1" data-path="section-8.html"><a href="section-8.html#reference"><i class="fa fa-check"></i><b>8.1</b> reference</a></li>
 <li class="chapter" data-level="8.2" data-path="section-8.html"><a href="section-8.html#basic"><i class="fa fa-check"></i><b>8.2</b> basic</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="section-8.html"><a href="section-8.html#histograms"><i class="fa fa-check"></i><b>8.2.1</b> Histograms</a></li>
-<li class="chapter" data-level="8.2.2" data-path="section-8.html"><a href="section-8.html#kernel-density-plot"><i class="fa fa-check"></i><b>8.2.2</b> Kernel Density Plot</a></li>
-<li class="chapter" data-level="8.2.3" data-path="section-8.html"><a href="section-8.html#saving-graphs"><i class="fa fa-check"></i><b>8.2.3</b> Saving Graphs</a></li>
+<li class="chapter" data-level="8.2.1" data-path="section-8.html"><a href="section-8.html#plot-1"><i class="fa fa-check"></i><b>8.2.1</b> plot</a></li>
+<li class="chapter" data-level="8.2.2" data-path="section-8.html"><a href="section-8.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 更多</a></li>
+<li class="chapter" data-level="8.2.3" data-path="section-8.html"><a href="section-8.html#histograms"><i class="fa fa-check"></i><b>8.2.3</b> Histograms</a></li>
+<li class="chapter" data-level="8.2.4" data-path="section-8.html"><a href="section-8.html#kernel-density-plot"><i class="fa fa-check"></i><b>8.2.4</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="8.2.5" data-path="section-8.html"><a href="section-8.html#saving-graphs"><i class="fa fa-check"></i><b>8.2.5</b> Saving Graphs</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="section-8.html"><a href="section-8.html#section-8.3"><i class="fa fa-check"></i><b>8.3</b> 多個圖和疊圖</a><ul>
 <li class="chapter" data-level="8.3.1" data-path="section-8.html"><a href="section-8.html#section-8.3.1"><i class="fa fa-check"></i><b>8.3.1</b> 多視窗</a></li>
@@ -512,7 +514,7 @@ unknown reason !!</p>
     <span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(dinfo)) {
         <span class="kw">lines</span>(dinfo[[i]], <span class="dt">xlim =</span> rx, <span class="dt">ylim =</span> ry, <span class="dt">col =</span> i)
     }  </code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-475-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-476-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p><em>轉函數</em></p>
 <p>總體而言，轉成函數的考慮就是如何避免hard coding。</p>
 <pre class="sourceCode r"><code class="sourceCode r">plot.multi.density&lt;-<span class="cf">function</span> (alist)
@@ -537,7 +539,7 @@ unknown reason !!</p>
 <p>應用自己的函數</p>
 <pre class="sourceCode r"><code class="sourceCode r">alist&lt;-<span class="kw">list</span>(rst[,<span class="dv">1</span>],rst[,<span class="dv">2</span>])
 <span class="kw">plot.multi.density</span>(alist)</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-478-1.png" width="70%" style="display: block; margin: auto;" />
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-479-1.png" width="70%" style="display: block; margin: auto;" />
 上面的函數，預設參數是傳入使用者指定的list，裡面有使用者指定的組別
 但是如果因為需要，發現傳入矩陣比較方便（例如每一個欄位代表每一組的模擬結果，那樣怎樣避免hard coding?</p>
 <pre class="sourceCode r"><code class="sourceCode r">elist&lt;-<span class="kw">vector</span>(<span class="st">&quot;list&quot;</span>,<span class="kw">ncol</span>(rst))<span class="co">#指定大小的list,如果空集合elist&lt;-list()</span>
@@ -558,13 +560,13 @@ rstdf&lt;-<span class="kw">data.frame</span>(rst)
 <span class="kw">sm.density.compare</span>(rstdf<span class="op">$</span>male, rstdf<span class="op">$</span>female)
 <span class="co"># Add a legend (the color numbers start from 2 and go up)</span>
 <span class="co">#legend(&quot;topright&quot;, levels(data$cond), fill=2+(0:nlevels(data$cond)))</span></code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-480-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-481-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="sm-" class="section level3">
 <h3><span class="header-section-number">12.0.2</span> sm 範例</h3>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sm.density.compare</span>(iris<span class="op">$</span>Sepal.Length, iris<span class="op">$</span>Species, <span class="dt">xlab=</span><span class="st">&quot;Species&quot;</span>)
 <span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;Distributions of Species&quot;</span>)</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-481-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-482-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">110</span>, <span class="dt">to =</span> <span class="dv">174</span>, <span class="dt">by =</span> <span class="fl">0.5</span>)
 y1 &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">145</span>, <span class="dt">sd =</span> <span class="dv">9</span>)
 y2 &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="dt">mean =</span> <span class="dv">138</span>, <span class="dt">sd =</span> <span class="dv">8</span>)
@@ -585,22 +587,22 @@ y=<span class="kw">c</span>(<span class="kw">seq</span>(<span class="dt">from=</
 <span class="kw">text</span>(<span class="dt">x =</span> <span class="dv">120</span>, <span class="dt">y =</span> <span class="fl">0.04</span>, <span class="st">&quot; - Post-Treatment BP&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;firebrick3&quot;</span>, <span class="dt">cex =</span> <span class="fl">0.9</span>)
 <span class="kw">points</span>(<span class="dv">109</span>, <span class="fl">0.0445</span>, <span class="dt">pch =</span> <span class="dv">15</span>, <span class="dt">col =</span> <span class="st">&quot;dodgerblue4&quot;</span>)
 <span class="kw">points</span>(<span class="dv">109</span>, <span class="fl">0.0395</span>, <span class="dt">pch =</span> <span class="dv">15</span>, <span class="dt">col =</span> <span class="st">&quot;firebrick3&quot;</span>)</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-482-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-483-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>其他測試</p>
 <pre class="sourceCode r"><code class="sourceCode r">x  &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="fl">0.05</span>)
 y1 &lt;-<span class="st"> </span><span class="kw">pnorm</span>(x)
 y2 &lt;-<span class="st"> </span><span class="kw">pnorm</span>(x,<span class="dv">1</span>,<span class="dv">1</span>)
 <span class="kw">plot</span>(x,y1,<span class="dt">type=</span><span class="st">&quot;l&quot;</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)
 <span class="kw">lines</span>(x,y2,<span class="dt">col=</span><span class="st">&quot;green&quot;</span>)</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-483-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-484-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>( x, y1, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span> )
 <span class="kw">par</span>(<span class="dt">new=</span><span class="ot">TRUE</span>)
 <span class="kw">plot</span>( x, y2, <span class="dt">type=</span><span class="st">&quot;l&quot;</span>, <span class="dt">col=</span><span class="st">&quot;green&quot;</span> )</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-484-1.png" width="70%" style="display: block; margin: auto;" />
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-485-1.png" width="70%" style="display: block; margin: auto;" />
 note: add=TRUE 有時候不作用，例如plot</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hist</span>( y1 ,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>  )
 <span class="kw">hist</span>( y2, <span class="dt">add=</span><span class="ot">TRUE</span>,<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>  )</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-485-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-486-1.png" width="70%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>

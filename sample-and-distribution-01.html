@@ -351,9 +351,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="section-8.html"><a href="section-8.html"><i class="fa fa-check"></i><b>8</b> 基本繪圖</a><ul>
 <li class="chapter" data-level="8.1" data-path="section-8.html"><a href="section-8.html#reference"><i class="fa fa-check"></i><b>8.1</b> reference</a></li>
 <li class="chapter" data-level="8.2" data-path="section-8.html"><a href="section-8.html#basic"><i class="fa fa-check"></i><b>8.2</b> basic</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="section-8.html"><a href="section-8.html#histograms"><i class="fa fa-check"></i><b>8.2.1</b> Histograms</a></li>
-<li class="chapter" data-level="8.2.2" data-path="section-8.html"><a href="section-8.html#kernel-density-plot"><i class="fa fa-check"></i><b>8.2.2</b> Kernel Density Plot</a></li>
-<li class="chapter" data-level="8.2.3" data-path="section-8.html"><a href="section-8.html#saving-graphs"><i class="fa fa-check"></i><b>8.2.3</b> Saving Graphs</a></li>
+<li class="chapter" data-level="8.2.1" data-path="section-8.html"><a href="section-8.html#plot-1"><i class="fa fa-check"></i><b>8.2.1</b> plot</a></li>
+<li class="chapter" data-level="8.2.2" data-path="section-8.html"><a href="section-8.html#section-8.2.2"><i class="fa fa-check"></i><b>8.2.2</b> 更多</a></li>
+<li class="chapter" data-level="8.2.3" data-path="section-8.html"><a href="section-8.html#histograms"><i class="fa fa-check"></i><b>8.2.3</b> Histograms</a></li>
+<li class="chapter" data-level="8.2.4" data-path="section-8.html"><a href="section-8.html#kernel-density-plot"><i class="fa fa-check"></i><b>8.2.4</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="8.2.5" data-path="section-8.html"><a href="section-8.html#saving-graphs"><i class="fa fa-check"></i><b>8.2.5</b> Saving Graphs</a></li>
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="section-8.html"><a href="section-8.html#section-8.3"><i class="fa fa-check"></i><b>8.3</b> 多個圖和疊圖</a><ul>
 <li class="chapter" data-level="8.3.1" data-path="section-8.html"><a href="section-8.html#section-8.3.1"><i class="fa fa-check"></i><b>8.3.1</b> 多視窗</a></li>
@@ -635,7 +637,7 @@ z&lt;-(rs<span class="op">-</span>mu)<span class="op">/</span>(sigma<span class=
 x&lt;-z
 <span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">col =</span> <span class="st">&#39;blue&#39;</span>, <span class="dt">lwd =</span> <span class="dv">3</span>, <span class="dt">lty =</span> <span class="dv">3</span>, <span class="dt">add =</span> T)
 <span class="kw">rug</span>(<span class="kw">sample</span>(z,<span class="dv">100</span>))</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-451-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-452-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <pre class="sourceCode r"><code class="sourceCode r">limite.central &lt;-
 <span class="st">  </span><span class="cf">function</span> (<span class="dt">r =</span> runif, <span class="dt">distpar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="dt">m =</span> <span class="fl">.5</span>, <span class="dt">s =</span> <span class="dv">1</span> <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">12</span>), <span class="dt">n =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">30</span>), <span class="dt">N =</span> <span class="dv">1000</span>) {
     <span class="cf">for</span> (i <span class="cf">in</span> n) {
@@ -659,7 +661,7 @@ x&lt;-z
 op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))
 <span class="kw">limite.central</span>(rbinom, <span class="dt">distpar=</span><span class="kw">c</span>(<span class="dv">10</span> ,<span class="fl">0.1</span>), <span class="dt">m=</span><span class="dv">1</span>, <span class="dt">s=</span><span class="fl">0.9</span>)
 <span class="kw">par</span>(op)</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-452-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-453-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>apply(x,1,sum) 第2個參數1表示row 方向,如果是2表示column 和matlab 相反。</li>
 </ul>
