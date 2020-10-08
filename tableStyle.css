@@ -1,1 +1,22 @@
 td, th { padding : 6px } th { background-color : brown ; color : white; border : 1px solid white; } td { color : brown ; border : 1px solid brown }
+
+
+
+
+.body-inner  ul {
+  list-style: none;
+}
+.body-inner ul li::before {
+  content: "📌";
+  margin-right: 0.2rem;
+}
+.body-inner ul ul li::before {
+  content: "✔" ;
+}
+.body-inner ul ul ul li::before {
+  content: "🤷‍♀️";
+}
+.body-inner {
+letter-spacing: 2px;
+}
+

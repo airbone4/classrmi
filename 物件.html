@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 物件 | test for class</title>
+  <meta name="description" content="web article test" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 物件 | test for class" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="web article test" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 物件 | test for class" />
+  
+  <meta name="twitter:description" content="web article test" />
+  
+
+<meta name="author" content="lend jwj cen" />
+
+
+<meta name="date" content="2020-10-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="regular-expression-syntax.html"/>
+<link rel="next" href="file-system.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="adv-r.css" type="text/css" />
+<link rel="stylesheet" href="tableStyle.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">testing </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 簡介</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#網路資源"><i class="fa fa-check"></i><b>1.1</b> 網路資源</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#安裝軟體"><i class="fa fa-check"></i><b>1.2</b> 安裝軟體</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#自動update-package"><i class="fa fa-check"></i><b>1.2.1</b> 自動update package</a></li>
+<li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#反安裝"><i class="fa fa-check"></i><b>1.2.2</b> 反安裝</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.3</b> quick view</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#幾個常用的統計量"><i class="fa fa-check"></i><b>1.4</b> 幾個常用的統計量:</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#資料型態和內容"><i class="fa fa-check"></i><b>1.5</b> 資料型態和內容</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#編輯瀏覽資料"><i class="fa fa-check"></i><b>1.5.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#個別欄位"><i class="fa fa-check"></i><b>1.5.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#質性數據的分析"><i class="fa fa-check"></i><b>1.5.3</b> 質性數據的分析</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.6</b> assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#基本操作"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="data-type.html"><a href="data-type.html#指派"><i class="fa fa-check"></i><b>2.1.1</b> 指派</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="data-type.html"><a href="data-type.html#運算"><i class="fa fa-check"></i><b>2.2</b> 運算</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="data-type.html"><a href="data-type.html#四則運算"><i class="fa fa-check"></i><b>2.2.1</b> 四則運算</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-type.html"><a href="data-type.html#logical"><i class="fa fa-check"></i><b>2.2.2</b> Logical</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-type.html"><a href="data-type.html#r語言常用邏輯運算子"><i class="fa fa-check"></i><b>2.2.3</b> R語言常用邏輯運算子</a></li>
+<li class="chapter" data-level="2.2.4" data-path="data-type.html"><a href="data-type.html#邏輯函數"><i class="fa fa-check"></i><b>2.2.4</b> 邏輯函數</a></li>
+<li class="chapter" data-level="2.2.5" data-path="data-type.html"><a href="data-type.html#資源"><i class="fa fa-check"></i><b>2.2.5</b> 資源</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-type.html"><a href="data-type.html#介紹"><i class="fa fa-check"></i><b>2.3</b> 介紹</a></li>
+<li class="chapter" data-level="2.4" data-path="data-type.html"><a href="data-type.html#實數的比較"><i class="fa fa-check"></i><b>2.4</b> 實數的比較</a></li>
+<li class="chapter" data-level="2.5" data-path="data-type.html"><a href="data-type.html#字串"><i class="fa fa-check"></i><b>2.5</b> 字串</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="data-type.html"><a href="data-type.html#建立字串"><i class="fa fa-check"></i><b>2.5.1</b> 建立字串</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-type.html"><a href="data-type.html#空字串"><i class="fa fa-check"></i><b>2.5.2</b> 空字串</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="data-type.html"><a href="data-type.html#型態操作is-family"><i class="fa fa-check"></i><b>2.6</b> 型態操作is family</a></li>
+<li class="chapter" data-level="2.7" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.7</b> vector</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="data-type.html"><a href="data-type.html#練習範例"><i class="fa fa-check"></i><b>2.7.1</b> 練習範例</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="data-type.html"><a href="data-type.html#字串和vector"><i class="fa fa-check"></i><b>2.8</b> 字串和vector</a></li>
+<li class="chapter" data-level="2.8.1" data-path="data-type.html"><a href="data-type.html#vector-相關的運算"><i class="fa fa-check"></i><b>2.8.1</b> vector 相關的運算</a></li>
+<li class="chapter" data-level="2.8.2" data-path="data-type.html"><a href="data-type.html#如何存取vector中的元素"><i class="fa fa-check"></i><b>2.8.2</b> 如何存取vector中的元素</a></li>
+<li class="chapter" data-level="2.8.3" data-path="data-type.html"><a href="data-type.html#邏輯做為索引"><i class="fa fa-check"></i><b>2.8.3</b> 邏輯做為索引</a></li>
+<li class="chapter" data-level="2.8.4" data-path="data-type.html"><a href="data-type.html#利用字串-character-vector-作為索引"><i class="fa fa-check"></i><b>2.8.4</b> 利用字串( character vector) 作為索引</a></li>
+<li class="chapter" data-level="2.8.5" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>2.8.5</b> How to modify a vector in R?</a></li>
+<li class="chapter" data-level="2.8.6" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>2.8.6</b> How to delete a Vector?</a></li>
+<li class="chapter" data-level="2.9" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>2.9</b> List</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="data-type.html"><a href="data-type.html#建立-list"><i class="fa fa-check"></i><b>2.9.1</b> 建立 List</a></li>
+<li class="chapter" data-level="2.9.2" data-path="data-type.html"><a href="data-type.html#存取-list-元素"><i class="fa fa-check"></i><b>2.9.2</b> 存取 List 元素</a></li>
+<li class="chapter" data-level="2.9.3" data-path="data-type.html"><a href="data-type.html#manipulating-list-elements"><i class="fa fa-check"></i><b>2.9.3</b> Manipulating List Elements</a></li>
+<li class="chapter" data-level="2.9.4" data-path="data-type.html"><a href="data-type.html#merging-lists"><i class="fa fa-check"></i><b>2.9.4</b> Merging Lists</a></li>
+<li class="chapter" data-level="2.9.5" data-path="data-type.html"><a href="data-type.html#list-轉-vector"><i class="fa fa-check"></i><b>2.9.5</b> List 轉 Vector</a></li>
+<li class="chapter" data-level="2.9.6" data-path="data-type.html"><a href="data-type.html#比較vector-list中字串的問題"><i class="fa fa-check"></i><b>2.9.6</b> 比較vector, list中,字串的問題</a></li>
+</ul></li>
+<li class="chapter" data-level="2.10" data-path="data-type.html"><a href="data-type.html#data-set-build-in"><i class="fa fa-check"></i><b>2.10</b> data set build in</a>
+<ul>
+<li class="chapter" data-level="2.10.1" data-path="data-type.html"><a href="data-type.html#list-of-pre-loaded-data"><i class="fa fa-check"></i><b>2.10.1</b> List of pre-loaded data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.11" data-path="data-type.html"><a href="data-type.html#primer-to-access-element"><i class="fa fa-check"></i><b>2.11</b> primer to access element</a></li>
+<li class="chapter" data-level="2.12" data-path="data-type.html"><a href="data-type.html#vector-函數範例"><i class="fa fa-check"></i><b>2.12</b> vector 函數範例</a>
+<ul>
+<li class="chapter" data-level="2.12.1" data-path="data-type.html"><a href="data-type.html#cbindrbind"><i class="fa fa-check"></i><b>2.12.1</b> cbind,rbind</a></li>
+<li class="chapter" data-level="2.12.2" data-path="data-type.html"><a href="data-type.html#函數diff"><i class="fa fa-check"></i><b>2.12.2</b> 函數diff</a></li>
+</ul></li>
+<li class="chapter" data-level="2.13" data-path="data-type.html"><a href="data-type.html#練習-刪除向量中的一個元素"><i class="fa fa-check"></i><b>2.13</b> 練習: 刪除向量中的一個元素</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="data-type.html"><a href="data-type.html#adding-attributes-to-vectors"><i class="fa fa-check"></i><b>2.13.1</b> <span>Adding Attributes to Vectors</span></a></li>
+</ul></li>
+<li class="chapter" data-level="2.14" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>2.14</b> matrix</a>
+<ul>
+<li class="chapter" data-level="2.14.1" data-path="data-type.html"><a href="data-type.html#transpose"><i class="fa fa-check"></i><b>2.14.1</b> Transpose</a></li>
+<li class="chapter" data-level="2.14.2" data-path="data-type.html"><a href="data-type.html#合併矩陣"><i class="fa fa-check"></i><b>2.14.2</b> 合併矩陣</a></li>
+</ul></li>
+<li class="chapter" data-level="2.15" data-path="data-type.html"><a href="data-type.html#字串函數"><i class="fa fa-check"></i><b>2.15</b> 字串函數</a>
+<ul>
+<li class="chapter" data-level="2.15.1" data-path="data-type.html"><a href="data-type.html#應用範例macro"><i class="fa fa-check"></i><b>2.15.1</b> 應用範例macro</a></li>
+<li class="chapter" data-level="2.15.2" data-path="data-type.html"><a href="data-type.html#paste"><i class="fa fa-check"></i><b>2.15.2</b> paste</a></li>
+<li class="chapter" data-level="2.15.3" data-path="data-type.html"><a href="data-type.html#misc"><i class="fa fa-check"></i><b>2.15.3</b> misc</a></li>
+</ul></li>
+<li class="chapter" data-level="2.16" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>2.16</b> Factors</a>
+<ul>
+<li class="chapter" data-level="2.16.1" data-path="data-type.html"><a href="data-type.html#探索一下factors"><i class="fa fa-check"></i><b>2.16.1</b> 探索一下factors</a></li>
+<li class="chapter" data-level="2.16.2" data-path="data-type.html"><a href="data-type.html#探索一下factor"><i class="fa fa-check"></i><b>2.16.2</b> 探索一下factor</a></li>
+<li class="chapter" data-level="2.16.3" data-path="data-type.html"><a href="data-type.html#factor-和函數read.csv"><i class="fa fa-check"></i><b>2.16.3</b> factor 和函數read.csv()</a></li>
+<li class="chapter" data-level="2.16.4" data-path="data-type.html"><a href="data-type.html#factor-和函數summary"><i class="fa fa-check"></i><b>2.16.4</b> factor 和函數summary()</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="data-type.html"><a href="data-type.html#data-frames"><i class="fa fa-check"></i><b>2.17</b> Data Frames</a>
+<ul>
+<li class="chapter" data-level="2.17.1" data-path="data-type.html"><a href="data-type.html#簡單介紹一下手動建立data.frame"><i class="fa fa-check"></i><b>2.17.1</b> 簡單介紹一下手動建立data.frame</a></li>
+<li class="chapter" data-level="2.17.2" data-path="data-type.html"><a href="data-type.html#data-frame-的常用函數"><i class="fa fa-check"></i><b>2.17.2</b> data frame 的常用函數：</a></li>
+</ul></li>
+<li class="chapter" data-level="2.18" data-path="data-type.html"><a href="data-type.html#tables"><i class="fa fa-check"></i><b>2.18</b> Tables</a>
+<ul>
+<li class="chapter" data-level="2.18.1" data-path="data-type.html"><a href="data-type.html#one-way-tables"><i class="fa fa-check"></i><b>2.18.1</b> One Way Tables</a></li>
+<li class="chapter" data-level="2.18.2" data-path="data-type.html"><a href="data-type.html#two-way-tables"><i class="fa fa-check"></i><b>2.18.2</b> Two Way Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.19" data-path="data-type.html"><a href="data-type.html#oop"><i class="fa fa-check"></i><b>2.19</b> OOP</a>
+<ul>
+<li class="chapter" data-level="2.19.1" data-path="data-type.html"><a href="data-type.html#變數屬性查詢函數"><i class="fa fa-check"></i><b>2.19.1</b> 變數屬性查詢函數</a></li>
+</ul></li>
+<li class="chapter" data-level="2.20" data-path="data-type.html"><a href="data-type.html#operator"><i class="fa fa-check"></i><b>2.20</b> operator %&gt;%</a></li>
+<li class="chapter" data-level="2.21" data-path="data-type.html"><a href="data-type.html#apply-family"><i class="fa fa-check"></i><b>2.21</b> apply family</a>
+<ul>
+<li class="chapter" data-level="2.21.1" data-path="data-type.html"><a href="data-type.html#apply"><i class="fa fa-check"></i><b>2.21.1</b> apply</a></li>
+<li class="chapter" data-level="2.21.2" data-path="data-type.html"><a href="data-type.html#lapply函數"><i class="fa fa-check"></i><b>2.21.2</b> lapply函數</a></li>
+<li class="chapter" data-level="2.21.3" data-path="data-type.html"><a href="data-type.html#sapply函數"><i class="fa fa-check"></i><b>2.21.3</b> sapply函數</a></li>
+<li class="chapter" data-level="2.21.4" data-path="data-type.html"><a href="data-type.html#比較"><i class="fa fa-check"></i><b>2.21.4</b> 比較</a></li>
+<li class="chapter" data-level="2.21.5" data-path="data-type.html"><a href="data-type.html#vapply函數"><i class="fa fa-check"></i><b>2.21.5</b> vapply函數</a></li>
+<li class="chapter" data-level="2.21.6" data-path="data-type.html"><a href="data-type.html#mapply函數"><i class="fa fa-check"></i><b>2.21.6</b> mapply函數</a></li>
+<li class="chapter" data-level="2.21.7" data-path="data-type.html"><a href="data-type.html#tapply函數"><i class="fa fa-check"></i><b>2.21.7</b> tapply函數</a></li>
+<li class="chapter" data-level="2.21.8" data-path="data-type.html"><a href="data-type.html#rapply函數"><i class="fa fa-check"></i><b>2.21.8</b> rapply函數</a></li>
+<li class="chapter" data-level="2.21.9" data-path="data-type.html"><a href="data-type.html#eapply函數"><i class="fa fa-check"></i><b>2.21.9</b> eapply函數</a></li>
+<li class="chapter" data-level="2.21.10" data-path="data-type.html"><a href="data-type.html#範例"><i class="fa fa-check"></i><b>2.21.10</b> 範例</a></li>
+</ul></li>
+<li class="chapter" data-level="2.22" data-path="data-type.html"><a href="data-type.html#相關操作"><i class="fa fa-check"></i><b>2.22</b> 相關操作</a>
+<ul>
+<li class="chapter" data-level="2.22.1" data-path="data-type.html"><a href="data-type.html#問題想要知道有甚麼資料庫可以用"><i class="fa fa-check"></i><b>2.22.1</b> 問題:想要知道有甚麼資料庫可以用?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.23" data-path="data-type.html"><a href="data-type.html#常見錯誤"><i class="fa fa-check"></i><b>2.23</b> 常見錯誤</a>
+<ul>
+<li class="chapter" data-level="2.23.1" data-path="data-type.html"><a href="data-type.html#error"><i class="fa fa-check"></i><b>2.23.1</b> error</a></li>
+<li class="chapter" data-level="2.23.2" data-path="data-type.html"><a href="data-type.html#error-1"><i class="fa fa-check"></i><b>2.23.2</b> error</a></li>
+<li class="chapter" data-level="2.23.3" data-path="data-type.html"><a href="data-type.html#error-2"><i class="fa fa-check"></i><b>2.23.3</b> error</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html"><i class="fa fa-check"></i><b>3</b> Regular expression syntax</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#escape-sequences"><i class="fa fa-check"></i><b>3.0.1</b> Escape sequences</a></li>
+<li class="chapter" data-level="3.0.2" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#應用"><i class="fa fa-check"></i><b>3.0.2</b> 應用</a></li>
+<li class="chapter" data-level="3.0.3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#數量修飾詞quantifiers"><i class="fa fa-check"></i><b>3.0.3</b> 數量修飾詞Quantifiers</a></li>
+<li class="chapter" data-level="3.0.4" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#position-of-pattern-within-the-string"><i class="fa fa-check"></i><b>3.0.4</b> Position of pattern within the string</a></li>
+<li class="chapter" data-level="3.0.5" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#operators"><i class="fa fa-check"></i><b>3.0.5</b> Operators</a></li>
+<li class="chapter" data-level="3.0.6" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#character-classes"><i class="fa fa-check"></i><b>3.0.6</b> Character classes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="物件.html"><a href="物件.html"><i class="fa fa-check"></i><b>4</b> 物件</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="物件.html"><a href="物件.html#attribute"><i class="fa fa-check"></i><b>4.1</b> attribute</a></li>
+<li class="chapter" data-level="4.2" data-path="物件.html"><a href="物件.html#attr-attributes-structure-functions-in-r-4-examples-get-remove-set"><i class="fa fa-check"></i><b>4.2</b> attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="物件.html"><a href="物件.html#basic-application-of-attr-attributes"><i class="fa fa-check"></i><b>4.2.1</b> Basic Application of attr() &amp; attributes()</a></li>
+<li class="chapter" data-level="4.2.2" data-path="物件.html"><a href="物件.html#assign-new-attributes-with-the-attributes-r-function"><i class="fa fa-check"></i><b>4.2.2</b> Assign New Attributes with the attributes() R Function</a></li>
+<li class="chapter" data-level="4.2.3" data-path="物件.html"><a href="物件.html#利用attr-改變其中一個attribute"><i class="fa fa-check"></i><b>4.2.3</b> 利用attr() 改變其中一個Attribute</a></li>
+<li class="chapter" data-level="4.2.4" data-path="物件.html"><a href="物件.html#the-r-structure-function"><i class="fa fa-check"></i><b>4.2.4</b> The R structure Function</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>5</b> File System</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>5.1</b> Exploring file system</a></li>
+<li class="chapter" data-level="5.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>5.2</b> Creating of a directory</a></li>
+<li class="chapter" data-level="5.3" data-path="file-system.html"><a href="file-system.html#r系統檔案列表"><i class="fa fa-check"></i><b>5.3</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="5.4" data-path="file-system.html"><a href="file-system.html#在r中建立檔案名稱"><i class="fa fa-check"></i><b>5.4</b> 在R中建立檔案名稱</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>5.4.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="5.4.2" data-path="file-system.html"><a href="file-system.html#和工作區相關的指令"><i class="fa fa-check"></i><b>5.4.2</b> 和工作區相關的指令</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="file-system.html"><a href="file-system.html#讀檔"><i class="fa fa-check"></i><b>5.5</b> 讀檔</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="file-system.html"><a href="file-system.html#一般的開檔關檔過程"><i class="fa fa-check"></i><b>5.5.1</b> 一般的開檔/關檔過程</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>5.6</b> write csv</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>5.6.1</b> data.frame to CSV</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="file-system.html"><a href="file-system.html#r語言的檔案格式"><i class="fa fa-check"></i><b>5.7</b> R語言的檔案格式</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="functions.html"><a href="functions.html#introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#outline"><i class="fa fa-check"></i>Outline</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="functions.html"><a href="functions.html#function-fundamentals"><i class="fa fa-check"></i><b>6.2</b> Function fundamentals</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="functions.html"><a href="functions.html#first-class-functions"><i class="fa fa-check"></i><b>6.2.1</b> First-class functions</a></li>
+<li class="chapter" data-level="6.2.2" data-path="functions.html"><a href="functions.html#function-components"><i class="fa fa-check"></i><b>6.2.2</b> Function components</a></li>
+<li class="chapter" data-level="6.2.3" data-path="functions.html"><a href="functions.html#primitive-functions"><i class="fa fa-check"></i><b>6.2.3</b> Primitive functions</a></li>
+<li class="chapter" data-level="6.2.4" data-path="functions.html"><a href="functions.html#exercises"><i class="fa fa-check"></i><b>6.2.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="functions.html"><a href="functions.html#lexical-scoping"><i class="fa fa-check"></i><b>6.3</b> Lexical scoping</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="functions.html"><a href="functions.html#name-masking"><i class="fa fa-check"></i><b>6.3.1</b> Name masking</a></li>
+<li class="chapter" data-level="6.3.2" data-path="functions.html"><a href="functions.html#functions-vs.-variables"><i class="fa fa-check"></i><b>6.3.2</b> Functions vs. variables</a></li>
+<li class="chapter" data-level="6.3.3" data-path="functions.html"><a href="functions.html#fresh-start"><i class="fa fa-check"></i><b>6.3.3</b> A fresh start</a></li>
+<li class="chapter" data-level="6.3.4" data-path="functions.html"><a href="functions.html#dynamic-lookup"><i class="fa fa-check"></i><b>6.3.4</b> Dynamic lookup</a></li>
+<li class="chapter" data-level="6.3.5" data-path="functions.html"><a href="functions.html#exercises-1"><i class="fa fa-check"></i><b>6.3.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>6.4</b> Lazy evaluation</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="functions.html"><a href="functions.html#forcing-evaluation"><i class="fa fa-check"></i><b>6.4.1</b> Forcing evaluation</a></li>
+<li class="chapter" data-level="6.4.2" data-path="functions.html"><a href="functions.html#promises-skip"><i class="fa fa-check"></i><b>6.4.2</b> Promises (skip)</a></li>
+<li class="chapter" data-level="6.4.3" data-path="functions.html"><a href="functions.html#default-arguments"><i class="fa fa-check"></i><b>6.4.3</b> Default arguments</a></li>
+<li class="chapter" data-level="6.4.4" data-path="functions.html"><a href="functions.html#missing-arguments"><i class="fa fa-check"></i><b>6.4.4</b> Missing arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="functions.html"><a href="functions.html#fun-dot-dot-dot"><i class="fa fa-check"></i><b>6.5</b> <code>...</code> (dot-dot-dot)</a></li>
+<li class="chapter" data-level="6.6" data-path="functions.html"><a href="functions.html#exiting-a-function"><i class="fa fa-check"></i><b>6.6</b> Exiting a function</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="functions.html"><a href="functions.html#implicit-vs.-explict-returns"><i class="fa fa-check"></i><b>6.6.1</b> Implicit vs. explict returns</a></li>
+<li class="chapter" data-level="6.6.2" data-path="functions.html"><a href="functions.html#invisible-values"><i class="fa fa-check"></i><b>6.6.2</b> Invisible values</a></li>
+<li class="chapter" data-level="6.6.3" data-path="functions.html"><a href="functions.html#errors"><i class="fa fa-check"></i><b>6.6.3</b> Errors</a></li>
+<li class="chapter" data-level="6.6.4" data-path="functions.html"><a href="functions.html#on-exit"><i class="fa fa-check"></i><b>6.6.4</b> Exit handlers</a></li>
+<li class="chapter" data-level="6.6.5" data-path="functions.html"><a href="functions.html#exercises-2"><i class="fa fa-check"></i><b>6.6.5</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="functions.html"><a href="functions.html#function-forms-skip"><i class="fa fa-check"></i><b>6.7</b> Function forms (skip)</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="functions.html"><a href="functions.html#rewriting-to-prefix-form"><i class="fa fa-check"></i><b>6.7.1</b> Rewriting to prefix form</a></li>
+<li class="chapter" data-level="6.7.2" data-path="functions.html"><a href="functions.html#prefix-form-prefix-form"><i class="fa fa-check"></i><b>6.7.2</b> Prefix form {prefix-form}</a></li>
+<li class="chapter" data-level="6.7.3" data-path="functions.html"><a href="functions.html#infix-functions"><i class="fa fa-check"></i><b>6.7.3</b> Infix functions</a></li>
+<li class="chapter" data-level="6.7.4" data-path="functions.html"><a href="functions.html#replacement-functions"><i class="fa fa-check"></i><b>6.7.4</b> Replacement functions</a></li>
+<li class="chapter" data-level="6.7.5" data-path="functions.html"><a href="functions.html#special-forms"><i class="fa fa-check"></i><b>6.7.5</b> Special forms</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="functions.html"><a href="functions.html#invoking-a-function"><i class="fa fa-check"></i><b>6.8</b> Invoking a function</a>
+<ul>
+<li class="chapter" data-level="6.8.1" data-path="functions.html"><a href="functions.html#exercises-3"><i class="fa fa-check"></i><b>6.8.1</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="6.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>6.9</b> Quiz answers</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="資料探索.html"><a href="資料探索.html"><i class="fa fa-check"></i><b>7</b> 資料探索</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="資料探索.html"><a href="資料探索.html#常用函數"><i class="fa fa-check"></i><b>7.1</b> 常用函數</a></li>
+<li class="chapter" data-level="7.2" data-path="資料探索.html"><a href="資料探索.html#來自wooldridge-的資料集"><i class="fa fa-check"></i><b>7.2</b> 來自wooldridge 的資料集</a></li>
+<li class="chapter" data-level="7.3" data-path="資料探索.html"><a href="資料探索.html#t-test"><i class="fa fa-check"></i><b>7.3</b> t-test</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="資料探索.html"><a href="資料探索.html#manually-enter-raw-data-from-wooldridge-table-c.3"><i class="fa fa-check"></i><b>7.3.1</b> Manually enter raw data from Wooldridge, Table C.3:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="資料探索.html"><a href="資料探索.html#calculate-change-the-parentheses-just-display-the-results"><i class="fa fa-check"></i><b>7.3.2</b> Calculate Change (the parentheses just display the results):</a></li>
+<li class="chapter" data-level="7.3.3" data-path="資料探索.html"><a href="資料探索.html#ingredients-to-ci-formula"><i class="fa fa-check"></i><b>7.3.3</b> Ingredients to CI formula</a></li>
+<li class="chapter" data-level="7.3.4" data-path="資料探索.html"><a href="資料探索.html#confidence-intervall"><i class="fa fa-check"></i><b>7.3.4</b> Confidence intervall:</a></li>
+<li class="chapter" data-level="7.3.5" data-path="資料探索.html"><a href="資料探索.html#by-hand"><i class="fa fa-check"></i><b>7.3.5</b> by hand</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="資料探索.html"><a href="資料探索.html#by-函數t.test"><i class="fa fa-check"></i><b>7.4</b> by 函數<code>t.test()</code></a></li>
+<li class="chapter" data-level="7.5" data-path="資料探索.html"><a href="資料探索.html#分組"><i class="fa fa-check"></i><b>7.5</b> 分組</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="資料探索.html"><a href="資料探索.html#方法1-利用-for迴圈"><i class="fa fa-check"></i><b>7.5.1</b> 方法1: 利用 for迴圈</a></li>
+<li class="chapter" data-level="7.5.2" data-path="資料探索.html"><a href="資料探索.html#方法2-函數aggregate"><i class="fa fa-check"></i><b>7.5.2</b> 方法2:　函數aggregate()</a></li>
+<li class="chapter" data-level="7.5.3" data-path="資料探索.html"><a href="資料探索.html#方法3-函數-tapply"><i class="fa fa-check"></i><b>7.5.3</b> 方法3: 函數　<code>tapply</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="資料探索.html"><a href="資料探索.html#plot"><i class="fa fa-check"></i><b>7.6</b> plot</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>8</b> R Packages</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="r-packages.html"><a href="r-packages.html#基本"><i class="fa fa-check"></i><b>8.1</b> 基本</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="r-packages.html"><a href="r-packages.html#套件在哪裡"><i class="fa fa-check"></i><b>8.1.1</b> 套件在哪裡</a></li>
+<li class="chapter" data-level="8.1.2" data-path="r-packages.html"><a href="r-packages.html#搜尋套件中的檔案"><i class="fa fa-check"></i><b>8.1.2</b> 搜尋套件中的檔案</a></li>
+<li class="chapter" data-level="8.1.3" data-path="r-packages.html"><a href="r-packages.html#哪個函數屬於哪個套件"><i class="fa fa-check"></i><b>8.1.3</b> 哪個函數屬於哪個套件?</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>8.2</b> <code>library()</code> vs <code>require()</code></a></li>
+<li class="chapter" data-level="8.3" data-path="r-packages.html"><a href="r-packages.html#測試debug"><i class="fa fa-check"></i><b>8.3</b> 測試debug</a></li>
+<li class="chapter" data-level="8.4" data-path="r-packages.html"><a href="r-packages.html#自製-package"><i class="fa fa-check"></i><b>8.4</b> 自製 package</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="r-packages.html"><a href="r-packages.html#自製-package-範例"><i class="fa fa-check"></i><b>8.4.1</b> 自製 package 範例</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="r-packages.html"><a href="r-packages.html#packing-up-your-data"><i class="fa fa-check"></i><b>8.5</b> Packing up your data</a></li>
+<li class="chapter" data-level="8.6" data-path="r-packages.html"><a href="r-packages.html#what-is-a-package"><i class="fa fa-check"></i><b>8.6</b> What is a package?</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="r-packages.html"><a href="r-packages.html#也可以包含資料"><i class="fa fa-check"></i><b>8.6.1</b> 也可以包含資料</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="r-packages.html"><a href="r-packages.html#怎樣自訂套件"><i class="fa fa-check"></i><b>8.7</b> 怎樣自訂套件</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="r-packages.html"><a href="r-packages.html#利用devtools-建立骨架package-skeleton"><i class="fa fa-check"></i><b>8.7.1</b> 利用<code>devtools</code> 建立骨架(package skeleton)</a></li>
+<li class="chapter" data-level="8.7.2" data-path="r-packages.html"><a href="r-packages.html#工作流程"><i class="fa fa-check"></i><b>8.7.2</b> 工作流程</a></li>
+<li class="chapter" data-level="8.7.3" data-path="r-packages.html"><a href="r-packages.html#documentation-and-exports"><i class="fa fa-check"></i><b>8.7.3</b> Documentation and exports</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="r-packages.html"><a href="r-packages.html#資料放入套件"><i class="fa fa-check"></i><b>8.8</b> 資料放入套件</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="基本繪圖.html"><a href="基本繪圖.html"><i class="fa fa-check"></i><b>9</b> 基本繪圖</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="基本繪圖.html"><a href="基本繪圖.html#reference"><i class="fa fa-check"></i><b>9.1</b> reference</a></li>
+<li class="chapter" data-level="9.2" data-path="基本繪圖.html"><a href="基本繪圖.html#basic"><i class="fa fa-check"></i><b>9.2</b> basic</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="資料探索.html"><a href="資料探索.html#plot"><i class="fa fa-check"></i><b>9.2.1</b> plot</a></li>
+<li class="chapter" data-level="9.2.2" data-path="基本繪圖.html"><a href="基本繪圖.html#更多"><i class="fa fa-check"></i><b>9.2.2</b> 更多</a></li>
+<li class="chapter" data-level="9.2.3" data-path="基本繪圖.html"><a href="基本繪圖.html#histograms"><i class="fa fa-check"></i><b>9.2.3</b> Histograms</a></li>
+<li class="chapter" data-level="9.2.4" data-path="基本繪圖.html"><a href="基本繪圖.html#kernel-density-plot"><i class="fa fa-check"></i><b>9.2.4</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="9.2.5" data-path="基本繪圖.html"><a href="基本繪圖.html#saving-graphs"><i class="fa fa-check"></i><b>9.2.5</b> Saving Graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="基本繪圖.html"><a href="基本繪圖.html#多個圖和疊圖"><i class="fa fa-check"></i><b>9.3</b> 多個圖和疊圖</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="基本繪圖.html"><a href="基本繪圖.html#多視窗"><i class="fa fa-check"></i><b>9.3.1</b> 多視窗</a></li>
+<li class="chapter" data-level="9.3.2" data-path="基本繪圖.html"><a href="基本繪圖.html#合併-plots"><i class="fa fa-check"></i><b>9.3.2</b> 合併 Plots</a></li>
+<li class="chapter" data-level="9.3.3" data-path="基本繪圖.html"><a href="基本繪圖.html#疊圖"><i class="fa fa-check"></i><b>9.3.3</b> 疊圖</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="基本繪圖.html"><a href="基本繪圖.html#分組畫圖"><i class="fa fa-check"></i><b>9.4</b> 分組畫圖</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="基本繪圖.html"><a href="基本繪圖.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>9.4.1</b> Comparing Groups VIA Kernal Density</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="基本繪圖.html"><a href="基本繪圖.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>9.5</b> Add texts within the graph</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="基本繪圖.html"><a href="基本繪圖.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>9.5.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="9.5.2" data-path="基本繪圖.html"><a href="基本繪圖.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>9.5.2</b> Add mathematical annotation to a plot</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="基本繪圖.html"><a href="基本繪圖.html#函數畫圖"><i class="fa fa-check"></i><b>9.6</b> 函數畫圖</a></li>
+<li class="chapter" data-level="9.7" data-path="基本繪圖.html"><a href="基本繪圖.html#plot-example"><i class="fa fa-check"></i><b>9.7</b> plot example</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>10</b> Sample and Distribution 01</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#排列組合與概率的計算"><i class="fa fa-check"></i><b>10.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="10.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>10.2</b> distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>11</b> programming in R</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="programming-in-r.html"><a href="programming-in-r.html#條件指令"><i class="fa fa-check"></i><b>11.1</b> 條件指令</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>11.1.1</b> if</a></li>
+<li class="chapter" data-level="11.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse的寫法"><i class="fa fa-check"></i><b>11.1.2</b> ifelse的寫法</a></li>
+<li class="chapter" data-level="11.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch的寫法"><i class="fa fa-check"></i><b>11.1.3</b> switch的寫法</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="programming-in-r.html"><a href="programming-in-r.html#迴圈指令"><i class="fa fa-check"></i><b>11.2</b> 迴圈指令</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>11.2.1</b> for-loop</a></li>
+<li class="chapter" data-level="11.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>11.2.2</b> while-loop</a></li>
+<li class="chapter" data-level="11.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>11.2.3</b> repeat-loop</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="data-type.html"><a href="data-type.html#範例"><i class="fa fa-check"></i><b>11.3</b> 範例</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="programming-in-r.html"><a href="programming-in-r.html#範例-detach_package"><i class="fa fa-check"></i><b>11.3.1</b> 範例 detach_package()</a></li>
+<li class="chapter" data-level="11.3.2" data-path="programming-in-r.html"><a href="programming-in-r.html#範例2.libpaths"><i class="fa fa-check"></i><b>11.3.2</b> 範例2：.libPaths()</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="programming-in-r.html"><a href="programming-in-r.html#r語言的-meta-計算"><i class="fa fa-check"></i><b>11.4</b> R語言的 meta 計算。</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="programming-in-r.html"><a href="programming-in-r.html#deparse"><i class="fa fa-check"></i><b>11.4.1</b> <strong>deparse</strong></a></li>
+<li class="chapter" data-level="11.4.2" data-path="programming-in-r.html"><a href="programming-in-r.html#quote"><i class="fa fa-check"></i><b>11.4.2</b> <strong>quote</strong></a></li>
+<li class="chapter" data-level="11.4.3" data-path="programming-in-r.html"><a href="programming-in-r.html#eval"><i class="fa fa-check"></i><b>11.4.3</b> <strong>eval</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="programming-in-r.html"><a href="programming-in-r.html#討論"><i class="fa fa-check"></i><b>11.5</b> 討論</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="programming-in-r.html"><a href="programming-in-r.html#測試紀錄"><i class="fa fa-check"></i><b>11.5.1</b> 測試紀錄</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="programming-in-r.html"><a href="programming-in-r.html#練習"><i class="fa fa-check"></i><b>11.6</b> 練習</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>12</b> Econometrics</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>12.1</b> package recommended</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="simulate-1.html"><a href="simulate-1.html"><i class="fa fa-check"></i><b>13</b> simulate 1</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="simulate-1.html"><a href="simulate-1.html#利用套件sm"><i class="fa fa-check"></i><b>13.0.1</b> 利用套件<code>sm</code></a></li>
+<li class="chapter" data-level="13.0.2" data-path="simulate-1.html"><a href="simulate-1.html#sm-範例"><i class="fa fa-check"></i><b>13.0.2</b> sm 範例</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="rbook-提要.html"><a href="rbook-提要.html"><i class="fa fa-check"></i><b>14</b> rbook 提要</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="rbook-提要.html"><a href="rbook-提要.html#我比較常用的格式"><i class="fa fa-check"></i><b>14.0.1</b> 我比較常用的格式</a></li>
+<li class="chapter" data-level="14.0.2" data-path="rbook-提要.html"><a href="rbook-提要.html#提取程式碼"><i class="fa fa-check"></i><b>14.0.2</b> 提取程式碼</a></li>
+<li class="chapter" data-level="14.0.3" data-path="rbook-提要.html"><a href="rbook-提要.html#比較詳細的介紹"><i class="fa fa-check"></i><b>14.0.3</b> 比較詳細的介紹:</a></li>
+<li class="chapter" data-level="14.1" data-path="rbook-提要.html"><a href="rbook-提要.html#book"><i class="fa fa-check"></i><b>14.1</b> book</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="rbook-提要.html"><a href="rbook-提要.html#bookdown.yml"><i class="fa fa-check"></i><b>14.1.1</b> <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="14.1.2" data-path="rbook-提要.html"><a href="rbook-提要.html#output.yml"><i class="fa fa-check"></i><b>14.1.2</b> <code>_output.yml</code></a></li>
+<li class="chapter" data-level="14.1.3" data-path="rbook-提要.html"><a href="rbook-提要.html#index.rmd"><i class="fa fa-check"></i><b>14.1.3</b> index.Rmd</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="rbook-提要.html"><a href="rbook-提要.html#更多_output.yml-範例"><i class="fa fa-check"></i><b>14.2</b> 更多<code>_output.yml</code> 範例</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="rbook-提要.html"><a href="rbook-提要.html#output.yml-範例"><i class="fa fa-check"></i><b>14.2.1</b> _output.yml 範例</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="rbook-提要.html"><a href="rbook-提要.html#travis.yml"><i class="fa fa-check"></i><b>14.3</b> .travis.yml</a></li>
+<li class="chapter" data-level="14.4" data-path="rbook-提要.html"><a href="rbook-提要.html#紀錄"><i class="fa fa-check"></i><b>14.4</b> 紀錄</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="rbook-提要.html"><a href="rbook-提要.html#knitr-hook"><i class="fa fa-check"></i><b>14.4.1</b> knitr hook</a></li>
+<li class="chapter" data-level="14.4.2" data-path="rbook-提要.html"><a href="rbook-提要.html#terminal-output"><i class="fa fa-check"></i><b>14.4.2</b> terminal output</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="rbook-提要.html"><a href="rbook-提要.html#產生pdf-文件"><i class="fa fa-check"></i><b>14.5</b> 產生PDF 文件</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="rbook-提要.html"><a href="rbook-提要.html#overview"><i class="fa fa-check"></i><b>14.5.1</b> Overview</a></li>
+<li class="chapter" data-level="14.5.2" data-path="rbook-提要.html"><a href="rbook-提要.html#meta-data-上的pdf-設定常見版本"><i class="fa fa-check"></i><b>14.5.2</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="14.5.3" data-path="rbook-提要.html"><a href="rbook-提要.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>14.5.3</b> LaTeX Packages for Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="rbook-提要.html"><a href="rbook-提要.html#中文"><i class="fa fa-check"></i><b>14.6</b> 中文</a></li>
+<li class="chapter" data-level="14.7" data-path="rbook-提要.html"><a href="rbook-提要.html#rstudio-chinese"><i class="fa fa-check"></i><b>14.7</b> Rstudio chinese</a>
+<ul>
+<li class="chapter" data-level="14.7.1" data-path="rbook-提要.html"><a href="rbook-提要.html#latex-engine"><i class="fa fa-check"></i><b>14.7.1</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="14.7.2" data-path="rbook-提要.html"><a href="rbook-提要.html#註記"><i class="fa fa-check"></i><b>14.7.2</b> 註記</a></li>
+<li class="chapter" data-level="14.7.3" data-path="rbook-提要.html"><a href="rbook-提要.html#custom-templates"><i class="fa fa-check"></i><b>14.7.3</b> Custom Templates</a></li>
+<li class="chapter" data-level="14.7.4" data-path="rbook-提要.html"><a href="rbook-提要.html#pandoc-arguments"><i class="fa fa-check"></i><b>14.7.4</b> Pandoc Arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="rbook-提要.html"><a href="rbook-提要.html#共用設定"><i class="fa fa-check"></i><b>14.8</b> 共用設定</a></li>
+<li class="chapter" data-level="14.9" data-path="rbook-提要.html"><a href="rbook-提要.html#客製block"><i class="fa fa-check"></i><b>14.9</b> 客製block</a>
+<ul>
+<li class="chapter" data-level="14.9.1" data-path="rbook-提要.html"><a href="rbook-提要.html#解釋範例"><i class="fa fa-check"></i><b>14.9.1</b> 解釋範例</a></li>
+</ul></li>
+<li class="chapter" data-level="14.10" data-path="programming-in-r.html"><a href="programming-in-r.html#討論"><i class="fa fa-check"></i><b>14.10</b> 討論</a>
+<ul>
+<li class="chapter" data-level="14.10.1" data-path="rbook-提要.html"><a href="rbook-提要.html#publish-to-github"><i class="fa fa-check"></i><b>14.10.1</b> publish to github</a></li>
+<li class="chapter" data-level="14.10.2" data-path="rbook-提要.html"><a href="rbook-提要.html#inline-code"><i class="fa fa-check"></i><b>14.10.2</b> inline code</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">test for class</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="物件" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> 物件</h1>
+<div id="attribute" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> attribute</h2>
+<p>oth the names and the dimensions of matrices and arrays are stored in R as attributes of the object. These attributes can be seen as labeled values you can attach to any object.</p>
+<p>They form one of the mechanisms R uses to define specific object types like dates, time series, and so on. They can include any kind of information, and you can use them yourself to add information to any object.</p>
+<p>To see all the attributes of an object, you can use the attributes() function. You can see all the attributes of my.array like this:</p>
+<blockquote>
+<p>attributes(my.array)
+$dim
+[1] 3 4 2
+This function returns a named list, where each item in the list is an attribute. Each attribute can, on itself, be a list again. For example, the attribute dimnames is actually a list containing the row and column names of a matrix.</p>
+</blockquote>
+<p>You can check that for yourself by checking the output of attributes(baskets.team). You can set all attributes as a named list as well. You find examples of that in the Help file ?attributes.</p>
+<p>To get or set a single attribute, you can use the attr() function. This function takes two important arguments. The first argument is the object you want to examine, and the second argument is the name of the attribute you want to see or change. If the attribute you ask for doesn’t exist, R simply returns NULL.</p>
+<p>Imagine you want to add which season Granny and Geraldine scored the baskets mentioned in baskets.team. You can do this with the following code:</p>
+<blockquote>
+<p>attr(baskets.team,‘season’) &lt;- ‘2010-2011’
+To get the value of this attribute returned, you can then use following code:</p>
+</blockquote>
+<blockquote>
+<p>attr(baskets.team,‘season’)
+[1] “2010-2011”
+You can delete attributes again by setting their value to NULL, like this:</p>
+</blockquote>
+<blockquote>
+<p>attr(baskets.team,‘season’) &lt;- NULL</p>
+</blockquote>
+</div>
+<div id="attr-attributes-structure-functions-in-r-4-examples-get-remove-set" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</h2>
+<p>三個函數的基本寫法:</p>
+<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="物件.html#cb400-1" aria-hidden="true"></a><span class="kw">attributes</span>(data)</span>
+<span id="cb400-2"><a href="物件.html#cb400-2" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> data, <span class="dt">which =</span> <span class="st">&quot;attribute_name&quot;</span>)</span>
+<span id="cb400-3"><a href="物件.html#cb400-3" aria-hidden="true"></a><span class="kw">structure</span>(data, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">6</span>))</span></code></pre></div>
+<p>Definitions:</p>
+<p>函數 <code>attributes</code> 設定或列出物件的所有attributes。</p>
+<p>函數 <code>attr</code> 物件中某個指定的attribute.</p>
+<p>函數<code>structure</code> 設定資料物件中其他額外的 attributes。</p>
+<p>使用方法</p>
+<div id="basic-application-of-attr-attributes" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Basic Application of attr() &amp; attributes()</h3>
+<p>載入資料集然後利用函數看看data.frame有甚麼attribute。</p>
+<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="物件.html#cb401-1" aria-hidden="true"></a><span class="kw">data</span>(cars)                                             <span class="co"># Load head(cars)             attributes(cars)     </span></span>
+<span id="cb401-2"><a href="物件.html#cb401-2" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> cars, <span class="dt">which =</span> <span class="st">&quot;names&quot;</span>) </span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] "speed" "dist" 
+</code></pre>
+<div class="sidebar">
+<p>也可以寫成</p>
+<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="物件.html#cb402-1" aria-hidden="true"></a><span class="kw">attr</span>(cars,<span class="st">&quot;names&quot;</span>)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] "speed" "dist" 
+</code></pre>
+<p>比較一下names,可以發現,names 只是一個data.frame中的attribute</p>
+<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="物件.html#cb403-1" aria-hidden="true"></a> <span class="kw">class</span>(cars)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] "data.frame"
+</code></pre>
+<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="物件.html#cb404-1" aria-hidden="true"></a> <span class="kw">str</span>(cars)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>'data.frame':	50 obs. of  2 variables:
+ $ speed: num  4 4 7 7 8 9 10 10 10 11 ...
+ $ dist : num  2 10 4 22 16 10 18 26 34 17 ...
+</code></pre>
+<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="物件.html#cb405-1" aria-hidden="true"></a> <span class="kw">names</span>(cars)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] "speed" "dist" 
+</code></pre>
+</div>
+</div>
+<div id="assign-new-attributes-with-the-attributes-r-function" class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Assign New Attributes with the attributes() R Function</h3>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="物件.html#cb406-1" aria-hidden="true"></a>attributes_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>),     <span class="co">#設定不同的欄位名稱</span></span>
+<span id="cb406-2"><a href="物件.html#cb406-2" aria-hidden="true"></a>                        <span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>,          <span class="co"># 保留類別</span></span>
+<span id="cb406-3"><a href="物件.html#cb406-3" aria-hidden="true"></a>                        <span class="dt">row.names =</span> <span class="kw">nrow</span>(cars)<span class="op">:</span><span class="dv">1</span>)      <span class="co"># 反向</span></span></code></pre></div>
+<p>然後可以利用<code>attributes</code>設定所有attributes。</p>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="物件.html#cb407-1" aria-hidden="true"></a><span class="kw">attributes</span>(cars) &lt;-<span class="st"> </span>attributes_list                    <span class="co"># Set all attributes of data</span></span>
+<span id="cb407-2"><a href="物件.html#cb407-2" aria-hidden="true"></a><span class="kw">attributes</span>(cars)                                       <span class="co"># Apply attributes function</span></span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>$names
+[1] "col1" "col2"
+
+$class
+[1] "data.frame"
+
+$row.names
+ [1] 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26
+[26] 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
+</code></pre>
+</div>
+<div id="利用attr-改變其中一個attribute" class="section level3" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> 利用attr() 改變其中一個Attribute</h3>
+<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="物件.html#cb408-1" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> cars, <span class="dt">which =</span> <span class="st">&quot;names&quot;</span>) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;aaa&quot;</span>, <span class="st">&quot;bbb&quot;</span>)     <span class="co"># Set only names attribute</span></span></code></pre></div>
+<p>檢查看看結果</p>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="物件.html#cb409-1" aria-hidden="true"></a><span class="kw">attributes</span>(cars)    <span class="co"># Apply attributes function</span></span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>$names
+[1] "aaa" "bbb"
+
+$class
+[1] "data.frame"
+
+$row.names
+ [1] 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26
+[26] 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1
+</code></pre>
+<p>　</p>
+</div>
+<div id="the-r-structure-function" class="section level3" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> The R structure Function</h3>
+<p>和<code>attributes()</code> <code>attr()</code> 相關的命令是 <code>structure()</code> 。</p>
+<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb410-1"><a href="物件.html#cb410-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">12345</span>)                             </span>
+<span id="cb410-2"><a href="物件.html#cb410-2" aria-hidden="true"></a>vec &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">runif</span>(<span class="dv">15</span>, <span class="dv">0</span>, <span class="dv">10</span>))     <span class="co"># 1D 向量 </span></span>
+<span id="cb410-3"><a href="物件.html#cb410-3" aria-hidden="true"></a>vec</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code> [1]  7  9  8  9  5  2  3  5  7 10  0  2  7  0  4
+</code></pre>
+<p>改變成矩陣:</p>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="物件.html#cb411-1" aria-hidden="true"></a>vec_dim &lt;-<span class="st"> </span><span class="kw">structure</span>(vec, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>))               <span class="co"># Change dimension of vector</span></span>
+<span id="cb411-2"><a href="物件.html#cb411-2" aria-hidden="true"></a>vec_dim                                                <span class="co"># Print updated vector</span></span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>     [,1] [,2] [,3] [,4] [,5]
+[1,]    7    9    3   10    7
+[2,]    9    5    5    0    0
+[3,]    8    2    7    2    4
+</code></pre>
+<p>比較之前的寫法:</p>
+<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="物件.html#cb412-1" aria-hidden="true"></a><span class="kw">matrix</span>(vec,<span class="dt">nrow=</span><span class="dv">3</span>)</span></code></pre></div>
+<div id="example" class="section level4" number="4.2.4.1">
+<h4><span class="header-section-number">4.2.4.1</span> Example:</h4>
+<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="物件.html#cb413-1" aria-hidden="true"></a>dd &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>( </span>
+<span id="cb413-2"><a href="物件.html#cb413-2" aria-hidden="true"></a>         <span class="dt">year =</span> <span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>) </span>
+<span id="cb413-3"><a href="物件.html#cb413-3" aria-hidden="true"></a>        ,<span class="dt">length_days =</span> <span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)) </span>
+<span id="cb413-4"><a href="物件.html#cb413-4" aria-hidden="true"></a>        ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;length of days&quot;</span>) </span>
+<span id="cb413-5"><a href="物件.html#cb413-5" aria-hidden="true"></a>        ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L) </span>
+<span id="cb413-6"><a href="物件.html#cb413-6" aria-hidden="true"></a>        ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>)</span>
+<span id="cb413-7"><a href="物件.html#cb413-7" aria-hidden="true"></a>dd</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>  year length of days
+1 2001            366
+2 2002            365
+3 2004            367
+4 2006            365
+</code></pre>
+<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="物件.html#cb414-1" aria-hidden="true"></a><span class="kw">str</span>(dd)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>'data.frame':	4 obs. of  2 variables:
+ $ year          : num  2001 2002 2004 2006
+ $ length of days: num  366 365 367 365
+</code></pre>
+<p>dd的meta data:</p>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="物件.html#cb415-1" aria-hidden="true"></a><span class="kw">attributes</span>(dd)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>$names
+[1] "year"           "length of days"
+
+$row.names
+[1] 1 2 3 4
+
+$class
+[1] "data.frame"
+</code></pre>
+<p>利用<code>structure()</code>建立的物件,不管是同質(vector,matrix)還是異質(data.frame,list) 都會利用attributes儲存meta data。例如,</p>
+<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="物件.html#cb416-1" aria-hidden="true"></a>just_vector &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">comment =</span> <span class="st">&quot;This is my simple vector with info&quot;</span>)</span>
+<span id="cb416-2"><a href="物件.html#cb416-2" aria-hidden="true"></a>just_vector</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code> [1]  1  2  3  4  5  6  7  8  9 10
+</code></pre>
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="物件.html#cb417-1" aria-hidden="true"></a><span class="kw">str</span>(just_vector)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code> int [1:10] 1 2 3 4 5 6 7 8 9 10
+ - attr(*, "comment")= chr "This is my simple vector with info"
+</code></pre>
+<p>然後利用函數，可以拿到我們之前的資訊:</p>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="物件.html#cb418-1" aria-hidden="true"></a><span class="kw">attributes</span>(just_vector)</span></code></pre></div>
+<p>結果如下:
+$comment
+[1] “This is my simple vector with info”</p>
+<p>注意:attributes()的傳回結果為list,因此有$comment</p>
+<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb419-1"><a href="物件.html#cb419-1" aria-hidden="true"></a><span class="kw">str</span>(<span class="kw">attributes</span>(just_vector))</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>List of 1
+ $ comment: chr "This is my simple vector with info"
+</code></pre>
+<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="物件.html#cb420-1" aria-hidden="true"></a><span class="kw">attributes</span>(<span class="kw">attributes</span>(just_vector))</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>$names
+[1] "comment"
+</code></pre>
+</div>
+<div id="in-one-go" class="section level4" number="4.2.4.2">
+<h4><span class="header-section-number">4.2.4.2</span> In one go</h4>
+<p>這是另一個利用函數<code>structure()</code>的例子。先看一下一般建立data.frame物件的方法:</p>
+<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="物件.html#cb421-1" aria-hidden="true"></a>year =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1999</span>, <span class="dv">2002</span>, <span class="dv">2005</span>, <span class="dv">2008</span>)</span>
+<span id="cb421-2"><a href="物件.html#cb421-2" aria-hidden="true"></a>pollution =<span class="st"> </span><span class="kw">c</span>(<span class="fl">346.82</span>,<span class="fl">134.308821199349</span>, <span class="fl">130.430379885892</span>, <span class="fl">88.275457392443</span>)</span>
+<span id="cb421-3"><a href="物件.html#cb421-3" aria-hidden="true"></a>dd2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(year,pollution)</span>
+<span id="cb421-4"><a href="物件.html#cb421-4" aria-hidden="true"></a>dd2<span class="op">$</span>year &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dd2<span class="op">$</span>year)</span></code></pre></div>
+<p>利用 <code>structure</code>, 一步就可以完成:</p>
+<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="物件.html#cb422-1" aria-hidden="true"></a>dd &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>( </span>
+<span id="cb422-2"><a href="物件.html#cb422-2" aria-hidden="true"></a>   <span class="dt">year =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb422-3"><a href="物件.html#cb422-3" aria-hidden="true"></a>  ,<span class="dt">length_days =</span> <span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)) </span>
+<span id="cb422-4"><a href="物件.html#cb422-4" aria-hidden="true"></a>  ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;length of days&quot;</span>) </span>
+<span id="cb422-5"><a href="物件.html#cb422-5" aria-hidden="true"></a>  ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L) </span>
+<span id="cb422-6"><a href="物件.html#cb422-6" aria-hidden="true"></a>  ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>)</span></code></pre></div>
+<p>Constructing data-frame with additional attributes and comments.</p>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="物件.html#cb423-1" aria-hidden="true"></a>dd3 &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>(</span>
+<span id="cb423-2"><a href="物件.html#cb423-2" aria-hidden="true"></a>   <span class="dt">v1 =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb423-3"><a href="物件.html#cb423-3" aria-hidden="true"></a>  ,<span class="dt">v2 =</span> <span class="kw">I</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb423-4"><a href="物件.html#cb423-4" aria-hidden="true"></a>  ,<span class="dt">v3 =</span> <span class="kw">ordered</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb423-5"><a href="物件.html#cb423-5" aria-hidden="true"></a>  ,<span class="dt">v4 =</span> <span class="kw">as.double</span>(<span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)))</span>
+<span id="cb423-6"><a href="物件.html#cb423-6" aria-hidden="true"></a>  ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AsIs Year&quot;</span>,<span class="st">&quot;yearO&quot;</span>, <span class="st">&quot;length of days&quot;</span>)</span>
+<span id="cb423-7"><a href="物件.html#cb423-7" aria-hidden="true"></a>  ,<span class="dt">.typeOf =</span> <span class="kw">c</span>(<span class="st">&quot;factor&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;ordered&quot;</span>,<span class="st">&quot;numeric&quot;</span>)</span>
+<span id="cb423-8"><a href="物件.html#cb423-8" aria-hidden="true"></a>  ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L)</span>
+<span id="cb423-9"><a href="物件.html#cb423-9" aria-hidden="true"></a>  ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span></span>
+<span id="cb423-10"><a href="物件.html#cb423-10" aria-hidden="true"></a>  ,<span class="dt">comment =</span> <span class="st">&quot;Ordered YearO for categorical analysis and other variables&quot;</span>)</span>
+<span id="cb423-11"><a href="物件.html#cb423-11" aria-hidden="true"></a></span>
+<span id="cb423-12"><a href="物件.html#cb423-12" aria-hidden="true"></a>dd3</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>  year AsIs Year yearO length of days
+1 2001      2001  2001            366
+2 2002      2002  2002            365
+3 2004      2004  2004            367
+4 2006      2006  2006            365
+</code></pre>
+<p>And checking comments can be done as:</p>
+<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="物件.html#cb424-1" aria-hidden="true"></a><span class="kw">attributes</span>(dd3)<span class="op">$</span>comment</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] "Ordered YearO for categorical analysis and other variables"
+</code></pre>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="物件.html#cb425-1" aria-hidden="true"></a><span class="kw">attr</span>(dd3, <span class="dt">which=</span><span class="st">&quot;comment&quot;</span>)</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>[1] "Ordered YearO for categorical analysis and other variables"
+</code></pre>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regular-expression-syntax.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="file-system.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/objectBasic.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

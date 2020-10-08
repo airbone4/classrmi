@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Econometrics | test for class</title>
+  <title>Chapter 12 Econometrics | test for class</title>
   <meta name="description" content="web article test" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Econometrics | test for class" />
+  <meta property="og:title" content="Chapter 12 Econometrics | test for class" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Econometrics | test for class" />
+  <meta name="twitter:title" content="Chapter 12 Econometrics | test for class" />
   
   <meta name="twitter:description" content="web article test" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="lend jwj cen" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-10-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="programming-in-r.html"/>
 <link rel="next" href="simulate-1.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,22 +51,20 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +84,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -136,25 +135,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">testing </a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 簡介</a><ul>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 簡介</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#網路資源"><i class="fa fa-check"></i><b>1.1</b> 網路資源</a></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#安裝軟體"><i class="fa fa-check"></i><b>1.2</b> 安裝軟體</a><ul>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#安裝軟體"><i class="fa fa-check"></i><b>1.2</b> 安裝軟體</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#自動update-package"><i class="fa fa-check"></i><b>1.2.1</b> 自動update package</a></li>
 <li class="chapter" data-level="1.2.2" data-path="index.html"><a href="index.html#反安裝"><i class="fa fa-check"></i><b>1.2.2</b> 反安裝</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#quick-view"><i class="fa fa-check"></i><b>1.3</b> quick view</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#資料型態和內容"><i class="fa fa-check"></i><b>1.4</b> 資料型態和內容</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#編輯瀏覽資料"><i class="fa fa-check"></i><b>1.4.1</b> 編輯/瀏覽資料</a></li>
-<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#個別欄位"><i class="fa fa-check"></i><b>1.4.2</b> 個別欄位</a></li>
-<li class="chapter" data-level="1.4.3" data-path="index.html"><a href="index.html#質性數據的分析"><i class="fa fa-check"></i><b>1.4.3</b> 質性數據的分析</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#幾個常用的統計量"><i class="fa fa-check"></i><b>1.4</b> 幾個常用的統計量:</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#資料型態和內容"><i class="fa fa-check"></i><b>1.5</b> 資料型態和內容</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#編輯瀏覽資料"><i class="fa fa-check"></i><b>1.5.1</b> 編輯/瀏覽資料</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#個別欄位"><i class="fa fa-check"></i><b>1.5.2</b> 個別欄位</a></li>
+<li class="chapter" data-level="1.5.3" data-path="index.html"><a href="index.html#質性數據的分析"><i class="fa fa-check"></i><b>1.5.3</b> 質性數據的分析</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.5</b> assignment</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#assignment"><i class="fa fa-check"></i><b>1.6</b> assignment</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a><ul>
-<li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#基本操作"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a><ul>
+<li class="chapter" data-level="2" data-path="data-type.html"><a href="data-type.html"><i class="fa fa-check"></i><b>2</b> data type</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-type.html"><a href="data-type.html#基本操作"><i class="fa fa-check"></i><b>2.1</b> 基本操作</a>
+<ul>
 <li class="chapter" data-level="2.1.1" data-path="data-type.html"><a href="data-type.html#指派"><i class="fa fa-check"></i><b>2.1.1</b> 指派</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="data-type.html"><a href="data-type.html#運算"><i class="fa fa-check"></i><b>2.2</b> 運算</a><ul>
+<li class="chapter" data-level="2.2" data-path="data-type.html"><a href="data-type.html#運算"><i class="fa fa-check"></i><b>2.2</b> 運算</a>
+<ul>
 <li class="chapter" data-level="2.2.1" data-path="data-type.html"><a href="data-type.html#四則運算"><i class="fa fa-check"></i><b>2.2.1</b> 四則運算</a></li>
 <li class="chapter" data-level="2.2.2" data-path="data-type.html"><a href="data-type.html#logical"><i class="fa fa-check"></i><b>2.2.2</b> Logical</a></li>
 <li class="chapter" data-level="2.2.3" data-path="data-type.html"><a href="data-type.html#r語言常用邏輯運算子"><i class="fa fa-check"></i><b>2.2.3</b> R語言常用邏輯運算子</a></li>
@@ -163,268 +169,360 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="data-type.html"><a href="data-type.html#介紹"><i class="fa fa-check"></i><b>2.3</b> 介紹</a></li>
 <li class="chapter" data-level="2.4" data-path="data-type.html"><a href="data-type.html#實數的比較"><i class="fa fa-check"></i><b>2.4</b> 實數的比較</a></li>
-<li class="chapter" data-level="2.5" data-path="data-type.html"><a href="data-type.html#字串"><i class="fa fa-check"></i><b>2.5</b> 字串</a><ul>
+<li class="chapter" data-level="2.5" data-path="data-type.html"><a href="data-type.html#字串"><i class="fa fa-check"></i><b>2.5</b> 字串</a>
+<ul>
 <li class="chapter" data-level="2.5.1" data-path="data-type.html"><a href="data-type.html#建立字串"><i class="fa fa-check"></i><b>2.5.1</b> 建立字串</a></li>
 <li class="chapter" data-level="2.5.2" data-path="data-type.html"><a href="data-type.html#空字串"><i class="fa fa-check"></i><b>2.5.2</b> 空字串</a></li>
 </ul></li>
 <li class="chapter" data-level="2.6" data-path="data-type.html"><a href="data-type.html#型態操作is-family"><i class="fa fa-check"></i><b>2.6</b> 型態操作is family</a></li>
-<li class="chapter" data-level="2.7" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.7</b> vector</a><ul>
+<li class="chapter" data-level="2.7" data-path="data-type.html"><a href="data-type.html#vector"><i class="fa fa-check"></i><b>2.7</b> vector</a>
+<ul>
 <li class="chapter" data-level="2.7.1" data-path="data-type.html"><a href="data-type.html#練習範例"><i class="fa fa-check"></i><b>2.7.1</b> 練習範例</a></li>
-<li class="chapter" data-level="2.7.2" data-path="data-type.html"><a href="data-type.html#vector-相關的運算"><i class="fa fa-check"></i><b>2.7.2</b> vector 相關的運算</a></li>
-<li class="chapter" data-level="2.7.3" data-path="data-type.html"><a href="data-type.html#如何存取vector中的元素"><i class="fa fa-check"></i><b>2.7.3</b> 如何存取vector中的元素</a></li>
-<li class="chapter" data-level="2.7.4" data-path="data-type.html"><a href="data-type.html#邏輯做為索引"><i class="fa fa-check"></i><b>2.7.4</b> 邏輯做為索引</a></li>
-<li class="chapter" data-level="2.7.5" data-path="data-type.html"><a href="data-type.html#利用字串-character-vector-作為索引"><i class="fa fa-check"></i><b>2.7.5</b> 利用字串( character vector) 作為索引</a></li>
-<li class="chapter" data-level="2.7.6" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>2.7.6</b> How to modify a vector in R?</a></li>
-<li class="chapter" data-level="2.7.7" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>2.7.7</b> How to delete a Vector?</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>2.8</b> List</a><ul>
-<li class="chapter" data-level="2.8.1" data-path="data-type.html"><a href="data-type.html#建立-list"><i class="fa fa-check"></i><b>2.8.1</b> 建立 List</a></li>
-<li class="chapter" data-level="2.8.2" data-path="data-type.html"><a href="data-type.html#存取-list-元素"><i class="fa fa-check"></i><b>2.8.2</b> 存取 List 元素</a></li>
-<li class="chapter" data-level="2.8.3" data-path="data-type.html"><a href="data-type.html#manipulating-list-elements"><i class="fa fa-check"></i><b>2.8.3</b> Manipulating List Elements</a></li>
-<li class="chapter" data-level="2.8.4" data-path="data-type.html"><a href="data-type.html#merging-lists"><i class="fa fa-check"></i><b>2.8.4</b> Merging Lists</a></li>
-<li class="chapter" data-level="2.8.5" data-path="data-type.html"><a href="data-type.html#list-轉-vector"><i class="fa fa-check"></i><b>2.8.5</b> List 轉 Vector</a></li>
-<li class="chapter" data-level="2.8.6" data-path="data-type.html"><a href="data-type.html#比較vector-list中字串的問題"><i class="fa fa-check"></i><b>2.8.6</b> 比較vector, list中,字串的問題</a></li>
+<li class="chapter" data-level="2.8" data-path="data-type.html"><a href="data-type.html#字串和vector"><i class="fa fa-check"></i><b>2.8</b> 字串和vector</a></li>
+<li class="chapter" data-level="2.8.1" data-path="data-type.html"><a href="data-type.html#vector-相關的運算"><i class="fa fa-check"></i><b>2.8.1</b> vector 相關的運算</a></li>
+<li class="chapter" data-level="2.8.2" data-path="data-type.html"><a href="data-type.html#如何存取vector中的元素"><i class="fa fa-check"></i><b>2.8.2</b> 如何存取vector中的元素</a></li>
+<li class="chapter" data-level="2.8.3" data-path="data-type.html"><a href="data-type.html#邏輯做為索引"><i class="fa fa-check"></i><b>2.8.3</b> 邏輯做為索引</a></li>
+<li class="chapter" data-level="2.8.4" data-path="data-type.html"><a href="data-type.html#利用字串-character-vector-作為索引"><i class="fa fa-check"></i><b>2.8.4</b> 利用字串( character vector) 作為索引</a></li>
+<li class="chapter" data-level="2.8.5" data-path="data-type.html"><a href="data-type.html#how-to-modify-a-vector-in-r"><i class="fa fa-check"></i><b>2.8.5</b> How to modify a vector in R?</a></li>
+<li class="chapter" data-level="2.8.6" data-path="data-type.html"><a href="data-type.html#how-to-delete-a-vector"><i class="fa fa-check"></i><b>2.8.6</b> How to delete a Vector?</a></li>
+<li class="chapter" data-level="2.9" data-path="data-type.html"><a href="data-type.html#list"><i class="fa fa-check"></i><b>2.9</b> List</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="data-type.html"><a href="data-type.html#建立-list"><i class="fa fa-check"></i><b>2.9.1</b> 建立 List</a></li>
+<li class="chapter" data-level="2.9.2" data-path="data-type.html"><a href="data-type.html#存取-list-元素"><i class="fa fa-check"></i><b>2.9.2</b> 存取 List 元素</a></li>
+<li class="chapter" data-level="2.9.3" data-path="data-type.html"><a href="data-type.html#manipulating-list-elements"><i class="fa fa-check"></i><b>2.9.3</b> Manipulating List Elements</a></li>
+<li class="chapter" data-level="2.9.4" data-path="data-type.html"><a href="data-type.html#merging-lists"><i class="fa fa-check"></i><b>2.9.4</b> Merging Lists</a></li>
+<li class="chapter" data-level="2.9.5" data-path="data-type.html"><a href="data-type.html#list-轉-vector"><i class="fa fa-check"></i><b>2.9.5</b> List 轉 Vector</a></li>
+<li class="chapter" data-level="2.9.6" data-path="data-type.html"><a href="data-type.html#比較vector-list中字串的問題"><i class="fa fa-check"></i><b>2.9.6</b> 比較vector, list中,字串的問題</a></li>
 </ul></li>
-<li class="chapter" data-level="2.9" data-path="data-type.html"><a href="data-type.html#data-set-build-in"><i class="fa fa-check"></i><b>2.9</b> data set build in</a><ul>
-<li class="chapter" data-level="2.9.1" data-path="data-type.html"><a href="data-type.html#list-of-pre-loaded-data"><i class="fa fa-check"></i><b>2.9.1</b> List of pre-loaded data</a></li>
+<li class="chapter" data-level="2.10" data-path="data-type.html"><a href="data-type.html#data-set-build-in"><i class="fa fa-check"></i><b>2.10</b> data set build in</a>
+<ul>
+<li class="chapter" data-level="2.10.1" data-path="data-type.html"><a href="data-type.html#list-of-pre-loaded-data"><i class="fa fa-check"></i><b>2.10.1</b> List of pre-loaded data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.10" data-path="data-type.html"><a href="data-type.html#vector-函數範例"><i class="fa fa-check"></i><b>2.10</b> vector 函數範例</a><ul>
-<li class="chapter" data-level="2.10.1" data-path="data-type.html"><a href="data-type.html#cbindrbind"><i class="fa fa-check"></i><b>2.10.1</b> cbind,rbind</a></li>
-<li class="chapter" data-level="2.10.2" data-path="data-type.html"><a href="data-type.html#函數diff"><i class="fa fa-check"></i><b>2.10.2</b> 函數diff</a></li>
+<li class="chapter" data-level="2.11" data-path="data-type.html"><a href="data-type.html#primer-to-access-element"><i class="fa fa-check"></i><b>2.11</b> primer to access element</a></li>
+<li class="chapter" data-level="2.12" data-path="data-type.html"><a href="data-type.html#vector-函數範例"><i class="fa fa-check"></i><b>2.12</b> vector 函數範例</a>
+<ul>
+<li class="chapter" data-level="2.12.1" data-path="data-type.html"><a href="data-type.html#cbindrbind"><i class="fa fa-check"></i><b>2.12.1</b> cbind,rbind</a></li>
+<li class="chapter" data-level="2.12.2" data-path="data-type.html"><a href="data-type.html#函數diff"><i class="fa fa-check"></i><b>2.12.2</b> 函數diff</a></li>
 </ul></li>
-<li class="chapter" data-level="2.11" data-path="data-type.html"><a href="data-type.html#練習-刪除向量中的一個元素"><i class="fa fa-check"></i><b>2.11</b> 練習: 刪除向量中的一個元素</a><ul>
-<li class="chapter" data-level="2.11.1" data-path="data-type.html"><a href="data-type.html#adding-attributes-to-vectors"><i class="fa fa-check"></i><b>2.11.1</b> <span>Adding Attributes to Vectors</span></a></li>
+<li class="chapter" data-level="2.13" data-path="data-type.html"><a href="data-type.html#練習-刪除向量中的一個元素"><i class="fa fa-check"></i><b>2.13</b> 練習: 刪除向量中的一個元素</a>
+<ul>
+<li class="chapter" data-level="2.13.1" data-path="data-type.html"><a href="data-type.html#adding-attributes-to-vectors"><i class="fa fa-check"></i><b>2.13.1</b> <span>Adding Attributes to Vectors</span></a></li>
 </ul></li>
-<li class="chapter" data-level="2.12" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>2.12</b> matrix</a><ul>
-<li class="chapter" data-level="2.12.1" data-path="data-type.html"><a href="data-type.html#transpose"><i class="fa fa-check"></i><b>2.12.1</b> Transpose</a></li>
-<li class="chapter" data-level="2.12.2" data-path="data-type.html"><a href="data-type.html#合併矩陣"><i class="fa fa-check"></i><b>2.12.2</b> 合併矩陣</a></li>
+<li class="chapter" data-level="2.14" data-path="data-type.html"><a href="data-type.html#matrix"><i class="fa fa-check"></i><b>2.14</b> matrix</a>
+<ul>
+<li class="chapter" data-level="2.14.1" data-path="data-type.html"><a href="data-type.html#transpose"><i class="fa fa-check"></i><b>2.14.1</b> Transpose</a></li>
+<li class="chapter" data-level="2.14.2" data-path="data-type.html"><a href="data-type.html#合併矩陣"><i class="fa fa-check"></i><b>2.14.2</b> 合併矩陣</a></li>
 </ul></li>
-<li class="chapter" data-level="2.13" data-path="data-type.html"><a href="data-type.html#字串函數"><i class="fa fa-check"></i><b>2.13</b> 字串函數</a><ul>
-<li class="chapter" data-level="2.13.1" data-path="data-type.html"><a href="data-type.html#應用範例macro"><i class="fa fa-check"></i><b>2.13.1</b> 應用範例macro</a></li>
-<li class="chapter" data-level="2.13.2" data-path="data-type.html"><a href="data-type.html#paste"><i class="fa fa-check"></i><b>2.13.2</b> paste</a></li>
-<li class="chapter" data-level="2.13.3" data-path="data-type.html"><a href="data-type.html#misc"><i class="fa fa-check"></i><b>2.13.3</b> misc</a></li>
+<li class="chapter" data-level="2.15" data-path="data-type.html"><a href="data-type.html#字串函數"><i class="fa fa-check"></i><b>2.15</b> 字串函數</a>
+<ul>
+<li class="chapter" data-level="2.15.1" data-path="data-type.html"><a href="data-type.html#應用範例macro"><i class="fa fa-check"></i><b>2.15.1</b> 應用範例macro</a></li>
+<li class="chapter" data-level="2.15.2" data-path="data-type.html"><a href="data-type.html#paste"><i class="fa fa-check"></i><b>2.15.2</b> paste</a></li>
+<li class="chapter" data-level="2.15.3" data-path="data-type.html"><a href="data-type.html#misc"><i class="fa fa-check"></i><b>2.15.3</b> misc</a></li>
 </ul></li>
-<li class="chapter" data-level="2.14" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>2.14</b> Factors</a><ul>
-<li class="chapter" data-level="2.14.1" data-path="data-type.html"><a href="data-type.html#探索一下factors"><i class="fa fa-check"></i><b>2.14.1</b> 探索一下factors</a></li>
-<li class="chapter" data-level="2.14.2" data-path="data-type.html"><a href="data-type.html#探索一下factor"><i class="fa fa-check"></i><b>2.14.2</b> 探索一下factor</a></li>
-<li class="chapter" data-level="2.14.3" data-path="data-type.html"><a href="data-type.html#factor-和函數read.csv"><i class="fa fa-check"></i><b>2.14.3</b> factor 和函數read.csv()</a></li>
-<li class="chapter" data-level="2.14.4" data-path="data-type.html"><a href="data-type.html#factor-和函數summary"><i class="fa fa-check"></i><b>2.14.4</b> factor 和函數summary()</a></li>
+<li class="chapter" data-level="2.16" data-path="data-type.html"><a href="data-type.html#factors"><i class="fa fa-check"></i><b>2.16</b> Factors</a>
+<ul>
+<li class="chapter" data-level="2.16.1" data-path="data-type.html"><a href="data-type.html#探索一下factors"><i class="fa fa-check"></i><b>2.16.1</b> 探索一下factors</a></li>
+<li class="chapter" data-level="2.16.2" data-path="data-type.html"><a href="data-type.html#探索一下factor"><i class="fa fa-check"></i><b>2.16.2</b> 探索一下factor</a></li>
+<li class="chapter" data-level="2.16.3" data-path="data-type.html"><a href="data-type.html#factor-和函數read.csv"><i class="fa fa-check"></i><b>2.16.3</b> factor 和函數read.csv()</a></li>
+<li class="chapter" data-level="2.16.4" data-path="data-type.html"><a href="data-type.html#factor-和函數summary"><i class="fa fa-check"></i><b>2.16.4</b> factor 和函數summary()</a></li>
 </ul></li>
-<li class="chapter" data-level="2.15" data-path="data-type.html"><a href="data-type.html#data-frames"><i class="fa fa-check"></i><b>2.15</b> Data Frames</a><ul>
-<li class="chapter" data-level="2.15.1" data-path="data-type.html"><a href="data-type.html#簡單介紹一下手動建立data.frame"><i class="fa fa-check"></i><b>2.15.1</b> 簡單介紹一下手動建立data.frame</a></li>
-<li class="chapter" data-level="2.15.2" data-path="data-type.html"><a href="data-type.html#data-frame-的常用函數"><i class="fa fa-check"></i><b>2.15.2</b> data frame 的常用函數：</a></li>
+<li class="chapter" data-level="2.17" data-path="data-type.html"><a href="data-type.html#data-frames"><i class="fa fa-check"></i><b>2.17</b> Data Frames</a>
+<ul>
+<li class="chapter" data-level="2.17.1" data-path="data-type.html"><a href="data-type.html#簡單介紹一下手動建立data.frame"><i class="fa fa-check"></i><b>2.17.1</b> 簡單介紹一下手動建立data.frame</a></li>
+<li class="chapter" data-level="2.17.2" data-path="data-type.html"><a href="data-type.html#data-frame-的常用函數"><i class="fa fa-check"></i><b>2.17.2</b> data frame 的常用函數：</a></li>
 </ul></li>
-<li class="chapter" data-level="2.16" data-path="data-type.html"><a href="data-type.html#tables"><i class="fa fa-check"></i><b>2.16</b> Tables</a><ul>
-<li class="chapter" data-level="2.16.1" data-path="data-type.html"><a href="data-type.html#one-way-tables"><i class="fa fa-check"></i><b>2.16.1</b> One Way Tables</a></li>
-<li class="chapter" data-level="2.16.2" data-path="data-type.html"><a href="data-type.html#two-way-tables"><i class="fa fa-check"></i><b>2.16.2</b> Two Way Tables</a></li>
+<li class="chapter" data-level="2.18" data-path="data-type.html"><a href="data-type.html#tables"><i class="fa fa-check"></i><b>2.18</b> Tables</a>
+<ul>
+<li class="chapter" data-level="2.18.1" data-path="data-type.html"><a href="data-type.html#one-way-tables"><i class="fa fa-check"></i><b>2.18.1</b> One Way Tables</a></li>
+<li class="chapter" data-level="2.18.2" data-path="data-type.html"><a href="data-type.html#two-way-tables"><i class="fa fa-check"></i><b>2.18.2</b> Two Way Tables</a></li>
 </ul></li>
-<li class="chapter" data-level="2.17" data-path="data-type.html"><a href="data-type.html#oop"><i class="fa fa-check"></i><b>2.17</b> OOP</a><ul>
-<li class="chapter" data-level="2.17.1" data-path="data-type.html"><a href="data-type.html#變數屬性查詢函數"><i class="fa fa-check"></i><b>2.17.1</b> 變數屬性查詢函數</a></li>
+<li class="chapter" data-level="2.19" data-path="data-type.html"><a href="data-type.html#oop"><i class="fa fa-check"></i><b>2.19</b> OOP</a>
+<ul>
+<li class="chapter" data-level="2.19.1" data-path="data-type.html"><a href="data-type.html#變數屬性查詢函數"><i class="fa fa-check"></i><b>2.19.1</b> 變數屬性查詢函數</a></li>
 </ul></li>
-<li class="chapter" data-level="2.18" data-path="data-type.html"><a href="data-type.html#operator"><i class="fa fa-check"></i><b>2.18</b> operator %&gt;%</a></li>
-<li class="chapter" data-level="2.19" data-path="data-type.html"><a href="data-type.html#apply-family"><i class="fa fa-check"></i><b>2.19</b> apply family</a><ul>
-<li class="chapter" data-level="2.19.1" data-path="data-type.html"><a href="data-type.html#apply"><i class="fa fa-check"></i><b>2.19.1</b> apply</a></li>
-<li class="chapter" data-level="2.19.2" data-path="data-type.html"><a href="data-type.html#lapply函數"><i class="fa fa-check"></i><b>2.19.2</b> lapply函數</a></li>
-<li class="chapter" data-level="2.19.3" data-path="data-type.html"><a href="data-type.html#sapply函數"><i class="fa fa-check"></i><b>2.19.3</b> sapply函數</a></li>
-<li class="chapter" data-level="2.19.4" data-path="data-type.html"><a href="data-type.html#比較"><i class="fa fa-check"></i><b>2.19.4</b> 比較</a></li>
-<li class="chapter" data-level="2.19.5" data-path="data-type.html"><a href="data-type.html#vapply函數"><i class="fa fa-check"></i><b>2.19.5</b> vapply函數</a></li>
-<li class="chapter" data-level="2.19.6" data-path="data-type.html"><a href="data-type.html#mapply函數"><i class="fa fa-check"></i><b>2.19.6</b> mapply函數</a></li>
-<li class="chapter" data-level="2.19.7" data-path="data-type.html"><a href="data-type.html#tapply函數"><i class="fa fa-check"></i><b>2.19.7</b> tapply函數</a></li>
-<li class="chapter" data-level="2.19.8" data-path="data-type.html"><a href="data-type.html#rapply函數"><i class="fa fa-check"></i><b>2.19.8</b> rapply函數</a></li>
-<li class="chapter" data-level="2.19.9" data-path="data-type.html"><a href="data-type.html#eapply函數"><i class="fa fa-check"></i><b>2.19.9</b> eapply函數</a></li>
+<li class="chapter" data-level="2.20" data-path="data-type.html"><a href="data-type.html#operator"><i class="fa fa-check"></i><b>2.20</b> operator %&gt;%</a></li>
+<li class="chapter" data-level="2.21" data-path="data-type.html"><a href="data-type.html#apply-family"><i class="fa fa-check"></i><b>2.21</b> apply family</a>
+<ul>
+<li class="chapter" data-level="2.21.1" data-path="data-type.html"><a href="data-type.html#apply"><i class="fa fa-check"></i><b>2.21.1</b> apply</a></li>
+<li class="chapter" data-level="2.21.2" data-path="data-type.html"><a href="data-type.html#lapply函數"><i class="fa fa-check"></i><b>2.21.2</b> lapply函數</a></li>
+<li class="chapter" data-level="2.21.3" data-path="data-type.html"><a href="data-type.html#sapply函數"><i class="fa fa-check"></i><b>2.21.3</b> sapply函數</a></li>
+<li class="chapter" data-level="2.21.4" data-path="data-type.html"><a href="data-type.html#比較"><i class="fa fa-check"></i><b>2.21.4</b> 比較</a></li>
+<li class="chapter" data-level="2.21.5" data-path="data-type.html"><a href="data-type.html#vapply函數"><i class="fa fa-check"></i><b>2.21.5</b> vapply函數</a></li>
+<li class="chapter" data-level="2.21.6" data-path="data-type.html"><a href="data-type.html#mapply函數"><i class="fa fa-check"></i><b>2.21.6</b> mapply函數</a></li>
+<li class="chapter" data-level="2.21.7" data-path="data-type.html"><a href="data-type.html#tapply函數"><i class="fa fa-check"></i><b>2.21.7</b> tapply函數</a></li>
+<li class="chapter" data-level="2.21.8" data-path="data-type.html"><a href="data-type.html#rapply函數"><i class="fa fa-check"></i><b>2.21.8</b> rapply函數</a></li>
+<li class="chapter" data-level="2.21.9" data-path="data-type.html"><a href="data-type.html#eapply函數"><i class="fa fa-check"></i><b>2.21.9</b> eapply函數</a></li>
+<li class="chapter" data-level="2.21.10" data-path="data-type.html"><a href="data-type.html#範例"><i class="fa fa-check"></i><b>2.21.10</b> 範例</a></li>
 </ul></li>
-<li class="chapter" data-level="2.20" data-path="data-type.html"><a href="data-type.html#相關操作"><i class="fa fa-check"></i><b>2.20</b> 相關操作</a><ul>
-<li class="chapter" data-level="2.20.1" data-path="data-type.html"><a href="data-type.html#問題想要知道有甚麼資料庫可以用"><i class="fa fa-check"></i><b>2.20.1</b> 問題:想要知道有甚麼資料庫可以用?</a></li>
+<li class="chapter" data-level="2.22" data-path="data-type.html"><a href="data-type.html#相關操作"><i class="fa fa-check"></i><b>2.22</b> 相關操作</a>
+<ul>
+<li class="chapter" data-level="2.22.1" data-path="data-type.html"><a href="data-type.html#問題想要知道有甚麼資料庫可以用"><i class="fa fa-check"></i><b>2.22.1</b> 問題:想要知道有甚麼資料庫可以用?</a></li>
 </ul></li>
-<li class="chapter" data-level="2.21" data-path="data-type.html"><a href="data-type.html#常見錯誤"><i class="fa fa-check"></i><b>2.21</b> 常見錯誤</a><ul>
-<li class="chapter" data-level="2.21.1" data-path="data-type.html"><a href="data-type.html#error"><i class="fa fa-check"></i><b>2.21.1</b> error</a></li>
-<li class="chapter" data-level="2.21.2" data-path="data-type.html"><a href="data-type.html#error-1"><i class="fa fa-check"></i><b>2.21.2</b> error</a></li>
-<li class="chapter" data-level="2.21.3" data-path="data-type.html"><a href="data-type.html#error-2"><i class="fa fa-check"></i><b>2.21.3</b> error</a></li>
+<li class="chapter" data-level="2.23" data-path="data-type.html"><a href="data-type.html#常見錯誤"><i class="fa fa-check"></i><b>2.23</b> 常見錯誤</a>
+<ul>
+<li class="chapter" data-level="2.23.1" data-path="data-type.html"><a href="data-type.html#error"><i class="fa fa-check"></i><b>2.23.1</b> error</a></li>
+<li class="chapter" data-level="2.23.2" data-path="data-type.html"><a href="data-type.html#error-1"><i class="fa fa-check"></i><b>2.23.2</b> error</a></li>
+<li class="chapter" data-level="2.23.3" data-path="data-type.html"><a href="data-type.html#error-2"><i class="fa fa-check"></i><b>2.23.3</b> error</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html"><i class="fa fa-check"></i><b>3</b> Regular expression syntax</a><ul>
+<li class="chapter" data-level="3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html"><i class="fa fa-check"></i><b>3</b> Regular expression syntax</a>
+<ul>
 <li class="chapter" data-level="3.0.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#escape-sequences"><i class="fa fa-check"></i><b>3.0.1</b> Escape sequences</a></li>
 <li class="chapter" data-level="3.0.2" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#應用"><i class="fa fa-check"></i><b>3.0.2</b> 應用</a></li>
 <li class="chapter" data-level="3.0.3" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#數量修飾詞quantifiers"><i class="fa fa-check"></i><b>3.0.3</b> 數量修飾詞Quantifiers</a></li>
 <li class="chapter" data-level="3.0.4" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#position-of-pattern-within-the-string"><i class="fa fa-check"></i><b>3.0.4</b> Position of pattern within the string</a></li>
 <li class="chapter" data-level="3.0.5" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#operators"><i class="fa fa-check"></i><b>3.0.5</b> Operators</a></li>
 <li class="chapter" data-level="3.0.6" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#character-classes"><i class="fa fa-check"></i><b>3.0.6</b> Character classes</a></li>
-<li class="chapter" data-level="3.1" data-path="regular-expression-syntax.html"><a href="regular-expression-syntax.html#attribute"><i class="fa fa-check"></i><b>3.1</b> attribute</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>4</b> File System</a><ul>
-<li class="chapter" data-level="4.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>4.1</b> Exploring file system</a></li>
-<li class="chapter" data-level="4.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>4.2</b> Creating of a directory</a></li>
-<li class="chapter" data-level="4.3" data-path="file-system.html"><a href="file-system.html#r系統檔案列表"><i class="fa fa-check"></i><b>4.3</b> R系統檔案列表</a></li>
-<li class="chapter" data-level="4.4" data-path="file-system.html"><a href="file-system.html#在r中建立檔案名稱"><i class="fa fa-check"></i><b>4.4</b> 在R中建立檔案名稱</a><ul>
-<li class="chapter" data-level="4.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>4.4.1</b> Note about Windows</a></li>
-<li class="chapter" data-level="4.4.2" data-path="file-system.html"><a href="file-system.html#和工作區相關的指令"><i class="fa fa-check"></i><b>4.4.2</b> 和工作區相關的指令</a></li>
+<li class="chapter" data-level="4" data-path="物件.html"><a href="物件.html"><i class="fa fa-check"></i><b>4</b> 物件</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="物件.html"><a href="物件.html#attribute"><i class="fa fa-check"></i><b>4.1</b> attribute</a></li>
+<li class="chapter" data-level="4.2" data-path="物件.html"><a href="物件.html#attr-attributes-structure-functions-in-r-4-examples-get-remove-set"><i class="fa fa-check"></i><b>4.2</b> attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="物件.html"><a href="物件.html#basic-application-of-attr-attributes"><i class="fa fa-check"></i><b>4.2.1</b> Basic Application of attr() &amp; attributes()</a></li>
+<li class="chapter" data-level="4.2.2" data-path="物件.html"><a href="物件.html#assign-new-attributes-with-the-attributes-r-function"><i class="fa fa-check"></i><b>4.2.2</b> Assign New Attributes with the attributes() R Function</a></li>
+<li class="chapter" data-level="4.2.3" data-path="物件.html"><a href="物件.html#利用attr-改變其中一個attribute"><i class="fa fa-check"></i><b>4.2.3</b> 利用attr() 改變其中一個Attribute</a></li>
+<li class="chapter" data-level="4.2.4" data-path="物件.html"><a href="物件.html#the-r-structure-function"><i class="fa fa-check"></i><b>4.2.4</b> The R structure Function</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="file-system.html"><a href="file-system.html#讀檔"><i class="fa fa-check"></i><b>4.5</b> 讀檔</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="file-system.html"><a href="file-system.html#一般的開檔關檔過程"><i class="fa fa-check"></i><b>4.5.1</b> 一般的開檔/關檔過程</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>4.6</b> write csv</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>4.6.1</b> data.frame to CSV</a></li>
+<li class="chapter" data-level="5" data-path="file-system.html"><a href="file-system.html"><i class="fa fa-check"></i><b>5</b> File System</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="file-system.html"><a href="file-system.html#exploring-file-system"><i class="fa fa-check"></i><b>5.1</b> Exploring file system</a></li>
+<li class="chapter" data-level="5.2" data-path="file-system.html"><a href="file-system.html#creating-of-a-directory"><i class="fa fa-check"></i><b>5.2</b> Creating of a directory</a></li>
+<li class="chapter" data-level="5.3" data-path="file-system.html"><a href="file-system.html#r系統檔案列表"><i class="fa fa-check"></i><b>5.3</b> R系統檔案列表</a></li>
+<li class="chapter" data-level="5.4" data-path="file-system.html"><a href="file-system.html#在r中建立檔案名稱"><i class="fa fa-check"></i><b>5.4</b> 在R中建立檔案名稱</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="file-system.html"><a href="file-system.html#note-about-windows"><i class="fa fa-check"></i><b>5.4.1</b> Note about Windows</a></li>
+<li class="chapter" data-level="5.4.2" data-path="file-system.html"><a href="file-system.html#和工作區相關的指令"><i class="fa fa-check"></i><b>5.4.2</b> 和工作區相關的指令</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="file-system.html"><a href="file-system.html#r語言的檔案格式"><i class="fa fa-check"></i><b>4.7</b> R語言的檔案格式</a></li>
+<li class="chapter" data-level="5.5" data-path="file-system.html"><a href="file-system.html#讀檔"><i class="fa fa-check"></i><b>5.5</b> 讀檔</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="file-system.html"><a href="file-system.html#一般的開檔關檔過程"><i class="fa fa-check"></i><b>5.5.1</b> 一般的開檔/關檔過程</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>5</b> Functions</a><ul>
-<li class="chapter" data-level="5.1" data-path="functions.html"><a href="functions.html#introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a><ul>
+<li class="chapter" data-level="5.6" data-path="file-system.html"><a href="file-system.html#write-csv"><i class="fa fa-check"></i><b>5.6</b> write csv</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="file-system.html"><a href="file-system.html#data.frame-to-csv"><i class="fa fa-check"></i><b>5.6.1</b> data.frame to CSV</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="file-system.html"><a href="file-system.html#r語言的檔案格式"><i class="fa fa-check"></i><b>5.7</b> R語言的檔案格式</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>6</b> Functions</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="functions.html"><a href="functions.html#introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#outline"><i class="fa fa-check"></i>Outline</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="functions.html"><a href="functions.html#function-fundamentals"><i class="fa fa-check"></i><b>5.2</b> Function fundamentals</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="functions.html"><a href="functions.html#first-class-functions"><i class="fa fa-check"></i><b>5.2.1</b> First-class functions</a></li>
-<li class="chapter" data-level="5.2.2" data-path="functions.html"><a href="functions.html#function-components"><i class="fa fa-check"></i><b>5.2.2</b> Function components</a></li>
-<li class="chapter" data-level="5.2.3" data-path="functions.html"><a href="functions.html#primitive-functions"><i class="fa fa-check"></i><b>5.2.3</b> Primitive functions</a></li>
-<li class="chapter" data-level="5.2.4" data-path="functions.html"><a href="functions.html#exercises"><i class="fa fa-check"></i><b>5.2.4</b> Exercises</a></li>
+<li class="chapter" data-level="6.2" data-path="functions.html"><a href="functions.html#function-fundamentals"><i class="fa fa-check"></i><b>6.2</b> Function fundamentals</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="functions.html"><a href="functions.html#first-class-functions"><i class="fa fa-check"></i><b>6.2.1</b> First-class functions</a></li>
+<li class="chapter" data-level="6.2.2" data-path="functions.html"><a href="functions.html#function-components"><i class="fa fa-check"></i><b>6.2.2</b> Function components</a></li>
+<li class="chapter" data-level="6.2.3" data-path="functions.html"><a href="functions.html#primitive-functions"><i class="fa fa-check"></i><b>6.2.3</b> Primitive functions</a></li>
+<li class="chapter" data-level="6.2.4" data-path="functions.html"><a href="functions.html#exercises"><i class="fa fa-check"></i><b>6.2.4</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="functions.html"><a href="functions.html#lexical-scoping"><i class="fa fa-check"></i><b>5.3</b> Lexical scoping</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="functions.html"><a href="functions.html#name-masking"><i class="fa fa-check"></i><b>5.3.1</b> Name masking</a></li>
-<li class="chapter" data-level="5.3.2" data-path="functions.html"><a href="functions.html#functions-vs.-variables"><i class="fa fa-check"></i><b>5.3.2</b> Functions vs. variables</a></li>
-<li class="chapter" data-level="5.3.3" data-path="functions.html"><a href="functions.html#fresh-start"><i class="fa fa-check"></i><b>5.3.3</b> A fresh start</a></li>
-<li class="chapter" data-level="5.3.4" data-path="functions.html"><a href="functions.html#dynamic-lookup"><i class="fa fa-check"></i><b>5.3.4</b> Dynamic lookup</a></li>
-<li class="chapter" data-level="5.3.5" data-path="functions.html"><a href="functions.html#exercises-1"><i class="fa fa-check"></i><b>5.3.5</b> Exercises</a></li>
+<li class="chapter" data-level="6.3" data-path="functions.html"><a href="functions.html#lexical-scoping"><i class="fa fa-check"></i><b>6.3</b> Lexical scoping</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="functions.html"><a href="functions.html#name-masking"><i class="fa fa-check"></i><b>6.3.1</b> Name masking</a></li>
+<li class="chapter" data-level="6.3.2" data-path="functions.html"><a href="functions.html#functions-vs.-variables"><i class="fa fa-check"></i><b>6.3.2</b> Functions vs. variables</a></li>
+<li class="chapter" data-level="6.3.3" data-path="functions.html"><a href="functions.html#fresh-start"><i class="fa fa-check"></i><b>6.3.3</b> A fresh start</a></li>
+<li class="chapter" data-level="6.3.4" data-path="functions.html"><a href="functions.html#dynamic-lookup"><i class="fa fa-check"></i><b>6.3.4</b> Dynamic lookup</a></li>
+<li class="chapter" data-level="6.3.5" data-path="functions.html"><a href="functions.html#exercises-1"><i class="fa fa-check"></i><b>6.3.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>5.4</b> Lazy evaluation</a><ul>
-<li class="chapter" data-level="5.4.1" data-path="functions.html"><a href="functions.html#forcing-evaluation"><i class="fa fa-check"></i><b>5.4.1</b> Forcing evaluation</a></li>
-<li class="chapter" data-level="5.4.2" data-path="functions.html"><a href="functions.html#promises"><i class="fa fa-check"></i><b>5.4.2</b> Promises</a></li>
-<li class="chapter" data-level="5.4.3" data-path="functions.html"><a href="functions.html#default-arguments"><i class="fa fa-check"></i><b>5.4.3</b> Default arguments</a></li>
-<li class="chapter" data-level="5.4.4" data-path="functions.html"><a href="functions.html#missing-arguments"><i class="fa fa-check"></i><b>5.4.4</b> Missing arguments</a></li>
-<li class="chapter" data-level="5.4.5" data-path="functions.html"><a href="functions.html#exercises-2"><i class="fa fa-check"></i><b>5.4.5</b> Exercises</a></li>
+<li class="chapter" data-level="6.4" data-path="functions.html"><a href="functions.html#lazy-evaluation"><i class="fa fa-check"></i><b>6.4</b> Lazy evaluation</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="functions.html"><a href="functions.html#forcing-evaluation"><i class="fa fa-check"></i><b>6.4.1</b> Forcing evaluation</a></li>
+<li class="chapter" data-level="6.4.2" data-path="functions.html"><a href="functions.html#promises-skip"><i class="fa fa-check"></i><b>6.4.2</b> Promises (skip)</a></li>
+<li class="chapter" data-level="6.4.3" data-path="functions.html"><a href="functions.html#default-arguments"><i class="fa fa-check"></i><b>6.4.3</b> Default arguments</a></li>
+<li class="chapter" data-level="6.4.4" data-path="functions.html"><a href="functions.html#missing-arguments"><i class="fa fa-check"></i><b>6.4.4</b> Missing arguments</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="functions.html"><a href="functions.html#fun-dot-dot-dot"><i class="fa fa-check"></i><b>5.5</b> <code>...</code> (dot-dot-dot)</a><ul>
-<li class="chapter" data-level="5.5.1" data-path="functions.html"><a href="functions.html#exercises-3"><i class="fa fa-check"></i><b>5.5.1</b> Exercises</a></li>
+<li class="chapter" data-level="6.5" data-path="functions.html"><a href="functions.html#fun-dot-dot-dot"><i class="fa fa-check"></i><b>6.5</b> <code>...</code> (dot-dot-dot)</a></li>
+<li class="chapter" data-level="6.6" data-path="functions.html"><a href="functions.html#exiting-a-function"><i class="fa fa-check"></i><b>6.6</b> Exiting a function</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="functions.html"><a href="functions.html#implicit-vs.-explict-returns"><i class="fa fa-check"></i><b>6.6.1</b> Implicit vs. explict returns</a></li>
+<li class="chapter" data-level="6.6.2" data-path="functions.html"><a href="functions.html#invisible-values"><i class="fa fa-check"></i><b>6.6.2</b> Invisible values</a></li>
+<li class="chapter" data-level="6.6.3" data-path="functions.html"><a href="functions.html#errors"><i class="fa fa-check"></i><b>6.6.3</b> Errors</a></li>
+<li class="chapter" data-level="6.6.4" data-path="functions.html"><a href="functions.html#on-exit"><i class="fa fa-check"></i><b>6.6.4</b> Exit handlers</a></li>
+<li class="chapter" data-level="6.6.5" data-path="functions.html"><a href="functions.html#exercises-2"><i class="fa fa-check"></i><b>6.6.5</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="functions.html"><a href="functions.html#exiting-a-function"><i class="fa fa-check"></i><b>5.6</b> Exiting a function</a><ul>
-<li class="chapter" data-level="5.6.1" data-path="functions.html"><a href="functions.html#implicit-vs.-explict-returns"><i class="fa fa-check"></i><b>5.6.1</b> Implicit vs. explict returns</a></li>
-<li class="chapter" data-level="5.6.2" data-path="functions.html"><a href="functions.html#invisible-values"><i class="fa fa-check"></i><b>5.6.2</b> Invisible values</a></li>
-<li class="chapter" data-level="5.6.3" data-path="functions.html"><a href="functions.html#errors"><i class="fa fa-check"></i><b>5.6.3</b> Errors</a></li>
-<li class="chapter" data-level="5.6.4" data-path="functions.html"><a href="functions.html#on-exit"><i class="fa fa-check"></i><b>5.6.4</b> Exit handlers</a></li>
-<li class="chapter" data-level="5.6.5" data-path="functions.html"><a href="functions.html#exercises-4"><i class="fa fa-check"></i><b>5.6.5</b> Exercises</a></li>
+<li class="chapter" data-level="6.7" data-path="functions.html"><a href="functions.html#function-forms-skip"><i class="fa fa-check"></i><b>6.7</b> Function forms (skip)</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="functions.html"><a href="functions.html#rewriting-to-prefix-form"><i class="fa fa-check"></i><b>6.7.1</b> Rewriting to prefix form</a></li>
+<li class="chapter" data-level="6.7.2" data-path="functions.html"><a href="functions.html#prefix-form-prefix-form"><i class="fa fa-check"></i><b>6.7.2</b> Prefix form {prefix-form}</a></li>
+<li class="chapter" data-level="6.7.3" data-path="functions.html"><a href="functions.html#infix-functions"><i class="fa fa-check"></i><b>6.7.3</b> Infix functions</a></li>
+<li class="chapter" data-level="6.7.4" data-path="functions.html"><a href="functions.html#replacement-functions"><i class="fa fa-check"></i><b>6.7.4</b> Replacement functions</a></li>
+<li class="chapter" data-level="6.7.5" data-path="functions.html"><a href="functions.html#special-forms"><i class="fa fa-check"></i><b>6.7.5</b> Special forms</a></li>
 </ul></li>
-<li class="chapter" data-level="5.7" data-path="functions.html"><a href="functions.html#function-forms"><i class="fa fa-check"></i><b>5.7</b> Function forms</a><ul>
-<li class="chapter" data-level="5.7.1" data-path="functions.html"><a href="functions.html#rewriting-to-prefix-form"><i class="fa fa-check"></i><b>5.7.1</b> Rewriting to prefix form</a></li>
-<li class="chapter" data-level="5.7.2" data-path="functions.html"><a href="functions.html#prefix-form-prefix-form"><i class="fa fa-check"></i><b>5.7.2</b> Prefix form {prefix-form}</a></li>
-<li class="chapter" data-level="5.7.3" data-path="functions.html"><a href="functions.html#infix-functions"><i class="fa fa-check"></i><b>5.7.3</b> Infix functions</a></li>
-<li class="chapter" data-level="5.7.4" data-path="functions.html"><a href="functions.html#replacement-functions"><i class="fa fa-check"></i><b>5.7.4</b> Replacement functions</a></li>
-<li class="chapter" data-level="5.7.5" data-path="functions.html"><a href="functions.html#special-forms"><i class="fa fa-check"></i><b>5.7.5</b> Special forms</a></li>
+<li class="chapter" data-level="6.8" data-path="functions.html"><a href="functions.html#invoking-a-function"><i class="fa fa-check"></i><b>6.8</b> Invoking a function</a>
+<ul>
+<li class="chapter" data-level="6.8.1" data-path="functions.html"><a href="functions.html#exercises-3"><i class="fa fa-check"></i><b>6.8.1</b> Exercises</a></li>
 </ul></li>
-<li class="chapter" data-level="5.8" data-path="functions.html"><a href="functions.html#invoking-a-function"><i class="fa fa-check"></i><b>5.8</b> Invoking a function</a><ul>
-<li class="chapter" data-level="5.8.1" data-path="functions.html"><a href="functions.html#exercises-5"><i class="fa fa-check"></i><b>5.8.1</b> Exercises</a></li>
+<li class="chapter" data-level="6.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>6.9</b> Quiz answers</a></li>
 </ul></li>
-<li class="chapter" data-level="5.9" data-path="functions.html"><a href="functions.html#function-answers"><i class="fa fa-check"></i><b>5.9</b> Quiz answers</a></li>
+<li class="chapter" data-level="7" data-path="資料探索.html"><a href="資料探索.html"><i class="fa fa-check"></i><b>7</b> 資料探索</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="資料探索.html"><a href="資料探索.html#常用函數"><i class="fa fa-check"></i><b>7.1</b> 常用函數</a></li>
+<li class="chapter" data-level="7.2" data-path="資料探索.html"><a href="資料探索.html#來自wooldridge-的資料集"><i class="fa fa-check"></i><b>7.2</b> 來自wooldridge 的資料集</a></li>
+<li class="chapter" data-level="7.3" data-path="資料探索.html"><a href="資料探索.html#t-test"><i class="fa fa-check"></i><b>7.3</b> t-test</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="資料探索.html"><a href="資料探索.html#manually-enter-raw-data-from-wooldridge-table-c.3"><i class="fa fa-check"></i><b>7.3.1</b> Manually enter raw data from Wooldridge, Table C.3:</a></li>
+<li class="chapter" data-level="7.3.2" data-path="資料探索.html"><a href="資料探索.html#calculate-change-the-parentheses-just-display-the-results"><i class="fa fa-check"></i><b>7.3.2</b> Calculate Change (the parentheses just display the results):</a></li>
+<li class="chapter" data-level="7.3.3" data-path="資料探索.html"><a href="資料探索.html#ingredients-to-ci-formula"><i class="fa fa-check"></i><b>7.3.3</b> Ingredients to CI formula</a></li>
+<li class="chapter" data-level="7.3.4" data-path="資料探索.html"><a href="資料探索.html#confidence-intervall"><i class="fa fa-check"></i><b>7.3.4</b> Confidence intervall:</a></li>
+<li class="chapter" data-level="7.3.5" data-path="資料探索.html"><a href="資料探索.html#by-hand"><i class="fa fa-check"></i><b>7.3.5</b> by hand</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="資料探索.html"><a href="資料探索.html"><i class="fa fa-check"></i><b>6</b> 資料探索</a><ul>
-<li class="chapter" data-level="6.1" data-path="資料探索.html"><a href="資料探索.html#常用函數"><i class="fa fa-check"></i><b>6.1</b> 常用函數</a></li>
-<li class="chapter" data-level="6.2" data-path="資料探索.html"><a href="資料探索.html#來自wooldridge-的資料集"><i class="fa fa-check"></i><b>6.2</b> 來自wooldridge 的資料集</a></li>
-<li class="chapter" data-level="6.3" data-path="資料探索.html"><a href="資料探索.html#t-test"><i class="fa fa-check"></i><b>6.3</b> t-test</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="資料探索.html"><a href="資料探索.html#manually-enter-raw-data-from-wooldridge-table-c.3"><i class="fa fa-check"></i><b>6.3.1</b> Manually enter raw data from Wooldridge, Table C.3:</a></li>
-<li class="chapter" data-level="6.3.2" data-path="資料探索.html"><a href="資料探索.html#calculate-change-the-parentheses-just-display-the-results"><i class="fa fa-check"></i><b>6.3.2</b> Calculate Change (the parentheses just display the results):</a></li>
-<li class="chapter" data-level="6.3.3" data-path="資料探索.html"><a href="資料探索.html#ingredients-to-ci-formula"><i class="fa fa-check"></i><b>6.3.3</b> Ingredients to CI formula</a></li>
-<li class="chapter" data-level="6.3.4" data-path="資料探索.html"><a href="資料探索.html#confidence-intervall"><i class="fa fa-check"></i><b>6.3.4</b> Confidence intervall:</a></li>
-<li class="chapter" data-level="6.3.5" data-path="資料探索.html"><a href="資料探索.html#by-hand"><i class="fa fa-check"></i><b>6.3.5</b> by hand</a></li>
+<li class="chapter" data-level="7.4" data-path="資料探索.html"><a href="資料探索.html#by-函數t.test"><i class="fa fa-check"></i><b>7.4</b> by 函數<code>t.test()</code></a></li>
+<li class="chapter" data-level="7.5" data-path="資料探索.html"><a href="資料探索.html#分組"><i class="fa fa-check"></i><b>7.5</b> 分組</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="資料探索.html"><a href="資料探索.html#方法1-利用-for迴圈"><i class="fa fa-check"></i><b>7.5.1</b> 方法1: 利用 for迴圈</a></li>
+<li class="chapter" data-level="7.5.2" data-path="資料探索.html"><a href="資料探索.html#方法2-函數aggregate"><i class="fa fa-check"></i><b>7.5.2</b> 方法2:　函數aggregate()</a></li>
+<li class="chapter" data-level="7.5.3" data-path="資料探索.html"><a href="資料探索.html#方法3-函數-tapply"><i class="fa fa-check"></i><b>7.5.3</b> 方法3: 函數　<code>tapply</code></a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="資料探索.html"><a href="資料探索.html#by-函數t.test"><i class="fa fa-check"></i><b>6.4</b> by 函數<code>t.test()</code></a></li>
-<li class="chapter" data-level="6.5" data-path="資料探索.html"><a href="資料探索.html#分組"><i class="fa fa-check"></i><b>6.5</b> 分組</a><ul>
-<li class="chapter" data-level="6.5.1" data-path="資料探索.html"><a href="資料探索.html#方法1-利用-for迴圈"><i class="fa fa-check"></i><b>6.5.1</b> 方法1: 利用 for迴圈</a></li>
-<li class="chapter" data-level="6.5.2" data-path="資料探索.html"><a href="資料探索.html#方法2-函數aggregate"><i class="fa fa-check"></i><b>6.5.2</b> 方法2:　函數aggregate()</a></li>
-<li class="chapter" data-level="6.5.3" data-path="資料探索.html"><a href="資料探索.html#方法3-函數-tapply"><i class="fa fa-check"></i><b>6.5.3</b> 方法3: 函數　<code>tapply</code></a></li>
+<li class="chapter" data-level="7.6" data-path="資料探索.html"><a href="資料探索.html#plot"><i class="fa fa-check"></i><b>7.6</b> plot</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="資料探索.html"><a href="資料探索.html#plot"><i class="fa fa-check"></i><b>6.6</b> plot</a></li>
+<li class="chapter" data-level="8" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>8</b> R Packages</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="r-packages.html"><a href="r-packages.html#基本"><i class="fa fa-check"></i><b>8.1</b> 基本</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="r-packages.html"><a href="r-packages.html#套件在哪裡"><i class="fa fa-check"></i><b>8.1.1</b> 套件在哪裡</a></li>
+<li class="chapter" data-level="8.1.2" data-path="r-packages.html"><a href="r-packages.html#搜尋套件中的檔案"><i class="fa fa-check"></i><b>8.1.2</b> 搜尋套件中的檔案</a></li>
+<li class="chapter" data-level="8.1.3" data-path="r-packages.html"><a href="r-packages.html#哪個函數屬於哪個套件"><i class="fa fa-check"></i><b>8.1.3</b> 哪個函數屬於哪個套件?</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>7</b> R Packages</a><ul>
-<li class="chapter" data-level="7.1" data-path="r-packages.html"><a href="r-packages.html#基本"><i class="fa fa-check"></i><b>7.1</b> 基本</a><ul>
-<li class="chapter" data-level="7.1.1" data-path="r-packages.html"><a href="r-packages.html#套件在哪裡"><i class="fa fa-check"></i><b>7.1.1</b> 套件在哪裡</a></li>
-<li class="chapter" data-level="7.1.2" data-path="r-packages.html"><a href="r-packages.html#搜尋套件中的檔案"><i class="fa fa-check"></i><b>7.1.2</b> 搜尋套件中的檔案</a></li>
-<li class="chapter" data-level="7.1.3" data-path="r-packages.html"><a href="r-packages.html#哪個函數屬於哪個套件"><i class="fa fa-check"></i><b>7.1.3</b> 哪個函數屬於哪個套件?</a></li>
+<li class="chapter" data-level="8.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>8.2</b> <code>library()</code> vs <code>require()</code></a></li>
+<li class="chapter" data-level="8.3" data-path="r-packages.html"><a href="r-packages.html#測試debug"><i class="fa fa-check"></i><b>8.3</b> 測試debug</a></li>
+<li class="chapter" data-level="8.4" data-path="r-packages.html"><a href="r-packages.html#自製-package"><i class="fa fa-check"></i><b>8.4</b> 自製 package</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="r-packages.html"><a href="r-packages.html#自製-package-範例"><i class="fa fa-check"></i><b>8.4.1</b> 自製 package 範例</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="r-packages.html"><a href="r-packages.html#library-vs-require"><i class="fa fa-check"></i><b>7.2</b> <code>library()</code> vs <code>require()</code></a></li>
-<li class="chapter" data-level="7.3" data-path="r-packages.html"><a href="r-packages.html#測試debug"><i class="fa fa-check"></i><b>7.3</b> 測試debug</a></li>
-<li class="chapter" data-level="7.4" data-path="r-packages.html"><a href="r-packages.html#自製-package"><i class="fa fa-check"></i><b>7.4</b> 自製 package</a><ul>
-<li class="chapter" data-level="7.4.1" data-path="r-packages.html"><a href="r-packages.html#自製-package-範例"><i class="fa fa-check"></i><b>7.4.1</b> 自製 package 範例</a></li>
+<li class="chapter" data-level="8.5" data-path="r-packages.html"><a href="r-packages.html#packing-up-your-data"><i class="fa fa-check"></i><b>8.5</b> Packing up your data</a></li>
+<li class="chapter" data-level="8.6" data-path="r-packages.html"><a href="r-packages.html#what-is-a-package"><i class="fa fa-check"></i><b>8.6</b> What is a package?</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="r-packages.html"><a href="r-packages.html#也可以包含資料"><i class="fa fa-check"></i><b>8.6.1</b> 也可以包含資料</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="r-packages.html"><a href="r-packages.html#packing-up-your-data"><i class="fa fa-check"></i><b>7.5</b> Packing up your data</a></li>
-<li class="chapter" data-level="7.6" data-path="r-packages.html"><a href="r-packages.html#what-is-a-package"><i class="fa fa-check"></i><b>7.6</b> What is a package?</a><ul>
-<li class="chapter" data-level="7.6.1" data-path="r-packages.html"><a href="r-packages.html#也可以包含資料"><i class="fa fa-check"></i><b>7.6.1</b> 也可以包含資料</a></li>
+<li class="chapter" data-level="8.7" data-path="r-packages.html"><a href="r-packages.html#怎樣自訂套件"><i class="fa fa-check"></i><b>8.7</b> 怎樣自訂套件</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="r-packages.html"><a href="r-packages.html#利用devtools-建立骨架package-skeleton"><i class="fa fa-check"></i><b>8.7.1</b> 利用<code>devtools</code> 建立骨架(package skeleton)</a></li>
+<li class="chapter" data-level="8.7.2" data-path="r-packages.html"><a href="r-packages.html#工作流程"><i class="fa fa-check"></i><b>8.7.2</b> 工作流程</a></li>
+<li class="chapter" data-level="8.7.3" data-path="r-packages.html"><a href="r-packages.html#documentation-and-exports"><i class="fa fa-check"></i><b>8.7.3</b> Documentation and exports</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="r-packages.html"><a href="r-packages.html#怎樣自訂套件"><i class="fa fa-check"></i><b>7.7</b> 怎樣自訂套件</a><ul>
-<li class="chapter" data-level="7.7.1" data-path="r-packages.html"><a href="r-packages.html#利用devtools-建立骨架package-skeleton"><i class="fa fa-check"></i><b>7.7.1</b> 利用<code>devtools</code> 建立骨架(package skeleton)</a></li>
-<li class="chapter" data-level="7.7.2" data-path="r-packages.html"><a href="r-packages.html#工作流程"><i class="fa fa-check"></i><b>7.7.2</b> 工作流程</a></li>
-<li class="chapter" data-level="7.7.3" data-path="r-packages.html"><a href="r-packages.html#documentation-and-exports"><i class="fa fa-check"></i><b>7.7.3</b> Documentation and exports</a></li>
+<li class="chapter" data-level="8.8" data-path="r-packages.html"><a href="r-packages.html#資料放入套件"><i class="fa fa-check"></i><b>8.8</b> 資料放入套件</a></li>
 </ul></li>
-<li class="chapter" data-level="7.8" data-path="r-packages.html"><a href="r-packages.html#資料放入套件"><i class="fa fa-check"></i><b>7.8</b> 資料放入套件</a></li>
+<li class="chapter" data-level="9" data-path="基本繪圖.html"><a href="基本繪圖.html"><i class="fa fa-check"></i><b>9</b> 基本繪圖</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="基本繪圖.html"><a href="基本繪圖.html#reference"><i class="fa fa-check"></i><b>9.1</b> reference</a></li>
+<li class="chapter" data-level="9.2" data-path="基本繪圖.html"><a href="基本繪圖.html#basic"><i class="fa fa-check"></i><b>9.2</b> basic</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="資料探索.html"><a href="資料探索.html#plot"><i class="fa fa-check"></i><b>9.2.1</b> plot</a></li>
+<li class="chapter" data-level="9.2.2" data-path="基本繪圖.html"><a href="基本繪圖.html#更多"><i class="fa fa-check"></i><b>9.2.2</b> 更多</a></li>
+<li class="chapter" data-level="9.2.3" data-path="基本繪圖.html"><a href="基本繪圖.html#histograms"><i class="fa fa-check"></i><b>9.2.3</b> Histograms</a></li>
+<li class="chapter" data-level="9.2.4" data-path="基本繪圖.html"><a href="基本繪圖.html#kernel-density-plot"><i class="fa fa-check"></i><b>9.2.4</b> Kernel Density Plot</a></li>
+<li class="chapter" data-level="9.2.5" data-path="基本繪圖.html"><a href="基本繪圖.html#saving-graphs"><i class="fa fa-check"></i><b>9.2.5</b> Saving Graphs</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="基本繪圖.html"><a href="基本繪圖.html"><i class="fa fa-check"></i><b>8</b> 基本繪圖</a><ul>
-<li class="chapter" data-level="8.1" data-path="基本繪圖.html"><a href="基本繪圖.html#reference"><i class="fa fa-check"></i><b>8.1</b> reference</a></li>
-<li class="chapter" data-level="8.2" data-path="基本繪圖.html"><a href="基本繪圖.html#basic"><i class="fa fa-check"></i><b>8.2</b> basic</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="資料探索.html"><a href="資料探索.html#plot"><i class="fa fa-check"></i><b>8.2.1</b> plot</a></li>
-<li class="chapter" data-level="8.2.2" data-path="基本繪圖.html"><a href="基本繪圖.html#更多"><i class="fa fa-check"></i><b>8.2.2</b> 更多</a></li>
-<li class="chapter" data-level="8.2.3" data-path="基本繪圖.html"><a href="基本繪圖.html#histograms"><i class="fa fa-check"></i><b>8.2.3</b> Histograms</a></li>
-<li class="chapter" data-level="8.2.4" data-path="基本繪圖.html"><a href="基本繪圖.html#kernel-density-plot"><i class="fa fa-check"></i><b>8.2.4</b> Kernel Density Plot</a></li>
-<li class="chapter" data-level="8.2.5" data-path="基本繪圖.html"><a href="基本繪圖.html#saving-graphs"><i class="fa fa-check"></i><b>8.2.5</b> Saving Graphs</a></li>
+<li class="chapter" data-level="9.3" data-path="基本繪圖.html"><a href="基本繪圖.html#多個圖和疊圖"><i class="fa fa-check"></i><b>9.3</b> 多個圖和疊圖</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="基本繪圖.html"><a href="基本繪圖.html#多視窗"><i class="fa fa-check"></i><b>9.3.1</b> 多視窗</a></li>
+<li class="chapter" data-level="9.3.2" data-path="基本繪圖.html"><a href="基本繪圖.html#合併-plots"><i class="fa fa-check"></i><b>9.3.2</b> 合併 Plots</a></li>
+<li class="chapter" data-level="9.3.3" data-path="基本繪圖.html"><a href="基本繪圖.html#疊圖"><i class="fa fa-check"></i><b>9.3.3</b> 疊圖</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="基本繪圖.html"><a href="基本繪圖.html#多個圖和疊圖"><i class="fa fa-check"></i><b>8.3</b> 多個圖和疊圖</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="基本繪圖.html"><a href="基本繪圖.html#多視窗"><i class="fa fa-check"></i><b>8.3.1</b> 多視窗</a></li>
-<li class="chapter" data-level="8.3.2" data-path="基本繪圖.html"><a href="基本繪圖.html#合併-plots"><i class="fa fa-check"></i><b>8.3.2</b> 合併 Plots</a></li>
-<li class="chapter" data-level="8.3.3" data-path="基本繪圖.html"><a href="基本繪圖.html#疊圖"><i class="fa fa-check"></i><b>8.3.3</b> 疊圖</a></li>
+<li class="chapter" data-level="9.4" data-path="基本繪圖.html"><a href="基本繪圖.html#分組畫圖"><i class="fa fa-check"></i><b>9.4</b> 分組畫圖</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="基本繪圖.html"><a href="基本繪圖.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>9.4.1</b> Comparing Groups VIA Kernal Density</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="基本繪圖.html"><a href="基本繪圖.html#分組畫圖"><i class="fa fa-check"></i><b>8.4</b> 分組畫圖</a><ul>
-<li class="chapter" data-level="8.4.1" data-path="基本繪圖.html"><a href="基本繪圖.html#comparing-groups-via-kernal-density"><i class="fa fa-check"></i><b>8.4.1</b> Comparing Groups VIA Kernal Density</a></li>
+<li class="chapter" data-level="9.5" data-path="基本繪圖.html"><a href="基本繪圖.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>9.5</b> Add texts within the graph</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="基本繪圖.html"><a href="基本繪圖.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>9.5.1</b> Add text in the margins of the graph</a></li>
+<li class="chapter" data-level="9.5.2" data-path="基本繪圖.html"><a href="基本繪圖.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>9.5.2</b> Add mathematical annotation to a plot</a></li>
 </ul></li>
-<li class="chapter" data-level="8.5" data-path="基本繪圖.html"><a href="基本繪圖.html#add-texts-within-the-graph"><i class="fa fa-check"></i><b>8.5</b> Add texts within the graph</a><ul>
-<li class="chapter" data-level="8.5.1" data-path="基本繪圖.html"><a href="基本繪圖.html#add-text-in-the-margins-of-the-graph"><i class="fa fa-check"></i><b>8.5.1</b> Add text in the margins of the graph</a></li>
-<li class="chapter" data-level="8.5.2" data-path="基本繪圖.html"><a href="基本繪圖.html#add-mathematical-annotation-to-a-plot"><i class="fa fa-check"></i><b>8.5.2</b> Add mathematical annotation to a plot</a></li>
+<li class="chapter" data-level="9.6" data-path="基本繪圖.html"><a href="基本繪圖.html#函數畫圖"><i class="fa fa-check"></i><b>9.6</b> 函數畫圖</a></li>
+<li class="chapter" data-level="9.7" data-path="基本繪圖.html"><a href="基本繪圖.html#plot-example"><i class="fa fa-check"></i><b>9.7</b> plot example</a></li>
 </ul></li>
-<li class="chapter" data-level="8.6" data-path="基本繪圖.html"><a href="基本繪圖.html#函數畫圖"><i class="fa fa-check"></i><b>8.6</b> 函數畫圖</a></li>
-<li class="chapter" data-level="8.7" data-path="基本繪圖.html"><a href="基本繪圖.html#plot-example"><i class="fa fa-check"></i><b>8.7</b> plot example</a></li>
+<li class="chapter" data-level="10" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>10</b> Sample and Distribution 01</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#排列組合與概率的計算"><i class="fa fa-check"></i><b>10.1</b> 排列組合與概率的計算</a></li>
+<li class="chapter" data-level="10.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>10.2</b> distribution</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html"><i class="fa fa-check"></i><b>9</b> Sample and Distribution 01</a><ul>
-<li class="chapter" data-level="9.1" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#排列組合與概率的計算"><i class="fa fa-check"></i><b>9.1</b> 排列組合與概率的計算</a></li>
-<li class="chapter" data-level="9.2" data-path="sample-and-distribution-01.html"><a href="sample-and-distribution-01.html#distribution"><i class="fa fa-check"></i><b>9.2</b> distribution</a></li>
+<li class="chapter" data-level="11" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>11</b> programming in R</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="programming-in-r.html"><a href="programming-in-r.html#條件指令"><i class="fa fa-check"></i><b>11.1</b> 條件指令</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>11.1.1</b> if</a></li>
+<li class="chapter" data-level="11.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse的寫法"><i class="fa fa-check"></i><b>11.1.2</b> ifelse的寫法</a></li>
+<li class="chapter" data-level="11.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch的寫法"><i class="fa fa-check"></i><b>11.1.3</b> switch的寫法</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="programming-in-r.html"><a href="programming-in-r.html"><i class="fa fa-check"></i><b>10</b> programming in R</a><ul>
-<li class="chapter" data-level="10.1" data-path="programming-in-r.html"><a href="programming-in-r.html#條件指令"><i class="fa fa-check"></i><b>10.1</b> 條件指令</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="programming-in-r.html"><a href="programming-in-r.html#if"><i class="fa fa-check"></i><b>10.1.1</b> if</a></li>
-<li class="chapter" data-level="10.1.2" data-path="programming-in-r.html"><a href="programming-in-r.html#ifelse的寫法"><i class="fa fa-check"></i><b>10.1.2</b> ifelse的寫法</a></li>
-<li class="chapter" data-level="10.1.3" data-path="programming-in-r.html"><a href="programming-in-r.html#switch的寫法"><i class="fa fa-check"></i><b>10.1.3</b> switch的寫法</a></li>
+<li class="chapter" data-level="11.2" data-path="programming-in-r.html"><a href="programming-in-r.html#迴圈指令"><i class="fa fa-check"></i><b>11.2</b> 迴圈指令</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>11.2.1</b> for-loop</a></li>
+<li class="chapter" data-level="11.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>11.2.2</b> while-loop</a></li>
+<li class="chapter" data-level="11.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>11.2.3</b> repeat-loop</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="programming-in-r.html"><a href="programming-in-r.html#迴圈指令"><i class="fa fa-check"></i><b>10.2</b> 迴圈指令</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="programming-in-r.html"><a href="programming-in-r.html#for-loop"><i class="fa fa-check"></i><b>10.2.1</b> for-loop</a></li>
-<li class="chapter" data-level="10.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>10.2.2</b> while-loop</a></li>
-<li class="chapter" data-level="10.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>10.2.3</b> repeat-loop</a></li>
+<li class="chapter" data-level="11.3" data-path="data-type.html"><a href="data-type.html#範例"><i class="fa fa-check"></i><b>11.3</b> 範例</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="programming-in-r.html"><a href="programming-in-r.html#範例-detach_package"><i class="fa fa-check"></i><b>11.3.1</b> 範例 detach_package()</a></li>
+<li class="chapter" data-level="11.3.2" data-path="programming-in-r.html"><a href="programming-in-r.html#範例2.libpaths"><i class="fa fa-check"></i><b>11.3.2</b> 範例2：.libPaths()</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="programming-in-r.html"><a href="programming-in-r.html#範例"><i class="fa fa-check"></i><b>10.3</b> 範例</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="programming-in-r.html"><a href="programming-in-r.html#範例-detach_package"><i class="fa fa-check"></i><b>10.3.1</b> 範例 detach_package()</a></li>
-<li class="chapter" data-level="10.3.2" data-path="programming-in-r.html"><a href="programming-in-r.html#範例2.libpaths"><i class="fa fa-check"></i><b>10.3.2</b> 範例2：.libPaths()</a></li>
+<li class="chapter" data-level="11.4" data-path="programming-in-r.html"><a href="programming-in-r.html#r語言的-meta-計算"><i class="fa fa-check"></i><b>11.4</b> R語言的 meta 計算。</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="programming-in-r.html"><a href="programming-in-r.html#deparse"><i class="fa fa-check"></i><b>11.4.1</b> <strong>deparse</strong></a></li>
+<li class="chapter" data-level="11.4.2" data-path="programming-in-r.html"><a href="programming-in-r.html#quote"><i class="fa fa-check"></i><b>11.4.2</b> <strong>quote</strong></a></li>
+<li class="chapter" data-level="11.4.3" data-path="programming-in-r.html"><a href="programming-in-r.html#eval"><i class="fa fa-check"></i><b>11.4.3</b> <strong>eval</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="programming-in-r.html"><a href="programming-in-r.html#r語言的-meta-計算"><i class="fa fa-check"></i><b>10.4</b> R語言的 meta 計算。</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="programming-in-r.html"><a href="programming-in-r.html#deparse"><i class="fa fa-check"></i><b>10.4.1</b> <strong>deparse</strong></a></li>
-<li class="chapter" data-level="10.4.2" data-path="programming-in-r.html"><a href="programming-in-r.html#quote"><i class="fa fa-check"></i><b>10.4.2</b> <strong>quote</strong></a></li>
-<li class="chapter" data-level="10.4.3" data-path="programming-in-r.html"><a href="programming-in-r.html#eval"><i class="fa fa-check"></i><b>10.4.3</b> <strong>eval</strong></a></li>
+<li class="chapter" data-level="11.5" data-path="programming-in-r.html"><a href="programming-in-r.html#討論"><i class="fa fa-check"></i><b>11.5</b> 討論</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="programming-in-r.html"><a href="programming-in-r.html#測試紀錄"><i class="fa fa-check"></i><b>11.5.1</b> 測試紀錄</a></li>
 </ul></li>
-<li class="chapter" data-level="10.5" data-path="programming-in-r.html"><a href="programming-in-r.html#討論"><i class="fa fa-check"></i><b>10.5</b> 討論</a><ul>
-<li class="chapter" data-level="10.5.1" data-path="programming-in-r.html"><a href="programming-in-r.html#測試紀錄"><i class="fa fa-check"></i><b>10.5.1</b> 測試紀錄</a></li>
+<li class="chapter" data-level="11.6" data-path="programming-in-r.html"><a href="programming-in-r.html#練習"><i class="fa fa-check"></i><b>11.6</b> 練習</a></li>
 </ul></li>
-<li class="chapter" data-level="10.6" data-path="programming-in-r.html"><a href="programming-in-r.html#練習"><i class="fa fa-check"></i><b>10.6</b> 練習</a></li>
+<li class="chapter" data-level="12" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>12</b> Econometrics</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>12.1</b> package recommended</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="econometrics.html"><a href="econometrics.html"><i class="fa fa-check"></i><b>11</b> Econometrics</a><ul>
-<li class="chapter" data-level="11.1" data-path="econometrics.html"><a href="econometrics.html#package-recommended"><i class="fa fa-check"></i><b>11.1</b> package recommended</a></li>
+<li class="chapter" data-level="13" data-path="simulate-1.html"><a href="simulate-1.html"><i class="fa fa-check"></i><b>13</b> simulate 1</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="simulate-1.html"><a href="simulate-1.html#利用套件sm"><i class="fa fa-check"></i><b>13.0.1</b> 利用套件<code>sm</code></a></li>
+<li class="chapter" data-level="13.0.2" data-path="simulate-1.html"><a href="simulate-1.html#sm-範例"><i class="fa fa-check"></i><b>13.0.2</b> sm 範例</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="simulate-1.html"><a href="simulate-1.html"><i class="fa fa-check"></i><b>12</b> simulate 1</a><ul>
-<li class="chapter" data-level="12.0.1" data-path="simulate-1.html"><a href="simulate-1.html#利用套件sm"><i class="fa fa-check"></i><b>12.0.1</b> 利用套件<code>sm</code></a></li>
-<li class="chapter" data-level="12.0.2" data-path="simulate-1.html"><a href="simulate-1.html#sm-範例"><i class="fa fa-check"></i><b>12.0.2</b> sm 範例</a></li>
+<li class="chapter" data-level="14" data-path="rbook-提要.html"><a href="rbook-提要.html"><i class="fa fa-check"></i><b>14</b> rbook 提要</a>
+<ul>
+<li class="chapter" data-level="14.0.1" data-path="rbook-提要.html"><a href="rbook-提要.html#我比較常用的格式"><i class="fa fa-check"></i><b>14.0.1</b> 我比較常用的格式</a></li>
+<li class="chapter" data-level="14.0.2" data-path="rbook-提要.html"><a href="rbook-提要.html#提取程式碼"><i class="fa fa-check"></i><b>14.0.2</b> 提取程式碼</a></li>
+<li class="chapter" data-level="14.0.3" data-path="rbook-提要.html"><a href="rbook-提要.html#比較詳細的介紹"><i class="fa fa-check"></i><b>14.0.3</b> 比較詳細的介紹:</a></li>
+<li class="chapter" data-level="14.1" data-path="rbook-提要.html"><a href="rbook-提要.html#book"><i class="fa fa-check"></i><b>14.1</b> book</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="rbook-提要.html"><a href="rbook-提要.html#bookdown.yml"><i class="fa fa-check"></i><b>14.1.1</b> <code>_bookdown.yml</code></a></li>
+<li class="chapter" data-level="14.1.2" data-path="rbook-提要.html"><a href="rbook-提要.html#output.yml"><i class="fa fa-check"></i><b>14.1.2</b> <code>_output.yml</code></a></li>
+<li class="chapter" data-level="14.1.3" data-path="rbook-提要.html"><a href="rbook-提要.html#index.rmd"><i class="fa fa-check"></i><b>14.1.3</b> index.Rmd</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="rbook-提要.html"><a href="rbook-提要.html"><i class="fa fa-check"></i><b>13</b> rbook 提要</a><ul>
-<li class="chapter" data-level="13.1" data-path="rbook-提要.html"><a href="rbook-提要.html#index.rmd"><i class="fa fa-check"></i><b>13.1</b> index.Rmd</a></li>
-<li class="chapter" data-level="13.2" data-path="rbook-提要.html"><a href="rbook-提要.html#section"><i class="fa fa-check"></i><b>13.2</b> </a></li>
-<li class="chapter" data-level="13.3" data-path="rbook-提要.html"><a href="rbook-提要.html#其他_output.yml-範例"><i class="fa fa-check"></i><b>13.3</b> 其他_output.yml 範例</a></li>
-<li class="chapter" data-level="13.4" data-path="rbook-提要.html"><a href="rbook-提要.html#travis.yml"><i class="fa fa-check"></i><b>13.4</b> .travis.yml</a></li>
-<li class="chapter" data-level="13.5" data-path="rbook-提要.html"><a href="rbook-提要.html#紀錄"><i class="fa fa-check"></i><b>13.5</b> 紀錄</a><ul>
-<li class="chapter" data-level="13.5.1" data-path="rbook-提要.html"><a href="rbook-提要.html#knitr-hook"><i class="fa fa-check"></i><b>13.5.1</b> knitr hook</a></li>
-<li class="chapter" data-level="13.5.2" data-path="rbook-提要.html"><a href="rbook-提要.html#terminal-output"><i class="fa fa-check"></i><b>13.5.2</b> terminal output</a></li>
+<li class="chapter" data-level="14.2" data-path="rbook-提要.html"><a href="rbook-提要.html#更多_output.yml-範例"><i class="fa fa-check"></i><b>14.2</b> 更多<code>_output.yml</code> 範例</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="rbook-提要.html"><a href="rbook-提要.html#output.yml-範例"><i class="fa fa-check"></i><b>14.2.1</b> _output.yml 範例</a></li>
 </ul></li>
-<li class="chapter" data-level="13.6" data-path="rbook-提要.html"><a href="rbook-提要.html#python"><i class="fa fa-check"></i><b>13.6</b> python</a></li>
-<li class="chapter" data-level="13.7" data-path="programming-in-r.html"><a href="programming-in-r.html#討論"><i class="fa fa-check"></i><b>13.7</b> 討論</a><ul>
-<li class="chapter" data-level="13.7.1" data-path="rbook-提要.html"><a href="rbook-提要.html#inline-code"><i class="fa fa-check"></i><b>13.7.1</b> inline code</a></li>
+<li class="chapter" data-level="14.3" data-path="rbook-提要.html"><a href="rbook-提要.html#travis.yml"><i class="fa fa-check"></i><b>14.3</b> .travis.yml</a></li>
+<li class="chapter" data-level="14.4" data-path="rbook-提要.html"><a href="rbook-提要.html#紀錄"><i class="fa fa-check"></i><b>14.4</b> 紀錄</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="rbook-提要.html"><a href="rbook-提要.html#knitr-hook"><i class="fa fa-check"></i><b>14.4.1</b> knitr hook</a></li>
+<li class="chapter" data-level="14.4.2" data-path="rbook-提要.html"><a href="rbook-提要.html#terminal-output"><i class="fa fa-check"></i><b>14.4.2</b> terminal output</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="rbook-提要.html"><a href="rbook-提要.html#產生pdf-文件"><i class="fa fa-check"></i><b>14.5</b> 產生PDF 文件</a>
+<ul>
+<li class="chapter" data-level="14.5.1" data-path="rbook-提要.html"><a href="rbook-提要.html#overview"><i class="fa fa-check"></i><b>14.5.1</b> Overview</a></li>
+<li class="chapter" data-level="14.5.2" data-path="rbook-提要.html"><a href="rbook-提要.html#meta-data-上的pdf-設定常見版本"><i class="fa fa-check"></i><b>14.5.2</b> meta data 上的pdf 設定,常見版本</a></li>
+<li class="chapter" data-level="14.5.3" data-path="rbook-提要.html"><a href="rbook-提要.html#latex-packages-for-citations"><i class="fa fa-check"></i><b>14.5.3</b> LaTeX Packages for Citations</a></li>
+</ul></li>
+<li class="chapter" data-level="14.6" data-path="rbook-提要.html"><a href="rbook-提要.html#中文"><i class="fa fa-check"></i><b>14.6</b> 中文</a></li>
+<li class="chapter" data-level="14.7" data-path="rbook-提要.html"><a href="rbook-提要.html#rstudio-chinese"><i class="fa fa-check"></i><b>14.7</b> Rstudio chinese</a>
+<ul>
+<li class="chapter" data-level="14.7.1" data-path="rbook-提要.html"><a href="rbook-提要.html#latex-engine"><i class="fa fa-check"></i><b>14.7.1</b> LaTeX Engine</a></li>
+<li class="chapter" data-level="14.7.2" data-path="rbook-提要.html"><a href="rbook-提要.html#註記"><i class="fa fa-check"></i><b>14.7.2</b> 註記</a></li>
+<li class="chapter" data-level="14.7.3" data-path="rbook-提要.html"><a href="rbook-提要.html#custom-templates"><i class="fa fa-check"></i><b>14.7.3</b> Custom Templates</a></li>
+<li class="chapter" data-level="14.7.4" data-path="rbook-提要.html"><a href="rbook-提要.html#pandoc-arguments"><i class="fa fa-check"></i><b>14.7.4</b> Pandoc Arguments</a></li>
+</ul></li>
+<li class="chapter" data-level="14.8" data-path="rbook-提要.html"><a href="rbook-提要.html#共用設定"><i class="fa fa-check"></i><b>14.8</b> 共用設定</a></li>
+<li class="chapter" data-level="14.9" data-path="rbook-提要.html"><a href="rbook-提要.html#客製block"><i class="fa fa-check"></i><b>14.9</b> 客製block</a>
+<ul>
+<li class="chapter" data-level="14.9.1" data-path="rbook-提要.html"><a href="rbook-提要.html#解釋範例"><i class="fa fa-check"></i><b>14.9.1</b> 解釋範例</a></li>
+</ul></li>
+<li class="chapter" data-level="14.10" data-path="programming-in-r.html"><a href="programming-in-r.html#討論"><i class="fa fa-check"></i><b>14.10</b> 討論</a>
+<ul>
+<li class="chapter" data-level="14.10.1" data-path="rbook-提要.html"><a href="rbook-提要.html#publish-to-github"><i class="fa fa-check"></i><b>14.10.1</b> publish to github</a></li>
+<li class="chapter" data-level="14.10.2" data-path="rbook-提要.html"><a href="rbook-提要.html#inline-code"><i class="fa fa-check"></i><b>14.10.2</b> inline code</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -447,10 +545,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="econometrics" class="section level1">
-<h1><span class="header-section-number">Chapter 11</span> Econometrics</h1>
-<div id="package-recommended" class="section level2">
-<h2><span class="header-section-number">11.1</span> package recommended</h2>
+<div id="econometrics" class="section level1" number="12">
+<h1><span class="header-section-number">Chapter 12</span> Econometrics</h1>
+<div id="package-recommended" class="section level2" number="12.1">
+<h2><span class="header-section-number">12.1</span> package recommended</h2>
 <p>package <code>foreign</code> 可以用來導入外部資料例如，
 * stata 的資料 dta,
 * SPSS
@@ -458,13 +556,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * Systat
 * Mini tab . mtp</p>
 <p>利用foreign讀入stata 的資料檔：</p>
-<div class="sourceCode" id="cb684"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb684-1"><a href="econometrics.html#cb684-1"></a><span class="kw">require</span>(foreign)</span>
-<span id="cb684-2"><a href="econometrics.html#cb684-2"></a>affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</span>
-<span id="cb684-3"><a href="econometrics.html#cb684-3"></a><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb703-1"><a href="econometrics.html#cb703-1" aria-hidden="true"></a><span class="kw">require</span>(foreign)</span>
+<span id="cb703-2"><a href="econometrics.html#cb703-2" aria-hidden="true"></a>affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</span>
+<span id="cb703-3"><a href="econometrics.html#cb703-3" aria-hidden="true"></a><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</span></code></pre></div>
 <p>測試</p>
-<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb685-1"><a href="econometrics.html#cb685-1"></a><span class="kw">rm</span>(affairs)</span>
-<span id="cb685-2"><a href="econometrics.html#cb685-2"></a><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</span>
-<span id="cb685-3"><a href="econometrics.html#cb685-3"></a><span class="kw">head</span>(affairs)</span></code></pre></div>
+<div class="sourceCode" id="cb704"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb704-1"><a href="econometrics.html#cb704-1" aria-hidden="true"></a><span class="kw">rm</span>(affairs)</span>
+<span id="cb704-2"><a href="econometrics.html#cb704-2" aria-hidden="true"></a><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</span>
+<span id="cb704-3"><a href="econometrics.html#cb704-3" aria-hidden="true"></a><span class="kw">head</span>(affairs)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  id male age yrsmarr kids relig educ occup ratemarr naffairs affair vryhap
 1  4    1  37    10.0    0     3   18     7        4        0      0      0
 2  5    0  27     4.0    0     4   14     6        4        0      0      0
