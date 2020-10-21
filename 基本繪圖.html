@@ -24,7 +24,7 @@
 <meta name="author" content="lend jwj cen" />
 
 
-<meta name="date" content="2020-10-08" />
+<meta name="date" content="2020-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -608,18 +608,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </table>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-407-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>繪製向量 中的資料</p>
-<div class="sourceCode" id="cb635"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb635-1"><a href="基本繪圖.html#cb635-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
-<span id="cb635-2"><a href="基本繪圖.html#cb635-2" aria-hidden="true"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
-<span id="cb635-3"><a href="基本繪圖.html#cb635-3" aria-hidden="true"></a><span class="kw">plot</span>(x,y,<span class="dt">main=</span><span class="st">&#39;plot(x,y)&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb638"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb638-1"><a href="基本繪圖.html#cb638-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>)</span>
+<span id="cb638-2"><a href="基本繪圖.html#cb638-2" aria-hidden="true"></a>y &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">7</span>,<span class="dv">8</span>)</span>
+<span id="cb638-3"><a href="基本繪圖.html#cb638-3" aria-hidden="true"></a><span class="kw">plot</span>(x,y,<span class="dt">main=</span><span class="st">&#39;plot(x,y)&#39;</span>)</span></code></pre></div>
 <p>繪製data.frame 中的資料</p>
-<div class="sourceCode" id="cb636"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb636-1"><a href="基本繪圖.html#cb636-1" aria-hidden="true"></a><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg) </span>
-<span id="cb636-2"><a href="基本繪圖.html#cb636-2" aria-hidden="true"></a><span class="kw">abline</span>(<span class="kw">lm</span>(mtcars<span class="op">$</span>mpg<span class="op">~</span>mtcars<span class="op">$</span>wt))</span>
-<span id="cb636-3"><a href="基本繪圖.html#cb636-3" aria-hidden="true"></a><span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb639"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb639-1"><a href="基本繪圖.html#cb639-1" aria-hidden="true"></a><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg) </span>
+<span id="cb639-2"><a href="基本繪圖.html#cb639-2" aria-hidden="true"></a><span class="kw">abline</span>(<span class="kw">lm</span>(mtcars<span class="op">$</span>mpg<span class="op">~</span>mtcars<span class="op">$</span>wt))</span>
+<span id="cb639-3"><a href="基本繪圖.html#cb639-3" aria-hidden="true"></a><span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-409-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb637"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb637-1"><a href="基本繪圖.html#cb637-1" aria-hidden="true"></a><span class="kw">attach</span>(mtcars)</span>
-<span id="cb637-2"><a href="基本繪圖.html#cb637-2" aria-hidden="true"></a><span class="kw">plot</span>(wt, mpg) </span>
-<span id="cb637-3"><a href="基本繪圖.html#cb637-3" aria-hidden="true"></a><span class="kw">abline</span>(<span class="kw">lm</span>(mpg<span class="op">~</span>wt))</span>
-<span id="cb637-4"><a href="基本繪圖.html#cb637-4" aria-hidden="true"></a><span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb640"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb640-1"><a href="基本繪圖.html#cb640-1" aria-hidden="true"></a><span class="kw">attach</span>(mtcars)</span>
+<span id="cb640-2"><a href="基本繪圖.html#cb640-2" aria-hidden="true"></a><span class="kw">plot</span>(wt, mpg) </span>
+<span id="cb640-3"><a href="基本繪圖.html#cb640-3" aria-hidden="true"></a><span class="kw">abline</span>(<span class="kw">lm</span>(mpg<span class="op">~</span>wt))</span>
+<span id="cb640-4"><a href="基本繪圖.html#cb640-4" aria-hidden="true"></a><span class="kw">title</span>(<span class="st">&quot;Regression of MPG on Weight&quot;</span>)</span></code></pre></div>
 <p><code>plot()</code>函數，新建視窗然後畫出 weight vs. miles per gallon.<br />
 <code>abline()</code> 不會開啟新視窗做圖，abline()的語法如下:</p>
 <p>abline(a = NULL, b = NULL, h = NULL, v = NULL, reg = NULL,coef = NULL, untf = FALSE, …)<br />
@@ -629,9 +629,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="更多" class="section level3" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> 更多</h3>
-<div class="sourceCode" id="cb638"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb638-1"><a href="基本繪圖.html#cb638-1" aria-hidden="true"></a><span class="kw">require</span>(stats) <span class="co"># for lowess, rpois, rnorm</span></span>
-<span id="cb638-2"><a href="基本繪圖.html#cb638-2" aria-hidden="true"></a><span class="kw">plot</span>(cars)</span>
-<span id="cb638-3"><a href="基本繪圖.html#cb638-3" aria-hidden="true"></a><span class="kw">lines</span>(<span class="kw">lowess</span>(cars))</span></code></pre></div>
+<div class="sourceCode" id="cb641"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb641-1"><a href="基本繪圖.html#cb641-1" aria-hidden="true"></a><span class="kw">require</span>(stats) <span class="co"># for lowess, rpois, rnorm</span></span>
+<span id="cb641-2"><a href="基本繪圖.html#cb641-2" aria-hidden="true"></a><span class="kw">plot</span>(cars)</span>
+<span id="cb641-3"><a href="基本繪圖.html#cb641-3" aria-hidden="true"></a><span class="kw">lines</span>(<span class="kw">lowess</span>(cars))</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-411-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="histograms" class="section level3" number="9.2.3">
@@ -641,28 +641,28 @@ x是一個數字向量，
 選項<code>freq=FALSE</code> 則是畫出 probability densities 而不是次數 frequencies.<br />
 選項：<code>breaks= ##</code> 則是控制分成幾份。</p>
 <p><strong>Simple Histogram</strong></p>
-<div class="sourceCode" id="cb639"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb639-1"><a href="基本繪圖.html#cb639-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span></code></pre></div>
+<div class="sourceCode" id="cb642"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb642-1"><a href="基本繪圖.html#cb642-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-412-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p><strong>分成12份，顏色紅色。</strong></p>
-<div class="sourceCode" id="cb640"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb640-1"><a href="基本繪圖.html#cb640-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb643"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb643-1"><a href="基本繪圖.html#cb643-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-413-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>自行給定分割點</p>
-<div class="sourceCode" id="cb641"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb641-1"><a href="基本繪圖.html#cb641-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">12</span>,<span class="dv">50</span>), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb644"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb644-1"><a href="基本繪圖.html#cb644-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg, <span class="dt">breaks=</span><span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">12</span>,<span class="dv">50</span>), <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-414-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <div id="add-a-normal-curve" class="section level4" number="9.2.3.1">
 <h4><span class="header-section-number">9.2.3.1</span> Add a Normal Curve</h4>
-<div class="sourceCode" id="cb642"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb642-1"><a href="基本繪圖.html#cb642-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg </span>
-<span id="cb642-2"><a href="基本繪圖.html#cb642-2" aria-hidden="true"></a>h&lt;-<span class="kw">hist</span>(x, <span class="dt">breaks=</span><span class="dv">10</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>, </span>
-<span id="cb642-3"><a href="基本繪圖.html#cb642-3" aria-hidden="true"></a>  	<span class="dt">main=</span><span class="st">&quot;Histogram with Normal Curve&quot;</span>) </span>
-<span id="cb642-4"><a href="基本繪圖.html#cb642-4" aria-hidden="true"></a>xfit&lt;-<span class="kw">seq</span>(<span class="kw">min</span>(x),<span class="kw">max</span>(x),<span class="dt">length=</span><span class="dv">40</span>) </span>
-<span id="cb642-5"><a href="基本繪圖.html#cb642-5" aria-hidden="true"></a>yfit&lt;-<span class="kw">dnorm</span>(xfit,<span class="dt">mean=</span><span class="kw">mean</span>(x),<span class="dt">sd=</span><span class="kw">sd</span>(x)) </span>
-<span id="cb642-6"><a href="基本繪圖.html#cb642-6" aria-hidden="true"></a>yfit &lt;-<span class="st"> </span>yfit<span class="op">*</span><span class="kw">diff</span>(h<span class="op">$</span>mids[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])<span class="op">*</span><span class="kw">length</span>(x) </span>
-<span id="cb642-7"><a href="基本繪圖.html#cb642-7" aria-hidden="true"></a><span class="kw">lines</span>(xfit, yfit, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb645"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb645-1"><a href="基本繪圖.html#cb645-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>mtcars<span class="op">$</span>mpg </span>
+<span id="cb645-2"><a href="基本繪圖.html#cb645-2" aria-hidden="true"></a>h&lt;-<span class="kw">hist</span>(x, <span class="dt">breaks=</span><span class="dv">10</span>, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>, </span>
+<span id="cb645-3"><a href="基本繪圖.html#cb645-3" aria-hidden="true"></a>  	<span class="dt">main=</span><span class="st">&quot;Histogram with Normal Curve&quot;</span>) </span>
+<span id="cb645-4"><a href="基本繪圖.html#cb645-4" aria-hidden="true"></a>xfit&lt;-<span class="kw">seq</span>(<span class="kw">min</span>(x),<span class="kw">max</span>(x),<span class="dt">length=</span><span class="dv">40</span>) </span>
+<span id="cb645-5"><a href="基本繪圖.html#cb645-5" aria-hidden="true"></a>yfit&lt;-<span class="kw">dnorm</span>(xfit,<span class="dt">mean=</span><span class="kw">mean</span>(x),<span class="dt">sd=</span><span class="kw">sd</span>(x)) </span>
+<span id="cb645-6"><a href="基本繪圖.html#cb645-6" aria-hidden="true"></a>yfit &lt;-<span class="st"> </span>yfit<span class="op">*</span><span class="kw">diff</span>(h<span class="op">$</span>mids[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>])<span class="op">*</span><span class="kw">length</span>(x) </span>
+<span id="cb645-7"><a href="基本繪圖.html#cb645-7" aria-hidden="true"></a><span class="kw">lines</span>(xfit, yfit, <span class="dt">col=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-415-1.png" width="70%" style="display: block; margin: auto;" />
 hint:
 因為<span class="math inline">\(pdf=\frac{\frac{n}{N}}{bin \quad width}\)</span> 所以<span class="math inline">\(n=pdf\times N \times (bin \quad width)\)</span></p>
 <p>Histograms can be a poor method for determining the shape of a distribution because it is so strongly affected by the number of bins used.</p>
-<div class="sourceCode" id="cb643"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb643-1"><a href="基本繪圖.html#cb643-1" aria-hidden="true"></a>h</span></code></pre></div>
+<div class="sourceCode" id="cb646"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb646-1"><a href="基本繪圖.html#cb646-1" aria-hidden="true"></a>h</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>$breaks
  [1] 10 12 14 16 18 20 22 24 26 28 30 32 34
 
@@ -690,14 +690,14 @@ attr(,"class")
 <div id="kernel-density-plot" class="section level3" number="9.2.4">
 <h3><span class="header-section-number">9.2.4</span> Kernel Density Plot</h3>
 <p>核密度畫圖(Kernal density plots) 用來觀察一個變量，比較有有效率，指令如：<code>plot(density(x))</code> 其中<code>x</code> 是一個數字向量。</p>
-<div class="sourceCode" id="cb644"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb644-1"><a href="基本繪圖.html#cb644-1" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg) <span class="co"># returns the density data </span></span>
-<span id="cb644-2"><a href="基本繪圖.html#cb644-2" aria-hidden="true"></a><span class="kw">plot</span>(d) <span class="co"># plots the results</span></span></code></pre></div>
+<div class="sourceCode" id="cb647"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb647-1"><a href="基本繪圖.html#cb647-1" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg) <span class="co"># returns the density data </span></span>
+<span id="cb647-2"><a href="基本繪圖.html#cb647-2" aria-hidden="true"></a><span class="kw">plot</span>(d) <span class="co"># plots the results</span></span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-417-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <div id="filled-density-plot" class="section level4" number="9.2.4.1">
 <h4><span class="header-section-number">9.2.4.1</span> Filled Density Plot</h4>
-<div class="sourceCode" id="cb645"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb645-1"><a href="基本繪圖.html#cb645-1" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg)</span>
-<span id="cb645-2"><a href="基本繪圖.html#cb645-2" aria-hidden="true"></a><span class="kw">plot</span>(d, <span class="dt">main=</span><span class="st">&quot;Kernel Density of Miles Per Gallon&quot;</span>)</span>
-<span id="cb645-3"><a href="基本繪圖.html#cb645-3" aria-hidden="true"></a><span class="kw">polygon</span>(d, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">border=</span><span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb648"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb648-1"><a href="基本繪圖.html#cb648-1" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="kw">density</span>(mtcars<span class="op">$</span>mpg)</span>
+<span id="cb648-2"><a href="基本繪圖.html#cb648-2" aria-hidden="true"></a><span class="kw">plot</span>(d, <span class="dt">main=</span><span class="st">&quot;Kernel Density of Miles Per Gallon&quot;</span>)</span>
+<span id="cb648-3"><a href="基本繪圖.html#cb648-3" aria-hidden="true"></a><span class="kw">polygon</span>(d, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>, <span class="dt">border=</span><span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-418-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
@@ -775,41 +775,41 @@ attr(,"class")
 Note:
 如果目前有多個圖窗，則一直呼叫這個函數<code>dev.off()</code>，會依次關閉視窗，直到函數傳回NULL。</p>
 <p>驗證上面的說法可以利用</p>
-<div class="sourceCode" id="cb646"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb646-1"><a href="基本繪圖.html#cb646-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
-<span id="cb646-2"><a href="基本繪圖.html#cb646-2" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>png 
-  2 
-</code></pre>
-<div class="sourceCode" id="cb647"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb647-1"><a href="基本繪圖.html#cb647-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
-<span id="cb647-2"><a href="基本繪圖.html#cb647-2" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>png 
-  2 
-</code></pre>
-<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-419-1.png" width="70%" style="display: block; margin: auto;" />
-上面的範例，可以看到圖裝置的編號都是2，也就是多個圖在一個device上。。</p>
-<div class="sourceCode" id="cb648"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb648-1"><a href="基本繪圖.html#cb648-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
-<span id="cb648-2"><a href="基本繪圖.html#cb648-2" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
-<pre style="border: 1px grey dotted;"><code>png 
-  2 
-</code></pre>
 <div class="sourceCode" id="cb649"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb649-1"><a href="基本繪圖.html#cb649-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
 <span id="cb649-2"><a href="基本繪圖.html#cb649-2" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>png 
   2 
 </code></pre>
-<div class="sourceCode" id="cb650"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb650-1"><a href="基本繪圖.html#cb650-1" aria-hidden="true"></a><span class="kw">dev.off</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb650"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb650-1"><a href="基本繪圖.html#cb650-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
+<span id="cb650-2"><a href="基本繪圖.html#cb650-2" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<p><img src="rmi_class_r_files/figure-html/unnamed-chunk-419-1.png" width="70%" style="display: block; margin: auto;" />
+上面的範例，可以看到圖裝置的編號都是2，也就是多個圖在一個device上。。</p>
+<div class="sourceCode" id="cb651"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb651-1"><a href="基本繪圖.html#cb651-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
+<span id="cb651-2"><a href="基本繪圖.html#cb651-2" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode" id="cb652"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb652-1"><a href="基本繪圖.html#cb652-1" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
+<span id="cb652-2"><a href="基本繪圖.html#cb652-2" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
+<pre style="border: 1px grey dotted;"><code>png 
+  2 
+</code></pre>
+<div class="sourceCode" id="cb653"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb653-1"><a href="基本繪圖.html#cb653-1" aria-hidden="true"></a><span class="kw">dev.off</span>()</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>null device 
           1 
 </code></pre>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-420-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>討論下面的輸出結果，我只看到一個視窗：
 hint: 無法在rmarkdown 執行？確認，在rscript中執行正常。</p>
-<div class="sourceCode" id="cb651"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb651-1"><a href="基本繪圖.html#cb651-1" aria-hidden="true"></a><span class="kw">X11</span>()</span>
-<span id="cb651-2"><a href="基本繪圖.html#cb651-2" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
-<span id="cb651-3"><a href="基本繪圖.html#cb651-3" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span>
-<span id="cb651-4"><a href="基本繪圖.html#cb651-4" aria-hidden="true"></a><span class="kw">X11</span>()</span>
-<span id="cb651-5"><a href="基本繪圖.html#cb651-5" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
-<span id="cb651-6"><a href="基本繪圖.html#cb651-6" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb654"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb654-1"><a href="基本繪圖.html#cb654-1" aria-hidden="true"></a><span class="kw">X11</span>()</span>
+<span id="cb654-2"><a href="基本繪圖.html#cb654-2" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
+<span id="cb654-3"><a href="基本繪圖.html#cb654-3" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span>
+<span id="cb654-4"><a href="基本繪圖.html#cb654-4" aria-hidden="true"></a><span class="kw">X11</span>()</span>
+<span id="cb654-5"><a href="基本繪圖.html#cb654-5" aria-hidden="true"></a><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg)</span>
+<span id="cb654-6"><a href="基本繪圖.html#cb654-6" aria-hidden="true"></a><span class="kw">dev.cur</span>()</span></code></pre></div>
 <p>測試</p>
 <pre><code>dev.new()
 plot(1:1)
@@ -834,21 +834,21 @@ mfcol=c(nrows, ncols) 填入的方向為直行。</p>
 線條形式<code>type</code>的幾種基本類型</p>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-423-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>範例</p>
-<div class="sourceCode" id="cb653"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb653-1"><a href="基本繪圖.html#cb653-1" aria-hidden="true"></a><span class="co">#attach(mtcars)</span></span>
-<span id="cb653-2"><a href="基本繪圖.html#cb653-2" aria-hidden="true"></a></span>
-<span id="cb653-3"><a href="基本繪圖.html#cb653-3" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
-<span id="cb653-4"><a href="基本繪圖.html#cb653-4" aria-hidden="true"></a><span class="kw">plot</span>(wt,mpg, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs. mpg&quot;</span>)</span>
-<span id="cb653-5"><a href="基本繪圖.html#cb653-5" aria-hidden="true"></a><span class="kw">plot</span>(wt,disp, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs disp&quot;</span>)</span>
-<span id="cb653-6"><a href="基本繪圖.html#cb653-6" aria-hidden="true"></a><span class="kw">hist</span>(wt, <span class="dt">main=</span><span class="st">&quot;Histogram of wt&quot;</span>)</span>
-<span id="cb653-7"><a href="基本繪圖.html#cb653-7" aria-hidden="true"></a><span class="kw">boxplot</span>(wt, <span class="dt">main=</span><span class="st">&quot;Boxplot of wt&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb656"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb656-1"><a href="基本繪圖.html#cb656-1" aria-hidden="true"></a><span class="co">#attach(mtcars)</span></span>
+<span id="cb656-2"><a href="基本繪圖.html#cb656-2" aria-hidden="true"></a></span>
+<span id="cb656-3"><a href="基本繪圖.html#cb656-3" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb656-4"><a href="基本繪圖.html#cb656-4" aria-hidden="true"></a><span class="kw">plot</span>(wt,mpg, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs. mpg&quot;</span>)</span>
+<span id="cb656-5"><a href="基本繪圖.html#cb656-5" aria-hidden="true"></a><span class="kw">plot</span>(wt,disp, <span class="dt">main=</span><span class="st">&quot;Scatterplot of wt vs disp&quot;</span>)</span>
+<span id="cb656-6"><a href="基本繪圖.html#cb656-6" aria-hidden="true"></a><span class="kw">hist</span>(wt, <span class="dt">main=</span><span class="st">&quot;Histogram of wt&quot;</span>)</span>
+<span id="cb656-7"><a href="基本繪圖.html#cb656-7" aria-hidden="true"></a><span class="kw">boxplot</span>(wt, <span class="dt">main=</span><span class="st">&quot;Boxplot of wt&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-426-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>1x3 layout</p>
-<div class="sourceCode" id="cb654"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb654-1"><a href="基本繪圖.html#cb654-1" aria-hidden="true"></a><span class="co"># attach(mtcars)</span></span>
-<span id="cb654-2"><a href="基本繪圖.html#cb654-2" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)) </span>
-<span id="cb654-3"><a href="基本繪圖.html#cb654-3" aria-hidden="true"></a><span class="kw">hist</span>(wt)</span>
-<span id="cb654-4"><a href="基本繪圖.html#cb654-4" aria-hidden="true"></a><span class="kw">hist</span>(mpg)</span>
-<span id="cb654-5"><a href="基本繪圖.html#cb654-5" aria-hidden="true"></a><span class="kw">hist</span>(disp)</span>
-<span id="cb654-6"><a href="基本繪圖.html#cb654-6" aria-hidden="true"></a><span class="co">#dev.off()</span></span></code></pre></div>
+<div class="sourceCode" id="cb657"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb657-1"><a href="基本繪圖.html#cb657-1" aria-hidden="true"></a><span class="co"># attach(mtcars)</span></span>
+<span id="cb657-2"><a href="基本繪圖.html#cb657-2" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">mfrow=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)) </span>
+<span id="cb657-3"><a href="基本繪圖.html#cb657-3" aria-hidden="true"></a><span class="kw">hist</span>(wt)</span>
+<span id="cb657-4"><a href="基本繪圖.html#cb657-4" aria-hidden="true"></a><span class="kw">hist</span>(mpg)</span>
+<span id="cb657-5"><a href="基本繪圖.html#cb657-5" aria-hidden="true"></a><span class="kw">hist</span>(disp)</span>
+<span id="cb657-6"><a href="基本繪圖.html#cb657-6" aria-hidden="true"></a><span class="co">#dev.off()</span></span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-428-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <div class="sidebar">
 <p>note:
@@ -860,20 +860,20 @@ par(mar=c(1,1,1,1)) 更動margin</p>
 <p>默認的畫布上邊款的距離為：
 預設為 c(5, 4, 4, 2) + 0.1. 對應 c(bottom, left, top, right)，也就是順時針，由下到右結束一圈。</p>
 <p>我們可以將其設置為0，同時將目前的設定紀錄，後面程式的第一行</p>
-<div class="sourceCode" id="cb655"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb655-1"><a href="基本繪圖.html#cb655-1" aria-hidden="true"></a>op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))   <span class="co"># op 會紀錄之前的margin = 5.1 4.1 4.1 2.1  </span></span>
-<span id="cb655-2"><a href="基本繪圖.html#cb655-2" aria-hidden="true"></a><span class="kw">plot.new</span>() <span class="co"># 畫圖   </span></span>
-<span id="cb655-3"><a href="基本繪圖.html#cb655-3" aria-hidden="true"></a><span class="kw">par</span>(op) <span class="co"># 改回原先的margin  </span></span></code></pre></div>
+<div class="sourceCode" id="cb658"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb658-1"><a href="基本繪圖.html#cb658-1" aria-hidden="true"></a>op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>))   <span class="co"># op 會紀錄之前的margin = 5.1 4.1 4.1 2.1  </span></span>
+<span id="cb658-2"><a href="基本繪圖.html#cb658-2" aria-hidden="true"></a><span class="kw">plot.new</span>() <span class="co"># 畫圖   </span></span>
+<span id="cb658-3"><a href="基本繪圖.html#cb658-3" aria-hidden="true"></a><span class="kw">par</span>(op) <span class="co"># 改回原先的margin  </span></span></code></pre></div>
 </div>
 <div class="sidebar">
 <p>是不是有需要寫個新函數，用來重設裝置參數？
 下面這個函數<code>resetPar()</code>重新設定device: 主要試看這一行:<code>par(no.readonly = TRUE)</code>。
 意思是說，不要紀錄 readonly的設定。</p>
-<div class="sourceCode" id="cb656"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb656-1"><a href="基本繪圖.html#cb656-1" aria-hidden="true"></a>resetPar &lt;-<span class="st"> </span><span class="cf">function</span>() {</span>
-<span id="cb656-2"><a href="基本繪圖.html#cb656-2" aria-hidden="true"></a>    <span class="kw">dev.new</span>() <span class="co">#重新開始一個裝置</span></span>
-<span id="cb656-3"><a href="基本繪圖.html#cb656-3" aria-hidden="true"></a>    op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">no.readonly =</span> <span class="ot">TRUE</span>)<span class="co">#因為是新的，所以裡面的設定都是預設值</span></span>
-<span id="cb656-4"><a href="基本繪圖.html#cb656-4" aria-hidden="true"></a>    <span class="kw">dev.off</span>()<span class="co"># 只是把之前的新裝置關掉</span></span>
-<span id="cb656-5"><a href="基本繪圖.html#cb656-5" aria-hidden="true"></a>    op <span class="co"># 傳回預設值</span></span>
-<span id="cb656-6"><a href="基本繪圖.html#cb656-6" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb659"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb659-1"><a href="基本繪圖.html#cb659-1" aria-hidden="true"></a>resetPar &lt;-<span class="st"> </span><span class="cf">function</span>() {</span>
+<span id="cb659-2"><a href="基本繪圖.html#cb659-2" aria-hidden="true"></a>    <span class="kw">dev.new</span>() <span class="co">#重新開始一個裝置</span></span>
+<span id="cb659-3"><a href="基本繪圖.html#cb659-3" aria-hidden="true"></a>    op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">no.readonly =</span> <span class="ot">TRUE</span>)<span class="co">#因為是新的，所以裡面的設定都是預設值</span></span>
+<span id="cb659-4"><a href="基本繪圖.html#cb659-4" aria-hidden="true"></a>    <span class="kw">dev.off</span>()<span class="co"># 只是把之前的新裝置關掉</span></span>
+<span id="cb659-5"><a href="基本繪圖.html#cb659-5" aria-hidden="true"></a>    op <span class="co"># 傳回預設值</span></span>
+<span id="cb659-6"><a href="基本繪圖.html#cb659-6" aria-hidden="true"></a>}</span></code></pre></div>
 <p>其他用法
 par() # view current settings
 opar &lt;- par() # make a copy of current settings
@@ -882,17 +882,17 @@ hist(mtcars$mpg) # create a plot with these new settings
 par(opar) # restore original settings</p>
 </div>
 <p>更多的圖形控制: 在散佈圖中加入boxplot</p>
-<div class="sourceCode" id="cb657"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb657-1"><a href="基本繪圖.html#cb657-1" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">mar=</span><span class="kw">rep</span>(<span class="dv">2</span>,<span class="dv">4</span>))</span>
-<span id="cb657-2"><a href="基本繪圖.html#cb657-2" aria-hidden="true"></a><span class="co"># 整個圖的座標，想成左下角(0,0)右上角(1,1)</span></span>
-<span id="cb657-3"><a href="基本繪圖.html#cb657-3" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="dv">0</span>,<span class="fl">0.8</span>))<span class="co">#左下(0,0)右上(0.8,0.8)</span></span>
-<span id="cb657-4"><a href="基本繪圖.html#cb657-4" aria-hidden="true"></a><span class="co">#左下(x1,y1)右上(x2,y2) =&gt; c(x1,x2,y1,y2)</span></span>
-<span id="cb657-5"><a href="基本繪圖.html#cb657-5" aria-hidden="true"></a><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg, <span class="dt">xlab=</span><span class="st">&quot;Car Weight&quot;</span>,</span>
-<span id="cb657-6"><a href="基本繪圖.html#cb657-6" aria-hidden="true"></a>  <span class="dt">ylab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</span>
-<span id="cb657-7"><a href="基本繪圖.html#cb657-7" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.55</span>,<span class="dv">1</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</span>
-<span id="cb657-8"><a href="基本繪圖.html#cb657-8" aria-hidden="true"></a><span class="kw">boxplot</span>(mtcars<span class="op">$</span>wt, <span class="dt">horizontal=</span><span class="ot">TRUE</span>, <span class="dt">axes=</span><span class="ot">FALSE</span>)</span>
-<span id="cb657-9"><a href="基本繪圖.html#cb657-9" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="fl">0.65</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="fl">0.8</span>),<span class="dt">new=</span><span class="ot">TRUE</span>)</span>
-<span id="cb657-10"><a href="基本繪圖.html#cb657-10" aria-hidden="true"></a><span class="kw">boxplot</span>(mtcars<span class="op">$</span>mpg, <span class="dt">axes=</span><span class="ot">FALSE</span>)</span>
-<span id="cb657-11"><a href="基本繪圖.html#cb657-11" aria-hidden="true"></a><span class="kw">mtext</span>(<span class="st">&quot;Enhanced Scatterplot&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>, <span class="dt">outer=</span><span class="ot">TRUE</span>, <span class="dt">line=</span><span class="op">-</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb660"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb660-1"><a href="基本繪圖.html#cb660-1" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">mar=</span><span class="kw">rep</span>(<span class="dv">2</span>,<span class="dv">4</span>))</span>
+<span id="cb660-2"><a href="基本繪圖.html#cb660-2" aria-hidden="true"></a><span class="co"># 整個圖的座標，想成左下角(0,0)右上角(1,1)</span></span>
+<span id="cb660-3"><a href="基本繪圖.html#cb660-3" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="dv">0</span>,<span class="fl">0.8</span>))<span class="co">#左下(0,0)右上(0.8,0.8)</span></span>
+<span id="cb660-4"><a href="基本繪圖.html#cb660-4" aria-hidden="true"></a><span class="co">#左下(x1,y1)右上(x2,y2) =&gt; c(x1,x2,y1,y2)</span></span>
+<span id="cb660-5"><a href="基本繪圖.html#cb660-5" aria-hidden="true"></a><span class="kw">plot</span>(mtcars<span class="op">$</span>wt, mtcars<span class="op">$</span>mpg, <span class="dt">xlab=</span><span class="st">&quot;Car Weight&quot;</span>,</span>
+<span id="cb660-6"><a href="基本繪圖.html#cb660-6" aria-hidden="true"></a>  <span class="dt">ylab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</span>
+<span id="cb660-7"><a href="基本繪圖.html#cb660-7" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.8</span>,<span class="fl">0.55</span>,<span class="dv">1</span>), <span class="dt">new=</span><span class="ot">TRUE</span>)</span>
+<span id="cb660-8"><a href="基本繪圖.html#cb660-8" aria-hidden="true"></a><span class="kw">boxplot</span>(mtcars<span class="op">$</span>wt, <span class="dt">horizontal=</span><span class="ot">TRUE</span>, <span class="dt">axes=</span><span class="ot">FALSE</span>)</span>
+<span id="cb660-9"><a href="基本繪圖.html#cb660-9" aria-hidden="true"></a><span class="kw">par</span>(<span class="dt">fig=</span><span class="kw">c</span>(<span class="fl">0.65</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="fl">0.8</span>),<span class="dt">new=</span><span class="ot">TRUE</span>)</span>
+<span id="cb660-10"><a href="基本繪圖.html#cb660-10" aria-hidden="true"></a><span class="kw">boxplot</span>(mtcars<span class="op">$</span>mpg, <span class="dt">axes=</span><span class="ot">FALSE</span>)</span>
+<span id="cb660-11"><a href="基本繪圖.html#cb660-11" aria-hidden="true"></a><span class="kw">mtext</span>(<span class="st">&quot;Enhanced Scatterplot&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>, <span class="dt">outer=</span><span class="ot">TRUE</span>, <span class="dt">line=</span><span class="op">-</span><span class="dv">3</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-431-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p><strong>練習1</strong><br />
 讓下面兩個圖不重疊
@@ -910,14 +910,14 @@ mat 的元素用來指定圖形號碼。例如分成4個格子,順序為左右�
 | 1 | 1 |
 |—|—|
 | 2 | 3 |</p>
-<div class="sourceCode" id="cb658"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb658-1"><a href="基本繪圖.html#cb658-1" aria-hidden="true"></a><span class="co"># One figure in row 1 and two figures in row 2</span></span>
-<span id="cb658-2"><a href="基本繪圖.html#cb658-2" aria-hidden="true"></a></span>
-<span id="cb658-3"><a href="基本繪圖.html#cb658-3" aria-hidden="true"></a><span class="co">#attach(mtcars)</span></span>
-<span id="cb658-4"><a href="基本繪圖.html#cb658-4" aria-hidden="true"></a><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb658-5"><a href="基本繪圖.html#cb658-5" aria-hidden="true"></a><span class="kw">hist</span>(wt)</span>
-<span id="cb658-6"><a href="基本繪圖.html#cb658-6" aria-hidden="true"></a><span class="kw">hist</span>(mpg)</span>
-<span id="cb658-7"><a href="基本繪圖.html#cb658-7" aria-hidden="true"></a><span class="kw">hist</span>(disp)</span>
-<span id="cb658-8"><a href="基本繪圖.html#cb658-8" aria-hidden="true"></a><span class="co">#dev.off()</span></span></code></pre></div>
+<div class="sourceCode" id="cb661"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb661-1"><a href="基本繪圖.html#cb661-1" aria-hidden="true"></a><span class="co"># One figure in row 1 and two figures in row 2</span></span>
+<span id="cb661-2"><a href="基本繪圖.html#cb661-2" aria-hidden="true"></a></span>
+<span id="cb661-3"><a href="基本繪圖.html#cb661-3" aria-hidden="true"></a><span class="co">#attach(mtcars)</span></span>
+<span id="cb661-4"><a href="基本繪圖.html#cb661-4" aria-hidden="true"></a><span class="kw">layout</span>(<span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>, <span class="dt">byrow =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb661-5"><a href="基本繪圖.html#cb661-5" aria-hidden="true"></a><span class="kw">hist</span>(wt)</span>
+<span id="cb661-6"><a href="基本繪圖.html#cb661-6" aria-hidden="true"></a><span class="kw">hist</span>(mpg)</span>
+<span id="cb661-7"><a href="基本繪圖.html#cb661-7" aria-hidden="true"></a><span class="kw">hist</span>(disp)</span>
+<span id="cb661-8"><a href="基本繪圖.html#cb661-8" aria-hidden="true"></a><span class="co">#dev.off()</span></span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-434-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>在<code>layout()</code>函數中，也可以更改圖形大小，其參數 為：
 widths= 數字向量，用來代表column 寬度
@@ -929,11 +929,11 @@ heights= 數字向量，用來代表row 高度</p>
 <h3><span class="header-section-number">9.3.3</span> 疊圖</h3>
 <p>有些繪圖指令的選項，可以利用<code>add=T</code>。</p>
 <p>💥 plot指令不支援<code>add=T</code></p>
-<div class="sourceCode" id="cb659"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb659-1"><a href="基本繪圖.html#cb659-1" aria-hidden="true"></a><span class="kw">curve</span>( <span class="kw">dnorm</span>(x,<span class="dv">0</span>,<span class="dv">1</span>), <span class="dv">-5</span> , <span class="dv">5</span>, <span class="dt">lwd=</span><span class="dv">1</span>, <span class="dt">lty=</span><span class="dv">1</span>)</span>
-<span id="cb659-2"><a href="基本繪圖.html#cb659-2" aria-hidden="true"></a><span class="kw">curve</span>( <span class="kw">dnorm</span>(x,<span class="dv">0</span>,<span class="dv">2</span>),<span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">lwd=</span><span class="dv">2</span>, <span class="dt">lty=</span><span class="dv">2</span>)</span>
-<span id="cb659-3"><a href="基本繪圖.html#cb659-3" aria-hidden="true"></a><span class="kw">curve</span>( <span class="kw">dnorm</span>(x,<span class="dv">0</span>,<span class="dv">3</span>) , <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">lwd=</span><span class="dv">3</span>, <span class="dt">lty=</span><span class="dv">3</span>)</span>
-<span id="cb659-4"><a href="基本繪圖.html#cb659-4" aria-hidden="true"></a><span class="co"># Add the legend</span></span>
-<span id="cb659-5"><a href="基本繪圖.html#cb659-5" aria-hidden="true"></a><span class="kw">legend</span>( <span class="st">&quot;topright&quot;</span>,<span class="kw">c</span>(<span class="st">&quot;sigma=1&quot;</span>,<span class="st">&quot;sigma=2&quot;</span>,<span class="st">&quot;sigma=3&quot;</span>) , <span class="dt">lwd=</span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">lty=</span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb662"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb662-1"><a href="基本繪圖.html#cb662-1" aria-hidden="true"></a><span class="kw">curve</span>( <span class="kw">dnorm</span>(x,<span class="dv">0</span>,<span class="dv">1</span>), <span class="dv">-5</span> , <span class="dv">5</span>, <span class="dt">lwd=</span><span class="dv">1</span>, <span class="dt">lty=</span><span class="dv">1</span>)</span>
+<span id="cb662-2"><a href="基本繪圖.html#cb662-2" aria-hidden="true"></a><span class="kw">curve</span>( <span class="kw">dnorm</span>(x,<span class="dv">0</span>,<span class="dv">2</span>),<span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">lwd=</span><span class="dv">2</span>, <span class="dt">lty=</span><span class="dv">2</span>)</span>
+<span id="cb662-3"><a href="基本繪圖.html#cb662-3" aria-hidden="true"></a><span class="kw">curve</span>( <span class="kw">dnorm</span>(x,<span class="dv">0</span>,<span class="dv">3</span>) , <span class="dt">add=</span><span class="ot">TRUE</span>, <span class="dt">lwd=</span><span class="dv">3</span>, <span class="dt">lty=</span><span class="dv">3</span>)</span>
+<span id="cb662-4"><a href="基本繪圖.html#cb662-4" aria-hidden="true"></a><span class="co"># Add the legend</span></span>
+<span id="cb662-5"><a href="基本繪圖.html#cb662-5" aria-hidden="true"></a><span class="kw">legend</span>( <span class="st">&quot;topright&quot;</span>,<span class="kw">c</span>(<span class="st">&quot;sigma=1&quot;</span>,<span class="st">&quot;sigma=2&quot;</span>,<span class="st">&quot;sigma=3&quot;</span>) , <span class="dt">lwd=</span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>, <span class="dt">lty=</span><span class="dv">1</span><span class="op">:</span><span class="dv">3</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-435-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
@@ -944,20 +944,20 @@ heights= 數字向量，用來代表row 高度</p>
 <p>The sm.density.compare( ) function in the sm package allows you to superimpose the kernal density plots of two or more groups. The format is sm.density.compare(x, factor) where x is a numeric vector and factor is the grouping variable.</p>
 <div id="compare-mpg-distributions-for-cars-with-46-or-8-cylinders" class="section level4" number="9.4.1.1">
 <h4><span class="header-section-number">9.4.1.1</span> Compare MPG distributions for cars with 4,6, or 8 cylinders</h4>
-<div class="sourceCode" id="cb660"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb660-1"><a href="基本繪圖.html#cb660-1" aria-hidden="true"></a><span class="kw">library</span>(sm)</span>
-<span id="cb660-2"><a href="基本繪圖.html#cb660-2" aria-hidden="true"></a><span class="kw">attach</span>(mtcars)</span>
-<span id="cb660-3"><a href="基本繪圖.html#cb660-3" aria-hidden="true"></a></span>
-<span id="cb660-4"><a href="基本繪圖.html#cb660-4" aria-hidden="true"></a><span class="co">#create value labels </span></span>
-<span id="cb660-5"><a href="基本繪圖.html#cb660-5" aria-hidden="true"></a>cyl.f &lt;-<span class="st"> </span><span class="kw">factor</span>(cyl, <span class="dt">levels=</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),</span>
-<span id="cb660-6"><a href="基本繪圖.html#cb660-6" aria-hidden="true"></a>  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;4 cylinder&quot;</span>, <span class="st">&quot;6 cylinder&quot;</span>, <span class="st">&quot;8 cylinder&quot;</span>)) </span>
-<span id="cb660-7"><a href="基本繪圖.html#cb660-7" aria-hidden="true"></a></span>
-<span id="cb660-8"><a href="基本繪圖.html#cb660-8" aria-hidden="true"></a><span class="co">#plot densities </span></span>
-<span id="cb660-9"><a href="基本繪圖.html#cb660-9" aria-hidden="true"></a><span class="kw">sm.density.compare</span>(mpg, cyl, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</span>
-<span id="cb660-10"><a href="基本繪圖.html#cb660-10" aria-hidden="true"></a><span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;MPG Distribution by Car Cylinders&quot;</span>)</span>
-<span id="cb660-11"><a href="基本繪圖.html#cb660-11" aria-hidden="true"></a></span>
-<span id="cb660-12"><a href="基本繪圖.html#cb660-12" aria-hidden="true"></a><span class="co">#add legend via mouse click</span></span>
-<span id="cb660-13"><a href="基本繪圖.html#cb660-13" aria-hidden="true"></a>colfill&lt;-<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span>(<span class="dv">2</span><span class="op">+</span><span class="kw">length</span>(<span class="kw">levels</span>(cyl.f)))) </span>
-<span id="cb660-14"><a href="基本繪圖.html#cb660-14" aria-hidden="true"></a><span class="kw">legend</span>(<span class="kw">locator</span>(<span class="dv">1</span>), <span class="kw">levels</span>(cyl.f), <span class="dt">fill=</span>colfill)</span></code></pre></div>
+<div class="sourceCode" id="cb663"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb663-1"><a href="基本繪圖.html#cb663-1" aria-hidden="true"></a><span class="kw">library</span>(sm)</span>
+<span id="cb663-2"><a href="基本繪圖.html#cb663-2" aria-hidden="true"></a><span class="kw">attach</span>(mtcars)</span>
+<span id="cb663-3"><a href="基本繪圖.html#cb663-3" aria-hidden="true"></a></span>
+<span id="cb663-4"><a href="基本繪圖.html#cb663-4" aria-hidden="true"></a><span class="co">#create value labels </span></span>
+<span id="cb663-5"><a href="基本繪圖.html#cb663-5" aria-hidden="true"></a>cyl.f &lt;-<span class="st"> </span><span class="kw">factor</span>(cyl, <span class="dt">levels=</span> <span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">8</span>),</span>
+<span id="cb663-6"><a href="基本繪圖.html#cb663-6" aria-hidden="true"></a>  <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;4 cylinder&quot;</span>, <span class="st">&quot;6 cylinder&quot;</span>, <span class="st">&quot;8 cylinder&quot;</span>)) </span>
+<span id="cb663-7"><a href="基本繪圖.html#cb663-7" aria-hidden="true"></a></span>
+<span id="cb663-8"><a href="基本繪圖.html#cb663-8" aria-hidden="true"></a><span class="co">#plot densities </span></span>
+<span id="cb663-9"><a href="基本繪圖.html#cb663-9" aria-hidden="true"></a><span class="kw">sm.density.compare</span>(mpg, cyl, <span class="dt">xlab=</span><span class="st">&quot;Miles Per Gallon&quot;</span>)</span>
+<span id="cb663-10"><a href="基本繪圖.html#cb663-10" aria-hidden="true"></a><span class="kw">title</span>(<span class="dt">main=</span><span class="st">&quot;MPG Distribution by Car Cylinders&quot;</span>)</span>
+<span id="cb663-11"><a href="基本繪圖.html#cb663-11" aria-hidden="true"></a></span>
+<span id="cb663-12"><a href="基本繪圖.html#cb663-12" aria-hidden="true"></a><span class="co">#add legend via mouse click</span></span>
+<span id="cb663-13"><a href="基本繪圖.html#cb663-13" aria-hidden="true"></a>colfill&lt;-<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span>(<span class="dv">2</span><span class="op">+</span><span class="kw">length</span>(<span class="kw">levels</span>(cyl.f)))) </span>
+<span id="cb663-14"><a href="基本繪圖.html#cb663-14" aria-hidden="true"></a><span class="kw">legend</span>(<span class="kw">locator</span>(<span class="dv">1</span>), <span class="kw">levels</span>(cyl.f), <span class="dt">fill=</span>colfill)</span></code></pre></div>
 <p><img src="diagrams/class/mpg_plot01.png" /></p>
 
 </div>
@@ -972,12 +972,12 @@ labels: 例如 “a label”
 pos: 下左上右，1234
 cex: 放大倍數，例如，0.65。
 範例 :</p>
-<div class="sourceCode" id="cb661"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb661-1"><a href="基本繪圖.html#cb661-1" aria-hidden="true"></a>d&lt;-<span class="kw">head</span>(mtcars)</span>
-<span id="cb661-2"><a href="基本繪圖.html#cb661-2" aria-hidden="true"></a><span class="kw">plot</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>], </span>
-<span id="cb661-3"><a href="基本繪圖.html#cb661-3" aria-hidden="true"></a>     <span class="dt">main=</span><span class="st">&quot;Milage vs. Car Weight</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~~~~~~~~~&quot;</span>,</span>
-<span id="cb661-4"><a href="基本繪圖.html#cb661-4" aria-hidden="true"></a>      <span class="dt">xlab=</span><span class="st">&quot;Weight&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Miles/(US) gallon&quot;</span>,</span>
-<span id="cb661-5"><a href="基本繪圖.html#cb661-5" aria-hidden="true"></a>      <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)</span>
-<span id="cb661-6"><a href="基本繪圖.html#cb661-6" aria-hidden="true"></a><span class="kw">text</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>],  <span class="kw">row.names</span>(d),     <span class="dt">cex=</span><span class="dv">1</span>,<span class="dt">pos=</span><span class="dv">3</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb664"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb664-1"><a href="基本繪圖.html#cb664-1" aria-hidden="true"></a>d&lt;-<span class="kw">head</span>(mtcars)</span>
+<span id="cb664-2"><a href="基本繪圖.html#cb664-2" aria-hidden="true"></a><span class="kw">plot</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>], </span>
+<span id="cb664-3"><a href="基本繪圖.html#cb664-3" aria-hidden="true"></a>     <span class="dt">main=</span><span class="st">&quot;Milage vs. Car Weight</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~~~~~~~~~&quot;</span>,</span>
+<span id="cb664-4"><a href="基本繪圖.html#cb664-4" aria-hidden="true"></a>      <span class="dt">xlab=</span><span class="st">&quot;Weight&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Miles/(US) gallon&quot;</span>,</span>
+<span id="cb664-5"><a href="基本繪圖.html#cb664-5" aria-hidden="true"></a>      <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkgreen&quot;</span>)</span>
+<span id="cb664-6"><a href="基本繪圖.html#cb664-6" aria-hidden="true"></a><span class="kw">text</span>(d[,<span class="st">&#39;wt&#39;</span>], d[,<span class="st">&#39;mpg&#39;</span>],  <span class="kw">row.names</span>(d),     <span class="dt">cex=</span><span class="dv">1</span>,<span class="dt">pos=</span><span class="dv">3</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>) </span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-439-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <div id="add-text-in-the-margins-of-the-graph" class="section level3" number="9.5.1">
 <h3><span class="header-section-number">9.5.1</span> Add text in the margins of the graph</h3>
@@ -991,67 +991,67 @@ side : 哪一側 :<br />
 3: 上
 4: 又</p>
 <p>範例 :</p>
-<div class="sourceCode" id="cb662"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb662-1"><a href="基本繪圖.html#cb662-1" aria-hidden="true"></a><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </span>
-<span id="cb662-2"><a href="基本繪圖.html#cb662-2" aria-hidden="true"></a>     <span class="dt">main=</span><span class="st">&quot;mtext(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</span>
-<span id="cb662-3"><a href="基本繪圖.html#cb662-3" aria-hidden="true"></a><span class="kw">mtext</span>(<span class="st">&quot;Magic function&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb665"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb665-1"><a href="基本繪圖.html#cb665-1" aria-hidden="true"></a><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </span>
+<span id="cb665-2"><a href="基本繪圖.html#cb665-2" aria-hidden="true"></a>     <span class="dt">main=</span><span class="st">&quot;mtext(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</span>
+<span id="cb665-3"><a href="基本繪圖.html#cb665-3" aria-hidden="true"></a><span class="kw">mtext</span>(<span class="st">&quot;Magic function&quot;</span>, <span class="dt">side=</span><span class="dv">3</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-440-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="add-mathematical-annotation-to-a-plot" class="section level3" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> Add mathematical annotation to a plot</h3>
-<div class="sourceCode" id="cb663"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb663-1"><a href="基本繪圖.html#cb663-1" aria-hidden="true"></a><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </span>
-<span id="cb663-2"><a href="基本繪圖.html#cb663-2" aria-hidden="true"></a>     <span class="dt">main=</span><span class="st">&quot;text(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</span>
-<span id="cb663-3"><a href="基本繪圖.html#cb663-3" aria-hidden="true"></a><span class="kw">text</span>(<span class="dv">4</span>, <span class="dv">9</span>, <span class="kw">expression</span>(<span class="kw">hat</span>(beta) <span class="op">==</span><span class="st"> </span>(X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>X)<span class="op">^</span>{<span class="op">-</span><span class="dv">1</span>} <span class="op">*</span><span class="st"> </span>X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>y))</span>
-<span id="cb663-4"><a href="基本繪圖.html#cb663-4" aria-hidden="true"></a><span class="kw">text</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="kw">expression</span>(<span class="kw">bar</span>(x) <span class="op">==</span><span class="st"> </span><span class="kw">sum</span>(<span class="kw">frac</span>(x[i], n), i<span class="op">==</span><span class="dv">1</span>, n)))</span></code></pre></div>
+<div class="sourceCode" id="cb666"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb666-1"><a href="基本繪圖.html#cb666-1" aria-hidden="true"></a><span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, </span>
+<span id="cb666-2"><a href="基本繪圖.html#cb666-2" aria-hidden="true"></a>     <span class="dt">main=</span><span class="st">&quot;text(...) examples</span><span class="ch">\n</span><span class="st">~~~~~~~~~~~&quot;</span>)</span>
+<span id="cb666-3"><a href="基本繪圖.html#cb666-3" aria-hidden="true"></a><span class="kw">text</span>(<span class="dv">4</span>, <span class="dv">9</span>, <span class="kw">expression</span>(<span class="kw">hat</span>(beta) <span class="op">==</span><span class="st"> </span>(X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>X)<span class="op">^</span>{<span class="op">-</span><span class="dv">1</span>} <span class="op">*</span><span class="st"> </span>X<span class="op">^</span>t <span class="op">*</span><span class="st"> </span>y))</span>
+<span id="cb666-4"><a href="基本繪圖.html#cb666-4" aria-hidden="true"></a><span class="kw">text</span>(<span class="dv">7</span>, <span class="dv">4</span>, <span class="kw">expression</span>(<span class="kw">bar</span>(x) <span class="op">==</span><span class="st"> </span><span class="kw">sum</span>(<span class="kw">frac</span>(x[i], n), i<span class="op">==</span><span class="dv">1</span>, n)))</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-441-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="函數畫圖" class="section level2" number="9.6">
 <h2><span class="header-section-number">9.6</span> 函數畫圖</h2>
-<div class="sourceCode" id="cb664"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb664-1"><a href="基本繪圖.html#cb664-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
-<span id="cb664-2"><a href="基本繪圖.html#cb664-2" aria-hidden="true"></a><span class="kw">plot</span>(<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb667"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb667-1"><a href="基本繪圖.html#cb667-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
+<span id="cb667-2"><a href="基本繪圖.html#cb667-2" aria-hidden="true"></a><span class="kw">plot</span>(<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">1000</span>), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-442-1.png" width="70%" style="display: block; margin: auto;" />
 問題是如果x座標的增加不是1單位?</p>
-<div class="sourceCode" id="cb665"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb665-1"><a href="基本繪圖.html#cb665-1" aria-hidden="true"></a>x&lt;-<span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="fl">0.1</span>)</span>
-<span id="cb665-2"><a href="基本繪圖.html#cb665-2" aria-hidden="true"></a>y&lt;-<span class="kw">exp</span>(x)</span>
-<span id="cb665-3"><a href="基本繪圖.html#cb665-3" aria-hidden="true"></a>x&lt;-y</span>
-<span id="cb665-4"><a href="基本繪圖.html#cb665-4" aria-hidden="true"></a></span>
-<span id="cb665-5"><a href="基本繪圖.html#cb665-5" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
-<span id="cb665-6"><a href="基本繪圖.html#cb665-6" aria-hidden="true"></a><span class="kw">plot</span>(x,<span class="kw">eq</span>(x), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb668"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb668-1"><a href="基本繪圖.html#cb668-1" aria-hidden="true"></a>x&lt;-<span class="kw">seq</span>(<span class="dv">1</span>,<span class="dv">10</span>,<span class="fl">0.1</span>)</span>
+<span id="cb668-2"><a href="基本繪圖.html#cb668-2" aria-hidden="true"></a>y&lt;-<span class="kw">exp</span>(x)</span>
+<span id="cb668-3"><a href="基本繪圖.html#cb668-3" aria-hidden="true"></a>x&lt;-y</span>
+<span id="cb668-4"><a href="基本繪圖.html#cb668-4" aria-hidden="true"></a></span>
+<span id="cb668-5"><a href="基本繪圖.html#cb668-5" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
+<span id="cb668-6"><a href="基本繪圖.html#cb668-6" aria-hidden="true"></a><span class="kw">plot</span>(x,<span class="kw">eq</span>(x), <span class="dt">type=</span><span class="st">&#39;l&#39;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-443-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb666"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb666-1"><a href="基本繪圖.html#cb666-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
-<span id="cb666-2"><a href="基本繪圖.html#cb666-2" aria-hidden="true"></a><span class="kw">curve</span>(eq, <span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">50</span>, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb669"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb669-1"><a href="基本繪圖.html#cb669-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
+<span id="cb669-2"><a href="基本繪圖.html#cb669-2" aria-hidden="true"></a><span class="kw">curve</span>(eq, <span class="dt">from=</span><span class="dv">1</span>, <span class="dt">to=</span><span class="dv">50</span>, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-444-1.png" width="70%" style="display: block; margin: auto;" />
 問題:解釋為何錯誤</p>
-<div class="sourceCode" id="cb667"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb667-1"><a href="基本繪圖.html#cb667-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
-<span id="cb667-2"><a href="基本繪圖.html#cb667-2" aria-hidden="true"></a>y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
-<span id="cb667-3"><a href="基本繪圖.html#cb667-3" aria-hidden="true"></a><span class="kw">curve</span>(y, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb670"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb670-1"><a href="基本繪圖.html#cb670-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
+<span id="cb670-2"><a href="基本繪圖.html#cb670-2" aria-hidden="true"></a>y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
+<span id="cb670-3"><a href="基本繪圖.html#cb670-3" aria-hidden="true"></a><span class="kw">curve</span>(y, <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</span></code></pre></div>
 <pre style="color: red;"><code>Error in y(x):
   沒有這個函數 "y"
 </code></pre>
 <p>問題:如何修正下面的錯誤?</p>
-<div class="sourceCode" id="cb668"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb668-1"><a href="基本繪圖.html#cb668-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
-<span id="cb668-2"><a href="基本繪圖.html#cb668-2" aria-hidden="true"></a>z&lt;-<span class="dv">1</span><span class="op">:</span><span class="dv">50</span></span>
-<span id="cb668-3"><a href="基本繪圖.html#cb668-3" aria-hidden="true"></a></span>
-<span id="cb668-4"><a href="基本繪圖.html#cb668-4" aria-hidden="true"></a><span class="kw">curve</span>(<span class="kw">eq</span>(z), <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb671"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb671-1"><a href="基本繪圖.html#cb671-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
+<span id="cb671-2"><a href="基本繪圖.html#cb671-2" aria-hidden="true"></a>z&lt;-<span class="dv">1</span><span class="op">:</span><span class="dv">50</span></span>
+<span id="cb671-3"><a href="基本繪圖.html#cb671-3" aria-hidden="true"></a></span>
+<span id="cb671-4"><a href="基本繪圖.html#cb671-4" aria-hidden="true"></a><span class="kw">curve</span>(<span class="kw">eq</span>(z), <span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>)</span></code></pre></div>
 <p>solution:</p>
 </div>
 <div id="plot-example" class="section level2" number="9.7">
 <h2><span class="header-section-number">9.7</span> plot example</h2>
 <p>正常</p>
-<div class="sourceCode" id="cb669"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb669-1"><a href="基本繪圖.html#cb669-1" aria-hidden="true"></a>polyred =<span class="st"> </span><span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">4</span>,<span class="dv">4</span>)) </span>
-<span id="cb669-2"><a href="基本繪圖.html#cb669-2" aria-hidden="true"></a><span class="kw">polygon</span>(polyred<span class="op">$</span>x, polyred<span class="op">$</span>y, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb672"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb672-1"><a href="基本繪圖.html#cb672-1" aria-hidden="true"></a>polyred =<span class="st"> </span><span class="kw">curve</span>(<span class="kw">dnorm</span>(x), <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">4</span>,<span class="dv">4</span>)) </span>
+<span id="cb672-2"><a href="基本繪圖.html#cb672-2" aria-hidden="true"></a><span class="kw">polygon</span>(polyred<span class="op">$</span>x, polyred<span class="op">$</span>y, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-448-1.png" width="70%" style="display: block; margin: auto;" /></p>
 <p>❓
 curv 高階指令？</p>
-<div class="sourceCode" id="cb670"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb670-1"><a href="基本繪圖.html#cb670-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
-<span id="cb670-2"><a href="基本繪圖.html#cb670-2" aria-hidden="true"></a>y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
-<span id="cb670-3"><a href="基本繪圖.html#cb670-3" aria-hidden="true"></a><span class="kw">curve</span>(eq, <span class="dv">1</span>,<span class="dv">50</span>,<span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>,<span class="dt">lwd=</span><span class="dv">5</span>,<span class="dt">col=</span><span class="st">&quot;yellow&quot;</span>)</span>
-<span id="cb670-4"><a href="基本繪圖.html#cb670-4" aria-hidden="true"></a><span class="kw">polygon</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>,y,<span class="dt">lty=</span><span class="dv">2</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb673"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb673-1"><a href="基本繪圖.html#cb673-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
+<span id="cb673-2"><a href="基本繪圖.html#cb673-2" aria-hidden="true"></a>y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
+<span id="cb673-3"><a href="基本繪圖.html#cb673-3" aria-hidden="true"></a><span class="kw">curve</span>(eq, <span class="dv">1</span>,<span class="dv">50</span>,<span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>,<span class="dt">lwd=</span><span class="dv">5</span>,<span class="dt">col=</span><span class="st">&quot;yellow&quot;</span>)</span>
+<span id="cb673-4"><a href="基本繪圖.html#cb673-4" aria-hidden="true"></a><span class="kw">polygon</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>,y,<span class="dt">lty=</span><span class="dv">2</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-449-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb671"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb671-1"><a href="基本繪圖.html#cb671-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
-<span id="cb671-2"><a href="基本繪圖.html#cb671-2" aria-hidden="true"></a>y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
-<span id="cb671-3"><a href="基本繪圖.html#cb671-3" aria-hidden="true"></a><span class="kw">curve</span>(eq, <span class="dv">1</span>,<span class="dv">50</span>,<span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>,<span class="dt">lwd=</span><span class="dv">5</span>,<span class="dt">col=</span><span class="st">&quot;yellow&quot;</span>)</span>
-<span id="cb671-4"><a href="基本繪圖.html#cb671-4" aria-hidden="true"></a><span class="kw">polygon</span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>,<span class="dv">50</span>),<span class="kw">c</span>(y,<span class="dv">0</span>),<span class="dt">lty=</span><span class="dv">2</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb674"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb674-1"><a href="基本繪圖.html#cb674-1" aria-hidden="true"></a>eq =<span class="st"> </span><span class="cf">function</span>(x){x<span class="op">*</span>x}</span>
+<span id="cb674-2"><a href="基本繪圖.html#cb674-2" aria-hidden="true"></a>y&lt;-<span class="kw">eq</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>)</span>
+<span id="cb674-3"><a href="基本繪圖.html#cb674-3" aria-hidden="true"></a><span class="kw">curve</span>(eq, <span class="dv">1</span>,<span class="dv">50</span>,<span class="dt">xlab=</span><span class="st">&quot;x&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;y&quot;</span>,<span class="dt">lwd=</span><span class="dv">5</span>,<span class="dt">col=</span><span class="st">&quot;yellow&quot;</span>)</span>
+<span id="cb674-4"><a href="基本繪圖.html#cb674-4" aria-hidden="true"></a><span class="kw">polygon</span>(<span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">50</span>,<span class="dv">50</span>),<span class="kw">c</span>(y,<span class="dv">0</span>),<span class="dt">lty=</span><span class="dv">2</span>,<span class="dt">col=</span><span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="rmi_class_r_files/figure-html/unnamed-chunk-450-1.png" width="70%" style="display: block; margin: auto;" />
 💯 ⭕ 第一個點和最後一個點會連在一起。然後填色。</p>
 

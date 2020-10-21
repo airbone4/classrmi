@@ -24,7 +24,7 @@
 <meta name="author" content="lend jwj cen" />
 
 
-<meta name="date" content="2020-10-08" />
+<meta name="date" content="2020-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -552,11 +552,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="if" class="section level3" number="11.1.1">
 <h3><span class="header-section-number">11.1.1</span> if</h3>
 <p>一般來講，通用寫法如下：</p>
-<div class="sourceCode" id="cb679"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb679-1"><a href="programming-in-r.html#cb679-1" aria-hidden="true"></a><span class="cf">if</span>(判斷式){</span>
-<span id="cb679-2"><a href="programming-in-r.html#cb679-2" aria-hidden="true"></a> 成功</span>
-<span id="cb679-3"><a href="programming-in-r.html#cb679-3" aria-hidden="true"></a>}<span class="cf">else</span>{</span>
-<span id="cb679-4"><a href="programming-in-r.html#cb679-4" aria-hidden="true"></a> 失敗</span>
-<span id="cb679-5"><a href="programming-in-r.html#cb679-5" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb682"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb682-1"><a href="programming-in-r.html#cb682-1" aria-hidden="true"></a><span class="cf">if</span>(判斷式){</span>
+<span id="cb682-2"><a href="programming-in-r.html#cb682-2" aria-hidden="true"></a> 成功</span>
+<span id="cb682-3"><a href="programming-in-r.html#cb682-3" aria-hidden="true"></a>}<span class="cf">else</span>{</span>
+<span id="cb682-4"><a href="programming-in-r.html#cb682-4" aria-hidden="true"></a> 失敗</span>
+<span id="cb682-5"><a href="programming-in-r.html#cb682-5" aria-hidden="true"></a>}</span></code></pre></div>
 <p>例如
 # 多行寫法</p>
 <pre><code>if(4 &gt; 3){
@@ -581,21 +581,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 …
 )
 ** 指定第幾行 **</p>
-<div class="sourceCode" id="cb681"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb681-1"><a href="programming-in-r.html#cb681-1" aria-hidden="true"></a><span class="cf">switch</span>(<span class="dv">2</span>, </span>
-<span id="cb681-2"><a href="programming-in-r.html#cb681-2" aria-hidden="true"></a>       <span class="dv">1</span>, </span>
-<span id="cb681-3"><a href="programming-in-r.html#cb681-3" aria-hidden="true"></a>       <span class="dv">2</span>, <span class="co">#因為判斷式為2，因此，執行動作2</span></span>
-<span id="cb681-4"><a href="programming-in-r.html#cb681-4" aria-hidden="true"></a>       <span class="dv">3</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb684"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb684-1"><a href="programming-in-r.html#cb684-1" aria-hidden="true"></a><span class="cf">switch</span>(<span class="dv">2</span>, </span>
+<span id="cb684-2"><a href="programming-in-r.html#cb684-2" aria-hidden="true"></a>       <span class="dv">1</span>, </span>
+<span id="cb684-3"><a href="programming-in-r.html#cb684-3" aria-hidden="true"></a>       <span class="dv">2</span>, <span class="co">#因為判斷式為2，因此，執行動作2</span></span>
+<span id="cb684-4"><a href="programming-in-r.html#cb684-4" aria-hidden="true"></a>       <span class="dv">3</span>) </span></code></pre></div>
 <p>** 也可以利用字串**</p>
-<div class="sourceCode" id="cb682"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb682-1"><a href="programming-in-r.html#cb682-1" aria-hidden="true"></a><span class="cf">switch</span>(<span class="st">&quot;a&quot;</span>, </span>
-<span id="cb682-2"><a href="programming-in-r.html#cb682-2" aria-hidden="true"></a>       <span class="dt">a =</span> <span class="dv">1</span>,         </span>
-<span id="cb682-3"><a href="programming-in-r.html#cb682-3" aria-hidden="true"></a>       <span class="dt">b =</span> <span class="dv">2</span>,       </span>
-<span id="cb682-4"><a href="programming-in-r.html#cb682-4" aria-hidden="true"></a>       <span class="dt">c =</span> <span class="st">&quot;why&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb685-1"><a href="programming-in-r.html#cb685-1" aria-hidden="true"></a><span class="cf">switch</span>(<span class="st">&quot;a&quot;</span>, </span>
+<span id="cb685-2"><a href="programming-in-r.html#cb685-2" aria-hidden="true"></a>       <span class="dt">a =</span> <span class="dv">1</span>,         </span>
+<span id="cb685-3"><a href="programming-in-r.html#cb685-3" aria-hidden="true"></a>       <span class="dt">b =</span> <span class="dv">2</span>,       </span>
+<span id="cb685-4"><a href="programming-in-r.html#cb685-4" aria-hidden="true"></a>       <span class="dt">c =</span> <span class="st">&quot;why&quot;</span>)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 1
 </code></pre>
 <p>這個switch 並不是一個語法，而是一個函數，原理大概是
 第1個參數以後的東西，會被變成是一個named list。
 例如上面的例子中</p>
-<div class="sourceCode" id="cb683"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb683-1"><a href="programming-in-r.html#cb683-1" aria-hidden="true"></a>alist &lt;-<span class="kw">list</span>(<span class="dt">a=</span><span class="dv">1</span>,<span class="dt">b=</span><span class="dv">2</span>,<span class="dt">c=</span><span class="st">&quot;why&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb686"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb686-1"><a href="programming-in-r.html#cb686-1" aria-hidden="true"></a>alist &lt;-<span class="kw">list</span>(<span class="dt">a=</span><span class="dv">1</span>,<span class="dt">b=</span><span class="dv">2</span>,<span class="dt">c=</span><span class="st">&quot;why&quot;</span>)</span></code></pre></div>
 <p>然後利用判斷式 查找要返回對應的值。</p>
 </div>
 </div>
@@ -605,32 +605,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="for-loop" class="section level3" number="11.2.1">
 <h3><span class="header-section-number">11.2.1</span> for-loop</h3>
 <p>計算 1+2+3+4. 的值是多少？</p>
-<div class="sourceCode" id="cb684"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb684-1"><a href="programming-in-r.html#cb684-1" aria-hidden="true"></a>rst &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb684-2"><a href="programming-in-r.html#cb684-2" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>)){ </span>
-<span id="cb684-3"><a href="programming-in-r.html#cb684-3" aria-hidden="true"></a>  rst &lt;-<span class="st"> </span>rst <span class="op">+</span><span class="st"> </span>i</span>
-<span id="cb684-4"><a href="programming-in-r.html#cb684-4" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb687"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb687-1"><a href="programming-in-r.html#cb687-1" aria-hidden="true"></a>rst &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb687-2"><a href="programming-in-r.html#cb687-2" aria-hidden="true"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>)){ </span>
+<span id="cb687-3"><a href="programming-in-r.html#cb687-3" aria-hidden="true"></a>  rst &lt;-<span class="st"> </span>rst <span class="op">+</span><span class="st"> </span>i</span>
+<span id="cb687-4"><a href="programming-in-r.html#cb687-4" aria-hidden="true"></a>}</span></code></pre></div>
 </div>
 <div id="while-loop" class="section level3" number="11.2.2">
 <h3><span class="header-section-number">11.2.2</span> while-loop</h3>
-<div class="sourceCode" id="cb685"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb685-1"><a href="programming-in-r.html#cb685-1" aria-hidden="true"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb685-2"><a href="programming-in-r.html#cb685-2" aria-hidden="true"></a>result &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb685-3"><a href="programming-in-r.html#cb685-3" aria-hidden="true"></a></span>
-<span id="cb685-4"><a href="programming-in-r.html#cb685-4" aria-hidden="true"></a><span class="cf">while</span>(i <span class="op">&lt;</span><span class="st"> </span><span class="dv">5</span>){  </span>
-<span id="cb685-5"><a href="programming-in-r.html#cb685-5" aria-hidden="true"></a>  rst &lt;-<span class="st"> </span>rst <span class="op">+</span><span class="st"> </span>i</span>
-<span id="cb685-6"><a href="programming-in-r.html#cb685-6" aria-hidden="true"></a>  i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb685-7"><a href="programming-in-r.html#cb685-7" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb688"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb688-1"><a href="programming-in-r.html#cb688-1" aria-hidden="true"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb688-2"><a href="programming-in-r.html#cb688-2" aria-hidden="true"></a>result &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb688-3"><a href="programming-in-r.html#cb688-3" aria-hidden="true"></a></span>
+<span id="cb688-4"><a href="programming-in-r.html#cb688-4" aria-hidden="true"></a><span class="cf">while</span>(i <span class="op">&lt;</span><span class="st"> </span><span class="dv">5</span>){  </span>
+<span id="cb688-5"><a href="programming-in-r.html#cb688-5" aria-hidden="true"></a>  rst &lt;-<span class="st"> </span>rst <span class="op">+</span><span class="st"> </span>i</span>
+<span id="cb688-6"><a href="programming-in-r.html#cb688-6" aria-hidden="true"></a>  i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb688-7"><a href="programming-in-r.html#cb688-7" aria-hidden="true"></a>}</span></code></pre></div>
 </div>
 <div id="repeat-loop" class="section level3" number="11.2.3">
 <h3><span class="header-section-number">11.2.3</span> repeat-loop</h3>
-<div class="sourceCode" id="cb686"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb686-1"><a href="programming-in-r.html#cb686-1" aria-hidden="true"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb686-2"><a href="programming-in-r.html#cb686-2" aria-hidden="true"></a>rst &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb686-3"><a href="programming-in-r.html#cb686-3" aria-hidden="true"></a></span>
-<span id="cb686-4"><a href="programming-in-r.html#cb686-4" aria-hidden="true"></a><span class="cf">repeat</span>{  </span>
-<span id="cb686-5"><a href="programming-in-r.html#cb686-5" aria-hidden="true"></a>  </span>
-<span id="cb686-6"><a href="programming-in-r.html#cb686-6" aria-hidden="true"></a>  <span class="cf">if</span>(i <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span>) <span class="cf">break</span> </span>
-<span id="cb686-7"><a href="programming-in-r.html#cb686-7" aria-hidden="true"></a>  rst &lt;-<span class="st"> </span>rst <span class="op">+</span><span class="st"> </span>i</span>
-<span id="cb686-8"><a href="programming-in-r.html#cb686-8" aria-hidden="true"></a>  i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb686-9"><a href="programming-in-r.html#cb686-9" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb689"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb689-1"><a href="programming-in-r.html#cb689-1" aria-hidden="true"></a>i &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb689-2"><a href="programming-in-r.html#cb689-2" aria-hidden="true"></a>rst &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb689-3"><a href="programming-in-r.html#cb689-3" aria-hidden="true"></a></span>
+<span id="cb689-4"><a href="programming-in-r.html#cb689-4" aria-hidden="true"></a><span class="cf">repeat</span>{  </span>
+<span id="cb689-5"><a href="programming-in-r.html#cb689-5" aria-hidden="true"></a>  </span>
+<span id="cb689-6"><a href="programming-in-r.html#cb689-6" aria-hidden="true"></a>  <span class="cf">if</span>(i <span class="op">&gt;</span><span class="st"> </span><span class="dv">4</span>) <span class="cf">break</span> </span>
+<span id="cb689-7"><a href="programming-in-r.html#cb689-7" aria-hidden="true"></a>  rst &lt;-<span class="st"> </span>rst <span class="op">+</span><span class="st"> </span>i</span>
+<span id="cb689-8"><a href="programming-in-r.html#cb689-8" aria-hidden="true"></a>  i &lt;-<span class="st"> </span>i <span class="op">+</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb689-9"><a href="programming-in-r.html#cb689-9" aria-hidden="true"></a>}</span></code></pre></div>
 </div>
 </div>
 <div id="範例" class="section level2" number="11.3">
@@ -639,25 +639,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">11.3.1</span> 範例 detach_package()</h3>
 <p>討論內建函數<code>detach_package()</code><br />
 使用方法：</p>
-<div class="sourceCode" id="cb687"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb687-1"><a href="programming-in-r.html#cb687-1" aria-hidden="true"></a><span class="kw">detach_package</span>(vegan)</span>
-<span id="cb687-2"><a href="programming-in-r.html#cb687-2" aria-hidden="true"></a><span class="kw">detach_package</span>(<span class="st">&quot;vegan&quot;</span>, <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb690"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb690-1"><a href="programming-in-r.html#cb690-1" aria-hidden="true"></a><span class="kw">detach_package</span>(vegan)</span>
+<span id="cb690-2"><a href="programming-in-r.html#cb690-2" aria-hidden="true"></a><span class="kw">detach_package</span>(<span class="st">&quot;vegan&quot;</span>, <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>注意一下第2個使用方式，第2個參數`character.only’：</p>
-<div class="sourceCode" id="cb688"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb688-1"><a href="programming-in-r.html#cb688-1" aria-hidden="true"></a>detach_package &lt;-<span class="st"> </span><span class="cf">function</span>(pkg, <span class="dt">character.only =</span> <span class="ot">FALSE</span>)</span>
-<span id="cb688-2"><a href="programming-in-r.html#cb688-2" aria-hidden="true"></a>{</span>
-<span id="cb688-3"><a href="programming-in-r.html#cb688-3" aria-hidden="true"></a>  <span class="cf">if</span>(<span class="op">!</span>character.only) <span class="co">#如果沒有指定參數是字串</span></span>
-<span id="cb688-4"><a href="programming-in-r.html#cb688-4" aria-hidden="true"></a>  {</span>
-<span id="cb688-5"><a href="programming-in-r.html#cb688-5" aria-hidden="true"></a>    pkg &lt;-<span class="st"> </span><span class="kw">deparse</span>(<span class="kw">substitute</span>(pkg)) <span class="co"># 轉字串</span></span>
-<span id="cb688-6"><a href="programming-in-r.html#cb688-6" aria-hidden="true"></a>  }</span>
-<span id="cb688-7"><a href="programming-in-r.html#cb688-7" aria-hidden="true"></a>  search_item &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;package&quot;</span>, pkg, <span class="dt">sep =</span> <span class="st">&quot;:&quot;</span>)</span>
-<span id="cb688-8"><a href="programming-in-r.html#cb688-8" aria-hidden="true"></a>  <span class="cf">while</span>(search_item <span class="op">%in%</span><span class="st"> </span><span class="kw">search</span>())</span>
-<span id="cb688-9"><a href="programming-in-r.html#cb688-9" aria-hidden="true"></a>  {</span>
-<span id="cb688-10"><a href="programming-in-r.html#cb688-10" aria-hidden="true"></a>    <span class="kw">detach</span>(search_item, <span class="dt">unload =</span> <span class="ot">TRUE</span>, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb688-11"><a href="programming-in-r.html#cb688-11" aria-hidden="true"></a>  }</span>
-<span id="cb688-12"><a href="programming-in-r.html#cb688-12" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb691"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb691-1"><a href="programming-in-r.html#cb691-1" aria-hidden="true"></a>detach_package &lt;-<span class="st"> </span><span class="cf">function</span>(pkg, <span class="dt">character.only =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb691-2"><a href="programming-in-r.html#cb691-2" aria-hidden="true"></a>{</span>
+<span id="cb691-3"><a href="programming-in-r.html#cb691-3" aria-hidden="true"></a>  <span class="cf">if</span>(<span class="op">!</span>character.only) <span class="co">#如果沒有指定參數是字串</span></span>
+<span id="cb691-4"><a href="programming-in-r.html#cb691-4" aria-hidden="true"></a>  {</span>
+<span id="cb691-5"><a href="programming-in-r.html#cb691-5" aria-hidden="true"></a>    pkg &lt;-<span class="st"> </span><span class="kw">deparse</span>(<span class="kw">substitute</span>(pkg)) <span class="co"># 轉字串</span></span>
+<span id="cb691-6"><a href="programming-in-r.html#cb691-6" aria-hidden="true"></a>  }</span>
+<span id="cb691-7"><a href="programming-in-r.html#cb691-7" aria-hidden="true"></a>  search_item &lt;-<span class="st"> </span><span class="kw">paste</span>(<span class="st">&quot;package&quot;</span>, pkg, <span class="dt">sep =</span> <span class="st">&quot;:&quot;</span>)</span>
+<span id="cb691-8"><a href="programming-in-r.html#cb691-8" aria-hidden="true"></a>  <span class="cf">while</span>(search_item <span class="op">%in%</span><span class="st"> </span><span class="kw">search</span>())</span>
+<span id="cb691-9"><a href="programming-in-r.html#cb691-9" aria-hidden="true"></a>  {</span>
+<span id="cb691-10"><a href="programming-in-r.html#cb691-10" aria-hidden="true"></a>    <span class="kw">detach</span>(search_item, <span class="dt">unload =</span> <span class="ot">TRUE</span>, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb691-11"><a href="programming-in-r.html#cb691-11" aria-hidden="true"></a>  }</span>
+<span id="cb691-12"><a href="programming-in-r.html#cb691-12" aria-hidden="true"></a>}</span></code></pre></div>
 </div>
 <div id="範例2.libpaths" class="section level3" number="11.3.2">
 <h3><span class="header-section-number">11.3.2</span> 範例2：.libPaths()</h3>
-<div class="sourceCode" id="cb689"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb689-1"><a href="programming-in-r.html#cb689-1" aria-hidden="true"></a>.libPaths</span></code></pre></div>
+<div class="sourceCode" id="cb692"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb692-1"><a href="programming-in-r.html#cb692-1" aria-hidden="true"></a>.libPaths</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>function (new) 
 {
     if (!missing(new)) {
@@ -683,7 +683,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>表達式求值：eval(), source()</li>
 <li>表達式：expression()</li>
 </ul>
-<div class="sourceCode" id="cb690"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb690-1"><a href="programming-in-r.html#cb690-1" aria-hidden="true"></a><span class="kw">parse</span>(<span class="dt">text=</span><span class="st">&#39;x&lt;-1+2&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb693"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb693-1"><a href="programming-in-r.html#cb693-1" aria-hidden="true"></a><span class="kw">parse</span>(<span class="dt">text=</span><span class="st">&#39;x&lt;-1+2&#39;</span>)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>expression(x <- 1 + 2)
 </code></pre>
 <p>在R中解析有<strong>三種不同的變種</strong>：</p>
@@ -698,7 +698,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="deparse" class="section level3" number="11.4.1">
 <h3><span class="header-section-number">11.4.1</span> <strong>deparse</strong></h3>
 <p>相對於parse,deparse 把<code>expression</code> 轉為字串。</p>
-<div class="sourceCode" id="cb691"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb691-1"><a href="programming-in-r.html#cb691-1" aria-hidden="true"></a> <span class="kw">deparse</span>(<span class="kw">expression</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb694"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb694-1"><a href="programming-in-r.html#cb694-1" aria-hidden="true"></a> <span class="kw">deparse</span>(<span class="kw">expression</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>))</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "expression(1 + 2)"
 </code></pre>
 </div>
@@ -706,13 +706,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">11.4.2</span> <strong>quote</strong></h3>
 <p>quote() 的參數也是<code>expression</code>，返回類別<code>class</code>，可以再給<code>eval()</code>計算。
 <code>quote()</code>的參數雖然是<code>expression</code>但是不會進行計算，而是token分解。</p>
-<div class="sourceCode" id="cb692"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb692-1"><a href="programming-in-r.html#cb692-1" aria-hidden="true"></a> <span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb695"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb695-1"><a href="programming-in-r.html#cb695-1" aria-hidden="true"></a> <span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>1 + 2
 </code></pre>
-<div class="sourceCode" id="cb693"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb693-1"><a href="programming-in-r.html#cb693-1" aria-hidden="true"></a> <span class="kw">typeof</span>(<span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>)) </span></code></pre></div>
+<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb696-1"><a href="programming-in-r.html#cb696-1" aria-hidden="true"></a> <span class="kw">typeof</span>(<span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>)) </span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "language"
 </code></pre>
-<div class="sourceCode" id="cb694"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb694-1"><a href="programming-in-r.html#cb694-1" aria-hidden="true"></a> <span class="kw">class</span>(<span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb697"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb697-1"><a href="programming-in-r.html#cb697-1" aria-hidden="true"></a> <span class="kw">class</span>(<span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>))</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "call"
 </code></pre>
 </div>
@@ -723,11 +723,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>text –&gt;parse()–&gt; expression—&gt;eval()
 #### quote() 和eval()
 expression –&gt;quote()–&gt; call—&gt;eval()</p>
-<div class="sourceCode" id="cb695"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb695-1"><a href="programming-in-r.html#cb695-1" aria-hidden="true"></a> <span class="kw">eval</span>(<span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb698"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb698-1"><a href="programming-in-r.html#cb698-1" aria-hidden="true"></a> <span class="kw">eval</span>(<span class="kw">quote</span>(<span class="dv">1</span><span class="op">+</span><span class="dv">2</span>))</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3
 </code></pre>
 <p>一般是用parse從字符串（或者是硬盤上的文件）解析成一個expression對象，是表達式列表，不是一個表達式。</p>
-<div class="sourceCode" id="cb696"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb696-1"><a href="programming-in-r.html#cb696-1" aria-hidden="true"></a> <span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text=</span><span class="st">&quot;1+2&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb699"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb699-1"><a href="programming-in-r.html#cb699-1" aria-hidden="true"></a> <span class="kw">eval</span>(<span class="kw">parse</span>(<span class="dt">text=</span><span class="st">&quot;1+2&quot;</span>))</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] 3
 </code></pre>
 <p>首先使用parse()函數將字符串轉化為表達式（expression），而後使用eval()函數對表達式求解。</p>
@@ -745,10 +745,10 @@ expression –&gt;quote()–&gt; call—&gt;eval()</p>
 <div id="substitue" class="section level4" number="11.4.3.2">
 <h4><span class="header-section-number">11.4.3.2</span> substitue()</h4>
 <p>如果沒有第二個參數，是否substitue()==quote()?</p>
-<div class="sourceCode" id="cb698"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb698-1"><a href="programming-in-r.html#cb698-1" aria-hidden="true"></a>(s.e &lt;-<span class="st"> </span><span class="kw">substitute</span>(<span class="kw">expression</span>(a <span class="op">+</span><span class="st"> </span>b), <span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>)))  <span class="co">#&gt; expression(1 + b)</span></span></code></pre></div>
+<div class="sourceCode" id="cb701"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb701-1"><a href="programming-in-r.html#cb701-1" aria-hidden="true"></a>(s.e &lt;-<span class="st"> </span><span class="kw">substitute</span>(<span class="kw">expression</span>(a <span class="op">+</span><span class="st"> </span>b), <span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>)))  <span class="co">#&gt; expression(1 + b)</span></span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>expression(1 + b)
 </code></pre>
-<div class="sourceCode" id="cb699"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb699-1"><a href="programming-in-r.html#cb699-1" aria-hidden="true"></a>(s.s &lt;-<span class="st"> </span><span class="kw">substitute</span>( a <span class="op">+</span><span class="st"> </span>b,            <span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>)))  <span class="co">#&gt; 1 + b</span></span></code></pre></div>
+<div class="sourceCode" id="cb702"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb702-1"><a href="programming-in-r.html#cb702-1" aria-hidden="true"></a>(s.s &lt;-<span class="st"> </span><span class="kw">substitute</span>( a <span class="op">+</span><span class="st"> </span>b,            <span class="kw">list</span>(<span class="dt">a =</span> <span class="dv">1</span>)))  <span class="co">#&gt; 1 + b</span></span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>1 + b
 </code></pre>
 </div>
@@ -758,12 +758,12 @@ expression –&gt;quote()–&gt; call—&gt;eval()</p>
 <h2><span class="header-section-number">11.5</span> 討論</h2>
 <div id="測試紀錄" class="section level3" number="11.5.1">
 <h3><span class="header-section-number">11.5.1</span> 測試紀錄</h3>
-<div class="sourceCode" id="cb700"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb700-1"><a href="programming-in-r.html#cb700-1" aria-hidden="true"></a>test1&lt;-<span class="cf">function</span> (..., <span class="dt">list =</span> <span class="kw">character</span>() ) </span>
-<span id="cb700-2"><a href="programming-in-r.html#cb700-2" aria-hidden="true"></a>{</span>
-<span id="cb700-3"><a href="programming-in-r.html#cb700-3" aria-hidden="true"></a>    names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">as.character</span>(<span class="kw">substitute</span>(<span class="kw">list</span>(...))[<span class="op">-</span>1L]), list)</span>
-<span id="cb700-4"><a href="programming-in-r.html#cb700-4" aria-hidden="true"></a>    <span class="kw">return</span> (names)</span>
-<span id="cb700-5"><a href="programming-in-r.html#cb700-5" aria-hidden="true"></a>}</span>
-<span id="cb700-6"><a href="programming-in-r.html#cb700-6" aria-hidden="true"></a><span class="kw">test1</span>(x,y,<span class="dt">list=</span><span class="st">&quot;data&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb703-1"><a href="programming-in-r.html#cb703-1" aria-hidden="true"></a>test1&lt;-<span class="cf">function</span> (..., <span class="dt">list =</span> <span class="kw">character</span>() ) </span>
+<span id="cb703-2"><a href="programming-in-r.html#cb703-2" aria-hidden="true"></a>{</span>
+<span id="cb703-3"><a href="programming-in-r.html#cb703-3" aria-hidden="true"></a>    names &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">as.character</span>(<span class="kw">substitute</span>(<span class="kw">list</span>(...))[<span class="op">-</span>1L]), list)</span>
+<span id="cb703-4"><a href="programming-in-r.html#cb703-4" aria-hidden="true"></a>    <span class="kw">return</span> (names)</span>
+<span id="cb703-5"><a href="programming-in-r.html#cb703-5" aria-hidden="true"></a>}</span>
+<span id="cb703-6"><a href="programming-in-r.html#cb703-6" aria-hidden="true"></a><span class="kw">test1</span>(x,y,<span class="dt">list=</span><span class="st">&quot;data&quot;</span>)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "x"    "y"    "data"
 </code></pre>
 <p><code>names &lt;- c(as.character(substitute(list(...))[-1L]), list)</code>
@@ -781,14 +781,14 @@ expression –&gt;quote()–&gt; call—&gt;eval()</p>
 <li>zeros(3,2),ones(2,3)</li>
 </ol>
 <p>hint:</p>
-<div class="sourceCode" id="cb701"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb701-1"><a href="programming-in-r.html#cb701-1" aria-hidden="true"></a><span class="kw">sapply</span>(a,<span class="cf">function</span>(x) <span class="kw">matrix</span>(x,<span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">simplify=</span><span class="st">&#39;array&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb702"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb702-1"><a href="programming-in-r.html#cb702-1" aria-hidden="true"></a>zeros&lt;-<span class="cf">function</span> (nrow,ncol)</span>
-<span id="cb702-2"><a href="programming-in-r.html#cb702-2" aria-hidden="true"></a>{</span>
-<span id="cb702-3"><a href="programming-in-r.html#cb702-3" aria-hidden="true"></a>rst&lt;-<span class="kw">sapply</span>(<span class="kw">c</span>(<span class="dv">0</span>),<span class="cf">function</span>(x) <span class="kw">matrix</span>(x,nrow,ncol),<span class="dt">simplify=</span><span class="st">&#39;array&#39;</span>)</span>
-<span id="cb702-4"><a href="programming-in-r.html#cb702-4" aria-hidden="true"></a>  <span class="kw">return</span>(rst[,,<span class="dv">1</span>])</span>
-<span id="cb702-5"><a href="programming-in-r.html#cb702-5" aria-hidden="true"></a>}</span>
-<span id="cb702-6"><a href="programming-in-r.html#cb702-6" aria-hidden="true"></a>x&lt;-<span class="kw">zeros</span>(<span class="dv">4</span>,<span class="dv">5</span>)</span>
-<span id="cb702-7"><a href="programming-in-r.html#cb702-7" aria-hidden="true"></a>x</span></code></pre></div>
+<div class="sourceCode" id="cb704"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb704-1"><a href="programming-in-r.html#cb704-1" aria-hidden="true"></a><span class="kw">sapply</span>(a,<span class="cf">function</span>(x) <span class="kw">matrix</span>(x,<span class="dv">2</span>,<span class="dv">2</span>), <span class="dt">simplify=</span><span class="st">&#39;array&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb705"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb705-1"><a href="programming-in-r.html#cb705-1" aria-hidden="true"></a>zeros&lt;-<span class="cf">function</span> (nrow,ncol)</span>
+<span id="cb705-2"><a href="programming-in-r.html#cb705-2" aria-hidden="true"></a>{</span>
+<span id="cb705-3"><a href="programming-in-r.html#cb705-3" aria-hidden="true"></a>rst&lt;-<span class="kw">sapply</span>(<span class="kw">c</span>(<span class="dv">0</span>),<span class="cf">function</span>(x) <span class="kw">matrix</span>(x,nrow,ncol),<span class="dt">simplify=</span><span class="st">&#39;array&#39;</span>)</span>
+<span id="cb705-4"><a href="programming-in-r.html#cb705-4" aria-hidden="true"></a>  <span class="kw">return</span>(rst[,,<span class="dv">1</span>])</span>
+<span id="cb705-5"><a href="programming-in-r.html#cb705-5" aria-hidden="true"></a>}</span>
+<span id="cb705-6"><a href="programming-in-r.html#cb705-6" aria-hidden="true"></a>x&lt;-<span class="kw">zeros</span>(<span class="dv">4</span>,<span class="dv">5</span>)</span>
+<span id="cb705-7"><a href="programming-in-r.html#cb705-7" aria-hidden="true"></a>x</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>     [,1] [,2] [,3] [,4] [,5]
 [1,]    0    0    0    0    0
 [2,]    0    0    0    0    0

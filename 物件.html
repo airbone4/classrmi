@@ -24,7 +24,7 @@
 <meta name="author" content="lend jwj cen" />
 
 
-<meta name="date" content="2020-10-08" />
+<meta name="date" content="2020-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -577,9 +577,9 @@ You can delete attributes again by setting their value to NULL, like this:</p>
 <div id="attr-attributes-structure-functions-in-r-4-examples-get-remove-set" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> attr, attributes &amp; structure Functions in R | 4 Examples (get, remove &amp; set)</h2>
 <p>三個函數的基本寫法:</p>
-<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="物件.html#cb400-1" aria-hidden="true"></a><span class="kw">attributes</span>(data)</span>
-<span id="cb400-2"><a href="物件.html#cb400-2" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> data, <span class="dt">which =</span> <span class="st">&quot;attribute_name&quot;</span>)</span>
-<span id="cb400-3"><a href="物件.html#cb400-3" aria-hidden="true"></a><span class="kw">structure</span>(data, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">6</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="物件.html#cb403-1" aria-hidden="true"></a><span class="kw">attributes</span>(data)</span>
+<span id="cb403-2"><a href="物件.html#cb403-2" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> data, <span class="dt">which =</span> <span class="st">&quot;attribute_name&quot;</span>)</span>
+<span id="cb403-3"><a href="物件.html#cb403-3" aria-hidden="true"></a><span class="kw">structure</span>(data, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">6</span>))</span></code></pre></div>
 <p>Definitions:</p>
 <p>函數 <code>attributes</code> 設定或列出物件的所有attributes。</p>
 <p>函數 <code>attr</code> 物件中某個指定的attribute.</p>
@@ -588,37 +588,37 @@ You can delete attributes again by setting their value to NULL, like this:</p>
 <div id="basic-application-of-attr-attributes" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> Basic Application of attr() &amp; attributes()</h3>
 <p>載入資料集然後利用函數看看data.frame有甚麼attribute。</p>
-<div class="sourceCode" id="cb401"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb401-1"><a href="物件.html#cb401-1" aria-hidden="true"></a><span class="kw">data</span>(cars)                                             <span class="co"># Load head(cars)             attributes(cars)     </span></span>
-<span id="cb401-2"><a href="物件.html#cb401-2" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> cars, <span class="dt">which =</span> <span class="st">&quot;names&quot;</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="物件.html#cb404-1" aria-hidden="true"></a><span class="kw">data</span>(cars)                                             <span class="co"># Load head(cars)             attributes(cars)     </span></span>
+<span id="cb404-2"><a href="物件.html#cb404-2" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> cars, <span class="dt">which =</span> <span class="st">&quot;names&quot;</span>) </span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "speed" "dist" 
 </code></pre>
 <div class="sidebar">
 <p>也可以寫成</p>
-<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="物件.html#cb402-1" aria-hidden="true"></a><span class="kw">attr</span>(cars,<span class="st">&quot;names&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="物件.html#cb405-1" aria-hidden="true"></a><span class="kw">attr</span>(cars,<span class="st">&quot;names&quot;</span>)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "speed" "dist" 
 </code></pre>
 <p>比較一下names,可以發現,names 只是一個data.frame中的attribute</p>
-<div class="sourceCode" id="cb403"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb403-1"><a href="物件.html#cb403-1" aria-hidden="true"></a> <span class="kw">class</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="物件.html#cb406-1" aria-hidden="true"></a> <span class="kw">class</span>(cars)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "data.frame"
 </code></pre>
-<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="物件.html#cb404-1" aria-hidden="true"></a> <span class="kw">str</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="物件.html#cb407-1" aria-hidden="true"></a> <span class="kw">str</span>(cars)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>'data.frame':	50 obs. of  2 variables:
  $ speed: num  4 4 7 7 8 9 10 10 10 11 ...
  $ dist : num  2 10 4 22 16 10 18 26 34 17 ...
 </code></pre>
-<div class="sourceCode" id="cb405"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb405-1"><a href="物件.html#cb405-1" aria-hidden="true"></a> <span class="kw">names</span>(cars)</span></code></pre></div>
+<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="物件.html#cb408-1" aria-hidden="true"></a> <span class="kw">names</span>(cars)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "speed" "dist" 
 </code></pre>
 </div>
 </div>
 <div id="assign-new-attributes-with-the-attributes-r-function" class="section level3" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Assign New Attributes with the attributes() R Function</h3>
-<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="物件.html#cb406-1" aria-hidden="true"></a>attributes_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>),     <span class="co">#設定不同的欄位名稱</span></span>
-<span id="cb406-2"><a href="物件.html#cb406-2" aria-hidden="true"></a>                        <span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>,          <span class="co"># 保留類別</span></span>
-<span id="cb406-3"><a href="物件.html#cb406-3" aria-hidden="true"></a>                        <span class="dt">row.names =</span> <span class="kw">nrow</span>(cars)<span class="op">:</span><span class="dv">1</span>)      <span class="co"># 反向</span></span></code></pre></div>
+<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="物件.html#cb409-1" aria-hidden="true"></a>attributes_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">names =</span> <span class="kw">c</span>(<span class="st">&quot;col1&quot;</span>, <span class="st">&quot;col2&quot;</span>),     <span class="co">#設定不同的欄位名稱</span></span>
+<span id="cb409-2"><a href="物件.html#cb409-2" aria-hidden="true"></a>                        <span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>,          <span class="co"># 保留類別</span></span>
+<span id="cb409-3"><a href="物件.html#cb409-3" aria-hidden="true"></a>                        <span class="dt">row.names =</span> <span class="kw">nrow</span>(cars)<span class="op">:</span><span class="dv">1</span>)      <span class="co"># 反向</span></span></code></pre></div>
 <p>然後可以利用<code>attributes</code>設定所有attributes。</p>
-<div class="sourceCode" id="cb407"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb407-1"><a href="物件.html#cb407-1" aria-hidden="true"></a><span class="kw">attributes</span>(cars) &lt;-<span class="st"> </span>attributes_list                    <span class="co"># Set all attributes of data</span></span>
-<span id="cb407-2"><a href="物件.html#cb407-2" aria-hidden="true"></a><span class="kw">attributes</span>(cars)                                       <span class="co"># Apply attributes function</span></span></code></pre></div>
+<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb410-1"><a href="物件.html#cb410-1" aria-hidden="true"></a><span class="kw">attributes</span>(cars) &lt;-<span class="st"> </span>attributes_list                    <span class="co"># Set all attributes of data</span></span>
+<span id="cb410-2"><a href="物件.html#cb410-2" aria-hidden="true"></a><span class="kw">attributes</span>(cars)                                       <span class="co"># Apply attributes function</span></span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>$names
 [1] "col1" "col2"
 
@@ -632,9 +632,9 @@ $row.names
 </div>
 <div id="利用attr-改變其中一個attribute" class="section level3" number="4.2.3">
 <h3><span class="header-section-number">4.2.3</span> 利用attr() 改變其中一個Attribute</h3>
-<div class="sourceCode" id="cb408"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb408-1"><a href="物件.html#cb408-1" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> cars, <span class="dt">which =</span> <span class="st">&quot;names&quot;</span>) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;aaa&quot;</span>, <span class="st">&quot;bbb&quot;</span>)     <span class="co"># Set only names attribute</span></span></code></pre></div>
+<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="物件.html#cb411-1" aria-hidden="true"></a><span class="kw">attr</span>(<span class="dt">x =</span> cars, <span class="dt">which =</span> <span class="st">&quot;names&quot;</span>) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;aaa&quot;</span>, <span class="st">&quot;bbb&quot;</span>)     <span class="co"># Set only names attribute</span></span></code></pre></div>
 <p>檢查看看結果</p>
-<div class="sourceCode" id="cb409"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb409-1"><a href="物件.html#cb409-1" aria-hidden="true"></a><span class="kw">attributes</span>(cars)    <span class="co"># Apply attributes function</span></span></code></pre></div>
+<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="物件.html#cb412-1" aria-hidden="true"></a><span class="kw">attributes</span>(cars)    <span class="co"># Apply attributes function</span></span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>$names
 [1] "aaa" "bbb"
 
@@ -650,43 +650,43 @@ $row.names
 <div id="the-r-structure-function" class="section level3" number="4.2.4">
 <h3><span class="header-section-number">4.2.4</span> The R structure Function</h3>
 <p>和<code>attributes()</code> <code>attr()</code> 相關的命令是 <code>structure()</code> 。</p>
-<div class="sourceCode" id="cb410"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb410-1"><a href="物件.html#cb410-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">12345</span>)                             </span>
-<span id="cb410-2"><a href="物件.html#cb410-2" aria-hidden="true"></a>vec &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">runif</span>(<span class="dv">15</span>, <span class="dv">0</span>, <span class="dv">10</span>))     <span class="co"># 1D 向量 </span></span>
-<span id="cb410-3"><a href="物件.html#cb410-3" aria-hidden="true"></a>vec</span></code></pre></div>
+<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="物件.html#cb413-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">12345</span>)                             </span>
+<span id="cb413-2"><a href="物件.html#cb413-2" aria-hidden="true"></a>vec &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">runif</span>(<span class="dv">15</span>, <span class="dv">0</span>, <span class="dv">10</span>))     <span class="co"># 1D 向量 </span></span>
+<span id="cb413-3"><a href="物件.html#cb413-3" aria-hidden="true"></a>vec</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1]  7  9  8  9  5  2  3  5  7 10  0  2  7  0  4
 </code></pre>
 <p>改變成矩陣:</p>
-<div class="sourceCode" id="cb411"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb411-1"><a href="物件.html#cb411-1" aria-hidden="true"></a>vec_dim &lt;-<span class="st"> </span><span class="kw">structure</span>(vec, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>))               <span class="co"># Change dimension of vector</span></span>
-<span id="cb411-2"><a href="物件.html#cb411-2" aria-hidden="true"></a>vec_dim                                                <span class="co"># Print updated vector</span></span></code></pre></div>
+<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="物件.html#cb414-1" aria-hidden="true"></a>vec_dim &lt;-<span class="st"> </span><span class="kw">structure</span>(vec, <span class="dt">dim =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">5</span>))               <span class="co"># Change dimension of vector</span></span>
+<span id="cb414-2"><a href="物件.html#cb414-2" aria-hidden="true"></a>vec_dim                                                <span class="co"># Print updated vector</span></span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>     [,1] [,2] [,3] [,4] [,5]
 [1,]    7    9    3   10    7
 [2,]    9    5    5    0    0
 [3,]    8    2    7    2    4
 </code></pre>
 <p>比較之前的寫法:</p>
-<div class="sourceCode" id="cb412"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb412-1"><a href="物件.html#cb412-1" aria-hidden="true"></a><span class="kw">matrix</span>(vec,<span class="dt">nrow=</span><span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="物件.html#cb415-1" aria-hidden="true"></a><span class="kw">matrix</span>(vec,<span class="dt">nrow=</span><span class="dv">3</span>)</span></code></pre></div>
 <div id="example" class="section level4" number="4.2.4.1">
 <h4><span class="header-section-number">4.2.4.1</span> Example:</h4>
-<div class="sourceCode" id="cb413"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb413-1"><a href="物件.html#cb413-1" aria-hidden="true"></a>dd &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>( </span>
-<span id="cb413-2"><a href="物件.html#cb413-2" aria-hidden="true"></a>         <span class="dt">year =</span> <span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>) </span>
-<span id="cb413-3"><a href="物件.html#cb413-3" aria-hidden="true"></a>        ,<span class="dt">length_days =</span> <span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)) </span>
-<span id="cb413-4"><a href="物件.html#cb413-4" aria-hidden="true"></a>        ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;length of days&quot;</span>) </span>
-<span id="cb413-5"><a href="物件.html#cb413-5" aria-hidden="true"></a>        ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L) </span>
-<span id="cb413-6"><a href="物件.html#cb413-6" aria-hidden="true"></a>        ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>)</span>
-<span id="cb413-7"><a href="物件.html#cb413-7" aria-hidden="true"></a>dd</span></code></pre></div>
+<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="物件.html#cb416-1" aria-hidden="true"></a>dd &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>( </span>
+<span id="cb416-2"><a href="物件.html#cb416-2" aria-hidden="true"></a>         <span class="dt">year =</span> <span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>) </span>
+<span id="cb416-3"><a href="物件.html#cb416-3" aria-hidden="true"></a>        ,<span class="dt">length_days =</span> <span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)) </span>
+<span id="cb416-4"><a href="物件.html#cb416-4" aria-hidden="true"></a>        ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;length of days&quot;</span>) </span>
+<span id="cb416-5"><a href="物件.html#cb416-5" aria-hidden="true"></a>        ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L) </span>
+<span id="cb416-6"><a href="物件.html#cb416-6" aria-hidden="true"></a>        ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>)</span>
+<span id="cb416-7"><a href="物件.html#cb416-7" aria-hidden="true"></a>dd</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  year length of days
 1 2001            366
 2 2002            365
 3 2004            367
 4 2006            365
 </code></pre>
-<div class="sourceCode" id="cb414"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb414-1"><a href="物件.html#cb414-1" aria-hidden="true"></a><span class="kw">str</span>(dd)</span></code></pre></div>
+<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="物件.html#cb417-1" aria-hidden="true"></a><span class="kw">str</span>(dd)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>'data.frame':	4 obs. of  2 variables:
  $ year          : num  2001 2002 2004 2006
  $ length of days: num  366 365 367 365
 </code></pre>
 <p>dd的meta data:</p>
-<div class="sourceCode" id="cb415"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb415-1"><a href="物件.html#cb415-1" aria-hidden="true"></a><span class="kw">attributes</span>(dd)</span></code></pre></div>
+<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="物件.html#cb418-1" aria-hidden="true"></a><span class="kw">attributes</span>(dd)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>$names
 [1] "year"           "length of days"
 
@@ -697,25 +697,25 @@ $class
 [1] "data.frame"
 </code></pre>
 <p>利用<code>structure()</code>建立的物件,不管是同質(vector,matrix)還是異質(data.frame,list) 都會利用attributes儲存meta data。例如,</p>
-<div class="sourceCode" id="cb416"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb416-1"><a href="物件.html#cb416-1" aria-hidden="true"></a>just_vector &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">comment =</span> <span class="st">&quot;This is my simple vector with info&quot;</span>)</span>
-<span id="cb416-2"><a href="物件.html#cb416-2" aria-hidden="true"></a>just_vector</span></code></pre></div>
+<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb419-1"><a href="物件.html#cb419-1" aria-hidden="true"></a>just_vector &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">comment =</span> <span class="st">&quot;This is my simple vector with info&quot;</span>)</span>
+<span id="cb419-2"><a href="物件.html#cb419-2" aria-hidden="true"></a>just_vector</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> [1]  1  2  3  4  5  6  7  8  9 10
 </code></pre>
-<div class="sourceCode" id="cb417"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb417-1"><a href="物件.html#cb417-1" aria-hidden="true"></a><span class="kw">str</span>(just_vector)</span></code></pre></div>
+<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="物件.html#cb420-1" aria-hidden="true"></a><span class="kw">str</span>(just_vector)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code> int [1:10] 1 2 3 4 5 6 7 8 9 10
  - attr(*, "comment")= chr "This is my simple vector with info"
 </code></pre>
 <p>然後利用函數，可以拿到我們之前的資訊:</p>
-<div class="sourceCode" id="cb418"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb418-1"><a href="物件.html#cb418-1" aria-hidden="true"></a><span class="kw">attributes</span>(just_vector)</span></code></pre></div>
+<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="物件.html#cb421-1" aria-hidden="true"></a><span class="kw">attributes</span>(just_vector)</span></code></pre></div>
 <p>結果如下:
 $comment
 [1] “This is my simple vector with info”</p>
 <p>注意:attributes()的傳回結果為list,因此有$comment</p>
-<div class="sourceCode" id="cb419"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb419-1"><a href="物件.html#cb419-1" aria-hidden="true"></a><span class="kw">str</span>(<span class="kw">attributes</span>(just_vector))</span></code></pre></div>
+<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="物件.html#cb422-1" aria-hidden="true"></a><span class="kw">str</span>(<span class="kw">attributes</span>(just_vector))</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>List of 1
  $ comment: chr "This is my simple vector with info"
 </code></pre>
-<div class="sourceCode" id="cb420"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb420-1"><a href="物件.html#cb420-1" aria-hidden="true"></a><span class="kw">attributes</span>(<span class="kw">attributes</span>(just_vector))</span></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="物件.html#cb423-1" aria-hidden="true"></a><span class="kw">attributes</span>(<span class="kw">attributes</span>(just_vector))</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>$names
 [1] "comment"
 </code></pre>
@@ -723,30 +723,30 @@ $comment
 <div id="in-one-go" class="section level4" number="4.2.4.2">
 <h4><span class="header-section-number">4.2.4.2</span> In one go</h4>
 <p>這是另一個利用函數<code>structure()</code>的例子。先看一下一般建立data.frame物件的方法:</p>
-<div class="sourceCode" id="cb421"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb421-1"><a href="物件.html#cb421-1" aria-hidden="true"></a>year =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1999</span>, <span class="dv">2002</span>, <span class="dv">2005</span>, <span class="dv">2008</span>)</span>
-<span id="cb421-2"><a href="物件.html#cb421-2" aria-hidden="true"></a>pollution =<span class="st"> </span><span class="kw">c</span>(<span class="fl">346.82</span>,<span class="fl">134.308821199349</span>, <span class="fl">130.430379885892</span>, <span class="fl">88.275457392443</span>)</span>
-<span id="cb421-3"><a href="物件.html#cb421-3" aria-hidden="true"></a>dd2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(year,pollution)</span>
-<span id="cb421-4"><a href="物件.html#cb421-4" aria-hidden="true"></a>dd2<span class="op">$</span>year &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dd2<span class="op">$</span>year)</span></code></pre></div>
+<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="物件.html#cb424-1" aria-hidden="true"></a>year =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1999</span>, <span class="dv">2002</span>, <span class="dv">2005</span>, <span class="dv">2008</span>)</span>
+<span id="cb424-2"><a href="物件.html#cb424-2" aria-hidden="true"></a>pollution =<span class="st"> </span><span class="kw">c</span>(<span class="fl">346.82</span>,<span class="fl">134.308821199349</span>, <span class="fl">130.430379885892</span>, <span class="fl">88.275457392443</span>)</span>
+<span id="cb424-3"><a href="物件.html#cb424-3" aria-hidden="true"></a>dd2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(year,pollution)</span>
+<span id="cb424-4"><a href="物件.html#cb424-4" aria-hidden="true"></a>dd2<span class="op">$</span>year &lt;-<span class="st"> </span><span class="kw">as.factor</span>(dd2<span class="op">$</span>year)</span></code></pre></div>
 <p>利用 <code>structure</code>, 一步就可以完成:</p>
-<div class="sourceCode" id="cb422"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb422-1"><a href="物件.html#cb422-1" aria-hidden="true"></a>dd &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>( </span>
-<span id="cb422-2"><a href="物件.html#cb422-2" aria-hidden="true"></a>   <span class="dt">year =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
-<span id="cb422-3"><a href="物件.html#cb422-3" aria-hidden="true"></a>  ,<span class="dt">length_days =</span> <span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)) </span>
-<span id="cb422-4"><a href="物件.html#cb422-4" aria-hidden="true"></a>  ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;length of days&quot;</span>) </span>
-<span id="cb422-5"><a href="物件.html#cb422-5" aria-hidden="true"></a>  ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L) </span>
-<span id="cb422-6"><a href="物件.html#cb422-6" aria-hidden="true"></a>  ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="物件.html#cb425-1" aria-hidden="true"></a>dd &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>( </span>
+<span id="cb425-2"><a href="物件.html#cb425-2" aria-hidden="true"></a>   <span class="dt">year =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb425-3"><a href="物件.html#cb425-3" aria-hidden="true"></a>  ,<span class="dt">length_days =</span> <span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)) </span>
+<span id="cb425-4"><a href="物件.html#cb425-4" aria-hidden="true"></a>  ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;length of days&quot;</span>) </span>
+<span id="cb425-5"><a href="物件.html#cb425-5" aria-hidden="true"></a>  ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L) </span>
+<span id="cb425-6"><a href="物件.html#cb425-6" aria-hidden="true"></a>  ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span>)</span></code></pre></div>
 <p>Constructing data-frame with additional attributes and comments.</p>
-<div class="sourceCode" id="cb423"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb423-1"><a href="物件.html#cb423-1" aria-hidden="true"></a>dd3 &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>(</span>
-<span id="cb423-2"><a href="物件.html#cb423-2" aria-hidden="true"></a>   <span class="dt">v1 =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
-<span id="cb423-3"><a href="物件.html#cb423-3" aria-hidden="true"></a>  ,<span class="dt">v2 =</span> <span class="kw">I</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
-<span id="cb423-4"><a href="物件.html#cb423-4" aria-hidden="true"></a>  ,<span class="dt">v3 =</span> <span class="kw">ordered</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
-<span id="cb423-5"><a href="物件.html#cb423-5" aria-hidden="true"></a>  ,<span class="dt">v4 =</span> <span class="kw">as.double</span>(<span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)))</span>
-<span id="cb423-6"><a href="物件.html#cb423-6" aria-hidden="true"></a>  ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AsIs Year&quot;</span>,<span class="st">&quot;yearO&quot;</span>, <span class="st">&quot;length of days&quot;</span>)</span>
-<span id="cb423-7"><a href="物件.html#cb423-7" aria-hidden="true"></a>  ,<span class="dt">.typeOf =</span> <span class="kw">c</span>(<span class="st">&quot;factor&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;ordered&quot;</span>,<span class="st">&quot;numeric&quot;</span>)</span>
-<span id="cb423-8"><a href="物件.html#cb423-8" aria-hidden="true"></a>  ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L)</span>
-<span id="cb423-9"><a href="物件.html#cb423-9" aria-hidden="true"></a>  ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span></span>
-<span id="cb423-10"><a href="物件.html#cb423-10" aria-hidden="true"></a>  ,<span class="dt">comment =</span> <span class="st">&quot;Ordered YearO for categorical analysis and other variables&quot;</span>)</span>
-<span id="cb423-11"><a href="物件.html#cb423-11" aria-hidden="true"></a></span>
-<span id="cb423-12"><a href="物件.html#cb423-12" aria-hidden="true"></a>dd3</span></code></pre></div>
+<div class="sourceCode" id="cb426"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb426-1"><a href="物件.html#cb426-1" aria-hidden="true"></a>dd3 &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>(</span>
+<span id="cb426-2"><a href="物件.html#cb426-2" aria-hidden="true"></a>   <span class="dt">v1 =</span> <span class="kw">as.factor</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb426-3"><a href="物件.html#cb426-3" aria-hidden="true"></a>  ,<span class="dt">v2 =</span> <span class="kw">I</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb426-4"><a href="物件.html#cb426-4" aria-hidden="true"></a>  ,<span class="dt">v3 =</span> <span class="kw">ordered</span>(<span class="kw">c</span>(<span class="dv">2001</span>, <span class="dv">2002</span>, <span class="dv">2004</span>, <span class="dv">2006</span>))</span>
+<span id="cb426-5"><a href="物件.html#cb426-5" aria-hidden="true"></a>  ,<span class="dt">v4 =</span> <span class="kw">as.double</span>(<span class="kw">c</span>(<span class="fl">366.3240</span>, <span class="fl">365.4124</span>, <span class="fl">366.5323423</span>, <span class="fl">364.9573234</span>)))</span>
+<span id="cb426-6"><a href="物件.html#cb426-6" aria-hidden="true"></a>  ,<span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AsIs Year&quot;</span>,<span class="st">&quot;yearO&quot;</span>, <span class="st">&quot;length of days&quot;</span>)</span>
+<span id="cb426-7"><a href="物件.html#cb426-7" aria-hidden="true"></a>  ,<span class="dt">.typeOf =</span> <span class="kw">c</span>(<span class="st">&quot;factor&quot;</span>, <span class="st">&quot;numeric&quot;</span>, <span class="st">&quot;ordered&quot;</span>,<span class="st">&quot;numeric&quot;</span>)</span>
+<span id="cb426-8"><a href="物件.html#cb426-8" aria-hidden="true"></a>  ,<span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>4L)</span>
+<span id="cb426-9"><a href="物件.html#cb426-9" aria-hidden="true"></a>  ,<span class="dt">class =</span> <span class="st">&quot;data.frame&quot;</span></span>
+<span id="cb426-10"><a href="物件.html#cb426-10" aria-hidden="true"></a>  ,<span class="dt">comment =</span> <span class="st">&quot;Ordered YearO for categorical analysis and other variables&quot;</span>)</span>
+<span id="cb426-11"><a href="物件.html#cb426-11" aria-hidden="true"></a></span>
+<span id="cb426-12"><a href="物件.html#cb426-12" aria-hidden="true"></a>dd3</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  year AsIs Year yearO length of days
 1 2001      2001  2001            366
 2 2002      2002  2002            365
@@ -754,10 +754,10 @@ $comment
 4 2006      2006  2006            365
 </code></pre>
 <p>And checking comments can be done as:</p>
-<div class="sourceCode" id="cb424"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb424-1"><a href="物件.html#cb424-1" aria-hidden="true"></a><span class="kw">attributes</span>(dd3)<span class="op">$</span>comment</span></code></pre></div>
+<div class="sourceCode" id="cb427"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb427-1"><a href="物件.html#cb427-1" aria-hidden="true"></a><span class="kw">attributes</span>(dd3)<span class="op">$</span>comment</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "Ordered YearO for categorical analysis and other variables"
 </code></pre>
-<div class="sourceCode" id="cb425"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb425-1"><a href="物件.html#cb425-1" aria-hidden="true"></a><span class="kw">attr</span>(dd3, <span class="dt">which=</span><span class="st">&quot;comment&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb428"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb428-1"><a href="物件.html#cb428-1" aria-hidden="true"></a><span class="kw">attr</span>(dd3, <span class="dt">which=</span><span class="st">&quot;comment&quot;</span>)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>[1] "Ordered YearO for categorical analysis and other variables"
 </code></pre>
 

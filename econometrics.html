@@ -24,7 +24,7 @@
 <meta name="author" content="lend jwj cen" />
 
 
-<meta name="date" content="2020-10-08" />
+<meta name="date" content="2020-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -556,13 +556,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * Systat
 * Mini tab . mtp</p>
 <p>利用foreign讀入stata 的資料檔：</p>
-<div class="sourceCode" id="cb703"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb703-1"><a href="econometrics.html#cb703-1" aria-hidden="true"></a><span class="kw">require</span>(foreign)</span>
-<span id="cb703-2"><a href="econometrics.html#cb703-2" aria-hidden="true"></a>affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</span>
-<span id="cb703-3"><a href="econometrics.html#cb703-3" aria-hidden="true"></a><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb706"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb706-1"><a href="econometrics.html#cb706-1" aria-hidden="true"></a><span class="kw">require</span>(foreign)</span>
+<span id="cb706-2"><a href="econometrics.html#cb706-2" aria-hidden="true"></a>affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</span>
+<span id="cb706-3"><a href="econometrics.html#cb706-3" aria-hidden="true"></a><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</span></code></pre></div>
 <p>測試</p>
-<div class="sourceCode" id="cb704"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb704-1"><a href="econometrics.html#cb704-1" aria-hidden="true"></a><span class="kw">rm</span>(affairs)</span>
-<span id="cb704-2"><a href="econometrics.html#cb704-2" aria-hidden="true"></a><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</span>
-<span id="cb704-3"><a href="econometrics.html#cb704-3" aria-hidden="true"></a><span class="kw">head</span>(affairs)</span></code></pre></div>
+<div class="sourceCode" id="cb707"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb707-1"><a href="econometrics.html#cb707-1" aria-hidden="true"></a><span class="kw">rm</span>(affairs)</span>
+<span id="cb707-2"><a href="econometrics.html#cb707-2" aria-hidden="true"></a><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</span>
+<span id="cb707-3"><a href="econometrics.html#cb707-3" aria-hidden="true"></a><span class="kw">head</span>(affairs)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  id male age yrsmarr kids relig educ occup ratemarr naffairs affair vryhap
 1  4    1  37    10.0    0     3   18     7        4        0      0      0
 2  5    0  27     4.0    0     4   14     6        4        0      0      0
