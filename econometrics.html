@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 12 Econometrics | test for class</title>
   <meta name="description" content="web article test" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 12 Econometrics | test for class" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="lend jwj cen" />
 
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
 <link rel="prev" href="programming-in-r.html"/>
 <link rel="next" href="simulate-1.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -51,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -410,7 +412,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.1" data-path="基本繪圖.html"><a href="基本繪圖.html#reference"><i class="fa fa-check"></i><b>9.1</b> reference</a></li>
 <li class="chapter" data-level="9.2" data-path="基本繪圖.html"><a href="基本繪圖.html#basic"><i class="fa fa-check"></i><b>9.2</b> basic</a>
 <ul>
-<li class="chapter" data-level="9.2.1" data-path="資料探索.html"><a href="資料探索.html#plot"><i class="fa fa-check"></i><b>9.2.1</b> plot</a></li>
+<li class="chapter" data-level="9.2.1" data-path="基本繪圖.html"><a href="基本繪圖.html#plot-1"><i class="fa fa-check"></i><b>9.2.1</b> plot</a></li>
 <li class="chapter" data-level="9.2.2" data-path="基本繪圖.html"><a href="基本繪圖.html#更多"><i class="fa fa-check"></i><b>9.2.2</b> 更多</a></li>
 <li class="chapter" data-level="9.2.3" data-path="基本繪圖.html"><a href="基本繪圖.html#histograms"><i class="fa fa-check"></i><b>9.2.3</b> Histograms</a></li>
 <li class="chapter" data-level="9.2.4" data-path="基本繪圖.html"><a href="基本繪圖.html#kernel-density-plot"><i class="fa fa-check"></i><b>9.2.4</b> Kernel Density Plot</a></li>
@@ -420,7 +422,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="基本繪圖.html"><a href="基本繪圖.html#多視窗"><i class="fa fa-check"></i><b>9.3.1</b> 多視窗</a></li>
 <li class="chapter" data-level="9.3.2" data-path="基本繪圖.html"><a href="基本繪圖.html#合併-plots"><i class="fa fa-check"></i><b>9.3.2</b> 合併 Plots</a></li>
-<li class="chapter" data-level="9.3.3" data-path="基本繪圖.html"><a href="基本繪圖.html#疊圖"><i class="fa fa-check"></i><b>9.3.3</b> 疊圖</a></li>
+<li class="chapter" data-level="9.3.3" data-path="基本繪圖.html"><a href="基本繪圖.html#figures-in-rmd"><i class="fa fa-check"></i><b>9.3.3</b> figures in RMD</a></li>
+<li class="chapter" data-level="9.3.4" data-path="基本繪圖.html"><a href="基本繪圖.html#疊圖"><i class="fa fa-check"></i><b>9.3.4</b> 疊圖</a></li>
 </ul></li>
 <li class="chapter" data-level="9.4" data-path="基本繪圖.html"><a href="基本繪圖.html#分組畫圖"><i class="fa fa-check"></i><b>9.4</b> 分組畫圖</a>
 <ul>
@@ -453,7 +456,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.2.2" data-path="programming-in-r.html"><a href="programming-in-r.html#while-loop"><i class="fa fa-check"></i><b>11.2.2</b> while-loop</a></li>
 <li class="chapter" data-level="11.2.3" data-path="programming-in-r.html"><a href="programming-in-r.html#repeat-loop"><i class="fa fa-check"></i><b>11.2.3</b> repeat-loop</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="data-type.html"><a href="data-type.html#範例"><i class="fa fa-check"></i><b>11.3</b> 範例</a>
+<li class="chapter" data-level="11.3" data-path="programming-in-r.html"><a href="programming-in-r.html#範例-1"><i class="fa fa-check"></i><b>11.3</b> 範例</a>
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="programming-in-r.html"><a href="programming-in-r.html#範例-detach_package"><i class="fa fa-check"></i><b>11.3.1</b> 範例 detach_package()</a></li>
 <li class="chapter" data-level="11.3.2" data-path="programming-in-r.html"><a href="programming-in-r.html#範例2.libpaths"><i class="fa fa-check"></i><b>11.3.2</b> 範例2：.libPaths()</a></li>
@@ -519,7 +522,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="14.9.1" data-path="rbook-提要.html"><a href="rbook-提要.html#解釋範例"><i class="fa fa-check"></i><b>14.9.1</b> 解釋範例</a></li>
 </ul></li>
-<li class="chapter" data-level="14.10" data-path="programming-in-r.html"><a href="programming-in-r.html#討論"><i class="fa fa-check"></i><b>14.10</b> 討論</a>
+<li class="chapter" data-level="14.10" data-path="rbook-提要.html"><a href="rbook-提要.html#討論-1"><i class="fa fa-check"></i><b>14.10</b> 討論</a>
 <ul>
 <li class="chapter" data-level="14.10.1" data-path="rbook-提要.html"><a href="rbook-提要.html#publish-to-github"><i class="fa fa-check"></i><b>14.10.1</b> publish to github</a></li>
 <li class="chapter" data-level="14.10.2" data-path="rbook-提要.html"><a href="rbook-提要.html#inline-code"><i class="fa fa-check"></i><b>14.10.2</b> inline code</a></li>
@@ -556,13 +559,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 * Systat
 * Mini tab . mtp</p>
 <p>利用foreign讀入stata 的資料檔：</p>
-<div class="sourceCode" id="cb706"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb706-1"><a href="econometrics.html#cb706-1" aria-hidden="true"></a><span class="kw">require</span>(foreign)</span>
-<span id="cb706-2"><a href="econometrics.html#cb706-2" aria-hidden="true"></a>affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</span>
-<span id="cb706-3"><a href="econometrics.html#cb706-3" aria-hidden="true"></a><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb709"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb709-1"><a href="econometrics.html#cb709-1" aria-hidden="true"></a><span class="kw">require</span>(foreign)</span>
+<span id="cb709-2"><a href="econometrics.html#cb709-2" aria-hidden="true"></a>affairs&lt;-<span class="st"> </span><span class="kw">read.dta</span>(<span class="st">&quot;http://fmwww.bc.edu/ec-p/data/wooldridge/affairs.dta&quot;</span>)</span>
+<span id="cb709-3"><a href="econometrics.html#cb709-3" aria-hidden="true"></a><span class="kw">save</span>(affairs,<span class="dt">file=</span><span class="st">&#39;./resources/affairs.RData&#39;</span>)</span></code></pre></div>
 <p>測試</p>
-<div class="sourceCode" id="cb707"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb707-1"><a href="econometrics.html#cb707-1" aria-hidden="true"></a><span class="kw">rm</span>(affairs)</span>
-<span id="cb707-2"><a href="econometrics.html#cb707-2" aria-hidden="true"></a><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</span>
-<span id="cb707-3"><a href="econometrics.html#cb707-3" aria-hidden="true"></a><span class="kw">head</span>(affairs)</span></code></pre></div>
+<div class="sourceCode" id="cb710"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb710-1"><a href="econometrics.html#cb710-1" aria-hidden="true"></a><span class="kw">rm</span>(affairs)</span>
+<span id="cb710-2"><a href="econometrics.html#cb710-2" aria-hidden="true"></a><span class="kw">load</span>(<span class="st">&#39;./resources/affairs.RData&#39;</span>)</span>
+<span id="cb710-3"><a href="econometrics.html#cb710-3" aria-hidden="true"></a><span class="kw">head</span>(affairs)</span></code></pre></div>
 <pre style="border: 1px grey dotted;"><code>  id male age yrsmarr kids relig educ occup ratemarr naffairs affair vryhap
 1  4    1  37    10.0    0     3   18     7        4        0      0      0
 2  5    0  27     4.0    0     4   14     6        4        0      0      0
